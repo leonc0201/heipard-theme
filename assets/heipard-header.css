@@ -1,0 +1,96 @@
+/*
+  HeiPard Header
+  Restyling von Dawns Header (Struktur/Logik bleiben erhalten):
+  - sticky, transluzent mit backdrop-blur, untere Border
+  - Wortmarke "HeiPard" in Brand-Orange (Fraunces) + flackernder Punkt
+  - Kategorie-Nav dezent, Hover in Terracotta
+  - Lichtschalter im rechten Icon-Cluster
+  Alle Farben ueber Tokens (heipard-tokens.css).
+*/
+
+/* --- Sticky + transluzenter Hintergrund mit Blur --------------------------- */
+.header-wrapper.gradient {
+  background: color-mix(in oklch, var(--background) 85%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Wortmarke ------------------------------------------------------------- */
+.heipard-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-family: var(--font-heipard-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--brand);
+  font-size: clamp(2.2rem, 1.4vw + 1.8rem, 2.8rem);
+}
+
+.header__heading-link:hover .heipard-wordmark,
+.header__heading-link:focus-visible .heipard-wordmark {
+  color: var(--brand);
+}
+
+.heipard-wordmark__dot {
+  align-self: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--brand);
+  box-shadow: 0 0 8px color-mix(in oklch, var(--glow) 75%, transparent);
+}
+
+/* Dawn legt um den Logo-Link teils eine Unterstreichung -- hier nicht gewollt */
+.header__heading-link {
+  text-decoration: none;
+}
+
+/* --- Kategorie-Navigation -------------------------------------------------- */
+.header__menu-item {
+  font-family: var(--font-heipard-sans);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgb(var(--color-foreground));
+  transition: color 200ms ease;
+}
+
+.header__menu-item:hover,
+.header__menu-item:focus-visible,
+.header__active-menu-item {
+  color: var(--primary);
+}
+
+/* Dawns Hover-Unterstreichung an die Markenfarbe angleichen */
+.header__menu-item span {
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 0.1rem;
+}
+
+/* --- Icon-Cluster + Lichtschalter ----------------------------------------- */
+.header__icons {
+  gap: 0.4rem;
+}
+
+.header__icons .heipard-switch {
+  margin-inline-end: 0.6rem;
+}
+
+/* Icons folgen der Vordergrundfarbe (auch in Abendstimmung lesbar) */
+.header__icon {
+  color: rgb(var(--color-foreground));
+}
+
+.header__icon:hover {
+  color: var(--primary);
+}
+
+@media screen and (max-width: 749px) {
+  /* Auf Mobil den Schalter kompakt halten (Labels sind dort ohnehin aus) */
+  .header__icons .heipard-switch {
+    margin-inline-end: 0.3rem;
+  }
+}
