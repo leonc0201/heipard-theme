@@ -1,0 +1,298 @@
+{% comment %}
+  HeiPard Hero — Startseiten-Aufmacher
+  Vollbild-Abendszene, weiße Headline + Akzentwort, Saison-Badge, 2 CTAs.
+  Optik 1:1 aus docs/lovable-reference Abschnitt 4.
+  Bild über Section-Setting (Customizer); ohne Bild zeigt ein warmer
+  Token-Verlauf als Fallback.
+{% endcomment %}
+
+<section
+  class="heipard-hero"
+  style="--heipard-hero-min-height: {{ section.settings.min_height }}px;"
+>
+  {%- if section.settings.image != blank -%}
+    {{
+      section.settings.image
+      | image_url: width: 3840
+      | image_tag:
+        class: 'heipard-hero__image',
+        loading: 'eager',
+        fetchpriority: 'high',
+        sizes: '100vw',
+        widths: '750, 1100, 1500, 1900, 2400, 3000, 3840',
+        alt: section.settings.image.alt | default: shop.name
+    }}
+  {%- else -%}
+    <div class="heipard-hero__fallback" role="presentation"></div>
+  {%- endif -%}
+
+  <div class="heipard-hero__overlay" aria-hidden="true"></div>
+
+  <div class="heipard-hero__inner">
+    {%- if section.settings.badge_text != blank -%}
+      <p class="heipard-hero__badge">{{ section.settings.badge_text | escape }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank or section.settings.accent_word != blank -%}
+      <h1 class="heipard-hero__heading">
+        {{ section.settings.heading | escape }}
+        {%- if section.settings.accent_word != blank %}
+          <span class="heipard-hero__accent">{{ section.settings.accent_word | escape }}</span>
+        {%- endif -%}
+      </h1>
+    {%- endif -%}
+
+    {%- if section.settings.subheading != blank -%}
+      <p class="heipard-hero__subheading">{{ section.settings.subheading | escape }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.button_primary_label != blank or section.settings.button_secondary_label != blank -%}
+      <div class="heipard-hero__actions">
+        {%- if section.settings.button_primary_label != blank -%}
+          <a
+            href="{{ section.settings.button_primary_link | default: '#' }}"
+            class="heipard-btn heipard-btn--primary"
+          >
+            {{ section.settings.button_primary_label | escape }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_secondary_label != blank -%}
+          <a
+            href="{{ section.settings.button_secondary_link | default: '#' }}"
+            class="heipard-btn heipard-btn--ghost"
+          >
+            {{ section.settings.button_secondary_label | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.heipard-hero {
+  --hero-ink: oklch(0.98 0.01 80);
+  --hero-scrim-bottom: rgba(0, 0, 0, 0.65);
+  --hero-scrim-left: rgba(0, 0, 0, 0.4);
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: var(--heipard-hero-min-height, 600px);
+  height: 78vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.heipard-hero__image,
+.heipard-hero__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.heipard-hero__image {
+  object-fit: cover;
+}
+
+.heipard-hero__fallback {
+  background:
+    radial-gradient(120% 80% at 80% 110%, color-mix(in oklch, var(--brand) 55%, transparent) 0%, transparent 60%),
+    linear-gradient(160deg, var(--secondary) 0%, var(--background) 100%);
+}
+
+.heipard-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--hero-scrim-bottom) 0%, transparent 55%),
+    linear-gradient(to right, var(--hero-scrim-left) 0%, transparent 50%);
+}
+
+.heipard-hero__inner {
+  width: 100%;
+  max-width: var(--page-width, 120rem);
+  margin-inline: auto;
+  padding: 0 5rem 6rem;
+  color: var(--hero-ink);
+}
+
+.heipard-hero__badge {
+  display: inline-block;
+  margin: 0 0 2rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklch, var(--hero-ink) 30%, transparent);
+  background: color-mix(in oklch, var(--hero-ink) 12%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heipard-hero__heading {
+  margin: 0 0 1.8rem;
+  max-width: 18ch;
+  font-family: var(--font-heipard-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-size: clamp(3.6rem, 4vw + 2rem, 6.4rem);
+  color: var(--hero-ink);
+}
+
+.heipard-hero__accent {
+  color: var(--heipard-accent-bright);
+  text-shadow: 0 0 28px color-mix(in oklch, var(--glow) 60%, transparent);
+}
+
+.heipard-hero__subheading {
+  margin: 0 0 3rem;
+  max-width: 46ch;
+  font-size: clamp(1.6rem, 0.6vw + 1.4rem, 2rem);
+  line-height: 1.5;
+  color: color-mix(in oklch, var(--hero-ink) 88%, transparent);
+}
+
+.heipard-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.heipard-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2.4rem;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 250ms ease, background 250ms ease;
+}
+
+.heipard-btn--primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow:
+    0 2px 4px color-mix(in oklch, #000 10%, transparent),
+    0 16px 48px -12px color-mix(in oklch, var(--glow) 55%, transparent);
+}
+
+.heipard-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 8px color-mix(in oklch, #000 12%, transparent),
+    0 20px 56px -10px color-mix(in oklch, var(--glow) 70%, transparent);
+}
+
+.heipard-btn--ghost {
+  background: color-mix(in oklch, var(--hero-ink) 10%, transparent);
+  color: var(--hero-ink);
+  border-color: color-mix(in oklch, var(--hero-ink) 45%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.heipard-btn--ghost:hover {
+  transform: translateY(-2px);
+  background: color-mix(in oklch, var(--hero-ink) 18%, transparent);
+}
+
+@media screen and (max-width: 749px) {
+  .heipard-hero {
+    height: auto;
+    min-height: var(--heipard-hero-min-height, 600px);
+  }
+  .heipard-hero__inner {
+    padding: 0 2rem 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heipard-btn { transition: none; }
+  .heipard-btn:hover { transform: none; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "HeiPard Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hintergrundbild (Abendszene, warmes Licht)"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Saison-Badge",
+      "default": "Saison 2026 — frisch eingetroffen"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Headline",
+      "default": "Lasse deine Welt"
+    },
+    {
+      "type": "text",
+      "id": "accent_word",
+      "label": "Akzentwort (hervorgehoben)",
+      "default": "erleuchten."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subline",
+      "default": "Lichterketten, Solarlaternen und Camping-Lichter für Momente, an die du dich noch lange erinnerst."
+    },
+    {
+      "type": "text",
+      "id": "button_primary_label",
+      "label": "Button 1 — Text",
+      "default": "Jetzt entdecken"
+    },
+    {
+      "type": "url",
+      "id": "button_primary_link",
+      "label": "Button 1 — Link",
+      "default": "shopify://collections/all"
+    },
+    {
+      "type": "text",
+      "id": "button_secondary_label",
+      "label": "Button 2 — Text",
+      "default": "Bestseller ansehen"
+    },
+    {
+      "type": "url",
+      "id": "button_secondary_link",
+      "label": "Button 2 — Link"
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "min": 480,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Mindesthöhe",
+      "default": 600
+    }
+  ],
+  "presets": [{ "name": "HeiPard Hero" }]
+}
+{% endschema %}

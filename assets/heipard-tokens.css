@@ -58,6 +58,8 @@
   --brand: oklch(0.7 0.16 50);
   /* Warme Glow-Farbe für Schatten/Leuchten */
   --glow: oklch(0.78 0.17 65);
+  /* Leuchtend-warmer Akzent (z. B. Hero-Akzentwort "erleuchten") */
+  --heipard-accent-bright: oklch(0.88 0.13 70);
 
   /* Markenschriften */
   --font-heipard-display: "Fraunces", Georgia, "Times New Roman", serif;
