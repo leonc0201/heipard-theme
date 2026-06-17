@@ -104,6 +104,37 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Dawn-Farbsystem-Bruecke
+   Dawn rendert Sektionen ueber RGB-Tripel (rgb(var(--color-background))),
+   definiert pro .color-scheme-N. Damit der Lichtschalter SITE-WEIT sichtbar
+   wirkt, koppeln wir Hintergrund + Text aller Schemata an den aktiven Modus.
+   Die Tripel sind hier als Tokens hinterlegt (keine Literale in Regeln).
+   Feinabstimmung weiterer Rollen (Buttons, Badges ...) folgt in den
+   Header-/Startseiten-Schritten.
+--------------------------------------------------------------------------- */
+:root {
+  --heipard-rgb-bg-day: 250, 246, 240;   /* #FAF6F0 Creme  */
+  --heipard-rgb-fg-day: 43, 41, 38;      /* #2B2926 Charcoal */
+  --heipard-rgb-bg-night: 27, 36, 51;    /* #1B2433 Nachtblau */
+  --heipard-rgb-fg-night: 242, 240, 236; /* warmes Off-White */
+}
+
+:root,
+:root .color-scheme-1, :root .color-scheme-2, :root .color-scheme-3,
+:root .color-scheme-4, :root .color-scheme-5 {
+  --color-background: var(--heipard-rgb-bg-day);
+  --color-foreground: var(--heipard-rgb-fg-day);
+}
+
+:root[data-theme="dark"],
+:root[data-theme="dark"] .color-scheme-1, :root[data-theme="dark"] .color-scheme-2,
+:root[data-theme="dark"] .color-scheme-3, :root[data-theme="dark"] .color-scheme-4,
+:root[data-theme="dark"] .color-scheme-5 {
+  --color-background: var(--heipard-rgb-bg-night);
+  --color-foreground: var(--heipard-rgb-fg-night);
+}
+
+/* ---------------------------------------------------------------------------
    Basis-Verdrahtung
 --------------------------------------------------------------------------- */
 
