@@ -1,0 +1,152 @@
+{% comment %}
+  HeiPard Trust-Bar — 4 Vertrauenssignale (Icon + Titel + Subline)
+  Texte aus docs/lovable-reference Abschnitt 4 (bestätigt).
+  Blöcke editierbar im Customizer.
+{% endcomment %}
+
+<section class="heipard-trust color-{{ section.settings.color_scheme }}">
+  <div class="heipard-trust__inner page-width">
+    {%- for block in section.blocks -%}
+      <div class="heipard-trust__item" {{ block.shopify_attributes }}>
+        <span class="heipard-trust__icon" aria-hidden="true">
+          {%- case block.settings.icon -%}
+            {%- when 'shipping' -%}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5h11v9.5H3z"/><path d="M14 9.5h3.5L21 13v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/></svg>
+            {%- when 'guarantee' -%}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v5.2c0 4.6-3 7.6-7 9.2-4-1.6-7-4.6-7-9.2V5.6z"/><path d="M9 12l2 2 4-4"/></svg>
+            {%- when 'returns' -%}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a8 8 0 0 1 13.7-3.7L20 8"/><path d="M20 4v4h-4"/><path d="M20 14a8 8 0 0 1-13.7 3.7L4 16"/><path d="M4 20v-4h4"/></svg>
+            {%- when 'service' -%}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.6" y="13" width="3.6" height="6" rx="1.2"/><rect x="17.8" y="13" width="3.6" height="6" rx="1.2"/><path d="M20 19a4 4 0 0 1-4 3h-2.2"/></svg>
+            {%- else -%}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          {%- endcase -%}
+        </span>
+        <span class="heipard-trust__text">
+          {%- if block.settings.title != blank -%}
+            <span class="heipard-trust__title">{{ block.settings.title | escape }}</span>
+          {%- endif -%}
+          {%- if block.settings.subline != blank -%}
+            <span class="heipard-trust__subline">{{ block.settings.subline | escape }}</span>
+          {%- endif -%}
+        </span>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.heipard-trust {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.heipard-trust__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+}
+
+.heipard-trust__item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.heipard-trust__icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  width: 2.8rem;
+  height: 2.8rem;
+  color: var(--primary);
+}
+
+.heipard-trust__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heipard-trust__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  line-height: 1.25;
+}
+
+.heipard-trust__title {
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-trust__subline {
+  font-size: 1.3rem;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+
+@media screen and (max-width: 989px) {
+  .heipard-trust__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 2.4rem;
+  }
+}
+
+@media screen and (max-width: 489px) {
+  .heipard-trust__inner {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "HeiPard Trust-Bar",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Farbschema",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "signal",
+      "name": "Signal",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "shipping", "label": "Versand" },
+            { "value": "guarantee", "label": "Garantie" },
+            { "value": "returns", "label": "Rueckgabe" },
+            { "value": "service", "label": "Service" }
+          ],
+          "default": "shipping"
+        },
+        { "type": "text", "id": "title", "label": "Titel", "default": "Titel" },
+        { "type": "text", "id": "subline", "label": "Subline", "default": "Subline" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HeiPard Trust-Bar",
+      "blocks": [
+        { "type": "signal", "settings": { "icon": "shipping", "title": "Versand aus Deutschland", "subline": "Schnell bei dir" } },
+        { "type": "signal", "settings": { "icon": "guarantee", "title": "Bis zu 5 Jahre Garantie", "subline": "Auf ausgewählte Modelle" } },
+        { "type": "signal", "settings": { "icon": "returns", "title": "30 Tage Rückgaberecht", "subline": "Ohne Wenn und Aber" } },
+        { "type": "signal", "settings": { "icon": "service", "title": "Service aus Deutschland", "subline": "Mo–Fr 9–16 Uhr" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
