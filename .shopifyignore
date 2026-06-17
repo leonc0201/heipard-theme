@@ -1,0 +1,8 @@
+# Editor-/Sync-Temporaerdateien (atomare Saves) nicht ins Theme hochladen.
+# Verhindert "muss .liquid-Endung haben" / unvollstaendige Uploads im theme dev.
+*.tmp
+*.tmp.*
+*~
+*.swp
+*.bak
+.DS_Store
