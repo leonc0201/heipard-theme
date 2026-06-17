@@ -7,10 +7,10 @@
     <meta name="theme-color" content="">
 
     {%- comment -%}
-      HeiPard Lichtschalter — FOUC-Schutz.
+      HeiPard Lichtschalter - FOUC-Schutz.
       Setzt data-theme auf <html> SOFORT (vor dem Render), aus der gespeicherten
-      Präferenz (localStorage 'heipard-theme'), sonst aus prefers-color-scheme.
-      Muss inline und so früh wie möglich stehen, damit kein Theme-Flash entsteht.
+      Praeferenz (localStorage 'heipard-theme'), sonst aus prefers-color-scheme.
+      Muss inline und so frueh wie moeglich stehen, damit kein Theme-Flash entsteht.
     {%- endcomment -%}
     <script>
       (function () {
@@ -40,18 +40,18 @@
 
     {%- comment -%}
       HeiPard-Markenschriften: Fraunces (Display) + Inter (Body/UI).
-      [TBD: DSGVO] Vor dem Launch auf selbst-gehostete Fonts umstellen — das
-      direkte Laden von Google Fonts ist für DE-Shops abmahn-riskant. Für die
-      Bauphase/Preview vorerst über Google Fonts, damit die Optik 1:1 sitzt.
+      [TBD: DSGVO] Vor dem Launch auf selbst-gehostete Fonts umstellen - das
+      direkte Laden von Google Fonts ist fuer DE-Shops abmahn-riskant. Fuer die
+      Bauphase/Preview vorerst ueber Google Fonts, damit die Optik 1:1 sitzt.
     {%- endcomment -%}
-    {% # theme-check-disable RemoteAsset %}
+    {% comment %}theme-check-disable RemoteAsset{% endcomment %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
     >
-    {% # theme-check-enable RemoteAsset %}
+    {% comment %}theme-check-enable RemoteAsset{% endcomment %}
 
     <title>
       {{ page_title }}
