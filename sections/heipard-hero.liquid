@@ -23,7 +23,15 @@
         alt: section.settings.image.alt | default: shop.name
     }}
   {%- else -%}
-    <div class="heipard-hero__fallback" role="presentation"></div>
+    <img
+      class="heipard-hero__image"
+      src="{{ 'heipard-hero.jpg' | asset_url }}"
+      alt="{{ shop.name }}"
+      width="2560"
+      height="1429"
+      loading="eager"
+      fetchpriority="high"
+    >
   {%- endif -%}
 
   <div class="heipard-hero__overlay" aria-hidden="true"></div>
