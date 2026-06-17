@@ -113,25 +113,41 @@
    Header-/Startseiten-Schritten.
 --------------------------------------------------------------------------- */
 :root {
-  --heipard-rgb-bg-day: 250, 246, 240;   /* #FAF6F0 Creme  */
-  --heipard-rgb-fg-day: 43, 41, 38;      /* #2B2926 Charcoal */
-  --heipard-rgb-bg-night: 27, 36, 51;    /* #1B2433 Nachtblau */
-  --heipard-rgb-fg-night: 242, 240, 236; /* warmes Off-White */
+  --heipard-rgb-bg-day: 250, 246, 240;        /* #FAF6F0 Creme */
+  --heipard-rgb-fg-day: 43, 41, 38;           /* #2B2926 Charcoal */
+  --heipard-rgb-contrast-day: 239, 233, 224;  /* gedaempftes Creme */
+  --heipard-rgb-bg-night: 27, 36, 51;         /* #1B2433 Nachtblau */
+  --heipard-rgb-fg-night: 242, 240, 236;      /* warmes Off-White */
+  --heipard-rgb-contrast-night: 38, 49, 71;   /* aufgehelltes Nachtblau */
 }
 
-:root,
-:root .color-scheme-1, :root .color-scheme-2, :root .color-scheme-3,
-:root .color-scheme-4, :root .color-scheme-5 {
+/*
+  WICHTIG: Dawn malt Flaechen per `.gradient { background: var(--gradient-background) }`
+  (Shorthand) UND per `rgb(var(--color-background))`. Beide muessen umgebogen werden,
+  und die Scheme-Klassen .color-scheme-N setzen --color-* lokal -> daher hier explizit
+  ueberschreiben. data-theme ist dank Default-Attribut immer gesetzt.
+*/
+
+/* Tag */
+:root[data-theme="light"],
+:root[data-theme="light"] .color-scheme-1, :root[data-theme="light"] .color-scheme-2,
+:root[data-theme="light"] .color-scheme-3, :root[data-theme="light"] .color-scheme-4,
+:root[data-theme="light"] .color-scheme-5 {
   --color-background: var(--heipard-rgb-bg-day);
   --color-foreground: var(--heipard-rgb-fg-day);
+  --color-background-contrast: var(--heipard-rgb-contrast-day);
+  --gradient-background: rgb(var(--heipard-rgb-bg-day));
 }
 
+/* Abendstimmung */
 :root[data-theme="dark"],
 :root[data-theme="dark"] .color-scheme-1, :root[data-theme="dark"] .color-scheme-2,
 :root[data-theme="dark"] .color-scheme-3, :root[data-theme="dark"] .color-scheme-4,
 :root[data-theme="dark"] .color-scheme-5 {
   --color-background: var(--heipard-rgb-bg-night);
   --color-foreground: var(--heipard-rgb-fg-night);
+  --color-background-contrast: var(--heipard-rgb-contrast-night);
+  --gradient-background: rgb(var(--heipard-rgb-bg-night));
 }
 
 /* ---------------------------------------------------------------------------
