@@ -232,6 +232,9 @@
           </localization-form>
         {%- endif -%}
       </div>
+      {%- comment -%} HeiPard Lichtschalter — finale Platzierung folgt im Header-Schritt {%- endcomment -%}
+      {% render 'heipard-theme-toggle' %}
+
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if shop.customer_accounts_enabled -%}

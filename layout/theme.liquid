@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
+
+    {%- comment -%}
+      HeiPard Lichtschalter — FOUC-Schutz.
+      Setzt data-theme auf <html> SOFORT (vor dem Render), aus der gespeicherten
+      Präferenz (localStorage 'heipard-theme'), sonst aus prefers-color-scheme.
+      Muss inline und so früh wie möglich stehen, damit kein Theme-Flash entsteht.
+    {%- endcomment -%}
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('heipard-theme');
+          var theme =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
@@ -272,6 +295,8 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'heipard-tokens.css' | asset_url | stylesheet_tag }}
+    {{ 'heipard-theme-toggle.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'heipard-theme-toggle.js' | asset_url }}" defer="defer"></script>
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}

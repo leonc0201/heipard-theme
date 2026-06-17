@@ -1,4 +1,11 @@
 {
+  "heipard": {
+    "theme_toggle": {
+      "label": "Switch between day and evening mood",
+      "day": "Day",
+      "night": "Evening"
+    }
+  },
   "general": {
     "password_page": {
       "login_form_heading": "Enter store using password:",

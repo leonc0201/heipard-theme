@@ -1,0 +1,21 @@
+{% comment %}
+  HeiPard Lichtschalter — Signature-Feature
+  Physischer Kippschalter "Tag / Abendstimmung" im Header.
+  Spiegelt das globale data-theme auf <html> und schaltet es um.
+  Optik/Verhalten 1:1 aus docs/lovable-reference (original-light-switch.tsx).
+  Styling: assets/heipard-theme-toggle.css · Logik: assets/heipard-theme-toggle.js
+{% endcomment %}
+<button
+  type="button"
+  class="heipard-switch"
+  data-heipard-theme-toggle
+  aria-label="{{ 'heipard.theme_toggle.label' | t }}"
+  aria-pressed="false"
+>
+  <span class="heipard-switch__label heipard-switch__label--day">{{ 'heipard.theme_toggle.day' | t }}</span>
+  <span class="heipard-switch__label heipard-switch__label--night">{{ 'heipard.theme_toggle.night' | t }}</span>
+  <span class="heipard-switch__track" aria-hidden="true">
+    <span class="heipard-switch__knob"></span>
+    <span class="heipard-switch__filament"></span>
+  </span>
+</button>
