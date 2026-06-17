@@ -1,0 +1,224 @@
+/*
+  HeiPard — Design-Tokens & Signature-Effekte
+  ============================================
+  Portiert 1:1 aus dem freigegebenen Lovable-Prototyp
+  (docs/lovable-reference/original-styles.css + README Abschnitt 1–2).
+
+  Grundregel (CLAUDE.md): Farben AUSSCHLIESSLICH über diese Custom Properties.
+  Keine hartcodierten Farbwerte in Sections/Snippets/CSS.
+
+  Umschaltung der Modi über das Attribut data-theme auf <html>:
+    data-theme="light"  -> "Tag"          (Default, :root)
+    data-theme="dark"   -> "Abendstimmung"
+  Die Token-Namen entsprechen bewusst denen des Prototyps, damit die
+  Komponenten-CSS später wertgenau übernommen werden kann.
+*/
+
+:root {
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  /* Light "Tag" — warmes Creme */
+  --background: oklch(0.965 0.018 75);
+  --foreground: oklch(0.24 0.018 60);
+
+  --card: oklch(0.985 0.012 80);
+  --card-foreground: oklch(0.24 0.018 60);
+
+  --popover: oklch(0.985 0.012 80);
+  --popover-foreground: oklch(0.24 0.018 60);
+
+  /* Terracotta (Primärakzent) */
+  --primary: oklch(0.62 0.135 42);
+  --primary-foreground: oklch(0.98 0.01 80);
+
+  /* Tannengrün (Sekundär) */
+  --secondary: oklch(0.38 0.045 158);
+  --secondary-foreground: oklch(0.98 0.01 80);
+
+  --muted: oklch(0.93 0.018 75);
+  --muted-foreground: oklch(0.45 0.025 60);
+
+  --accent: oklch(0.92 0.04 70);
+  --accent-foreground: oklch(0.28 0.025 60);
+
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.98 0.01 80);
+
+  --border: oklch(0.88 0.02 70);
+  --input: oklch(0.88 0.02 70);
+  --ring: oklch(0.62 0.135 42);
+
+  /* Logo-Orange (Wortmarke) */
+  --brand: oklch(0.7 0.16 50);
+  /* Warme Glow-Farbe für Schatten/Leuchten */
+  --glow: oklch(0.78 0.17 65);
+
+  /* Markenschriften */
+  --font-heipard-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-heipard-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Dawn-Schrift-Stacks auf die Markenschriften umbiegen, damit ALLE
+     Dawn-Komponenten ohne Einzelanpassung Fraunces/Inter übernehmen. */
+  --font-body-family: var(--font-heipard-sans);
+  --font-heading-family: var(--font-heipard-display);
+}
+
+[data-theme="dark"] {
+  /* Dark "Abendstimmung" — warmes Nachtblau, NIE reines Schwarz */
+  --background: oklch(0.235 0.04 245);
+  --foreground: oklch(0.95 0.015 75);
+
+  --card: oklch(0.28 0.038 245);
+  --card-foreground: oklch(0.95 0.015 75);
+
+  --popover: oklch(0.28 0.038 245);
+  --popover-foreground: oklch(0.95 0.015 75);
+
+  --primary: oklch(0.72 0.14 45);
+  --primary-foreground: oklch(0.18 0.03 245);
+
+  --secondary: oklch(0.55 0.06 158);
+  --secondary-foreground: oklch(0.98 0.01 80);
+
+  --muted: oklch(0.31 0.035 245);
+  --muted-foreground: oklch(0.72 0.025 75);
+
+  --accent: oklch(0.34 0.045 245);
+  --accent-foreground: oklch(0.95 0.015 75);
+
+  --destructive: oklch(0.65 0.2 28);
+  --destructive-foreground: oklch(0.98 0.01 80);
+
+  --border: oklch(0.38 0.03 245);
+  --input: oklch(0.38 0.03 245);
+  --ring: oklch(0.72 0.14 45);
+
+  --brand: oklch(0.78 0.16 55);
+  --glow: oklch(0.82 0.18 65);
+}
+
+/* ---------------------------------------------------------------------------
+   Basis-Verdrahtung
+--------------------------------------------------------------------------- */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "ss01", "cv11";
+  /* Sanfter Farbübergang beim Umschalten Tag <-> Abendstimmung */
+  transition:
+    background-color 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5 {
+  font-family: var(--font-heipard-display);
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { transition: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   Signature-Effekt: Licht-Puls beim Theme-Wechsel
+   Klasse .theme-transitioning wird beim Umschalten kurz auf <html> gesetzt.
+--------------------------------------------------------------------------- */
+
+.theme-transitioning::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in oklch, var(--glow) 35%, transparent) 0%,
+    transparent 70%
+  );
+  animation: heipard-light-pulse 700ms ease-out;
+}
+
+@keyframes heipard-light-pulse {
+  0%   { opacity: 0; }
+  35%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transitioning::after { animation: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   Glow-Utilities (Karten-Hover, CTAs)
+--------------------------------------------------------------------------- */
+
+.glow-soft {
+  box-shadow:
+    0 1px 2px color-mix(in oklch, var(--foreground) 8%, transparent),
+    0 8px 24px -8px color-mix(in oklch, var(--glow) 25%, transparent);
+}
+
+.glow-strong {
+  box-shadow:
+    0 2px 4px color-mix(in oklch, var(--foreground) 10%, transparent),
+    0 16px 48px -12px color-mix(in oklch, var(--glow) 55%, transparent);
+}
+
+.text-glow {
+  text-shadow: 0 0 24px color-mix(in oklch, var(--glow) 60%, transparent);
+}
+
+/* ---------------------------------------------------------------------------
+   Reveal-on-Scroll (Logik folgt als Vanilla-JS in einem späteren Schritt;
+   Selektor [data-reveal], sichtbar via .is-visible)
+--------------------------------------------------------------------------- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Logo-Flicker (dezentes Flackern des Punkts neben "HeiPard")
+--------------------------------------------------------------------------- */
+
+@keyframes heipard-flicker {
+  0%, 100% { opacity: 1; }
+  45%      { opacity: 0.92; }
+  47%      { opacity: 1; }
+}
+
+.heipard-flicker {
+  animation: heipard-flicker 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heipard-flicker { animation: none; }
+}
