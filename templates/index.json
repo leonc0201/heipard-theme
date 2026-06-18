@@ -66,7 +66,11 @@
         "heading": "Für jeden Moment das passende Licht",
         "color_scheme": "scheme-1"
       }
+    },
+    "heipard_story": {
+      "type": "heipard-brand-story",
+      "settings": { "color_scheme": "scheme-1" }
     }
   },
-  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller", "heipard_occasions"]
+  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller", "heipard_occasions", "heipard_story"]
 }

@@ -36,6 +36,11 @@ oder ein neutraler, faktisch sicherer Text.
   (Smart Collections via Tags laut Brief). Kachel-Links aktuell leer → nachziehen.
 - [ ] **Anlass-Kachelbilder** — 4 Stimmungsbilder fehlen (aktuell warmer Farbverlauf,
   „immer farbig" erfüllt).
+- [ ] **Brand-Story-Wording (RECHTLICH)** — Prototyp: „Wir **entwickeln** Lichter".
+  Verstößt gegen Content-Regel (kein „entwickelt"/Herkunfts-Andeutung). Aktuell
+  geändert auf „Wir **bringen dir** Lichter". **Finale Formulierung bestätigen.**
+- [ ] **„Mehr über HeiPard"-Link** — Über-uns-Seite existiert noch nicht (Link leer).
+- [ ] **Brand-Story-Bild** — fehlt (aktuell warmer Verlauf-Platzhalter).
 
 ## Geklärt
 
