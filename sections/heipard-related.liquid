@@ -1,0 +1,86 @@
+{% comment %}
+  HeiPard "Passt dazu" — Cross-Sell auf der PDP (Lovable-Design)
+  Kicker "Passt dazu" + Headline "Fuer eine noch schoenere Stimmung" + 4 Karten.
+  Datenquelle: Produkte derselben Kollektion (ohne das aktuelle Produkt) bzw. eine
+  im Customizer waehlbare Kollektion. Solange keine verwandten Produkte da sind:
+  Skeleton-Platzhalter (kein Fake-Inhalt), damit die Section sichtbar bleibt.
+{% endcomment %}
+
+{%- liquid
+  assign source = section.settings.collection
+  if source == blank
+    assign source = product.collections.first
+  endif
+  assign count = section.settings.products_count
+-%}
+
+<section class="heipard-section heipard-related color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="heipard-section__head">
+      <div>
+        {%- if section.settings.kicker != blank -%}
+          <span class="heipard-kicker">{{ section.settings.kicker | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="heipard-section__heading">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="heipard-related__grid">
+      {%- assign shown = 0 -%}
+      {%- if source != blank -%}
+        {%- for p in source.products -%}
+          {%- if p.id != product.id and shown < count -%}
+            {% render 'heipard-product-card', product: p %}
+            {%- assign shown = shown | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- if shown == 0 -%}
+        {%- for i in (1..count) -%}
+          <div class="heipard-card heipard-card--skeleton" aria-hidden="true">
+            <div class="heipard-card__media">
+              <span class="heipard-card__img heipard-card__fallback"></span>
+            </div>
+            <div class="heipard-card__row">
+              <span class="heipard-skel heipard-skel--name"></span>
+              <span class="heipard-skel heipard-skel--price"></span>
+            </div>
+            <span class="heipard-skel heipard-skel--sub"></span>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.heipard-related__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 1.8rem;
+}
+
+@media screen and (min-width: 990px) {
+  .heipard-related__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "HeiPard Passt dazu",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Passt dazu" },
+    { "type": "text", "id": "heading", "label": "Ueberschrift", "default": "Für eine noch schönere Stimmung" },
+    { "type": "collection", "id": "collection", "label": "Kollektion (optional, sonst Kollektion des Produkts)" },
+    { "type": "range", "id": "products_count", "min": 2, "max": 8, "step": 1, "label": "Anzahl Produkte", "default": 4 },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "HeiPard Passt dazu" }]
+}
+{% endschema %}
