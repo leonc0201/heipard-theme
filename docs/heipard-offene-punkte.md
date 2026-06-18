@@ -47,6 +47,10 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **Rechtstexte/Policies** — Footer zeigt Policy-Links automatisch (`show_policy`), sobald
   Impressum/Datenschutz/AGB/Widerruf in Shopify (Einstellungen → Richtlinien/Seiten) gepflegt sind.
 - [ ] **Footer-Kategorien-Menue** — nutzt aktuell `main-menu`; ggf. eigenes Footer-Menue anlegen.
+- [ ] **Primaere Sprache** — im Store ist aktuell **EN** als primaere Sprache gesetzt (DE veroeffentlicht,
+  aber sekundaer). Fuer einen DE-first-Shop in Shopify (Einstellungen → Sprachen) auf **Deutsch** umstellen.
+- [ ] **Laender/Waehrung-Switcher** — aus Header entfernt, jetzt dezent im Footer. Bei
+  internationalem Verkauf ggf. wieder prominenter / Markets konfigurieren.
 
 - [ ] **Trust-Signale verifizieren (RECHTLICH)** — auf Leons Wunsch jetzt **sichtbar [TBD]**
   in der Trust-Bar (gelber Marker), bis formal bestätigt: „Versand aus Deutschland",

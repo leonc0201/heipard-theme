@@ -94,3 +94,26 @@
     margin-inline-end: 0.3rem;
   }
 }
+
+/* --- Kompakter Sprach-Umschalter (DE/EN) im Header ------------------------ */
+.header-localization .localization-form__select {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgb(var(--color-foreground));
+}
+
+.header-localization .localization-form__select:hover {
+  color: var(--primary);
+}
+
+.header-localization .localization-form__select .svg-wrapper,
+.header-localization .localization-form__select svg {
+  width: 1rem;
+  height: 1rem;
+}
+
