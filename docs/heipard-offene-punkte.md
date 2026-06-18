@@ -41,6 +41,7 @@ oder ein neutraler, faktisch sicherer Text.
   geändert auf „Wir **bringen dir** Lichter". **Finale Formulierung bestätigen.**
 - [ ] **„Mehr über HeiPard"-Link** — Über-uns-Seite existiert noch nicht (Link leer).
 - [ ] **Brand-Story-Bild** — fehlt (aktuell warmer Verlauf-Platzhalter).
+- [ ] **„Partner werden"-Link** — Haendler-/B2B-Seite existiert noch nicht (Link leer).
 
 ## Geklärt
 

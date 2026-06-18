@@ -70,7 +70,11 @@
     "heipard_story": {
       "type": "heipard-brand-story",
       "settings": { "color_scheme": "scheme-1" }
+    },
+    "heipard_retailer": {
+      "type": "heipard-retailer",
+      "settings": { "color_scheme": "scheme-1" }
     }
   },
-  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller", "heipard_occasions", "heipard_story"]
+  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller", "heipard_occasions", "heipard_story", "heipard_retailer"]
 }

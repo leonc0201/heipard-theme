@@ -1,0 +1,94 @@
+{% comment %}
+  HeiPard Haendler-Teaser — dezente B2B-Leiste
+  "Du bist Haendler?" + Subline + Pill-Button "Partner werden".
+  Optik/Texte 1:1 aus docs/lovable-reference (routes/index.tsx).
+{% endcomment %}
+
+<section class="heipard-retailer color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="heipard-retailer__card">
+      <div class="heipard-retailer__text">
+        {%- if section.settings.title != blank -%}
+          <div class="heipard-retailer__title">{{ section.settings.title | escape }}</div>
+        {%- endif -%}
+        {%- if section.settings.body != blank -%}
+          <div class="heipard-retailer__subline">{{ section.settings.body | escape }}</div>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.button_label != blank -%}
+        <a class="heipard-retailer__btn" href="{{ section.settings.button_link | default: '#' }}">
+          {{ section.settings.button_label | escape }}
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.heipard-retailer {
+  padding-block: clamp(2.4rem, 4vw, 3.6rem);
+}
+
+.heipard-retailer__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem 2.4rem;
+  padding: 2.4rem 3rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  background: color-mix(in oklch, var(--card) 60%, transparent);
+}
+
+.heipard-retailer__title {
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-retailer__subline {
+  margin-top: 0.3rem;
+  font-size: 1.5rem;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+
+.heipard-retailer__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--background);
+  font-family: var(--font-heipard-sans);
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+
+.heipard-retailer__btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "HeiPard Haendler-Teaser",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Titel", "default": "Du bist Händler?" },
+    { "type": "text", "id": "body", "label": "Text", "default": "Werde HeiPard-Partner und biete unsere Kollektion in deinem Geschäft an." },
+    { "type": "text", "id": "button_label", "label": "Button-Text", "default": "Partner werden" },
+    { "type": "url", "id": "button_link", "label": "Button-Link" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "HeiPard Haendler-Teaser" }]
+}
+{% endschema %}
