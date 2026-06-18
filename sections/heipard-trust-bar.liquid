@@ -24,7 +24,12 @@
         </span>
         <span class="heipard-trust__text">
           {%- if block.settings.title != blank -%}
-            <span class="heipard-trust__title">{{ block.settings.title | escape }}</span>
+            <span class="heipard-trust__title">
+              {{ block.settings.title | escape }}
+              {%- if block.settings.tbd -%}
+                <span class="heipard-trust__tbd" title="Vor Launch verifizieren">[TBD]</span>
+              {%- endif -%}
+            </span>
           {%- endif -%}
           {%- if block.settings.subline != blank -%}
             <span class="heipard-trust__subline">{{ block.settings.subline | escape }}</span>
@@ -37,6 +42,7 @@
 
 {% stylesheet %}
 .heipard-trust {
+  margin-top: clamp(3rem, 5vw, 5.5rem);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -44,9 +50,24 @@
 .heipard-trust__inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2.4rem;
-  padding-top: 2.8rem;
-  padding-bottom: 2.8rem;
+  gap: 2.4rem 3rem;
+  padding-top: clamp(3.2rem, 4vw, 4.2rem);
+  padding-bottom: clamp(3.2rem, 4vw, 4.2rem);
+}
+
+/* Sichtbarer Build-Marker fuer unverifizierte Aussagen (vor Launch entfernen) */
+.heipard-trust__tbd {
+  display: inline-block;
+  margin-inline-start: 0.6rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 0.4rem;
+  background: #ffcf4d;
+  color: #3a2a00;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .heipard-trust__item {
@@ -133,7 +154,8 @@
           "default": "shipping"
         },
         { "type": "text", "id": "title", "label": "Titel", "default": "Titel" },
-        { "type": "text", "id": "subline", "label": "Subline", "default": "Subline" }
+        { "type": "text", "id": "subline", "label": "Subline", "default": "Subline" },
+        { "type": "checkbox", "id": "tbd", "label": "Unverifiziert ([TBD] anzeigen)", "info": "Sichtbar markieren, bis die Aussage vor Launch faktisch bestaetigt ist.", "default": false }
       ]
     }
   ],

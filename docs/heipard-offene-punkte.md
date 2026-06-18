@@ -48,7 +48,13 @@ oder ein neutraler, faktisch sicherer Text.
   Impressum/Datenschutz/AGB/Widerruf in Shopify (Einstellungen → Richtlinien/Seiten) gepflegt sind.
 - [ ] **Footer-Kategorien-Menue** — nutzt aktuell `main-menu`; ggf. eigenes Footer-Menue anlegen.
 
+- [ ] **Trust-Signale verifizieren (RECHTLICH)** — auf Leons Wunsch jetzt **sichtbar [TBD]**
+  in der Trust-Bar (gelber Marker), bis formal bestätigt: „Versand aus Deutschland",
+  „Bis zu 5 Jahre Garantie", „30 Tage Rückgaberecht". Pro Signal per Checkbox
+  „Unverifiziert" im Customizer abschaltbar. „Service / Mo–Fr 9–16 Uhr" gilt als bestätigt.
+- [ ] **Announcement-Bar** — Dawn-Default „Welcome to our store" wurde entfernt
+  (aus header-group.json). Bei echtem Inhalt im Customizer wieder hinzufügen.
+
 ## Geklärt
 
-- [x] **Bis zu 5 Jahre Garantie** (Trust-Bar) — es gibt real ein 5-Jahre-Produkt. ✅
 - [x] **Service-Zeiten** Mo–Fr 9–16 Uhr — korrekt. ✅
