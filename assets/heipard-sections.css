@@ -1,0 +1,63 @@
+/*
+  HeiPard — geteilte Startseiten-Primitives
+  Kicker-Label (Terracotta, uppercase), Section-Heading (Fraunces),
+  Spacing und der "Alles ansehen"-Link. Wird von mehreren Sektionen genutzt
+  (Bento, Bestseller, Anlaesse ...). Global eingebunden ueber theme.liquid.
+*/
+
+.heipard-section {
+  padding-block: clamp(5rem, 8vw, 7rem);
+}
+
+.heipard-section__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.heipard-kicker {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-family: var(--font-heipard-sans);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heipard-section__heading {
+  margin: 0;
+  font-family: var(--font-heipard-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: clamp(2.8rem, 3vw + 1.6rem, 4.8rem);
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  text-decoration: none;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 78%, transparent);
+  transition: color 200ms ease;
+}
+
+.heipard-section__link:hover {
+  color: var(--primary);
+}
+
+@media screen and (max-width: 749px) {
+  .heipard-section__head {
+    margin-bottom: 2.8rem;
+  }
+  .heipard-section__link {
+    display: none;
+  }
+}

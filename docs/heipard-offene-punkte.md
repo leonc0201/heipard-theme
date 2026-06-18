@@ -20,6 +20,14 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **Hero-Bild** — aktuell KI-generiertes Platzhalterbild (`assets/heipard-hero.jpg`);
   final durch echtes Foto ersetzen? Lizenz/Endgültigkeit klären.
 - [ ] **Header — „kleine Fixes"** (von Leon erwähnt, im letzten Schritt sammeln/umsetzen).
+- [ ] **Bento-Taxonomie vs. Nav:** Das Bento-Grid zeigt 6 Kategorien aus dem Prototyp
+  (Party & Terrasse · Eiszapfen & Vorhang · Lichterketten · Solar & Gartendeko ·
+  Camping & Outdoor · Smart Lighting). Die Nav/Collections sind aber 5
+  (Lichterketten · Outdoor · Solar & Garten · Camping · Smart). 4 Kacheln sind
+  verlinkt; **„Party & Terrasse" und „Eiszapfen & Vorhang" haben noch keine
+  Collection** (Link leer). Entscheiden: Collections anlegen oder Bento-Kacheln
+  an die 5 Nav-Kategorien angleichen?
+- [ ] **Bento-Kachelbilder** — 6 Bilder fehlen (aktuell Token-Verlauf-Platzhalter).
 
 ## Geklärt
 

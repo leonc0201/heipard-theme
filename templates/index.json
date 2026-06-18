@@ -23,7 +23,26 @@
       },
       "block_order": ["s1", "s2", "s3", "s4"],
       "settings": { "color_scheme": "scheme-1" }
+    },
+    "heipard_bento": {
+      "type": "heipard-bento",
+      "blocks": {
+        "t1": { "type": "tile", "settings": { "size": "feature", "kicker": "Stimmung für draußen", "title": "Party & Terrasse", "link": "" } },
+        "t2": { "type": "tile", "settings": { "size": "tall", "kicker": "Festlich am Fenster", "title": "Eiszapfen & Vorhang", "link": "" } },
+        "t3": { "type": "tile", "settings": { "size": "medium", "kicker": "Klassisch & vielseitig", "title": "Lichterketten", "link": "shopify://collections/lichterketten" } },
+        "t4": { "type": "tile", "settings": { "size": "medium", "kicker": "Leuchtet ohne Steckdose", "title": "Solar & Gartendeko", "link": "shopify://collections/solar-garten" } },
+        "t5": { "type": "tile", "settings": { "size": "banner", "kicker": "Robust für unterwegs", "title": "Camping & Outdoor", "link": "shopify://collections/camping" } },
+        "t6": { "type": "tile", "settings": { "size": "banner", "kicker": "Per App gesteuert", "title": "Smart Lighting", "link": "shopify://collections/smart" } }
+      },
+      "block_order": ["t1", "t2", "t3", "t4", "t5", "t6"],
+      "settings": {
+        "kicker": "Kollektionen",
+        "heading": "Finde dein Licht",
+        "view_all_label": "Alles ansehen",
+        "view_all_link": "shopify://collections/all",
+        "color_scheme": "scheme-1"
+      }
     }
   },
-  "order": ["heipard_hero", "heipard_trust_bar"]
+  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento"]
 }
