@@ -121,6 +121,9 @@
   --heipard-rgb-bg-night: 27, 36, 51;         /* #1B2433 Nachtblau */
   --heipard-rgb-fg-night: 242, 240, 236;      /* warmes Off-White */
   --heipard-rgb-contrast-night: 38, 49, 71;   /* aufgehelltes Nachtblau */
+  --heipard-rgb-primary-day: 201, 111, 74;    /* #C96F4A Terracotta */
+  --heipard-rgb-primary-night: 214, 128, 86;  /* aufgehellte Terracotta */
+  --heipard-rgb-on-primary: 250, 246, 240;    /* Creme auf Terracotta */
 }
 
 /*
@@ -139,6 +142,8 @@
   --color-foreground: var(--heipard-rgb-fg-day);
   --color-background-contrast: var(--heipard-rgb-contrast-day);
   --gradient-background: rgb(var(--heipard-rgb-bg-day));
+  --color-button: var(--heipard-rgb-primary-day);
+  --color-button-text: var(--heipard-rgb-on-primary);
 }
 
 /* Abendstimmung */
@@ -150,6 +155,8 @@
   --color-foreground: var(--heipard-rgb-fg-night);
   --color-background-contrast: var(--heipard-rgb-contrast-night);
   --gradient-background: rgb(var(--heipard-rgb-bg-night));
+  --color-button: var(--heipard-rgb-primary-night);
+  --color-button-text: var(--heipard-rgb-on-primary);
 }
 
 /* ---------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+{% comment %}
+  HeiPard Garantie-Zeile (Schild-Icon + produktspezifische Garantie aus Metafeld
+  heipard.garantie_jahre). Fehlt der Wert -> sichtbar [TBD]. Parameter: product
+{% endcomment %}
+{%- assign jahre = product.metafields.heipard.garantie_jahre.value -%}
+<div class="heipard-warranty">
+  <span class="heipard-warranty__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v5.2c0 4.6-3 7.6-7 9.2-4-1.6-7-4.6-7-9.2V5.6z"/><path d="M9 12l2 2 4-4"/></svg>
+  </span>
+  <span class="heipard-warranty__text">
+    {%- if jahre != blank -%}
+      {{ jahre }} Jahre Garantie
+    {%- else -%}
+      <span class="heipard-tbd-inline">[TBD: Garantie]</span>
+    {%- endif -%}
+  </span>
+</div>

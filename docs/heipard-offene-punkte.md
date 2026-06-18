@@ -59,6 +59,20 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **Announcement-Bar** — Dawn-Default „Welcome to our store" wurde entfernt
   (aus header-group.json). Bei echtem Inhalt im Customizer wieder hinzufügen.
 
+### PDP (Produktseite)
+
+- [ ] **Metafeld-Definitionen** (Namespace `heipard`) in Shopify anlegen, damit Spec-Kacheln,
+  Garantie-Zeile und Karten-Subtitle befüllbar sind: `subtitle`, `stromquelle`, `laenge_m`,
+  `lichtfarbe`, `ip_schutzart`, `garantie_jahre` (+ später `led_anzahl`, `einsatzbereich`,
+  `leuchtmodi`, `connectable`, `smart`, `feature_blocks`). Ohne Werte zeigt die PDP sichtbar `[TBD]`.
+- [ ] **Accordion-Inhalte** — Technische Details / Installation & Pflege / Versand & Rückgabe
+  stehen als `[TBD]`. Versand & Rückgabe NICHT mit „Krefeld"/erfundenen Versandkosten füllen.
+- [ ] **Feature-Sektion-Bilder** (3) — Stimmung/Wetter/Setup; aktuell warmer Verlauf-Platzhalter.
+- [ ] **„Passt dazu"** nutzt aktuell Dawns Standard-Produktkarten (nicht die HeiPard-Karte) —
+  optische Angleichung als spätere Politur.
+- [ ] **PDP-Live-Check** — Galerie (Seiten-Thumbnails), Varianten & Warenkorb erst mit einem
+  echten Produkt final verifizierbar (Produkt-Import-Phase).
+
 ## Geklärt
 
 - [x] **Service-Zeiten** Mo–Fr 9–16 Uhr — korrekt. ✅

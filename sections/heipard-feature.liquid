@@ -1,0 +1,280 @@
+{% comment %}
+  HeiPard PDP Feature-Sektion "Warum du sie lieben wirst"
+  3 alternierende Bild/Text-Bloecke (aspect 5/4, glow-soft) + 3er-Mini-Grid.
+  Texte 1:1 aus docs/lovable-reference (produkt.$slug.tsx). Bloecke editierbar.
+  Kein A+-Infografik-Stil; Bilder ueber Block-Settings (warmer Verlauf als Fallback).
+{% endcomment %}
+
+<section class="heipard-section heipard-feature color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="heipard-feature__head">
+      {%- if section.settings.kicker != blank -%}
+        <span class="heipard-kicker">{{ section.settings.kicker | escape }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank or section.settings.heading_accent != blank -%}
+        <h2 class="heipard-feature__heading">
+          {{ section.settings.heading | escape }}
+          {%- if section.settings.heading_accent != blank %}
+            <span class="heipard-feature__accent">{{ section.settings.heading_accent | escape }}</span>
+          {%- endif -%}
+        </h2>
+      {%- endif -%}
+    </div>
+
+    {%- assign feature_index = 0 -%}
+    <div class="heipard-feature__blocks">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'feature' -%}
+          {%- assign feature_index = feature_index | plus: 1 -%}
+          {%- assign feature_even = feature_index | modulo: 2 -%}
+          <div class="heipard-feature__row{% if feature_even == 0 %} heipard-feature__row--reverse{% endif %}" {{ block.shopify_attributes }}>
+            <div class="heipard-feature__media">
+              {%- if block.settings.image != blank -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 1200
+                  | image_tag:
+                    class: 'heipard-feature__img',
+                    loading: 'lazy',
+                    widths: '500, 750, 1000, 1200',
+                    sizes: '(min-width: 750px) 50vw, 100vw',
+                    alt: block.settings.title | default: block.settings.image.alt
+                }}
+              {%- else -%}
+                <span class="heipard-feature__img heipard-feature__fallback" aria-hidden="true"></span>
+              {%- endif -%}
+            </div>
+            <div class="heipard-feature__text">
+              {%- if block.settings.kicker != blank -%}
+                <span class="heipard-feature__eyebrow">{{ block.settings.kicker | escape }}</span>
+              {%- endif -%}
+              {%- if block.settings.title != blank -%}
+                <h3 class="heipard-feature__title">{{ block.settings.title | escape }}</h3>
+              {%- endif -%}
+              {%- if block.settings.body != blank -%}
+                <p class="heipard-feature__body">{{ block.settings.body | escape }}</p>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- assign mini_blocks = section.blocks | where: 'type', 'mini' -%}
+    {%- if mini_blocks.size > 0 -%}
+      <ul class="heipard-feature__minis list-unstyled">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'mini' -%}
+            <li class="heipard-feature__mini" {{ block.shopify_attributes }}>
+              <span class="heipard-feature__mini-icon" aria-hidden="true">
+                {%- case block.settings.icon -%}
+                  {%- when 'timer' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
+                  {%- when 'modes' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="15" cy="16" r="2.5"/><path d="M3 21c2-5 7-9 13-10"/></svg>
+                  {%- when 'link' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6"/><path d="M9.5 8H7a4 4 0 0 0 0 8h2.5"/><path d="M14.5 8H17a4 4 0 0 1 0 8h-2.5"/></svg>
+                  {%- else -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
+                {%- endcase -%}
+              </span>
+              <span class="heipard-feature__mini-text">
+                {%- if block.settings.label != blank -%}
+                  <span class="heipard-feature__mini-label">{{ block.settings.label | escape }}</span>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <span class="heipard-feature__mini-desc">{{ block.settings.text | escape }}</span>
+                {%- endif -%}
+              </span>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.heipard-feature__head {
+  max-width: 40rem;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.heipard-feature__heading {
+  margin: 0;
+  font-family: var(--font-heipard-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  font-size: clamp(2.8rem, 3vw + 1.6rem, 4.8rem);
+  color: rgb(var(--color-foreground));
+}
+.heipard-feature__accent { color: var(--primary); }
+
+.heipard-feature__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5rem, 8vw, 8rem);
+}
+
+.heipard-feature__row {
+  display: grid;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .heipard-feature__row { grid-template-columns: 1fr 1fr; }
+  .heipard-feature__row--reverse .heipard-feature__media { order: 2; }
+}
+
+.heipard-feature__media {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow:
+    0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 8%, transparent),
+    0 8px 24px -8px color-mix(in oklch, var(--glow) 25%, transparent);
+}
+
+.heipard-feature__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heipard-feature__fallback {
+  background:
+    radial-gradient(120% 90% at 75% 100%, color-mix(in oklch, var(--brand) 45%, transparent) 0%, transparent 60%),
+    linear-gradient(160deg, var(--secondary) 0%, var(--muted) 100%);
+}
+
+.heipard-feature__eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heipard-feature__title {
+  margin: 0 0 1.4rem;
+  font-family: var(--font-heipard-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  font-size: clamp(2.2rem, 1.6vw + 1.6rem, 3.2rem);
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-feature__body {
+  margin: 0;
+  max-width: 46ch;
+  font-size: clamp(1.6rem, 0.4vw + 1.5rem, 1.8rem);
+  line-height: 1.65;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 68%, transparent);
+}
+
+.heipard-feature__minis {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  margin-top: clamp(5rem, 8vw, 8rem);
+  padding-top: clamp(3rem, 5vw, 4rem);
+  border-top: 1px solid var(--border);
+}
+
+@media screen and (min-width: 750px) {
+  .heipard-feature__minis { grid-template-columns: repeat(3, 1fr); }
+}
+
+.heipard-feature__mini {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.heipard-feature__mini-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  width: 2.6rem;
+  height: 2.6rem;
+  color: var(--primary);
+}
+.heipard-feature__mini-icon svg { width: 100%; height: 100%; }
+
+.heipard-feature__mini-text { display: flex; flex-direction: column; gap: 0.2rem; }
+.heipard-feature__mini-label {
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(var(--color-foreground));
+}
+.heipard-feature__mini-desc {
+  font-size: 1.3rem;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "HeiPard PDP Feature",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Warum du sie lieben wirst" },
+    { "type": "text", "id": "heading", "label": "Ueberschrift", "default": "Kleine Details," },
+    { "type": "text", "id": "heading_accent", "label": "Ueberschrift Akzent (Terracotta)", "default": "große Wirkung." },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature-Block",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "kicker", "label": "Kicker", "default": "Kicker" },
+        { "type": "text", "id": "title", "label": "Titel", "default": "Titel" },
+        { "type": "textarea", "id": "body", "label": "Text", "default": "Text" }
+      ]
+    },
+    {
+      "type": "mini",
+      "name": "Mini-Feature",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "timer", "label": "Timer" },
+            { "value": "modes", "label": "Leuchtmodi" },
+            { "value": "link", "label": "Koppelbar" }
+          ],
+          "default": "timer"
+        },
+        { "type": "text", "id": "label", "label": "Label", "default": "Label" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HeiPard PDP Feature",
+      "blocks": [
+        { "type": "feature", "settings": { "kicker": "Warmes Licht", "title": "Licht, das den Abend verlängert.", "body": "Das warmweiße Leuchten verwandelt deine Terrasse oder dein Wohnzimmer in einen Ort, an dem du gerne länger bleibst. Kein kaltes LED-Flackern, sondern echte Stimmung — so, wie du sie willst." } },
+        { "type": "feature", "settings": { "kicker": "Gebaut für draussen", "title": "Regen? Kein Thema.", "body": "Vergossene Fassungen, robuste Kabel und IP-geprüfte Verbindungen halten Wetter aus, wenn dein Abend draußen länger wird. Lass sie hängen — auch wenn der Sommerregen kommt." } },
+        { "type": "feature", "settings": { "kicker": "In Minuten aufgebaut", "title": "Auspacken, aufhängen, anknipsen.", "body": "Beiliegende Clips und ein durchdachtes Kabelmanagement machen das Aufhängen einfach. Innerhalb weniger Minuten leuchtet dein Abend — ohne Fummelei, ohne Werkzeugkiste." } },
+        { "type": "mini", "settings": { "icon": "timer", "label": "Timer-Funktion", "text": "6 Stunden an, 18 Stunden Pause" } },
+        { "type": "mini", "settings": { "icon": "modes", "label": "8 Leuchtmodi", "text": "Von ruhig bis festlich animiert" } },
+        { "type": "mini", "settings": { "icon": "link", "label": "Koppelbar", "text": "Bis zu 4 Ketten miteinander verbinden" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
