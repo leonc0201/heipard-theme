@@ -6,7 +6,7 @@
 {% endcomment %}
 {%- liquid
   assign m = product.metafields.heipard
-  assign laenge = m.laenge_m.value
+  assign laenge = m.beleuchtete_laenge_m.value
   assign strom = m.stromquelle.value
   assign farbe = m.lichtfarbe.value
   assign ip = m.ip_schutzart.value
@@ -18,7 +18,7 @@
     </span>
     <span class="heipard-specs__text">
       <span class="heipard-specs__label">Länge</span>
-      <span class="heipard-specs__value">{% if laenge != blank %}{{ laenge | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
+      <span class="heipard-specs__value">{% if laenge != blank %}{{ laenge }} m{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
     </span>
   </li>
   <li class="heipard-specs__item">

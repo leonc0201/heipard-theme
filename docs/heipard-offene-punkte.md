@@ -61,10 +61,13 @@ oder ein neutraler, faktisch sicherer Text.
 
 ### PDP (Produktseite)
 
-- [ ] **Metafeld-Definitionen** (Namespace `heipard`) in Shopify anlegen, damit Spec-Kacheln,
-  Garantie-Zeile und Karten-Subtitle befüllbar sind: `subtitle`, `stromquelle`, `laenge_m`,
-  `lichtfarbe`, `ip_schutzart`, `garantie_jahre` (+ später `led_anzahl`, `einsatzbereich`,
-  `leuchtmodi`, `connectable`, `smart`, `feature_blocks`). Ohne Werte zeigt die PDP sichtbar `[TBD]`.
+- [x] **Metafeld-Definitionen** (Namespace `heipard`) angelegt — alle 22 laut
+  `heipard-metafelder.md` (Auswahllisten mit exakten Werten, Zahlen, Ja/Nein). ✅
+- [x] **Spec-Kacheln-Keys** an finale Metafeld-Namen angepasst (`beleuchtete_laenge_m`,
+  mit Einheit „m"). ✅
+- [ ] **TESTPRODUKT löschen vor Launch:** „[TEST] Solar-Lichterkette HP-OLS-G40-16"
+  (Handle `test-solar-lichterkette-hp-ols-g40-16`) inkl. 3 Platzhalter-Bildern —
+  nur zum Bauen/Testen der PDP & Kollektionsseite.
 - [ ] **Accordion-Inhalte** — Technische Details / Installation & Pflege / Versand & Rückgabe
   stehen als `[TBD]`. Versand & Rückgabe NICHT mit „Krefeld"/erfundenen Versandkosten füllen.
 - [ ] **Feature-Sektion-Bilder** (3) — Stimmung/Wetter/Setup; aktuell warmer Verlauf-Platzhalter.
