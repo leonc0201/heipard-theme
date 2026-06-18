@@ -12,10 +12,20 @@
   aria-label="{{ 'heipard.theme_toggle.label' | t }}"
   aria-pressed="false"
 >
-  <span class="heipard-switch__label heipard-switch__label--day">{{ 'heipard.theme_toggle.day' | t }}</span>
   <span class="heipard-switch__track" aria-hidden="true">
-    <span class="heipard-switch__knob"></span>
-    <span class="heipard-switch__filament"></span>
+    <span class="heipard-switch__pole heipard-switch__pole--sun">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>
+    </span>
+    <span class="heipard-switch__pole heipard-switch__pole--moon">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+    </span>
+    <span class="heipard-switch__knob">
+      <span class="heipard-switch__icon heipard-switch__icon--sun">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>
+      </span>
+      <span class="heipard-switch__icon heipard-switch__icon--moon">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+      </span>
+    </span>
   </span>
-  <span class="heipard-switch__label heipard-switch__label--night">{{ 'heipard.theme_toggle.night' | t }}</span>
 </button>

@@ -1,24 +1,21 @@
 /*
-  HeiPard Lichtschalter — physischer Kippschalter
-  Optik 1:1 aus docs/lovable-reference/original-light-switch.tsx.
-  Erscheinungsbild folgt dem globalen data-theme auf <html>:
-    [data-theme="light"] (Default) -> "Tag":  Knopf links, cremefarben
-    [data-theme="dark"]            -> "Abend": Knopf rechts, orange + Glow + Filament
+  HeiPard Lichtschalter — kompakter Sonne/Mond-Kippschalter (ohne Woerter)
+  Sonne = Tag-Pol (links), Mond = Abend-Pol (rechts), Knopf wandert dazwischen
+  und traegt das aktive Icon. Der gegenueberliegende (Ziel-)Pol wird gedimmt
+  als Hinweis gezeigt. Aktiver Modus: Terracotta-Sonne (Tag) bzw. Orange-Knopf
+  mit Glow (Abend). Umschaltung ueber data-theme auf <html>.
 */
 
 :root {
-  /* Knopf-Highlight-Töne (switch-spezifisch, aus dem Prototyp) */
   --heipard-switch-knob-day-from: oklch(0.95 0.04 75);
   --heipard-switch-knob-day-to: oklch(0.85 0.05 70);
   --heipard-switch-knob-night-from: oklch(0.78 0.16 55);
   --heipard-switch-knob-night-to: oklch(0.62 0.14 42);
-  --heipard-switch-filament: oklch(0.95 0.1 75);
 }
 
 .heipard-switch {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   padding: 0;
   margin: 0;
   border: 0;
@@ -32,30 +29,7 @@
 .heipard-switch:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
-  border-radius: var(--radius-sm);
-}
-
-/* Labels "Tag" und "Abend" beidseitig der Schiene; aktiver Modus hervorgehoben,
-   damit der Schalter eindeutig als Tag <-> Abend lesbar ist. */
-.heipard-switch__label {
-  display: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: color-mix(in oklch, rgb(var(--color-foreground)) 42%, transparent);
-  transition: color 300ms ease;
-}
-
-@media screen and (min-width: 750px) {
-  .heipard-switch__label {
-    display: inline;
-  }
-}
-
-:root[data-theme="light"] .heipard-switch__label--day,
-:root[data-theme="dark"] .heipard-switch__label--night {
-  color: var(--primary);
-  font-weight: 600;
+  border-radius: 9999px;
 }
 
 /* Schiene */
@@ -64,17 +38,16 @@
   display: inline-flex;
   align-items: center;
   width: 60px;
-  height: 36px;
+  height: 32px;
   border: 1px solid var(--border);
   border-radius: 9999px;
-  /* Tag */
   background-image: linear-gradient(to bottom, var(--accent), var(--muted));
   box-shadow: inset 0 1px 2px color-mix(in oklch, var(--foreground) 12%, transparent);
   transition: background-image 500ms ease, border-color 500ms ease, box-shadow 500ms ease;
 }
 
 :root[data-theme="dark"] .heipard-switch__track {
-  /* Abend: deutlich erkennbarer, versenkter Schalter-Slot mit hellem Rand */
+  /* Versenkter, klar erkennbarer Schalter-Slot mit hellem Rand */
   background-image: linear-gradient(to bottom, color-mix(in oklch, var(--background) 55%, #000 45%), var(--card));
   border-color: color-mix(in oklch, var(--foreground) 38%, transparent);
   box-shadow:
@@ -82,19 +55,42 @@
     0 0 0 1px color-mix(in oklch, var(--foreground) 6%, transparent);
 }
 
+/* Pol-Icons: zeigen den jeweils inaktiven (Ziel-)Pol gedimmt an */
+.heipard-switch__pole {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: color-mix(in oklch, var(--foreground) 45%, transparent);
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.heipard-switch__pole--sun { left: 7px; }
+.heipard-switch__pole--moon { right: 7px; }
+
+:root[data-theme="light"] .heipard-switch__pole--moon { opacity: 1; }
+:root[data-theme="dark"] .heipard-switch__pole--sun { opacity: 1; }
+
+.heipard-switch__pole svg,
+.heipard-switch__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* Knopf */
 .heipard-switch__knob {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 28px;
-  height: 28px;
+  top: 3px;
+  left: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
   border-radius: 9999px;
-  background-image: linear-gradient(
-    135deg,
-    var(--heipard-switch-knob-day-from),
-    var(--heipard-switch-knob-day-to)
-  );
+  background-image: linear-gradient(135deg, var(--heipard-switch-knob-day-from), var(--heipard-switch-knob-day-to));
   box-shadow:
     inset 0 1px 2px rgba(255, 255, 255, 0.7),
     0 1px 2px rgba(0, 0, 0, 0.12);
@@ -105,40 +101,33 @@
 }
 
 :root[data-theme="dark"] .heipard-switch__knob {
-  left: 28px;
-  background-image: linear-gradient(
-    135deg,
-    var(--heipard-switch-knob-night-from),
-    var(--heipard-switch-knob-night-to)
-  );
+  left: 31px;
+  background-image: linear-gradient(135deg, var(--heipard-switch-knob-night-from), var(--heipard-switch-knob-night-to));
   box-shadow:
     inset 0 1px 2px rgba(255, 255, 255, 0.35),
-    0 0 18px color-mix(in oklch, var(--glow) 70%, transparent),
+    0 0 16px color-mix(in oklch, var(--glow) 70%, transparent),
     0 0 4px color-mix(in oklch, var(--glow) 90%, transparent);
 }
 
-/* Filament-Punkt (nur im Abend-Modus sichtbar) */
-.heipard-switch__filament {
+/* Icon auf dem Knopf: Sonne (Tag) bzw. Mond (Abend) */
+.heipard-switch__icon {
   position: absolute;
-  left: 40px;
-  top: 50%;
-  width: 4px;
-  height: 4px;
-  transform: translateY(-50%);
-  border-radius: 9999px;
-  background-color: var(--heipard-switch-filament);
+  width: 15px;
+  height: 15px;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: opacity 400ms ease;
 }
+.heipard-switch__icon--sun { color: var(--primary); }
+.heipard-switch__icon--moon { color: oklch(0.22 0.03 245); }
 
-:root[data-theme="dark"] .heipard-switch__filament {
-  opacity: 1;
-}
+:root[data-theme="light"] .heipard-switch__icon--sun { opacity: 1; }
+:root[data-theme="dark"] .heipard-switch__icon--moon { opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   .heipard-switch__track,
   .heipard-switch__knob,
-  .heipard-switch__filament {
+  .heipard-switch__pole,
+  .heipard-switch__icon {
     transition: none;
   }
 }
