@@ -1,0 +1,92 @@
+/*
+  HeiPard Kollektionsseite — Restyle von Dawns Collection (Faceted Filtering bleibt).
+  Laedt nach base.css -> gewinnt bei gleicher Spezifitaet (keine Abhaengigkeit von
+  entfernbaren Dawn-Klassen). Grosszuegige vertikale Abstaende wie im Lovable-Original.
+*/
+
+/* --- Grosszuegige Abstaende ---------------------------------------------- */
+.collection {
+  padding-block: clamp(3rem, 5vw, 5rem);
+}
+
+.collection-hero {
+  padding-block: clamp(4.5rem, 6vw, 7rem) clamp(2rem, 3vw, 3rem);
+}
+
+/* Produkt-Grid: mehr Luft zwischen den Karten */
+.collection .product-grid {
+  --grid-desktop-vertical-spacing: 4.5rem;
+  --grid-mobile-vertical-spacing: 3rem;
+  --grid-desktop-horizontal-spacing: 2rem;
+  --grid-mobile-horizontal-spacing: 1.4rem;
+}
+
+/* Abstand zwischen Sortierleiste/Filter und Grid */
+.facets-vertical.page-width,
+.collection .facets-vertical {
+  margin-top: clamp(2rem, 3vw, 3rem);
+}
+
+/* --- Banner (Titel + Beschreibung) --------------------------------------- */
+.collection-hero__title {
+  font-family: var(--font-heipard-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.collection-hero__description {
+  margin-top: 1.2rem;
+  max-width: 62ch;
+  font-size: clamp(1.6rem, 0.4vw + 1.5rem, 1.8rem);
+  line-height: 1.6;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 66%, transparent);
+}
+
+/* --- Filter-Sidebar + Sortierung ----------------------------------------- */
+.facets__heading,
+.facets__summary,
+.facets__disclosure summary,
+.facet-filters__label {
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgb(var(--color-foreground));
+}
+
+.facet-checkbox {
+  transition: color 200ms ease;
+}
+.facet-checkbox:hover,
+.facet-checkbox:hover .facet-checkbox__text-label {
+  color: var(--primary);
+}
+.facet-checkbox input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+/* Aktive Filter als Pills in Markenfarbe */
+.active-facets__button-inner {
+  border-radius: 9999px;
+  border-color: var(--border);
+  transition: border-color 200ms ease, color 200ms ease;
+}
+.active-facets__button:hover .active-facets__button-inner {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Produktanzahl + Sortier-Label dezent */
+.product-count__text,
+.facets__label,
+.facet-filters__field .select__select {
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 72%, transparent);
+}
+
+/* Sticky-Sidebar mit etwas Abstand zum Sticky-Header */
+@media screen and (min-width: 990px) {
+  .facets-vertical .facets-wrap {
+    position: sticky;
+    top: 9rem;
+    align-self: start;
+  }
+}

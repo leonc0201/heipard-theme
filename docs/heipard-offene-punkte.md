@@ -76,6 +76,18 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **PDP-Live-Check** — Galerie (Seiten-Thumbnails), Varianten & Warenkorb erst mit einem
   echten Produkt final verifizierbar (Produkt-Import-Phase).
 
+### Kollektionsseite
+
+- [ ] **Filter-Facetten in Search & Discovery aktivieren** — die Sidebar rendert `collection.filters`;
+  diese kommen aus der **Search-&-Discovery-App** (Admin). Dort die Metafeld-Filter freischalten:
+  `heipard.stromquelle`, `heipard.lichtfarbe`, `heipard.einsatzbereich`, `heipard.ip_schutzart`,
+  `heipard.material` (+ Länge als Bereiche via `beleuchtete_laenge_m`). Bis dahin zeigt die
+  Sidebar nur Standard-Facetten (Verfügbarkeit/Preis).
+- [ ] **Längen-Filter als Bereiche** (bis 5 m / 5–10 m / 10–20 m / über 20 m) in Search & Discovery
+  konfigurieren (nicht exakte Werte).
+- [ ] **Breadcrumb auf Kollektion/PDP** — im Lovable-Original vorhanden, in Dawn nicht default;
+  bei Bedarf ergänzen.
+
 ## Geklärt
 
 - [x] **Service-Zeiten** Mo–Fr 9–16 Uhr — korrekt. ✅

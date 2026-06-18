@@ -157,3 +157,22 @@
 .heipard-skel--price { width: 22%; }
 .heipard-skel--sub { width: 70%; height: 1.1rem; margin-top: 0.8rem; }
 
+/* Stromquellen-Pill (Kollektionskarten) — neutraler Glas-Pill oben links */
+.heipard-card__pill {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-family: var(--font-heipard-sans);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgb(var(--color-foreground));
+  background: color-mix(in oklch, var(--background) 82%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+}
+
