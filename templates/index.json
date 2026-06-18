@@ -42,7 +42,16 @@
         "view_all_link": "shopify://collections/all",
         "color_scheme": "scheme-1"
       }
+    },
+    "heipard_bestseller": {
+      "type": "heipard-bestseller",
+      "settings": {
+        "kicker": "Bestseller",
+        "heading": "Was unsere Kunden lieben",
+        "products_count": 4,
+        "color_scheme": "scheme-1"
+      }
     }
   },
-  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento"]
+  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller"]
 }

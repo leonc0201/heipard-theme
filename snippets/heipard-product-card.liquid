@@ -1,0 +1,36 @@
+{% comment %}
+  HeiPard Produktkarte
+  Parameter: product (Produkt-Objekt)
+  Quadratisches Bild (Hover: Glow + Zoom + radialer Glow), darunter Name links /
+  Preis rechts, Subtitle (muted) aus Metafield heipard.subtitle.
+  Optik aus docs/lovable-reference (Produktkarten-Pattern).
+{% endcomment %}
+<a class="heipard-card" href="{{ product.url }}">
+  <div class="heipard-card__media">
+    {%- if product.featured_media != blank -%}
+      {{
+        product.featured_media
+        | image_url: width: 800
+        | image_tag:
+          class: 'heipard-card__img',
+          loading: 'lazy',
+          widths: '300, 400, 600, 800',
+          sizes: '(min-width: 990px) 25vw, 50vw',
+          alt: product.featured_media.alt | default: product.title
+      }}
+    {%- else -%}
+      <span class="heipard-card__img heipard-card__fallback" aria-hidden="true"></span>
+    {%- endif -%}
+    <span class="heipard-card__glow" aria-hidden="true"></span>
+  </div>
+
+  <div class="heipard-card__row">
+    <span class="heipard-card__name">{{ product.title | escape }}</span>
+    <span class="heipard-card__price">{{ product.price | money }}</span>
+  </div>
+
+  {%- assign subtitle = product.metafields.heipard.subtitle.value -%}
+  {%- if subtitle != blank -%}
+    <div class="heipard-card__subtitle">{{ subtitle | escape }}</div>
+  {%- endif -%}
+</a>

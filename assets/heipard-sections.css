@@ -61,3 +61,99 @@
     display: none;
   }
 }
+
+/* --- Produktkarte (geteilt: Bestseller, "Passt dazu", Kollektion) --------- */
+.heipard-card {
+  display: block;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--muted);
+  isolation: isolate;
+  transition: box-shadow 350ms ease;
+}
+
+.heipard-card:hover .heipard-card__media,
+.heipard-card:focus-visible .heipard-card__media {
+  box-shadow:
+    0 2px 4px color-mix(in oklch, rgb(var(--color-foreground)) 10%, transparent),
+    0 16px 48px -12px color-mix(in oklch, var(--glow) 55%, transparent);
+}
+
+.heipard-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.heipard-card:hover .heipard-card__img {
+  transform: scale(1.04);
+}
+
+.heipard-card__fallback {
+  background:
+    radial-gradient(120% 90% at 70% 110%, color-mix(in oklch, var(--brand) 45%, transparent) 0%, transparent 60%),
+    linear-gradient(160deg, var(--secondary) 0%, var(--muted) 100%);
+}
+
+.heipard-card__glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(circle at 50% 65%, color-mix(in oklch, var(--glow) 35%, transparent) 0%, transparent 70%);
+  transition: opacity 400ms ease;
+}
+
+.heipard-card:hover .heipard-card__glow {
+  opacity: 1;
+}
+
+.heipard-card__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.heipard-card__name {
+  font-family: var(--font-heipard-sans);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.heipard-card__price {
+  font-weight: 600;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.heipard-card__subtitle {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 60%, transparent);
+}
+
+/* Skeleton-Platzhalter, solange keine Produkte in der Kollektion sind */
+.heipard-skel {
+  display: block;
+  height: 1.4rem;
+  border-radius: 0.4rem;
+  background: color-mix(in oklch, rgb(var(--color-foreground)) 12%, transparent);
+}
+.heipard-skel--name { width: 55%; }
+.heipard-skel--price { width: 22%; }
+.heipard-skel--sub { width: 70%; height: 1.1rem; margin-top: 0.8rem; }
+

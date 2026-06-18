@@ -1,0 +1,79 @@
+{% comment %}
+  HeiPard Bestseller — Produktkarten aus einer waehlbaren Kollektion
+  Kicker "Bestseller" + H2 "Was unsere Kunden lieben" + 4 Karten.
+  Solange die Kollektion leer/ungesetzt ist: Skeleton-Platzhalter (kein Fake-Inhalt).
+{% endcomment %}
+
+<section class="heipard-section heipard-bestseller color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="heipard-section__head">
+      <div>
+        {%- if section.settings.kicker != blank -%}
+          <span class="heipard-kicker">{{ section.settings.kicker | escape }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="heipard-section__heading">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.view_all_label != blank -%}
+        <a class="heipard-section__link" href="{{ section.settings.view_all_link | default: '#' }}">
+          {{ section.settings.view_all_label | escape }}
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      {%- endif -%}
+    </div>
+
+    <div class="heipard-bestseller__grid">
+      {%- if section.settings.collection != blank and section.settings.collection.products_count > 0 -%}
+        {%- for product in section.settings.collection.products limit: section.settings.products_count -%}
+          {% render 'heipard-product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        {%- comment -%} Platzhalter, bis Produkte in der Kollektion sind {%- endcomment -%}
+        {%- for i in (1..section.settings.products_count) -%}
+          <div class="heipard-card heipard-card--skeleton" aria-hidden="true">
+            <div class="heipard-card__media">
+              <span class="heipard-card__img heipard-card__fallback"></span>
+            </div>
+            <div class="heipard-card__row">
+              <span class="heipard-skel heipard-skel--name"></span>
+              <span class="heipard-skel heipard-skel--price"></span>
+            </div>
+            <span class="heipard-skel heipard-skel--sub"></span>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.heipard-bestseller__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 1.8rem;
+}
+
+@media screen and (min-width: 990px) {
+  .heipard-bestseller__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "HeiPard Bestseller",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Bestseller" },
+    { "type": "text", "id": "heading", "label": "Ueberschrift", "default": "Was unsere Kunden lieben" },
+    { "type": "collection", "id": "collection", "label": "Kollektion" },
+    { "type": "range", "id": "products_count", "min": 2, "max": 8, "step": 1, "label": "Anzahl Produkte", "default": 4 },
+    { "type": "text", "id": "view_all_label", "label": "Link-Text (rechts, optional)" },
+    { "type": "url", "id": "view_all_link", "label": "Link-Ziel (rechts)" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "HeiPard Bestseller" }]
+}
+{% endschema %}

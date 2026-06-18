@@ -28,6 +28,10 @@ oder ein neutraler, faktisch sicherer Text.
   Collection** (Link leer). Entscheiden: Collections anlegen oder Bento-Kacheln
   an die 5 Nav-Kategorien angleichen?
 - [ ] **Bento-Kachelbilder** — 6 Bilder fehlen (aktuell Token-Verlauf-Platzhalter).
+- [ ] **Bestseller-Kollektion** — Sektion auf eine Kollektion zeigen lassen (z. B. „Bestseller"
+  via Tag/Smart Collection) + Produkte. Aktuell Skeleton-Platzhalter, bis Produkte da sind.
+- [ ] **Produkt-Subtitle** — Karten lesen `metafield heipard.subtitle`; Metafield-Definition
+  + Werte stehen noch aus (Produkt-Import-Phase).
 
 ## Geklärt
 
