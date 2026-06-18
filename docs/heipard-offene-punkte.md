@@ -65,9 +65,13 @@ oder ein neutraler, faktisch sicherer Text.
   `heipard-metafelder.md` (Auswahllisten mit exakten Werten, Zahlen, Ja/Nein). ✅
 - [x] **Spec-Kacheln-Keys** an finale Metafeld-Namen angepasst (`beleuchtete_laenge_m`,
   mit Einheit „m"). ✅
-- [ ] **TESTPRODUKT löschen vor Launch:** „[TEST] Solar-Lichterkette HP-OLS-G40-16"
-  (Handle `test-solar-lichterkette-hp-ols-g40-16`) inkl. 3 Platzhalter-Bildern —
-  nur zum Bauen/Testen der PDP & Kollektionsseite.
+- [ ] **TESTPRODUKTE löschen vor Launch (alle `[TEST]`):** 6 Stück in `lichterketten` —
+  „Solar-Lichterkette HP-OLS-G40-16" (PDP-Test, 3 Bilder) + 5 Karten-Tests
+  (G40-Netz, Solar-60-LED, Camping-USB, Solar-S17, Netz-100-LED, je 1 Bild).
+  Nur zum Testen von PDP/Kollektion/Filter.
+- [ ] **IP-Schutzart-Auswahlliste:** echte Produkte haben teils **IP45** (nicht in der
+  definierten Liste IP20/IP44/IP54/IP65/IP67). Für die Testprodukte auf IP44 gemappt.
+  Entscheiden: IP45 (ggf. weitere) zur `ip_schutzart`-Auswahlliste hinzufügen.
 - [ ] **Accordion-Inhalte** — Technische Details / Installation & Pflege / Versand & Rückgabe
   stehen als `[TBD]`. Versand & Rückgabe NICHT mit „Krefeld"/erfundenen Versandkosten füllen.
 - [ ] **Feature-Sektion-Bilder** (3) — Stimmung/Wetter/Setup; aktuell warmer Verlauf-Platzhalter.
