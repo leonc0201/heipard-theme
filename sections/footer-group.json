@@ -3,43 +3,18 @@
   "type": "footer",
   "sections": {
     "footer": {
-      "type": "footer",
-      "blocks": {
-        "footer-categories": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Kollektionen",
-            "menu": "main-menu"
-          }
-        },
-        "footer-service": {
-          "type": "text",
-          "settings": {
-            "heading": "Service",
-            "subtext": "<p>Mo–Fr 9–16 Uhr<br>Service &amp; Versand aus Deutschland</p>"
-          }
-        }
-      },
-      "block_order": [
-        "footer-categories",
-        "footer-service"
-      ],
+      "type": "heipard-site-footer",
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "brand_description": "Stimmungsvolle Beleuchtung vom Niederrhein. Für drinnen, draußen und unterwegs.",
+        "categories_heading": "Kategorien",
+        "categories_menu": "main-menu",
+        "service_heading": "Service",
+        "service_hours": "Mo–Fr 9–16 Uhr",
         "newsletter_heading": "Bleib auf dem Laufenden",
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_policy": true,
-        "margin_top": 48,
-        "padding_top": 40,
-        "padding_bottom": 36
+        "newsletter_text": "Neue Kollektionen und Inspirationen direkt in dein Postfach.",
+        "color_scheme": "scheme-1"
       }
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["footer"]
 }

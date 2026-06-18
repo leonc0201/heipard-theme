@@ -115,7 +115,7 @@
    Header-/Startseiten-Schritten.
 --------------------------------------------------------------------------- */
 :root {
-  --heipard-rgb-bg-day: 250, 246, 240;        /* #FAF6F0 Creme */
+  --heipard-rgb-bg-day: 251, 242, 230;        /* oklch(0.965 0.018 75) – warmes Creme, exakt aus lovable-reference */
   --heipard-rgb-fg-day: 43, 41, 38;           /* #2B2926 Charcoal */
   --heipard-rgb-contrast-day: 239, 233, 224;  /* gedaempftes Creme */
   --heipard-rgb-bg-night: 27, 36, 51;         /* #1B2433 Nachtblau */
