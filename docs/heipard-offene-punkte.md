@@ -32,6 +32,10 @@ oder ein neutraler, faktisch sicherer Text.
   via Tag/Smart Collection) + Produkte. Aktuell Skeleton-Platzhalter, bis Produkte da sind.
 - [ ] **Produkt-Subtitle** — Karten lesen `metafield heipard.subtitle`; Metafield-Definition
   + Werte stehen noch aus (Produkt-Import-Phase).
+- [ ] **Anlass-Collections** — Weihnachten · Garten & Balkon · Camping · Hochzeit & Party
+  (Smart Collections via Tags laut Brief). Kachel-Links aktuell leer → nachziehen.
+- [ ] **Anlass-Kachelbilder** — 4 Stimmungsbilder fehlen (aktuell warmer Farbverlauf,
+  „immer farbig" erfüllt).
 
 ## Geklärt
 

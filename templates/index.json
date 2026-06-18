@@ -51,7 +51,22 @@
         "products_count": 4,
         "color_scheme": "scheme-1"
       }
+    },
+    "heipard_occasions": {
+      "type": "heipard-occasions",
+      "blocks": {
+        "o1": { "type": "occasion", "settings": { "name": "Weihnachten", "link": "" } },
+        "o2": { "type": "occasion", "settings": { "name": "Garten & Balkon", "link": "" } },
+        "o3": { "type": "occasion", "settings": { "name": "Camping", "link": "" } },
+        "o4": { "type": "occasion", "settings": { "name": "Hochzeit & Party", "link": "" } }
+      },
+      "block_order": ["o1", "o2", "o3", "o4"],
+      "settings": {
+        "kicker": "Anlässe",
+        "heading": "Für jeden Moment das passende Licht",
+        "color_scheme": "scheme-1"
+      }
     }
   },
-  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller"]
+  "order": ["heipard_hero", "heipard_trust_bar", "heipard_bento", "heipard_bestseller", "heipard_occasions"]
 }
