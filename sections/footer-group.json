@@ -5,44 +5,36 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
+        "footer-categories": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Kollektionen",
+            "menu": "main-menu"
           }
         },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
-        "footer-2": {
+        "footer-service": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Service",
+            "subtext": "<p>Mo–Fr 9–16 Uhr<br>Service &amp; Versand aus Deutschland</p>"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-categories",
+        "footer-service"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Bleib auf dem Laufenden",
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
-        "show_policy": false,
+        "show_policy": true,
         "margin_top": 48,
-        "padding_top": 36,
+        "padding_top": 40,
         "padding_bottom": 36
       }
     }

@@ -42,6 +42,11 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **„Mehr über HeiPard"-Link** — Über-uns-Seite existiert noch nicht (Link leer).
 - [ ] **Brand-Story-Bild** — fehlt (aktuell warmer Verlauf-Platzhalter).
 - [ ] **„Partner werden"-Link** — Haendler-/B2B-Seite existiert noch nicht (Link leer).
+- [ ] **Footer-Telefonnummer** — bewusst NICHT angezeigt (kein „[TBD]" public); nur „Mo–Fr 9–16 Uhr".
+  Echte Nummer ergaenzen, sobald vorhanden.
+- [ ] **Rechtstexte/Policies** — Footer zeigt Policy-Links automatisch (`show_policy`), sobald
+  Impressum/Datenschutz/AGB/Widerruf in Shopify (Einstellungen → Richtlinien/Seiten) gepflegt sind.
+- [ ] **Footer-Kategorien-Menue** — nutzt aktuell `main-menu`; ggf. eigenes Footer-Menue anlegen.
 
 ## Geklärt
 
