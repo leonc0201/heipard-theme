@@ -1914,6 +1914,10 @@
                 "label": "แนวตั้ง"
               }
             },
+            "content": {
+              "label": "Content",
+              "info": "Add icons with text to highlight product features."
+            },
             "heading": {
               "info": "ปล่อยว่างไว้เพื่อซ่อนการจับคู่นี้"
             },

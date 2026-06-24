@@ -1914,6 +1914,10 @@
                 "label": "W pionie"
               }
             },
+            "content": {
+              "label": "Content",
+              "info": "Add icons with text to highlight product features."
+            },
             "heading": {
               "info": "Pozostaw puste, aby ukryć parowanie"
             },

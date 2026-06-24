@@ -1913,6 +1913,10 @@
                 "label": "Verticale"
               }
             },
+            "content": {
+              "label": "Contenu",
+              "info": "Ajoutez des icônes avec du texte pour mettre en avant les caractéristiques du produit."
+            },
             "heading": {
               "info": "Laisser vide pour masquer ce jumelage"
             },

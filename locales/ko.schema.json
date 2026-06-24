@@ -1914,6 +1914,10 @@
                 "label": "수직"
               }
             },
+            "content": {
+              "label": "Content",
+              "info": "Add icons with text to highlight product features."
+            },
             "heading": {
               "info": "이 페어링을 숨기려면 비워 둡니다"
             },

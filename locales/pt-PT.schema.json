@@ -1914,6 +1914,10 @@
                 "label": "Vertical"
               }
             },
+            "content": {
+              "label": "Conteúdo",
+              "info": "Adicione ícones com texto para destacar as características do produto."
+            },
             "heading": {
               "info": "Deixe em branco para ocultar este emparelhamento"
             },

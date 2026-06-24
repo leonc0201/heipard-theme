@@ -1913,6 +1913,10 @@
                 "label": "Vertikalt"
               }
             },
+            "content": {
+              "label": "Content",
+              "info": "Add icons with text to highlight product features."
+            },
             "heading": {
               "info": "La stå tom for å skjule denne sammenkoblingen"
             },
