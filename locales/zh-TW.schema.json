@@ -1914,6 +1914,10 @@
                 "label": "垂直"
               }
             },
+            "content": {
+              "label": "Content",
+              "info": "Add icons with text to highlight product features."
+            },
             "heading": {
               "info": "留白以隱藏此配對"
             },

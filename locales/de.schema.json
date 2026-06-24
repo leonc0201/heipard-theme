@@ -1913,6 +1913,10 @@
                 "label": "Vertikal"
               }
             },
+            "content": {
+              "label": "Inhalt",
+              "info": "Symbole mit Text hinzufügen, um Produktmerkmale hervorzuheben."
+            },
             "heading": {
               "info": "Zum Ausblenden dieser Kombination leer lassen"
             },

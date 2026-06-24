@@ -1914,6 +1914,10 @@
                 "label": "Verticale"
               }
             },
+            "content": {
+              "label": "Contenuto",
+              "info": "Aggiungi icone con testo per evidenziare le caratteristiche del prodotto."
+            },
             "heading": {
               "info": "Lascia vuoto per nascondere questa associazione"
             },
