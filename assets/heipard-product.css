@@ -122,10 +122,13 @@
   border: 1px solid var(--border);
   background: var(--card);
   align-items: center;
+  box-shadow: none;
+  overflow: hidden;
 }
 .heipard-buy-row .heipard-qty::before,
 .heipard-buy-row .heipard-qty::after {
   content: none;
+  display: none;
 }
 .heipard-buy-row .heipard-qty .quantity__button {
   width: var(--hp-control-height);
@@ -164,9 +167,13 @@
   box-shadow: 0 8px 24px -8px color-mix(in oklch, var(--glow) 35%, transparent);
   transition: box-shadow var(--duration-short, 0.15s) ease, transform var(--duration-short, 0.15s) ease;
 }
-/* Dawns Button-Pseudo-Elemente (::after-Border-Ring in --color-button) ausblenden,
-   damit der Hintergrund exakt dem Heipard-Primary-Token entspricht. */
-.heipard-buy-row .heipard-atc::after {
+/* Dawns Button-Pseudo-Element (::after-Border-Ring mit eckigem --buttons-radius)
+   in ALLEN Zustaenden ausblenden – inkl. Hover, der den Ring sonst zurueckholt
+   und als eckigen Rahmen um die runde Pille erscheint. */
+.heipard-buy-row .heipard-atc::after,
+.heipard-buy-row .heipard-atc:not([disabled]):hover::after {
+  content: none;
+  display: none;
   box-shadow: none;
 }
 .heipard-buy-row .heipard-atc:not([disabled]):hover {
