@@ -96,9 +96,122 @@
   font-weight: 600;
 }
 
-/* Add-to-Cart-Button mit warmem Glow (Farbe kommt aus --color-button = Terracotta) */
-.product-form__submit {
-  box-shadow: 0 14px 40px -16px color-mix(in oklch, var(--glow) 60%, transparent);
+/* --- Lovable-PDP Buy-Box: Stepper + "In den Warenkorb" in einer Zeile ------ */
+
+/* Den separaten Dawn-Quantity-Block auf der PDP ausblenden — der Stepper
+   lebt jetzt direkt in der Buy-Row (buy-buttons.liquid). */
+.product .product-form__quantity {
+  display: none;
+}
+
+/* Zeile: Stepper-Pill | Add-to-Cart-Pill */
+.heipard-buy-row {
+  display: flex;
+  align-items: stretch;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Mengen-Stepper als runde Pill (Dawn-Styles zuruecksetzen) */
+.heipard-buy-row .heipard-qty {
+  --hp-control-height: 5.2rem;
+  flex: 0 0 auto;
+  width: auto;
+  min-height: var(--hp-control-height);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  align-items: center;
+}
+.heipard-buy-row .heipard-qty::before,
+.heipard-buy-row .heipard-qty::after {
+  content: none;
+}
+.heipard-buy-row .heipard-qty .quantity__button {
+  width: var(--hp-control-height);
+  height: var(--hp-control-height);
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 70%, transparent);
+  transition: color var(--duration-short, 0.15s) ease;
+  margin: 0;
+}
+.heipard-buy-row .heipard-qty .quantity__button:hover {
+  color: var(--primary);
+}
+.heipard-buy-row .heipard-qty .quantity__button .svg-wrapper {
+  width: 1.4rem;
+}
+.heipard-buy-row .heipard-qty .quantity__input {
+  width: 3.6rem;
+  flex: 0 0 auto;
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Add-to-Cart als Terracotta-Pill mit Icon + Glow */
+.heipard-buy-row .heipard-atc {
+  flex: 1 1 auto;
+  min-height: 5.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 0 2.8rem;
+  border-radius: 999px;
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 8px 24px -8px color-mix(in oklch, var(--glow) 35%, transparent);
+  transition: box-shadow var(--duration-short, 0.15s) ease, transform var(--duration-short, 0.15s) ease;
+}
+/* Dawns Button-Pseudo-Elemente (::after-Border-Ring in --color-button) ausblenden,
+   damit der Hintergrund exakt dem Heipard-Primary-Token entspricht. */
+.heipard-buy-row .heipard-atc::after {
+  box-shadow: none;
+}
+.heipard-buy-row .heipard-atc:not([disabled]):hover {
+  box-shadow: 0 16px 48px -12px color-mix(in oklch, var(--glow) 55%, transparent);
+}
+.heipard-buy-row .heipard-atc[disabled] {
+  box-shadow: none;
+}
+.heipard-buy-row .heipard-atc__icon {
+  display: inline-flex;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 auto;
+}
+.heipard-buy-row .heipard-atc__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile: Touch-Targets vergroessern, Layout bleibt einzeilig.
+   Bei sehr schmalen Viewports umbrechen: Stepper oben, ATC volle Breite. */
+@media screen and (max-width: 749px) {
+  .heipard-buy-row {
+    gap: 1rem;
+  }
+  .heipard-buy-row .heipard-qty {
+    --hp-control-height: 5.4rem;
+  }
+  .heipard-buy-row .heipard-atc {
+    min-height: 5.4rem;
+    padding: 0 1.8rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .heipard-buy-row {
+    flex-wrap: wrap;
+  }
+  .heipard-buy-row .heipard-qty {
+    flex: 1 0 100%;
+    justify-content: center;
+  }
+  .heipard-buy-row .heipard-atc {
+    flex: 1 0 100%;
+  }
 }
 
 /* Aktives Galerie-Thumbnail in Markenfarbe */
