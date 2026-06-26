@@ -17,31 +17,23 @@
   transition: background 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* --- Wortmarke ------------------------------------------------------------- */
-.heipard-wordmark {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.3rem;
-  font-family: var(--font-heipard-display);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  color: var(--brand);
-  font-size: clamp(2.2rem, 1.4vw + 1.8rem, 2.8rem);
+/* --- Logo (Bild) ----------------------------------------------------------- */
+.heipard-wordmark__img {
+  display: block;
+  width: auto;
+  height: clamp(2.2rem, 1.4vw + 1.8rem, 2.8rem);
+  max-width: 100%;
+  object-fit: contain;
 }
 
-.header__heading-link:hover .heipard-wordmark,
-.header__heading-link:focus-visible .heipard-wordmark {
-  color: var(--brand);
+/* Im Header sitzt das Logo im Standard-Dawn-Wrapper -- Hoehe begrenzen */
+.header__heading-link .heipard-wordmark__img {
+  height: clamp(2.2rem, 1.4vw + 1.8rem, 3rem);
 }
 
-.heipard-wordmark__dot {
-  align-self: center;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 9999px;
-  background-color: var(--brand);
-  box-shadow: 0 0 8px color-mix(in oklch, var(--glow) 75%, transparent);
+/* Footer-Logo etwas groesser fuer praesente Marke */
+.heipard-footer__logo .heipard-wordmark__img {
+  height: clamp(2.4rem, 1.6vw + 2rem, 3.2rem);
 }
 
 /* Dawn legt um den Logo-Link teils eine Unterstreichung -- hier nicht gewollt */
