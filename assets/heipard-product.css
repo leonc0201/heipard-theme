@@ -260,7 +260,7 @@
   display: inline-flex;
   width: 1.6rem;
   height: 1.6rem;
-  color: color-mix(in oklch, rgb(var(--color-foreground)) 55%, transparent);
+  color: var(--primary);
 }
 .heipard-shipping-note__icon svg {
   width: 100%;
