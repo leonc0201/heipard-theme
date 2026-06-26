@@ -114,6 +114,12 @@
   "products": {
     "product": {
       "add_to_cart": "Add to cart",
+      "heipard": {
+        "tax_included": "Incl. VAT",
+        "shipping_costs": "Shipping",
+        "shipping_at_checkout": "calculated at checkout",
+        "delivery_time": "Delivery time"
+      },
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",

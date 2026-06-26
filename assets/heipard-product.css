@@ -235,3 +235,44 @@
   font-family: var(--font-heipard-sans);
   font-weight: 600;
 }
+
+/* --- Versand- & Lieferzeit-Hinweis unter dem Preis (heipard-shipping-note) --- */
+.heipard-shipping-note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1.2rem 0 0;
+}
+
+.heipard-shipping-note__row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+  font-family: var(--font-heipard-sans);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 66%, transparent);
+}
+
+.heipard-shipping-note__icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 55%, transparent);
+}
+.heipard-shipping-note__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heipard-shipping-note__link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 200ms ease;
+}
+.heipard-shipping-note__link:hover {
+  opacity: 0.8;
+}

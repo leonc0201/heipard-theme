@@ -119,20 +119,11 @@
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                   </div>
                 {%- endif -%}
-                {%- if cart.taxes_included or cart.duties_included or shop.shipping_policy.body != blank -%}
-                  <div class="product__tax caption rte">
-                    {%- if cart.duties_included and cart.taxes_included -%}
-                      {{ 'products.product.duties_and_taxes_included' | t }}
-                    {%- elsif cart.taxes_included -%}
-                      {{ 'products.product.taxes_included' | t }}
-                    {%- elsif cart.duties_included -%}
-                      {{ 'products.product.duties_included' | t }}
-                    {%- endif -%}
-                    {%- if shop.shipping_policy.body != blank -%}
-                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                    {%- endif -%}
-                  </div>
-                {%- endif -%}
+                {%- render 'heipard-shipping-note',
+                  delivery_domestic: block.settings.delivery_domestic,
+                  delivery_eu: block.settings.delivery_eu,
+                  delivery_world: block.settings.delivery_world
+                -%}
                 <div {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -787,7 +778,31 @@
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Lieferzeit nach Versandzone"
+        },
+        {
+          "type": "text",
+          "id": "delivery_domestic",
+          "label": "Inland (DE)",
+          "default": "1–3 Werktage"
+        },
+        {
+          "type": "text",
+          "id": "delivery_eu",
+          "label": "EU-Ausland",
+          "default": "3–10 Werktage"
+        },
+        {
+          "type": "text",
+          "id": "delivery_world",
+          "label": "Welt (übrige Länder)",
+          "default": "5–15 Werktage"
+        }
+      ]
     },
     {
       "type": "sku",

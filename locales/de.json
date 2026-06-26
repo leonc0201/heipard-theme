@@ -114,6 +114,12 @@
   "products": {
     "product": {
       "add_to_cart": "In den Warenkorb",
+      "heipard": {
+        "tax_included": "Inkl. MwSt.",
+        "shipping_costs": "Versandkosten",
+        "shipping_at_checkout": "werden im Checkout berechnet",
+        "delivery_time": "Lieferzeit"
+      },
       "description": "Beschreibung",
       "on_sale": "Sale",
       "quantity": {

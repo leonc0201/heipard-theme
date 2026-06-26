@@ -1,0 +1,80 @@
+{%- comment -%}
+  HeiPard — Versand- & Lieferzeit-Hinweis unter dem PDP-Preis.
+
+  Zeigt drei Zeilen:
+    1. Inkl. MwSt. (nur wenn Steuern im Preis enthalten sind)
+    2. Versandkosten werden im Checkout berechnet (verlinkt Versand-Policy, falls vorhanden)
+    3. Lieferzeit — abhaengig von der aktuell gewaehlten Versandzone des Kunden
+
+  Zonen-Erkennung ueber Shopify Markets (`localization.country`):
+    - Inland:     DE
+    - EU-Ausland: alle uebrigen EU-Laender (ISO-Liste unten)
+    - Welt:       alle anderen Laender
+
+  Lieferzeit-Texte sind ueber die Section-Settings konfigurierbar
+  (delivery_domestic / delivery_eu / delivery_world) und fallen sonst
+  auf sinnvolle Defaults zurueck.
+
+  Akzeptierte Parameter:
+    delivery_domestic, delivery_eu, delivery_world (String, optional)
+{%- endcomment -%}
+
+{%- liquid
+  assign zone = 'world'
+  assign cc = localization.country.iso_code | default: shop.address.country_code
+
+  if cc == 'DE'
+    assign zone = 'domestic'
+  else
+    assign eu_codes = 'AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE'
+    assign eu_list = eu_codes | split: ','
+    if eu_list contains cc
+      assign zone = 'eu'
+    endif
+  endif
+
+  assign txt_domestic = delivery_domestic | default: '1–3 Werktage'
+  assign txt_eu = delivery_eu | default: '3–10 Werktage'
+  assign txt_world = delivery_world | default: '5–15 Werktage'
+
+  case zone
+    when 'domestic'
+      assign delivery_value = txt_domestic
+    when 'eu'
+      assign delivery_value = txt_eu
+    else
+      assign delivery_value = txt_world
+  endcase
+-%}
+
+<div class="heipard-shipping-note">
+  {%- if cart.taxes_included -%}
+    <p class="heipard-shipping-note__row">
+      <span class="heipard-shipping-note__icon" aria-hidden="true">
+        {{- 'icon-info.svg' | inline_asset_content -}}
+      </span>
+      <span>{{ 'products.product.heipard.tax_included' | t }}</span>
+    </p>
+  {%- endif -%}
+
+  <p class="heipard-shipping-note__row">
+    <span class="heipard-shipping-note__icon" aria-hidden="true">
+      {{- 'icon-truck.svg' | inline_asset_content -}}
+    </span>
+    <span>
+      {%- if shop.shipping_policy.url != blank -%}
+        <a class="heipard-shipping-note__link" href="{{ shop.shipping_policy.url }}">{{ 'products.product.heipard.shipping_costs' | t }}</a>
+        {{ 'products.product.heipard.shipping_at_checkout' | t }}
+      {%- else -%}
+        {{ 'products.product.heipard.shipping_costs' | t }} {{ 'products.product.heipard.shipping_at_checkout' | t }}
+      {%- endif -%}
+    </span>
+  </p>
+
+  <p class="heipard-shipping-note__row">
+    <span class="heipard-shipping-note__icon" aria-hidden="true">
+      {{- 'icon-clock.svg' | inline_asset_content -}}
+    </span>
+    <span>{{ 'products.product.heipard.delivery_time' | t }}: {{ delivery_value }}</span>
+  </p>
+</div>
