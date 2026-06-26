@@ -1,6 +1,27 @@
 {% comment %}
-  HeiPard Wortmarke - Logo-Schriftzug in Brand-Orange (Fraunces) mit dezent
-  flackerndem Punkt. Ersetzt den Text-Logo-Fallback von Dawn (shop.name),
-  solange kein Bild-Logo gesetzt ist. Styling: assets/heipard-header.css
+  HeiPard Logo - rendert das offizielle Logo-Bild in Brand-Orange.
+  Bevorzugt ein im Theme-Editor gesetztes settings.logo, faellt sonst auf
+  das mitgelieferte Asset heipard-logo.png zurueck. Ersetzt die fruehere
+  Text-Wortmarke ueberall (Header + Footer). Styling: assets/heipard-header.css
 {% endcomment %}
-<span class="heipard-wordmark">HeiPard<span class="heipard-wordmark__dot heipard-flicker" aria-hidden="true"></span></span>
+{%- liquid
+  assign logo_alt = shop.name | escape
+  if settings.logo != blank
+    assign logo_alt = settings.logo.alt | default: shop.name | escape
+  endif
+-%}
+{%- if settings.logo != blank -%}
+  {{ settings.logo | image_url: width: 600 | image_tag:
+    class: 'heipard-wordmark__img',
+    alt: logo_alt,
+    widths: '180, 270, 360, 540',
+    loading: 'eager'
+  }}
+{%- else -%}
+  <img
+    class="heipard-wordmark__img"
+    src="{{ 'heipard-logo.png' | asset_url }}"
+    alt="{{ logo_alt }}"
+    loading="eager"
+  >
+{%- endif -%}
