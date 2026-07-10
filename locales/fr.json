@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -180,7 +189,13 @@
       },
       "taxes_included": "Taxes incluses.",
       "duties_included": "Frais de douane inclus.",
-      "duties_and_taxes_included": "Frais de douane et taxes inclus."
+      "duties_and_taxes_included": "Frais de douane et taxes inclus.",
+      "heipard": {
+        "tax_included": "TVA incluse",
+        "shipping_costs": "Frais de port",
+        "shipping_at_checkout": "seront calculés lors du paiement",
+        "delivery_time": "Délai de livraison"
+      }
     },
     "modal": {
       "label": "Galerie de supports multimédias"
@@ -537,6 +552,37 @@
       "send_on_label": "Envoyer le (facultatif)",
       "expanded": "Formulaire de destinataire de carte-cadeau agrandi",
       "collapsed": "Formulaire de destinataire de carte-cadeau réduit"
+    }
+  },
+  "heipard": {
+    "theme_toggle": {
+      "label": "Alterner entre le jour et le crépuscule",
+      "day": "Jour",
+      "night": "Bonsoir"
+    },
+    "bento": {
+      "discover": "Découvrir"
+    },
+    "footer": {
+      "help_faq": "Aide et FAQ",
+      "become_dealer": "Devenir revendeur",
+      "newsletter_submit": "S'inscrire",
+      "newsletter_success": "Merci ! Vérifie ta boîte de réception pour confirmation.",
+      "newsletter_placeholder": "votre@email.de",
+      "email_label": "Adresse e-mail",
+      "country_region": "Pays / Région"
+    },
+    "product": {
+      "specs": {
+        "length": "Longueur",
+        "power_source": "Source d'alimentation",
+        "light_color": "Couleur de la lumière",
+        "protection_rating": "Indice de protection"
+      },
+      "warranty_years": {
+        "one": "{{ years }} ans de garantie",
+        "other": "{{ years }} ans de garantie"
+      }
     }
   }
 }
