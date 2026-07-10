@@ -15,7 +15,10 @@
     },
     "heipard_season": {
       "type": "heipard-season",
-      "settings": { "section_enabled": true }
+      "settings": {
+        "section_enabled": true,
+        "kicker": "Saison"
+      }
     },
     "heipard_trust_bar": {
       "type": "heipard-trust-bar",
@@ -73,11 +76,23 @@
     },
     "heipard_story": {
       "type": "heipard-brand-story",
-      "settings": { "color_scheme": "scheme-1" }
+      "settings": {
+        "kicker": "Über HeiPard",
+        "heading": "Heimat am Niederrhein.",
+        "heading_accent": "Licht für deine schönsten Stunden.",
+        "body": "<p>HeiPard ist zuhause am Niederrhein. Wir bringen dir Lichter, die Räume verwandeln und Abende verlängern. Jede Lichterkette wird geprüft, bevor sie zu dir reist — und unser Service spricht deine Sprache.</p>",
+        "link_label": "Mehr über HeiPard",
+        "color_scheme": "scheme-1"
+      }
     },
     "heipard_retailer": {
       "type": "heipard-retailer",
-      "settings": { "color_scheme": "scheme-1" }
+      "settings": {
+        "title": "Du bist Händler?",
+        "body": "Werde HeiPard-Partner und biete unsere Kollektion in deinem Geschäft an.",
+        "button_label": "Partner werden",
+        "color_scheme": "scheme-1"
+      }
     }
   },
   "order": ["heipard_hero", "heipard_season", "heipard_bento", "heipard_trust_bar", "heipard_bestseller", "heipard_occasions", "heipard_story", "heipard_retailer"]

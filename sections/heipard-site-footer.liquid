@@ -49,8 +49,8 @@
             <span class="heipard-footer__tbd">[TBD: E-Mail]</span>
           {%- endif -%}
         </li>
-        <li><a href="{{ section.settings.help_link | default: '#' }}">Hilfe &amp; FAQ</a></li>
-        <li><a href="{{ section.settings.dealer_link | default: '#' }}">Händler werden</a></li>
+        <li><a href="{{ section.settings.help_link | default: '#' }}">{{ 'heipard.footer.help_faq' | t }}</a></li>
+        <li><a href="{{ section.settings.dealer_link | default: '#' }}">{{ 'heipard.footer.become_dealer' | t }}</a></li>
       </ul>
     </div>
 
@@ -66,14 +66,14 @@
             type="email"
             name="contact[email]"
             class="heipard-footer__nl-input"
-            placeholder="deine@email.de"
-            aria-label="E-Mail-Adresse"
+            placeholder="{{ 'heipard.footer.newsletter_placeholder' | t }}"
+            aria-label="{{ 'heipard.footer.email_label' | t }}"
             required
           >
-          <button type="submit" class="heipard-footer__nl-btn">Anmelden</button>
+          <button type="submit" class="heipard-footer__nl-btn">{{ 'heipard.footer.newsletter_submit' | t }}</button>
         </div>
         {%- if form.posted_successfully? -%}
-          <p class="heipard-footer__nl-note">Danke! Schau in dein Postfach zur Bestätigung.</p>
+          <p class="heipard-footer__nl-note">{{ 'heipard.footer.newsletter_success' | t }}</p>
         {%- elsif form.errors -%}
           <p class="heipard-footer__nl-note heipard-footer__nl-note--error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
         {%- endif -%}
@@ -96,7 +96,7 @@
       {%- if localization.available_countries.size > 1 -%}
         <div class="heipard-footer__locale">
           {%- form 'localization' -%}
-            <label class="visually-hidden" for="FooterCountrySelect">Land / Region</label>
+            <label class="visually-hidden" for="FooterCountrySelect">{{ 'heipard.footer.country_region' | t }}</label>
             <select id="FooterCountrySelect" name="country_code" class="heipard-footer__locale-select" onchange="this.form.submit()">
               {%- for country in localization.available_countries -%}
                 <option value="{{ country.iso_code }}" {% if country.iso_code == localization.country.iso_code %}selected{% endif %}>

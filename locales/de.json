@@ -4,6 +4,30 @@
       "label": "Zwischen Tag und Abendstimmung wechseln",
       "day": "Tag",
       "night": "Abend"
+    },
+    "bento": {
+      "discover": "Entdecken"
+    },
+    "footer": {
+      "help_faq": "Hilfe & FAQ",
+      "become_dealer": "Händler werden",
+      "newsletter_submit": "Anmelden",
+      "newsletter_success": "Danke! Schau in dein Postfach zur Bestätigung.",
+      "newsletter_placeholder": "deine@email.de",
+      "email_label": "E-Mail-Adresse",
+      "country_region": "Land / Region"
+    },
+    "product": {
+      "specs": {
+        "length": "Länge",
+        "power_source": "Stromquelle",
+        "light_color": "Lichtfarbe",
+        "protection_rating": "Schutzart"
+      },
+      "warranty_years": {
+        "one": "{{ years }} Jahr Garantie",
+        "other": "{{ years }} Jahre Garantie"
+      }
     }
   },
   "general": {

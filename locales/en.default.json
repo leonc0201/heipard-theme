@@ -4,6 +4,30 @@
       "label": "Switch between day and evening mood",
       "day": "Day",
       "night": "Evening"
+    },
+    "bento": {
+      "discover": "Discover"
+    },
+    "footer": {
+      "help_faq": "Help & FAQ",
+      "become_dealer": "Become a dealer",
+      "newsletter_submit": "Subscribe",
+      "newsletter_success": "Thank you! Check your inbox to confirm.",
+      "newsletter_placeholder": "you@email.com",
+      "email_label": "Email address",
+      "country_region": "Country / Region"
+    },
+    "product": {
+      "specs": {
+        "length": "Length",
+        "power_source": "Power source",
+        "light_color": "Light colour",
+        "protection_rating": "Protection rating"
+      },
+      "warranty_years": {
+        "one": "{{ years }} year warranty",
+        "other": "{{ years }} years warranty"
+      }
     }
   },
   "general": {

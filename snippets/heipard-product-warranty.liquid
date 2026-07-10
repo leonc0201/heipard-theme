@@ -9,7 +9,7 @@
   </span>
   <span class="heipard-warranty__text">
     {%- if jahre != blank -%}
-      {{ jahre }} Jahre Garantie
+      {{ 'heipard.product.warranty_years' | t: years: jahre, count: jahre }}
     {%- else -%}
       <span class="heipard-tbd-inline">[TBD: Garantie]</span>
     {%- endif -%}

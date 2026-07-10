@@ -17,7 +17,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></svg>
     </span>
     <span class="heipard-specs__text">
-      <span class="heipard-specs__label">Länge</span>
+      <span class="heipard-specs__label">{{ 'heipard.product.specs.length' | t }}</span>
       <span class="heipard-specs__value">{% if laenge != blank %}{{ laenge }} m{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
     </span>
   </li>
@@ -26,7 +26,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
     </span>
     <span class="heipard-specs__text">
-      <span class="heipard-specs__label">Stromquelle</span>
+      <span class="heipard-specs__label">{{ 'heipard.product.specs.power_source' | t }}</span>
       <span class="heipard-specs__value">{% if strom != blank %}{{ strom | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
     </span>
   </li>
@@ -35,7 +35,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
     </span>
     <span class="heipard-specs__text">
-      <span class="heipard-specs__label">Lichtfarbe</span>
+      <span class="heipard-specs__label">{{ 'heipard.product.specs.light_color' | t }}</span>
       <span class="heipard-specs__value">{% if farbe != blank %}{{ farbe | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
     </span>
   </li>
@@ -44,7 +44,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.5 3 6 4 8 4 0 6-2.5 11-8 13C6.5 17.5 4 12.5 4 6.5c2 0 4.5-1 8-4z"/><path d="M12 8v4"/><path d="M12 15h.01"/></svg>
     </span>
     <span class="heipard-specs__text">
-      <span class="heipard-specs__label">Schutzart</span>
+      <span class="heipard-specs__label">{{ 'heipard.product.specs.protection_rating' | t }}</span>
       <span class="heipard-specs__value">{% if ip != blank %}{{ ip | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
     </span>
   </li>
