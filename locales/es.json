@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -180,7 +189,13 @@
       "product_variants": "Variantes de producto",
       "taxes_included": "Impuestos incluidos.",
       "duties_included": "Aranceles incluidos.",
-      "duties_and_taxes_included": "Aranceles e impuestos incluidos."
+      "duties_and_taxes_included": "Aranceles e impuestos incluidos.",
+      "heipard": {
+        "tax_included": "IVA incluido.",
+        "shipping_costs": "Gastos de envío",
+        "shipping_at_checkout": "Se calcularán al finalizar la compra",
+        "delivery_time": "Plazo de entrega"
+      }
     },
     "modal": {
       "label": "Galería multimedia"
