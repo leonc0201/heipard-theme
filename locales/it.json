@@ -553,5 +553,35 @@
       "expanded": "Modulo destinatario del buono regalo espanso",
       "collapsed": "Modulo destinatario del buono regalo compresso"
     }
+  },
+  "heipard": {
+    "theme_toggle": {
+      "label": "Passare dalla luce del giorno all'atmosfera serale",
+      "day": "Giorno",
+      "night": "Sera"
+    },
+    "bento": {
+      "discover": "Scopri"
+    },
+    "footer": {
+      "help_faq": "Aiuto e domande frequenti",
+      "become_dealer": "Diventa rivenditore",
+      "newsletter_submit": "Accedi",
+      "newsletter_success": "Grazie! Controlla la tua casella di posta per la conferma.",
+      "email_label": "E-Mail",
+      "country_region": "Paese / Regione"
+    },
+    "product": {
+      "specs": {
+        "length": "Lunghezza",
+        "power_source": "Fonte di corrente",
+        "light_color": "Colore della luce",
+        "protection_rating": "Grado di protezione"
+      },
+      "warranty_years": {
+        "one": "{{ years }} anni di garanzia",
+        "other": "{{ years }} anni di garanzia"
+      }
+    }
   }
 }
