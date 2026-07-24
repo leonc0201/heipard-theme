@@ -553,5 +553,35 @@
       "expanded": "Formulario del destinatario de la tarjeta de regalo expandido",
       "collapsed": "Formulario del destinatario de tarjeta de regalo contraído"
     }
+  },
+  "heipard": {
+    "theme_toggle": {
+      "label": "Alternar entre la luz del día y la luz del atardecer",
+      "day": "Día",
+      "night": "Tarde"
+    },
+    "bento": {
+      "discover": "Descubrir"
+    },
+    "footer": {
+      "help_faq": "Ayuda y preguntas frecuentes",
+      "become_dealer": "Conviértete en distribuidor",
+      "newsletter_submit": "Iniciar sesión",
+      "newsletter_success": "¡Gracias! Comprueba tu bandeja de entrada para recibir la confirmación.",
+      "email_label": "E-Mail",
+      "country_region": "País / Región"
+    },
+    "product": {
+      "specs": {
+        "length": "Longitud",
+        "power_source": "Fuente de alimentación",
+        "light_color": "Color de la luz",
+        "protection_rating": "Índice de protección"
+      },
+      "warranty_years": {
+        "one": "{{ years }} años de garantía",
+        "other": "{{ years }} años de garantía"
+      }
+    }
   }
 }
