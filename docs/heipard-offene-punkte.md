@@ -95,9 +95,10 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
 
 - [x] **11 Smart Collections angelegt + veröffentlicht** (regelbasiert über `kat-`Tags). ✅
 - [x] **Mega-/Dropdown-Menü** (Lichterketten → 6 Unterkategorien, Solar & Garten). ✅
-- [ ] **Import muss die `kat-`Tags setzen** — sonst bleiben die Smart Collections leer
-  (Sammel-Tag `kat-stringlights` auf ALLE Lichterketten inkl. Solar/Vorhang/Netz,
-  plus je ein Unterkategorie-Tag; Solar zusätzlich `kat-solar`).
+- [x] **Welle-1-Import ausgeführt** (2026-08-17) — 85 Produkte als Draft, `kat-`Tags gesetzt,
+  Bilder rehosted, Smart Collections gefüllt. Details + Nacharbeiten: **`heipard-import-welle1.md`**.
+- [ ] **Welle 2** — Titel/Beschreibungen markengerecht, restliche Metafelder, `todo-bild`/`todo-text`
+  abarbeiten, dann Aktivierung (siehe `heipard-import-welle1.md`).
 - [ ] **Leere Kategorien ins Menü aufnehmen, sobald bestückt** — Smart (`kat-smart`),
   Motif Lights (`kat-motif`), Weihnachtsbäume (`kat-weihnachtsbaum`) sind angelegt,
   aber bewusst noch nicht verlinkt.
