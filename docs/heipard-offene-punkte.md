@@ -20,13 +20,12 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **Hero-Bild** — aktuell KI-generiertes Platzhalterbild (`assets/heipard-hero.jpg`);
   final durch echtes Foto ersetzen? Lizenz/Endgültigkeit klären.
 - [ ] **Header — „kleine Fixes"** (von Leon erwähnt, im letzten Schritt sammeln/umsetzen).
-- [ ] **Bento-Taxonomie vs. Nav:** Das Bento-Grid zeigt 6 Kategorien aus dem Prototyp
-  (Party & Terrasse · Eiszapfen & Vorhang · Lichterketten · Solar & Gartendeko ·
-  Camping & Outdoor · Smart Lighting). Die Nav/Collections sind aber 5
-  (Lichterketten · Outdoor · Solar & Garten · Camping · Smart). 4 Kacheln sind
-  verlinkt; **„Party & Terrasse" und „Eiszapfen & Vorhang" haben noch keine
-  Collection** (Link leer). Entscheiden: Collections anlegen oder Bento-Kacheln
-  an die 5 Nav-Kategorien angleichen?
+- [ ] **Bento-Taxonomie an neue Kategorien angleichen:** Nav/Collections wurden am
+  2026-08-17 neu aufgebaut (5 Hauptkategorien + 6 Lichterketten-Unterkategorien,
+  siehe `heipard-taxonomie.md`). Das Bento-Grid auf der Startseite zeigt aber noch
+  die alte Prototyp-Taxonomie (Party & Terrasse · Eiszapfen & Vorhang · Camping &
+  Outdoor · Smart Lighting). Kacheltitel + Links auf die neue Taxonomie umstellen
+  (z. B. Lichterketten, Solar & Garten, ggf. Unterkategorien).
 - [ ] **Bento-Kachelbilder** — 6 Bilder fehlen (aktuell Token-Verlauf-Platzhalter).
 - [ ] **Bestseller-Kollektion** — Sektion auf eine Kollektion zeigen lassen (z. B. „Bestseller"
   via Tag/Smart Collection) + Produkte. Aktuell Skeleton-Platzhalter, bis Produkte da sind.
@@ -65,10 +64,8 @@ oder ein neutraler, faktisch sicherer Text.
   `heipard-metafelder.md` (Auswahllisten mit exakten Werten, Zahlen, Ja/Nein). ✅
 - [x] **Spec-Kacheln-Keys** an finale Metafeld-Namen angepasst (`beleuchtete_laenge_m`,
   mit Einheit „m"). ✅
-- [ ] **TESTPRODUKTE löschen vor Launch (alle `[TEST]`):** 6 Stück in `lichterketten` —
-  „Solar-Lichterkette HP-OLS-G40-16" (PDP-Test, 3 Bilder) + 5 Karten-Tests
-  (G40-Netz, Solar-60-LED, Camping-USB, Solar-S17, Netz-100-LED, je 1 Bild).
-  Nur zum Testen von PDP/Kollektion/Filter.
+- [x] **TESTPRODUKTE gelöscht** (2026-08-17) — alle 6 `[TEST]`-Produkte im Zuge des
+  Taxonomie-Umbaus entfernt (standen in der alten manuellen `lichterketten`). ✅
 - [ ] **IP-Schutzart-Auswahlliste:** echte Produkte haben teils **IP45** (nicht in der
   definierten Liste IP20/IP44/IP54/IP65/IP67). Für die Testprodukte auf IP44 gemappt.
   Entscheiden: IP45 (ggf. weitere) zur `ip_schutzart`-Auswahlliste hinzufügen.
@@ -91,6 +88,21 @@ oder ein neutraler, faktisch sicherer Text.
   konfigurieren (nicht exakte Werte).
 - [ ] **Breadcrumb auf Kollektion/PDP** — im Lovable-Original vorhanden, in Dawn nicht default;
   bei Bedarf ergänzen.
+
+### Taxonomie / Kategorien (Umbau 2026-08-17)
+
+Vollständige Referenz: **`heipard-taxonomie.md`**.
+
+- [x] **11 Smart Collections angelegt + veröffentlicht** (regelbasiert über `kat-`Tags). ✅
+- [x] **Mega-/Dropdown-Menü** (Lichterketten → 6 Unterkategorien, Solar & Garten). ✅
+- [ ] **Import muss die `kat-`Tags setzen** — sonst bleiben die Smart Collections leer
+  (Sammel-Tag `kat-stringlights` auf ALLE Lichterketten inkl. Solar/Vorhang/Netz,
+  plus je ein Unterkategorie-Tag; Solar zusätzlich `kat-solar`).
+- [ ] **Leere Kategorien ins Menü aufnehmen, sobald bestückt** — Smart (`kat-smart`),
+  Motif Lights (`kat-motif`), Weihnachtsbäume (`kat-weihnachtsbaum`) sind angelegt,
+  aber bewusst noch nicht verlinkt.
+- [ ] **Alte manuelle Kollektionen `outdoor` + `camping`** stehen noch — nach
+  verifiziertem Import löschen bzw. Einsatzbereich als Filter statt Kategorie klären.
 
 ## Geklärt
 
