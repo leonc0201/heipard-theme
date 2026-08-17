@@ -87,6 +87,46 @@
   }
 }
 
+/* --- Kategorie-Dropdown ("Lichterketten" klappt die Unterkategorien auf) ---
+   Dawns Submenu-Panel im HeiPard-Look: weiche Rundung, sanfter Marken-Schatten,
+   grosszuegiger Innenabstand, Terracotta-Hover statt Unterstreichung.
+   Panel-Hintergrund folgt dem Farbschema -> Tag + Abend automatisch.
+   Hoehere Spezifitaet (.header__inline-menu ...), da component-list-menu.css
+   spaeter im Body laedt und sonst Dawns Defaults gewinnen wuerden. */
+.header__inline-menu .header__submenu.list-menu--disclosure {
+  width: max-content;
+  min-width: 24rem;
+  padding: 0.8rem;
+  margin-top: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  box-shadow:
+    0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 6%, transparent),
+    0 18px 44px -16px color-mix(in oklch, var(--glow) 40%, transparent);
+}
+
+/* Innenabstand des Panels (Dawn setzt 1rem 0 -> hier gleichmaessig) */
+.header__inline-menu .header__submenu.list-menu {
+  padding: 0.8rem;
+}
+
+/* Eintraege als weiche Zeilen mit Terracotta-Hover */
+.header__inline-menu .header__submenu .header__menu-item {
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heipard-sans);
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.header__inline-menu .header__submenu .header__menu-item:hover,
+.header__inline-menu .header__submenu .header__menu-item:focus-visible {
+  color: var(--primary);
+  background-color: color-mix(in oklch, var(--primary) 10%, transparent);
+  text-decoration: none;
+}
+
 /* --- Kompakter Sprach-Umschalter (DE/EN) im Header ------------------------ */
 .header-localization .localization-form__select {
   display: inline-flex;
