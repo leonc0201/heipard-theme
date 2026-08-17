@@ -1,0 +1,101 @@
+{% comment %}
+  HeiPard PDP Feature — rendert EINEN Block.
+  Genutzt von sections/heipard-feature.liquid für beide Quellen
+  (Metaobjekt-Blöcke UND alte Section-Blocks) -> ein Markup, ein CSS.
+
+  Parameter:
+    layout       'media_text' (alternierende Bild/Text-Zeile) | 'fullwidth' (Voll-Breite-Anker)
+    media_type   'image' | 'video'
+    image        Bild-Objekt (optional; bei Video zugleich Video-Poster)
+    video        Datei-/Video-Objekt (MP4/WebM; optional)
+    kicker       String (optional)
+    title        String (optional)
+    body         String (optional; Zeilenumbrüche werden zu <br>)
+    index        laufende Nummer der media_text-Zeilen (für Auto-Alternation)
+    media_side   'auto' | 'left' | 'right'   (nur media_text)
+    overlay_theme 'light' | 'dark'           (nur fullwidth: Textfarbe des Overlays)
+{% endcomment %}
+{%- liquid
+  assign layout = layout | default: 'media_text'
+  assign media_type = media_type | default: 'image'
+  assign index = index | default: 1
+  assign media_side = media_side | default: 'auto'
+  assign overlay_theme = overlay_theme | default: 'light'
+  if layout == 'fullwidth'
+    assign img_sizes = '(min-width: 1400px) 1400px, 100vw'
+  else
+    assign img_sizes = '(min-width: 750px) 50vw, 100vw'
+  endif
+-%}
+
+{%- capture media_html -%}
+  {%- if media_type == 'video' and video != blank -%}
+    <video
+      class="heipard-feature__media-el"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="metadata"
+      {% if image != blank %}poster="{{ image | image_url: width: 1400 }}"{% endif %}
+      aria-hidden="true"
+    >
+      {%- if video.sources -%}
+        {%- for s in video.sources -%}
+          {%- if s.format == 'mp4' or s.format == 'webm' -%}
+            <source src="{{ s.url }}" type="video/{{ s.format }}">
+          {%- endif -%}
+        {%- endfor -%}
+      {%- elsif video.url -%}
+        <source src="{{ video.url }}">
+      {%- endif -%}
+    </video>
+  {%- elsif image != blank -%}
+    {{
+      image
+      | image_url: width: 1400
+      | image_tag:
+        class: 'heipard-feature__media-el',
+        loading: 'lazy',
+        widths: '500, 750, 1000, 1200, 1400',
+        sizes: img_sizes,
+        alt: title | default: image.alt
+    }}
+  {%- else -%}
+    <span class="heipard-feature__media-el heipard-feature__fallback" aria-hidden="true"></span>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture text_html -%}
+  {%- if kicker != blank -%}<span class="heipard-feature__eyebrow">{{ kicker | escape }}</span>{%- endif -%}
+  {%- if title != blank -%}<h3 class="heipard-feature__title">{{ title | escape }}</h3>{%- endif -%}
+  {%- if body != blank -%}<p class="heipard-feature__body">{{ body | escape | newline_to_br }}</p>{%- endif -%}
+{%- endcapture -%}
+
+{%- if layout == 'fullwidth' -%}
+  {%- assign has_text = false -%}
+  {%- if kicker != blank or title != blank or body != blank -%}{%- assign has_text = true -%}{%- endif -%}
+  <div class="heipard-feature__full heipard-feature__full--{{ overlay_theme }}">
+    <div class="heipard-feature__full-media">{{ media_html }}</div>
+    {%- if has_text -%}
+      <span class="heipard-feature__full-scrim" aria-hidden="true"></span>
+      <div class="heipard-feature__full-content">{{ text_html }}</div>
+    {%- endif -%}
+  </div>
+{%- else -%}
+  {%- liquid
+    assign reverse = false
+    if media_side == 'right'
+      assign reverse = true
+    elsif media_side == 'auto'
+      assign parity = index | modulo: 2
+      if parity == 0
+        assign reverse = true
+      endif
+    endif
+  -%}
+  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}">
+    <div class="heipard-feature__media">{{ media_html }}</div>
+    <div class="heipard-feature__text">{{ text_html }}</div>
+  </div>
+{%- endif -%}
