@@ -1,5 +1,7 @@
 # CLAUDE.md — Heipard Shopify Theme
 
+> **Einstieg / aktueller Stand: `docs/projektstand.md`** (dort zuerst nachsehen — Status, nächste Schritte, Doku-Landkarte, Weiterarbeiten auf anderem Rechner).
+
 ## Projekt
 
 Shopify-Theme für heipard.com (D2C-Shop für Deko- und Funktionslicht: Lichterketten, Solar, Camping, Smart). Basis: Dawn, stark angepasst. Sprachen: DE (primär) + EN via Shopify Markets. Marke der C&L Handels GmbH.
