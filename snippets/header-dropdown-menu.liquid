@@ -1,103 +1,79 @@
 {% comment %}
-  Renders a standard dropdown style menu for the header.
+  HeiPard Desktop-Navigation mit Mega-Panel.
+  Ersetzt Dawns schlichtes Dropdown. Top-Level-Links inline; ein Punkt MIT
+  Kindern (aktuell "Lichterketten") öffnet ein Mega-Panel: die Unterkategorien
+  als Karten mit dynamischem Kollektionsbild (Featured Image der Kollektion,
+  sonst erstes Produktfoto) + "Alle … ansehen"-Link. Öffnet per Hover UND
+  Tastatur (:focus-within) — reines CSS.
 
-  Usage:
-  {% render 'header-dropdown-menu' %}
+  Desktop-only: Mobil rendert header-drawer.liquid (unberührt).
+  CSS global in assets/heipard-header.css (nach base.css).
 {% endcomment %}
-
 <nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+  <ul class="list-menu list-menu--inline heipard-nav" role="list">
     {%- for link in section.settings.menu.links -%}
-      <li>
-        {%- if link.links != blank -%}
-          <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}">
-              <summary
-                id="HeaderMenu-{{ link.handle }}"
-                class="header__menu-item list-menu__item link focus-inset"
-              >
-                <span
-                  {%- if link.child_active %}
-                    class="header__active-menu-item"
-                  {% endif %}
-                >
-                  {{- link.title | escape -}}
-                </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
-              </summary>
-              <ul
-                id="HeaderMenu-MenuList-{{ forloop.index }}"
-                class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
-                role="list"
-                tabindex="-1"
-              >
-                {%- for childlink in link.links -%}
-                  <li>
-                    {%- if childlink.links == blank -%}
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                    {%- else -%}
-                      <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
-                        <summary
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
-                        >
-                          <span>{{ childlink.title | escape }}</span>
-                          {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </summary>
-                        <ul
-                          id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                          class="header__submenu list-menu motion-reduce"
-                        >
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      </details>
-                    {%- endif -%}
-                  </li>
-                {%- endfor -%}
-              </ul>
-            </details>
-          </header-menu>
-        {%- else -%}
+      {%- if link.links != blank -%}
+        <li class="heipard-nav__item heipard-nav__item--mega">
           <a
-            id="HeaderMenu-{{ link.handle }}"
             href="{{ link.url }}"
-            class="header__menu-item list-menu__item link link--text focus-inset"
-            {% if link.current %}
-              aria-current="page"
-            {% endif %}
+            class="header__menu-item list-menu__item link heipard-nav__trigger{% if link.current or link.child_active %} heipard-nav__trigger--active{% endif %}"
           >
-            <span
-              {%- if link.current %}
-                class="header__active-menu-item"
-              {% endif %}
-            >
-              {{- link.title | escape -}}
-            </span>
+            <span>{{ link.title | escape }}</span>
+            {{- 'icon-caret.svg' | inline_asset_content -}}
           </a>
-        {%- endif -%}
-      </li>
+
+          <div class="heipard-mega" role="group" aria-label="{{ link.title | escape }}">
+            <ul class="heipard-mega__grid" role="list">
+              {%- for childlink in link.links -%}
+                {%- liquid
+                  assign col = childlink.object
+                  assign thumb = null
+                  if col.image != blank
+                    assign thumb = col.image
+                  elsif col.products.first.featured_image != blank
+                    assign thumb = col.products.first.featured_image
+                  endif
+                -%}
+                <li class="heipard-mega__cell">
+                  <a href="{{ childlink.url }}" class="heipard-mega__card">
+                    <span class="heipard-mega__thumb">
+                      {%- if thumb != blank -%}
+                        {{
+                          thumb
+                          | image_url: width: 160
+                          | image_tag:
+                            class: 'heipard-mega__img',
+                            loading: 'lazy',
+                            widths: '72, 108, 160',
+                            sizes: '4.6rem',
+                            alt: childlink.title
+                        }}
+                      {%- else -%}
+                        <span class="heipard-mega__img heipard-mega__fallback" aria-hidden="true"></span>
+                      {%- endif -%}
+                    </span>
+                    <span class="heipard-mega__name">{{ childlink.title | escape }}</span>
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+
+            <a href="{{ link.url }}" class="heipard-mega__all">
+              Alle {{ link.title | escape }} ansehen
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </li>
+      {%- else -%}
+        <li class="heipard-nav__item">
+          <a
+            href="{{ link.url }}"
+            class="header__menu-item list-menu__item link heipard-nav__trigger{% if link.current %} heipard-nav__trigger--active{% endif %}"
+          >
+            <span>{{ link.title | escape }}</span>
+          </a>
+        </li>
+      {%- endif -%}
     {%- endfor -%}
   </ul>
 </nav>

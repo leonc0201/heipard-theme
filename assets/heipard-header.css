@@ -87,44 +87,129 @@
   }
 }
 
-/* --- Kategorie-Dropdown ("Lichterketten" klappt die Unterkategorien auf) ---
-   Dawns Submenu-Panel im HeiPard-Look: weiche Rundung, sanfter Marken-Schatten,
-   grosszuegiger Innenabstand, Terracotta-Hover statt Unterstreichung.
-   Panel-Hintergrund folgt dem Farbschema -> Tag + Abend automatisch.
-   Hoehere Spezifitaet (.header__inline-menu ...), da component-list-menu.css
-   spaeter im Body laedt und sonst Dawns Defaults gewinnen wuerden. */
-.header__inline-menu .header__submenu.list-menu--disclosure {
+/* --- Mega-Menü (Desktop) — "Lichterketten" öffnet ein Spalten-Panel mit Bildern
+   Öffnet per Hover UND Tastatur (:focus-within), reines CSS. Ruhiger HeiPard-Look,
+   Tag + Abend über Tokens. Panel opak (var(--background)), damit Text über dem
+   Seiteninhalt sicher trägt. Desktop-only (mobil rendert der Drawer). */
+.heipard-nav__item { position: relative; }
+
+.heipard-nav__trigger { gap: 0.4rem; }
+.heipard-nav__trigger .icon-caret { transition: transform 220ms ease; }
+.heipard-nav__item--mega:hover .heipard-nav__trigger .icon-caret,
+.heipard-nav__item--mega:focus-within .heipard-nav__trigger .icon-caret {
+  transform: rotate(180deg);
+}
+.heipard-nav__trigger--active { color: var(--primary); }
+
+.heipard-mega {
+  position: absolute;
+  top: calc(100% + 0.9rem);
+  left: 0;
+  z-index: 60;
   width: max-content;
-  min-width: 24rem;
-  padding: 0.8rem;
-  margin-top: 0.6rem;
+  max-width: min(48rem, calc(100vw - 4rem));
+  padding: 1.6rem;
+  background: var(--background);
   border: 1px solid var(--border);
   border-radius: var(--radius-2xl);
   box-shadow:
     0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 6%, transparent),
-    0 18px 44px -16px color-mix(in oklch, var(--glow) 40%, transparent);
+    0 22px 50px -18px color-mix(in oklch, var(--glow) 42%, transparent);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0s linear 200ms;
 }
 
-/* Innenabstand des Panels (Dawn setzt 1rem 0 -> hier gleichmaessig) */
-.header__inline-menu .header__submenu.list-menu {
+.heipard-nav__item--mega:hover > .heipard-mega,
+.heipard-nav__item--mega:focus-within > .heipard-mega {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 0s;
+}
+
+/* Unsichtbare Brücke, damit der Hover zwischen Trigger und Panel nicht abreißt */
+.heipard-mega::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: -0.9rem;
+  height: 0.9rem;
+}
+
+.heipard-mega__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(12rem, 1fr));
+  gap: 0.4rem;
+}
+
+.heipard-mega__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 0.8rem;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: background-color 180ms ease;
+}
+.heipard-mega__card:hover,
+.heipard-mega__card:focus-visible {
+  background-color: color-mix(in oklch, var(--primary) 9%, transparent);
 }
 
-/* Eintraege als weiche Zeilen mit Terracotta-Hover */
-.header__inline-menu .header__submenu .header__menu-item {
-  padding: 0.9rem 1.2rem;
+.heipard-mega__thumb {
+  flex: 0 0 auto;
+  width: 4.6rem;
+  height: 4.6rem;
   border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--secondary);
+}
+.heipard-mega__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.heipard-mega__fallback {
+  background:
+    radial-gradient(120% 90% at 80% 110%, color-mix(in oklch, var(--brand) 45%, transparent) 0%, transparent 60%),
+    linear-gradient(160deg, var(--secondary) 0%, var(--muted) 100%);
+}
+
+.heipard-mega__name {
   font-family: var(--font-heipard-sans);
   font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.25;
   color: rgb(var(--color-foreground));
-  transition: background-color 180ms ease, color 180ms ease;
 }
 
-.header__inline-menu .header__submenu .header__menu-item:hover,
-.header__inline-menu .header__submenu .header__menu-item:focus-visible {
+.heipard-mega__all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+  margin-inline-start: 0.8rem;
   color: var(--primary);
-  background-color: color-mix(in oklch, var(--primary) 10%, transparent);
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  font-size: 1.35rem;
   text-decoration: none;
+}
+.heipard-mega__all:hover,
+.heipard-mega__all:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+/* Sicherheitsnetz: Panel strikt Desktop-only (mobil übernimmt der Drawer) */
+@media screen and (max-width: 989px) {
+  .heipard-mega { display: none; }
 }
 
 /* --- Kompakter Sprach-Umschalter (DE/EN) im Header ------------------------ */
