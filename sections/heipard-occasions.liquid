@@ -37,8 +37,15 @@
             <span class="heipard-occasion__img heipard-occasion__fallback" aria-hidden="true"></span>
           {%- endif -%}
           <span class="heipard-occasion__scrim" aria-hidden="true"></span>
-          {%- if block.settings.name != blank -%}
-            <span class="heipard-occasion__name">{{ block.settings.name | escape }}</span>
+          {%- if block.settings.name != blank or block.settings.subtitle != blank -%}
+            <span class="heipard-occasion__content">
+              {%- if block.settings.name != blank -%}
+                <span class="heipard-occasion__name">{{ block.settings.name | escape }}</span>
+              {%- endif -%}
+              {%- if block.settings.subtitle != blank -%}
+                <span class="heipard-occasion__subtitle">{{ block.settings.subtitle | escape }}</span>
+              {%- endif -%}
+            </span>
           {%- endif -%}
         </a>
       {%- endfor -%}
@@ -111,17 +118,29 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 45%, transparent 75%);
 }
 
-.heipard-occasion__name {
+.heipard-occasion__content {
   position: absolute;
   inset-inline: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   padding: 1.8rem;
+}
+
+.heipard-occasion__name {
   font-family: var(--font-heipard-display);
   font-weight: 500;
   letter-spacing: -0.01em;
   font-size: clamp(1.9rem, 1vw + 1.6rem, 2.4rem);
   line-height: 1.1;
   color: oklch(0.98 0.01 80);
+}
+
+.heipard-occasion__subtitle {
+  font-size: 1.3rem;
+  line-height: 1.35;
+  color: color-mix(in oklch, oklch(0.98 0.01 80) 82%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -146,6 +165,7 @@
       "name": "Anlass",
       "settings": [
         { "type": "text", "id": "name", "label": "Name", "default": "Anlass" },
+        { "type": "text", "id": "subtitle", "label": "Untertitel" },
         { "type": "image_picker", "id": "image", "label": "Bild" },
         { "type": "url", "id": "link", "label": "Link" }
       ]
