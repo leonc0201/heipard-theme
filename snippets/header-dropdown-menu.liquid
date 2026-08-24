@@ -1,16 +1,17 @@
 {% comment %}
-  HeiPard Desktop-Navigation mit Mega-Panel (Hue-Niveau).
-  Top-Level-Links inline. Ein Punkt MIT Kindern (aktuell "Lichterketten") öffnet
-  ein Mega-Panel über die volle Breite (Panel-Hintergrund edge-to-edge, Inhalt
-  auf page-width zentriert):
-    - links 6 Unterkategorie-Karten (Bild + Name + Beschreibung + Produktanzahl)
-    - rechts eine Highlight-Bildkachel (Header-Setting mega_highlight_*)
-    - Fuß: klare "Alle … ansehen"-CTA
-  Bild je Karte dynamisch: Featured Image der Kollektion, sonst erstes Produktfoto.
-  Öffnet per Hover UND Tastatur (:focus-within), reines CSS.
+  HeiPard Desktop-Navigation mit Mega-Panels (Hue-Niveau).
+  Top-Level-Links inline. Punkte MIT Kindern öffnen ein Panel über die volle
+  Breite (Hintergrund edge-to-edge, Inhalt auf page-width). Zwei Panel-Typen:
 
-  Desktop-only: Mobil rendert header-drawer.liquid (unberührt).
-  CSS global in assets/heipard-header.css (nach base.css).
+  1. Kollektions-Punkt (link.type == collection_link, z. B. "Lichterketten"):
+     6 Unterkategorie-Karten (Kollektionsbild + Name + Beschreibung + Anzahl)
+     + Highlight-Kachel rechts + "Alle … ansehen"-CTA.
+  2. Sonstiger Punkt mit Kindern (z. B. "Momente", HTTP-Link): kompaktes
+     4-Karten-Panel (Bild aus Header-Setting moment_image_N + Titel + Untertitel),
+     keine Highlight-Zone.
+
+  Öffnet per Hover UND Tastatur (:focus-within), reines CSS. Desktop-only:
+  Mobil rendert header-drawer.liquid (unberührt). CSS in assets/heipard-header.css.
 {% endcomment %}
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline heipard-nav" role="list">
@@ -27,87 +28,100 @@
 
           <div class="heipard-mega" role="group" aria-label="{{ link.title | escape }}">
             <div class="heipard-mega__inner page-width">
-              <div class="heipard-mega__cols">
-                <ul class="heipard-mega__grid" role="list">
+              {%- if link.type == 'collection_link' -%}
+                {%- comment -%} Typ 1: Kollektions-Panel (Lichterketten) {%- endcomment -%}
+                <div class="heipard-mega__cols">
+                  <ul class="heipard-mega__grid" role="list">
+                    {%- for childlink in link.links -%}
+                      {%- liquid
+                        assign col = childlink.object
+                        assign thumb = null
+                        if col.image != blank
+                          assign thumb = col.image
+                        elsif col.products.first.featured_image != blank
+                          assign thumb = col.products.first.featured_image
+                        endif
+                      -%}
+                      <li class="heipard-mega__cell">
+                        <a href="{{ childlink.url }}" class="heipard-mega__card">
+                          <span class="heipard-mega__thumb">
+                            {%- if thumb != blank -%}
+                              {{ thumb | image_url: width: 200 | image_tag: class: 'heipard-mega__img', loading: 'lazy', widths: '96, 140, 200', sizes: '5.6rem', alt: childlink.title }}
+                            {%- else -%}
+                              <span class="heipard-mega__img heipard-mega__fallback" aria-hidden="true"></span>
+                            {%- endif -%}
+                          </span>
+                          <span class="heipard-mega__text">
+                            <span class="heipard-mega__name">{{ childlink.title | escape }}</span>
+                            <span class="heipard-mega__desc">
+                              {%- case col.handle -%}
+                                {%- when 'led-string-lights' -%}Der Allrounder für drinnen & draußen
+                                {%- when 'christmas-tree-lights' -%}Für den Baum gemacht
+                                {%- when 'curtain' -%}Lichtervorhänge für Fenster & Wände
+                                {%- when 'icicle' -%}Eiszapfen-Effekt für Dach & Fassade
+                                {%- when 'cluster' -%}Dichte Lichtpunkte, voller Effekt
+                                {%- when 'net' -%}Lichternetze für Hecke & Busch
+                              {%- endcase -%}
+                            </span>
+                            {%- if col.all_products_count > 0 -%}
+                              <span class="heipard-mega__count">
+                                {{ col.all_products_count }}
+                                {%- if col.all_products_count == 1 %} Produkt{% else %} Produkte{% endif -%}
+                              </span>
+                            {%- endif -%}
+                          </span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+
+                  {%- if section.settings.mega_highlight_image != blank -%}
+                    <a class="heipard-mega__highlight" href="{{ section.settings.mega_highlight_link | default: link.url }}">
+                      {{ section.settings.mega_highlight_image | image_url: width: 760 | image_tag: class: 'heipard-mega__highlight-img', loading: 'lazy', widths: '360, 540, 760', sizes: '(min-width: 990px) 30vw, 90vw', alt: section.settings.mega_highlight_heading | default: 'Bestseller entdecken' }}
+                      <span class="heipard-mega__highlight-scrim" aria-hidden="true"></span>
+                      <span class="heipard-mega__highlight-content">
+                        <span class="heipard-mega__highlight-heading">{{ section.settings.mega_highlight_heading | default: 'Bestseller entdecken' | escape }}</span>
+                        <span class="heipard-mega__highlight-cta" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+                        </span>
+                      </span>
+                    </a>
+                  {%- endif -%}
+                </div>
+
+                <a href="{{ link.url }}" class="heipard-mega__all">
+                  Alle {{ link.title | escape }} ansehen
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+                </a>
+
+              {%- else -%}
+                {%- comment -%} Typ 2: Momente-Panel — 4 kompakte Karten {%- endcomment -%}
+                {%- assign moment_subs = "Lange Tafeln, warmes Licht|Festlich von Baum bis Fenster|Warmes Licht für drinnen|Licht, das mitkommt" | split: "|" -%}
+                <ul class="heipard-mega__grid heipard-mega__grid--moments" role="list">
                   {%- for childlink in link.links -%}
-                    {%- liquid
-                      assign col = childlink.object
-                      assign thumb = null
-                      if col.image != blank
-                        assign thumb = col.image
-                      elsif col.products.first.featured_image != blank
-                        assign thumb = col.products.first.featured_image
-                      endif
-                    -%}
+                    {%- assign moment_key = 'moment_image_' | append: forloop.index -%}
+                    {%- assign moment_img = section.settings[moment_key] -%}
                     <li class="heipard-mega__cell">
                       <a href="{{ childlink.url }}" class="heipard-mega__card">
                         <span class="heipard-mega__thumb">
-                          {%- if thumb != blank -%}
-                            {{
-                              thumb
-                              | image_url: width: 200
-                              | image_tag:
-                                class: 'heipard-mega__img',
-                                loading: 'lazy',
-                                widths: '96, 140, 200',
-                                sizes: '5.6rem',
-                                alt: childlink.title
-                            }}
+                          {%- if moment_img != blank -%}
+                            {{ moment_img | image_url: width: 200 | image_tag: class: 'heipard-mega__img', loading: 'lazy', widths: '96, 140, 200', sizes: '5.6rem', alt: childlink.title }}
                           {%- else -%}
                             <span class="heipard-mega__img heipard-mega__fallback" aria-hidden="true"></span>
                           {%- endif -%}
                         </span>
                         <span class="heipard-mega__text">
                           <span class="heipard-mega__name">{{ childlink.title | escape }}</span>
-                          <span class="heipard-mega__desc">
-                            {%- case col.handle -%}
-                              {%- when 'led-string-lights' -%}Der Allrounder für drinnen & draußen
-                              {%- when 'christmas-tree-lights' -%}Für den Baum gemacht
-                              {%- when 'curtain' -%}Lichtervorhänge für Fenster & Wände
-                              {%- when 'icicle' -%}Eiszapfen-Effekt für Dach & Fassade
-                              {%- when 'cluster' -%}Dichte Lichtpunkte, voller Effekt
-                              {%- when 'net' -%}Lichternetze für Hecke & Busch
-                            {%- endcase -%}
-                          </span>
-                          {%- if col.all_products_count > 0 -%}
-                            <span class="heipard-mega__count">
-                              {{ col.all_products_count }}
-                              {%- if col.all_products_count == 1 %} Produkt{% else %} Produkte{% endif -%}
-                            </span>
+                          {%- assign moment_sub = moment_subs[forloop.index0] -%}
+                          {%- if moment_sub != blank -%}
+                            <span class="heipard-mega__desc">{{ moment_sub }}</span>
                           {%- endif -%}
                         </span>
                       </a>
                     </li>
                   {%- endfor -%}
                 </ul>
-
-                {%- if section.settings.mega_highlight_image != blank -%}
-                  <a class="heipard-mega__highlight" href="{{ section.settings.mega_highlight_link | default: link.url }}">
-                    {{
-                      section.settings.mega_highlight_image
-                      | image_url: width: 760
-                      | image_tag:
-                        class: 'heipard-mega__highlight-img',
-                        loading: 'lazy',
-                        widths: '360, 540, 760',
-                        sizes: '(min-width: 990px) 30vw, 90vw',
-                        alt: section.settings.mega_highlight_heading | default: 'Bestseller entdecken'
-                    }}
-                    <span class="heipard-mega__highlight-scrim" aria-hidden="true"></span>
-                    <span class="heipard-mega__highlight-content">
-                      <span class="heipard-mega__highlight-heading">{{ section.settings.mega_highlight_heading | default: 'Bestseller entdecken' | escape }}</span>
-                      <span class="heipard-mega__highlight-cta" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-                      </span>
-                    </span>
-                  </a>
-                {%- endif -%}
-              </div>
-
-              <a href="{{ link.url }}" class="heipard-mega__all">
-                Alle {{ link.title | escape }} ansehen
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-              </a>
+              {%- endif -%}
             </div>
           </div>
         </li>

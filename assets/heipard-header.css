@@ -157,6 +157,11 @@
   gap: 0.6rem;
 }
 
+/* Momente-Panel: 4 kompakte Karten nebeneinander (keine Highlight-Zone) */
+.heipard-mega__grid--moments {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .heipard-mega__card {
   display: flex;
   align-items: center;
