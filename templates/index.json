@@ -47,9 +47,9 @@
         "t1": { "type": "tile", "settings": { "size": "feature", "kicker": "Stimmung für draußen", "title": "Party & Terrasse", "link": "", "image": "shopify://shop_images/HOME-03_Bento_gross_Party_Terrasse.webp" } },
         "t2": { "type": "tile", "settings": { "size": "tall", "kicker": "Festlich am Fenster", "title": "Eiszapfen & Vorhang", "link": "", "image": "shopify://shop_images/HOME-04_Bento_hoch_Eiszapfen_Vorhang.webp" } },
         "t3": { "type": "tile", "settings": { "size": "medium", "kicker": "Klassisch & vielseitig", "title": "Lichterketten", "link": "shopify://collections/lichterketten", "image": "shopify://shop_images/HOME-05_Bento_klein_Draht-Detail.webp" } },
-        "t4": { "type": "tile", "settings": { "size": "medium", "kicker": "Leuchtet ohne Steckdose", "title": "Solar & Gartendeko", "link": "shopify://collections/solar-garten", "image": "shopify://shop_images/HOME-06_Bento_klein_Solar-Gartenweg.webp" } },
-        "t5": { "type": "tile", "settings": { "size": "banner", "kicker": "Robust für unterwegs", "title": "Camping & Outdoor", "link": "shopify://collections/camping" } },
-        "t6": { "type": "tile", "settings": { "size": "banner", "kicker": "Per App gesteuert", "title": "Smart Lighting", "link": "shopify://collections/smart" } }
+        "t4": { "type": "tile", "settings": { "size": "medium", "kicker": "Leuchtet ohne Steckdose", "title": "Solar & Gartendeko", "link": "shopify://collections/solar-garten", "image": "shopify://shop_images/HOME-06_Bento_klein_Solar-Gartenweg_94576a10-42cc-4f9e-92e7-9e285c816a81.webp" } },
+        "t5": { "type": "tile", "settings": { "size": "banner", "kicker": "Robust für unterwegs", "title": "Camping & Outdoor", "link": "shopify://collections/camping", "image": "shopify://shop_images/HOME-12_Bento_Camping_Outdoor.webp" } },
+        "t6": { "type": "tile", "settings": { "size": "banner", "kicker": "Per App gesteuert", "title": "Smart Lighting", "link": "shopify://collections/smart", "image": "shopify://shop_images/HOME-13_Bento_Smart_Lighting.webp" } }
       },
       "block_order": ["t1", "t2", "t3", "t4", "t5", "t6"],
       "settings": {
