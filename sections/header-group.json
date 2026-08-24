@@ -9,6 +9,7 @@
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
+        "mega_highlight_image": "shopify://shop_images/HOME-03_Bento_gross_Party_Terrasse.webp",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "enable_country_selector": false,
