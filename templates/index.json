@@ -88,10 +88,11 @@
       "type": "heipard-brand-story",
       "settings": {
         "kicker": "Über HeiPard",
-        "heading": "Heimat am Niederrhein.",
-        "heading_accent": "Licht für deine schönsten Stunden.",
-        "body": "<p>HeiPard ist zuhause am Niederrhein. Wir bringen dir Lichter, die Räume verwandeln und Abende verlängern. Jede Lichterkette wird geprüft, bevor sie zu dir reist — und unser Service spricht deine Sprache.</p>",
-        "link_label": "Mehr über HeiPard",
+        "heading": "Licht, das Abende länger macht.",
+        "heading_accent": "",
+        "body": "<p>Bei HeiPard dreht sich alles um Licht, das Momente schöner macht. Wir haben uns ganz auf Lichterketten und Solarleuchten konzentriert, weil wir glauben, dass gutes Licht nicht hell sein muss, sondern warm. Es soll einen Abend auf der Terrasse ein wenig länger werden lassen und ein Wohnzimmer im Winter gemütlicher machen.</p><p>HeiPard ist eine Marke aus Deutschland. In unserem Shop bekommst du unser Licht direkt von uns, und wenn du Fragen hast, hilft dir unser Service persönlich weiter.</p>",
+        "link_label": "Unsere Lichterketten entdecken",
+        "link": "shopify://collections/lichterketten",
         "color_scheme": "scheme-1"
       }
     },
