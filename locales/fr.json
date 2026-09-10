@@ -566,6 +566,7 @@
     "footer": {
       "help_faq": "Aide et FAQ",
       "become_dealer": "Devenir revendeur",
+      "withdraw_contract": "Rétracter le contrat",
       "newsletter_submit": "S'inscrire",
       "newsletter_success": "Merci ! Vérifie ta boîte de réception pour confirmation.",
       "newsletter_placeholder": "votre@email.de",

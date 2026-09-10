@@ -16,6 +16,21 @@
       {%- if section.settings.brand_description != blank -%}
         <p class="heipard-footer__desc">{{ section.settings.brand_description | escape }}</p>
       {%- endif -%}
+
+      {%- liquid
+        # Seiten-URL bevorzugen (ist bereits sprach-/marktpraefigiert),
+        # sonst Pfad aus routes.root_url bauen (Fallback, falls Seite fehlt).
+        assign withdrawal_page = pages['vertrag-widerrufen']
+        if withdrawal_page.url != blank
+          assign withdrawal_url = withdrawal_page.url
+        else
+          assign withdrawal_root = routes.root_url | remove_last: '/'
+          assign withdrawal_url = withdrawal_root | append: '/pages/vertrag-widerrufen'
+        endif
+      -%}
+      <a href="{{ withdrawal_url }}" class="heipard-footer__withdraw">
+        {{- 'heipard.footer.withdraw_contract' | t -}}
+      </a>
     </div>
 
     <div class="heipard-footer__col">
