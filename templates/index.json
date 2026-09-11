@@ -96,16 +96,7 @@
         "link": "shopify://collections/lichterketten",
         "color_scheme": "scheme-1"
       }
-    },
-    "heipard_retailer": {
-      "type": "heipard-retailer",
-      "settings": {
-        "title": "Du bist Händler?",
-        "body": "Werde HeiPard-Partner und biete unsere Kollektion in deinem Geschäft an.",
-        "button_label": "Partner werden",
-        "color_scheme": "scheme-1"
-      }
     }
   },
-  "order": ["heipard_hero", "heipard_season", "heipard_bento", "heipard_trust_bar", "heipard_bestseller", "heipard_occasions", "heipard_story", "heipard_retailer"]
+  "order": ["heipard_hero", "heipard_season", "heipard_bento", "heipard_trust_bar", "heipard_bestseller", "heipard_occasions", "heipard_story"]
 }
