@@ -1,9 +1,8 @@
 {% comment %}
-  HeiPard Footer — Struktur 1:1 aus docs/lovable-reference (site-footer.tsx):
-  Markenspalte + Beschreibung · Kategorien · Service · Newsletter (mit Text) ·
+  HeiPard Footer — Markenspalte + Beschreibung · Kategorien · Kontakt ·
   Bottom-Bar (Copyright + Rechtliches + Land/Waehrung).
-  WICHTIG: Lovables Telefon/E-Mail/"10 %" sind Halluzinationen -> hier als [TBD]
-  (echte Werte in der [TBD]-Runde). Newsletter nutzt Shopifys Kundenformular.
+  Newsletter-Anmeldung wurde entfernt (kein Double-Opt-in vorhanden).
+  Kontaktdaten sind echte Werte, keine Platzhalter mehr.
   Styles: assets/heipard-footer.css (global, laedt nach base.css -> Abstaende
   werden nicht von Dawn-Klassen genullt).
 {% endcomment %}
@@ -46,58 +45,64 @@
 
     <div class="heipard-footer__col">
       <h4 class="heipard-footer__heading">{{ section.settings.service_heading | escape }}</h4>
-      <ul class="heipard-footer__links">
-        <li>
-          {%- if section.settings.service_phone != blank -%}
-            <a href="tel:{{ section.settings.service_phone | replace: ' ', '' }}">{{ section.settings.service_phone | escape }}</a>
-          {%- else -%}
-            <span class="heipard-footer__tbd">[TBD: Telefon]</span>
-          {%- endif -%}
-        </li>
-        {%- if section.settings.service_hours != blank -%}
-          <li>{{ section.settings.service_hours | escape }}</li>
+      <ul class="heipard-footer__links heipard-footer__contact">
+        {%- if section.settings.service_email_business != blank -%}
+          <li class="heipard-footer__contact-row">
+            <span class="heipard-footer__contact-icon" aria-hidden="true">
+              {{- 'icon-mail.svg' | inline_asset_content -}}
+            </span>
+            <span>
+              {{ 'heipard.footer.email_business' | t }}:
+              <a href="mailto:{{ section.settings.service_email_business }}">{{ section.settings.service_email_business | escape }}</a>
+            </span>
+          </li>
         {%- endif -%}
-        <li>
-          {%- if section.settings.service_email != blank -%}
-            <a href="mailto:{{ section.settings.service_email }}">{{ section.settings.service_email | escape }}</a>
-          {%- else -%}
-            <span class="heipard-footer__tbd">[TBD: E-Mail]</span>
-          {%- endif -%}
-        </li>
+        {%- if section.settings.service_email_support != blank -%}
+          <li class="heipard-footer__contact-row">
+            <span class="heipard-footer__contact-icon" aria-hidden="true">
+              {{- 'icon-mail.svg' | inline_asset_content -}}
+            </span>
+            <span>
+              {{ 'heipard.footer.email_support' | t }}:
+              <a href="mailto:{{ section.settings.service_email_support }}">{{ section.settings.service_email_support | escape }}</a>
+            </span>
+          </li>
+        {%- endif -%}
+        {%- if section.settings.service_phone != blank -%}
+          {%- liquid
+            assign phone_href = section.settings.service_phone_link
+            if phone_href == blank
+              assign phone_href = section.settings.service_phone | remove: ' ' | remove: '/' | remove: '-'
+            endif
+          -%}
+          <li class="heipard-footer__contact-row">
+            <span class="heipard-footer__contact-icon" aria-hidden="true">
+              {{- 'icon-phone.svg' | inline_asset_content -}}
+            </span>
+            <span><a href="tel:{{ phone_href }}">{{ section.settings.service_phone | escape }}</a></span>
+          </li>
+        {%- endif -%}
+        {%- if section.settings.service_hours != blank -%}
+          <li class="heipard-footer__contact-row">
+            <span class="heipard-footer__contact-icon" aria-hidden="true">
+              {{- 'icon-clock.svg' | inline_asset_content -}}
+            </span>
+            <span>{{ section.settings.service_hours | escape }}</span>
+          </li>
+        {%- endif -%}
         {%- if section.settings.help_link != blank -%}
-          <li><a href="{{ section.settings.help_link }}">{{ 'heipard.footer.help_faq' | t }}</a></li>
+          <li class="heipard-footer__contact-row heipard-footer__contact-row--plain">
+            <a href="{{ section.settings.help_link }}">{{ 'heipard.footer.help_faq' | t }}</a>
+          </li>
         {%- endif -%}
         {%- if section.settings.dealer_link != blank -%}
-          <li><a href="{{ section.settings.dealer_link }}">{{ 'heipard.footer.become_dealer' | t }}</a></li>
+          <li class="heipard-footer__contact-row heipard-footer__contact-row--plain">
+            <a href="{{ section.settings.dealer_link }}">{{ 'heipard.footer.become_dealer' | t }}</a>
+          </li>
         {%- endif -%}
       </ul>
     </div>
 
-    <div class="heipard-footer__col heipard-footer__newsletter">
-      <h4 class="heipard-footer__heading">{{ section.settings.newsletter_heading | escape }}</h4>
-      {%- if section.settings.newsletter_text != blank -%}
-        <p class="heipard-footer__desc">{{ section.settings.newsletter_text | escape }}</p>
-      {%- endif -%}
-      {%- form 'customer' -%}
-        <input type="hidden" name="contact[tags]" value="newsletter">
-        <div class="heipard-footer__nl-row">
-          <input
-            type="email"
-            name="contact[email]"
-            class="heipard-footer__nl-input"
-            placeholder="{{ 'heipard.footer.newsletter_placeholder' | t }}"
-            aria-label="{{ 'heipard.footer.email_label' | t }}"
-            required
-          >
-          <button type="submit" class="heipard-footer__nl-btn">{{ 'heipard.footer.newsletter_submit' | t }}</button>
-        </div>
-        {%- if form.posted_successfully? -%}
-          <p class="heipard-footer__nl-note">{{ 'heipard.footer.newsletter_success' | t }}</p>
-        {%- elsif form.errors -%}
-          <p class="heipard-footer__nl-note heipard-footer__nl-note--error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
-        {%- endif -%}
-      {%- endform -%}
-    </div>
   </div>
 
   <div class="heipard-footer__bottom">
@@ -153,14 +158,14 @@
     { "type": "text", "id": "categories_heading", "label": "Spalte 2 – Überschrift", "default": "Kategorien" },
     { "type": "link_list", "id": "categories_menu", "label": "Spalte 2 – Menü", "default": "main-menu" },
     { "type": "text", "id": "service_heading", "label": "Spalte 3 – Überschrift", "default": "Service" },
-    { "type": "text", "id": "service_phone", "label": "Service – Telefon (leer = [TBD])" },
-    { "type": "text", "id": "service_hours", "label": "Service – Zeiten", "default": "Mo–Fr 9–16 Uhr" },
-    { "type": "text", "id": "service_email", "label": "Service – E-Mail (leer = [TBD])" },
+    { "type": "text", "id": "service_email_business", "label": "Kontakt – E-Mail Business", "default": "info@heipard.com" },
+    { "type": "text", "id": "service_email_support", "label": "Kontakt – E-Mail Support", "default": "service@heipard.com" },
+    { "type": "text", "id": "service_phone", "label": "Kontakt – Telefon", "default": "02154 953 65 30" },
+    { "type": "text", "id": "service_phone_link", "label": "Kontakt – Telefon (Wählnummer)", "info": "Für den tel:-Link, international mit Ländervorwahl. Leer = Anzeigenummer ohne Leerzeichen.", "default": "+4921549536530" },
+    { "type": "text", "id": "service_hours", "label": "Kontakt – Zeiten", "default": "Mo - Fr | 09:00 - 16:00 Uhr" },
     { "type": "url", "id": "help_link", "label": "Service – Hilfe & FAQ Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
     { "type": "url", "id": "dealer_link", "label": "Service – Händler-werden Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
     { "type": "url", "id": "legal_notice_link", "label": "Impressum-Link (Bottom-Bar)", "info": "Pflichtangabe. Shopify liefert das Impressum nicht über shop.policies aus – hier die Richtlinie bzw. Seite auswählen." },
-    { "type": "text", "id": "newsletter_heading", "label": "Newsletter – Überschrift", "default": "Bleib auf dem Laufenden" },
-    { "type": "textarea", "id": "newsletter_text", "label": "Newsletter – Text", "default": "Neue Kollektionen und Inspirationen direkt in dein Postfach." },
     { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
   ],
   "presets": [{ "name": "HeiPard Footer" }]

@@ -8,10 +8,12 @@
         "brand_description": "Stimmungsvolle Beleuchtung vom Niederrhein. Für drinnen, draußen und unterwegs.",
         "categories_heading": "Kategorien",
         "categories_menu": "main-menu",
-        "service_heading": "Service",
-        "service_hours": "Mo–Fr 9–16 Uhr",
-        "newsletter_heading": "Bleib auf dem Laufenden",
-        "newsletter_text": "Neue Kollektionen und Inspirationen direkt in dein Postfach.",
+        "service_heading": "Kontakt",
+        "service_email_business": "info@heipard.com",
+        "service_email_support": "service@heipard.com",
+        "service_phone": "02154 953 65 30",
+        "service_phone_link": "+4921549536530",
+        "service_hours": "Mo - Fr | 09:00 - 16:00 Uhr",
         "color_scheme": "scheme-1"
       }
     }

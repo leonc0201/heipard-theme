@@ -564,14 +564,12 @@
       "discover": "Découvrir"
     },
     "footer": {
+      "email_business": "Entreprises",
+      "email_support": "Support",
       "help_faq": "Aide et FAQ",
       "become_dealer": "Devenir revendeur",
       "legal_notice": "Mentions légales",
       "withdraw_contract": "Rétracter le contrat",
-      "newsletter_submit": "S'inscrire",
-      "newsletter_success": "Merci ! Vérifie ta boîte de réception pour confirmation.",
-      "newsletter_placeholder": "votre@email.de",
-      "email_label": "Adresse e-mail",
       "country_region": "Pays / Région"
     },
     "product": {
