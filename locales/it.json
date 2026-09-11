@@ -194,7 +194,17 @@
         "tax_included": "IVA inclusa",
         "shipping_costs": "Spese di spedizione",
         "shipping_at_checkout": "verranno addebitati al momento del pagamento",
-        "delivery_time": "Tempi di consegna"
+        "delivery_time": "Tempi di consegna",
+        "shipping_tab": {
+          "shipping_heading": "Spedizione",
+          "zone_domestic": "Germania",
+          "zone_eu": "Paesi UE",
+          "zone_world": "Altri paesi",
+          "shipping_note": "Tutti i prezzi sono IVA inclusa. Le spese di spedizione per il tuo indirizzo vengono indicate al checkout prima della conferma dell'ordine.",
+          "link_shipping_policy": "Politica di spedizione",
+          "returns_heading": "Resi e recesso",
+          "returns_body": "Puoi recedere dal contratto entro 14 giorni dalla ricezione della merce, senza doverne indicare il motivo. I dettagli, comprese le spese di restituzione, sono riportati nelle istruzioni sul diritto di recesso."
+        }
       }
     },
     "modal": {

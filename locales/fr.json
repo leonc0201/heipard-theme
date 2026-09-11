@@ -194,7 +194,17 @@
         "tax_included": "TVA incluse",
         "shipping_costs": "Frais de port",
         "shipping_at_checkout": "seront calculés lors du paiement",
-        "delivery_time": "Délai de livraison"
+        "delivery_time": "Délai de livraison",
+        "shipping_tab": {
+          "shipping_heading": "Livraison",
+          "zone_domestic": "Allemagne",
+          "zone_eu": "Pays de l'UE",
+          "zone_world": "Autres pays",
+          "shipping_note": "Tous les prix s'entendent TVA comprise. Les frais de livraison pour ton adresse sont indiqués lors du paiement, avant la validation de la commande.",
+          "link_shipping_policy": "Politique d'expédition",
+          "returns_heading": "Retours et rétractation",
+          "returns_body": "Tu peux te rétracter du contrat dans un délai de 14 jours après réception de la marchandise, sans avoir à motiver ta décision. Les détails, y compris la prise en charge des frais de retour, figurent dans les informations sur la rétractation."
+        }
       }
     },
     "modal": {

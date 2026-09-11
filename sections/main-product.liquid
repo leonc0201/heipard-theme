@@ -122,7 +122,11 @@
                 {%- render 'heipard-shipping-note',
                   delivery_domestic: block.settings.delivery_domestic,
                   delivery_eu: block.settings.delivery_eu,
-                  delivery_world: block.settings.delivery_world
+                  delivery_world: block.settings.delivery_world,
+                  shipping_cost_domestic: block.settings.shipping_cost_domestic,
+                  shipping_cost_eu: block.settings.shipping_cost_eu,
+                  shipping_cost_world: block.settings.shipping_cost_world,
+                  shipping_info_url: block.settings.shipping_info_url
                 -%}
                 <div {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
@@ -215,6 +219,25 @@
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
+                      {%- if block.settings.heipard_dynamic == 'shipping_returns' -%}
+                        {%- liquid
+                          # Versanddaten aus dem Preis-Block ziehen, damit Hinweis unter dem
+                          # Preis und dieses Akkordeon dieselbe Quelle haben.
+                          for price_block in section.blocks
+                            if price_block.type == 'price'
+                              assign shipping_source = price_block
+                            endif
+                          endfor
+                        -%}
+                        {%- render 'heipard-shipping-returns',
+                          cost_domestic: shipping_source.settings.shipping_cost_domestic,
+                          cost_eu: shipping_source.settings.shipping_cost_eu,
+                          cost_world: shipping_source.settings.shipping_cost_world,
+                          time_domestic: shipping_source.settings.delivery_domestic,
+                          time_eu: shipping_source.settings.delivery_eu,
+                          time_world: shipping_source.settings.delivery_world
+                        -%}
+                      {%- endif -%}
                     </div>
                   </details>
                 </div>
@@ -801,6 +824,34 @@
           "id": "delivery_world",
           "label": "Welt (übrige Länder)",
           "default": "5–15 Werktage"
+        },
+        {
+          "type": "header",
+          "content": "Versandkosten nach Versandzone",
+          "info": "Beträge müssen mit den Versandprofilen im Admin übereinstimmen. Leer = \"werden im Checkout berechnet\"."
+        },
+        {
+          "type": "text",
+          "id": "shipping_cost_domestic",
+          "label": "Inland (DE)",
+          "default": "5,99 €"
+        },
+        {
+          "type": "text",
+          "id": "shipping_cost_eu",
+          "label": "EU-Ausland",
+          "default": "13,99 €"
+        },
+        {
+          "type": "text",
+          "id": "shipping_cost_world",
+          "label": "Welt (übrige Länder)"
+        },
+        {
+          "type": "url",
+          "id": "shipping_info_url",
+          "label": "Versandinfos – Fallback-Link",
+          "info": "Wird nur genutzt, solange im Admin keine Versandrichtlinie hinterlegt ist."
         }
       ]
     },
@@ -1171,6 +1222,17 @@
           "type": "richtext",
           "id": "content",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "select",
+          "id": "heipard_dynamic",
+          "label": "HeiPard – dynamischer Inhalt",
+          "info": "Wird unter dem Text ergänzt. \"Versand & Rückgabe\" zieht Beträge und Lieferzeiten aus dem Preis-Block und verlinkt Widerrufsbelehrung, Widerrufsformular und AGB.",
+          "options": [
+            { "value": "none", "label": "Kein" },
+            { "value": "shipping_returns", "label": "Versand & Rückgabe" }
+          ],
+          "default": "none"
         },
         {
           "type": "page",

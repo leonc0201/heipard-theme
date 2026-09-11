@@ -194,7 +194,17 @@
         "tax_included": "IVA incluido.",
         "shipping_costs": "Gastos de envío",
         "shipping_at_checkout": "Se calcularán al finalizar la compra",
-        "delivery_time": "Plazo de entrega"
+        "delivery_time": "Plazo de entrega",
+        "shipping_tab": {
+          "shipping_heading": "Envío",
+          "zone_domestic": "Alemania",
+          "zone_eu": "Países de la UE",
+          "zone_world": "Otros países",
+          "shipping_note": "Todos los precios incluyen IVA. Los gastos de envío para tu dirección de entrega se indican en el checkout antes de finalizar el pedido.",
+          "link_shipping_policy": "Política de envío",
+          "returns_heading": "Devoluciones y desistimiento",
+          "returns_body": "Puedes desistir del contrato en un plazo de 14 días desde la recepción de la mercancía, sin necesidad de justificación. Los detalles, incluidos los gastos de devolución, figuran en la información sobre el desistimiento."
+        }
       }
     },
     "modal": {

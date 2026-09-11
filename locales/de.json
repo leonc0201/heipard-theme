@@ -151,7 +151,17 @@
         "tax_included": "Inkl. MwSt.",
         "shipping_costs": "Versandkosten",
         "shipping_at_checkout": "werden im Checkout berechnet",
-        "delivery_time": "Lieferzeit"
+        "delivery_time": "Lieferzeit",
+        "shipping_tab": {
+          "shipping_heading": "Versand",
+          "zone_domestic": "Deutschland",
+          "zone_eu": "EU-Länder",
+          "zone_world": "Übrige Länder",
+          "shipping_note": "Alle Preise inkl. MwSt. Die Versandkosten für deine Lieferadresse werden vor Abschluss der Bestellung im Checkout ausgewiesen.",
+          "link_shipping_policy": "Versandrichtlinie",
+          "returns_heading": "Rückgabe & Widerruf",
+          "returns_body": "Du kannst den Vertrag innerhalb von 14 Tagen nach Erhalt der Ware ohne Angabe von Gründen widerrufen. Die Einzelheiten, auch zu den Rücksendekosten, stehen in der Widerrufsbelehrung."
+        }
       },
       "description": "Beschreibung",
       "on_sale": "Sale",

@@ -30,7 +30,10 @@
           "settings": {
             "delivery_domestic": "1–3 Werktage",
             "delivery_eu": "3–10 Werktage",
-            "delivery_world": "5–15 Werktage"
+            "delivery_world": "5–15 Werktage",
+            "shipping_cost_domestic": "5,99 €",
+            "shipping_cost_eu": "13,99 €",
+            "shipping_cost_world": ""
           }
         },
         "specs": {
@@ -68,7 +71,8 @@
           "settings": {
             "heading": "Versand & Rückgabe",
             "icon": "none",
-            "content": "<p>[TBD: Echte Versand- & Rückgabekonditionen einsetzen — KEINE erfundenen Angaben/Standorte.]</p>"
+            "content": "",
+            "heipard_dynamic": "shipping_returns"
           }
         }
       },

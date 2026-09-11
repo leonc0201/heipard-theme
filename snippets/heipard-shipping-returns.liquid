@@ -1,0 +1,93 @@
+{%- comment -%}
+  HeiPard — Inhalt des PDP-Akkordeons "Versand & Rückgabe".
+
+  Bewusst dynamisch statt statischem Richtext, damit
+    - Betraege/Lieferzeiten aus dem Preis-Block kommen (eine Quelle, kein Drift),
+    - Policy-Links sprach-/marktabhaengig korrekt sind (shop.*_policy.url),
+    - nie ein Link ins Leere gerendert wird.
+
+  Inhaltliche Quellen: Versandprofile im Admin (DE 5,99 € / EU 13,99 €,
+  1–3 bzw. 3–10 Werktage) und die Widerrufsbelehrung (14 Tage).
+  Rücksendekosten stehen bewusst NICHT hier — die regelt die Widerrufsbelehrung,
+  auf die verlinkt wird.
+
+  Akzeptierte Parameter:
+    cost_domestic, cost_eu, cost_world (String, optional)
+    time_domestic, time_eu, time_world (String, optional)
+{%- endcomment -%}
+
+{%- liquid
+  assign withdrawal_page = pages['vertrag-widerrufen']
+  if withdrawal_page.url != blank
+    assign withdrawal_url = withdrawal_page.url
+  else
+    assign withdrawal_root = routes.root_url | remove_last: '/'
+    assign withdrawal_url = withdrawal_root | append: '/pages/vertrag-widerrufen'
+  endif
+-%}
+
+<div class="heipard-shipping-returns">
+  <h3 class="heipard-shipping-returns__heading">
+    {{ 'products.product.heipard.shipping_tab.shipping_heading' | t }}
+  </h3>
+  <ul class="heipard-shipping-returns__list">
+    {%- if cost_domestic != blank or time_domestic != blank -%}
+      <li>
+        {{- 'products.product.heipard.shipping_tab.zone_domestic' | t }}:
+        {% if cost_domestic != blank %}{{ cost_domestic }}{% endif %}
+        {%- if cost_domestic != blank and time_domestic != blank %} &middot; {% endif -%}
+        {% if time_domestic != blank %}{{ time_domestic }}{% endif -%}
+      </li>
+    {%- endif -%}
+    {%- if cost_eu != blank or time_eu != blank -%}
+      <li>
+        {{- 'products.product.heipard.shipping_tab.zone_eu' | t }}:
+        {% if cost_eu != blank %}{{ cost_eu }}{% endif %}
+        {%- if cost_eu != blank and time_eu != blank %} &middot; {% endif -%}
+        {% if time_eu != blank %}{{ time_eu }}{% endif -%}
+      </li>
+    {%- endif -%}
+    {%- if cost_world != blank or time_world != blank -%}
+      <li>
+        {{- 'products.product.heipard.shipping_tab.zone_world' | t }}:
+        {% if cost_world != blank %}{{ cost_world }}{% endif %}
+        {%- if cost_world != blank and time_world != blank %} &middot; {% endif -%}
+        {% if time_world != blank %}{{ time_world }}{% endif -%}
+      </li>
+    {%- endif -%}
+  </ul>
+  <p>
+    {{ 'products.product.heipard.shipping_tab.shipping_note' | t }}
+    {%- if shop.shipping_policy.url != blank %}
+      <a class="heipard-shipping-returns__link" href="{{ shop.shipping_policy.url }}">
+        {{- 'products.product.heipard.shipping_tab.link_shipping_policy' | t -}}
+      </a>
+    {%- endif -%}
+  </p>
+
+  <h3 class="heipard-shipping-returns__heading">
+    {{ 'products.product.heipard.shipping_tab.returns_heading' | t }}
+  </h3>
+  <p>{{ 'products.product.heipard.shipping_tab.returns_body' | t }}</p>
+  <ul class="heipard-shipping-returns__list">
+    {%- if shop.refund_policy.url != blank -%}
+      <li>
+        <a class="heipard-shipping-returns__link" href="{{ shop.refund_policy.url }}">
+          {{- shop.refund_policy.title | escape -}}
+        </a>
+      </li>
+    {%- endif -%}
+    <li>
+      <a class="heipard-shipping-returns__link" href="{{ withdrawal_url }}">
+        {{- 'heipard.footer.withdraw_contract' | t -}}
+      </a>
+    </li>
+    {%- if shop.terms_of_service.url != blank -%}
+      <li>
+        <a class="heipard-shipping-returns__link" href="{{ shop.terms_of_service.url }}">
+          {{- shop.terms_of_service.title | escape -}}
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+</div>

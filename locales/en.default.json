@@ -151,7 +151,17 @@
         "tax_included": "Incl. VAT",
         "shipping_costs": "Shipping",
         "shipping_at_checkout": "calculated at checkout",
-        "delivery_time": "Delivery time"
+        "delivery_time": "Delivery time",
+        "shipping_tab": {
+          "shipping_heading": "Shipping",
+          "zone_domestic": "Germany",
+          "zone_eu": "EU countries",
+          "zone_world": "Other countries",
+          "shipping_note": "All prices include VAT. Shipping costs for your delivery address are shown at checkout before you place the order.",
+          "link_shipping_policy": "Shipping policy",
+          "returns_heading": "Returns & withdrawal",
+          "returns_body": "You can withdraw from the contract within 14 days of receiving the goods, without giving any reason. The details, including who bears the return costs, are set out in the withdrawal policy."
+        }
       },
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",

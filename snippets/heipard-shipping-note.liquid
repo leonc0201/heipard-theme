@@ -3,7 +3,10 @@
 
   Zeigt drei Zeilen:
     1. Inkl. MwSt. (nur wenn Steuern im Preis enthalten sind)
-    2. Versandkosten werden im Checkout berechnet (verlinkt Versand-Policy, falls vorhanden)
+    2. Versandkosten mit Betrag der aktuellen Zone, verlinkt auf die Versandinfos
+       (PAngV § 6: Hoehe der Versandkosten muss vor Vertragsschluss erkennbar sein).
+       Ohne hinterlegten Betrag faellt die Zeile auf "werden im Checkout berechnet"
+       zurueck — dann greift der Link als Pflichtangabe.
     3. Lieferzeit — abhaengig von der aktuell gewaehlten Versandzone des Kunden
 
   Zonen-Erkennung ueber Shopify Markets (`localization.country`):
@@ -15,8 +18,14 @@
   (delivery_domestic / delivery_eu / delivery_world) und fallen sonst
   auf sinnvolle Defaults zurueck.
 
+  Linkziel fuer die Versandkosten (erste gefuellte Quelle gewinnt):
+    1. shop.shipping_policy.url  (Shopify-Versandrichtlinie)
+    2. shipping_info_url         (Fallback-Seite aus den Block-Settings)
+
   Akzeptierte Parameter:
     delivery_domestic, delivery_eu, delivery_world (String, optional)
+    shipping_cost_domestic, shipping_cost_eu, shipping_cost_world (String, optional)
+    shipping_info_url (String/URL, optional)
 {%- endcomment -%}
 
 {%- liquid
@@ -40,11 +49,16 @@
   case zone
     when 'domestic'
       assign delivery_value = txt_domestic
+      assign shipping_cost_value = shipping_cost_domestic
     when 'eu'
       assign delivery_value = txt_eu
+      assign shipping_cost_value = shipping_cost_eu
     else
       assign delivery_value = txt_world
+      assign shipping_cost_value = shipping_cost_world
   endcase
+
+  assign shipping_url = shop.shipping_policy.url | default: shipping_info_url
 -%}
 
 <div class="heipard-shipping-note">
@@ -62,11 +76,15 @@
       {{- 'icon-truck.svg' | inline_asset_content -}}
     </span>
     <span>
-      {%- if shop.shipping_policy.url != blank -%}
-        <a class="heipard-shipping-note__link" href="{{ shop.shipping_policy.url }}">{{ 'products.product.heipard.shipping_costs' | t }}</a>
-        {{ 'products.product.heipard.shipping_at_checkout' | t }}
+      {%- if shipping_url != blank -%}
+        <a class="heipard-shipping-note__link" href="{{ shipping_url }}">{{ 'products.product.heipard.shipping_costs' | t }}</a>
       {%- else -%}
-        {{ 'products.product.heipard.shipping_costs' | t }} {{ 'products.product.heipard.shipping_at_checkout' | t }}
+        {{ 'products.product.heipard.shipping_costs' | t }}
+      {%- endif -%}
+      {%- if shipping_cost_value != blank -%}
+        : {{ shipping_cost_value }}
+      {%- else -%}
+        {{ ' ' }}{{ 'products.product.heipard.shipping_at_checkout' | t }}
       {%- endif -%}
     </span>
   </p>

@@ -276,3 +276,39 @@
 .heipard-shipping-note__link:hover {
   opacity: 0.8;
 }
+
+/* PDP-Akkordeon "Versand & Rückgabe" — dynamischer Inhalt */
+.heipard-shipping-returns__heading {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-heipard-sans);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+.heipard-shipping-returns__heading + .heipard-shipping-returns__list,
+.heipard-shipping-returns__heading + p {
+  margin-top: 0;
+}
+
+.heipard-shipping-returns > * + .heipard-shipping-returns__heading {
+  margin-top: 2.2rem;
+}
+
+.heipard-shipping-returns__list {
+  margin: 0 0 1.2rem;
+  padding-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.heipard-shipping-returns__link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 200ms ease;
+}
+.heipard-shipping-returns__link:hover {
+  opacity: 0.8;
+}
