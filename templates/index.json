@@ -36,7 +36,7 @@
       "blocks": {
         "s1": { "type": "signal", "settings": { "icon": "shipping", "title": "Versand aus Deutschland", "subline": "Schnell bei dir", "tbd": true } },
         "s2": { "type": "signal", "settings": { "icon": "guarantee", "title": "Bis zu 5 Jahre Garantie", "subline": "Auf ausgewählte Modelle", "tbd": true } },
-        "s3": { "type": "signal", "settings": { "icon": "returns", "title": "30 Tage Rückgaberecht", "subline": "Ohne Wenn und Aber", "tbd": true } },
+        "s3": { "type": "signal", "settings": { "icon": "lights", "title": "Lichterketten & Solarleuchten", "subline": "Für drinnen und draußen", "tbd": false } },
         "s4": { "type": "signal", "settings": { "icon": "service", "title": "Service aus Deutschland", "subline": "Mo–Fr 9–16 Uhr", "tbd": false } }
       },
       "block_order": ["s1", "s2", "s3", "s4"],

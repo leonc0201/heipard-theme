@@ -16,6 +16,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v5.2c0 4.6-3 7.6-7 9.2-4-1.6-7-4.6-7-9.2V5.6z"/><path d="M9 12l2 2 4-4"/></svg>
             {%- when 'returns' -%}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a8 8 0 0 1 13.7-3.7L20 8"/><path d="M20 4v4h-4"/><path d="M20 14a8 8 0 0 1-13.7 3.7L4 16"/><path d="M4 20v-4h4"/></svg>
+            {%- when 'lights' -%}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 5.5c2 3 4 3 6 0s4-3 6 0 4 3 6 0"/><path d="M6 7.5v2a1.6 1.6 0 0 0 3.2 0v-2"/><path d="M14.8 7.5v2a1.6 1.6 0 0 0 3.2 0v-2"/><path d="M3.2 13.5c2 3 4 3 6 0s4-3 6 0 4 3 6 0"/><path d="M6.7 15.5v2a1.6 1.6 0 0 0 3.2 0v-2"/><path d="M15.5 15.5v2a1.6 1.6 0 0 0 3.2 0v-2"/></svg>
             {%- when 'service' -%}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.6" y="13" width="3.6" height="6" rx="1.2"/><rect x="17.8" y="13" width="3.6" height="6" rx="1.2"/><path d="M20 19a4 4 0 0 1-4 3h-2.2"/></svg>
             {%- else -%}
@@ -68,6 +70,7 @@
             { "value": "shipping", "label": "Versand" },
             { "value": "guarantee", "label": "Garantie" },
             { "value": "returns", "label": "Rueckgabe" },
+            { "value": "lights", "label": "Sortiment/Leuchten" },
             { "value": "service", "label": "Service" }
           ],
           "default": "shipping"
@@ -84,7 +87,7 @@
       "blocks": [
         { "type": "signal", "settings": { "icon": "shipping", "title": "Versand aus Deutschland", "subline": "Schnell bei dir" } },
         { "type": "signal", "settings": { "icon": "guarantee", "title": "Bis zu 5 Jahre Garantie", "subline": "Auf ausgewählte Modelle" } },
-        { "type": "signal", "settings": { "icon": "returns", "title": "30 Tage Rückgaberecht", "subline": "Ohne Wenn und Aber" } },
+        { "type": "signal", "settings": { "icon": "lights", "title": "Lichterketten & Solarleuchten", "subline": "Für drinnen und draußen" } },
         { "type": "signal", "settings": { "icon": "service", "title": "Service aus Deutschland", "subline": "Mo–Fr 9–16 Uhr" } }
       ]
     }
