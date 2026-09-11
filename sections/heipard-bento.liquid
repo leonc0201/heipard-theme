@@ -15,8 +15,8 @@
           <h2 class="heipard-section__heading">{{ section.settings.heading | escape }}</h2>
         {%- endif -%}
       </div>
-      {%- if section.settings.view_all_label != blank -%}
-        <a class="heipard-section__link" href="{{ section.settings.view_all_link | default: '#' }}">
+      {%- if section.settings.view_all_label != blank and section.settings.view_all_link != blank -%}
+        <a class="heipard-section__link" href="{{ section.settings.view_all_link }}">
           {{ section.settings.view_all_label | escape }}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
         </a>
@@ -25,9 +25,14 @@
 
     <div class="heipard-bento__grid">
       {%- for block in section.blocks -%}
+        {%- comment -%}
+          Ohne gesetztes Ziel faellt die Kachel auf die Kollektionsuebersicht zurueck
+          (wie im Lovable-Mockup), nie auf "#".
+        {%- endcomment -%}
+        {%- assign tile_url = block.settings.link | default: routes.all_products_collection_url -%}
         <a
           class="heipard-bento__tile heipard-bento__tile--{{ block.settings.size }}"
-          href="{{ block.settings.link | default: '#' }}"
+          href="{{ tile_url }}"
           {{ block.shopify_attributes }}
         >
           {%- if block.settings.image != blank -%}

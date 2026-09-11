@@ -4,7 +4,7 @@
   Solange die Kollektion leer/ungesetzt ist: Skeleton-Platzhalter (kein Fake-Inhalt).
 {% endcomment %}
 
-<section class="heipard-section heipard-bestseller color-{{ section.settings.color_scheme }}">
+<section id="bestseller" class="heipard-section heipard-bestseller color-{{ section.settings.color_scheme }}">
   <div class="page-width">
     <div class="heipard-section__head">
       <div>
@@ -15,8 +15,8 @@
           <h2 class="heipard-section__heading">{{ section.settings.heading | escape }}</h2>
         {%- endif -%}
       </div>
-      {%- if section.settings.view_all_label != blank -%}
-        <a class="heipard-section__link" href="{{ section.settings.view_all_link | default: '#' }}">
+      {%- if section.settings.view_all_label != blank and section.settings.view_all_link != blank -%}
+        <a class="heipard-section__link" href="{{ section.settings.view_all_link }}">
           {{ section.settings.view_all_label | escape }}
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
         </a>

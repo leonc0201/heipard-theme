@@ -42,8 +42,8 @@
         {%- if section.settings.body != blank -%}
           <div class="heipard-story__body rte">{{ section.settings.body }}</div>
         {%- endif -%}
-        {%- if section.settings.link_label != blank -%}
-          <a class="heipard-story__link" href="{{ section.settings.link | default: '#' }}">
+        {%- if section.settings.link_label != blank and section.settings.link != blank -%}
+          <a class="heipard-story__link" href="{{ section.settings.link }}">
             {{ section.settings.link_label | escape }}
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
           </a>

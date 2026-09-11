@@ -54,19 +54,30 @@
       <p class="heipard-hero__subheading">{{ section.settings.subheading | escape }}</p>
     {%- endif -%}
 
-    {%- if section.settings.button_primary_label != blank or section.settings.button_secondary_label != blank -%}
+    {%- liquid
+      # Buttons nur rendern, wenn Label UND Ziel gesetzt sind (kein href="#").
+      assign show_primary_btn = false
+      if section.settings.button_primary_label != blank and section.settings.button_primary_link != blank
+        assign show_primary_btn = true
+      endif
+      assign show_secondary_btn = false
+      if section.settings.button_secondary_label != blank and section.settings.button_secondary_link != blank
+        assign show_secondary_btn = true
+      endif
+    -%}
+    {%- if show_primary_btn or show_secondary_btn -%}
       <div class="heipard-hero__actions">
-        {%- if section.settings.button_primary_label != blank -%}
+        {%- if show_primary_btn -%}
           <a
-            href="{{ section.settings.button_primary_link | default: '#' }}"
+            href="{{ section.settings.button_primary_link }}"
             class="heipard-btn heipard-btn--primary"
           >
             {{ section.settings.button_primary_label | escape }}
           </a>
         {%- endif -%}
-        {%- if section.settings.button_secondary_label != blank -%}
+        {%- if show_secondary_btn -%}
           <a
-            href="{{ section.settings.button_secondary_link | default: '#' }}"
+            href="{{ section.settings.button_secondary_link }}"
             class="heipard-btn heipard-btn--ghost"
           >
             {{ section.settings.button_secondary_label | escape }}

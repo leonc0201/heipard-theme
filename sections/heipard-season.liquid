@@ -38,8 +38,8 @@
           {%- if section.settings.description != blank -%}
             <p class="heipard-season__desc">{{ section.settings.description | escape }}</p>
           {%- endif -%}
-          {%- if section.settings.button_label != blank -%}
-            <a class="heipard-season__btn" href="{{ section.settings.button_link | default: '#' }}">
+          {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+            <a class="heipard-season__btn" href="{{ section.settings.button_link }}">
               {{ section.settings.button_label | escape }}
               <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
             </a>

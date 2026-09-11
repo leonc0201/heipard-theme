@@ -19,6 +19,7 @@
         "button_primary_label": "Jetzt entdecken",
         "button_primary_link": "shopify://collections/all",
         "button_secondary_label": "Bestseller ansehen",
+        "button_secondary_link": "#bestseller",
         "min_height": 600
       }
     },
@@ -75,7 +76,7 @@
         "o1": { "type": "occasion", "settings": { "name": "Gartenparty", "subtitle": "Lange Tafeln, warmes Licht", "link": "", "image": "shopify://shop_images/HOME-07_Anlass_Gartenparty.webp" } },
         "o2": { "type": "occasion", "settings": { "name": "Weihnachten", "subtitle": "Festlich von Baum bis Fenster", "link": "", "image": "shopify://shop_images/HOME-08_Anlass_Weihnachten.webp" } },
         "o3": { "type": "occasion", "settings": { "name": "Gemütlicher Abend", "subtitle": "Warmes Licht für drinnen", "link": "", "image": "shopify://shop_images/HOME-09_Anlass_Gemuetlicher_Abend.webp" } },
-        "o4": { "type": "occasion", "settings": { "name": "Camping & Unterwegs", "subtitle": "Licht, das mitkommt", "link": "", "image": "shopify://shop_images/HOME-10_Anlass_Camping_Unterwegs.webp" } }
+        "o4": { "type": "occasion", "settings": { "name": "Camping & Unterwegs", "subtitle": "Licht, das mitkommt", "link": "shopify://collections/camping", "image": "shopify://shop_images/HOME-10_Anlass_Camping_Unterwegs.webp" } }
       },
       "block_order": ["o1", "o2", "o3", "o4"],
       "settings": {

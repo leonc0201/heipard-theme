@@ -64,8 +64,12 @@
             <span class="heipard-footer__tbd">[TBD: E-Mail]</span>
           {%- endif -%}
         </li>
-        <li><a href="{{ section.settings.help_link | default: '#' }}">{{ 'heipard.footer.help_faq' | t }}</a></li>
-        <li><a href="{{ section.settings.dealer_link | default: '#' }}">{{ 'heipard.footer.become_dealer' | t }}</a></li>
+        {%- if section.settings.help_link != blank -%}
+          <li><a href="{{ section.settings.help_link }}">{{ 'heipard.footer.help_faq' | t }}</a></li>
+        {%- endif -%}
+        {%- if section.settings.dealer_link != blank -%}
+          <li><a href="{{ section.settings.dealer_link }}">{{ 'heipard.footer.become_dealer' | t }}</a></li>
+        {%- endif -%}
       </ul>
     </div>
 
@@ -100,12 +104,27 @@
     <div class="page-width heipard-footer__bottom-inner">
       <p class="heipard-footer__copyright">&copy; {{ 'now' | date: '%Y' }} HeiPard &mdash; eine Marke der C&amp;L Handels GmbH</p>
 
+      {%- liquid
+        # shop.policies enthaelt das Impressum (LEGAL_NOTICE) nicht zuverlaessig.
+        # Deshalb pruefen, ob es doch dabei ist - sonst separaten Link aus der
+        # Section-Einstellung anhaengen (Pflichtangabe nach § 5 DDG).
+        assign legal_notice_found = false
+        for policy in shop.policies
+          assign policy_title = policy.title | downcase
+          if policy_title contains 'impressum' or policy_title contains 'legal notice' or policy_title contains 'mentions' or policy_title contains 'aviso legal' or policy_title contains 'note legali'
+            assign legal_notice_found = true
+          endif
+        endfor
+      -%}
       <ul class="heipard-footer__legal">
         {%- for policy in shop.policies -%}
           {%- if policy != blank -%}
             <li><a href="{{ policy.url }}">{{ policy.title | escape }}</a></li>
           {%- endif -%}
         {%- endfor -%}
+        {%- if legal_notice_found == false and section.settings.legal_notice_link != blank -%}
+          <li><a href="{{ section.settings.legal_notice_link }}">{{ 'heipard.footer.legal_notice' | t }}</a></li>
+        {%- endif -%}
       </ul>
 
       {%- if localization.available_countries.size > 1 -%}
@@ -137,8 +156,9 @@
     { "type": "text", "id": "service_phone", "label": "Service – Telefon (leer = [TBD])" },
     { "type": "text", "id": "service_hours", "label": "Service – Zeiten", "default": "Mo–Fr 9–16 Uhr" },
     { "type": "text", "id": "service_email", "label": "Service – E-Mail (leer = [TBD])" },
-    { "type": "url", "id": "help_link", "label": "Service – Hilfe & FAQ Link" },
-    { "type": "url", "id": "dealer_link", "label": "Service – Händler-werden Link" },
+    { "type": "url", "id": "help_link", "label": "Service – Hilfe & FAQ Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
+    { "type": "url", "id": "dealer_link", "label": "Service – Händler-werden Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
+    { "type": "url", "id": "legal_notice_link", "label": "Impressum-Link (Bottom-Bar)", "info": "Pflichtangabe. Shopify liefert das Impressum nicht über shop.policies aus – hier die Richtlinie bzw. Seite auswählen." },
     { "type": "text", "id": "newsletter_heading", "label": "Newsletter – Überschrift", "default": "Bleib auf dem Laufenden" },
     { "type": "textarea", "id": "newsletter_text", "label": "Newsletter – Text", "default": "Neue Kollektionen und Inspirationen direkt in dein Postfach." },
     { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
