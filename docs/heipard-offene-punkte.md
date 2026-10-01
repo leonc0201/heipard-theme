@@ -108,3 +108,25 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
 ## Geklärt
 
 - [x] **Service-Zeiten** Mo–Fr 9–16 Uhr — korrekt. ✅
+
+## Feature-Baukasten (Block-Vokabular, Stand 2026-10-01)
+
+- [ ] **OL-G40 Längenangabe** — Vokabular Abschnitt 9 nennt „3 m Zuleitung, 20 m Kette, 30 Birnen, 55 cm Abstand".
+  30 × 55 cm ergibt 16,5 m. Das Amazon-Listing nennt die Länge „inkl. 3 m Verlängerungskabel". Vermutlich sind
+  20 m die Gesamtlänge und rund 17 m beleuchtet (OL-50: 30 m gesamt, rund 27 m). Im Demo steht vorerst
+  `beleuchtete_laenge_m` = 20 bzw. 30 wie im Vokabular. Bitte bestätigen oder korrigieren.
+- [ ] **OL-G40 Dimmstufen** — Listing: „4 Helligkeitsstufen (25–100 %)". Im Demo als 25, 50, 75, 100 gepflegt,
+  die Zwischenwerte sind abgeleitet. Bitte gegen die Fernbedienung prüfen.
+- [ ] **OL-G40 Bilder** — G40-01 (B1), G40-02 (B2), G40-05 (Basisbild Steuerung) liegen noch nicht in den
+  Shopify-Dateien. Bis dahin Verlauf-Platzhalter und schematische Kette.
+- [ ] **OL-G40 Texte** — R1 „Gebaut für draußen" hat noch `[TBD]`-Absätze, B2 keinen Fließtext.
+- [ ] **HP-OL-25** — gleiche Bauart (15 m, 25 Leuchtmittel, dimmbar). Gehört es zur Familie OL-G40?
+  Abschnitt 9 nennt nur OL-30 und OL-50.
+- [ ] **Familien-Kollektionen** (`familie-<code>`) sind technische Kollektionen für die Serienleiter. Sie
+  erscheinen in der Kollektionsliste und Sitemap. Titel aktuell „Serie OL-G40". Entscheiden: so lassen,
+  kundentauglich benennen oder aus Liste und Suche ausschließen.
+- [ ] **Fallback-Blöcke im Template** — Produkte ohne Set und ohne Dramaturgie zeigen weiter die generischen
+  Blöcke aus `templates/product.json` (mit Aussagen wie „8 Leuchtmodi", „koppelbar"). Vorschlag: bei allen
+  Produkten eine Dramaturgie setzen und die Fallback-Blöcke danach leeren.
+- [ ] **Altes Beispiel-Set** „Beispiel-Set (Demo)" hängt noch an `hp-olh-g40-25`. Entfernen, sobald nicht mehr gebraucht.
+- [ ] **IP45** fehlt weiter in der Auswahlliste `ip_schutzart` (Icon-Grid-Kachel „Schutzart", später D5 Nachweise).

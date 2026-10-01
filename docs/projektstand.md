@@ -12,8 +12,12 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Metafelder `stromquelle`/`lichtfarbe` gesetzt. Details + todo-Listen: `heipard-import-welle1.md`.
 - **Produkt-Import Welle 2:** vorbereitet, **wartet auf Go** — batchweise mit Leons Kontrolle. Plan +
   Extraktions-Methodik + Batch-Gruppierung: `heipard-welle2-plan.md`.
-- **PDP Feature-Baukasten:** neu — kuratierbare Blöcke (2–6, Bild/Video, alternierend/Full-Width) über
-  Metaobjekte (`feature_set` → `feature_block`), Familien teilen ein Set. Anleitung: `heipard-feature-baukasten.md`.
+- **PDP Feature-Baukasten:** Blöcke über Metaobjekte (`feature_set` → `feature_block`), Familien teilen ein Set.
+  Seit 2026-10-01 Ausbau nach `heipard-block-vokabular.md` in drei Stufen. **Stufe 1 fertig:** Kettenplan,
+  Zeitband, Serienleiter, Text schmal, Steuerung (Dimmregler + Modi), Icon-Grid aus Metafeldern, drei
+  Dramaturgie-Vorlagen (`heipard.dramaturgie`), Referenz-Set OL-G40 an `hp-ol-30`/`hp-ol-50`.
+  **Offen:** Stufe 2 (P1, P3, I1, D2, D5, D6, D7), Stufe 3 (P2, I4, R2, B2 sticky).
+  Anleitung: `heipard-feature-baukasten.md`.
 
 ## Nächste Schritte / offen
 
@@ -35,6 +39,7 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
 | `heipard-import-welle1.md` | Welle-1-Import: Ergebnis, Felder, todo-Listen |
 | `heipard-welle2-plan.md` | Welle-2-Plan, Metafeld-Extraktion, Batches |
 | `heipard-feature-baukasten.md` | PDP-Feature-Baukasten für die Content-Produktion |
+| `heipard-block-vokabular.md` | Block-Vokabular (20 Typen), Dramaturgien, Bildspezifikation, Vorgabe fürs Theme |
 | `heipard-offene-punkte.md` | laufende [TBD]-Liste |
 | `design-brief.md`, `lovable-reference/`, `../PRODUCT.md` | Design-Grundlage (vor UI-Arbeit lesen) |
 
