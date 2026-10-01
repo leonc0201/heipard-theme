@@ -113,17 +113,16 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
 
 Offen:
 
-- [ ] **OL-G40 Hotspot-Bild** — vorläufig: Fernbedienung aus dem zweiten Produktbild von HP-OL-30 freigestellt
-  (nur rund 200 px breit, eine Hand verdeckt Tasten). Auf dem Bild steht „Fuash" statt „Flash", und es zeigt
-  Tasten „4H" und „…0 Min", die im Listing-Text nicht vorkommen (dort Timer 6 oder 8 Stunden). Ein sauberes
-  Foto oder Rendering der Fernbedienung wird gebraucht, danach Punkte neu setzen.
-- [ ] **OL-G40 Abstand der Birnen** — gepflegt sind 55 cm (Listing-Text, Leon). Das Maßbild im Listing zeigt 58 cm.
-- [ ] **OL-G40 Schutzart-Wording** — die Frage „Kann die Kette bei Regen draußen bleiben?" spricht von
-  Spritzwasser, der Block Nachweise erklärt die zweite Ziffer 5 als Strahlwasser. Beides steht auf derselben Seite.
-- [ ] **Aus-Bild für den Schieber** — im Bilder-Ordner liegt keine `_aus`-Datei. Das OL-G40-Set hat als lauten
-  Block die Steuerung, ein Schieber ist dort nicht vorgesehen.
-- [ ] **Nicht zugeordnete Bilder** — `G40-03.png` (Regenbild, laut Vokabular Galeriebild) und die
-  Firefly-Datei im Bilder-Ordner sind keinem Block zugewiesen.
+- [ ] **OL-G40 lauter Block** — Steuerung und Schieber stehen beide im Set, Leon vergleicht im Editor und
+  entscheidet. Bis dahin ist die Steuerung laut, der Schieber leise, und das Icon-Grid fällt wegen des
+  Limits von acht Blöcken weg. Nach der Entscheidung den anderen Block aus dem Set nehmen.
+- [ ] **OL-G40 Hotspot-Bild** — das freigestellte Listing-Bild bleibt als Platzhalter, ein echtes Foto der
+  Fernbedienung kommt. Dann Bild tauschen und die vier Punkte neu setzen.
+- [ ] **Rückfragen an Shenzhen (Leon)** — Timer-Tasten „4H" und „…0 Min" auf der Fernbedienung, Birnenabstand
+  58 cm im Maßbild gegen 55 cm im Text, „Fuash" statt „Flash". Bis zur Antwort gelten die Werte aus dem
+  Listing-Text (Timer 6 und 8 Stunden, 55 cm).
+- [ ] **Alt-Text Aus-Bild** — `OLG40_I1_01_aus.webp` hat im Manifest keinen eigenen Alt-Text (die Zeile
+  beschreibt die leuchtende Kette), das Feld ist deshalb leer. Auf der Seite wird es nicht ausgegeben.
 - [ ] **Serienleiter** — wird erst sichtbar, wenn die Produkte der Familie aktiv sind.
 - [ ] **CE-Kennzeichnung** — neues Metafeld `ce_kennzeichnung`. Bewusst nirgends gesetzt, bis je Produkt bestätigt.
 - [ ] **Begriff Spannung** — Vokabular und Listing sagen „24 V Niederspannung". Fachlich ist das Kleinspannung
@@ -139,8 +138,9 @@ Erledigt am 2026-10-01 (Leons Entscheidungen):
   bzw. 27 m, Gesamtlänge 20 m bzw. 30 m. Der Kettenplan zeigt „ca. 17 m Lichterkette" und „20 m gesamt".
 - [x] **OL-G40 Dimmstufen** — 25, 50, 75, 100 Prozent bestätigt.
 - [x] **HP-OL-25** — bleibt in OL-Standard, kommt nicht in die Serienleiter von OL-G40.
-- [x] **OL-G40 Bilder, Texte, Fragen** — B1, B2, Basisbild der Steuerung hochgeladen, R1-Absätze und vier
-  Produktfragen eingetragen.
+- [x] **OL-G40 Bilder, Texte, Fragen** — die sieben Pipeline-Exporte liegen in den Shopify-Dateien (Alt-Texte
+  aus dem Manifest), R1-Absätze und vier Produktfragen sind eingetragen. Frage 1 nennt jetzt Strahlwasser.
+- [x] **Serienleiter** zeigt die Gesamtlänge, von Leon bestätigt.
 - [x] **Familien-Kollektionen** — technischer Name bleibt, ausgeblendet aus Kollektionsliste, Sitemap und
   Suche, noindex.
 - [x] **Fallback-Blöcke** — leere Dramaturgie gilt als Long-Tail, die generischen Blöcke im Produkt-Template
