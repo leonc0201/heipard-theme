@@ -457,6 +457,9 @@
   .heipard-plan--koppel { grid-template-columns: repeat(var(--k, 4), minmax(0, 1fr)); }
 }
 
+/* Gesamtlänge: Maßlinie über die volle Breite unter Zuleitung und Kette */
+.heipard-plan__total { margin: 2rem 0 0; }
+
 /* Kennwerte unter der Zeichnung */
 .heipard-plan__facts {
   list-style: none;
@@ -970,11 +973,20 @@
 }
 
 /* --- P1 Hotspot-Detail ------------------------------------------------- */
-.heipard-hot__stage { position: relative; }
+/* Die Bühne umschließt das Bild genau, damit die Prozent-Positionen stimmen.
+   Hochformate werden in der Höhe begrenzt statt die ganze Breite zu füllen. */
+.heipard-hot__stage {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
 .heipard-hot__img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
+  max-height: min(72rem, 120vw);
   border-radius: var(--radius-2xl);
   background: var(--muted);
 }
@@ -1049,6 +1061,21 @@
   font-size: 1.5rem;
   line-height: 1.4;
   color: rgb(var(--color-foreground));
+}
+
+/* Handy: kleinere Punkte, damit sie auf kleinen Bildern nichts verdecken.
+   Die Labels stehen dort in der Liste, eine große Tippfläche ist nicht nötig. */
+@media screen and (max-width: 749px) {
+  .heipard-hot__dot {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .heipard-hot__dot .heipard-hot__num {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    box-shadow: 0 0 0 0.2rem var(--card);
+  }
 }
 
 /* Ab Tablet: Label am Punkt bei Hover, Fokus oder Tap */

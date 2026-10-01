@@ -62,7 +62,9 @@
           "one": "{{ count }} Kette",
           "other": "Bis zu {{ count }} Ketten koppelbar"
         },
-        "couple_total": "{{ value }} m Gesamtlänge"
+        "couple_total": "{{ value }} m Gesamtlänge",
+        "chain_approx": "ca. {{ value }} m Lichterkette",
+        "total": "{{ value }} m gesamt"
       },
       "zeitband": {
         "kicker_timer": "Timer",

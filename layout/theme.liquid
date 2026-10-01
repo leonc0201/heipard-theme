@@ -62,6 +62,17 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
+    {%- comment -%}
+      HeiPard: technische Familien-Kollektionen (Handle "familie-…") nicht indexieren.
+      Aus Sitemap und Shop-Suche nimmt sie das Kollektions-Metafeld seo.hidden = 1.
+    {%- endcomment -%}
+    {%- if collection -%}
+      {%- assign handle_prefix = collection.handle | slice: 0, 8 -%}
+      {%- if handle_prefix == 'familie-' -%}
+        <meta name="robots" content="noindex, nofollow">
+      {%- endif -%}
+    {%- endif %}
+
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}

@@ -29,6 +29,12 @@
       role="list"
     >
       {%- for collection in collections -%}
+        {%- comment -%}
+          HeiPard: technische Familien-Kollektionen (Handle "familie-…", Quelle der
+          Serienleiter auf der PDP) gehören nicht in die Kollektionsliste.
+        {%- endcomment -%}
+        {%- assign handle_prefix = collection.handle | slice: 0, 8 -%}
+        {%- if handle_prefix == 'familie-' -%}{%- continue -%}{%- endif -%}
         <li
           class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}

@@ -4,6 +4,9 @@
   Varianten:
     linie    Zuleitung + Lichterkette als proportionale Linie
              (heipard.beleuchtete_laenge_m Pflicht; zuleitung_m, led_anzahl, birnenabstand_cm optional)
+             Ist heipard.gesamtlaenge_m gepflegt, gilt die Gesamtlänge als Nennmaß:
+             darunter steht eine Maßlinie "x m gesamt", die beleuchtete Länge
+             bekommt ein "ca." davor.
     flaeche  Flächenplan für Vorhang, Eiszapfen, Netz
              (heipard.breite_m + hoehe_m Pflicht; zuleitung_m, led_anzahl optional)
     koppel   Koppelplan: mehrere Ketten als Gesamtlänge
@@ -22,6 +25,7 @@
   assign breite = mf.breite_m.value
   assign hoehe = mf.hoehe_m.value
   assign koppel = mf.koppelbar_bis.value
+  assign gesamt = mf.gesamtlaenge_m.value
 
   assign variant = variant | default: 'auto'
   if variant == 'auto'
@@ -107,6 +111,15 @@
           if has_lead
             assign lead_share = zuleitung
           endif
+          assign has_total = false
+          assign chain_key = 'heipard.blocks.kettenplan.chain'
+          if gesamt != blank and gesamt > 0
+            assign has_total = true
+            assign chain_key = 'heipard.blocks.kettenplan.chain_approx'
+            capture gesamt_txt
+              render 'heipard-num', value: gesamt
+            endcapture
+          endif
         -%}
         <div class="heipard-plan heipard-plan--linie" style="--lead: {{ lead_share }}; --chain: {{ laenge }}; --n: {{ dots_l }}; --n-s: {{ dots_s }};">
           {%- if has_lead -%}
@@ -119,9 +132,12 @@
           {%- endif -%}
           <div class="heipard-plan__seg heipard-plan__seg--chain">
             <span class="heipard-plan__wire heipard-plan__wire--lit" aria-hidden="true"></span>
-            <span class="heipard-plan__measure">{{ 'heipard.blocks.kettenplan.chain' | t: value: laenge_txt }}</span>
+            <span class="heipard-plan__measure">{{ chain_key | t: value: laenge_txt }}</span>
           </div>
         </div>
+        {%- if has_total -%}
+          <p class="heipard-plan__measure heipard-plan__total">{{ 'heipard.blocks.kettenplan.total' | t: value: gesamt_txt }}</p>
+        {%- endif -%}
         {%- if has_points or has_spacing -%}
           <ul class="heipard-plan__facts">
             {%- if has_points -%}<li>{{ 'heipard.blocks.kettenplan.points' | t: count: punkte }}</li>{%- endif -%}

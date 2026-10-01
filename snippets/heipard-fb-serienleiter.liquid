@@ -4,7 +4,8 @@
   Quelle: Produkt-Metafeld heipard.familie (Code, z. B. "OL-G40"). Alle Produkte
   der Familie liegen in der Smart Collection "familie-<code>" (Regel: Metafeld
   Familie ist gleich Code). Die Kollektion liefert nur aktive Produkte.
-  Sortierung nach heipard.beleuchtete_laenge_m, das aktuelle Modell ist markiert.
+  Sortierung und Anzeige nach der Nennlänge: heipard.gesamtlaenge_m, falls gepflegt,
+  sonst heipard.beleuchtete_laenge_m. Das aktuelle Modell ist markiert.
 
   Rendert nichts, wenn die Familie fehlt oder kein Nachbarmodell aktiv ist.
   Parameter: product, kicker, title, body, label
@@ -20,7 +21,7 @@
       if p.id != product.id
         assign others = others | plus: 1
       endif
-      assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value
+      assign p_len = p.metafields.heipard.gesamtlaenge_m.value | default: p.metafields.heipard.beleuchtete_laenge_m.value
       if p_len != blank and p_len > max_len
         assign max_len = p_len
       endif
@@ -39,7 +40,7 @@
   {%- capture entries -%}
     {%- for p in fam.products limit: 24 -%}
       {%- liquid
-        assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value
+        assign p_len = p.metafields.heipard.gesamtlaenge_m.value | default: p.metafields.heipard.beleuchtete_laenge_m.value
         assign p_points = p.metafields.heipard.led_anzahl.value
         assign sort_key = '99999999'
         assign share = 100

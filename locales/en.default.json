@@ -62,7 +62,9 @@
           "one": "{{ count }} string",
           "other": "Connect up to {{ count }} strings"
         },
-        "couple_total": "{{ value }} m total length"
+        "couple_total": "{{ value }} m total length",
+        "chain_approx": "approx. {{ value }} m string lights",
+        "total": "{{ value }} m in total"
       },
       "zeitband": {
         "kicker_timer": "Timer",
