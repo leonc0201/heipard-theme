@@ -311,7 +311,7 @@ nur mit Dimmregler). Zum Vergleichen die beiden Einträge im Set tauschen. Solan
 hat das Set neun Blöcke, das Hero-Limit von acht schneidet deshalb den letzten ab (Icon-Grid).
 Nach Leons Entscheidung fliegt einer der beiden raus, dann ist das Icon-Grid wieder da.
 
-Die Bilder kommen aus der Asset-Pipeline (`P:\Claude Code\Heipard Assets_export\web\OLG40`),
+Die Bilder kommen aus der Asset-Pipeline (`P:\Claude Code\Heipard Assets\02_export\web\OLG40`),
 die Alt-Texte aus `manifest.csv` dort. In der Galerie beider Produkte stehen `OLG40_GAL_01.webp`
 auf Position 2 und `OLG40_B2_02.webp` auf Position 3, Position 1 bleibt das Produktfoto.
 
