@@ -4,8 +4,7 @@ Die PDP-Sektion **„Warum du sie lieben wirst"** wird aus Blöcken gebaut. Welc
 und in welcher Reihenfolge sie stehen, legt `heipard-block-vokabular.md` fest. Dieses Dokument
 erklärt, wie du die Blöcke im Shopify-Admin pflegst.
 
-**Umsetzungsstand:** Stufe 1 (B1, B2, B3, B4, R1, D1, D3, D4, I2 mit I3) und Stufe 2
-(P1, P3, I1, D2, D5, D6, D7) sind fertig. Stufe 3 (P2, I4, R2, B2 sticky) folgt.
+**Umsetzungsstand:** Alle 20 Block-Typen des Vokabulars sind umgesetzt (Stufen 1 bis 3, Stand 2026-10-01).
 
 ## So hängt alles zusammen
 
@@ -33,7 +32,7 @@ trotzdem je SKU die richtigen Werte, weil sie die Metafelder des jeweiligen Prod
 | Block-Typ | Vokabular | Was du pflegst | Woher die Daten kommen |
 |---|---|---|---|
 | `fullwidth` | B1 | Bild, Kicker, Titel, optional Text, Overlay-Textfarbe | Block |
-| `media_text` | B2 | Bild, Kicker, Titel, Text, Medien-Seite | Block |
+| `media_text` | B2 | Bild, Kicker, Titel, Text, Medien-Seite. Variante `sticky`: Textpunkte zeilenweise | Block |
 | `fullwidth` oder `media_text` mit Medientyp `video` | B3 (laut) | Video plus Bild als Poster | Block |
 | `text` | R1 | Kicker, Titel, Text. Jede Zeile im Textfeld wird ein Absatz | Block |
 | `kettenplan` | D1 | nur Variante, Kicker und Titel sind optional | Metafelder |
@@ -48,6 +47,9 @@ trotzdem je SKU die richtigen Werte, weil sie die Metafelder des jeweiligen Prod
 | `nachweise` | D5 | nichts | Metafelder Schutzart, Spannung, CE |
 | `kennzahl` | D6 | Feld im JSON, optional Kicker, Titel, Text | Metafeld nach Wahl |
 | `fragen` | D7 | nichts | Metafeld Fragen zum Produkt |
+| `sequenz` | P2 | Bildfolge (3 bis 4 Bilder), Unterschriften zeilenweise im Textfeld | Block |
+| `farbwechsel` | I4 (laut) | Bild, Zweites Bild, Variante | Block |
+| `zaesur` | R2 | ein Satz im Titel | Block |
 
 Kicker und Titel der Daten-Blöcke haben einen Standardtext aus den Sprachdateien. Trägst du im
 Block etwas ein, gilt dein Text.
@@ -103,6 +105,41 @@ Ohne Vorgabe zeigt der Block die ersten drei Kacheln, für die das Produkt Daten
 Reihenfolge: Timer, Dimmbar, Koppelbar, Leuchtmodi, Fernbedienung, Schutzart.
 Feste Auswahl über das JSON-Feld: `{"kacheln": ["timer", "dimmbar", "koppelbar"]}`.
 Mögliche Werte: `timer`, `dimmbar`, `koppelbar`, `modi`, `fernbedienung`, `schutzart`.
+
+### B2 Split mit Variante `sticky`
+
+Ab Desktop bleibt das Bild stehen, während 3 bis 4 Textpunkte vorbeiziehen. Auf Handy und Tablet
+stehen die Punkte einfach untereinander.
+
+- Block-Typ `media_text`, Variante `sticky`.
+- Jede Zeile im Textfeld ist ein Punkt. Mit Titel davor: `Timer | Sechs Stunden an, dann aus.`
+- Kicker und Titel des Blocks stehen über den Punkten.
+
+### R2 Zäsur
+
+Ein Satz in großer Schrift als Kapitelbruch. Der Satz steht im Titel des Blocks, der Kicker ist
+optional. Die Zäsur zählt nicht zum Block-Limit.
+
+### P2 Sequenz
+
+- **Bildfolge:** 3 bis 4 Bilder im Feld *Bildfolge*, die Reihenfolge ist die Schrittfolge. Gleiche
+  Perspektive, gleiche Lichtstimmung, 4:3.
+- **Unterschriften:** je Schritt eine Zeile im Textfeld (Zeile 1 gehört zu Schritt 1).
+- Mindestens 2 Bilder, sonst erscheint der Block nicht. Auf dem Handy lassen sich die Schritte
+  seitlich durchwischen, ab Tablet stehen sie nebeneinander.
+
+### I4 Farbwechsel
+
+| Variante | Was du pflegst | Verhalten |
+|---|---|---|
+| `ueberblendung` (auch `auto`) | Bild = Warmweiß, Zweites Bild = Multicolor, pixelgleich | zwei Buttons, weiche Überblendung. Das zweite Bild lädt erst bei Interaktion |
+| `rgb` | ein Basisbild in EINER Lichtfarbe | Regler dreht den Farbton per CSS |
+
+- Für `rgb` kann im JSON-Feld der Farbton der Basis in Grad stehen, damit die Farbskala des
+  Reglers passt: `{"basis_farbton": 30}` (0 Rot, 30 Orange, 120 Grün, 240 Blau).
+- Die Buttons heißen „Warmweiß" und „Multicolor" (Sprachdateien). Andere Paare über das JSON-Feld:
+  `{"labels": ["Warmweiß", "Kaltweiß"]}`. Diese Namen sind dann nicht übersetzbar.
+- Start immer im ersten Zustand. Bei „Bewegung reduzieren" wird ohne Überblendung umgeschaltet.
 
 ### P1 Hotspot-Detail
 
@@ -167,10 +204,12 @@ oder Zeitband".
 ## Regeln, die das Theme durchsetzt
 
 - **B1 zuerst:** Der erste Full-Width-Block eines Sets steht immer oben, auch wenn er im Set weiter hinten liegt.
-- **Ein lauter Block:** Laut sind Video, Schieber und die Steuerung mit Leuchtmodi. Pro Set wird
-  einer laut gezeigt, in `standard` und `longtail` keiner. Jeder weitere erscheint leise: das Video
-  als Standbild, der Schieber als Bild, die Steuerung ohne Modus-Buttons.
-- **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Ohne Dramaturgie gibt es kein Limit.
+- **Ein lauter Block:** Laut sind Video, Schieber, Farbwechsel und die Steuerung mit Leuchtmodi.
+  Pro Set wird einer laut gezeigt, in `standard` und `longtail` keiner. Jeder weitere erscheint
+  leise: das Video als Standbild, Schieber und Farbwechsel als Bild, die Steuerung ohne Modus-Buttons.
+- **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Die Zäsur zählt nicht mit.
+  Ohne Dramaturgie gibt es kein Limit.
+- **Zwei gleiche Typen hintereinander** werden gezeigt, der Theme-Editor weist aber darauf hin.
 - **Daten-Zone:** Serienleiter, Nachweise, Lieferumfang und Fragen stehen immer am Ende unter einer
   Trennlinie und zählen nicht zum Limit.
 - **Leere Blöcke fallen weg:** Ein Daten-Block ohne Metafelder oder ein Bildblock ohne Inhalt wird nicht gezeigt und zählt nicht.
@@ -255,6 +294,9 @@ Auto · Lieferumfang, Auto · Fragen (noch keine Fragen gepflegt).
 - Theme: `sections/heipard-feature.liquid` (Regeln), `snippets/heipard-feature-dispatch.liquid`
   (Typ-Weiche), `snippets/heipard-feature-block.liquid` (B1, B2), `snippets/heipard-fb-*.liquid`
   (je Block), `assets/heipard-feature.css`, `assets/heipard-feature.js`.
+- Felder des Metaobjekts `feature_block`: Block-Typ (`layout`), Variante, Bild, Zweites Bild
+  (`image_2`), Bildfolge (`images`), Video, Medientyp, Medien-Seite, Overlay-Textfarbe, Kicker, Titel,
+  Text, JSON (`data`), Bezeichnung.
 - Ein neuer Block-Typ braucht: Auswahlwert im Feld „Block-Typ" der Definition, ein Snippet
   `heipard-fb-<typ>`, einen Zweig in der Typ-Weiche, Locale-Keys unter `heipard.blocks.<typ>`.
 - Das alte Beispiel-Set „Beispiel-Set (Demo)" hängt noch an `hp-olh-g40-25`.

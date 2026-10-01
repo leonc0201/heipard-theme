@@ -18,7 +18,8 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Dramaturgie-Vorlagen (`heipard.dramaturgie`), Referenz-Set OL-G40 an `hp-ol-30`/`hp-ol-50`.
   **Stufe 2 fertig:** Hotspot, Lieferumfang, Schieber Aus/An, Kelvin-Skala, Nachweise, Kennzahl, Fragen
   (Metaobjekt `product_question`, Metafelder `fragen`, `ce_kennzeichnung`, IP45 in der Auswahlliste).
-  **Offen:** Stufe 3 (P2, I4, R2, B2 sticky).
+  **Stufe 3 fertig:** Sequenz, Farbwechsel (Überblendung und RGB-Regler), Zäsur, B2 mit Variante sticky.
+  Damit sind alle 20 Block-Typen umgesetzt. Offen sind Inhalte (Bilder, Texte, Fragen) je Familie.
   Anleitung: `heipard-feature-baukasten.md`.
 
 ## Nächste Schritte / offen

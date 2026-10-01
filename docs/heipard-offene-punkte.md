@@ -136,5 +136,7 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
 - [ ] **CE-Kennzeichnung** — neues Metafeld `ce_kennzeichnung`. Bewusst nirgends gesetzt, bis je Produkt bestätigt.
 - [ ] **Begriff Spannung** — Vokabular und Listing sagen „24 V Niederspannung". Fachlich ist das Kleinspannung
   (bis 50 V). Der Block Nachweise schreibt „Betriebsspannung 24 V" und erklärt Kleinspannung. Wording bestätigen.
+- [ ] **RGB-Regler (I4, Variante rgb)** — die Farbskala des Reglers nutzt zwangsläufig das volle Farbspektrum
+  (auch Blau und Violett) als feste Farbwerte. Das ist die einzige Stelle im Theme ohne Farb-Token.
 - [ ] **Kelvin-Skala** — der Verlauf endet in einem kühlen Weiß (Token `--heipard-kelvin-cool`). Bitte ansehen,
   ob das zur Regel „keine Blau-Verläufe" passt, sonst neutraler setzen.

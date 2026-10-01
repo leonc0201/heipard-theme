@@ -22,6 +22,12 @@
   assign default_title = 'heipard.blocks.schieber.title' | t
   assign head_kicker = kicker | default: default_kicker
   assign head_title = title | default: default_title
+  # Leise Fassung ohne Bedienelemente: keine Standard-Aufforderung als Titel
+  assign alt_text = title | default: default_title
+  unless allow_loud
+    assign head_kicker = kicker
+    assign head_title = title
+  endunless
 -%}
 {%- if image == blank -%}
   {%- if request.design_mode -%}
@@ -44,7 +50,7 @@
           loading: 'lazy',
           widths: '500, 750, 1000, 1200, 1600',
           sizes: '(min-width: 1400px) 1300px, 100vw',
-          alt: head_title
+          alt: alt_text
       }}
       {%- if allow_loud -%}
         <div class="heipard-slide__off" aria-hidden="true"{% if image_2 != blank %} data-off-src="{{ image_2 | image_url: width: 1600 }}"{% endif %}>
