@@ -1,0 +1,13 @@
+{%- comment -%}
+  R2 Zäsur: ein Satz in großer Fraunces über volle Breite, als Kapitelbruch.
+  Der Satz steht im Titel des Blocks (ersatzweise im Textfeld), der Kicker ist optional.
+  Die Zäsur zählt nicht zum Block-Limit der Dramaturgie.
+  Parameter: kicker, title, body
+{%- endcomment -%}
+{%- assign sentence = title | default: body -%}
+{%- if sentence != blank -%}
+  <div class="heipard-fb heipard-fb--zaesur">
+    {%- if kicker != blank -%}<span class="heipard-feature__eyebrow">{{ kicker | escape }}</span>{%- endif -%}
+    <p class="heipard-zaesur">{{ sentence | escape | newline_to_br }}</p>
+  </div>
+{%- endif -%}

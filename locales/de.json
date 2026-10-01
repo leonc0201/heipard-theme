@@ -128,7 +128,7 @@
       },
       "editor": {
         "missing": "Block „{{ block }}“ wird nicht angezeigt. Es fehlt: {{ fields }}",
-        "loud": "Block „{{ block }}“ wird leise gezeigt (Video als Standbild, Schieber als Bild, Steuerung ohne Leuchtmodi). Pro Feature-Set ist ein lauter Block erlaubt, in Standard und Long-Tail keiner.",
+        "loud": "Block „{{ block }}“ wird leise gezeigt (Video als Standbild, Schieber und Farbwechsel als Bild, Steuerung ohne Leuchtmodi). Pro Feature-Set ist ein lauter Block erlaubt, in Standard und Long-Tail keiner.",
         "limit": "Block „{{ block }}“ wird nicht angezeigt. Die Dramaturgie erlaubt höchstens {{ max }} Blöcke.",
         "no_b1": "Dieses Feature-Set hat kein Full-Width-Bild. Der erste Block sollte immer B1 sein.",
         "repeat": "Zwei Blöcke vom Typ „{{ block }}“ folgen direkt aufeinander.",
@@ -245,6 +245,20 @@
       "fragen": {
         "kicker": "Fragen",
         "title": "Häufige Fragen zum Produkt"
+      },
+      "sequenz": {
+        "kicker": "Schritt für Schritt",
+        "title": "So einfach geht es",
+        "step": "Schritt {{ n }}"
+      },
+      "farbwechsel": {
+        "kicker": "Lichtfarbe",
+        "title": "Wechsle die Farbe",
+        "choose": "Lichtfarbe wählen",
+        "warm": "Warmweiß",
+        "multi": "Multicolor",
+        "hue": "Farbton",
+        "note": "Vereinfachte Darstellung"
       }
     }
   },

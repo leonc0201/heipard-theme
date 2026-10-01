@@ -128,7 +128,7 @@
       },
       "editor": {
         "missing": "Block “{{ block }}” is not shown. Missing: {{ fields }}",
-        "loud": "Block “{{ block }}” is shown quietly (video as a still image, slider as an image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
+        "loud": "Block “{{ block }}” is shown quietly (video as a still image, slider and colour switch as an image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
         "limit": "Block “{{ block }}” is not shown. The dramaturgy allows at most {{ max }} blocks.",
         "no_b1": "This feature set has no full-width image. The first block should always be B1.",
         "repeat": "Two blocks of type “{{ block }}” follow each other directly.",
@@ -245,6 +245,20 @@
       "fragen": {
         "kicker": "Questions",
         "title": "Frequently asked questions"
+      },
+      "sequenz": {
+        "kicker": "Step by step",
+        "title": "It is that simple",
+        "step": "Step {{ n }}"
+      },
+      "farbwechsel": {
+        "kicker": "Light colour",
+        "title": "Switch the colour",
+        "choose": "Choose the light colour",
+        "warm": "Warm white",
+        "multi": "Multicolour",
+        "hue": "Hue",
+        "note": "Simplified illustration"
       }
     }
   },

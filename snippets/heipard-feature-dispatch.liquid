@@ -4,7 +4,7 @@
 
   Typen:
     fullwidth     B1 Full-Width-Bild (mit Video: B3, laut)
-    media_text    B2 Split (mit Video: B3, laut)
+    media_text    B2 Split (mit Video: B3, laut; Variante sticky)
     text          R1 Text schmal
     kettenplan    D1 (Varianten linie, flaeche, koppel)
     zeitband      D3 (Varianten timer, solar)
@@ -18,6 +18,9 @@
     nachweise     D5 (Daten-Zone)
     kennzahl      D6 Große Kennzahl
     fragen        D7 (Daten-Zone)
+    sequenz       P2 Sequenz
+    farbwechsel   I4 Farbwechsel (laut; Varianten ueberblendung, rgb)
+    zaesur        R2 Zäsur (zählt nicht zum Block-Limit)
 
   Ausgabe-Protokoll für die Sektion:
     <!--fb-loud-->   der Block ist laut (zählt gegen das Limit)
@@ -67,7 +70,7 @@
                 endif
               endif
             endif
-            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value
+            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value
           endif
         -%}
       {%- when 'text' -%}
@@ -96,6 +99,12 @@
         {%- render 'heipard-fb-kennzahl', product: product, data: data, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
       {%- when 'fragen' -%}
         {%- render 'heipard-fb-fragen', product: product, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'sequenz' -%}
+        {%- render 'heipard-fb-sequenz', images: blk.images.value, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'farbwechsel' -%}
+        {%- render 'heipard-fb-farbwechsel', image: blk.image.value, image_2: blk.image_2.value, variant: blk.variant.value, data: data, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label, uid: uid, allow_loud: allow_loud -%}
+      {%- when 'zaesur' -%}
+        {%- render 'heipard-fb-zaesur', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value -%}
     {%- endcase -%}
   {%- endcapture -%}
   {%- liquid

@@ -1350,3 +1350,222 @@
   .heipard-acc__summary::after,
   .heipard-hot__tip { transition: none; }
 }
+
+/* ==========================================================================
+   Block-Vokabular, Stufe 3
+   P2 Sequenz · I4 Farbwechsel · R2 Zäsur · B2 mit Option sticky
+   ========================================================================== */
+
+/* --- R2 Zäsur ---------------------------------------------------------- */
+.heipard-fb--zaesur {
+  padding-block: clamp(1rem, 3vw, 4rem);
+  text-align: center;
+}
+.heipard-fb--zaesur .heipard-feature__eyebrow { margin-bottom: 2rem; }
+.heipard-zaesur {
+  max-width: 24ch;
+  margin: 0 auto;
+  font-family: var(--font-heipard-display);
+  font-size: clamp(3.2rem, 4.6vw + 1rem, 7.2rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  color: rgb(var(--color-foreground));
+}
+
+/* --- P2 Sequenz -------------------------------------------------------- */
+/* Handy: seitlich durchwischen, der nächste Schritt schaut an */
+.heipard-seq {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 78%;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0 0 1.2rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+.heipard-seq__step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+.heipard-seq__media {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--muted);
+}
+.heipard-seq__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heipard-seq__caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgb(var(--color-foreground));
+}
+.heipard-seq__num {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+@media screen and (min-width: 750px) {
+  .heipard-seq {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.4rem;
+    padding-bottom: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .heipard-seq--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .heipard-seq--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* --- I4 Farbwechsel ---------------------------------------------------- */
+.heipard-fb--farbwechsel {
+  display: grid;
+  gap: clamp(2.4rem, 4vw, 4.8rem);
+  align-items: center;
+}
+@media screen and (min-width: 990px) {
+  .heipard-fb--farbwechsel { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+}
+.heipard-color__stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--muted);
+  box-shadow:
+    0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 8%, transparent),
+    0 12px 40px -12px color-mix(in oklch, var(--glow) 35%, transparent);
+}
+.heipard-color__img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Variante rgb: der Regler dreht den Farbton des Basisbilds */
+[data-heipard-color="rgb"] .heipard-color__img { filter: hue-rotate(var(--hue, 0deg)); }
+/* Variante ueberblendung: das zweite Bild liegt deckungsgleich darüber */
+.heipard-color__img--alt {
+  opacity: 0;
+  transition: opacity 450ms ease;
+}
+.heipard-color__stage[data-state="b"] .heipard-color__img--alt { opacity: 1; }
+
+.heipard-color__side { min-width: 0; }
+.heipard-color__panel {
+  display: grid;
+  gap: 2rem;
+}
+.heipard-color__panel[hidden] { display: none; }
+
+/* Farbton-Regler: die Skala zeigt die Farben, die aus der Basis entstehen */
+.heipard-color__range::-webkit-slider-runnable-track {
+  height: 1rem;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    hsl(calc(var(--base, 0) + 0) 85% 55%),
+    hsl(calc(var(--base, 0) + 60) 85% 55%),
+    hsl(calc(var(--base, 0) + 120) 85% 55%),
+    hsl(calc(var(--base, 0) + 180) 85% 55%),
+    hsl(calc(var(--base, 0) + 240) 85% 55%),
+    hsl(calc(var(--base, 0) + 300) 85% 55%),
+    hsl(calc(var(--base, 0) + 360) 85% 55%)
+  );
+}
+.heipard-color__range::-moz-range-track {
+  height: 1rem;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    hsl(calc(var(--base, 0) + 0) 85% 55%),
+    hsl(calc(var(--base, 0) + 60) 85% 55%),
+    hsl(calc(var(--base, 0) + 120) 85% 55%),
+    hsl(calc(var(--base, 0) + 180) 85% 55%),
+    hsl(calc(var(--base, 0) + 240) 85% 55%),
+    hsl(calc(var(--base, 0) + 300) 85% 55%),
+    hsl(calc(var(--base, 0) + 360) 85% 55%)
+  );
+}
+.heipard-color__range::-webkit-slider-thumb {
+  margin-top: -0.9rem;
+  background: var(--card);
+  border-color: rgb(var(--color-foreground));
+}
+.heipard-color__range::-moz-range-thumb {
+  background: var(--card);
+  border-color: rgb(var(--color-foreground));
+}
+
+/* --- B2 Split mit Option sticky ---------------------------------------- */
+.heipard-feature__points {
+  list-style: none;
+  display: grid;
+  gap: 2.4rem;
+  margin: 0;
+  padding: 0;
+}
+.heipard-feature__point {
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--border);
+}
+.heipard-feature__point-title {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-heipard-display);
+  font-size: clamp(1.9rem, 0.8vw + 1.6rem, 2.4rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: rgb(var(--color-foreground));
+}
+/* Ab Desktop bleibt das Bild stehen, die Punkte ziehen vorbei */
+@media screen and (min-width: 990px) {
+  .heipard-feature__row--sticky { align-items: start; }
+  .heipard-feature__row--sticky .heipard-feature__media {
+    position: sticky;
+    top: calc(var(--header-height, 0px) + 3.2rem);
+  }
+  .heipard-feature__row--sticky .heipard-feature__points { gap: 0; }
+  .heipard-feature__row--sticky .heipard-feature__point {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: min(42vh, 36rem);
+    padding-block: 3.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heipard-color__img--alt { transition: none; }
+}

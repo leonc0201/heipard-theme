@@ -1,0 +1,113 @@
+{%- comment -%}
+  I4 Farbwechsel. Lauter Block.
+
+  Varianten:
+    ueberblendung  Warmweiß und Multicolor: zwei deckungsgleiche Bilder
+                   (Bild = Warmweiß, Zweites Bild = Multicolor), Umschalten per
+                   Button mit weicher Überblendung. Das zweite Bild lädt erst
+                   bei Interaktion.
+    rgb            Smart-Kategorie: ein Basisbild in EINER Lichtfarbe, ein Regler
+                   dreht den Farbton per CSS (hue-rotate).
+                   Optional im JSON-Feld der Farbton der Basis in Grad, damit die
+                   Regler-Skala passt: { "basis_farbton": 30 }
+    auto           wie ueberblendung
+
+  Beschriftung der Buttons: Locales (Warmweiß, Multicolor). Für andere Paare
+  lassen sich die zwei Namen im JSON-Feld setzen (dann nicht übersetzbar):
+    { "labels": ["Warmweiß", "Kaltweiß"] }
+
+  Regeln: Start immer im ersten Zustand. prefers-reduced-motion: Umschalten ohne
+  Überblendung. Ohne JavaScript oder wenn kein lauter Block mehr erlaubt ist
+  (allow_loud false): statisches Bild im ersten Zustand.
+
+  Parameter: image, image_2, variant, data, kicker, title, body, label, uid, allow_loud
+{%- endcomment -%}
+{%- liquid
+  assign mode = 'fade'
+  if variant == 'rgb'
+    assign mode = 'rgb'
+  endif
+
+  assign missing = ''
+  if image == blank
+    assign missing = 'Bild'
+  endif
+  if mode == 'fade' and image_2 == blank
+    assign missing = missing | append: ', Zweites Bild' | remove_first: ', '
+  endif
+
+  assign label_a = 'heipard.blocks.farbwechsel.warm' | t
+  assign label_b = 'heipard.blocks.farbwechsel.multi' | t
+  if data.labels != blank and data.labels.size > 1
+    assign label_a = data.labels[0] | escape
+    assign label_b = data.labels[1] | escape
+  endif
+  assign base_hue = data.basis_farbton | default: 0
+
+  assign default_kicker = 'heipard.blocks.farbwechsel.kicker' | t
+  assign default_title = 'heipard.blocks.farbwechsel.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if missing != blank -%}
+  {%- if request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: missing }}<!--fb-note-->
+  {%- endif -%}
+{%- else -%}
+  {%- if allow_loud -%}
+    <!--fb-loud-->
+  {%- elsif request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.loud' | t: block: label }}<!--fb-note-->
+  {%- endif -%}
+  <div class="heipard-fb heipard-fb--farbwechsel"{% if allow_loud %} data-heipard-color="{{ mode }}"{% endif %}>
+    <div
+      class="heipard-color__stage"
+      data-state="a"
+      style="--hue: 0deg;"
+      {% if allow_loud and mode == 'fade' %}
+        data-alt-src="{{ image_2 | image_url: width: 1600 }}"
+      {% endif %}
+    >
+      {{
+        image
+        | image_url: width: 1600
+        | image_tag:
+          class: 'heipard-color__img',
+          loading: 'lazy',
+          widths: '500, 750, 1000, 1200, 1600',
+          sizes: '(min-width: 990px) 60vw, 100vw',
+          alt: head_title
+      }}
+    </div>
+
+    <div class="heipard-color__side">
+      {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+
+      {%- if allow_loud -%}
+        <div class="heipard-color__panel" hidden>
+          {%- if mode == 'fade' -%}
+            <div class="heipard-ctrl__chips" role="group" aria-label="{{ 'heipard.blocks.farbwechsel.choose' | t }}">
+              <button type="button" class="heipard-chip" data-state="a" aria-pressed="true">{{ label_a }}</button>
+              <button type="button" class="heipard-chip" data-state="b" aria-pressed="false">{{ label_b }}</button>
+            </div>
+          {%- else -%}
+            <div class="heipard-ctrl__group">
+              <label class="heipard-ctrl__label" for="heipard-color-range-{{ uid }}">{{ 'heipard.blocks.farbwechsel.hue' | t }}</label>
+              <input
+                class="heipard-ctrl__range heipard-color__range"
+                type="range"
+                id="heipard-color-range-{{ uid }}"
+                min="0"
+                max="360"
+                step="1"
+                value="0"
+                style="--base: {{ base_hue }};"
+              >
+            </div>
+            <p class="heipard-ctrl__note">{{ 'heipard.blocks.farbwechsel.note' | t }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}

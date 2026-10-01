@@ -1,6 +1,7 @@
 /*
   HeiPard PDP Feature-Baukasten: interaktive Blöcke.
-  Steuerung (I2 Dimmregler + I3 Modus-Umschalter) und I1 Schieber Aus und An.
+  Steuerung (I2 Dimmregler + I3 Modus-Umschalter), I1 Schieber Aus und An,
+  I4 Farbwechsel.
 
   Die Zustände entstehen per CSS aus einem Basisbild (assets/heipard-feature.css):
     --fb-level   Helligkeit 0..1, vom Regler oder den Stufen-Chips gesetzt
@@ -127,10 +128,81 @@
     root.classList.add('is-ready');
   }
 
+  // I4 Farbwechsel. data-heipard-color="fade": zwei deckungsgleiche Bilder, das
+  // zweite lädt erst bei Interaktion und wird übergeblendet. "rgb": der Regler
+  // dreht den Farbton des Basisbilds (--hue).
+  function initColor(root) {
+    if (root.dataset.heipardReady) return;
+    root.dataset.heipardReady = 'true';
+
+    var stage = root.querySelector('.heipard-color__stage');
+    var panel = root.querySelector('.heipard-color__panel');
+    if (!stage || !panel) return;
+
+    if (root.dataset.heipardColor === 'rgb') {
+      var range = root.querySelector('.heipard-color__range');
+      if (!range) return;
+      range.addEventListener('input', function () {
+        stage.style.setProperty('--hue', range.value + 'deg');
+      });
+      panel.hidden = false;
+      return;
+    }
+
+    var buttons = root.querySelectorAll('[data-state]:not(.heipard-color__stage)');
+    var altImage = null;
+    var pendingState = null;
+
+    function showState(state) {
+      stage.dataset.state = state;
+      buttons.forEach(function (button) {
+        button.setAttribute('aria-pressed', String(button.dataset.state === state));
+      });
+    }
+
+    function loadAltImage() {
+      if (altImage) return;
+      altImage = new Image();
+      altImage.className = 'heipard-color__img heipard-color__img--alt';
+      altImage.alt = '';
+      altImage.decoding = 'async';
+      altImage.addEventListener('load', function () {
+        stage.appendChild(altImage);
+        // Layout einmal erzwingen, damit die Überblendung bei Deckkraft 0 beginnt.
+        void altImage.offsetWidth;
+        if (pendingState) showState(pendingState);
+        pendingState = null;
+      });
+      altImage.src = stage.dataset.altSrc;
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var state = button.dataset.state;
+        if (state === 'b' && (!altImage || !altImage.complete || !altImage.parentNode)) {
+          pendingState = 'b';
+          buttons.forEach(function (other) {
+            other.setAttribute('aria-pressed', String(other === button));
+          });
+          loadAltImage();
+          return;
+        }
+        pendingState = null;
+        showState(state);
+      });
+      ['pointerenter', 'focus'].forEach(function (type) {
+        button.addEventListener(type, loadAltImage, { once: true, passive: true });
+      });
+    });
+
+    panel.hidden = false;
+  }
+
   function init(scope) {
     var base = scope || document;
     base.querySelectorAll('[data-heipard-ctrl]').forEach(initControl);
     base.querySelectorAll('[data-heipard-slider]').forEach(initSlider);
+    base.querySelectorAll('[data-heipard-color]').forEach(initColor);
   }
 
   window.HeipardFeature = { init: init };

@@ -16,6 +16,9 @@
     index        laufende Nummer der media_text-Zeilen (für Auto-Alternation)
     media_side   'auto' | 'left' | 'right'   (nur media_text)
     overlay_theme 'light' | 'dark'           (nur fullwidth: Textfarbe des Overlays)
+    variant      'sticky' (nur media_text): ab Desktop bleibt das Bild stehen, die
+                 Textpunkte ziehen vorbei. Jede Zeile im Text ist ein Punkt,
+                 optional mit Titel davor: "Titel | Text".
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -96,8 +99,41 @@
       endif
     endif
   -%}
-  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}">
+  {%- liquid
+    assign is_sticky = false
+    if variant == 'sticky' and body != blank
+      assign is_sticky = true
+    endif
+  -%}
+  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}{% if is_sticky %} heipard-feature__row--sticky{% endif %}">
     <div class="heipard-feature__media">{{ media_html }}</div>
-    <div class="heipard-feature__text">{{ text_html }}</div>
+    <div class="heipard-feature__text">
+      {%- if is_sticky -%}
+        {%- if kicker != blank -%}<span class="heipard-feature__eyebrow">{{ kicker | escape }}</span>{%- endif -%}
+        {%- if title != blank -%}<h3 class="heipard-feature__title">{{ title | escape }}</h3>{%- endif -%}
+        <ol class="heipard-feature__points">
+          {%- assign points = body | newline_to_br | split: '<br />' -%}
+          {%- for point in points -%}
+            {%- liquid
+              assign line = point | strip
+              if line == blank
+                continue
+              endif
+              assign parts = line | split: ' | '
+            -%}
+            <li class="heipard-feature__point">
+              {%- if parts.size > 1 -%}
+                <h4 class="heipard-feature__point-title">{{ parts[0] | escape }}</h4>
+                <p class="heipard-feature__body">{{ parts[1] | escape }}</p>
+              {%- else -%}
+                <p class="heipard-feature__body">{{ line | escape }}</p>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ol>
+      {%- else -%}
+        {{- text_html -}}
+      {%- endif -%}
+    </div>
   </div>
 {%- endif -%}
