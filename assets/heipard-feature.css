@@ -896,3 +896,457 @@
   .heipard-ctrl__group--modes { display: none; }
   .heipard-ctrl__reduced { display: block; }
 }
+
+/* ==========================================================================
+   Block-Vokabular, Stufe 2
+   P1 Hotspot · P3 Lieferumfang · I1 Schieber · D2 Kelvin-Skala · D5 Nachweise
+   D6 Kennzahl · D7 Fragen
+   ========================================================================== */
+
+/* --- Aufklapper (Nachweise, Fragen) ------------------------------------ */
+.heipard-acc {
+  max-width: 88rem;
+  border-top: 1px solid var(--border);
+}
+.heipard-acc__item { border-bottom: 1px solid var(--border); }
+.heipard-acc__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  min-height: 5.6rem;
+  padding: 1.6rem 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgb(var(--color-foreground));
+}
+.heipard-acc__summary::-webkit-details-marker { display: none; }
+.heipard-acc__summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+  border-right: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transform: translateY(-0.2rem) rotate(45deg);
+  transition: transform 200ms ease;
+}
+.heipard-acc__item[open] > .heipard-acc__summary::after { transform: translateY(0.2rem) rotate(225deg); }
+.heipard-acc__summary:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.heipard-acc__body {
+  max-width: 70ch;
+  padding: 0 0 2.4rem;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 70%, transparent);
+}
+.heipard-acc__body p { margin: 0; }
+.heipard-acc__body p + ul { margin-top: 1.2rem; }
+.heipard-acc__body ul {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+.heipard-acc__body li {
+  display: flex;
+  gap: 1.2rem;
+}
+.heipard-acc__body li strong {
+  flex: 0 0 auto;
+  min-width: 1.6rem;
+  font-family: var(--font-heipard-display);
+  font-size: 1.8rem;
+  line-height: 1.35;
+  color: var(--primary);
+}
+
+/* --- P1 Hotspot-Detail ------------------------------------------------- */
+.heipard-hot__stage { position: relative; }
+.heipard-hot__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-2xl);
+  background: var(--muted);
+}
+.heipard-hot__points,
+.heipard-hot__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.heipard-hot__point {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+}
+.heipard-hot__dot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.heipard-hot__num {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-heipard-sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.heipard-hot__dot .heipard-hot__num {
+  box-shadow:
+    0 0 0 0.3rem var(--card),
+    0 0 0 0.7rem color-mix(in oklch, var(--primary) 28%, transparent);
+}
+.heipard-hot__dot:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Handy: Labels als Liste unter dem Bild, im Bild nur die Nummern */
+.heipard-hot__tip {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.heipard-hot__list {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+.heipard-hot__entry {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: rgb(var(--color-foreground));
+}
+
+/* Ab Tablet: Label am Punkt bei Hover, Fokus oder Tap */
+@media screen and (min-width: 750px) {
+  .heipard-hot__list { display: none; }
+  .heipard-hot__tip {
+    bottom: calc(100% + 0.2rem);
+    left: 50%;
+    width: max-content;
+    max-width: 26rem;
+    height: auto;
+    padding: 0.8rem 1.4rem;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    transform: translateX(-50%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--card);
+    color: rgb(var(--color-foreground));
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    box-shadow: 0 8px 24px -8px color-mix(in oklch, rgb(var(--color-foreground)) 35%, transparent);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 150ms ease, visibility 150ms ease;
+  }
+  .heipard-hot__dot:hover .heipard-hot__tip,
+  .heipard-hot__dot:focus .heipard-hot__tip {
+    opacity: 1;
+    visibility: visible;
+  }
+  .heipard-hot__point.is-below .heipard-hot__tip {
+    bottom: auto;
+    top: calc(100% + 0.2rem);
+  }
+  .heipard-hot__point.is-left .heipard-hot__tip {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+  .heipard-hot__point.is-right .heipard-hot__tip {
+    left: 0;
+    transform: none;
+  }
+}
+
+/* --- P3 Lieferumfang --------------------------------------------------- */
+.heipard-fb--lieferumfang {
+  display: grid;
+  gap: clamp(2.4rem, 4vw, 4.8rem);
+  align-items: center;
+}
+@media screen and (min-width: 990px) {
+  .heipard-fb--lieferumfang.heipard-fb--with-image { grid-template-columns: 1fr 1fr; }
+}
+.heipard-box__media {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background: var(--muted);
+}
+.heipard-box__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heipard-box__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: 1.4rem 3.2rem;
+  margin: 0;
+  padding: 0;
+}
+.heipard-box__item {
+  position: relative;
+  padding-left: 3.6rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: rgb(var(--color-foreground));
+}
+.heipard-box__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: color-mix(in oklch, var(--primary) 16%, transparent);
+}
+.heipard-box__item::after {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 0.55rem;
+  width: 0.6rem;
+  height: 1rem;
+  border-right: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transform: rotate(45deg);
+}
+
+/* --- I1 Schieber Aus und An -------------------------------------------- */
+.heipard-slide {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--muted);
+  box-shadow:
+    0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 8%, transparent),
+    0 12px 40px -12px color-mix(in oklch, var(--glow) 35%, transparent);
+}
+.heipard-slide__img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Aus-Seite: links vom Regler. Bis das echte Bild geladen ist, eine Ableitung. */
+.heipard-slide__off {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0);
+}
+.heipard-slide__img--derived { filter: brightness(0.3) saturate(0.55); }
+.heipard-slide__off.has-real .heipard-slide__img--derived { visibility: hidden; }
+
+.heipard-slide__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos, 50%);
+  width: 0.2rem;
+  margin-left: -0.1rem;
+  background: var(--heipard-on-image);
+  pointer-events: none;
+}
+.heipard-slide__handle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4.4rem;
+  height: 4.4rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    linear-gradient(var(--primary), var(--primary)) center / 1.6rem 0.2rem no-repeat,
+    var(--heipard-on-image);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.35);
+}
+.heipard-slide__tag {
+  position: absolute;
+  top: 1.6rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.55);
+  color: var(--heipard-on-image);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.heipard-slide__tag--off { left: 1.6rem; }
+.heipard-slide__tag--on { right: 1.6rem; }
+
+/* Der native Regler liegt unsichtbar über der Szene: Maus, Touch, Tastatur */
+.heipard-slide__range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+.heipard-slide:has(.heipard-slide__range:focus-visible) {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* Ohne JavaScript: statisches Bild im Zustand an */
+.heipard-fb--schieber:not(.is-ready) .heipard-slide__off,
+.heipard-fb--schieber:not(.is-ready) .heipard-slide__handle,
+.heipard-fb--schieber:not(.is-ready) .heipard-slide__tag,
+.heipard-fb--schieber:not(.is-ready) .heipard-slide__range { display: none; }
+
+/* --- D2 Kelvin-Skala --------------------------------------------------- */
+.heipard-kelvin {
+  position: relative;
+  padding-top: 7.2rem;
+}
+.heipard-kelvin__marker {
+  position: absolute;
+  top: 0;
+  left: var(--at);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0;
+  /* Anker wandert mit: bei 0 % linksbündig, bei 100 % rechtsbündig */
+  transform: translateX(calc(var(--at) * -1));
+  white-space: nowrap;
+}
+.heipard-kelvin__marker strong {
+  font-family: var(--font-heipard-display);
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--primary);
+}
+.heipard-kelvin__marker span {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+.heipard-kelvin__bar {
+  position: relative;
+  height: 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--heipard-kelvin-warm) 0%,
+    var(--heipard-kelvin-neutral) 55%,
+    var(--heipard-kelvin-cool) 100%
+  );
+}
+.heipard-kelvin__pin {
+  position: absolute;
+  top: -0.9rem;
+  bottom: -0.9rem;
+  left: var(--at);
+  width: 0.4rem;
+  margin-left: -0.2rem;
+  border-radius: 999px;
+  background: rgb(var(--color-foreground));
+  box-shadow: 0 0 0 0.3rem var(--card);
+}
+.heipard-kelvin__ends {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.6rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+.heipard-kelvin__ends span:last-child { text-align: right; }
+
+/* --- D6 Große Kennzahl ------------------------------------------------- */
+.heipard-fb--kennzahl {
+  display: grid;
+  gap: 2.4rem clamp(3.2rem, 6vw, 8rem);
+  align-items: center;
+  width: 100%;
+  max-width: 100rem;
+  margin-inline: auto;
+}
+@media screen and (min-width: 750px) {
+  .heipard-fb--kennzahl:has(.heipard-kpi__text) { grid-template-columns: auto minmax(0, 1fr); }
+}
+.heipard-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
+.heipard-kpi__value {
+  font-family: var(--font-heipard-display);
+  font-size: clamp(6.4rem, 11vw, 12.8rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  color: var(--primary);
+}
+.heipard-kpi__label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgb(var(--color-foreground));
+}
+.heipard-kpi__text .heipard-fb__head { margin-bottom: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .heipard-acc__summary::after,
+  .heipard-hot__tip { transition: none; }
+}

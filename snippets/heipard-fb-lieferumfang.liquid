@@ -1,0 +1,52 @@
+{%- comment -%}
+  P3 Lieferumfang: Kartoninhalt als Liste, optional mit Flatlay-Bild.
+  Steht immer in der Daten-Zone.
+
+  Quellen:
+    Liste   Produkt-Metafeld heipard.lieferumfang (mehrzeilig, ein Teil je Zeile)
+    Bild    Bildfeld des Blocks (optional, Flatlay 16:9)
+
+  Parameter: product, image, kicker, title, body, label
+{%- endcomment -%}
+{%- liquid
+  assign raw = product.metafields.heipard.lieferumfang.value
+  assign items = raw | newline_to_br | split: '<br />'
+  assign shown = 0
+  assign default_kicker = 'heipard.blocks.lieferumfang.kicker' | t
+  assign default_title = 'heipard.blocks.lieferumfang.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- capture entries -%}
+  {%- for item in items -%}
+    {%- assign text = item | strip -%}
+    {%- if text != blank -%}
+      {%- assign shown = shown | plus: 1 -%}
+      <li class="heipard-box__item">{{ text | escape }}</li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if shown > 0 -%}
+  <div class="heipard-fb heipard-fb--lieferumfang{% if image != blank %} heipard-fb--with-image{% endif %}">
+    {%- if image != blank -%}
+      <div class="heipard-box__media">
+        {{
+          image
+          | image_url: width: 1400
+          | image_tag:
+            class: 'heipard-box__img',
+            loading: 'lazy',
+            widths: '500, 750, 1000, 1400',
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            alt: head_title
+        }}
+      </div>
+    {%- endif -%}
+    <div class="heipard-box__text">
+      {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+      <ul class="heipard-box__list">{{ entries }}</ul>
+    </div>
+  </div>
+{%- elsif request.design_mode -%}
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.lieferumfang' }}<!--fb-note-->
+{%- endif -%}

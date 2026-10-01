@@ -1,0 +1,77 @@
+{%- comment -%}
+  I1 Schieber Aus und An: dieselbe Szene mit Licht aus und an, per Regler vergleichbar.
+  Lauter Block.
+
+  Quellen:
+    Bild            Zustand an (Basisbild der Familie, Pflicht)
+    Zweites Bild    Zustand aus, deckungsgleich (optional)
+
+  Verhalten:
+    - Bis zur ersten Interaktion zeigt die Aus-Seite eine per CSS abgedunkelte
+      Ableitung des Basisbilds. Das echte Aus-Bild lädt erst bei Interaktion.
+      Fehlt das zweite Bild, bleibt es bei der Ableitung.
+    - Bedienung per Maus, Touch und Tastatur über einen nativen Regler.
+    - prefers-reduced-motion: Start im Zustand an, keine Übergänge.
+    - Ohne JavaScript oder wenn kein lauter Block mehr erlaubt ist
+      (allow_loud false): statisches Bild im Zustand an.
+
+  Parameter: image, image_2, kicker, title, body, label, uid, allow_loud
+{%- endcomment -%}
+{%- liquid
+  assign default_kicker = 'heipard.blocks.schieber.kicker' | t
+  assign default_title = 'heipard.blocks.schieber.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if image == blank -%}
+  {%- if request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'Bild' }}<!--fb-note-->
+  {%- endif -%}
+{%- else -%}
+  {%- if allow_loud -%}
+    <!--fb-loud-->
+  {%- elsif request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.loud' | t: block: label }}<!--fb-note-->
+  {%- endif -%}
+  <div class="heipard-fb heipard-fb--schieber"{% if allow_loud %} data-heipard-slider{% endif %}>
+    {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+    <div class="heipard-slide" style="--pos: 50%;">
+      {{
+        image
+        | image_url: width: 1600
+        | image_tag:
+          class: 'heipard-slide__img',
+          loading: 'lazy',
+          widths: '500, 750, 1000, 1200, 1600',
+          sizes: '(min-width: 1400px) 1300px, 100vw',
+          alt: head_title
+      }}
+      {%- if allow_loud -%}
+        <div class="heipard-slide__off" aria-hidden="true"{% if image_2 != blank %} data-off-src="{{ image_2 | image_url: width: 1600 }}"{% endif %}>
+          {{
+            image
+            | image_url: width: 1000
+            | image_tag:
+              class: 'heipard-slide__img heipard-slide__img--derived',
+              loading: 'lazy',
+              widths: '500, 750, 1000',
+              sizes: '(min-width: 1400px) 1300px, 100vw',
+              alt: ''
+          }}
+        </div>
+        <span class="heipard-slide__tag heipard-slide__tag--off" aria-hidden="true">{{ 'heipard.blocks.schieber.off' | t }}</span>
+        <span class="heipard-slide__tag heipard-slide__tag--on" aria-hidden="true">{{ 'heipard.blocks.schieber.on' | t }}</span>
+        <span class="heipard-slide__handle" aria-hidden="true"></span>
+        <input
+          class="heipard-slide__range"
+          type="range"
+          id="heipard-slide-{{ uid }}"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="{{ 'heipard.blocks.schieber.label' | t }}"
+        >
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}

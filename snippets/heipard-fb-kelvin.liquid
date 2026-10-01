@@ -1,0 +1,42 @@
+{%- comment -%}
+  D2 Kelvin-Skala: Lichtfarbe auf einer Skala von Kerze (1800 K) bis Tageslicht
+  (6500 K), der Wert des Produkts ist markiert. Nur aus Metafeldern.
+
+  Quelle: Produkt-Metafeld heipard.farbtemperatur_kelvin (Ganzzahl).
+  Fehlt der Wert, rendert der Block nichts (im Editor: Hinweis).
+
+  Parameter: product, kicker, title, body, label
+{%- endcomment -%}
+{%- liquid
+  assign kelvin = product.metafields.heipard.farbtemperatur_kelvin.value
+  assign scale_min = 1800
+  assign scale_max = 6500
+  assign default_kicker = 'heipard.blocks.kelvin.kicker' | t
+  assign default_title = 'heipard.blocks.kelvin.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if kelvin == blank or kelvin <= 0 -%}
+  {%- if request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.farbtemperatur_kelvin' }}<!--fb-note-->
+  {%- endif -%}
+{%- else -%}
+  {%- liquid
+    assign span = scale_max | minus: scale_min
+    assign at = kelvin | minus: scale_min | times: 100.0 | divided_by: span | at_least: 0 | at_most: 100 | round: 1
+  -%}
+  <div class="heipard-fb heipard-fb--card heipard-fb--kelvin">
+    {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+    <div class="heipard-kelvin" style="--at: {{ at }}%;">
+      <p class="heipard-kelvin__marker">
+        <strong>{{ 'heipard.blocks.kelvin.value' | t: value: kelvin }}</strong>
+        <span>{{ 'heipard.blocks.kelvin.this' | t }}</span>
+      </p>
+      <div class="heipard-kelvin__bar" aria-hidden="true"><span class="heipard-kelvin__pin"></span></div>
+      <div class="heipard-kelvin__ends">
+        <span>{{ 'heipard.blocks.kelvin.candle' | t }}<br>{{ 'heipard.blocks.kelvin.value' | t: value: scale_min }}</span>
+        <span>{{ 'heipard.blocks.kelvin.daylight' | t }}<br>{{ 'heipard.blocks.kelvin.value' | t: value: scale_max }}</span>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

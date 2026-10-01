@@ -127,12 +127,124 @@
         "protection": "Protection rating"
       },
       "editor": {
-        "missing": "Block “{{ block }}” is not shown. Missing metafields: {{ fields }}",
-        "loud": "Block “{{ block }}” is shown quietly (video as a still image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
+        "missing": "Block “{{ block }}” is not shown. Missing: {{ fields }}",
+        "loud": "Block “{{ block }}” is shown quietly (video as a still image, slider as an image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
         "limit": "Block “{{ block }}” is not shown. The dramaturgy allows at most {{ max }} blocks.",
         "no_b1": "This feature set has no full-width image. The first block should always be B1.",
         "repeat": "Two blocks of type “{{ block }}” follow each other directly.",
         "template": "This product has no feature set of its own. The template “{{ name }}” is used, which only fills the data blocks from metafields."
+      },
+      "hotspot": {
+        "kicker": "In detail",
+        "title": "Everything important at a glance",
+        "point": "Point {{ n }}",
+        "labels": {
+          "fernbedienung": "Remote control",
+          "modus": "Choose the light mode",
+          "dimmen": "Dim the brightness",
+          "timer": "Set the timer",
+          "ein_aus": "On and off",
+          "birne": "Bulb",
+          "stecker": "Plug",
+          "solarpanel": "Solar panel",
+          "schalter": "Switch",
+          "erdspiess": "Ground stake",
+          "controller": "Controller",
+          "batteriebox": "Battery box"
+        }
+      },
+      "lieferumfang": {
+        "kicker": "In the box",
+        "title": "What you get"
+      },
+      "schieber": {
+        "kicker": "Off and on",
+        "title": "Drag the slider",
+        "label": "Compare lights off and on",
+        "off": "Off",
+        "on": "On"
+      },
+      "kelvin": {
+        "kicker": "Light colour",
+        "title": "How warm the light is",
+        "value": "{{ value }} K",
+        "candle": "Candle",
+        "daylight": "Daylight",
+        "this": "This model"
+      },
+      "nachweise": {
+        "kicker": "Proof",
+        "title": "Protection and safety",
+        "ip_title": "Protection rating {{ value }}",
+        "ip_intro": "The first digit stands for protection against solid objects, the second for protection against water.",
+        "ip_first": {
+          "0": "No protection against solid objects",
+          "1": "Protected against solid objects of 50 mm diameter and larger",
+          "2": "Protected against solid objects of 12.5 mm diameter and larger",
+          "3": "Protected against solid objects of 2.5 mm diameter and larger",
+          "4": "Protected against solid objects of 1 mm diameter and larger",
+          "5": "Dust protected",
+          "6": "Dust tight"
+        },
+        "ip_second": {
+          "0": "No protection against water",
+          "1": "Protected against vertically dripping water",
+          "2": "Protected against dripping water when tilted up to 15 degrees",
+          "3": "Protected against spraying water",
+          "4": "Protected against splashing water from all directions",
+          "5": "Protected against water jets from any angle",
+          "6": "Protected against powerful water jets",
+          "7": "Protected against temporary immersion",
+          "8": "Protected against continuous immersion"
+        },
+        "voltage_title": "Operating voltage {{ value }} V",
+        "voltage_low": "Voltages up to 50 volts AC count as extra-low voltage.",
+        "ce_title": "CE marking",
+        "ce_text": "The product carries the CE marking. With it, the manufacturer declares that the product meets the applicable requirements of the European Union."
+      },
+      "kennzahl": {
+        "felder": {
+          "beleuchtete_laenge_m": {
+            "value": "{{ value }} m",
+            "label": "illuminated length"
+          },
+          "gesamtlaenge_m": {
+            "value": "{{ value }} m",
+            "label": "total length with lead cable"
+          },
+          "led_anzahl": {
+            "value": "{{ value }}",
+            "label": "light points"
+          },
+          "farbtemperatur_kelvin": {
+            "value": "{{ value }} K",
+            "label": "colour temperature"
+          },
+          "akkulaufzeit_h": {
+            "value": "{{ value }} h",
+            "label": "lighting time"
+          },
+          "hoehe_m": {
+            "value": "{{ value }} m",
+            "label": "height"
+          },
+          "breite_m": {
+            "value": "{{ value }} m",
+            "label": "width"
+          },
+          "koppelbar_bis": {
+            "value": "{{ value }}",
+            "label": "connectable strings"
+          },
+          "garantie_jahre": {
+            "value": "{{ value }}",
+            "label": "year warranty"
+          }
+        }
+      },
+      "fragen": {
+        "kicker": "Questions",
+        "title": "Frequently asked questions"
       }
     }
   },

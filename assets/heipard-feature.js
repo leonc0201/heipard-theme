@@ -1,6 +1,6 @@
 /*
   HeiPard PDP Feature-Baukasten: interaktive Blöcke.
-  Stufe 1: Steuerung (I2 Dimmregler + I3 Modus-Umschalter).
+  Steuerung (I2 Dimmregler + I3 Modus-Umschalter) und I1 Schieber Aus und An.
 
   Die Zustände entstehen per CSS aus einem Basisbild (assets/heipard-feature.css):
     --fb-level   Helligkeit 0..1, vom Regler oder den Stufen-Chips gesetzt
@@ -80,8 +80,57 @@
     panel.hidden = false;
   }
 
+  // I1 Schieber Aus und An. --pos ist die Reglerposition in Prozent: links davon
+  // liegt der Zustand aus, rechts der Zustand an. Das echte Aus-Bild lädt erst
+  // bei der ersten Interaktion, bis dahin zeigt CSS eine abgedunkelte Ableitung.
+  function initSlider(root) {
+    if (root.dataset.heipardReady) return;
+    root.dataset.heipardReady = 'true';
+
+    var stage = root.querySelector('.heipard-slide');
+    var range = root.querySelector('.heipard-slide__range');
+    var off = root.querySelector('.heipard-slide__off');
+    if (!stage || !range || !off) return;
+
+    var requested = false;
+    function loadOffImage() {
+      if (requested) return;
+      requested = true;
+      var src = off.dataset.offSrc;
+      if (!src) return;
+      var img = new Image();
+      img.className = 'heipard-slide__img heipard-slide__img--real';
+      img.alt = '';
+      img.decoding = 'async';
+      img.addEventListener('load', function () {
+        off.appendChild(img);
+        off.classList.add('has-real');
+      });
+      img.src = src;
+    }
+
+    function setPosition(value) {
+      stage.style.setProperty('--pos', value + '%');
+    }
+
+    range.addEventListener('input', function () {
+      loadOffImage();
+      setPosition(range.value);
+    });
+    ['pointerenter', 'pointerdown', 'touchstart', 'focus'].forEach(function (type) {
+      range.addEventListener(type, loadOffImage, { once: true, passive: true });
+    });
+
+    // Reduzierte Bewegung: Start im Zustand an, der Regler bleibt bedienbar.
+    if (reduceMotion.matches) range.value = '0';
+    setPosition(range.value);
+    root.classList.add('is-ready');
+  }
+
   function init(scope) {
-    (scope || document).querySelectorAll('[data-heipard-ctrl]').forEach(initControl);
+    var base = scope || document;
+    base.querySelectorAll('[data-heipard-ctrl]').forEach(initControl);
+    base.querySelectorAll('[data-heipard-slider]').forEach(initSlider);
   }
 
   window.HeipardFeature = { init: init };

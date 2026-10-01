@@ -1,0 +1,46 @@
+{%- comment -%}
+  D7 Fragen zum Produkt: 3 bis 4 produktspezifische Fragen, aufklappbar.
+  Steht immer in der Daten-Zone.
+
+  Quelle: Produkt-Metafeld heipard.fragen (Liste von Metaobjekten
+  "HeiPard Produktfrage" mit den Feldern Frage und Antwort, übersetzbar).
+  Familien können dieselben Einträge teilen. Höchstens 6 werden gezeigt.
+
+  Parameter: product, kicker, title, body, label
+{%- endcomment -%}
+{%- liquid
+  assign questions = product.metafields.heipard.fragen.value
+  assign shown = 0
+  assign default_kicker = 'heipard.blocks.fragen.kicker' | t
+  assign default_title = 'heipard.blocks.fragen.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- capture entries -%}
+  {%- if questions != blank -%}
+    {%- for q in questions limit: 6 -%}
+      {%- liquid
+        assign q_text = q.frage.value
+        assign a_text = q.antwort.value
+        if q_text == blank or a_text == blank
+          continue
+        endif
+        assign shown = shown | plus: 1
+      -%}
+      <details class="heipard-acc__item">
+        <summary class="heipard-acc__summary">{{ q_text | escape }}</summary>
+        <div class="heipard-acc__body">
+          <p>{{ a_text | escape | newline_to_br }}</p>
+        </div>
+      </details>
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- if shown > 0 -%}
+  <div class="heipard-fb heipard-fb--fragen">
+    {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+    <div class="heipard-acc">{{ entries }}</div>
+  </div>
+{%- elsif request.design_mode -%}
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.fragen' }}<!--fb-note-->
+{%- endif -%}

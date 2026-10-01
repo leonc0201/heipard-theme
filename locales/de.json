@@ -127,12 +127,124 @@
         "protection": "Schutzart"
       },
       "editor": {
-        "missing": "Block „{{ block }}“ wird nicht angezeigt. Es fehlen Metafelder: {{ fields }}",
-        "loud": "Block „{{ block }}“ wird leise gezeigt (Video als Standbild, Steuerung ohne Leuchtmodi). Pro Feature-Set ist ein lauter Block erlaubt, in Standard und Long-Tail keiner.",
+        "missing": "Block „{{ block }}“ wird nicht angezeigt. Es fehlt: {{ fields }}",
+        "loud": "Block „{{ block }}“ wird leise gezeigt (Video als Standbild, Schieber als Bild, Steuerung ohne Leuchtmodi). Pro Feature-Set ist ein lauter Block erlaubt, in Standard und Long-Tail keiner.",
         "limit": "Block „{{ block }}“ wird nicht angezeigt. Die Dramaturgie erlaubt höchstens {{ max }} Blöcke.",
         "no_b1": "Dieses Feature-Set hat kein Full-Width-Bild. Der erste Block sollte immer B1 sein.",
         "repeat": "Zwei Blöcke vom Typ „{{ block }}“ folgen direkt aufeinander.",
         "template": "Dieses Produkt hat kein eigenes Feature-Set. Es greift die Vorlage „{{ name }}“, die nur die Daten-Blöcke aus den Metafeldern füllt."
+      },
+      "hotspot": {
+        "kicker": "Im Detail",
+        "title": "Alles Wichtige auf einen Blick",
+        "point": "Punkt {{ n }}",
+        "labels": {
+          "fernbedienung": "Fernbedienung",
+          "modus": "Leuchtmodus wählen",
+          "dimmen": "Helligkeit dimmen",
+          "timer": "Timer einstellen",
+          "ein_aus": "Ein und Aus",
+          "birne": "Birne",
+          "stecker": "Stecker",
+          "solarpanel": "Solarpanel",
+          "schalter": "Schalter",
+          "erdspiess": "Erdspieß",
+          "controller": "Controller",
+          "batteriebox": "Batteriebox"
+        }
+      },
+      "lieferumfang": {
+        "kicker": "Lieferumfang",
+        "title": "Das ist im Karton"
+      },
+      "schieber": {
+        "kicker": "Aus und an",
+        "title": "Zieh den Regler",
+        "label": "Licht aus und an vergleichen",
+        "off": "Aus",
+        "on": "An"
+      },
+      "kelvin": {
+        "kicker": "Lichtfarbe",
+        "title": "So warm leuchtet sie",
+        "value": "{{ value }} K",
+        "candle": "Kerze",
+        "daylight": "Tageslicht",
+        "this": "Dieses Modell"
+      },
+      "nachweise": {
+        "kicker": "Nachweise",
+        "title": "Schutz und Sicherheit",
+        "ip_title": "Schutzart {{ value }}",
+        "ip_intro": "Die erste Ziffer steht für den Schutz gegen Fremdkörper, die zweite für den Schutz gegen Wasser.",
+        "ip_first": {
+          "0": "Kein Schutz gegen Fremdkörper",
+          "1": "Geschützt gegen feste Fremdkörper ab 50 mm Durchmesser",
+          "2": "Geschützt gegen feste Fremdkörper ab 12,5 mm Durchmesser",
+          "3": "Geschützt gegen feste Fremdkörper ab 2,5 mm Durchmesser",
+          "4": "Geschützt gegen feste Fremdkörper ab 1 mm Durchmesser",
+          "5": "Staubgeschützt",
+          "6": "Staubdicht"
+        },
+        "ip_second": {
+          "0": "Kein Schutz gegen Wasser",
+          "1": "Geschützt gegen senkrecht fallendes Tropfwasser",
+          "2": "Geschützt gegen Tropfwasser bei bis zu 15 Grad Neigung",
+          "3": "Geschützt gegen Sprühwasser",
+          "4": "Geschützt gegen Spritzwasser aus allen Richtungen",
+          "5": "Geschützt gegen Strahlwasser aus beliebigem Winkel",
+          "6": "Geschützt gegen starkes Strahlwasser",
+          "7": "Geschützt gegen zeitweiliges Untertauchen",
+          "8": "Geschützt gegen dauerndes Untertauchen"
+        },
+        "voltage_title": "Betriebsspannung {{ value }} V",
+        "voltage_low": "Spannungen bis 50 Volt Wechselspannung gelten als Kleinspannung.",
+        "ce_title": "CE-Kennzeichnung",
+        "ce_text": "Das Produkt trägt die CE-Kennzeichnung. Damit erklärt der Hersteller, dass es die geltenden Anforderungen der Europäischen Union erfüllt."
+      },
+      "kennzahl": {
+        "felder": {
+          "beleuchtete_laenge_m": {
+            "value": "{{ value }} m",
+            "label": "beleuchtete Länge"
+          },
+          "gesamtlaenge_m": {
+            "value": "{{ value }} m",
+            "label": "Gesamtlänge mit Zuleitung"
+          },
+          "led_anzahl": {
+            "value": "{{ value }}",
+            "label": "Lichtpunkte"
+          },
+          "farbtemperatur_kelvin": {
+            "value": "{{ value }} K",
+            "label": "Farbtemperatur"
+          },
+          "akkulaufzeit_h": {
+            "value": "{{ value }} h",
+            "label": "Leuchtzeit"
+          },
+          "hoehe_m": {
+            "value": "{{ value }} m",
+            "label": "Höhe"
+          },
+          "breite_m": {
+            "value": "{{ value }} m",
+            "label": "Breite"
+          },
+          "koppelbar_bis": {
+            "value": "{{ value }}",
+            "label": "Ketten koppelbar"
+          },
+          "garantie_jahre": {
+            "value": "{{ value }}",
+            "label": "Jahre Garantie"
+          }
+        }
+      },
+      "fragen": {
+        "kicker": "Fragen",
+        "title": "Häufige Fragen zum Produkt"
       }
     }
   },

@@ -1,0 +1,110 @@
+{%- comment -%}
+  P1 Hotspot-Detail: Produktbild mit nummerierten Punkten.
+  Ab Tablet erscheint das Label bei Hover, Fokus oder Tap. Auf dem Handy
+  stehen die Labels als nummerierte Liste unter dem Bild.
+
+  Quellen:
+    Bild      Bildfeld des Blocks (Pflicht)
+    Punkte    JSON-Feld des Blocks, Position in Prozent von links und oben:
+              { "punkte": [ { "x": 32, "y": 48, "key": "modus" }, { "x": 60, "y": 20 } ] }
+    Labels    je Punkt, in dieser Reihenfolge:
+              1. Zeile im Textfeld des Blocks (Zeile 1 gehört zu Punkt 1, übersetzbar)
+              2. "label" im JSON
+              3. "key" im JSON -> Locale heipard.blocks.hotspot.labels.<key>
+              Punkte ohne Label werden übersprungen.
+
+  Parameter: image, data, kicker, title, body, label
+{%- endcomment -%}
+{%- liquid
+  assign points = data.punkte
+  assign known_keys = 'fernbedienung,modus,dimmen,timer,ein_aus,birne,stecker,solarpanel,schalter,erdspiess,controller,batteriebox' | split: ','
+  assign lines = body | newline_to_br | split: '<br />'
+  assign shown = 0
+
+  assign missing = ''
+  if image == blank
+    assign missing = 'Bild'
+  endif
+  if points == blank or points.size == 0
+    assign missing = missing | append: ', JSON punkte' | remove_first: ', '
+  endif
+
+  assign default_kicker = 'heipard.blocks.hotspot.kicker' | t
+  assign default_title = 'heipard.blocks.hotspot.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if missing != blank -%}
+  {%- if request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: missing }}<!--fb-note-->
+  {%- endif -%}
+{%- else -%}
+  {%- capture dots -%}
+    {%- for pt in points limit: 8 -%}
+      {%- liquid
+        assign text = lines[forloop.index0] | strip
+        if text == blank
+          assign text = pt.label
+        endif
+        if text == blank and known_keys contains pt.key
+          assign label_key = 'heipard.blocks.hotspot.labels.' | append: pt.key
+          assign text = label_key | t
+        endif
+        if text == blank
+          continue
+        endif
+        assign shown = shown | plus: 1
+        assign pos_class = ''
+        if pt.y < 30
+          assign pos_class = pos_class | append: ' is-below'
+        endif
+        if pt.x > 70
+          assign pos_class = pos_class | append: ' is-left'
+        elsif pt.x < 30
+          assign pos_class = pos_class | append: ' is-right'
+        endif
+      -%}
+      <li class="heipard-hot__point{{ pos_class }}" style="--x: {{ pt.x }}%; --y: {{ pt.y }}%;">
+        <button type="button" class="heipard-hot__dot">
+          <span class="heipard-hot__num">{{ shown }}</span>
+          <span class="heipard-hot__tip">{{ text | escape }}</span>
+        </button>
+      </li>
+      @@item@@
+      <li class="heipard-hot__entry"><span class="heipard-hot__num" aria-hidden="true">{{ shown }}</span><span>{{ text | escape }}</span></li>
+      @@point@@
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if shown > 0 -%}
+    {%- assign pairs = dots | split: '@@point@@' -%}
+    <div class="heipard-fb heipard-fb--hotspot">
+      {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title -%}
+      <div class="heipard-hot">
+        <div class="heipard-hot__stage">
+          {{
+            image
+            | image_url: width: 1600
+            | image_tag:
+              class: 'heipard-hot__img',
+              loading: 'lazy',
+              widths: '500, 750, 1000, 1200, 1600',
+              sizes: '(min-width: 1400px) 1300px, 100vw',
+              alt: head_title
+          }}
+          <ol class="heipard-hot__points">
+            {%- for pair in pairs -%}
+              {{- pair | split: '@@item@@' | first -}}
+            {%- endfor -%}
+          </ol>
+        </div>
+        <ol class="heipard-hot__list" aria-hidden="true">
+          {%- for pair in pairs -%}
+            {{- pair | split: '@@item@@' | last -}}
+          {%- endfor -%}
+        </ol>
+      </div>
+    </div>
+  {%- elsif request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'Labels (Textfeld, label oder key)' }}<!--fb-note-->
+  {%- endif -%}
+{%- endif -%}

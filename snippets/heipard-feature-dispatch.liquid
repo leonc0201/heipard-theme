@@ -2,7 +2,7 @@
   Feature-Baukasten: rendert EINEN Metaobjekt-Block (feature_block) nach Typ.
   Der Typ steht im Feld "Block-Typ" (layout). Spezifikation: docs/heipard-block-vokabular.md
 
-  Typen (Stufe 1):
+  Typen:
     fullwidth     B1 Full-Width-Bild (mit Video: B3, laut)
     media_text    B2 Split (mit Video: B3, laut)
     text          R1 Text schmal
@@ -11,6 +11,13 @@
     serienleiter  D4 (Daten-Zone)
     steuerung     I2 Dimmregler + I3 Modus-Umschalter (mit Modi laut)
     icon_grid     B4 aus Metafeldern
+    hotspot       P1 Hotspot-Detail
+    lieferumfang  P3 (Daten-Zone)
+    schieber      I1 Schieber Aus und An (laut)
+    kelvin        D2 Kelvin-Skala
+    nachweise     D5 (Daten-Zone)
+    kennzahl      D6 Große Kennzahl
+    fragen        D7 (Daten-Zone)
 
   Ausgabe-Protokoll für die Sektion:
     <!--fb-loud-->   der Block ist laut (zählt gegen das Limit)
@@ -75,6 +82,20 @@
         {%- render 'heipard-fb-steuerung', product: product, image: blk.image.value, data: data, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label, uid: uid, allow_loud: allow_loud -%}
       {%- when 'icon_grid' -%}
         {%- render 'heipard-fb-icon-grid', product: product, data: data, label: blk_label -%}
+      {%- when 'hotspot' -%}
+        {%- render 'heipard-fb-hotspot', image: blk.image.value, data: data, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'lieferumfang' -%}
+        {%- render 'heipard-fb-lieferumfang', product: product, image: blk.image.value, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'schieber' -%}
+        {%- render 'heipard-fb-schieber', image: blk.image.value, image_2: blk.image_2.value, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label, uid: uid, allow_loud: allow_loud -%}
+      {%- when 'kelvin' -%}
+        {%- render 'heipard-fb-kelvin', product: product, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'nachweise' -%}
+        {%- render 'heipard-fb-nachweise', product: product, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'kennzahl' -%}
+        {%- render 'heipard-fb-kennzahl', product: product, data: data, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'fragen' -%}
+        {%- render 'heipard-fb-fragen', product: product, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
     {%- endcase -%}
   {%- endcapture -%}
   {%- liquid

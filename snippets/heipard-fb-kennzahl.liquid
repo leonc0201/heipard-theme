@@ -1,0 +1,57 @@
+{%- comment -%}
+  D6 Große Kennzahl: eine Zahl in Terracotta mit Erklärung. Nur aus Metafeldern.
+
+  Welches Metafeld gezeigt wird, steht im JSON-Feld des Blocks:
+    { "feld": "beleuchtete_laenge_m" }
+  Erlaubt: beleuchtete_laenge_m, gesamtlaenge_m, led_anzahl, farbtemperatur_kelvin,
+  akkulaufzeit_h, hoehe_m, breite_m, koppelbar_bis, garantie_jahre.
+  Ohne Vorgabe nimmt der Block das erste gepflegte Feld in dieser Reihenfolge:
+  akkulaufzeit_h, hoehe_m, beleuchtete_laenge_m, led_anzahl, farbtemperatur_kelvin.
+
+  Einheit und Beschriftung kommen aus den Locales (heipard.blocks.kennzahl.felder).
+  Das Textfeld des Blocks ergänzt optional einen Satz.
+
+  Parameter: product, data, kicker, title, body, label
+{%- endcomment -%}
+{%- liquid
+  assign known = 'beleuchtete_laenge_m,gesamtlaenge_m,led_anzahl,farbtemperatur_kelvin,akkulaufzeit_h,hoehe_m,breite_m,koppelbar_bis,garantie_jahre' | split: ','
+  assign candidates = 'akkulaufzeit_h,hoehe_m,beleuchtete_laenge_m,led_anzahl,farbtemperatur_kelvin' | split: ','
+  if data.feld != blank
+    assign candidates = data.feld | split: ','
+  endif
+
+  assign field = ''
+  for candidate in candidates
+    if known contains candidate
+      assign candidate_value = product.metafields.heipard[candidate].value
+      if candidate_value != blank and candidate_value > 0
+        assign field = candidate
+        assign field_value = candidate_value
+        break
+      endif
+    endif
+  endfor
+-%}
+{%- if field != blank -%}
+  {%- liquid
+    capture value_txt
+      render 'heipard-num', value: field_value
+    endcapture
+    assign value_key = 'heipard.blocks.kennzahl.felder.' | append: field | append: '.value'
+    assign label_key = 'heipard.blocks.kennzahl.felder.' | append: field | append: '.label'
+  -%}
+  <div class="heipard-fb heipard-fb--kennzahl">
+    <p class="heipard-kpi">
+      <span class="heipard-kpi__value">{{ value_key | t: value: value_txt }}</span>
+      <span class="heipard-kpi__label">{{ label_key | t }}</span>
+    </p>
+    {%- if kicker != blank or title != blank or body != blank -%}
+      <div class="heipard-kpi__text">
+        {%- render 'heipard-fb-head', kicker: kicker, title: title, body: body -%}
+      </div>
+    {%- endif -%}
+  </div>
+{%- elsif request.design_mode -%}
+  {%- assign wanted = candidates | join: ', heipard.' | prepend: 'heipard.' -%}
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: wanted }}<!--fb-note-->
+{%- endif -%}

@@ -12,11 +12,12 @@
 
   Rhythmus-Regeln (hart, im Editor mit Hinweis):
     - B1 zuerst: der erste Full-Width-Block des Sets wird immer als erster gerendert.
-    - Höchstens ein lauter Block (Video, Steuerung mit Modi). In den Dramaturgien
-      standard und longtail keiner. Überzählige laute Blöcke werden leise
-      gerendert (Video als Poster, Steuerung ohne Modi).
+    - Höchstens ein lauter Block (Video, Schieber, Steuerung mit Modi). In den
+      Dramaturgien standard und longtail keiner. Überzählige laute Blöcke werden
+      leise gerendert (Video als Poster, Schieber als Bild, Steuerung ohne Modi).
     - Block-Limit je Dramaturgie: hero 8, standard 5, longtail 3.
-      Blöcke der Daten-Zone (Serienleiter) zählen nicht mit und stehen am Ende.
+      Blöcke der Daten-Zone (Serienleiter, Nachweise, Lieferumfang, Fragen)
+      zählen nicht mit und stehen am Ende.
     - Blöcke ohne Inhalt oder ohne Metafeld-Daten werden übersprungen.
 
   Rendering je Block: snippets/heipard-feature-dispatch.liquid
@@ -63,7 +64,7 @@
 
 {%- if use_meta -%}
   {%- liquid
-    assign zone_types = 'serienleiter' | split: ','
+    assign zone_types = 'serienleiter,nachweise,lieferumfang,fragen' | split: ','
     assign b1_index = -1
     for blk in fblocks
       if blk.layout.value == 'fullwidth'
@@ -240,7 +241,7 @@
     </div>
   </section>
 
-  {%- if main_html contains 'data-heipard-ctrl' -%}
+  {%- if main_html contains 'data-heipard-ctrl' or main_html contains 'data-heipard-slider' -%}
     <script src="{{ 'heipard-feature.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 {%- endif -%}

@@ -60,6 +60,12 @@
   --glow: oklch(0.78 0.17 65);
   /* Leuchtend-warmer Akzent (z. B. Hero-Akzentwort "erleuchten") */
   --heipard-accent-bright: oklch(0.88 0.13 70);
+  /* Helle Farbe für Text und Bedienelemente AUF Bildern (in beiden Modi gleich) */
+  --heipard-on-image: oklch(0.98 0.01 80);
+  /* Kelvin-Skala (PDP-Block D2): Kerze, Neutralweiß, Tageslicht */
+  --heipard-kelvin-warm: oklch(0.78 0.15 60);
+  --heipard-kelvin-neutral: oklch(0.95 0.045 88);
+  --heipard-kelvin-cool: oklch(0.93 0.035 235);
 
   /* Markenschriften */
   --font-heipard-display: "Fraunces", Georgia, "Times New Roman", serif;
