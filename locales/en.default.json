@@ -37,6 +37,103 @@
         "one": "{{ years }} year warranty",
         "other": "{{ years }} years warranty"
       }
+    },
+    "format": {
+      "decimal_separator": "."
+    },
+    "blocks": {
+      "kettenplan": {
+        "kicker": "Dimensions",
+        "title_line": "How your string lights run",
+        "title_area": "How large the light area is",
+        "title_couple": "How far you can extend",
+        "plug": "Plug",
+        "lead": "{{ value }} m lead cable",
+        "chain": "{{ value }} m string lights",
+        "points": {
+          "one": "{{ count }} light point",
+          "other": "{{ count }} light points"
+        },
+        "spacing": "{{ value }} cm spacing",
+        "width": "{{ value }} m wide",
+        "height": "{{ value }} m high",
+        "chain_n": "String {{ n }}",
+        "couple_count": {
+          "one": "{{ count }} string",
+          "other": "Connect up to {{ count }} strings"
+        },
+        "couple_total": "{{ value }} m total length"
+      },
+      "zeitband": {
+        "kicker_timer": "Timer",
+        "title_timer": "The timer over a day",
+        "kicker_solar": "Solar",
+        "title_solar": "Charges by day, glows in the evening",
+        "choose": "Timer duration",
+        "option": "{{ hours }} h",
+        "on": {
+          "one": "{{ count }} hour on",
+          "other": "{{ count }} hours on"
+        },
+        "off": {
+          "one": "{{ count }} hour off",
+          "other": "{{ count }} hours off"
+        },
+        "tick": "{{ hours }} h",
+        "day": "Day",
+        "night": "Night",
+        "charge": "Charges in daylight",
+        "glow": "Up to {{ value }} hours of light"
+      },
+      "serienleiter": {
+        "kicker": "The series",
+        "title": "The same string lights in another length",
+        "current": "This model",
+        "length": "{{ value }} m"
+      },
+      "steuerung": {
+        "kicker": "Controls",
+        "title": "Try it out",
+        "brightness": "Brightness",
+        "percent": "{{ value }} %",
+        "mode": "Light mode",
+        "modes": {
+          "dauer": "Steady",
+          "atem": "Breathing",
+          "blinken": "Flashing"
+        },
+        "note": "Simplified illustration",
+        "reduced_motion": "Motion is reduced in your system settings, so the light modes are not animated."
+      },
+      "icon_grid": {
+        "timer": "Timer",
+        "timer_value": "{{ hours }} hours",
+        "dimmable": "Dimmable",
+        "dimmable_value": {
+          "one": "{{ count }} level",
+          "other": "{{ count }} levels"
+        },
+        "connectable": "Connectable",
+        "connectable_value": {
+          "one": "{{ count }} string",
+          "other": "Up to {{ count }} strings"
+        },
+        "modes": "Light modes",
+        "modes_value": {
+          "one": "{{ count }} mode",
+          "other": "{{ count }} modes"
+        },
+        "remote": "Remote control",
+        "protection": "Protection rating"
+      },
+      "editor": {
+        "missing": "Block “{{ block }}” is not shown. Missing metafields: {{ fields }}",
+        "loud": "Block “{{ block }}” is shown quietly (video as a still image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
+        "limit": "Block “{{ block }}” is not shown. The dramaturgy allows at most {{ max }} blocks.",
+        "no_b1": "This feature set has no full-width image. The first block should always be B1.",
+        "repeat": "Two blocks of type “{{ block }}” follow each other directly.",
+        "template": "This product has no feature set of its own. The template “{{ name }}” is used, which only fills the data blocks from metafields."
+      }
     }
   },
   "general": {

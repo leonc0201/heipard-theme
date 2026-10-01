@@ -1,0 +1,181 @@
+{%- comment -%}
+  D1 Kettenplan: Maße als proportionale Zeichnung, nur aus Metafeldern.
+
+  Varianten:
+    linie    Zuleitung + Lichterkette als proportionale Linie
+             (heipard.beleuchtete_laenge_m Pflicht; zuleitung_m, led_anzahl, birnenabstand_cm optional)
+    flaeche  Flächenplan für Vorhang, Eiszapfen, Netz
+             (heipard.breite_m + hoehe_m Pflicht; zuleitung_m, led_anzahl optional)
+    koppel   Koppelplan: mehrere Ketten als Gesamtlänge
+             (heipard.beleuchtete_laenge_m + koppelbar_bis >= 2 Pflicht)
+    auto     flaeche, wenn Breite und Höhe gepflegt sind, sonst linie
+
+  Fehlen Pflichtfelder, rendert der Block nichts (im Editor: Hinweis).
+  Parameter: product, variant, kicker, title, body, label
+{%- endcomment -%}
+{%- liquid
+  assign mf = product.metafields.heipard
+  assign laenge = mf.beleuchtete_laenge_m.value
+  assign zuleitung = mf.zuleitung_m.value
+  assign punkte = mf.led_anzahl.value
+  assign abstand = mf.birnenabstand_cm.value
+  assign breite = mf.breite_m.value
+  assign hoehe = mf.hoehe_m.value
+  assign koppel = mf.koppelbar_bis.value
+
+  assign variant = variant | default: 'auto'
+  if variant == 'auto'
+    assign variant = 'linie'
+    if breite != blank and hoehe != blank
+      assign variant = 'flaeche'
+    endif
+  endif
+
+  assign missing = ''
+  case variant
+    when 'flaeche'
+      if breite == blank
+        assign missing = missing | append: ', heipard.breite_m'
+      endif
+      if hoehe == blank
+        assign missing = missing | append: ', heipard.hoehe_m'
+      endif
+      assign default_title = 'heipard.blocks.kettenplan.title_area' | t
+    when 'koppel'
+      if laenge == blank
+        assign missing = missing | append: ', heipard.beleuchtete_laenge_m'
+      endif
+      if koppel == blank or koppel < 2
+        assign missing = missing | append: ', heipard.koppelbar_bis'
+      endif
+      assign default_title = 'heipard.blocks.kettenplan.title_couple' | t
+    else
+      assign variant = 'linie'
+      if laenge == blank
+        assign missing = missing | append: ', heipard.beleuchtete_laenge_m'
+      endif
+      assign default_title = 'heipard.blocks.kettenplan.title_line' | t
+  endcase
+  assign missing = missing | remove_first: ', '
+
+  assign default_kicker = 'heipard.blocks.kettenplan.kicker' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if missing != blank -%}
+  {%- if request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: missing }}<!--fb-note-->
+  {%- endif -%}
+{%- else -%}
+  {%- liquid
+    assign has_lead = false
+    if zuleitung != blank and zuleitung > 0
+      assign has_lead = true
+      capture zuleitung_txt
+        render 'heipard-num', value: zuleitung
+      endcapture
+    endif
+    assign has_spacing = false
+    if abstand != blank and abstand > 0
+      assign has_spacing = true
+      capture abstand_txt
+        render 'heipard-num', value: abstand
+      endcapture
+    endif
+    assign has_points = false
+    if punkte != blank and punkte > 0
+      assign has_points = true
+    endif
+  -%}
+  <div class="heipard-fb heipard-fb--card heipard-fb--kettenplan">
+    {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+
+    {%- case variant -%}
+      {%- when 'linie' -%}
+        {%- liquid
+          capture laenge_txt
+            render 'heipard-num', value: laenge
+          endcapture
+          # Punkte in der Zeichnung: echte Anzahl bis 60 (mobil 30), darüber schematisch.
+          assign dots = 24
+          if has_points
+            assign dots = punkte
+          endif
+          assign dots_l = dots | at_most: 60
+          assign dots_s = dots | at_most: 30
+          assign lead_share = 0
+          if has_lead
+            assign lead_share = zuleitung
+          endif
+        -%}
+        <div class="heipard-plan heipard-plan--linie" style="--lead: {{ lead_share }}; --chain: {{ laenge }}; --n: {{ dots_l }}; --n-s: {{ dots_s }};">
+          {%- if has_lead -%}
+            <div class="heipard-plan__seg heipard-plan__seg--lead">
+              <span class="heipard-plan__wire heipard-plan__wire--lead" aria-hidden="true">
+                <span class="heipard-plan__plug">{%- render 'heipard-fb-icon', name: 'stecker' -%}</span>
+              </span>
+              <span class="heipard-plan__measure">{{ 'heipard.blocks.kettenplan.lead' | t: value: zuleitung_txt }}</span>
+            </div>
+          {%- endif -%}
+          <div class="heipard-plan__seg heipard-plan__seg--chain">
+            <span class="heipard-plan__wire heipard-plan__wire--lit" aria-hidden="true"></span>
+            <span class="heipard-plan__measure">{{ 'heipard.blocks.kettenplan.chain' | t: value: laenge_txt }}</span>
+          </div>
+        </div>
+        {%- if has_points or has_spacing -%}
+          <ul class="heipard-plan__facts">
+            {%- if has_points -%}<li>{{ 'heipard.blocks.kettenplan.points' | t: count: punkte }}</li>{%- endif -%}
+            {%- if has_spacing -%}<li>{{ 'heipard.blocks.kettenplan.spacing' | t: value: abstand_txt }}</li>{%- endif -%}
+          </ul>
+        {%- endif -%}
+
+      {%- when 'flaeche' -%}
+        {%- liquid
+          capture breite_txt
+            render 'heipard-num', value: breite
+          endcapture
+          capture hoehe_txt
+            render 'heipard-num', value: hoehe
+          endcapture
+        -%}
+        <div class="heipard-plan heipard-plan--flaeche" style="--w: {{ breite }}; --h: {{ hoehe }};">
+          <span class="heipard-plan__dim heipard-plan__dim--w">{{ 'heipard.blocks.kettenplan.width' | t: value: breite_txt }}</span>
+          <span class="heipard-plan__dim heipard-plan__dim--h"><span>{{ 'heipard.blocks.kettenplan.height' | t: value: hoehe_txt }}</span></span>
+          <span class="heipard-plan__area" aria-hidden="true"></span>
+        </div>
+        {%- if has_points or has_lead -%}
+          <ul class="heipard-plan__facts">
+            {%- if has_points -%}<li>{{ 'heipard.blocks.kettenplan.points' | t: count: punkte }}</li>{%- endif -%}
+            {%- if has_lead -%}<li>{{ 'heipard.blocks.kettenplan.lead' | t: value: zuleitung_txt }}</li>{%- endif -%}
+          </ul>
+        {%- endif -%}
+
+      {%- when 'koppel' -%}
+        {%- liquid
+          assign total = laenge | times: koppel
+          capture total_txt
+            render 'heipard-num', value: total
+          endcapture
+          capture laenge_txt
+            render 'heipard-num', value: laenge
+          endcapture
+          assign shown = koppel | at_most: 6
+        -%}
+        <ol class="heipard-plan heipard-plan--koppel" style="--k: {{ shown }};">
+          {%- for i in (1..shown) -%}
+            <li class="heipard-plan__seg heipard-plan__seg--link">
+              <span class="heipard-plan__wire heipard-plan__wire--lit" aria-hidden="true"></span>
+              <span class="heipard-plan__measure">
+                {{- 'heipard.blocks.kettenplan.chain_n' | t: n: i -}}
+                <span class="heipard-plan__measure-sub">{{ 'heipard.blocks.serienleiter.length' | t: value: laenge_txt }}</span>
+              </span>
+            </li>
+          {%- endfor -%}
+        </ol>
+        <ul class="heipard-plan__facts">
+          <li>{{ 'heipard.blocks.kettenplan.couple_count' | t: count: koppel }}</li>
+          <li>{{ 'heipard.blocks.kettenplan.couple_total' | t: value: total_txt }}</li>
+        </ul>
+    {%- endcase -%}
+  </div>
+{%- endif -%}

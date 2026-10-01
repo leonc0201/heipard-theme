@@ -1,0 +1,20 @@
+{%- comment -%}
+  R1 Text schmal: nur Text im schmalen Maß, Kicker und kurze Absätze.
+  Jede Zeile des Textfelds wird ein Absatz (Leerzeilen werden übersprungen).
+  Parameter: kicker, title, body
+{%- endcomment -%}
+{%- if kicker != blank or title != blank or body != blank -%}
+  <div class="heipard-fb heipard-fb--text">
+    {%- if kicker != blank -%}<span class="heipard-feature__eyebrow">{{ kicker | escape }}</span>{%- endif -%}
+    {%- if title != blank -%}<h3 class="heipard-feature__title">{{ title | escape }}</h3>{%- endif -%}
+    {%- if body != blank -%}
+      <div class="heipard-fb__prose">
+        {%- assign lines = body | newline_to_br | split: '<br />' -%}
+        {%- for line in lines -%}
+          {%- assign para = line | strip -%}
+          {%- if para != blank -%}<p>{{ para | escape }}</p>{%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

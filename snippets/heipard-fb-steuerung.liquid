@@ -1,0 +1,157 @@
+{%- comment -%}
+  Steuerung: I2 Dimmregler und I3 Modus-Umschalter als ein Block.
+  Alle Zustände werden per CSS aus EINEM Basisbild abgeleitet (Zustand an,
+  100 Prozent, Dauerlicht). Ohne Bild zeigt der Block eine schematische Kette.
+
+  Quellen:
+    Dimmregler  Produkt-Metafeld heipard.dimmstufen (Liste in Prozent, z. B. 25, 50, 75, 100).
+                Regler und Chips rasten auf genau diese Stufen ein.
+    Modi        JSON-Feld des Blocks: { "modi": ["dauer", "atem", "blinken"] }
+                Erlaubt sind dauer, atem, blinken. Namen kommen aus den Locales.
+
+  Regeln:
+    - Start immer bei 100 Prozent im Dauerlicht. Animation nur nach Klick.
+    - prefers-reduced-motion: keine Animation, statt der Modus-Buttons ein Hinweis.
+    - Mit Modi ist der Block laut. Ist kein lauter Block mehr erlaubt
+      (allow_loud false), entfällt der Modus-Umschalter, der Dimmregler bleibt.
+    - Ohne JavaScript bleibt das Bild statisch im Zustand an.
+
+  Parameter: product, image, data, kicker, title, body, label, uid, allow_loud
+{%- endcomment -%}
+{%- liquid
+  assign levels = product.metafields.heipard.dimmstufen.value
+  assign has_dimmer = false
+  if levels != blank and levels.size > 1
+    assign has_dimmer = true
+    assign levels = levels | sort
+    assign level_min = levels | first
+    assign level_max = levels | last
+    # Schrittweite: gleichmäßige Stufen rasten ein, sonst stufenlos in 1er-Schritten.
+    assign level_step = 0
+    assign prev = level_min
+    for lv in levels offset: 1
+      assign diff = lv | minus: prev
+      if level_step == 0
+        assign level_step = diff
+      elsif diff != level_step
+        assign level_step = 1
+        break
+      endif
+      assign prev = lv
+    endfor
+  endif
+
+  assign modes = ''
+  assign known_modes = 'dauer,atem,blinken' | split: ','
+  if data.modi != blank
+    for m in data.modi
+      if known_modes contains m
+        assign modes = modes | append: ',' | append: m
+      endif
+    endfor
+  endif
+  assign modes = modes | remove_first: ',' | split: ','
+  assign has_modes = false
+  assign loud_blocked = false
+  if modes.size > 1
+    if allow_loud
+      assign has_modes = true
+    else
+      assign loud_blocked = true
+    endif
+  endif
+
+  assign default_kicker = 'heipard.blocks.steuerung.kicker' | t
+  assign default_title = 'heipard.blocks.steuerung.title' | t
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if loud_blocked and request.design_mode -%}
+  <!--fb-note-->{{ 'heipard.blocks.editor.loud' | t: block: label }}<!--fb-note-->
+{%- endif -%}
+{%- if has_dimmer or has_modes -%}
+  {%- if has_modes -%}<!--fb-loud-->{%- endif -%}
+  <div class="heipard-fb heipard-fb--steuerung" data-heipard-ctrl data-percent="{{ 'heipard.blocks.steuerung.percent' | t: value: '__V__' }}">
+    <div class="heipard-ctrl__stage" data-mode="dauer" style="--fb-level: 1;">
+      {%- if image != blank -%}
+        {{
+          image
+          | image_url: width: 1600
+          | image_tag:
+            class: 'heipard-ctrl__media',
+            loading: 'lazy',
+            widths: '500, 750, 1000, 1200, 1600',
+            sizes: '(min-width: 990px) 60vw, 100vw',
+            alt: head_title
+        }}
+      {%- else -%}
+        <span class="heipard-ctrl__media heipard-ctrl__scene" aria-hidden="true">
+          <svg viewBox="0 0 160 90" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <path class="heipard-ctrl__cord" d="M-5 18 Q80 62 165 18" fill="none"/>
+            <g class="heipard-ctrl__bulbs">
+              <circle cx="16.25" cy="31.1" r="3"/>
+              <circle cx="37.5" cy="38" r="3"/>
+              <circle cx="58.75" cy="42.1" r="3"/>
+              <circle cx="80" cy="43.5" r="3"/>
+              <circle cx="101.25" cy="42.1" r="3"/>
+              <circle cx="122.5" cy="38" r="3"/>
+              <circle cx="143.75" cy="31.1" r="3"/>
+            </g>
+          </svg>
+        </span>
+      {%- endif -%}
+      <span class="heipard-ctrl__dim" aria-hidden="true"></span>
+      <span class="heipard-ctrl__pulse" aria-hidden="true"></span>
+    </div>
+
+    <div class="heipard-ctrl__side">
+      {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+
+      <div class="heipard-ctrl__panel" hidden>
+        {%- if has_dimmer -%}
+          <div class="heipard-ctrl__group">
+            <label class="heipard-ctrl__label" for="heipard-ctrl-range-{{ uid }}">
+              {{- 'heipard.blocks.steuerung.brightness' | t -}}
+              <output class="heipard-ctrl__value" for="heipard-ctrl-range-{{ uid }}">{{ 'heipard.blocks.steuerung.percent' | t: value: level_max }}</output>
+            </label>
+            <input
+              class="heipard-ctrl__range"
+              type="range"
+              id="heipard-ctrl-range-{{ uid }}"
+              min="{{ level_min }}"
+              max="{{ level_max }}"
+              step="{{ level_step }}"
+              value="{{ level_max }}"
+            >
+            <div class="heipard-ctrl__chips" role="group" aria-label="{{ 'heipard.blocks.steuerung.brightness' | t }}">
+              {%- for lv in levels -%}
+                <button type="button" class="heipard-chip" data-level="{{ lv }}" aria-pressed="{% if forloop.last %}true{% else %}false{% endif %}">
+                  {{- 'heipard.blocks.steuerung.percent' | t: value: lv -}}
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if has_modes -%}
+          <div class="heipard-ctrl__group heipard-ctrl__group--modes">
+            <span class="heipard-ctrl__label" id="heipard-ctrl-modes-{{ uid }}">{{ 'heipard.blocks.steuerung.mode' | t }}</span>
+            <div class="heipard-ctrl__chips" role="group" aria-labelledby="heipard-ctrl-modes-{{ uid }}">
+              {%- for m in modes -%}
+                {%- assign mode_key = 'heipard.blocks.steuerung.modes.' | append: m -%}
+                <button type="button" class="heipard-chip" data-mode="{{ m }}" aria-pressed="{% if m == 'dauer' %}true{% else %}false{% endif %}">
+                  {{- mode_key | t -}}
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+          <p class="heipard-ctrl__reduced">{{ 'heipard.blocks.steuerung.reduced_motion' | t }}</p>
+        {%- endif -%}
+
+        <p class="heipard-ctrl__note">{{ 'heipard.blocks.steuerung.note' | t }}</p>
+      </div>
+    </div>
+  </div>
+{%- elsif request.design_mode and loud_blocked == false -%}
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.dimmstufen' }}<!--fb-note-->
+{%- endif -%}

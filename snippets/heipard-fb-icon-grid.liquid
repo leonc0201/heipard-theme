@@ -1,0 +1,89 @@
+{%- comment -%}
+  B4 Icon-Grid aus Metafeldern: bis zu drei Kacheln mit Icon, Label und Kurzwert.
+
+  Ohne Vorgabe wählt der Block die ersten drei Kacheln, für die das Produkt Daten
+  hat, in dieser Reihenfolge: timer, dimmbar, koppelbar, modi, fernbedienung, schutzart.
+  Über das JSON-Feld des Blocks lässt sich die Auswahl festlegen:
+    { "kacheln": ["timer", "dimmbar", "koppelbar"] }
+
+  Parameter: product, data, label
+{%- endcomment -%}
+{%- liquid
+  assign mf = product.metafields.heipard
+  assign wanted = data.kacheln
+  if wanted == blank
+    assign wanted = 'timer,dimmbar,koppelbar,modi,fernbedienung,schutzart' | split: ','
+  endif
+  assign shown = 0
+-%}
+{%- capture tiles -%}
+  {%- for key in wanted -%}
+    {%- liquid
+      if shown >= 3
+        break
+      endif
+      assign tile_label = ''
+      assign tile_value = ''
+      case key
+        when 'timer'
+          assign hours = mf.timer_dauer_h.value
+          if hours != blank and hours.size > 0
+            assign tile_label = 'heipard.blocks.icon_grid.timer' | t
+            assign hours_txt = hours | sort | join: ' / '
+            assign tile_value = 'heipard.blocks.icon_grid.timer_value' | t: hours: hours_txt
+          elsif mf.timer_funktion.value == true
+            assign tile_label = 'heipard.blocks.icon_grid.timer' | t
+          endif
+        when 'dimmbar'
+          assign levels = mf.dimmstufen.value
+          if levels != blank and levels.size > 1
+            assign tile_label = 'heipard.blocks.icon_grid.dimmable' | t
+            assign tile_value = 'heipard.blocks.icon_grid.dimmable_value' | t: count: levels.size
+          endif
+        when 'koppelbar'
+          assign chains = mf.koppelbar_bis.value
+          if chains != blank and chains > 1
+            assign tile_label = 'heipard.blocks.icon_grid.connectable' | t
+            assign tile_value = 'heipard.blocks.icon_grid.connectable_value' | t: count: chains
+          elsif mf.connectable.value == true
+            assign tile_label = 'heipard.blocks.icon_grid.connectable' | t
+          endif
+        when 'modi'
+          assign modes = mf.anzahl_leuchtmodi.value
+          if modes != blank and modes > 1
+            assign tile_label = 'heipard.blocks.icon_grid.modes' | t
+            assign tile_value = 'heipard.blocks.icon_grid.modes_value' | t: count: modes
+          endif
+        when 'fernbedienung'
+          if mf.fernbedienung.value == true
+            assign tile_label = 'heipard.blocks.icon_grid.remote' | t
+          endif
+        when 'schutzart'
+          assign ip = mf.ip_schutzart.value
+          if ip != blank
+            assign tile_label = 'heipard.blocks.icon_grid.protection' | t
+            assign tile_value = ip
+          endif
+      endcase
+    -%}
+    {%- if tile_label != blank -%}
+      {%- assign shown = shown | plus: 1 -%}
+      <li class="heipard-feature__mini">
+        <span class="heipard-feature__mini-icon" aria-hidden="true">{%- render 'heipard-fb-icon', name: key -%}</span>
+        <span class="heipard-feature__mini-text">
+          <span class="heipard-feature__mini-label">{{ tile_label }}</span>
+          {%- if tile_value != blank -%}
+            <span class="heipard-feature__mini-desc">{{ tile_value | escape }}</span>
+          {%- endif -%}
+        </span>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if shown > 0 -%}
+  <ul class="heipard-feature__minis heipard-feature__minis--block heipard-feature__minis--{{ shown }}">
+    {{- tiles -}}
+  </ul>
+{%- elsif request.design_mode -%}
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.timer_dauer_h, heipard.dimmstufen, heipard.koppelbar_bis' }}<!--fb-note-->
+{%- endif -%}

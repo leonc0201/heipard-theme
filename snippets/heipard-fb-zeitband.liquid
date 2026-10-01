@@ -1,0 +1,115 @@
+{%- comment -%}
+  D3 Zeitband: 24-Stunden-Band, nur aus Metafeldern.
+
+  Varianten:
+    timer  An-Phase aus heipard.timer_dauer_h (Liste, z. B. 6 und 8). Bei mehreren
+           Werten Auswahl per Chips (reines CSS über :has(), kein JavaScript).
+    solar  Tag laden, nachts leuchten; Leuchtdauer aus heipard.akkulaufzeit_h.
+           Die Darstellung ist schematisch (12 h Tag, 12 h Nacht).
+    auto   solar, wenn heipard.stromquelle "Solar" ist, sonst timer
+
+  Fehlen die Felder, rendert der Block nichts (im Editor: Hinweis).
+  Parameter: product, variant, kicker, title, body, label, uid
+{%- endcomment -%}
+{%- liquid
+  assign mf = product.metafields.heipard
+  assign timer = mf.timer_dauer_h.value
+  assign akku = mf.akkulaufzeit_h.value
+
+  assign variant = variant | default: 'auto'
+  if variant == 'auto'
+    assign variant = 'timer'
+    if mf.stromquelle.value == 'Solar'
+      assign variant = 'solar'
+    endif
+  endif
+
+  assign missing = ''
+  if variant == 'solar'
+    if akku == blank or akku <= 0
+      assign missing = 'heipard.akkulaufzeit_h'
+    endif
+    assign default_kicker = 'heipard.blocks.zeitband.kicker_solar' | t
+    assign default_title = 'heipard.blocks.zeitband.title_solar' | t
+  else
+    assign variant = 'timer'
+    if timer == blank or timer.size == 0
+      assign missing = 'heipard.timer_dauer_h'
+    endif
+    assign default_kicker = 'heipard.blocks.zeitband.kicker_timer' | t
+    assign default_title = 'heipard.blocks.zeitband.title_timer' | t
+  endif
+
+  assign head_kicker = kicker | default: default_kicker
+  assign head_title = title | default: default_title
+-%}
+{%- if missing != blank -%}
+  {%- if request.design_mode -%}
+    <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: missing }}<!--fb-note-->
+  {%- endif -%}
+{%- else -%}
+  <div class="heipard-fb heipard-fb--card heipard-fb--zeitband">
+    {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
+
+    {%- if variant == 'timer' -%}
+      {%- assign options = timer | sort -%}
+      <div class="heipard-zeit heipard-zeit--timer">
+        {%- if options.size > 1 -%}
+          <fieldset class="heipard-zeit__choose">
+            <legend class="heipard-zeit__legend-title">{{ 'heipard.blocks.zeitband.choose' | t }}</legend>
+            {%- for hours in options limit: 4 -%}
+              <label class="heipard-chip heipard-zeit__chip">
+                <input class="visually-hidden" type="radio" name="heipard-zeit-{{ uid }}" value="{{ hours }}"{% if forloop.first %} checked{% endif %}>
+                <span>{{ 'heipard.blocks.zeitband.option' | t: hours: hours }}</span>
+              </label>
+            {%- endfor -%}
+          </fieldset>
+        {%- endif -%}
+        <div class="heipard-zeit__views">
+          {%- for hours in options limit: 4 -%}
+            {%- assign on_h = hours | at_most: 24 -%}
+            {%- assign off_h = 24 | minus: on_h -%}
+            <div class="heipard-zeit__view" style="--on: {{ on_h }};">
+              <div class="heipard-zeit__band" aria-hidden="true"><span class="heipard-zeit__on"></span></div>
+              <div class="heipard-zeit__ticks" aria-hidden="true">
+                <span style="--at: 0;">{{ 'heipard.blocks.zeitband.tick' | t: hours: 0 }}</span>
+                <span style="--at: 6;">{{ 'heipard.blocks.zeitband.tick' | t: hours: 6 }}</span>
+                <span style="--at: 12;">{{ 'heipard.blocks.zeitband.tick' | t: hours: 12 }}</span>
+                <span style="--at: 18;">{{ 'heipard.blocks.zeitband.tick' | t: hours: 18 }}</span>
+                <span style="--at: 24;">{{ 'heipard.blocks.zeitband.tick' | t: hours: 24 }}</span>
+              </div>
+              <ul class="heipard-zeit__legend">
+                <li class="heipard-zeit__key heipard-zeit__key--on">{{ 'heipard.blocks.zeitband.on' | t: count: on_h }}</li>
+                {%- if off_h > 0 -%}
+                  <li class="heipard-zeit__key heipard-zeit__key--off">{{ 'heipard.blocks.zeitband.off' | t: count: off_h }}</li>
+                {%- endif -%}
+              </ul>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+
+    {%- else -%}
+      {%- liquid
+        capture akku_txt
+          render 'heipard-num', value: akku
+        endcapture
+        assign glow_h = akku | at_most: 12
+      -%}
+      <div class="heipard-zeit heipard-zeit--solar" style="--on: {{ glow_h }};">
+        <div class="heipard-zeit__band" aria-hidden="true">
+          <span class="heipard-zeit__day">{%- render 'heipard-fb-icon', name: 'sonne' -%}</span>
+          <span class="heipard-zeit__night"><span class="heipard-zeit__on"></span>{%- render 'heipard-fb-icon', name: 'mond' -%}</span>
+        </div>
+        <div class="heipard-zeit__ticks heipard-zeit__ticks--halves" aria-hidden="true">
+          <span>{{ 'heipard.blocks.zeitband.day' | t }}</span>
+          <span>{{ 'heipard.blocks.zeitband.night' | t }}</span>
+        </div>
+        <ul class="heipard-zeit__legend">
+          <li class="heipard-zeit__key heipard-zeit__key--off">{{ 'heipard.blocks.zeitband.charge' | t }}</li>
+          <li class="heipard-zeit__key heipard-zeit__key--on">{{ 'heipard.blocks.zeitband.glow' | t: value: akku_txt }}</li>
+        </ul>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

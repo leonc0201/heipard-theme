@@ -37,6 +37,103 @@
         "one": "{{ years }} Jahr Garantie",
         "other": "{{ years }} Jahre Garantie"
       }
+    },
+    "format": {
+      "decimal_separator": ","
+    },
+    "blocks": {
+      "kettenplan": {
+        "kicker": "Abmessungen",
+        "title_line": "So verläuft deine Lichterkette",
+        "title_area": "So groß ist die Lichtfläche",
+        "title_couple": "So weit kannst du verlängern",
+        "plug": "Stecker",
+        "lead": "{{ value }} m Zuleitung",
+        "chain": "{{ value }} m Lichterkette",
+        "points": {
+          "one": "{{ count }} Lichtpunkt",
+          "other": "{{ count }} Lichtpunkte"
+        },
+        "spacing": "{{ value }} cm Abstand",
+        "width": "{{ value }} m breit",
+        "height": "{{ value }} m hoch",
+        "chain_n": "Kette {{ n }}",
+        "couple_count": {
+          "one": "{{ count }} Kette",
+          "other": "Bis zu {{ count }} Ketten koppelbar"
+        },
+        "couple_total": "{{ value }} m Gesamtlänge"
+      },
+      "zeitband": {
+        "kicker_timer": "Timer",
+        "title_timer": "Der Timer im Tagesverlauf",
+        "kicker_solar": "Solar",
+        "title_solar": "Tagsüber laden, abends leuchten",
+        "choose": "Timer-Dauer",
+        "option": "{{ hours }} h",
+        "on": {
+          "one": "{{ count }} Stunde an",
+          "other": "{{ count }} Stunden an"
+        },
+        "off": {
+          "one": "{{ count }} Stunde aus",
+          "other": "{{ count }} Stunden aus"
+        },
+        "tick": "{{ hours }} h",
+        "day": "Tag",
+        "night": "Nacht",
+        "charge": "Lädt bei Tageslicht",
+        "glow": "Bis zu {{ value }} Stunden Licht"
+      },
+      "serienleiter": {
+        "kicker": "Die Serie",
+        "title": "Dieselbe Lichterkette in anderer Länge",
+        "current": "Dieses Modell",
+        "length": "{{ value }} m"
+      },
+      "steuerung": {
+        "kicker": "Steuerung",
+        "title": "Probier es aus",
+        "brightness": "Helligkeit",
+        "percent": "{{ value }} %",
+        "mode": "Leuchtmodus",
+        "modes": {
+          "dauer": "Dauerlicht",
+          "atem": "Atemlicht",
+          "blinken": "Blinken"
+        },
+        "note": "Vereinfachte Darstellung",
+        "reduced_motion": "Bewegung ist in deinen Systemeinstellungen reduziert. Die Leuchtmodi werden deshalb nicht animiert."
+      },
+      "icon_grid": {
+        "timer": "Timer",
+        "timer_value": "{{ hours }} Stunden",
+        "dimmable": "Dimmbar",
+        "dimmable_value": {
+          "one": "{{ count }} Stufe",
+          "other": "{{ count }} Stufen"
+        },
+        "connectable": "Koppelbar",
+        "connectable_value": {
+          "one": "{{ count }} Kette",
+          "other": "Bis zu {{ count }} Ketten"
+        },
+        "modes": "Leuchtmodi",
+        "modes_value": {
+          "one": "{{ count }} Modus",
+          "other": "{{ count }} Modi"
+        },
+        "remote": "Fernbedienung",
+        "protection": "Schutzart"
+      },
+      "editor": {
+        "missing": "Block „{{ block }}“ wird nicht angezeigt. Es fehlen Metafelder: {{ fields }}",
+        "loud": "Block „{{ block }}“ wird leise gezeigt (Video als Standbild, Steuerung ohne Leuchtmodi). Pro Feature-Set ist ein lauter Block erlaubt, in Standard und Long-Tail keiner.",
+        "limit": "Block „{{ block }}“ wird nicht angezeigt. Die Dramaturgie erlaubt höchstens {{ max }} Blöcke.",
+        "no_b1": "Dieses Feature-Set hat kein Full-Width-Bild. Der erste Block sollte immer B1 sein.",
+        "repeat": "Zwei Blöcke vom Typ „{{ block }}“ folgen direkt aufeinander.",
+        "template": "Dieses Produkt hat kein eigenes Feature-Set. Es greift die Vorlage „{{ name }}“, die nur die Daten-Blöcke aus den Metafeldern füllt."
+      }
     }
   },
   "general": {

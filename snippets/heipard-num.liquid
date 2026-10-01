@@ -1,0 +1,22 @@
+{%- comment -%}
+  Zahl lokalisiert ausgeben: ganze Zahlen ohne Nachkommastellen, sonst bis zu
+  zwei Stellen mit dem Dezimaltrennzeichen der Sprache (heipard.format).
+  Parameter: value (Zahl). Gibt nur die Zahl aus, ohne Leerraum.
+{%- endcomment -%}
+{%- liquid
+  assign cents = value | times: 100 | round
+  assign whole = cents | divided_by: 100
+  assign frac = cents | modulo: 100
+  if frac == 0
+    echo whole
+  else
+    assign sep = 'heipard.format.decimal_separator' | t
+    assign tenth = frac | modulo: 10
+    if tenth == 0
+      assign frac = frac | divided_by: 10
+    elsif frac < 10
+      assign frac = frac | prepend: '0'
+    endif
+    echo whole | append: sep | append: frac
+  endif
+-%}

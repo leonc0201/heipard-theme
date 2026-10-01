@@ -1,18 +1,38 @@
 {% comment %}
-  HeiPard PDP Feature-Sektion "Warum du sie lieben wirst" — kuratierbarer Baukasten.
+  HeiPard PDP Feature-Sektion "Warum du sie lieben wirst" — Baukasten nach
+  docs/heipard-block-vokabular.md (Bedienung: docs/heipard-feature-baukasten.md).
 
   Block-Quelle (Präzedenz):
-    1. Metaobjekt: product.metafields.heipard.feature_set -> feature_set.blocks
-       (variable Anzahl 2–6, Typen media_text/fullwidth, Bild ODER Video).
-       Ganze Produktfamilien teilen sich EIN feature_set (kein Duplizieren pro SKU).
-    2. Fallback: Section-Blocks vom Typ 'feature' (altes 3-Block-Schema -> bricht nicht).
+    1. Produkt-Metafeld heipard.feature_set (Metaobjekt feature_set -> blocks).
+       Ganze Produktfamilien teilen sich EIN feature_set.
+    2. Vorlage zur Dramaturgie: Produkt-Metafeld heipard.dramaturgie
+       (hero | standard | longtail) -> Metaobjekt feature_set "vorlage-<dramaturgie>".
+       Daten-Blöcke der Vorlage füllen sich aus den Produkt-Metafeldern.
+    3. Fallback: Section-Blocks 'feature' und 'mini' (altes Schema, bricht nicht).
 
-  Das 3er-Icon-Grid am Ende kommt weiterhin aus Section-Blocks 'mini'.
+  Rhythmus-Regeln (hart, im Editor mit Hinweis):
+    - B1 zuerst: der erste Full-Width-Block des Sets wird immer als erster gerendert.
+    - Höchstens ein lauter Block (Video, Steuerung mit Modi). In den Dramaturgien
+      standard und longtail keiner. Überzählige laute Blöcke werden leise
+      gerendert (Video als Poster, Steuerung ohne Modi).
+    - Block-Limit je Dramaturgie: hero 8, standard 5, longtail 3.
+      Blöcke der Daten-Zone (Serienleiter) zählen nicht mit und stehen am Ende.
+    - Blöcke ohne Inhalt oder ohne Metafeld-Daten werden übersprungen.
+
+  Rendering je Block: snippets/heipard-feature-dispatch.liquid
   CSS liegt global in assets/heipard-feature.css (nach base.css), NICHT hier.
 {% endcomment %}
 
 {%- liquid
   assign fset = product.metafields.heipard.feature_set.value
+  assign dramaturgie = product.metafields.heipard.dramaturgie.value
+  assign from_template = false
+  if fset == blank and dramaturgie != blank
+    assign template_handle = 'vorlage-' | append: dramaturgie
+    assign fset = metaobjects.feature_set[template_handle]
+    assign from_template = true
+  endif
+
   assign use_meta = false
   if fset != blank
     assign fblocks = fset.blocks.value
@@ -20,105 +40,217 @@
       assign use_meta = true
     endif
   endif
+
+  # 0 = kein Block-Limit (Sets ohne Dramaturgie)
+  assign max_blocks = 0
+  assign max_loud = 1
+  case dramaturgie
+    when 'hero'
+      assign max_blocks = 8
+    when 'standard'
+      assign max_blocks = 5
+      assign max_loud = 0
+    when 'longtail'
+      assign max_blocks = 3
+      assign max_loud = 0
+  endcase
+
+  assign main_html = ''
+  assign zone_html = ''
+  assign minis_html = ''
+  assign notes_html = ''
 -%}
 
-<section class="heipard-section heipard-feature color-{{ section.settings.color_scheme }}">
+{%- if use_meta -%}
+  {%- liquid
+    assign zone_types = 'serienleiter' | split: ','
+    assign b1_index = -1
+    for blk in fblocks
+      if blk.layout.value == 'fullwidth'
+        if blk.image.value != blank or blk.video.value != blank or blk.title.value != blank
+          assign b1_index = forloop.index0
+          break
+        endif
+      endif
+    endfor
+    if from_template
+      assign note = 'heipard.blocks.editor.template' | t: name: template_handle
+      assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
+    elsif b1_index == -1
+      assign note = 'heipard.blocks.editor.no_b1' | t
+      assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
+    endif
+
+    assign count = 0
+    assign loud_count = 0
+    assign mt_index = 0
+    assign prev_type = ''
+  -%}
+  {%- for pass in (1..2) -%}
+    {%- for blk in fblocks -%}
+      {%- liquid
+        if pass == 1 and forloop.index0 != b1_index
+          continue
+        endif
+        if pass == 2 and forloop.index0 == b1_index
+          continue
+        endif
+
+        assign type = blk.layout.value | default: 'media_text'
+        assign blk_label = blk.label.value | default: type
+        assign allow_loud = false
+        if loud_count < max_loud
+          assign allow_loud = true
+        endif
+        assign next_mt = mt_index | plus: 1
+        assign uid = section.id | append: '-' | append: forloop.index
+      -%}
+      {%- capture out -%}
+        {%- render 'heipard-feature-dispatch', blk: blk, product: product, index: next_mt, allow_loud: allow_loud, uid: uid -%}
+      {%- endcapture -%}
+      {%- liquid
+        assign parts = out | split: '<!--fb-note-->'
+        assign html = ''
+        for part in parts
+          if forloop.first
+            assign html = part | strip
+          else
+            assign note = part | strip
+            if note != blank
+              assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
+            endif
+          endif
+        endfor
+        if html == blank
+          continue
+        endif
+
+        if zone_types contains type
+          assign zone_html = zone_html | append: html
+          continue
+        endif
+
+        if max_blocks > 0 and count >= max_blocks
+          assign note = 'heipard.blocks.editor.limit' | t: block: blk_label, max: max_blocks
+          assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
+          continue
+        endif
+
+        if html contains '<!--fb-loud-->'
+          assign loud_count = loud_count | plus: 1
+          assign html = html | remove: '<!--fb-loud-->'
+        endif
+        if type == prev_type
+          assign note = 'heipard.blocks.editor.repeat' | t: block: type
+          assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
+        endif
+        if type == 'media_text'
+          assign mt_index = next_mt
+        endif
+        assign prev_type = type
+        assign count = count | plus: 1
+        assign main_html = main_html | append: html
+      -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- capture main_html -%}
+    {%- assign feature_index = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'feature' -%}
+        {%- assign feature_index = feature_index | plus: 1 -%}
+        {%- render 'heipard-feature-block',
+            layout: 'media_text',
+            media_type: 'image',
+            image: block.settings.image,
+            kicker: block.settings.kicker,
+            title: block.settings.title,
+            body: block.settings.body,
+            index: feature_index,
+            media_side: 'auto'
+        -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- capture minis_html -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'mini' -%}
+        <li class="heipard-feature__mini" {{ block.shopify_attributes }}>
+          <span class="heipard-feature__mini-icon" aria-hidden="true">
+            {%- case block.settings.icon -%}
+              {%- when 'modes' -%}{%- render 'heipard-fb-icon', name: 'modi' -%}
+              {%- when 'link' -%}{%- render 'heipard-fb-icon', name: 'koppelbar' -%}
+              {%- else -%}{%- render 'heipard-fb-icon', name: block.settings.icon -%}
+            {%- endcase -%}
+          </span>
+          <span class="heipard-feature__mini-text">
+            {%- if block.settings.label != blank -%}
+              <span class="heipard-feature__mini-label">{{ block.settings.label | escape }}</span>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <span class="heipard-feature__mini-desc">{{ block.settings.text | escape }}</span>
+            {%- endif -%}
+          </span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- liquid
+  assign main_html = main_html | strip
+  assign zone_html = zone_html | strip
+  assign minis_html = minis_html | strip
+-%}
+
+{%- if request.design_mode and notes_html != blank -%}
   <div class="page-width">
-    <div class="heipard-feature__head">
-      {%- if section.settings.kicker != blank -%}
-        <span class="heipard-kicker">{{ section.settings.kicker | escape }}</span>
-      {%- endif -%}
-      {%- if section.settings.heading != blank or section.settings.heading_accent != blank -%}
-        <h2 class="heipard-feature__heading">
-          {{ section.settings.heading | escape }}
-          {%- if section.settings.heading_accent != blank %}
-            <span class="heipard-feature__accent">{{ section.settings.heading_accent | escape }}</span>
-          {%- endif -%}
-        </h2>
-      {%- endif -%}
-    </div>
-
-    <div class="heipard-feature__blocks">
-      {%- if use_meta -%}
-        {%- assign mt_index = 0 -%}
-        {%- for blk in fblocks -%}
-          {%- assign blk_layout = blk.layout.value | default: 'media_text' -%}
-          {%- if blk_layout != 'fullwidth' -%}
-            {%- assign mt_index = mt_index | plus: 1 -%}
-          {%- endif -%}
-          {%- render 'heipard-feature-block',
-              layout: blk_layout,
-              media_type: blk.media_type.value,
-              image: blk.image.value,
-              video: blk.video.value,
-              kicker: blk.kicker.value,
-              title: blk.title.value,
-              body: blk.body.value,
-              index: mt_index,
-              media_side: blk.media_side.value,
-              overlay_theme: blk.overlay_theme.value
-          -%}
-        {%- endfor -%}
-      {%- else -%}
-        {%- assign feature_index = 0 -%}
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'feature' -%}
-            {%- assign feature_index = feature_index | plus: 1 -%}
-            {%- render 'heipard-feature-block',
-                layout: 'media_text',
-                media_type: 'image',
-                image: block.settings.image,
-                kicker: block.settings.kicker,
-                title: block.settings.title,
-                body: block.settings.body,
-                index: feature_index,
-                media_side: 'auto'
-            -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-    </div>
-
-    {%- assign mini_blocks = section.blocks | where: 'type', 'mini' -%}
-    {%- if mini_blocks.size > 0 -%}
-      <ul class="heipard-feature__minis">
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'mini' -%}
-            <li class="heipard-feature__mini" {{ block.shopify_attributes }}>
-              <span class="heipard-feature__mini-icon" aria-hidden="true">
-                {%- case block.settings.icon -%}
-                  {%- when 'timer' -%}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg>
-                  {%- when 'modes' -%}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="15" cy="16" r="2.5"/><path d="M3 21c2-5 7-9 13-10"/></svg>
-                  {%- when 'link' -%}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6"/><path d="M9.5 8H7a4 4 0 0 0 0 8h2.5"/><path d="M14.5 8H17a4 4 0 0 1 0 8h-2.5"/></svg>
-                  {%- else -%}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
-                {%- endcase -%}
-              </span>
-              <span class="heipard-feature__mini-text">
-                {%- if block.settings.label != blank -%}
-                  <span class="heipard-feature__mini-label">{{ block.settings.label | escape }}</span>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <span class="heipard-feature__mini-desc">{{ block.settings.text | escape }}</span>
-                {%- endif -%}
-              </span>
-            </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
+    <ul class="heipard-fb-notes">{{ notes_html }}</ul>
   </div>
-</section>
+{%- endif -%}
+
+{%- if main_html != blank or zone_html != blank or minis_html != blank -%}
+  <section class="heipard-section heipard-feature color-{{ section.settings.color_scheme }}">
+    <div class="page-width">
+      {%- if main_html != blank -%}
+        <div class="heipard-feature__head">
+          {%- if section.settings.kicker != blank -%}
+            <span class="heipard-kicker">{{ section.settings.kicker | escape }}</span>
+          {%- endif -%}
+          {%- if section.settings.heading != blank or section.settings.heading_accent != blank -%}
+            <h2 class="heipard-feature__heading">
+              {{ section.settings.heading | escape }}
+              {%- if section.settings.heading_accent != blank %}
+                <span class="heipard-feature__accent">{{ section.settings.heading_accent | escape }}</span>
+              {%- endif -%}
+            </h2>
+          {%- endif -%}
+        </div>
+
+        <div class="heipard-feature__blocks">{{ main_html }}</div>
+      {%- endif -%}
+
+      {%- if minis_html != blank -%}
+        <ul class="heipard-feature__minis">{{ minis_html }}</ul>
+      {%- endif -%}
+
+      {%- if zone_html != blank -%}
+        <div class="heipard-feature__zone{% if main_html == blank and minis_html == blank %} heipard-feature__zone--solo{% endif %}">{{ zone_html }}</div>
+      {%- endif -%}
+    </div>
+  </section>
+
+  {%- if main_html contains 'data-heipard-ctrl' -%}
+    <script src="{{ 'heipard-feature.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+{%- endif -%}
 
 {% schema %}
 {
   "name": "HeiPard PDP Feature",
   "tag": "section",
   "settings": [
-    { "type": "paragraph", "content": "Feature-Blöcke werden bevorzugt aus dem Produkt-Metafeld heipard.feature_set (Metaobjekt) geladen — variable Anzahl, Bild/Video, Voll-Breite. Fehlt das Metafeld, dienen die unten gepflegten Feature-Blöcke als Fallback (altes Schema)." },
+    { "type": "paragraph", "content": "Die Blöcke kommen aus dem Produkt-Metafeld heipard.feature_set (Metaobjekt). Fehlt es, greift die Vorlage zur Dramaturgie (Metafeld heipard.dramaturgie: hero, standard, longtail). Fehlt beides, dienen die unten gepflegten Blöcke als Fallback (altes Schema). Hinweise zu übersprungenen Blöcken erscheinen nur hier im Editor." },
     { "type": "text", "id": "kicker", "label": "Kicker", "default": "Warum du sie lieben wirst" },
     { "type": "text", "id": "heading", "label": "Ueberschrift", "default": "Kleine Details," },
     { "type": "text", "id": "heading_accent", "label": "Ueberschrift Akzent (Terracotta)", "default": "große Wirkung." },
@@ -137,7 +269,7 @@
     },
     {
       "type": "mini",
-      "name": "Mini-Feature",
+      "name": "Mini-Feature (Fallback)",
       "settings": [
         {
           "type": "select",

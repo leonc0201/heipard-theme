@@ -2,7 +2,7 @@
   HeiPard PDP Feature-Sektion "Warum du sie lieben wirst" — Baukasten.
   Global geladen (theme.liquid, NACH base.css), damit Abstände greifen und
   nicht von Dawn-Defaults genullt werden. Alle Farben über Tokens (Tag/Abend).
-  Block-Renderer: snippets/heipard-feature-block.liquid.
+  Block-Renderer: snippets/heipard-feature-block.liquid (B1/B2) und snippets/heipard-fb-*.liquid.
 */
 
 /* --- Kopf -------------------------------------------------------------- */
@@ -96,6 +96,7 @@
 }
 
 /* Heller Modus (dunkles Bild): heller Overlay-Text (Default) */
+.heipard-feature__full--light .heipard-feature__full-content .heipard-feature__eyebrow { color: var(--heipard-accent-bright); }
 .heipard-feature__full--light .heipard-feature__full-content .heipard-feature__title { color: oklch(0.98 0.01 80); }
 .heipard-feature__full--light .heipard-feature__full-content .heipard-feature__body {
   color: color-mix(in oklch, oklch(0.98 0.01 80) 82%, transparent);
@@ -193,4 +194,705 @@
 .heipard-feature__mini-desc {
   font-size: 1.3rem;
   color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+
+/* ==========================================================================
+   Block-Vokabular (docs/heipard-block-vokabular.md), Stufe 1
+   R1 Text schmal · D1 Kettenplan · D3 Zeitband · D4 Serienleiter · Steuerung
+   Renderer: snippets/heipard-fb-*.liquid, Logik: assets/heipard-feature.js
+   ========================================================================== */
+
+/* --- Gemeinsame Bausteine ---------------------------------------------- */
+.heipard-fb { min-width: 0; }
+
+.heipard-fb--card {
+  padding: clamp(2.4rem, 4vw, 4.8rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  background: var(--card);
+}
+
+.heipard-fb__head { margin-bottom: clamp(2.4rem, 3vw, 3.6rem); }
+.heipard-fb__head > :last-child { margin-bottom: 0; }
+.heipard-fb__head .heipard-feature__body { max-width: 60ch; }
+
+/* Chips: Auswahl-Knöpfe (Dimmstufen, Leuchtmodi, Timer-Dauer) */
+.heipard-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.4rem;
+  padding: 0.8rem 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--background);
+  color: rgb(var(--color-foreground));
+  font-family: var(--font-heipard-sans);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+.heipard-chip:hover { border-color: var(--primary); }
+.heipard-chip:focus-visible,
+.heipard-chip:has(input:focus-visible) {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.heipard-chip[aria-pressed="true"],
+.heipard-chip:has(input:checked) {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Hinweise für Redakteure, nur im Theme-Editor sichtbar */
+.heipard-fb-notes {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 1.6rem 2rem;
+  border: 1px dashed var(--primary);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  color: rgb(var(--color-foreground));
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+.heipard-fb-notes li + li { margin-top: 0.6rem; }
+
+/* --- R1 Text schmal ---------------------------------------------------- */
+.heipard-fb--text {
+  width: 100%;
+  max-width: 68rem;
+  margin-inline: auto;
+}
+.heipard-fb__prose {
+  display: grid;
+  gap: 1.6rem;
+  font-size: clamp(1.6rem, 0.4vw + 1.5rem, 1.8rem);
+  line-height: 1.65;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 68%, transparent);
+}
+.heipard-fb__prose p { margin: 0; }
+
+/* --- D1 Kettenplan ----------------------------------------------------- */
+.heipard-plan {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heipard-plan__seg {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* Draht: dünne Linie, bei --lit sitzen Lichtpunkte darauf */
+.heipard-plan__wire {
+  position: relative;
+  display: block;
+  height: 3.6rem;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 38%, transparent);
+  background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat;
+}
+.heipard-plan__wire--lead {
+  background: repeating-linear-gradient(90deg, currentColor 0 0.6rem, transparent 0.6rem 1.1rem) center / 100% 2px no-repeat;
+}
+.heipard-plan__wire--lit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle closest-side,
+    var(--glow) 0 42%,
+    color-mix(in oklch, var(--glow) 32%, transparent) 46% 78%,
+    transparent 100%
+  );
+  background-size: calc(100% / var(--n, 12)) 100%;
+  background-repeat: repeat-x;
+}
+
+.heipard-plan__plug {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: inline-flex;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0.7rem;
+  transform: translateY(-50%);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--primary);
+}
+.heipard-plan__plug svg { width: 100%; height: 100%; }
+
+/* Maßlinie unter dem Segment: Strich mit Endmarken, Beschriftung darunter */
+.heipard-plan__measure {
+  position: relative;
+  display: block;
+  padding-top: 1.2rem;
+  border-top: 1px solid color-mix(in oklch, rgb(var(--color-foreground)) 30%, transparent);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  color: rgb(var(--color-foreground));
+}
+.heipard-plan__measure::before,
+.heipard-plan__measure::after {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  width: 1px;
+  height: 0.9rem;
+  background: color-mix(in oklch, rgb(var(--color-foreground)) 30%, transparent);
+}
+.heipard-plan__measure::before { left: 0; }
+.heipard-plan__measure::after { right: 0; }
+.heipard-plan__measure-sub {
+  display: block;
+  font-weight: 400;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+
+/* Linie: mobil zwei Zeilen (Zuleitung, darunter Kette), ab Tablet eine Linie */
+.heipard-plan--linie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 0.8rem;
+}
+.heipard-plan--linie .heipard-plan__seg--lead {
+  flex: 0 0 auto;
+  width: max(15rem, calc(var(--lead) / var(--chain) * 100%));
+  max-width: 100%;
+}
+.heipard-plan--linie .heipard-plan__seg--chain { flex: 0 0 100%; }
+.heipard-plan--linie .heipard-plan__wire--lit::after {
+  background-size: calc(100% / var(--n-s, 12)) 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .heipard-plan--linie { flex-wrap: nowrap; }
+  .heipard-plan--linie .heipard-plan__seg--lead {
+    flex: var(--lead) 1 0;
+    width: auto;
+    min-width: 15rem;
+  }
+  .heipard-plan--linie .heipard-plan__seg--chain { flex: var(--chain) 1 0; }
+  .heipard-plan--linie .heipard-plan__wire--lit::after {
+    background-size: calc(100% / var(--n, 12)) 100%;
+  }
+}
+
+/* Flächenplan: Rechteck im echten Seitenverhältnis mit Lichtpunkt-Raster */
+.heipard-plan--flaeche {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    ". w"
+    "h area";
+  gap: 1rem;
+  width: min(100%, calc(34rem * var(--w) / var(--h) + 4rem));
+}
+.heipard-plan__area {
+  grid-area: area;
+  display: block;
+  aspect-ratio: var(--w) / var(--h);
+  border: 1px dashed color-mix(in oklch, rgb(var(--color-foreground)) 35%, transparent);
+  border-radius: var(--radius-md);
+  background-image:
+    radial-gradient(
+      circle closest-side,
+      var(--glow) 0 26%,
+      color-mix(in oklch, var(--glow) 30%, transparent) 30% 62%,
+      transparent 100%
+    ),
+    linear-gradient(
+      90deg,
+      transparent calc(50% - 0.5px),
+      color-mix(in oklch, rgb(var(--color-foreground)) 22%, transparent) calc(50% - 0.5px) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    );
+  background-size: 2rem 2rem;
+}
+.heipard-plan__dim {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: rgb(var(--color-foreground));
+}
+.heipard-plan__dim--w {
+  grid-area: w;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid color-mix(in oklch, rgb(var(--color-foreground)) 30%, transparent);
+  text-align: center;
+}
+.heipard-plan__dim--h {
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.8rem;
+  border-right: 1px solid color-mix(in oklch, rgb(var(--color-foreground)) 30%, transparent);
+}
+.heipard-plan__dim--h > span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+/* Koppelplan: Ketten nebeneinander, mobil zwei je Zeile */
+.heipard-plan--koppel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.4rem 0.6rem;
+}
+.heipard-plan--koppel .heipard-plan__wire--lit::after { background-size: calc(100% / 6) 100%; }
+@media screen and (min-width: 750px) {
+  .heipard-plan--koppel { grid-template-columns: repeat(var(--k, 4), minmax(0, 1fr)); }
+}
+
+/* Kennwerte unter der Zeichnung */
+.heipard-plan__facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: clamp(2.4rem, 3vw, 3.2rem) 0 0;
+  padding: 0;
+}
+.heipard-plan__facts li {
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: rgb(var(--color-foreground));
+}
+
+/* --- D3 Zeitband ------------------------------------------------------- */
+.heipard-zeit__choose {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 2.4rem;
+  padding: 0;
+  border: 0;
+}
+.heipard-zeit__legend-title {
+  float: left;
+  margin-right: 0.6rem;
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+/* Ohne :has() bleibt die erste Dauer sichtbar, die Auswahl entfällt. */
+.heipard-zeit__choose { display: none; }
+.heipard-zeit__view { display: none; }
+.heipard-zeit__view:first-child { display: block; }
+
+@supports selector(:has(*)) {
+  .heipard-zeit__choose { display: flex; }
+  .heipard-zeit:has(.heipard-zeit__chip input:checked) .heipard-zeit__view { display: none; }
+  .heipard-zeit:has(.heipard-zeit__chip:nth-of-type(1) input:checked) .heipard-zeit__view:nth-child(1),
+  .heipard-zeit:has(.heipard-zeit__chip:nth-of-type(2) input:checked) .heipard-zeit__view:nth-child(2),
+  .heipard-zeit:has(.heipard-zeit__chip:nth-of-type(3) input:checked) .heipard-zeit__view:nth-child(3),
+  .heipard-zeit:has(.heipard-zeit__chip:nth-of-type(4) input:checked) .heipard-zeit__view:nth-child(4) {
+    display: block;
+  }
+}
+
+.heipard-zeit__band {
+  position: relative;
+  display: flex;
+  height: 3.2rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--muted);
+}
+/* Stundenraster: 24 Teilstriche */
+.heipard-zeit--timer .heipard-zeit__band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 calc(100% / 24 - 1px),
+    color-mix(in oklch, rgb(var(--color-foreground)) 14%, transparent) calc(100% / 24 - 1px) calc(100% / 24)
+  );
+}
+.heipard-zeit__on {
+  display: block;
+  width: calc(var(--on) / 24 * 100%);
+  height: 100%;
+  border-radius: 999px;
+  background: var(--glow);
+  box-shadow: 0 0 2.4rem color-mix(in oklch, var(--glow) 60%, transparent);
+}
+
+.heipard-zeit__ticks {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 1.6rem;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+/* Timer: Beschriftung sitzt genau an der Stunde (--at) */
+.heipard-zeit--timer .heipard-zeit__ticks span {
+  position: absolute;
+  left: calc(var(--at) / 24 * 100%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.heipard-zeit--timer .heipard-zeit__ticks span:first-child { transform: none; }
+.heipard-zeit--timer .heipard-zeit__ticks span:last-child { transform: translateX(-100%); }
+.heipard-zeit__ticks--halves span { flex: 1 1 50%; text-align: center; }
+
+.heipard-zeit__legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.8rem;
+  margin: 2.4rem 0 0;
+  padding: 0;
+}
+.heipard-zeit__key {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+.heipard-zeit__key::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--muted);
+  border: 1px solid var(--border);
+}
+.heipard-zeit__key--on::before {
+  border-color: transparent;
+  background: var(--glow);
+  box-shadow: 0 0 1rem color-mix(in oklch, var(--glow) 60%, transparent);
+}
+
+/* Solar: linke Hälfte Tag (laden), rechte Hälfte Nacht (leuchten) */
+.heipard-zeit--solar .heipard-zeit__band { height: 4.4rem; }
+.heipard-zeit__day,
+.heipard-zeit__night {
+  position: relative;
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+}
+.heipard-zeit__day {
+  justify-content: center;
+  background: var(--accent);
+  color: var(--primary);
+}
+.heipard-zeit__night {
+  background: color-mix(in oklch, rgb(var(--color-foreground)) 16%, var(--muted));
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 70%, transparent);
+}
+.heipard-zeit__day svg,
+.heipard-zeit__night svg { width: 2.2rem; height: 2.2rem; }
+.heipard-zeit__night svg { position: absolute; right: 1.4rem; }
+.heipard-zeit--solar .heipard-zeit__on {
+  width: calc(var(--on) / 12 * 100%);
+  border-radius: 0 999px 999px 0;
+}
+
+/* --- D4 Serienleiter (Daten-Zone) -------------------------------------- */
+.heipard-feature__zone {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 6vw, 6rem);
+  margin-top: clamp(6rem, 9vw, 10rem);
+  padding-top: clamp(4rem, 5vw, 5.6rem);
+  border-top: 1px solid var(--border);
+}
+.heipard-feature__zone--solo {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.heipard-serie {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 750px) {
+  .heipard-serie { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.6rem; }
+}
+
+.heipard-serie__link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  align-content: start;
+  gap: 0.4rem 1.6rem;
+  height: 100%;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+.heipard-serie__link:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px -12px color-mix(in oklch, var(--glow) 55%, transparent);
+}
+.heipard-serie__link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.heipard-serie__item.is-current .heipard-serie__link {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+/* Längenbalken: Breite im Verhältnis zum längsten Modell der Familie */
+.heipard-serie__bar {
+  grid-column: 1 / -1;
+  display: block;
+  width: var(--share, 100%);
+  height: 0.6rem;
+  margin-bottom: 1.2rem;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--glow) 55%, var(--muted));
+}
+.heipard-serie__item.is-current .heipard-serie__bar { background: var(--glow); }
+
+.heipard-serie__length {
+  grid-column: 1 / -1;
+  font-family: var(--font-heipard-display);
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.heipard-serie__meta {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+.heipard-serie__price { text-align: right; }
+.heipard-serie__flag {
+  grid-column: 1 / -1;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* --- Steuerung: I2 Dimmregler + I3 Modus-Umschalter -------------------- */
+.heipard-fb--steuerung {
+  display: grid;
+  gap: clamp(2.4rem, 4vw, 4.8rem);
+  align-items: center;
+}
+@media screen and (min-width: 990px) {
+  .heipard-fb--steuerung { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+}
+
+.heipard-ctrl__stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--muted);
+  box-shadow:
+    0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 8%, transparent),
+    0 12px 40px -12px color-mix(in oklch, var(--glow) 35%, transparent);
+}
+.heipard-ctrl__media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(calc(0.45 + 0.55 * var(--fb-level, 1)));
+  transition: filter 200ms ease;
+}
+/* Abdunkelung zum Dimmen (statisch) und für die Leuchtmodi (animiert) */
+.heipard-ctrl__dim,
+.heipard-ctrl__pulse {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0);
+  pointer-events: none;
+}
+.heipard-ctrl__dim {
+  opacity: calc((1 - var(--fb-level, 1)) * 0.4);
+  transition: opacity 200ms ease;
+}
+.heipard-ctrl__pulse { opacity: 0; }
+
+.heipard-ctrl__stage[data-mode="atem"] .heipard-ctrl__pulse {
+  animation: heipard-fb-atem 3s ease-in-out infinite;
+}
+.heipard-ctrl__stage[data-mode="blinken"] .heipard-ctrl__pulse {
+  animation: heipard-fb-blinken 1.6s steps(1, end) infinite;
+}
+@keyframes heipard-fb-atem {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.62; }
+}
+@keyframes heipard-fb-blinken {
+  0% { opacity: 0; }
+  50% { opacity: 0.62; }
+  100% { opacity: 0; }
+}
+
+/* Schematische Kette, falls (noch) kein Basisbild gepflegt ist */
+.heipard-ctrl__scene {
+  background:
+    radial-gradient(70% 60% at 50% 46%, color-mix(in oklch, var(--glow) 30%, transparent) 0%, transparent 72%),
+    radial-gradient(90% 45% at 50% 108%, color-mix(in oklch, var(--glow) 20%, transparent) 0%, transparent 70%),
+    linear-gradient(170deg, color-mix(in oklch, var(--secondary) 55%, black) 0%, color-mix(in oklch, var(--secondary) 28%, black) 100%);
+}
+.heipard-ctrl__scene svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.heipard-ctrl__cord {
+  stroke: color-mix(in oklch, white 34%, transparent);
+  stroke-width: 0.6;
+}
+.heipard-ctrl__bulbs {
+  fill: var(--heipard-accent-bright);
+  filter: drop-shadow(0 0 0.4rem var(--glow)) drop-shadow(0 0 1.8rem var(--glow));
+}
+
+.heipard-ctrl__side { min-width: 0; }
+.heipard-ctrl__panel {
+  display: grid;
+  gap: 2.4rem;
+}
+.heipard-ctrl__panel[hidden] { display: none; }
+.heipard-ctrl__group {
+  display: grid;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.heipard-ctrl__label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+.heipard-ctrl__value {
+  font-variant-numeric: tabular-nums;
+  color: var(--primary);
+}
+.heipard-ctrl__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.heipard-ctrl__range {
+  width: 100%;
+  height: 4.4rem;
+  margin: 0;
+  background: transparent;
+  accent-color: var(--primary);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.heipard-ctrl__range::-webkit-slider-runnable-track {
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--muted);
+  border: 1px solid var(--border);
+}
+.heipard-ctrl__range::-moz-range-track {
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--muted);
+  border: 1px solid var(--border);
+}
+.heipard-ctrl__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-top: -1.2rem;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 2px 8px color-mix(in oklch, rgb(var(--color-foreground)) 25%, transparent);
+}
+.heipard-ctrl__range::-moz-range-thumb {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px solid var(--card);
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 2px 8px color-mix(in oklch, rgb(var(--color-foreground)) 25%, transparent);
+}
+.heipard-ctrl__range:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  border-radius: 999px;
+}
+
+.heipard-ctrl__note,
+.heipard-ctrl__reduced {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 58%, transparent);
+}
+.heipard-ctrl__reduced { display: none; }
+
+/* --- Icon-Grid als Block im Stapel ------------------------------------- */
+.heipard-feature__minis--block {
+  width: 100%;
+  margin-top: 0;
+}
+@media screen and (min-width: 750px) {
+  .heipard-feature__minis--1 { grid-template-columns: 1fr; }
+  .heipard-feature__minis--2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- Reduzierte Bewegung ----------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .heipard-ctrl__media,
+  .heipard-ctrl__dim,
+  .heipard-chip,
+  .heipard-serie__link { transition: none; }
+  .heipard-ctrl__stage .heipard-ctrl__pulse { animation: none !important; }
+  .heipard-ctrl__group--modes { display: none; }
+  .heipard-ctrl__reduced { display: block; }
 }

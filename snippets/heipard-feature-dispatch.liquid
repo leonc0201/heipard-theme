@@ -1,0 +1,101 @@
+{%- comment -%}
+  Feature-Baukasten: rendert EINEN Metaobjekt-Block (feature_block) nach Typ.
+  Der Typ steht im Feld "Block-Typ" (layout). Spezifikation: docs/heipard-block-vokabular.md
+
+  Typen (Stufe 1):
+    fullwidth     B1 Full-Width-Bild (mit Video: B3, laut)
+    media_text    B2 Split (mit Video: B3, laut)
+    text          R1 Text schmal
+    kettenplan    D1 (Varianten linie, flaeche, koppel)
+    zeitband      D3 (Varianten timer, solar)
+    serienleiter  D4 (Daten-Zone)
+    steuerung     I2 Dimmregler + I3 Modus-Umschalter (mit Modi laut)
+    icon_grid     B4 aus Metafeldern
+
+  Ausgabe-Protokoll für die Sektion:
+    <!--fb-loud-->   der Block ist laut (zählt gegen das Limit)
+    <!--fb-note-->   danach folgt ein Hinweistext für den Theme-Editor
+  Ein Block ohne Inhalt oder ohne Daten gibt kein Markup aus. Hat der Block im
+  JSON-Feld { "sonst": "<typ>" }, wird dann dieser Typ versucht (z. B. Kettenplan,
+  sonst Zeitband).
+
+  Parameter: blk, product, index, allow_loud, uid
+{%- endcomment -%}
+{%- liquid
+  assign type = blk.layout.value | default: 'media_text'
+  assign blk_label = blk.label.value | default: type
+  assign data = blk.data.value
+  assign types = type
+  if data.sonst != blank
+    assign types = type | append: ',' | append: data.sonst
+  endif
+  assign types = types | split: ','
+  assign notes = ''
+-%}
+{%- for cur in types -%}
+  {%- capture out -%}
+    {%- case cur -%}
+      {%- when 'fullwidth', 'media_text' -%}
+        {%- liquid
+          assign img = blk.image.value
+          assign vid = blk.video.value
+          assign has_content = false
+          if img != blank or vid != blank
+            assign has_content = true
+          endif
+          if blk.kicker.value != blank or blk.title.value != blank or blk.body.value != blank
+            assign has_content = true
+          endif
+          assign m_type = blk.media_type.value | default: 'image'
+          if has_content
+            if m_type == 'video' and vid != blank
+              if allow_loud
+                echo '<!--fb-loud-->'
+              else
+                assign m_type = 'image'
+                if request.design_mode
+                  echo '<!--fb-note-->'
+                  echo 'heipard.blocks.editor.loud' | t: block: blk_label
+                  echo '<!--fb-note-->'
+                endif
+              endif
+            endif
+            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value
+          endif
+        -%}
+      {%- when 'text' -%}
+        {%- render 'heipard-fb-text', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value -%}
+      {%- when 'kettenplan' -%}
+        {%- render 'heipard-fb-kettenplan', product: product, variant: blk.variant.value, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'zeitband' -%}
+        {%- render 'heipard-fb-zeitband', product: product, variant: blk.variant.value, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label, uid: uid -%}
+      {%- when 'serienleiter' -%}
+        {%- render 'heipard-fb-serienleiter', product: product, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
+      {%- when 'steuerung' -%}
+        {%- render 'heipard-fb-steuerung', product: product, image: blk.image.value, data: data, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label, uid: uid, allow_loud: allow_loud -%}
+      {%- when 'icon_grid' -%}
+        {%- render 'heipard-fb-icon-grid', product: product, data: data, label: blk_label -%}
+    {%- endcase -%}
+  {%- endcapture -%}
+  {%- liquid
+    # Hinweise sind beidseitig mit <!--fb-note--> markiert, der Rest ist Markup.
+    assign parts = out | split: '<!--fb-note-->'
+    assign html = ''
+    for part in parts
+      assign piece = part | strip
+      if piece == blank
+        continue
+      endif
+      if piece contains '<'
+        assign html = html | append: piece
+      else
+        assign notes = notes | append: '<!--fb-note-->' | append: piece
+      endif
+    endfor
+    if html != blank
+      echo html
+      break
+    endif
+  -%}
+{%- endfor -%}
+{{- notes -}}
