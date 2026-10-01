@@ -20,6 +20,9 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   (Metaobjekt `product_question`, Metafelder `fragen`, `ce_kennzeichnung`, IP45 in der Auswahlliste).
   **Stufe 3 fertig:** Sequenz, Farbwechsel (Überblendung und RGB-Regler), Zäsur, B2 mit Variante sticky.
   Damit sind alle 20 Block-Typen umgesetzt. Offen sind Inhalte (Bilder, Texte, Fragen) je Familie.
+  **Seit 2026-10-01 gilt:** leere Dramaturgie = `longtail`, die generischen Fallback-Blöcke im
+  Produkt-Template sind geleert, Familien-Kollektionen (`familie-…`) sind ausgeblendet (Liste, noindex,
+  Sitemap über `seo.hidden`), OL-G40 ist mit Bildern, Texten und Fragen befüllt.
   Anleitung: `heipard-feature-baukasten.md`.
 
 ## Nächste Schritte / offen

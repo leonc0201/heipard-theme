@@ -19,10 +19,13 @@ erklärt, wie du die Blöcke im Shopify-Admin pflegst.
 Was die Sektion anzeigt, in dieser Reihenfolge:
 
 1. Hat das Produkt ein **Feature-Set**, werden dessen Blöcke gezeigt.
-2. Hat es keines, aber eine **Dramaturgie**, greift die Vorlage `vorlage-hero`, `vorlage-standard`
-   oder `vorlage-longtail`. Die Vorlagen enthalten nur Daten-Blöcke, die sich aus den Metafeldern
-   füllen. Bild- und Textblöcke sind dort leer und werden übersprungen.
-3. Hat es beides nicht, erscheinen die alten Blöcke aus dem Theme-Editor (Fallback).
+2. Hat es keines, greift die Vorlage zur **Dramaturgie**: `vorlage-hero`, `vorlage-standard` oder
+   `vorlage-longtail`. **Ist das Metafeld leer, gilt `longtail`.** Die Vorlagen enthalten nur
+   Daten-Blöcke, die sich aus den Metafeldern füllen. Bild- und Textblöcke sind dort leer und
+   werden übersprungen. Hat ein Produkt keine passenden Metafelder, bleibt die Sektion unsichtbar.
+
+Generische Blöcke ohne Produktbezug gibt es nicht mehr: Die früheren Fallback-Blöcke im
+Produkt-Template sind geleert (Stand 2026-10-01).
 
 Alle SKUs einer Familie bekommen dasselbe Set und dieselbe Dramaturgie. Die Daten-Blöcke zeigen
 trotzdem je SKU die richtigen Werte, weil sie die Metafelder des jeweiligen Produkts lesen.
@@ -58,10 +61,14 @@ Block etwas ein, gilt dein Text.
 
 | Variante | Zeigt | Pflicht-Metafelder | Optional |
 |---|---|---|---|
-| `linie` | Zuleitung und Lichterkette als proportionale Linie | Beleuchtete Länge | Zuleitung, Anzahl Leuchtmittel, Abstand der Lichtpunkte |
+| `linie` | Zuleitung und Lichterkette als proportionale Linie | Beleuchtete Länge | Zuleitung, Anzahl Leuchtmittel, Abstand der Lichtpunkte, Gesamtlänge |
 | `flaeche` | Rechteck im echten Seitenverhältnis (Vorhang, Eiszapfen, Netz) | Breite, Höhe | Anzahl Leuchtmittel, Zuleitung |
 | `koppel` | mehrere Ketten nebeneinander mit Gesamtlänge | Beleuchtete Länge, Koppelbar bis (mindestens 2) | |
 | `auto` | Fläche, wenn Breite und Höhe gepflegt sind, sonst Linie | | |
+
+Ist bei der Linie die *Gesamtlänge inkl. Zuleitung* gepflegt, gilt sie als Nennmaß: Unter der
+Zeichnung steht eine Maßlinie „20 m gesamt", und die beleuchtete Länge bekommt ein „ca." davor
+(Beispiel OL-30: 3 m Zuleitung, ca. 17 m Lichterkette, 20 m gesamt).
 
 Die Gesamtlänge im Koppelplan ist gerechnet: Koppelbar bis mal beleuchtete Länge.
 Auf dem Handy bricht die Linie in zwei Zeilen (Zuleitung, darunter Kette).
@@ -76,14 +83,21 @@ Auf dem Handy bricht die Linie in zwei Zeilen (Zuleitung, darunter Kette).
 
 ### D4 Serienleiter
 
-Zeigt alle aktiven Produkte derselben Familie als Karten, sortiert nach beleuchteter Länge, das
-aktuelle Modell ist markiert. Der Block steht immer am Ende in der Daten-Zone, egal wo er im Set liegt.
+Zeigt alle aktiven Produkte derselben Familie als Karten, das aktuelle Modell ist markiert.
+Sortiert und beschriftet wird nach der Nennlänge: *Gesamtlänge inkl. Zuleitung*, falls gepflegt,
+sonst *Beleuchtete Länge*. Bitte je Familie einheitlich pflegen. Der Block steht immer am Ende in
+der Daten-Zone, egal wo er im Set liegt.
 
 Damit das funktioniert, braucht jede Familie **einmalig** eine Smart Collection:
 
 - Handle: `familie-<code>` in Kleinbuchstaben, z. B. `familie-ol-g40`
 - Bedingung: Metafeld *Familie (Code)* ist gleich `OL-G40`
-- im Onlineshop-Kanal veröffentlicht
+- im Onlineshop-Kanal veröffentlicht (sonst kann das Theme sie nicht lesen)
+- Kollektions-Metafeld `seo.hidden` = `1` (Ganzzahl). Das nimmt sie aus der Sitemap und der
+  Shop-Suche und setzt noindex.
+
+Familien-Kollektionen sind rein technisch. Das Theme blendet alles mit dem Handle-Anfang
+`familie-` aus der Kollektionsliste aus und setzt zusätzlich selbst noindex.
 
 Entwürfe erscheinen dort nicht. Die Serienleiter wird also erst sichtbar, wenn mindestens ein
 weiteres Produkt der Familie aktiv ist.
@@ -153,6 +167,7 @@ optional. Die Zäsur zählt nicht zum Block-Limit.
      `modus`, `dimmen`, `timer`, `ein_aus`, `birne`, `stecker`, `solarpanel`, `schalter`, `erdspiess`,
      `controller`, `batteriebox`.
 - Punkte ohne Label fallen weg, höchstens 8 Punkte.
+- Hochformate werden in der Höhe begrenzt und mittig gesetzt, die Punkte bleiben an ihrer Stelle.
 - Ab Tablet erscheint das Label am Punkt bei Hover, Fokus oder Tap. Auf dem Handy stehen die
   Labels als nummerierte Liste unter dem Bild.
 
@@ -273,19 +288,24 @@ Metaobjekt-Felder und in Translate & Adapt übersetzbar.
 ## Referenz: Familie OL-G40
 
 Set **„OL-G40 (Hero, Referenzfamilie)"** (`ol-g40`), zugewiesen an `hp-ol-30` und `hp-ol-50`,
-nach `heipard-block-vokabular.md` Abschnitt 9:
+nach `heipard-block-vokabular.md` Abschnitt 9. HP-OL-25 gehört nicht dazu (bleibt OL-Standard).
 
-1. B1 „Gartenparty-Klassiker" (Bild G40-01 fehlt noch)
-2. B2 „Warmes Licht, 2200 Kelvin" (Bild G40-02 fehlt noch)
-3. R1 „Gebaut für draußen" (Absätze noch `[TBD]`)
-4. Steuerung „Volle Kontrolle" mit Dauer, Atem, Blinken (Basisbild G40-05 fehlt noch)
-5. Auto · Kettenplan
-6. P1 Hotspot „Fernbedienung" (Bild fehlt noch, Positionen der vier Punkte sind Platzhalter)
+1. B1 „Gartenparty-Klassiker", Bild `OLG40_B1_01.webp` (aus G40-01)
+2. B2 „Warmes Licht, 2200 Kelvin", Bild `OLG40_B2_01.webp` (aus G40-02)
+3. R1 „Gebaut für draußen", zwei Absätze von Leon
+4. Steuerung „Volle Kontrolle" mit Dauer, Atem, Blinken, Basisbild `OLG40_I2_01.webp` (aus G40-05)
+5. Auto · Kettenplan (3 m Zuleitung, ca. 17 m Lichterkette, 20 m gesamt; OL-50: ca. 27 m, 30 m gesamt)
+6. P1 Hotspot „Fernbedienung", Bild `OLG40_P1_01.webp`. **Vorläufig:** die Fernbedienung ist aus dem
+   zweiten Produktbild von HP-OL-30 freigestellt, vier Punkte Modus, Dimmen, Timer, Ein und Aus
 7. Zeitband Timer mit Satz zur Speicherfunktion
 8. Auto · Icon-Grid
 
-Daten-Zone: Auto · Serienleiter (Kollektion `familie-ol-g40`), Auto · Nachweise (IP45, 24 V),
-Auto · Lieferumfang, Auto · Fragen (noch keine Fragen gepflegt).
+Daten-Zone: Auto · Serienleiter (Kollektion `familie-ol-g40`, sichtbar ab Aktivierung),
+Auto · Nachweise (IP45, 24 V), Auto · Lieferumfang, Auto · Fragen (vier Fragen von Leon,
+Einträge `ol-g40-frage-1` bis `-4`).
+
+Die Bilder liegen als WebP (Qualität 82) in den Shopify-Dateien, Quelle sind die PNG aus
+`P:\Claude Code\Heipard Webseite\Bilder`.
 
 ## Technische Referenz
 
@@ -299,4 +319,4 @@ Auto · Lieferumfang, Auto · Fragen (noch keine Fragen gepflegt).
   Text, JSON (`data`), Bezeichnung.
 - Ein neuer Block-Typ braucht: Auswahlwert im Feld „Block-Typ" der Definition, ein Snippet
   `heipard-fb-<typ>`, einen Zweig in der Typ-Weiche, Locale-Keys unter `heipard.blocks.<typ>`.
-- Das alte Beispiel-Set „Beispiel-Set (Demo)" hängt noch an `hp-olh-g40-25`.
+- Das alte Beispiel-Set „Beispiel-Set (Demo)" ist seit 2026-10-01 gelöscht.

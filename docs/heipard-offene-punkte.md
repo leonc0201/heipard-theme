@@ -111,28 +111,20 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
 
 ## Feature-Baukasten (Block-Vokabular, Stand 2026-10-01)
 
-- [ ] **OL-G40 Längenangabe** — Vokabular Abschnitt 9 nennt „3 m Zuleitung, 20 m Kette, 30 Birnen, 55 cm Abstand".
-  30 × 55 cm ergibt 16,5 m. Das Amazon-Listing nennt die Länge „inkl. 3 m Verlängerungskabel". Vermutlich sind
-  20 m die Gesamtlänge und rund 17 m beleuchtet (OL-50: 30 m gesamt, rund 27 m). Im Demo steht vorerst
-  `beleuchtete_laenge_m` = 20 bzw. 30 wie im Vokabular. Bitte bestätigen oder korrigieren.
-- [ ] **OL-G40 Dimmstufen** — Listing: „4 Helligkeitsstufen (25–100 %)". Im Demo als 25, 50, 75, 100 gepflegt,
-  die Zwischenwerte sind abgeleitet. Bitte gegen die Fernbedienung prüfen.
-- [ ] **OL-G40 Bilder** — G40-01 (B1), G40-02 (B2), G40-05 (Basisbild Steuerung) liegen noch nicht in den
-  Shopify-Dateien. Bis dahin Verlauf-Platzhalter und schematische Kette.
-- [ ] **OL-G40 Texte** — R1 „Gebaut für draußen" hat noch `[TBD]`-Absätze, B2 keinen Fließtext.
-- [ ] **HP-OL-25** — gleiche Bauart (15 m, 25 Leuchtmittel, dimmbar). Gehört es zur Familie OL-G40?
-  Abschnitt 9 nennt nur OL-30 und OL-50.
-- [ ] **Familien-Kollektionen** (`familie-<code>`) sind technische Kollektionen für die Serienleiter. Sie
-  erscheinen in der Kollektionsliste und Sitemap. Titel aktuell „Serie OL-G40". Entscheiden: so lassen,
-  kundentauglich benennen oder aus Liste und Suche ausschließen.
-- [ ] **Fallback-Blöcke im Template** — Produkte ohne Set und ohne Dramaturgie zeigen weiter die generischen
-  Blöcke aus `templates/product.json` (mit Aussagen wie „8 Leuchtmodi", „koppelbar"). Vorschlag: bei allen
-  Produkten eine Dramaturgie setzen und die Fallback-Blöcke danach leeren.
-- [ ] **Altes Beispiel-Set** „Beispiel-Set (Demo)" hängt noch an `hp-olh-g40-25`. Entfernen, sobald nicht mehr gebraucht.
-- [x] **IP45** in der Auswahlliste `ip_schutzart` ergänzt (2026-10-01), an HP-OL-30 und HP-OL-50 gesetzt.
-- [ ] **OL-G40 Hotspot** — Bild der Fernbedienung fehlt. Die vier Punkte (Modus, Dimmen, Timer, Ein und Aus)
-  haben Platzhalter-Positionen und müssen am echten Bild gesetzt werden.
-- [ ] **OL-G40 Fragen** — für D7 sind noch keine Produktfragen gepflegt (Metaobjekt „HeiPard Produktfrage").
+Offen:
+
+- [ ] **OL-G40 Hotspot-Bild** — vorläufig: Fernbedienung aus dem zweiten Produktbild von HP-OL-30 freigestellt
+  (nur rund 200 px breit, eine Hand verdeckt Tasten). Auf dem Bild steht „Fuash" statt „Flash", und es zeigt
+  Tasten „4H" und „…0 Min", die im Listing-Text nicht vorkommen (dort Timer 6 oder 8 Stunden). Ein sauberes
+  Foto oder Rendering der Fernbedienung wird gebraucht, danach Punkte neu setzen.
+- [ ] **OL-G40 Abstand der Birnen** — gepflegt sind 55 cm (Listing-Text, Leon). Das Maßbild im Listing zeigt 58 cm.
+- [ ] **OL-G40 Schutzart-Wording** — die Frage „Kann die Kette bei Regen draußen bleiben?" spricht von
+  Spritzwasser, der Block Nachweise erklärt die zweite Ziffer 5 als Strahlwasser. Beides steht auf derselben Seite.
+- [ ] **Aus-Bild für den Schieber** — im Bilder-Ordner liegt keine `_aus`-Datei. Das OL-G40-Set hat als lauten
+  Block die Steuerung, ein Schieber ist dort nicht vorgesehen.
+- [ ] **Nicht zugeordnete Bilder** — `G40-03.png` (Regenbild, laut Vokabular Galeriebild) und die
+  Firefly-Datei im Bilder-Ordner sind keinem Block zugewiesen.
+- [ ] **Serienleiter** — wird erst sichtbar, wenn die Produkte der Familie aktiv sind.
 - [ ] **CE-Kennzeichnung** — neues Metafeld `ce_kennzeichnung`. Bewusst nirgends gesetzt, bis je Produkt bestätigt.
 - [ ] **Begriff Spannung** — Vokabular und Listing sagen „24 V Niederspannung". Fachlich ist das Kleinspannung
   (bis 50 V). Der Block Nachweise schreibt „Betriebsspannung 24 V" und erklärt Kleinspannung. Wording bestätigen.
@@ -140,3 +132,18 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
   (auch Blau und Violett) als feste Farbwerte. Das ist die einzige Stelle im Theme ohne Farb-Token.
 - [ ] **Kelvin-Skala** — der Verlauf endet in einem kühlen Weiß (Token `--heipard-kelvin-cool`). Bitte ansehen,
   ob das zur Regel „keine Blau-Verläufe" passt, sonst neutraler setzen.
+
+Erledigt am 2026-10-01 (Leons Entscheidungen):
+
+- [x] **OL-G40 Länge** — 20 m (OL-50: 30 m) ist die Gesamtlänge. Gepflegt: Zuleitung 3 m, beleuchtet 17 m
+  bzw. 27 m, Gesamtlänge 20 m bzw. 30 m. Der Kettenplan zeigt „ca. 17 m Lichterkette" und „20 m gesamt".
+- [x] **OL-G40 Dimmstufen** — 25, 50, 75, 100 Prozent bestätigt.
+- [x] **HP-OL-25** — bleibt in OL-Standard, kommt nicht in die Serienleiter von OL-G40.
+- [x] **OL-G40 Bilder, Texte, Fragen** — B1, B2, Basisbild der Steuerung hochgeladen, R1-Absätze und vier
+  Produktfragen eingetragen.
+- [x] **Familien-Kollektionen** — technischer Name bleibt, ausgeblendet aus Kollektionsliste, Sitemap und
+  Suche, noindex.
+- [x] **Fallback-Blöcke** — leere Dramaturgie gilt als Long-Tail, die generischen Blöcke im Produkt-Template
+  sind entfernt.
+- [x] **Altes Beispiel-Set** — gelöscht, das Metafeld an `hp-olh-g40-25` entfernt.
+- [x] **IP45** in der Auswahlliste `ip_schutzart` ergänzt, an HP-OL-30 und HP-OL-50 gesetzt.
