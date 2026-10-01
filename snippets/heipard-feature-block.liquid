@@ -1,7 +1,9 @@
 {% comment %}
-  HeiPard PDP Feature — rendert EINEN Block.
-  Genutzt von sections/heipard-feature.liquid für beide Quellen
-  (Metaobjekt-Blöcke UND alte Section-Blocks) -> ein Markup, ein CSS.
+  HeiPard PDP Feature — rendert EINEN Medien-Block: B1 Full-Width oder B2 Split,
+  jeweils mit Bild oder Video (B3).
+  Genutzt für beide Quellen -> ein Markup, ein CSS:
+    - Metaobjekt-Blöcke über snippets/heipard-feature-dispatch.liquid
+    - alte Section-Blocks direkt aus sections/heipard-feature.liquid
 
   Parameter:
     layout       'media_text' (alternierende Bild/Text-Zeile) | 'fullwidth' (Voll-Breite-Anker)
