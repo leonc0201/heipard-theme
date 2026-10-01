@@ -57,6 +57,22 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
 6. **Claudes lokales Gedächtnis** (Präferenzen wie „Deutsch", Marken-Content-Regeln) liegt pro Rechner lokal und
    reist NICHT im Repo. Die entscheidenden Regeln stehen aber in `CLAUDE.md` — daher genügt das Repo fürs Projekt.
 
+## Theme-Änderungen prüfen (Stand 2026-10-01)
+
+- **Sync-Kontrolle:** Die GitHub-Integration überträgt nur Dateien, die sich in einem Commit ändern. Scheitert
+  ein Sync, fehlt die Datei im Theme dauerhaft, bis sie erneut geändert wird (so geschehen bei
+  `layout/theme.liquid` und `snippets/heipard-feature-block.liquid`). Kontrolle per Admin-API:
+  `theme(id).files { filename checksumMd5 }` gegen `git show HEAD:<datei> | md5sum` vergleichen.
+- **Rendering abrufen trotz Shop-Passwort:** `product.onlineStorePreviewUrl` (Admin-API) liefert einen Link mit
+  `preview_key` und `_bt` (Passwort-Bypass, eine Stunde gültig). Erst
+  `https://heipard.myshopify.com/?_bt=<token>&preview_theme_id=<theme>` mit Cookie-Jar aufrufen, danach
+  `https://heipard.myshopify.com/products_preview?preview_key=<key>&preview_theme_id=<theme>`. So lassen sich auch
+  Entwurfs-Produkte auf dem Preview-Theme `zz-feature-preview` (#194736095565) als HTML prüfen.
+- **Preview-Theme ohne CLI befüllen:** Branch zu GitHub pushen, dann `themeFilesUpsert` mit `body.type: URL` und
+  der Raw-URL der Datei (Repo ist öffentlich). Das Live-Theme lässt sich so nicht beschreiben, dafür gibt es den Sync.
+- **Lokaler Vorab-Test:** LiquidJS (`npm i liquidjs`) verhält sich wie Shopify-Liquid. python-liquid nicht
+  (`3 >= 3` ist dort falsch, `nil == blank` ebenfalls).
+
 ## Nicht im Git (bei Bedarf mitnehmen)
 
 - **Import-Quelldaten** für Welle 2: `HeiPard_Shopify_Import.json` (aktuell im Downloads-Ordner des Firmen-PCs)
