@@ -108,15 +108,8 @@
     },
     "heipard_feature": {
       "type": "heipard-feature",
-      "blocks": {
-        "f1": { "type": "feature", "settings": { "kicker": "Warmes Licht", "title": "Licht, das den Abend verlängert.", "body": "Das warmweiße Leuchten verwandelt deine Terrasse oder dein Wohnzimmer in einen Ort, an dem du gerne länger bleibst. Kein kaltes LED-Flackern, sondern echte Stimmung — so, wie du sie willst." } },
-        "f2": { "type": "feature", "settings": { "kicker": "Gebaut für draussen", "title": "Regen? Kein Thema.", "body": "Vergossene Fassungen, robuste Kabel und IP-geprüfte Verbindungen halten Wetter aus, wenn dein Abend draußen länger wird. Lass sie hängen — auch wenn der Sommerregen kommt." } },
-        "f3": { "type": "feature", "settings": { "kicker": "In Minuten aufgebaut", "title": "Auspacken, aufhängen, anknipsen.", "body": "Beiliegende Clips und ein durchdachtes Kabelmanagement machen das Aufhängen einfach. Innerhalb weniger Minuten leuchtet dein Abend — ohne Fummelei, ohne Werkzeugkiste." } },
-        "m1": { "type": "mini", "settings": { "icon": "timer", "label": "Timer-Funktion", "text": "6 Stunden an, 18 Stunden Pause" } },
-        "m2": { "type": "mini", "settings": { "icon": "modes", "label": "8 Leuchtmodi", "text": "Von ruhig bis festlich animiert" } },
-        "m3": { "type": "mini", "settings": { "icon": "link", "label": "Koppelbar", "text": "Bis zu 4 Ketten miteinander verbinden" } }
-      },
-      "block_order": ["f1", "f2", "f3", "m1", "m2", "m3"],
+      "blocks": {},
+      "block_order": [],
       "settings": {
         "kicker": "Warum du sie lieben wirst",
         "heading": "Kleine Details,",
