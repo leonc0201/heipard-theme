@@ -129,4 +129,12 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
   Blöcke aus `templates/product.json` (mit Aussagen wie „8 Leuchtmodi", „koppelbar"). Vorschlag: bei allen
   Produkten eine Dramaturgie setzen und die Fallback-Blöcke danach leeren.
 - [ ] **Altes Beispiel-Set** „Beispiel-Set (Demo)" hängt noch an `hp-olh-g40-25`. Entfernen, sobald nicht mehr gebraucht.
-- [ ] **IP45** fehlt weiter in der Auswahlliste `ip_schutzart` (Icon-Grid-Kachel „Schutzart", später D5 Nachweise).
+- [x] **IP45** in der Auswahlliste `ip_schutzart` ergänzt (2026-10-01), an HP-OL-30 und HP-OL-50 gesetzt.
+- [ ] **OL-G40 Hotspot** — Bild der Fernbedienung fehlt. Die vier Punkte (Modus, Dimmen, Timer, Ein und Aus)
+  haben Platzhalter-Positionen und müssen am echten Bild gesetzt werden.
+- [ ] **OL-G40 Fragen** — für D7 sind noch keine Produktfragen gepflegt (Metaobjekt „HeiPard Produktfrage").
+- [ ] **CE-Kennzeichnung** — neues Metafeld `ce_kennzeichnung`. Bewusst nirgends gesetzt, bis je Produkt bestätigt.
+- [ ] **Begriff Spannung** — Vokabular und Listing sagen „24 V Niederspannung". Fachlich ist das Kleinspannung
+  (bis 50 V). Der Block Nachweise schreibt „Betriebsspannung 24 V" und erklärt Kleinspannung. Wording bestätigen.
+- [ ] **Kelvin-Skala** — der Verlauf endet in einem kühlen Weiß (Token `--heipard-kelvin-cool`). Bitte ansehen,
+  ob das zur Regel „keine Blau-Verläufe" passt, sonst neutraler setzen.

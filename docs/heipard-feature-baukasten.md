@@ -4,8 +4,8 @@ Die PDP-Sektion **„Warum du sie lieben wirst"** wird aus Blöcken gebaut. Welc
 und in welcher Reihenfolge sie stehen, legt `heipard-block-vokabular.md` fest. Dieses Dokument
 erklärt, wie du die Blöcke im Shopify-Admin pflegst.
 
-**Umsetzungsstand:** Stufe 1 ist fertig (B1, B2, B3, B4, R1, D1, D3, D4, I2 mit I3).
-Stufe 2 (P1, P3, I1, D2, D5, D6, D7) und Stufe 3 (P2, I4, R2, B2 sticky) folgen.
+**Umsetzungsstand:** Stufe 1 (B1, B2, B3, B4, R1, D1, D3, D4, I2 mit I3) und Stufe 2
+(P1, P3, I1, D2, D5, D6, D7) sind fertig. Stufe 3 (P2, I4, R2, B2 sticky) folgt.
 
 ## So hängt alles zusammen
 
@@ -28,7 +28,7 @@ Was die Sektion anzeigt, in dieser Reihenfolge:
 Alle SKUs einer Familie bekommen dasselbe Set und dieselbe Dramaturgie. Die Daten-Blöcke zeigen
 trotzdem je SKU die richtigen Werte, weil sie die Metafelder des jeweiligen Produkts lesen.
 
-## Block-Typen (Stufe 1)
+## Block-Typen
 
 | Block-Typ | Vokabular | Was du pflegst | Woher die Daten kommen |
 |---|---|---|---|
@@ -41,6 +41,13 @@ trotzdem je SKU die richtigen Werte, weil sie die Metafelder des jeweiligen Prod
 | `serienleiter` | D4 | nichts | Metafeld Familie |
 | `steuerung` | I2 mit I3 (mit Modi laut) | Basisbild, Kicker, optional Titel, Modi im JSON-Feld | Metafeld Dimmstufen, JSON |
 | `icon_grid` | B4 | nichts, optional Auswahl im JSON-Feld | Metafelder |
+| `hotspot` | P1 | Bild, Punkte im JSON-Feld, Labels im Textfeld | Block |
+| `lieferumfang` | P3 | optional Flatlay-Bild | Metafeld Lieferumfang |
+| `schieber` | I1 (laut) | Bild (an), Zweites Bild (aus) | Block |
+| `kelvin` | D2 | nichts | Metafeld Farbtemperatur |
+| `nachweise` | D5 | nichts | Metafelder Schutzart, Spannung, CE |
+| `kennzahl` | D6 | Feld im JSON, optional Kicker, Titel, Text | Metafeld nach Wahl |
+| `fragen` | D7 | nichts | Metafeld Fragen zum Produkt |
 
 Kicker und Titel der Daten-Blöcke haben einen Standardtext aus den Sprachdateien. Trägst du im
 Block etwas ein, gilt dein Text.
@@ -97,6 +104,60 @@ Reihenfolge: Timer, Dimmbar, Koppelbar, Leuchtmodi, Fernbedienung, Schutzart.
 Feste Auswahl über das JSON-Feld: `{"kacheln": ["timer", "dimmbar", "koppelbar"]}`.
 Mögliche Werte: `timer`, `dimmbar`, `koppelbar`, `modi`, `fernbedienung`, `schutzart`.
 
+### P1 Hotspot-Detail
+
+- **Bild:** Produkt frei stehend, 4:3 oder 1:1.
+- **Punkte** im JSON-Feld, Position in Prozent von links (`x`) und von oben (`y`):
+  `{"punkte": [{"x": 32, "y": 48, "key": "modus"}, {"x": 60, "y": 20}]}`
+- **Labels**, je Punkt in dieser Reihenfolge:
+  1. Zeile im Textfeld des Blocks. Zeile 1 gehört zu Punkt 1, Zeile 2 zu Punkt 2. In Translate & Adapt übersetzbar.
+  2. `"label"` im JSON.
+  3. `"key"` im JSON, der Text kommt dann aus den Sprachdateien. Vorhandene Keys: `fernbedienung`,
+     `modus`, `dimmen`, `timer`, `ein_aus`, `birne`, `stecker`, `solarpanel`, `schalter`, `erdspiess`,
+     `controller`, `batteriebox`.
+- Punkte ohne Label fallen weg, höchstens 8 Punkte.
+- Ab Tablet erscheint das Label am Punkt bei Hover, Fokus oder Tap. Auf dem Handy stehen die
+  Labels als nummerierte Liste unter dem Bild.
+
+### P3 Lieferumfang
+
+Liest das Produkt-Metafeld *Lieferumfang* (ein Teil je Zeile). Optional ein Flatlay-Bild im Block.
+Steht immer in der Daten-Zone.
+
+### I1 Schieber Aus und An
+
+- **Bild:** Zustand an (Basisbild). **Zweites Bild:** Zustand aus, pixelgleich.
+- Links vom Regler liegt „Aus", rechts „An". Bedienung per Maus, Touch und Tastatur.
+- Das Aus-Bild lädt erst bei der ersten Interaktion. Bis dahin, und wenn kein zweites Bild gepflegt
+  ist, zeigt die Aus-Seite eine per CSS abgedunkelte Ableitung des Basisbilds.
+- Bei „Bewegung reduzieren" startet der Block im Zustand an, der Regler bleibt bedienbar.
+
+### D2 Kelvin-Skala
+
+Skala von Kerze (1800 K) bis Tageslicht (6500 K), der Wert aus *Farbtemperatur (K)* ist markiert.
+
+### D5 Nachweise
+
+Aufklappbare Zeilen, jede nur wenn der Wert gepflegt ist. Steht in der Daten-Zone.
+
+- **Schutzart:** aus *IP-Schutzart*. Die Erklärung beider Ziffern kommt aus den Sprachdateien.
+- **Betriebsspannung:** aus *Spannung (V)*, nur bei Kleinspannung bis 50 V.
+- **CE:** nur wenn *CE-Kennzeichnung* auf wahr steht.
+
+### D6 Große Kennzahl
+
+Im JSON-Feld steht, welches Metafeld groß gezeigt wird: `{"feld": "beleuchtete_laenge_m"}`.
+Möglich: `beleuchtete_laenge_m`, `gesamtlaenge_m`, `led_anzahl`, `farbtemperatur_kelvin`,
+`akkulaufzeit_h`, `hoehe_m`, `breite_m`, `koppelbar_bis`, `garantie_jahre`.
+Ohne Vorgabe nimmt der Block das erste gepflegte Feld aus: Leuchtzeit, Höhe, Länge, Lichtpunkte, Kelvin.
+Kicker, Titel und Text des Blocks erscheinen rechts neben der Zahl.
+
+### D7 Fragen zum Produkt
+
+Fragen sind eigene Einträge: Inhalte → Metaobjekte → *HeiPard Produktfrage* (Frage, Antwort).
+Am Produkt im Metafeld *Fragen zum Produkt* 3 bis 4 Einträge wählen. Familien können dieselben
+Einträge teilen. Der Block steht in der Daten-Zone.
+
 ### Ausweich-Typ
 
 Steht im JSON-Feld eines Daten-Blocks `{"sonst": "zeitband"}`, zeigt das Theme diesen Typ, falls
@@ -106,11 +167,12 @@ oder Zeitband".
 ## Regeln, die das Theme durchsetzt
 
 - **B1 zuerst:** Der erste Full-Width-Block eines Sets steht immer oben, auch wenn er im Set weiter hinten liegt.
-- **Ein lauter Block:** Laut sind Video und die Steuerung mit Leuchtmodi. Pro Set wird einer laut
-  gezeigt, in `standard` und `longtail` keiner. Jeder weitere erscheint leise: das Video als
-  Standbild, die Steuerung ohne Modus-Buttons.
-- **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Die Serienleiter zählt nicht mit.
-  Ohne Dramaturgie gibt es kein Limit.
+- **Ein lauter Block:** Laut sind Video, Schieber und die Steuerung mit Leuchtmodi. Pro Set wird
+  einer laut gezeigt, in `standard` und `longtail` keiner. Jeder weitere erscheint leise: das Video
+  als Standbild, der Schieber als Bild, die Steuerung ohne Modus-Buttons.
+- **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Ohne Dramaturgie gibt es kein Limit.
+- **Daten-Zone:** Serienleiter, Nachweise, Lieferumfang und Fragen stehen immer am Ende unter einer
+  Trennlinie und zählen nicht zum Limit.
 - **Leere Blöcke fallen weg:** Ein Daten-Block ohne Metafelder oder ein Bildblock ohne Inhalt wird nicht gezeigt und zählt nicht.
 
 Greift eine Regel oder fehlt ein Metafeld, zeigt der **Theme-Editor** über der Sektion einen
@@ -125,7 +187,8 @@ Hinweis mit dem Namen des Blocks. Kunden sehen diese Hinweise nie.
    Feld *Bezeichnung (intern)* immer ausfüllen, z. B. „OL-G40 · B1 Gartenparty".
 4. **Set anlegen:** Bezeichnung z. B. „OL-G40 (Hero)", Blöcke in der Reihenfolge der Dramaturgie.
    Für die Daten-Blöcke die fertigen Einträge „Auto · Kettenplan", „Auto · Zeitband",
-   „Auto · Icon-Grid" und „Auto · Serienleiter" wiederverwenden.
+   „Auto · Icon-Grid", „Auto · Serienleiter", „Auto · Nachweise", „Auto · Lieferumfang",
+   „Auto · Fragen", „Auto · Kennzahl" und „Auto · Kelvin-Skala" wiederverwenden.
 5. **Set zuweisen:** bei jedem Produkt der Familie im Metafeld *PDP Feature-Set* wählen.
 
 Die Einträge „Vorlage · …" und „Auto · …" gehören zu den drei Vorlagen und werden von vielen
@@ -147,7 +210,13 @@ Produkten geteilt. Bitte nicht mit Inhalten füllen und nicht löschen.
 | Leuchtdauer / Akkulaufzeit (h) | `akkulaufzeit_h` | Dezimalzahl | Zeitband Solar |
 | Stromquelle | `stromquelle` | Auswahl | Zeitband (Automatik) |
 | Dimmstufen (%) | `dimmstufen` | Liste Ganzzahl | Steuerung, Icon-Grid |
-| Anzahl Leuchtmodi, Fernbedienung, IP-Schutzart | `anzahl_leuchtmodi`, `fernbedienung`, `ip_schutzart` | | Icon-Grid |
+| Anzahl Leuchtmodi, Fernbedienung | `anzahl_leuchtmodi`, `fernbedienung` | | Icon-Grid |
+| IP-Schutzart | `ip_schutzart` | Auswahl | Nachweise, Icon-Grid |
+| Spannung (V) | `spannung_v` | Dezimalzahl | Nachweise |
+| CE-Kennzeichnung | `ce_kennzeichnung` | Wahr/Falsch | Nachweise |
+| Farbtemperatur (K) | `farbtemperatur_kelvin` | Ganzzahl | Kelvin-Skala, Kennzahl |
+| Lieferumfang | `lieferumfang` | mehrzeiliger Text | Lieferumfang |
+| Fragen zum Produkt | `fragen` | Liste Produktfrage | Fragen |
 
 ## Bilder und Video
 
@@ -172,16 +241,17 @@ nach `heipard-block-vokabular.md` Abschnitt 9:
 3. R1 „Gebaut für draußen" (Absätze noch `[TBD]`)
 4. Steuerung „Volle Kontrolle" mit Dauer, Atem, Blinken (Basisbild G40-05 fehlt noch)
 5. Auto · Kettenplan
-6. Zeitband Timer mit Satz zur Speicherfunktion
-7. Auto · Icon-Grid
-8. Auto · Serienleiter (Kollektion `familie-ol-g40`)
+6. P1 Hotspot „Fernbedienung" (Bild fehlt noch, Positionen der vier Punkte sind Platzhalter)
+7. Zeitband Timer mit Satz zur Speicherfunktion
+8. Auto · Icon-Grid
 
-P1 Hotspot (Block 6 im Vokabular) kommt mit Stufe 2.
+Daten-Zone: Auto · Serienleiter (Kollektion `familie-ol-g40`), Auto · Nachweise (IP45, 24 V),
+Auto · Lieferumfang, Auto · Fragen (noch keine Fragen gepflegt).
 
 ## Technische Referenz
 
 - Definitionen: Metaobjekt `feature_block` (`…/35900358989`), `feature_set` (`…/35900391757`),
-  Produkt-Metafeld `heipard.feature_set` (`…/404543242573`).
+  `product_question` (`…/38166430029`), Produkt-Metafeld `heipard.feature_set` (`…/404543242573`).
 - Theme: `sections/heipard-feature.liquid` (Regeln), `snippets/heipard-feature-dispatch.liquid`
   (Typ-Weiche), `snippets/heipard-feature-block.liquid` (B1, B2), `snippets/heipard-fb-*.liquid`
   (je Block), `assets/heipard-feature.css`, `assets/heipard-feature.js`.

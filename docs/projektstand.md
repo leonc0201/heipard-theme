@@ -16,7 +16,9 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Seit 2026-10-01 Ausbau nach `heipard-block-vokabular.md` in drei Stufen. **Stufe 1 fertig:** Kettenplan,
   Zeitband, Serienleiter, Text schmal, Steuerung (Dimmregler + Modi), Icon-Grid aus Metafeldern, drei
   Dramaturgie-Vorlagen (`heipard.dramaturgie`), Referenz-Set OL-G40 an `hp-ol-30`/`hp-ol-50`.
-  **Offen:** Stufe 2 (P1, P3, I1, D2, D5, D6, D7), Stufe 3 (P2, I4, R2, B2 sticky).
+  **Stufe 2 fertig:** Hotspot, Lieferumfang, Schieber Aus/An, Kelvin-Skala, Nachweise, Kennzahl, Fragen
+  (Metaobjekt `product_question`, Metafelder `fragen`, `ce_kennzeichnung`, IP45 in der Auswahlliste).
+  **Offen:** Stufe 3 (P2, I4, R2, B2 sticky).
   Anleitung: `heipard-feature-baukasten.md`.
 
 ## Nächste Schritte / offen
@@ -24,7 +26,7 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
 1. **Welle 2** starten (auf Leons Go), Vorschlag Batch 1 = OLA/OLH G40-Ketten. Danach restliche Serien.
 2. **Dubletten** (Tyler klärt): `HP-SBLB-100L-WW` vs. `…-WW-NEW`, `HP-SBLB-60L-WW` vs. `…-NEW`.
 3. **Fehlende Bilder** (Shenzhen) für 9 `todo-bild`-Produkte nachhängen.
-4. **IP45** zur `ip_schutzart`-Auswahlliste ergänzen (Welle-2-Vorbedingung).
+4. ~~IP45 zur `ip_schutzart`-Auswahlliste ergänzen~~ erledigt am 2026-10-01.
 5. **Leere Kategorien** (Smart/Motif/Weihnachtsbäume) ins Menü, sobald bestückt; `outdoor`/`camping` (leer) aufräumen.
 6. **Aktivierung** aller Produkte (draft→active) erst nach Welle 2 + Leons Freigabe.
 7. **Bento-Grid** auf Startseite an neue Taxonomie angleichen.
