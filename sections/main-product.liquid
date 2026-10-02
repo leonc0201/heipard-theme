@@ -238,6 +238,9 @@
                           time_world: shipping_source.settings.delivery_world
                         -%}
                       {%- endif -%}
+                      {%- if block.settings.heipard_dynamic == 'legal_guarantee' -%}
+                        {%- render 'heipard-legal-guarantee' -%}
+                      {%- endif -%}
                     </div>
                   </details>
                 </div>
@@ -1227,10 +1230,11 @@
           "type": "select",
           "id": "heipard_dynamic",
           "label": "HeiPard – dynamischer Inhalt",
-          "info": "Wird unter dem Text ergänzt. \"Versand & Rückgabe\" zieht Beträge und Lieferzeiten aus dem Preis-Block und verlinkt Widerrufsbelehrung, Widerrufsformular und AGB.",
+          "info": "Wird unter dem Text ergänzt. \"Versand & Rückgabe\" zieht Beträge und Lieferzeiten aus dem Preis-Block und verlinkt Widerrufsbelehrung, Widerrufsformular und AGB. \"EU-Gewährleistungsrecht\" zeigt das Hinweisbild in der aktiven Sprache (Dateien unter Einstellungen → Dateien).",
           "options": [
             { "value": "none", "label": "Kein" },
-            { "value": "shipping_returns", "label": "Versand & Rückgabe" }
+            { "value": "shipping_returns", "label": "Versand & Rückgabe" },
+            { "value": "legal_guarantee", "label": "EU-Gewährleistungsrecht" }
           ],
           "default": "none"
         },

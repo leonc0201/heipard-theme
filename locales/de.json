@@ -377,6 +377,10 @@
         "shipping_costs": "Versandkosten",
         "shipping_at_checkout": "werden im Checkout berechnet",
         "delivery_time": "Lieferzeit",
+        "guarantee_tab": {
+          "image_alt": "Hinweis zum gesetzlichen Gewährleistungsrecht in der EU",
+          "opens_new_tab": "Öffnet in einem neuen Tab"
+        },
         "shipping_tab": {
           "shipping_heading": "Versand",
           "zone_domestic": "Deutschland",

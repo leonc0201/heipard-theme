@@ -62,6 +62,9 @@
   --heipard-accent-bright: oklch(0.88 0.13 70);
   /* Helle Farbe für Text und Bedienelemente AUF Bildern (in beiden Modi gleich) */
   --heipard-on-image: oklch(0.98 0.01 80);
+
+  /* Helle Flaeche fuer Dokument-/Label-Bilder, in beiden Modi identisch */
+  --heipard-document-sheet: oklch(0.99 0.006 80);
   /* Kelvin-Skala (PDP-Block D2): Kerze, Neutralweiß, Tageslicht */
   --heipard-kelvin-warm: oklch(0.78 0.15 60);
   --heipard-kelvin-neutral: oklch(0.95 0.045 88);

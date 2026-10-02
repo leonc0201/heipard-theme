@@ -1,0 +1,80 @@
+{%- comment -%}
+  HeiPard — Inhalt des PDP-Akkordeons "EU-Gewährleistungsrecht".
+
+  Zeigt das sprachabhaengige Hinweisbild zum gesetzlichen Gewaehrleistungsrecht
+  (Richtlinie (EU) 2019/771). Klick auf das Label oeffnet die Originaldatei in
+  einem neuen Tab.
+
+  Die Dateien liegen in Shopify unter Einstellungen → Dateien. Sie werden ueber
+  das globale `images`-Objekt per Dateiname geladen, damit Shopify Breite/Hoehe
+  und ein srcset liefert. Faellt das aus (Datei umbenannt/geloescht), greift
+  `file_url` als Fallback.
+
+  WICHTIG: Beim Austausch der Labels muessen die Dateinamen hier mitgepflegt
+  werden — Dateiname = einzige Verbindung zwischen Theme und Datei.
+{%- endcomment -%}
+
+{%- liquid
+  assign lang = request.locale.iso_code | slice: 0, 2 | downcase
+
+  case lang
+    when 'de'
+      assign guarantee_file = 'Legal_guarantee_notice_DE.png'
+    when 'es'
+      assign guarantee_file = 'Legal_guarantee_notice_ES.png'
+    when 'fr'
+      assign guarantee_file = 'Legal_guarantee_notice_FR.png'
+    when 'it'
+      assign guarantee_file = 'Legal_guarantee_notice_IT.png'
+    else
+      assign guarantee_file = 'Legal_guarantee_notice_EN_compressed.jpg'
+  endcase
+
+  assign guarantee_image = images[guarantee_file]
+  assign guarantee_alt = 'products.product.heipard.guarantee_tab.image_alt' | t
+-%}
+
+<div class="heipard-legal-guarantee">
+  {%- if guarantee_image != blank -%}
+    <a
+      class="heipard-legal-guarantee__link"
+      href="{{ guarantee_image | image_url: width: 1600 }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {{
+        guarantee_image
+        | image_url: width: 900
+        | image_tag:
+          loading: 'lazy',
+          widths: '320, 480, 640, 900',
+          sizes: '(min-width: 990px) 42rem, 90vw',
+          class: 'heipard-legal-guarantee__image',
+          alt: guarantee_alt
+      }}
+      <span class="visually-hidden">
+        {{- 'products.product.heipard.guarantee_tab.opens_new_tab' | t -}}
+      </span>
+    </a>
+  {%- else -%}
+    {%- assign guarantee_url = guarantee_file | file_url -%}
+    <a
+      class="heipard-legal-guarantee__link"
+      href="{{ guarantee_url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {%- # theme-check-disable ImgWidthAndHeight -%}
+      <img
+        class="heipard-legal-guarantee__image"
+        src="{{ guarantee_url }}"
+        alt="{{ guarantee_alt | escape }}"
+        loading="lazy"
+      >
+      {%- # theme-check-enable ImgWidthAndHeight -%}
+      <span class="visually-hidden">
+        {{- 'products.product.heipard.guarantee_tab.opens_new_tab' | t -}}
+      </span>
+    </a>
+  {%- endif -%}
+</div>

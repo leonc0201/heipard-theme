@@ -195,6 +195,10 @@
         "shipping_costs": "Gastos de envío",
         "shipping_at_checkout": "Se calcularán al finalizar la compra",
         "delivery_time": "Plazo de entrega",
+        "guarantee_tab": {
+          "image_alt": "Aviso sobre la garantía legal en la UE",
+          "opens_new_tab": "Se abre en una pestaña nueva"
+        },
         "shipping_tab": {
           "shipping_heading": "Envío",
           "zone_domestic": "Alemania",

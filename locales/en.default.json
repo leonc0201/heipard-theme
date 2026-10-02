@@ -377,6 +377,10 @@
         "shipping_costs": "Shipping",
         "shipping_at_checkout": "calculated at checkout",
         "delivery_time": "Delivery time",
+        "guarantee_tab": {
+          "image_alt": "Notice on the statutory legal guarantee in the EU",
+          "opens_new_tab": "Opens in a new tab"
+        },
         "shipping_tab": {
           "shipping_heading": "Shipping",
           "zone_domestic": "Germany",

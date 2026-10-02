@@ -312,3 +312,39 @@
 .heipard-shipping-returns__link:hover {
   opacity: 0.8;
 }
+
+/* ---------------------------------------------------------------------------
+   PDP-Akkordeon "EU-Gewährleistungsrecht"
+   Das Label ist eine Bilddatei mit dunklem Text auf hellem Grund. Deshalb
+   bekommt es in beiden Modi dieselbe helle Flaeche (--heipard-document-sheet),
+   damit es im Dark Mode lesbar bleibt.
+--------------------------------------------------------------------------- */
+
+.heipard-legal-guarantee {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heipard-legal-guarantee__link {
+  display: block;
+  width: 100%;
+  max-width: 42rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--heipard-document-sheet);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.heipard-legal-guarantee__link:hover,
+.heipard-legal-guarantee__link:focus-visible {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.heipard-legal-guarantee__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

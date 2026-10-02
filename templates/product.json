@@ -50,6 +50,15 @@
           "settings": { "show_dynamic_checkout": true, "show_gift_card_recipient": false }
         },
         "description": { "type": "description", "settings": {} },
+        "acc_guarantee": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "EU-Gewährleistungsrecht",
+            "icon": "none",
+            "content": "",
+            "heipard_dynamic": "legal_guarantee"
+          }
+        },
         "acc_tech": {
           "type": "collapsible_tab",
           "settings": {
@@ -86,6 +95,7 @@
         "quantity",
         "buy_buttons",
         "description",
+        "acc_guarantee",
         "acc_tech",
         "acc_install",
         "acc_ship"

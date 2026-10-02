@@ -195,6 +195,10 @@
         "shipping_costs": "Spese di spedizione",
         "shipping_at_checkout": "verranno addebitati al momento del pagamento",
         "delivery_time": "Tempi di consegna",
+        "guarantee_tab": {
+          "image_alt": "Informativa sulla garanzia legale nell'UE",
+          "opens_new_tab": "Si apre in una nuova scheda"
+        },
         "shipping_tab": {
           "shipping_heading": "Spedizione",
           "zone_domestic": "Germania",
