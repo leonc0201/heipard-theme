@@ -1,0 +1,1132 @@
+{
+ "stand": "2026-10-02",
+ "quelle": "Shopify Admin-API, products(first: 50) sortiert nach ID",
+ "anzahl_produkte": 85,
+ "produkte": [
+  {
+   "handle": "hp-blm-100-eu",
+   "status": "DRAFT",
+   "product_type": "Batterie-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-BLM-100-EU",
+     "preis": "10.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-blt-100-eu-1",
+   "status": "DRAFT",
+   "product_type": "Batterie-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-BLT-100-EU-1",
+     "preis": "10.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-bsl-100-1p",
+   "status": "DRAFT",
+   "product_type": "Batterie-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-BSL-100-1P",
+     "preis": "7.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-bsl-100-2p",
+   "status": "DRAFT",
+   "product_type": "Batterie-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-BSL-100-2P",
+     "preis": "12.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-bsl-50-2p",
+   "status": "DRAFT",
+   "product_type": "Batterie-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-BSL-50-2P",
+     "preis": "9.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-cl-1-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CL-1-EU",
+     "preis": "17.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-cl-2-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CL-2-EU",
+     "preis": "18.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-csl-300-c",
+   "status": "DRAFT",
+   "product_type": "Lichtervorhang",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CSL-300-C",
+     "preis": "12.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-csl-300-w",
+   "status": "DRAFT",
+   "product_type": "Lichtervorhang",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CSL-300-W",
+     "preis": "12.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ctl-180",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CTL-180",
+     "preis": "21.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ctl-210-eu-1",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": "Lichtfarbe",
+   "varianten": [
+    {
+     "sku": "HP-CTL-210-EU-1",
+     "preis": "22.99",
+     "optionswert": "Warmweiß"
+    },
+    {
+     "sku": "HP-CTL-210M-EU-1",
+     "preis": "22.99",
+     "optionswert": "Multicolor"
+    }
+   ]
+  },
+  {
+   "handle": "hp-ctl-240",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CTL-240",
+     "preis": "24.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ctl-300-eu",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CTL-300-EU",
+     "preis": "28.49",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ctl-360-eu",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-CTL-360-EU",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ctl-400-eu-1",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": "Lichtfarbe",
+   "varianten": [
+    {
+     "sku": "HP-CTL-400-EU-1",
+     "preis": "30.99",
+     "optionswert": "Warmweiß"
+    },
+    {
+     "sku": "HP-CTL-400M-EU-1",
+     "preis": "30.99",
+     "optionswert": "Multicolor"
+    }
+   ]
+  },
+  {
+   "handle": "hp-dct-200",
+   "status": "DRAFT",
+   "product_type": "Lichtervorhang",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-DCT-200",
+     "preis": "19.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-dfm-400-eu-2",
+   "status": "DRAFT",
+   "product_type": "Cluster-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-DFM-400-EU-2",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-dfm-600",
+   "status": "DRAFT",
+   "product_type": "Cluster-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-DFM-600",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-dfm-750-eu",
+   "status": "DRAFT",
+   "product_type": "Cluster-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-DFM-750-EU",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-dlm-100h",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-DLM-100H",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-dnm-208",
+   "status": "DRAFT",
+   "product_type": "Lichternetz",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-DNM-208",
+     "preis": "69.00",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-isl-264",
+   "status": "DRAFT",
+   "product_type": "Eisregen-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-ISL-264",
+     "preis": "32.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-isl-360-eu",
+   "status": "DRAFT",
+   "product_type": "Eisregen-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-ISL-360-EU",
+     "preis": "24.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-100",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-100",
+     "preis": "69.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-15",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-15",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-15-g",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-15-G",
+     "preis": "19.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-25",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-25",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-30",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-30",
+     "preis": "32.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-50",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-50",
+     "preis": "39.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-75",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-75",
+     "preis": "52.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-s11-15",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-S11-15",
+     "preis": "27.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-s11-25",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-S11-25",
+     "preis": "33.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-s11-30",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-S11-30",
+     "preis": "37.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-st38-15",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-ST38-15",
+     "preis": "36.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-st38-25",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-ST38-25",
+     "preis": "33.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ol-st38-30",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OL-ST38-30",
+     "preis": "57.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ola-g40-15-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLA-G40-15-EU",
+     "preis": "26.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ola-g40-27-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLA-G40-27-EU",
+     "preis": "36.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ola-g40-42-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLA-G40-42-EU",
+     "preis": "46.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ola-s14-15-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLA-S14-15-EU",
+     "preis": "23.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ola-s14-30-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLA-S14-30-EU",
+     "preis": "32.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ola-s14-50-eu",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLA-S14-50-EU",
+     "preis": "39.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olg-200",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLG-200",
+     "preis": "19.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olg-400",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLG-400",
+     "preis": "27.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olg-300-eu",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLG-300-EU",
+     "preis": "24.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olh-g40-15",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLH-G40-15",
+     "preis": "19.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olh-g40-20",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLH-G40-20",
+     "preis": "28.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olh-g40-25",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLH-G40-25",
+     "preis": "32.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olh-g40-35",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLH-G40-35",
+     "preis": "39.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olh-g40-50",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLH-G40-50",
+     "preis": "58.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ols-a60-16-eu",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLS-A60-16-EU",
+     "preis": "26.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ols-g40-16",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLS-G40-16",
+     "preis": "26.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ols-g40-25",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLS-G40-25",
+     "preis": "33.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ols-g40-35",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLS-G40-35",
+     "preis": "39.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ols-s17-16",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLS-S17-16",
+     "preis": "26.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ols-s17-16-eu",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLS-S17-16-EU",
+     "preis": "24.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-100",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-100",
+     "preis": "15.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-150",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-150",
+     "preis": "19.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-200",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-200",
+     "preis": "22.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-400",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-400",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-600",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-600",
+     "preis": "35.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-800",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-800",
+     "preis": "39.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-olt-300-eu",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-OLT-300-EU",
+     "preis": "24.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rct-400",
+   "status": "DRAFT",
+   "product_type": "Lichtervorhang",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RCT-400",
+     "preis": "69.00",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rfm-600",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RFM-600",
+     "preis": "69.00",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rgb-200a",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RGB-200A",
+     "preis": "49.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rgb-300a",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RGB-300A",
+     "preis": "59.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rit-280",
+   "status": "DRAFT",
+   "product_type": "Eisregen-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RIT-280",
+     "preis": "69.00",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rnm-200",
+   "status": "DRAFT",
+   "product_type": "Lichternetz",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RNM-200",
+     "preis": "69.00",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rsp-180",
+   "status": "DRAFT",
+   "product_type": "Weihnachtsbaum",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RSP-180",
+     "preis": "159.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-rtm-400",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-RTM-400",
+     "preis": "69.00",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-sblb-100l-ww",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-SBLB-100L-WW",
+     "preis": "24.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-sblb-100l-ww-new",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-SBLB-100L-WW-NEW",
+     "preis": "26.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-sblb-60l-ww",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-SBLB-60L-WW",
+     "preis": "17.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-sblb-60l-ww-new",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-SBLB-60L-WW-NEW",
+     "preis": "17.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-scwl-10m2p-mc",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": "Lichtfarbe",
+   "varianten": [
+    {
+     "sku": "HP-SCWL-10M2P-MC",
+     "preis": "14.99",
+     "optionswert": "Multicolor"
+    },
+    {
+     "sku": "HP-SCWL-10M2P-WW",
+     "preis": "14.99",
+     "optionswert": "Warmweiß"
+    }
+   ]
+  },
+  {
+   "handle": "hp-scwl-15m2p-mc",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": "Lichtfarbe",
+   "varianten": [
+    {
+     "sku": "HP-SCWL-15M2P-MC",
+     "preis": "16.99",
+     "optionswert": "Multicolor"
+    },
+    {
+     "sku": "HP-SCWL-15M2P-WW",
+     "preis": "16.99",
+     "optionswert": "Warmweiß"
+    }
+   ]
+  },
+  {
+   "handle": "hp-solm-12m-ww",
+   "status": "DRAFT",
+   "product_type": "Solar-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-SOLM-12M-WW",
+     "preis": "14.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-tpm-400-eu-1",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-TPM-400-EU-1",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-ucp-200",
+   "status": "DRAFT",
+   "product_type": "Lichtervorhang",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-UCP-200",
+     "preis": "19.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-uct-200-eu",
+   "status": "DRAFT",
+   "product_type": "Lichtervorhang",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-UCT-200-EU",
+     "preis": "10.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-vam-400l-eu-1",
+   "status": "DRAFT",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-VAM-400L-EU-1",
+     "preis": "69.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-vit-586l-eu-1",
+   "status": "DRAFT",
+   "product_type": "Eisregen-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-VIT-586L-EU-1",
+     "preis": "59.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-vit-864l-eu-1",
+   "status": "DRAFT",
+   "product_type": "Eisregen-Lichterkette",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-VIT-864L-EU-1",
+     "preis": "39.99",
+     "optionswert": null
+    }
+   ]
+  },
+  {
+   "handle": "hp-vlm-100l",
+   "status": "ACTIVE",
+   "product_type": "Lichterkette (allgemein)",
+   "option": null,
+   "varianten": [
+    {
+     "sku": "HP-VLM-100L",
+     "preis": "29.99",
+     "optionswert": null
+    }
+   ]
+  }
+ ]
+}

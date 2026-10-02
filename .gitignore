@@ -8,3 +8,7 @@
 ehthumbs.db
 Thumbs.db
 .shopify
+
+# Große Quelldateien: nur lokal, nicht ins Repo
+docs/data/Kategorie-Angebotsbericht_*.xlsm
+docs/data/__pycache__/

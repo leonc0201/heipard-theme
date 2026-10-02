@@ -145,3 +145,16 @@ Erledigt am 2026-10-01 (Leons Entscheidungen):
   sind entfernt.
 - [x] **Altes Beispiel-Set** — gelöscht, das Metafeld an `hp-olh-g40-25` entfernt.
 - [x] **IP45** in der Auswahlliste `ip_schutzart` ergänzt, an HP-OL-30 und HP-OL-50 gesetzt.
+
+## Fragen an Shenzhen
+
+Sammelblatt für Rückfragen an Tyler. Die Rückfragen zu OL-G40 stehen oben unter „Feature-Baukasten".
+
+Aus dem Produkt-Import Welle 1b (2026-10-02):
+
+- [ ] **`HP-GH-01`** (ASIN B0FJ21MTDT) — im Seller-Central-Bericht steht unter der Marke HeiPard ein
+  Gaming-Headset mit Amazon-Produkttyp HEADPHONES („HeiPard Gaming-Headset mit Kabel, Schwarz HP-GH-01").
+  Nicht importiert. Gehört das Listing zu HeiPard oder ist es ein Fehler?
+- [ ] **Tylers Liste, Zeile `HP-WBF-210-EU`** (ASIN B0H33SZ28R) — bei dieser MSKU steht die SKU `HP-DPM-300`
+  mit der Bezeichnung „300皮线M暖". Laut Amazon ist die ASIN ein Lichterbaum (Birke, 210 cm). Die Zeile
+  ist vermutlich verrutscht, bitte korrigieren.
