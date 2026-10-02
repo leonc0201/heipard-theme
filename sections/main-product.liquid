@@ -205,13 +205,22 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
+                {%- liquid
+                  # HeiPard: Ist keine Ueberschrift gesetzt, liefert der dynamische Inhalt
+                  # sie aus den Locale-Dateien — dann ist sie ohne Admin-Uebersetzung
+                  # in allen Sprachen korrekt.
+                  assign tab_heading = block.settings.heading | default: block.settings.page.title
+                  if tab_heading == blank and block.settings.heipard_dynamic == 'legal_guarantee'
+                    assign tab_heading = 'products.product.heipard.guarantee_tab.heading' | t
+                  endif
+                -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
                       <div class="summary__title">
                         {% render 'icon-accordion', icon: block.settings.icon %}
                         <h2 class="h4 accordion__title inline-richtext">
-                          {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          {{ tab_heading | escape }}
                         </h2>
                       </div>
                       {{- 'icon-caret.svg' | inline_asset_content -}}

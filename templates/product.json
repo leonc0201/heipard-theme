@@ -53,7 +53,7 @@
         "acc_guarantee": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "EU-Gewährleistungsrecht",
+            "heading": "",
             "icon": "none",
             "content": "",
             "heipard_dynamic": "legal_guarantee"

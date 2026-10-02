@@ -378,6 +378,7 @@
         "shipping_at_checkout": "calculated at checkout",
         "delivery_time": "Delivery time",
         "guarantee_tab": {
+          "heading": "EU legal guarantee",
           "image_alt": "Notice on the statutory legal guarantee in the EU",
           "opens_new_tab": "Opens in a new tab"
         },

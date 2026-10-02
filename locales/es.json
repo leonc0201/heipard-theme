@@ -196,6 +196,7 @@
         "shipping_at_checkout": "Se calcularán al finalizar la compra",
         "delivery_time": "Plazo de entrega",
         "guarantee_tab": {
+          "heading": "Garantía legal de la UE",
           "image_alt": "Aviso sobre la garantía legal en la UE",
           "opens_new_tab": "Se abre en una pestaña nueva"
         },

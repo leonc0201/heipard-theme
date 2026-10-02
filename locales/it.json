@@ -196,6 +196,7 @@
         "shipping_at_checkout": "verranno addebitati al momento del pagamento",
         "delivery_time": "Tempi di consegna",
         "guarantee_tab": {
+          "heading": "Garanzia legale UE",
           "image_alt": "Informativa sulla garanzia legale nell'UE",
           "opens_new_tab": "Si apre in una nuova scheda"
         },

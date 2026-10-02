@@ -378,6 +378,7 @@
         "shipping_at_checkout": "werden im Checkout berechnet",
         "delivery_time": "Lieferzeit",
         "guarantee_tab": {
+          "heading": "EU-Gewährleistungsrecht",
           "image_alt": "Hinweis zum gesetzlichen Gewährleistungsrecht in der EU",
           "opens_new_tab": "Öffnet in einem neuen Tab"
         },
