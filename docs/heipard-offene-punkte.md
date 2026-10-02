@@ -160,6 +160,8 @@ Aus dem Produkt-Import Welle 1b (2026-10-02):
   ist vermutlich verrutscht, bitte korrigieren.
 - [ ] **Beleuchtete Birken (HP-WWF, HP-WBF)** — Amazon führt sie als ARTIFICIAL_TREE. Im Shop stehen sie als
   Motivleuchten (`kat-motif`, Produkttyp „Lichterbaum"), nicht als Weihnachtsbäume. Sieht Tyler das auch so?
+- [ ] **HP-OLS-S17-16 (ASIN B0FGJB4DFY) und HP-OLS-S17-16-EU (ASIN B0HCBFN39R)** — sind das zwei Fassungen
+  desselben Produkts (Titel 7,5 m/16 Birnen gegen 8,5 m/16+1 Birnen)? Wenn ja, welche gilt?
 - [ ] **OL-Familien** — Gegenüberstellung OL gegen OLA, OLH, OLS im Plan `docs/heipard-import-welle1b-plan.md`,
   Abschnitt 7. Die betroffenen Produkte tragen `pruefen-mapping-ol`.
 
@@ -167,11 +169,13 @@ Aus dem Produkt-Import Welle 1b (2026-10-02):
 
 Import abgeschlossen, Bericht: `docs/heipard-import-welle1b-bericht.md`. Offen (Leon):
 
-- [ ] **HP-OLS-S17-16 gegen HP-OLS-S17-16-EU** — sehr wahrscheinlich dasselbe Produkt in zwei Listings
-  (7,5 m gegen 8,5 m im Titel). Nicht gelöscht, Entscheidung offen.
+- [ ] **HP-OLS-S17-16 gegen HP-OLS-S17-16-EU** — beide bleiben Draft, `hp-ols-s17-16-eu` trägt `pruefen-dublette`.
+  Frage an Tyler (siehe „Fragen an Shenzhen").
 - [ ] **SKU-Schreibweise** — bei den 16 Zusammenführungen ohne `-EU`. Die übrigen Welle-1-SKUs tragen die
   Suffixe noch, Angleichung als eigener Schritt mit Bericht.
-- [ ] **Sieben Produkte mit `todo-kategorie`** und **neun mit `pruefen-varianten`** (Liste im Bericht, Abschnitt 6).
-- [ ] **Preise** — mehrere unstimmige oder nach Platzhalter aussehende Preise (Bericht, Abschnitt 6).
-- [ ] **Smart-Doppelweg** — `hp-rgb-200a` und `hp-rgb-300a` tragen noch `kat-led` statt `kat-smart`.
+- [ ] **`hp-bsm-002`** — einziges Produkt mit `todo-kategorie` (Titel unklar, fehlt in Tylers Liste).
+- [ ] **Neun Produkte mit `pruefen-varianten`** — bleiben bis zum OL-Mapping von Tyler.
+- [ ] **Preise** — die sieben abweichenden Preise der Zusammenführungen sind angeglichen (Bericht, Abschnitt 8).
+  Offen: Preisabgleich der übrigen Welle-1-Produkte und die nach Platzhalter aussehenden Berichts-Preise.
+- [x] **Kategorien und Smart-Doppelweg** — sechs Produkte eingeordnet, `hp-rgb-200a` und `hp-rgb-300a` auf `kat-smart`.
 - [x] **SBLB-Dubletten** — `hp-sblb-100l-ww` und `hp-sblb-60l-ww` gelöscht, die -NEW-Fassungen bleiben.

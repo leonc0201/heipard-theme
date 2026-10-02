@@ -152,3 +152,36 @@ Einschätzung: sehr wahrscheinlich dasselbe Produkt in zwei Listings (gleiche Bi
 - Entscheidungen zu Abschnitt 6: S17-Dublette, Preise, sieben offene Kategorien, neun `pruefen-varianten`-Produkte.
 - Tyler: OL-Gegenüberstellung (Plan, Abschnitt 7), Birken als Motivleuchten, Fragen an Shenzhen.
 - Welle 2: Titel, Texte, übrige Metafelder, Bildauswahl. Danach Aktivierung durch Leon.
+
+## 8. Nachtrag: Leons Entscheidungen zu Abschnitt 6 (02.10.2026, umgesetzt)
+
+**S17-Dublette.** Beide Produkte bleiben Draft. `hp-ols-s17-16-eu` trägt das Tag `pruefen-dublette`, die Frage an Tyler steht in `docs/heipard-offene-punkte.md`.
+
+**Preise.** Bei den 16 zusammengeführten Produkten ist die bestehende Variante auf den Preis aus dem Seller-Central-Bericht gesetzt, wo er abwich (7 von 16):
+
+| Handle | SKU | vorher | jetzt |
+|---|---|---|---|
+| `hp-uct-200-eu` | `HP-UCT-200` | 10,99 € | 16,99 € |
+| `hp-blm-100-eu` | `HP-BLM-100` | 10,99 € | 12,99 € |
+| `hp-blt-100-eu-1` | `HP-BLT-100` | 10,99 € | 12,99 € |
+| `hp-dfm-400-eu-2` | `HP-DFM-400` | 29,99 € | 24,99 € |
+| `hp-dlm-100h` | `HP-DLM-100H` | 29,99 € | 16,99 € |
+| `hp-dnm-208` | `HP-DNM-208` | 69,00 € | 22,99 € |
+| `hp-rsp-180` | `HP-RSP-180` | 159,99 € | 139,99 € |
+
+Bei `hp-vlm-100l` nennt das VINE-Listing 21,99 €, das führende Listing 29,99 €: unverändert bei 29,99 €. Die übrigen Welle-1-Produkte außerhalb der Zusammenführungen sind nicht abgeglichen. Preise, die schon im Bericht so stehen (`hp-rpm-200` 20 m und 40 m je 35,99 €, 69,00 € und 99,00 € bei einzelnen neuen Produkten), sind unverändert.
+
+**Kategorien.** Das Tag `todo-kategorie` ist bei sechs Produkten entfernt:
+
+| Handle | Tags | Produkttyp |
+|---|---|---|
+| `hp-dgm-002`, `hp-dgm-048`, `hp-fsf-120`, `hp-fxf-001` | `kat-motif` | Motivleuchte |
+| `hp-rmp-180` | `kat-motif` | Lichterbaum |
+| `hp-rpm-200` (mit `HP-RPM-400`) | `kat-stringlights`, `kat-led` | Lichterkette |
+
+`hp-bsm-002` behält `todo-kategorie`: Der Titel („Hirsch Stil Weihnachtsleuchte String 2 Verkauf") lässt offen, ob es eine Motivleuchte oder eine Lichterkette mit Hirsch-Motiven ist, die Beschreibung sagt nur „LED Lichterkette", in Tylers Liste fehlt die SKU. Hinweis zu `hp-rpm-200`: Der Amazon-Titel nennt „Smart" und „App". Nach der Smart-Regel wäre es `kat-smart`, es steht jetzt wie entschieden bei `kat-led`.
+
+**Smart.** `hp-rgb-200a` und `hp-rgb-300a` nennen im Titel „App": `kat-led` entfernt, `kat-smart` gesetzt, Produkttyp „Smart-Lichterkette" wie bei `hp-rgb-500a`.
+
+**`pruefen-varianten`** bleibt bis zum OL-Mapping von Tyler.
+
