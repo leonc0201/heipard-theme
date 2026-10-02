@@ -158,3 +158,20 @@ Aus dem Produkt-Import Welle 1b (2026-10-02):
 - [ ] **Tylers Liste, Zeile `HP-WBF-210-EU`** (ASIN B0H33SZ28R) — bei dieser MSKU steht die SKU `HP-DPM-300`
   mit der Bezeichnung „300皮线M暖". Laut Amazon ist die ASIN ein Lichterbaum (Birke, 210 cm). Die Zeile
   ist vermutlich verrutscht, bitte korrigieren.
+- [ ] **Beleuchtete Birken (HP-WWF, HP-WBF)** — Amazon führt sie als ARTIFICIAL_TREE. Im Shop stehen sie als
+  Motivleuchten (`kat-motif`, Produkttyp „Lichterbaum"), nicht als Weihnachtsbäume. Sieht Tyler das auch so?
+- [ ] **OL-Familien** — Gegenüberstellung OL gegen OLA, OLH, OLS im Plan `docs/heipard-import-welle1b-plan.md`,
+  Abschnitt 7. Die betroffenen Produkte tragen `pruefen-mapping-ol`.
+
+## Produkt-Import Welle 1b (Stand 2026-10-02)
+
+Import abgeschlossen, Bericht: `docs/heipard-import-welle1b-bericht.md`. Offen (Leon):
+
+- [ ] **HP-OLS-S17-16 gegen HP-OLS-S17-16-EU** — sehr wahrscheinlich dasselbe Produkt in zwei Listings
+  (7,5 m gegen 8,5 m im Titel). Nicht gelöscht, Entscheidung offen.
+- [ ] **SKU-Schreibweise** — bei den 16 Zusammenführungen ohne `-EU`. Die übrigen Welle-1-SKUs tragen die
+  Suffixe noch, Angleichung als eigener Schritt mit Bericht.
+- [ ] **Sieben Produkte mit `todo-kategorie`** und **neun mit `pruefen-varianten`** (Liste im Bericht, Abschnitt 6).
+- [ ] **Preise** — mehrere unstimmige oder nach Platzhalter aussehende Preise (Bericht, Abschnitt 6).
+- [ ] **Smart-Doppelweg** — `hp-rgb-200a` und `hp-rgb-300a` tragen noch `kat-led` statt `kat-smart`.
+- [x] **SBLB-Dubletten** — `hp-sblb-100l-ww` und `hp-sblb-60l-ww` gelöscht, die -NEW-Fassungen bleiben.

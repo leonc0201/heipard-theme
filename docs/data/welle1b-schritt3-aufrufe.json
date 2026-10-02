@@ -1,0 +1,5623 @@
+[
+ {
+  "name": "neu:hp-blt-050",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette Batterie Außen",
+   "handle": "hp-blt-050",
+   "vendor": "HeiPard",
+   "productType": "Batterie-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-blt",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "BLT"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Batterie"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/819j+xR+UpL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81YmbI6yzML.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81JjZpoAULL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81FE2tZTMmL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91EGFnhqSnL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81SapaotoaL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Hw6jm2SUL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81dWwgtlwTL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "5 m"
+      },
+      {
+       "name": "20 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-BLT-050",
+     "price": "7.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "5 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/819j+xR+UpL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-BLT-200",
+     "price": "17.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "20 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81Hw6jm2SUL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-bsl-50-1p",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette Batterie 5m 50 LED, klein Lichterketten kupferdraht Innen Batteriebetrieben, 2 Modi für Garten Hochzeit Party Weihnachten Halloween Beleuchtung Deko (Warmweiß, 1 Stück)",
+   "handle": "hp-bsl-50-1p",
+   "vendor": "HeiPard",
+   "productType": "Batterie-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-bsl",
+    "Warmweiß",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "BSL"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Batterie"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Mp55SoZwL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/810xse0rNuL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Lz8LaIeeL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Txj4Yf75L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Z-ZzSZmXL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71-J9nz50cL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/919BbCpKONL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-BSL-50-1P",
+     "price": "5.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-ctl-180m",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette Weihnachtsbaum 1.5m 180LED 12 Stränge, Bunt",
+   "handle": "hp-ctl-180m",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-ctl",
+    "Multicolor",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "CTL"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Multicolor"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/714EwIm2sdL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-CTL-180M",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-ctl-240m",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette Weihnachtsbaum 2m 240 LED 12 Stränge, Bunt",
+   "handle": "hp-ctl-240m",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-ctl",
+    "Multicolor",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "CTL"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Multicolor"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/714EwIm2sdL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-CTL-240M",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-dpm-300",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichterkette Außen auf Spule Fernbedienung",
+   "handle": "hp-dpm-300",
+   "vendor": "HeiPard",
+   "productType": "Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-dpm",
+    "Warmweiß",
+    "Multicolor"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "DPM"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/811lKYyHycL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/818CXGz42wL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91VMNfdn+IL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Gy+5gBmyL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91w5GUrHmVL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91EcVOQRGwL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91csW29wMrL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91gG4NlIfxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91LBp0Kx8JL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91eFFIzCthL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/919pd5uAdrL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/912P2LGyXhL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91stpiy6WbL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/917fgj7Rl2L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Foq83YofL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91RvXmTzJPL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/8152d9MHvYL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91mntWTwikL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81ZiyfVVoqL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91K8U3fQrIL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    },
+    {
+     "name": "Länge",
+     "position": 2,
+     "values": [
+      {
+       "name": "30 m"
+      },
+      {
+       "name": "60 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-DPM-300",
+     "price": "22.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "30 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/811lKYyHycL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DPM-600",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "60 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/8152d9MHvYL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DPM-300M",
+     "price": "19.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "30 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81Foq83YofL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DPM-600M",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "60 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81ZiyfVVoqL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-dpt-300",
+  "id": null,
+  "input": {
+   "title": "HeiPard warmweiße Weihnachts-Lichterkette 30 60 80",
+   "handle": "hp-dpt-300",
+   "vendor": "HeiPard",
+   "productType": "Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-dpt",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "DPT"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81hvpUd6GqL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91SCJs4j-8L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81nYG3lxvJL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81n72qa4OtL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81O2YBxYyRL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91bqhxfEwkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91v-idTKRUL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81bqGqfdYCL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/810nubX3RHL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81JL+mb0brL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "30 m"
+      },
+      {
+       "name": "60 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-DPT-300",
+     "price": "22.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "30 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81hvpUd6GqL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DPT-600",
+     "price": "25.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "60 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/810nubX3RHL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-isl-486",
+  "id": null,
+  "input": {
+   "title": "HeiPard Eisregen Lichterkette Außen Warmweiß LED 8 Modi Timer",
+   "handle": "hp-isl-486",
+   "vendor": "HeiPard",
+   "productType": "Eisregen-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-icicle",
+    "todo-text",
+    "serie-isl",
+    "Warmweiß",
+    "Multicolor",
+    "Kaltweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "ISL"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81bxkT599wL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91eq0Yq0SAL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91i0+Wb2P5L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81xp0cYgA4L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91QFK0-+LTL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81yCNmIe0WL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/810TpQhInJL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/815DulebJnL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81MaNj45cRL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91mesP6cXnL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/819N-wn0ggL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81HbsS2kBKL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91zfqpWTMFL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Fhu6HSZCL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "12,15 m"
+      },
+      {
+       "name": "16,2 m"
+      }
+     ]
+    },
+    {
+     "name": "Lichtfarbe",
+     "position": 2,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Kaltweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-ISL-486",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "12,15 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81bxkT599wL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-486W",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "12,15 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/815DulebJnL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-486M",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "12,15 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/810TpQhInJL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-648",
+     "price": "37.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "16,2 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81bxkT599wL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-648W",
+     "price": "37.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "16,2 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/815DulebJnL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-648M",
+     "price": "37.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "16,2 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/810TpQhInJL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-npt-210",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichternetz Außen 3x2 m",
+   "handle": "hp-npt-210",
+   "vendor": "HeiPard",
+   "productType": "Lichternetz",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-net",
+    "todo-text",
+    "serie-npt",
+    "Warmweiß",
+    "Multicolor",
+    "Weiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "NPT"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/911B7w3Q+tL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81IrmjV8xYL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91MBT6OIglL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/9177lyCRDAL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81EdCFIOzPL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91oLAuMvW9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91krafX7xEL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91q3y8YlSHL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/61hBPb-TfgL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71Rv67HFqzL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Weiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-NPT-210",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/911B7w3Q+tL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-NPT-210W",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Weiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/71Rv67HFqzL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-NPT-210M",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/61hBPb-TfgL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-olg-100",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette außen 10M 100 LED Weihnachtsbaum Lichterketten Strom",
+   "handle": "hp-olg-100",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-olg",
+    "Warmweiß",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLG"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/916Bv1zpgbL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91yB93vjT9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/813utHqmoHL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91OsZZjfQsL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/812QFdpD4pL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91HwKR37x7L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLG-100",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-olg-200m",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette außen 20M 200 LED Weihnachtsbaum Lichterketten Bunt",
+   "handle": "hp-olg-200m",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-olg",
+    "Multicolor",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLG"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Multicolor"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91lakRDrmLL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91ei0JcNyPL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/919q2iTjE-L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81iQyoqOlCL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81DqLDQca6L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91WiTLepwGL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLG-200M",
+     "price": "23.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-olg-200w",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette außen 20M 200 LED Weihnachtsbaum Lichterketten Kaltweiß",
+   "handle": "hp-olg-200w",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-olg",
+    "Kaltweiß",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLG"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Kaltweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81P4S-EwyfL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91-e9oICkgL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91G3sNSMrtL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81QD66cG3tL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81pUgvd5hML.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91ry2wWXLEL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLG-200W",
+     "price": "23.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-olg-600",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette außen 60M 600 LED Weihnachtsbaum Lichterketten Strom",
+   "handle": "hp-olg-600",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-olg",
+    "Warmweiß",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLG"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91eOGkFs6+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91yB93vjT9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91OsZZjfQsL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/813utHqmoHL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/812QFdpD4pL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91HwKR37x7L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLG-600",
+     "price": "36.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-olg-800",
+  "id": null,
+  "input": {
+   "title": "HeiPard Lichterkette außen 80M 800 LED Weihnachtsbaum Lichterketten Strom",
+   "handle": "hp-olg-800",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-christmas-tree-lights",
+    "todo-text",
+    "serie-olg",
+    "Warmweiß",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLG"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/912yI0nredL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91yB93vjT9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91OsZZjfQsL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/813utHqmoHL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/812QFdpD4pL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91HwKR37x7L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLG-800",
+     "price": "59.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-ols-s11-16",
+  "id": null,
+  "input": {
+   "title": "HeiPard Solar Garden String Lights LED IP65 Waterproof Outdoor Patio",
+   "handle": "hp-ols-s11-16",
+   "vendor": "HeiPard",
+   "productType": "Solar-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-solar",
+    "todo-text",
+    "serie-ols",
+    "Warmweiß",
+    "pruefen-mapping-ol"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLS-S11"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Solar"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81SCHKemzBL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "15 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLS-S11-16",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81SCHKemzBL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-OLS-S11-25",
+     "price": "35.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81SCHKemzBL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-ols-st38-16",
+  "id": null,
+  "input": {
+   "title": "HeiPard Solar Lichterkette Aussen ST38",
+   "handle": "hp-ols-st38-16",
+   "vendor": "HeiPard",
+   "productType": "Solar-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-solar",
+    "todo-text",
+    "serie-ols",
+    "Warmweiß",
+    "pruefen-mapping-ol"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OLS-ST38"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Solar"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/819n8eMGnBL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "15 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OLS-ST38-16",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/819n8eMGnBL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-OLS-ST38-25",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/819n8eMGnBL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-rgb-500a",
+  "id": null,
+  "input": {
+   "title": "HeiPard Smart RGB LED Lichterkette 50 m, 500 LED Farbwechsel Strings mit App & Fernbedienung, Innen & Außen IP44, Sprach- & Musiksteuerung für Weihnachten, Party & Deko",
+   "handle": "hp-rgb-500a",
+   "vendor": "HeiPard",
+   "productType": "Smart-Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-smart",
+    "todo-text",
+    "serie-rgb",
+    "Multicolor",
+    "pruefen-varianten"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "RGB"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Multicolor"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91EkQcMHB9L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-RGB-500A",
+     "price": "69.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-rmp-180",
+  "id": null,
+  "input": {
+   "title": "Warmweiß Weihnachtsbaum-Lichtturm 1,8 m",
+   "handle": "hp-rmp-180",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-rmp",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "RMP"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91AymWniLqL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91jMw4+H8tL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91gkaD1KYZL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91FepxfFC8L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/A12BMDsodSL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81ptpapZJsL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-RMP-180",
+     "price": "59.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-rpm-200",
+  "id": null,
+  "input": {
+   "title": "HeiPard Smart LED Lichterkette RGB App Fernbedienung Kabelrolle",
+   "handle": "hp-rpm-200",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-rpm",
+    "Multicolor"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "RPM"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Multicolor"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91iI926kSmL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71p6CkbORIL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "20 m"
+      },
+      {
+       "name": "40 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-RPM-200",
+     "price": "35.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "20 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91iI926kSmL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-RPM-400",
+     "price": "35.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "40 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/71p6CkbORIL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-u20-200",
+  "id": null,
+  "input": {
+   "title": "HeiPard 200+400 LED Lichterschlauch Außen",
+   "handle": "hp-u20-200",
+   "vendor": "HeiPard",
+   "productType": "Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-u20",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "U20"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81PEykTIwgL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "20 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-U20-200",
+     "price": "16.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81PEykTIwgL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-U20-400",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "20 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81PEykTIwgL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-wwf-180",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichterbaum Birkenbaum Innen Außen warmweiß",
+   "handle": "hp-wwf-180",
+   "vendor": "HeiPard",
+   "productType": "Lichterbaum",
+   "status": "DRAFT",
+   "tags": [
+    "kat-motif",
+    "todo-text",
+    "serie-wwf",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "WWF"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/61NgSCBTRCL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Höhe",
+     "position": 1,
+     "values": [
+      {
+       "name": "1,8 m"
+      },
+      {
+       "name": "2,1 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-WWF-180",
+     "price": "69.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "1,8 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/61NgSCBTRCL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-WWF-210",
+     "price": "79.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "2,1 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/61NgSCBTRCL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:pec-150g",
+  "id": null,
+  "input": {
+   "title": "HeiPard Premium Weihnachtsbaum künstlich - Naturgetreu, dichte Zweige Künstlicher Weihnachtsbaum aus naturgetreuem PVC + PE mit Holzständer Tannenbaum Christbaum Nordmanntanne",
+   "handle": "pec-150g",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum",
+   "status": "DRAFT",
+   "tags": [
+    "kat-weihnachtsbaum",
+    "todo-text",
+    "serie-pec"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "BAUM-PEC"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81MrwxCiD7L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91RSgQA6ZZL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81ogJWnQRGL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91mShUlcHkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Txh6jYKML.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71xs3JsjltL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71hBAtjXe+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81wIEtvNWAL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81A5kPQU1WL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Höhe",
+     "position": 1,
+     "values": [
+      {
+       "name": "1,5 m"
+      },
+      {
+       "name": "1,8 m"
+      },
+      {
+       "name": "2,1 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "PEC-150G",
+     "price": "159.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "1,5 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81MrwxCiD7L.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "PEC-180G",
+     "price": "199.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "1,8 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81wIEtvNWAL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "PEC-210G",
+     "price": "289.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "2,1 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81A5kPQU1WL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:pvc-150g",
+  "id": null,
+  "input": {
+   "title": "HeiPard Künstlicher Weihnachtsbaum Premium Künstlich Tannenbaum",
+   "handle": "pvc-150g",
+   "vendor": "HeiPard",
+   "productType": "Weihnachtsbaum",
+   "status": "DRAFT",
+   "tags": [
+    "kat-weihnachtsbaum",
+    "todo-text",
+    "serie-pvc"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "BAUM-PVC"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81ycx+iS-ML.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/914wv6s658L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81PckXc7MCL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81fZKYI8EVL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91n3nGzrjpL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91J6YR4q1LL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91+rtWPTq+L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Höhe",
+     "position": 1,
+     "values": [
+      {
+       "name": "1,5 m"
+      },
+      {
+       "name": "1,8 m"
+      },
+      {
+       "name": "2,1 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "PVC-150G",
+     "price": "129.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "1,5 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81ycx+iS-ML.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "PVC-180G",
+     "price": "169.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "1,8 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91J6YR4q1LL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "PVC-210G",
+     "price": "199.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "2,1 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91+rtWPTq+L.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-wbf-180",
+  "id": null,
+  "input": {
+   "title": "HeiPard Baum Warmweiß Schwarz Birke Lichterbaum 180CM",
+   "handle": "hp-wbf-180",
+   "vendor": "HeiPard",
+   "productType": "Lichterbaum",
+   "status": "DRAFT",
+   "tags": [
+    "kat-motif",
+    "todo-text",
+    "serie-wbf"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "WBF"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71ZcTmkcD3L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-WBF-180",
+     "price": "99.00",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-wbf-210",
+  "id": null,
+  "input": {
+   "title": "HeiPard Baum Warmweiß Birke Lichterbaum 210CM",
+   "handle": "hp-wbf-210",
+   "vendor": "HeiPard",
+   "productType": "Lichterbaum",
+   "status": "DRAFT",
+   "tags": [
+    "kat-motif",
+    "todo-text",
+    "serie-wbf"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "WBF"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71ZcTmkcD3L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-WBF-210",
+     "price": "99.00",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-dgm-048",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Weihnachtsdeko innen mit Fernbedienung, 2 Set Geschenke Leucht Boxen",
+   "handle": "hp-dgm-048",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-dgm"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "DGM"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/61Sh8xmvTsL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-DGM-048",
+     "price": "69.00",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-bsm-002",
+  "id": null,
+  "input": {
+   "title": "HeiPard Hirsch Stil Weihnachtsleuchte String 2 Verkauf",
+   "handle": "hp-bsm-002",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-bsm",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "BSM"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71m1w5V0qEL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-BSM-002",
+     "price": "15.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-bsx-002",
+  "id": null,
+  "input": {
+   "title": "HeiPard 3d leuchtstern lichterkette 2pack",
+   "handle": "hp-bsx-002",
+   "vendor": "HeiPard",
+   "productType": "Motivleuchte",
+   "status": "DRAFT",
+   "tags": [
+    "kat-motif",
+    "todo-text",
+    "serie-bsx",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "BSX"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71EPMh0I9bL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-BSX-002",
+     "price": "15.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-csl-200-c",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichtervorhang Innen 3x2m, 200 LEDs Kaltweiss, Vorhang Lichterkette mit 8 Modi, Timer & Fernbedienung für Weihnachtsdeko, Fensterdekoration und Innenbereich",
+   "handle": "hp-csl-200-c",
+   "vendor": "HeiPard",
+   "productType": "Lichtervorhang",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-curtain",
+    "todo-text",
+    "serie-csl",
+    "Kaltweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "CSL"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Kaltweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81DBUjYBKIL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Qk1y6kQlL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81FSYlFvPxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81PGuNzZsmL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81qd2Eey+RL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81pCfJzd84L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91GuXStSXqL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71VwSVB0GdL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81OcFUKBf1L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-CSL-200-C",
+     "price": "11.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-csl-200-w",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichtervorhang Innen 3x2m, 200 LEDs Warmweiß, Vorhang Lichterkette Innen mit 8 Modi, Timer & Fernbedienung für Weihnachtsdeko, Fensterdekoration und Innenbereich",
+   "handle": "hp-csl-200-w",
+   "vendor": "HeiPard",
+   "productType": "Lichtervorhang",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-curtain",
+    "todo-text",
+    "serie-csl",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "CSL"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81h7sKXncCL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91QUlcgHcjL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81cCNc6tgdL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81aC2Il+R8L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81VYHzlf4LL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/914E1R4pb4L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81HdS3h3MDL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81jpd6GuogL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/710MbmucYyL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-CSL-200-W",
+     "price": "11.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-dgm-001",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Gartenstecker Stern Deko Beleuchtung für Außen Garten Leuchte",
+   "handle": "hp-dgm-001",
+   "vendor": "HeiPard",
+   "productType": "Motivleuchte",
+   "status": "DRAFT",
+   "tags": [
+    "kat-motif",
+    "todo-text",
+    "serie-dgm",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "DGM"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71Hp05PbWWL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Sj7-3jrLL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81mH7TijAGL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91io08uCtRL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91VUVSQTaBL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91sByu0AFEL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-DGM-001",
+     "price": "59.00",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-dgm-002",
+  "id": null,
+  "input": {
+   "title": "HeiPard Spiralpfahl Lichtern",
+   "handle": "hp-dgm-002",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-dgm",
+    "Multicolor"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "DGM"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Multicolor"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/810Af+ExP8L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81pT3D4NjpL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91MffDniQDL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81mY+JAXcrL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81UGatEAuWL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/910JdfOxkVL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-DGM-002",
+     "price": "38.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-fsf-120",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Schneemann",
+   "handle": "hp-fsf-120",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-fsf",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "FSF"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81QbG6++nqL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-FSF-120",
+     "price": "125.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-fxf-001",
+  "id": null,
+  "input": {
+   "title": "HeiPard teilige LED Rentier",
+   "handle": "hp-fxf-001",
+   "vendor": "HeiPard",
+   "productType": "",
+   "status": "DRAFT",
+   "tags": [
+    "todo-kategorie",
+    "todo-text",
+    "serie-fxf"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "FXF"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/718b63p5+PL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-FXF-001",
+     "price": "159.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-ol-s11-50",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichterkette Außen Outdoor Strom 30M - 50 S11 Glühbirnen",
+   "handle": "hp-ol-s11-50",
+   "vendor": "HeiPard",
+   "productType": "Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-ol",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OL-S11"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81e3Ejahs5L.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OL-S11-50",
+     "price": "45.99",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-ol-st38-50",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichterkette Außen Strom 30M mit Fernbedienung, ST38 Gartenbeleuchtung mit 50+2 Glühbirnen",
+   "handle": "hp-ol-st38-50",
+   "vendor": "HeiPard",
+   "productType": "Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-ol",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "OL-ST38"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81XJO7FWLLL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-OL-ST38-50",
+     "price": "99.00",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "neu:hp-stt-050",
+  "id": null,
+  "input": {
+   "title": "HeiPard LED Lichterkette Außen Strom 30M mit Fernbedienung",
+   "handle": "hp-stt-050",
+   "vendor": "HeiPard",
+   "productType": "Lichterkette",
+   "status": "DRAFT",
+   "tags": [
+    "kat-stringlights",
+    "kat-led",
+    "todo-text",
+    "serie-stt",
+    "Warmweiß"
+   ],
+   "metafields": [
+    {
+     "namespace": "heipard",
+     "key": "familie",
+     "type": "single_line_text_field",
+     "value": "STT"
+    },
+    {
+     "namespace": "heipard",
+     "key": "stromquelle",
+     "type": "single_line_text_field",
+     "value": "Netz"
+    },
+    {
+     "namespace": "heipard",
+     "key": "lichtfarbe",
+     "type": "single_line_text_field",
+     "value": "Warmweiß"
+    }
+   ],
+   "files": [
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81XJO7FWLLL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "productOptions": [
+    {
+     "name": "Title",
+     "values": [
+      {
+       "name": "Default Title"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "sku": "HP-STT-050",
+     "price": "69.00",
+     "optionValues": [
+      {
+       "optionName": "Title",
+       "name": "Default Title"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-isl-264",
+  "id": "gid://shopify/Product/10812086780237",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "3,38 m"
+      },
+      {
+       "name": "8,25 m"
+      }
+     ]
+    },
+    {
+     "name": "Lichtfarbe",
+     "position": 2,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Kaltweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529954447693",
+     "sku": "HP-ISL-264",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "8,25 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "barcode": "792742176869",
+     "file": {
+      "id": "gid://shopify/MediaImage/64237576847693"
+     }
+    },
+    {
+     "sku": "HP-ISL-108",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "3,38 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237576847693"
+     }
+    },
+    {
+     "sku": "HP-ISL-108W",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "3,38 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91W5Dp7qRZL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-108M",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "3,38 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91f3zf8mQjL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-264W",
+     "price": "36.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "8,25 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91W5Dp7qRZL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-264M",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "8,25 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91f3zf8mQjL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237576847693"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237576880461"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237576913229"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237576945997"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237576978765"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577011533"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577044301"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577077069"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577109837"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91f3zf8mQjL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91W5Dp7qRZL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91NrsyCmQDL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/811m6aOpGUL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Y8W+OMA+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91+HWdOiQGL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91xb89BYyLL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/812FEXpQr-L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81TYrmcD2qL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Y4CjmKIxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91hg9JtjqDL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/911BjbUMJUL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91mJKfok0bL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Q6b9h687L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81P7YsJi6fL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/819gHRH9SDL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91-UEcSvU0L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91VNLtarhlL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91+RKXkWNdL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81T5M2OZMhL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91CF2L8s7mL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81XzbI9jFeL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "tags": [
+    "kat-icicle",
+    "kat-stringlights",
+    "serie-isl",
+    "Warmweiß",
+    "Kaltweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-uct-200-eu",
+  "id": "gid://shopify/Product/10812091826509",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Kaltweiß"
+      }
+     ]
+    },
+    {
+     "name": "Ausführung",
+     "position": 2,
+     "values": [
+      {
+       "name": "Kupferdraht"
+      },
+      {
+       "name": "Lichterkette"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54530000060749",
+     "sku": "HP-UCT-200",
+     "price": "10.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Ausführung",
+       "name": "Lichterkette"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237615153485"
+     }
+    },
+    {
+     "sku": "HP-UCC-200",
+     "price": "12.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Ausführung",
+       "name": "Kupferdraht"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81dfEriJj-L.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-UCC-200W",
+     "price": "12.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Ausführung",
+       "name": "Kupferdraht"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81Z1S-NZ27L.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-UCT-200W",
+     "price": "16.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Ausführung",
+       "name": "Lichterkette"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81T0N5FkHxL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237615153485"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237615186253"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237615219021"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237615251789"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237615284557"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237615317325"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237615350093"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81dfEriJj-L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Z1S-NZ27L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81T0N5FkHxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/917a6LOgVLL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/911IE0uDp+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91A+jn4+roL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/912qT1nWSyL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81NzC--gTeL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Z5siIeThL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91rt5ztngBL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Oc7GluS+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Y4H1sR1rL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91r4CLY-xfL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91N6GAXnFoL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/816-tP1iHAL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81kMJT7lVJL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81NZIxcyLGL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91NrdkH5xDL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81a4A0QLpQL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/919eYd7R0LL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81VKFU3LQWL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "tags": [
+    "kat-curtain",
+    "kat-stringlights",
+    "serie-uct",
+    "todo-text",
+    "Warmweiß",
+    "Kaltweiß"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-isl-360-eu",
+  "id": "gid://shopify/Product/10812086813005",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Kaltweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    },
+    {
+     "name": "Länge",
+     "position": 2,
+     "values": [
+      {
+       "name": "9 m"
+      },
+      {
+       "name": "15 m"
+      },
+      {
+       "name": "25 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529954480461",
+     "sku": "HP-ISL-360",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "9 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237577142605"
+     }
+    },
+    {
+     "sku": "HP-ISL-586",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237577142605"
+     }
+    },
+    {
+     "sku": "HP-ISL-008",
+     "price": "46.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "25 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81JqMMX2gsL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-360W",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "9 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91Pc8Z7-SaL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-586W",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91Pc8Z7-SaL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-008W",
+     "price": "46.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "25 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91Pc8Z7-SaL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-360M",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "9 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91aslUR82nL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-586M",
+     "price": "32.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91aslUR82nL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-ISL-008M",
+     "price": "46.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "25 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91aslUR82nL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237577142605"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577175373"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577208141"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577240909"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577273677"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577306445"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237577339213"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81JqMMX2gsL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91aslUR82nL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Pc8Z7-SaL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91CG7rbfn4L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91zQTImFsiL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91CRPdoGuaL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/8124LCEzV0L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81M3rP9kMkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91ybdrZGC4L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81wLnNPlINL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91WqFskrRxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/917ez9bSqTL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/8182Wen+pbL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81afd+DfrPL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91hKNy9xCgL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/819W8Z5HNrL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91-hRUJrdfL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81qjOaLr11L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81hqf9rlmuL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "tags": [
+    "kat-icicle",
+    "kat-stringlights",
+    "serie-isl",
+    "todo-text",
+    "Warmweiß",
+    "Kaltweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-blm-100-eu",
+  "id": "gid://shopify/Product/10812082028877",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "15 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529903690061",
+     "sku": "HP-BLM-100",
+     "price": "10.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237541818701"
+     }
+    },
+    {
+     "sku": "HP-BLM-150",
+     "price": "14.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91MEHwTCCpL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237541818701"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237541851469"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237541884237"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237541917005"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237541949773"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237541982541"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237542015309"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237542048077"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91MEHwTCCpL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91hUfmo4veL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Oz29F6bqL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91QsY8iNr3L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81ZsquZpwlL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81cLGZISRzL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81wJ73-UfcL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91iLDA9oarL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-blt-100-eu-1",
+  "id": "gid://shopify/Product/10812085502285",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "15 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529949598029",
+     "sku": "HP-BLT-100",
+     "price": "10.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237564756301"
+     }
+    },
+    {
+     "sku": "HP-BLT-150",
+     "price": "14.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237564756301"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237564756301"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564789069"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564821837"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564854605"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564887373"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564920141"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564952909"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237564985677"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/911ZM2eySTL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-dct-200",
+  "id": "gid://shopify/Product/10812086288717",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Größe",
+     "position": 1,
+     "values": [
+      {
+       "name": "3 x 2 m"
+      },
+      {
+       "name": "3 x 3 m"
+      }
+     ]
+    },
+    {
+     "name": "Lichtfarbe",
+     "position": 2,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Kaltweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529953825101",
+     "sku": "HP-DCT-200",
+     "price": "19.99",
+     "optionValues": [
+      {
+       "optionName": "Größe",
+       "name": "3 x 2 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574226253"
+     }
+    },
+    {
+     "sku": "HP-DCT-200W",
+     "price": "19.99",
+     "optionValues": [
+      {
+       "optionName": "Größe",
+       "name": "3 x 2 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574226253"
+     }
+    },
+    {
+     "sku": "HP-DCT-200M",
+     "price": "19.99",
+     "optionValues": [
+      {
+       "optionName": "Größe",
+       "name": "3 x 2 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574226253"
+     }
+    },
+    {
+     "sku": "HP-DCT-300",
+     "price": "22.99",
+     "optionValues": [
+      {
+       "optionName": "Größe",
+       "name": "3 x 3 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574226253"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237574226253"
+    }
+   ],
+   "tags": [
+    "kat-curtain",
+    "kat-stringlights",
+    "serie-dct",
+    "todo-text",
+    "Warmweiß",
+    "Kaltweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-dfm-400-eu-2",
+  "id": "gid://shopify/Product/10812086321485",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Kaltweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    },
+    {
+     "name": "Länge",
+     "position": 2,
+     "values": [
+      {
+       "name": "6 m"
+      },
+      {
+       "name": "15 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529953857869",
+     "sku": "HP-DFM-400",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "6 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574259021"
+     }
+    },
+    {
+     "sku": "HP-DFM-010",
+     "price": "39.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574259021"
+     }
+    },
+    {
+     "sku": "HP-DFM-400W",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "6 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91lGyFFfUBL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DFM-010W",
+     "price": "39.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Kaltweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91lGyFFfUBL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DFM-400M",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "6 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91tjGO+7pZL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DFM-010M",
+     "price": "39.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "15 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91tjGO+7pZL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237574259021"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574291789"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574324557"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574357325"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574390093"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574422861"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574455629"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574488397"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91tjGO+7pZL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91lGyFFfUBL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81gjMVk99TL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91vMtAl5xlL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81P2GFTC8DL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91LYCD2lnsL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/9116QjED4HL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81y62WyiO0L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91TSAOcpWkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81pRzoaAkyL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/813Zis+oA9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91nphgjZACL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91KXjXpjT0L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91F1q2XljkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81FXuV7Bi4L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91kZ1Ub-gBL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91UPlYRd9xL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91I82rflQiL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/810fKHsX+EL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "tags": [
+    "kat-cluster",
+    "kat-stringlights",
+    "serie-dfm",
+    "todo-text",
+    "Warmweiß",
+    "Kaltweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-dfm-750-eu",
+  "id": "gid://shopify/Product/10812086387021",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    },
+    {
+     "name": "Länge",
+     "position": 2,
+     "values": [
+      {
+       "name": "11,25 m"
+      },
+      {
+       "name": "22,5 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529953923405",
+     "sku": "HP-DFM-750",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "11,25 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574586701"
+     }
+    },
+    {
+     "sku": "HP-DFM-015",
+     "price": "49.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      },
+      {
+       "optionName": "Länge",
+       "name": "22,5 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574586701"
+     }
+    },
+    {
+     "sku": "HP-DFM-750M",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "11,25 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91tjGO+7pZL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DFM-015M",
+     "price": "49.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      },
+      {
+       "optionName": "Länge",
+       "name": "22,5 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91tjGO+7pZL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237574586701"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574619469"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574652237"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574685005"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574717773"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574750541"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237574783309"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91tjGO+7pZL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81noZJZWvIL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/811TrW+coeL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81P2GFTC8DL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91LYCD2lnsL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Y3UQVMzML.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91I82rflQiL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/9116QjED4HL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81y62WyiO0L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91TSAOcpWkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91kOpsnw4sL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "tags": [
+    "kat-cluster",
+    "kat-stringlights",
+    "serie-dfm",
+    "todo-text",
+    "Warmweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-dfm-600",
+  "id": "gid://shopify/Product/10812086354253",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "9 m"
+      },
+      {
+       "name": "18 m"
+      }
+     ]
+    },
+    {
+     "name": "Lichtfarbe",
+     "position": 2,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529953890637",
+     "sku": "HP-DFM-600",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "9 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574521165"
+     }
+    },
+    {
+     "sku": "HP-DFM-600M",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "9 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91kqlg4X8eL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DFM-012",
+     "price": "45.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "18 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81n5LYQ8aYL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-DFM-012M",
+     "price": "45.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "18 m"
+      },
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91PV46MPX7L.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237574521165"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81n5LYQ8aYL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91PV46MPX7L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91kqlg4X8eL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91WnflUB-9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91rZYpOCAoL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91gjVZmz5+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91Xx3P7-Q5L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91iqzJnezuL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91qgAZM0zSL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91uPqgEEHEL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/A13qVnpCVnL.jpg",
+     "contentType": "IMAGE"
+    }
+   ],
+   "tags": [
+    "kat-cluster",
+    "kat-stringlights",
+    "serie-dfm",
+    "todo-text",
+    "Warmweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-dlm-100h",
+  "id": "gid://shopify/Product/10812086419789",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "20 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529953956173",
+     "sku": "HP-DLM-100H",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574816077"
+     }
+    },
+    {
+     "sku": "HP-DLM-200H",
+     "price": "19.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "20 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/8108gMmsMYL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237574816077"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/8108gMmsMYL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91drdcP9H9L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81qTB6-KGxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91VL-p3cUTL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-dnm-208",
+  "id": "gid://shopify/Product/10812086485325",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Lichtfarbe",
+     "position": 1,
+     "values": [
+      {
+       "name": "Warmweiß"
+      },
+      {
+       "name": "Multicolor"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529954021709",
+     "sku": "HP-DNM-208",
+     "price": "69.00",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Warmweiß"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574848845"
+     }
+    },
+    {
+     "sku": "HP-DNM-208M",
+     "price": "22.99",
+     "optionValues": [
+      {
+       "optionName": "Lichtfarbe",
+       "name": "Multicolor"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237574848845"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237574848845"
+    }
+   ],
+   "tags": [
+    "kat-net",
+    "kat-stringlights",
+    "serie-dnm",
+    "todo-text",
+    "Warmweiß",
+    "Multicolor"
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-olg-300-eu",
+  "id": "gid://shopify/Product/10812089106765",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "30 m"
+      },
+      {
+       "name": "50 m"
+      },
+      {
+       "name": "100 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529993834829",
+     "sku": "HP-OLG-300",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "30 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237596934477"
+     }
+    },
+    {
+     "sku": "HP-OLG-500",
+     "price": "27.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "50 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91OiPzWUVUL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-OLG-010",
+     "price": "45.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "100 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91NtoJ0bqkL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237596934477"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237596967245"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597000013"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597032781"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597065549"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597098317"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597131085"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597163853"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237597196621"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91NtoJ0bqkL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91OiPzWUVUL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/918lW81zVvL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91ojU+lQT+L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/914J9ogwUrL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-olt-300-eu",
+  "id": "gid://shopify/Product/10812090220877",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "30 m"
+      },
+      {
+       "name": "50 m"
+      },
+      {
+       "name": "100 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529998094669",
+     "sku": "HP-OLT-300",
+     "price": "24.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "30 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237608010061"
+     }
+    },
+    {
+     "sku": "HP-OLT-500",
+     "price": "27.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "50 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81DGDmliZyL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-OLT-010",
+     "price": "45.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "100 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91RiU96d7hL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237608010061"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608042829"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608075597"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608108365"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608141133"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608173901"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608206669"
+    },
+    {
+     "id": "gid://shopify/MediaImage/64237608239437"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91RiU96d7hL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81DGDmliZyL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81+XYD1+5-L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/8166uZ0IEFL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-rsp-180",
+  "id": "gid://shopify/Product/10812090450253",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Höhe",
+     "position": 1,
+     "values": [
+      {
+       "name": "1,8 m"
+      },
+      {
+       "name": "2,5 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529998324045",
+     "sku": "HP-RSP-180",
+     "price": "159.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "1,8 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237608960333"
+     }
+    },
+    {
+     "sku": "HP-RSP-250",
+     "price": "169.99",
+     "optionValues": [
+      {
+       "optionName": "Höhe",
+       "name": "2,5 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/71IUYYSmIdL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237608960333"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/71IUYYSmIdL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81TeT72sjPL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81PuLZqfHRL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91-7nPUKO3L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/816Oh5OKJCL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Z-Plz27jL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81EtwF6+PFL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-tpm-400-eu-1",
+  "id": "gid://shopify/Product/10812091695437",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "LED-Anzahl",
+     "position": 1,
+     "values": [
+      {
+       "name": "300 LEDs"
+      },
+      {
+       "name": "400 LEDs"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54529999929677",
+     "sku": "HP-TPM-400",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "LED-Anzahl",
+       "name": "400 LEDs"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237615022413"
+     }
+    },
+    {
+     "sku": "HP-TPM-300",
+     "price": "26.99",
+     "optionValues": [
+      {
+       "optionName": "LED-Anzahl",
+       "name": "300 LEDs"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/81iRupym4GL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237615022413"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81iRupym4GL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81Ksap2kWJL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91ILmtwIabL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91qQKivdI2L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/81WU7UqBftL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/9124WEOkXNL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91F9diTgSyL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ },
+ {
+  "name": "merge:hp-vlm-100l",
+  "id": "gid://shopify/Product/10812092842317",
+  "input": {
+   "status": "DRAFT",
+   "productOptions": [
+    {
+     "name": "Länge",
+     "position": 1,
+     "values": [
+      {
+       "name": "10 m"
+      },
+      {
+       "name": "20 m"
+      },
+      {
+       "name": "30 m"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "gid://shopify/ProductVariant/54530000617805",
+     "sku": "HP-VLM-100L",
+     "price": "29.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "10 m"
+      }
+     ],
+     "file": {
+      "id": "gid://shopify/MediaImage/64237621641549"
+     }
+    },
+    {
+     "sku": "HP-VLM-200L",
+     "price": "39.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "20 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91npxAPUuxL.jpg",
+      "contentType": "IMAGE"
+     }
+    },
+    {
+     "sku": "HP-VLM-300L",
+     "price": "49.99",
+     "optionValues": [
+      {
+       "optionName": "Länge",
+       "name": "30 m"
+      }
+     ],
+     "file": {
+      "originalSource": "https://m.media-amazon.com/images/I/91npxAPUuxL.jpg",
+      "contentType": "IMAGE"
+     }
+    }
+   ],
+   "files": [
+    {
+     "id": "gid://shopify/MediaImage/64237621641549"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91npxAPUuxL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91XTVcYA2lL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91DTYD-cX-L.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91MqN0lZ0RL.jpg",
+     "contentType": "IMAGE"
+    },
+    {
+     "originalSource": "https://m.media-amazon.com/images/I/91+Y7+qw5kL.jpg",
+     "contentType": "IMAGE"
+    }
+   ]
+  }
+ }
+]

@@ -34,10 +34,10 @@
    "bestand": null,
    "marke": "HeiPard",
    "serie": "WBF",
-   "produkttyp": "Weihnachtsbaum",
+   "produkttyp": "Lichterbaum",
    "farbe": null,
    "tags_vorschlag": [
-    "kat-weihnachtsbaum",
+    "kat-motif",
     "todo-text",
     "serie-wbf"
    ],
@@ -51,11 +51,11 @@
    "variationsthema": "",
    "optionswerte": {},
    "kat_tags": [
-    "kat-weihnachtsbaum"
+    "kat-motif"
    ],
    "familie": "WBF",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "Amazon-Produkttyp und Titel",
    "excel_bezeichnung": "1.8M 树灯（黑色枝干）",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -84,10 +84,10 @@
    "bestand": null,
    "marke": "HeiPard",
    "serie": "WBF",
-   "produkttyp": "Weihnachtsbaum",
+   "produkttyp": "Lichterbaum",
    "farbe": null,
    "tags_vorschlag": [
-    "kat-weihnachtsbaum",
+    "kat-motif",
     "todo-text",
     "serie-wbf"
    ],
@@ -101,11 +101,11 @@
    "variationsthema": "",
    "optionswerte": {},
    "kat_tags": [
-    "kat-weihnachtsbaum"
+    "kat-motif"
    ],
    "familie": "WBF",
    "familie_quelle": "Kürzel nach HP-",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "Amazon-Produkttyp und Titel",
    "excel_bezeichnung": "300皮线M暖",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -138,10 +138,10 @@
    "bestand": null,
    "marke": "HeiPard",
    "serie": "WWF",
-   "produkttyp": "Weihnachtsbaum",
+   "produkttyp": "Lichterbaum",
    "farbe": "Warmweiß",
    "tags_vorschlag": [
-    "kat-weihnachtsbaum",
+    "kat-motif",
     "todo-text",
     "serie-wwf",
     "Warmweiß"
@@ -158,11 +158,11 @@
     "Höhe": "1,8 m"
    },
    "kat_tags": [
-    "kat-weihnachtsbaum"
+    "kat-motif"
    ],
    "familie": "WWF",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "Amazon-Produkttyp und Titel",
    "excel_bezeichnung": "F5白桦树灯1.8米",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -195,10 +195,10 @@
    "bestand": null,
    "marke": "HeiPard",
    "serie": "WWF",
-   "produkttyp": "Weihnachtsbaum",
+   "produkttyp": "Lichterbaum",
    "farbe": "Warmweiß",
    "tags_vorschlag": [
-    "kat-weihnachtsbaum",
+    "kat-motif",
     "todo-text",
     "serie-wwf",
     "Warmweiß"
@@ -215,11 +215,11 @@
     "Höhe": "2,1 m"
    },
    "kat_tags": [
-    "kat-weihnachtsbaum"
+    "kat-motif"
    ],
    "familie": "WWF",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "Amazon-Produkttyp und Titel",
    "excel_bezeichnung": "F5白桦树灯2.1米",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -280,7 +280,7 @@
    ],
    "familie": "BAUM-PEC",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "PVC&PE混合圣诞树150cm",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -341,7 +341,7 @@
    ],
    "familie": "BAUM-PEC",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "PVC&PE圣诞树180cm",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -402,7 +402,7 @@
    ],
    "familie": "BAUM-PEC",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "PVC&PE圣诞树210cm",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -461,7 +461,7 @@
    ],
    "familie": "BAUM-PVC",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "PVC圣诞树150cm",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -521,7 +521,7 @@
    ],
    "familie": "BAUM-PVC",
    "familie_quelle": "analog zu sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -581,7 +581,7 @@
    ],
    "familie": "BAUM-PVC",
    "familie_quelle": "analog zu sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Aktiv",
@@ -634,7 +634,7 @@
    "kat_tags": [],
    "familie": "BAUM-TPE",
    "familie_quelle": "sku_familie.csv",
-   "kategorie_quelle": "Amazon-Produkttyp",
+   "kategorie_quelle": "SKU",
    "excel_bezeichnung": "PE圣诞树180cm",
    "amazon_produkttyp": "ARTIFICIAL_TREE",
    "status_amazon": "Entfernt",
@@ -9012,7 +9012,7 @@
    "stromquelle": "Solar",
    "lichtfarbe_metafeld": null,
    "import_status": "ausgeschlossen",
-   "grund": "UK-Variante (analog zu HP-UCP-300M-UK), bitte bestätigen",
+   "grund": "UK-Variante (bleibt draußen)",
    "ziel": null
   },
   {
@@ -9726,6 +9726,7 @@
    "produkttyp": "Smart-Lichterkette",
    "farbe": "Multicolor",
    "tags_vorschlag": [
+    "kat-stringlights",
     "kat-smart",
     "todo-text",
     "serie-rgb",
@@ -9743,6 +9744,7 @@
    "variationsthema": "SIZE/PLUG_TYPE",
    "optionswerte": {},
    "kat_tags": [
+    "kat-stringlights",
     "kat-smart"
    ],
    "familie": "RGB",
@@ -10048,6 +10050,7 @@
    "produkttyp": "Smart-Lichterkette",
    "farbe": "Multicolor",
    "tags_vorschlag": [
+    "kat-stringlights",
     "kat-smart",
     "todo-text",
     "serie-rpm",
@@ -10067,6 +10070,7 @@
     "Länge": "20 m"
    },
    "kat_tags": [
+    "kat-stringlights",
     "kat-smart"
    ],
    "familie": "RPM",
@@ -13629,6 +13633,7 @@
     "vendor": "HeiPard",
     "status": "draft",
     "tags": [
+     "kat-stringlights",
      "kat-smart",
      "todo-text",
      "serie-rgb",
@@ -13821,11 +13826,11 @@
     "eltern_sku": "HP-WWF-0918",
     "thema": "SIZE/LIGHT_COLOR",
     "titel": "HeiPard LED Lichterbaum Birkenbaum Innen Außen warmweiß",
-    "product_type": "Weihnachtsbaum",
+    "product_type": "Lichterbaum",
     "vendor": "HeiPard",
     "status": "draft",
     "tags": [
-     "kat-weihnachtsbaum",
+     "kat-motif",
      "todo-text",
      "serie-wwf",
      "Warmweiß"
@@ -14026,11 +14031,11 @@
     "art": "einzel",
     "eltern_sku": "",
     "titel": "HeiPard Baum Warmweiß Schwarz Birke Lichterbaum 180CM",
-    "product_type": "Weihnachtsbaum",
+    "product_type": "Lichterbaum",
     "vendor": "HeiPard",
     "status": "draft",
     "tags": [
-     "kat-weihnachtsbaum",
+     "kat-motif",
      "todo-text",
      "serie-wbf"
     ],
@@ -14059,11 +14064,11 @@
     "art": "einzel",
     "eltern_sku": "",
     "titel": "HeiPard Baum Warmweiß Birke Lichterbaum 210CM",
-    "product_type": "Weihnachtsbaum",
+    "product_type": "Lichterbaum",
     "vendor": "HeiPard",
     "status": "draft",
     "tags": [
-     "kat-weihnachtsbaum",
+     "kat-motif",
      "todo-text",
      "serie-wbf"
     ],

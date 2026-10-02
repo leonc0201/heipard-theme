@@ -72,7 +72,7 @@ def schreibe(erg, pfad):
     A.append('')
     A.append('Stand: 02.10.2026. Erzeugt von `docs/data/welle1b_aufbereitung.py` aus `%s`, Tylers Liste, `sku_familie.csv` und dem Shop-Bestand vom selben Tag (`docs/data/welle1b-shop-stand.json`). Die aufbereiteten Daten je SKU stehen in `docs/data/welle1b-quelle.json`.' % meta['quelle'])
     A.append('')
-    A.append('**Es wurde nichts im Shop angelegt oder geändert.** Angelegt wird erst nach Leons Freigabe dieses Plans.')
+    A.append('**Von Leon am 02.10.2026 freigegeben und umgesetzt.** Ergebnis und Leons Antworten zu A bis J: `docs/heipard-import-welle1b-bericht.md`. Die Listen ab Abschnitt 3 enthalten die Antworten F (Smart-Doppelweg) und G (Birken als Lichterbaum) bereits, Abschnitt 2 zeigt die Fragen im Stand vor der Freigabe. Der Shop-Abgleich beruht auf dem Bestand vor dem Import.')
     A.append('')
 
     # ---------------------------------------------------------------- 1 Zahlen

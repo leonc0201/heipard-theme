@@ -2,7 +2,7 @@
 
 Stand: 02.10.2026. Erzeugt von `docs/data/welle1b_aufbereitung.py` aus `Kategorie-Angebotsbericht_10-02-2026.xlsm`, Tylers Liste, `sku_familie.csv` und dem Shop-Bestand vom selben Tag (`docs/data/welle1b-shop-stand.json`). Die aufbereiteten Daten je SKU stehen in `docs/data/welle1b-quelle.json`.
 
-**Es wurde nichts im Shop angelegt oder geändert.** Angelegt wird erst nach Leons Freigabe dieses Plans.
+**Von Leon am 02.10.2026 freigegeben und umgesetzt.** Ergebnis und Leons Antworten zu A bis J: `docs/heipard-import-welle1b-bericht.md`. Die Listen ab Abschnitt 3 enthalten die Antworten F (Smart-Doppelweg) und G (Birken als Lichterbaum) bereits, Abschnitt 2 zeigt die Fragen im Stand vor der Freigabe. Der Shop-Abgleich beruht auf dem Bestand vor dem Import.
 
 ## 1. Zahlen
 
@@ -151,11 +151,11 @@ Titel sind vorläufig (Welle 2 ersetzt sie). Der Handle wird die erste SKU in Kl
 - Varianten: `HP-U20-200` 10 m, 16,99 €; `HP-U20-400` 20 m, 24,99 €
 - Bilder: 1
 
-**`hp-wwf-180`** · Weihnachtsbaum · Familie WWF
+**`hp-wwf-180`** · Lichterbaum · Familie WWF
 
 - Titel: HeiPard LED Lichterbaum Birkenbaum Innen Außen warmweiß
 - Elternteil: `HP-WWF-0918`, Thema SIZE/LIGHT_COLOR
-- Tags: `kat-weihnachtsbaum`, `todo-text`, `serie-wwf`, `Warmweiß`
+- Tags: `kat-motif`, `todo-text`, `serie-wwf`, `Warmweiß`
 - Optionen: Höhe (1,8 m, 2,1 m)
 - Varianten: `HP-WWF-180` 1,8 m, 69,99 €; `HP-WWF-210` 2,1 m, 79,99 €
 - Bilder: 1
@@ -192,10 +192,10 @@ Titel sind vorläufig (Welle 2 ersetzt sie). Der Handle wird die erste SKU in Kl
 | `HP-OLG-200W` | HeiPard Lichterkette außen 20M 200 LED Weihnachtsbaum Licht… | Weihnachtsbaum-Lichterkette | kat-stringlights, kat-christmas-tree-lights | OLG | 23,99 € | 6 | Eltern HP-OLG-DE-001, siehe 2 A |
 | `HP-OLG-600` | HeiPard Lichterkette außen 60M 600 LED Weihnachtsbaum Licht… | Weihnachtsbaum-Lichterkette | kat-stringlights, kat-christmas-tree-lights | OLG | 36,99 € | 6 | Eltern HP-OLG-DE-001, siehe 2 A |
 | `HP-OLG-800` | HeiPard Lichterkette außen 80M 800 LED Weihnachtsbaum Licht… | Weihnachtsbaum-Lichterkette | kat-stringlights, kat-christmas-tree-lights | OLG | 59,99 € | 6 | Eltern HP-OLG-DE-001, siehe 2 A |
-| `HP-RGB-500A` | HeiPard Smart RGB LED Lichterkette 50 m, 500 LED Farbwechse… | Smart-Lichterkette | kat-smart | RGB | 69,99 € | 1 | Eltern HP-RGB, siehe 2 A |
+| `HP-RGB-500A` | HeiPard Smart RGB LED Lichterkette 50 m, 500 LED Farbwechse… | Smart-Lichterkette | kat-stringlights, kat-smart | RGB | 69,99 € | 1 | Eltern HP-RGB, siehe 2 A |
 | `HP-RMP-180` | Warmweiß Weihnachtsbaum-Lichtturm 1,8 m | offen | todo-kategorie | RMP | 59,99 € | 6 | einziges aktives Kind von HP-RMP-180 250 |
-| `HP-WBF-180` | HeiPard Baum Warmweiß Schwarz Birke Lichterbaum 180CM | Weihnachtsbaum | kat-weihnachtsbaum | WBF | 99,00 € | 1 |  |
-| `HP-WBF-210` | HeiPard Baum Warmweiß Birke Lichterbaum 210CM | Weihnachtsbaum | kat-weihnachtsbaum | WBF | 99,00 € | 1 |  |
+| `HP-WBF-180` | HeiPard Baum Warmweiß Schwarz Birke Lichterbaum 180CM | Lichterbaum | kat-motif | WBF | 99,00 € | 1 |  |
+| `HP-WBF-210` | HeiPard Baum Warmweiß Birke Lichterbaum 210CM | Lichterbaum | kat-motif | WBF | 99,00 € | 1 |  |
 | `HP-DGM-048` | HeiPard LED Weihnachtsdeko innen mit Fernbedienung, 2 Set G… | offen | todo-kategorie | DGM | 69,00 € | 1 |  |
 | `HP-BSM-002` | HeiPard Hirsch Stil Weihnachtsleuchte String 2 Verkauf | offen | todo-kategorie | BSM | 15,99 € | 1 |  |
 | `HP-BSX-002` | HeiPard 3d leuchtstern lichterkette 2pack | Motivleuchte | kat-motif | BSX | 15,99 € | 1 |  |
@@ -378,7 +378,7 @@ Für Tyler: Je OL-Produkt die OLA-, OLH- und OLS-Produkte mit gleicher Birnenfor
 | Status „Inaktiv“ | 4 | `HP-CTL-300`, `HP-CTL-360`, `HP-SBLB-100L-WW-DE-01`, `HP-SBLB-60L-WW-DE-01` |
 | Amazon-Produkttyp HEADPHONES (Listing-Fehler, Frage an Shenzhen) | 1 | `HP-GH-01` |
 | Status „leer“ | 1 | `HP-CTL-360-EU HP-BSL-100-1P` |
-| UK-Variante (analog zu HP-UCP-300M-UK), bitte bestätigen | 1 | `HP-OLS-ST38-35-UK` |
+| UK-Variante (bleibt draußen) | 1 | `HP-OLS-ST38-35-UK` |
 
 Dazu kommen 45 Elternteile (davon 24 inaktiv) und 78 Zeilen, die schon im Shop sind. `HP-UCP-300M-UK` steht wie erwartet nicht im Bericht.
 

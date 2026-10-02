@@ -188,7 +188,8 @@ KAT = {  # Kategorie -> (kat-Tags, deutscher Produkttyp)
     'solarleuchte': (['kat-solar'], 'Solarleuchte'),
     'motif': (['kat-motif'], 'Motivleuchte'),
     'baum': (['kat-weihnachtsbaum'], 'Weihnachtsbaum'),
-    'smart': (['kat-smart'], 'Smart-Lichterkette'),
+    'lichterbaum': (['kat-motif'], 'Lichterbaum'),  # beleuchtete Birken: Motivleuchte, kein Weihnachtsbaum (Leon, 02.10.2026)
+    'smart': (['kat-stringlights', 'kat-smart'], 'Smart-Lichterkette'),  # Doppelweg wie Solar (Leon, 02.10.2026)
     'batterie': (['kat-stringlights', 'kat-led'], 'Batterie-Lichterkette'),
     'kette': (['kat-stringlights', 'kat-led'], 'Lichterkette'),
 }
@@ -224,8 +225,12 @@ def kategorie(r):
         if excel_kat == 'solar' and 'lichterkette' not in titel:
             return 'solarleuchte', 'Excel', ''
         return excel_kat, 'Excel', ''
-    if r['amazon_typ'] == 'ARTIFICIAL_TREE' or re.match(r'^(PEC|PVC|TPE)-', r['sku']):
-        return 'baum', 'Amazon-Produkttyp' if r['amazon_typ'] == 'ARTIFICIAL_TREE' else 'SKU', ''
+    if re.match(r'^(PEC|PVC|TPE)-', r['sku']):
+        return 'baum', 'SKU', ''
+    if r['amazon_typ'] == 'ARTIFICIAL_TREE':
+        if re.search(r'lichterbaum|birke', titel):
+            return 'lichterbaum', 'Amazon-Produkttyp und Titel', ''
+        return None, 'kein Hinweis', 'Amazon-Produkttyp ARTIFICIAL_TREE, aber weder Tannenbaum (PEC/PVC/TPE) noch Lichterbaum'
     if titel_kat:
         if titel_kat == 'solar' and 'lichterkette' not in titel:
             return 'solarleuchte', 'Titel', ''
@@ -284,7 +289,7 @@ THEMA_ACHSEN = {
 
 
 def ist_baumartig(produkttyp, titel):
-    return produkttyp == 'Weihnachtsbaum' or bool(re.search(r'lichterbaum|birkenbaum|cone tree|weihnachtsbaum künstlich|künstlicher weihnachtsbaum', titel.lower()))
+    return produkttyp in ('Weihnachtsbaum', 'Lichterbaum') or bool(re.search(r'lichterbaum|birkenbaum|cone tree|weihnachtsbaum künstlich|künstlicher weihnachtsbaum', titel.lower()))
 
 
 def merkmale(r):
@@ -474,7 +479,7 @@ def main():
         if r['amazon_typ'] == 'HEADPHONES':
             r['import_status'], r['grund'] = 'ausgeschlossen', 'Amazon-Produkttyp HEADPHONES (Listing-Fehler, Frage an Shenzhen)'
         elif r['sku'].endswith('-UK'):
-            r['import_status'], r['grund'] = 'ausgeschlossen', 'UK-Variante (analog zu HP-UCP-300M-UK), bitte bestätigen'
+            r['import_status'], r['grund'] = 'ausgeschlossen', 'UK-Variante (bleibt draußen)'
 
     # Zeilen, deren Amazon-SKU buchstabengleich im Shop steht, sind bereits importiert
     shop_exakt = {v['sku']: p['handle'] for p in shop['produkte'] for v in p['varianten']}
