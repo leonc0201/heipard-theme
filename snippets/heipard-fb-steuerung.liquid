@@ -6,6 +6,8 @@
   Quellen:
     Dimmregler  Produkt-Metafeld heipard.dimmstufen (Liste in Prozent, z. B. 25, 50, 75, 100).
                 Regler und Chips rasten auf genau diese Stufen ein.
+                Ist die Liste leer, aber heipard.dimmstufen_anzahl (Ganzzahl) gepflegt,
+                zeigt der Block so viele Chips "Stufe 1" bis "Stufe n", ohne Prozentwerte.
     Modi        JSON-Feld des Blocks: { "modi": ["dauer", "atem", "blinken"] }
                 Erlaubt sind dauer, atem, blinken. Namen kommen aus den Locales.
 
@@ -41,6 +43,20 @@
     endfor
   endif
 
+  assign by_count = false
+  assign level_count = product.metafields.heipard.dimmstufen_anzahl.value
+  if has_dimmer == false and level_count != blank and level_count > 1
+    assign has_dimmer = true
+    assign by_count = true
+    assign level_min = 1
+    assign level_max = level_count
+    assign level_step = 1
+  endif
+  assign value_key = 'heipard.blocks.steuerung.percent'
+  if by_count
+    assign value_key = 'heipard.blocks.steuerung.step'
+  endif
+
   assign modes = ''
   assign known_modes = 'dauer,atem,blinken' | split: ','
   if data.modi != blank
@@ -71,7 +87,7 @@
 {%- endif -%}
 {%- if has_dimmer or has_modes -%}
   {%- if has_modes -%}<!--fb-loud-->{%- endif -%}
-  <div class="heipard-fb heipard-fb--steuerung" data-heipard-ctrl data-percent="{{ 'heipard.blocks.steuerung.percent' | t: value: '__V__' }}">
+  <div class="heipard-fb heipard-fb--steuerung" data-heipard-ctrl data-percent="{{ value_key | t: value: '__V__' }}"{% if by_count %} data-level-max="{{ level_max }}"{% endif %}>
     <div class="heipard-ctrl__stage" data-mode="dauer" style="--fb-level: 1;">
       {%- if image != blank -%}
         {{
@@ -112,7 +128,7 @@
           <div class="heipard-ctrl__group">
             <label class="heipard-ctrl__label" for="heipard-ctrl-range-{{ uid }}">
               {{- 'heipard.blocks.steuerung.brightness' | t -}}
-              <output class="heipard-ctrl__value" for="heipard-ctrl-range-{{ uid }}">{{ 'heipard.blocks.steuerung.percent' | t: value: level_max }}</output>
+              <output class="heipard-ctrl__value" for="heipard-ctrl-range-{{ uid }}">{{ value_key | t: value: level_max }}</output>
             </label>
             <input
               class="heipard-ctrl__range"
@@ -124,11 +140,19 @@
               value="{{ level_max }}"
             >
             <div class="heipard-ctrl__chips" role="group" aria-label="{{ 'heipard.blocks.steuerung.brightness' | t }}">
-              {%- for lv in levels -%}
-                <button type="button" class="heipard-chip" data-level="{{ lv }}" aria-pressed="{% if forloop.last %}true{% else %}false{% endif %}">
-                  {{- 'heipard.blocks.steuerung.percent' | t: value: lv -}}
-                </button>
-              {%- endfor -%}
+              {%- if by_count -%}
+                {%- for lv in (1..level_max) -%}
+                  <button type="button" class="heipard-chip" data-level="{{ lv }}" aria-pressed="{% if forloop.last %}true{% else %}false{% endif %}">
+                    {{- value_key | t: value: lv -}}
+                  </button>
+                {%- endfor -%}
+              {%- else -%}
+                {%- for lv in levels -%}
+                  <button type="button" class="heipard-chip" data-level="{{ lv }}" aria-pressed="{% if forloop.last %}true{% else %}false{% endif %}">
+                    {{- value_key | t: value: lv -}}
+                  </button>
+                {%- endfor -%}
+              {%- endif -%}
             </div>
           </div>
         {%- endif -%}
@@ -153,5 +177,5 @@
     </div>
   </div>
 {%- elsif request.design_mode and loud_blocked == false -%}
-  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.dimmstufen' }}<!--fb-note-->
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.dimmstufen, heipard.dimmstufen_anzahl' }}<!--fb-note-->
 {%- endif -%}

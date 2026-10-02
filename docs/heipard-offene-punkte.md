@@ -127,6 +127,13 @@ Offen:
 - [ ] **Kelvin-Skala** — der Verlauf endet in einem kühlen Weiß (Token `--heipard-kelvin-cool`). Bitte ansehen,
   ob das zur Regel „keine Blau-Verläufe" passt, sonst neutraler setzen.
 
+Erledigt am 2026-10-02:
+
+- [x] **Kettenplan reduziert** — fehlt die beleuchtete Länge, ist aber `gesamtlaenge_m` gepflegt, zeigt der
+  Kettenplan nur eine Linie mit „x m gesamt". Zuleitung und Lichtpunkte stehen, falls gepflegt, darunter.
+- [x] **`heipard.dimmstufen_anzahl`** (Ganzzahl, ab 2) — ist `dimmstufen` leer, zeigt die Steuerung so viele
+  Chips „Stufe 1" bis „Stufe n" ohne Prozentwerte. Das Icon-Grid nennt dieselbe Anzahl.
+
 Erledigt am 2026-10-01 (Leons Entscheidungen):
 
 - [x] **OL-G40 Länge** — 20 m (OL-50: 30 m) ist die Gesamtlänge. Gepflegt: Zuleitung 3 m, beleuchtet 17 m

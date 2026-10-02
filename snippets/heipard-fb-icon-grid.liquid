@@ -36,9 +36,13 @@
           endif
         when 'dimmbar'
           assign levels = mf.dimmstufen.value
+          assign level_count = mf.dimmstufen_anzahl.value
           if levels != blank and levels.size > 1
             assign tile_label = 'heipard.blocks.icon_grid.dimmable' | t
             assign tile_value = 'heipard.blocks.icon_grid.dimmable_value' | t: count: levels.size
+          elsif level_count != blank and level_count > 1
+            assign tile_label = 'heipard.blocks.icon_grid.dimmable' | t
+            assign tile_value = 'heipard.blocks.icon_grid.dimmable_value' | t: count: level_count
           endif
         when 'koppelbar'
           assign chains = mf.koppelbar_bis.value

@@ -7,6 +7,8 @@
              Ist heipard.gesamtlaenge_m gepflegt, gilt die Gesamtlänge als Nennmaß:
              darunter steht eine Maßlinie "x m gesamt", die beleuchtete Länge
              bekommt ein "ca." davor.
+             Reduzierte Form: Fehlt die beleuchtete Länge, ist aber die Gesamtlänge
+             gepflegt, zeigt der Plan nur eine Linie mit "x m gesamt".
     flaeche  Flächenplan für Vorhang, Eiszapfen, Netz
              (heipard.breite_m + hoehe_m Pflicht; zuleitung_m, led_anzahl optional)
     koppel   Koppelplan: mehrere Ketten als Gesamtlänge
@@ -55,8 +57,8 @@
       assign default_title = 'heipard.blocks.kettenplan.title_couple' | t
     else
       assign variant = 'linie'
-      if laenge == blank
-        assign missing = missing | append: ', heipard.beleuchtete_laenge_m'
+      if laenge == blank and gesamt == blank
+        assign missing = missing | append: ', heipard.beleuchtete_laenge_m, heipard.gesamtlaenge_m'
       endif
       assign default_title = 'heipard.blocks.kettenplan.title_line' | t
   endcase
@@ -96,6 +98,15 @@
 
     {%- case variant -%}
       {%- when 'linie' -%}
+        {%- if laenge == blank -%}
+          {%- capture gesamt_txt -%}{%- render 'heipard-num', value: gesamt -%}{%- endcapture -%}
+          <div class="heipard-plan heipard-plan--linie heipard-plan--gesamt">
+            <div class="heipard-plan__seg heipard-plan__seg--chain">
+              <span class="heipard-plan__wire" aria-hidden="true"></span>
+              <span class="heipard-plan__measure">{{ 'heipard.blocks.kettenplan.total' | t: value: gesamt_txt }}</span>
+            </div>
+          </div>
+        {%- else -%}
         {%- liquid
           capture laenge_txt
             render 'heipard-num', value: laenge
@@ -138,8 +149,12 @@
         {%- if has_total -%}
           <p class="heipard-plan__measure heipard-plan__total">{{ 'heipard.blocks.kettenplan.total' | t: value: gesamt_txt }}</p>
         {%- endif -%}
-        {%- if has_points or has_spacing -%}
+        {%- endif -%}
+        {%- assign reduced_lead = false -%}
+        {%- if laenge == blank and has_lead -%}{%- assign reduced_lead = true -%}{%- endif -%}
+        {%- if has_points or has_spacing or reduced_lead -%}
           <ul class="heipard-plan__facts">
+            {%- if reduced_lead -%}<li>{{ 'heipard.blocks.kettenplan.lead' | t: value: zuleitung_txt }}</li>{%- endif -%}
             {%- if has_points -%}<li>{{ 'heipard.blocks.kettenplan.points' | t: count: punkte }}</li>{%- endif -%}
             {%- if has_spacing -%}<li>{{ 'heipard.blocks.kettenplan.spacing' | t: value: abstand_txt }}</li>{%- endif -%}
           </ul>

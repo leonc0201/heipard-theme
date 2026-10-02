@@ -98,6 +98,7 @@
         "title": "Try it out",
         "brightness": "Brightness",
         "percent": "{{ value }} %",
+        "step": "Level {{ value }}",
         "mode": "Light mode",
         "modes": {
           "dauer": "Steady",

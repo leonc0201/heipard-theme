@@ -255,6 +255,7 @@ Produkten geteilt. Bitte nicht mit Inhalten füllen und nicht löschen.
 | Familie (Code) | `familie` | Text | Serienleiter |
 | PDP-Dramaturgie | `dramaturgie` | Auswahl | Vorlage und Limits |
 | Beleuchtete Länge (m) | `beleuchtete_laenge_m` | Dezimalzahl | Kettenplan, Serienleiter |
+| Gesamtlänge (m) | `gesamtlaenge_m` | Dezimalzahl | Kettenplan (Maß „x m gesamt“; fehlt die beleuchtete Länge, zeigt der Plan nur diese eine Linie), Serienleiter |
 | Zuleitung (m) | `zuleitung_m` | Dezimalzahl | Kettenplan |
 | Anzahl LEDs / Leuchtmittel | `led_anzahl` | Ganzzahl | Kettenplan, Serienleiter |
 | Abstand der Lichtpunkte (cm) | `birnenabstand_cm` | Dezimalzahl | Kettenplan |
@@ -264,6 +265,7 @@ Produkten geteilt. Bitte nicht mit Inhalten füllen und nicht löschen.
 | Leuchtdauer / Akkulaufzeit (h) | `akkulaufzeit_h` | Dezimalzahl | Zeitband Solar |
 | Stromquelle | `stromquelle` | Auswahl | Zeitband (Automatik) |
 | Dimmstufen (%) | `dimmstufen` | Liste Ganzzahl | Steuerung, Icon-Grid |
+| Anzahl Dimmstufen | `dimmstufen_anzahl` | Ganzzahl | Steuerung und Icon-Grid, wenn `dimmstufen` leer ist: Chips „Stufe 1“ bis „Stufe n“ ohne Prozentwerte |
 | Anzahl Leuchtmodi, Fernbedienung | `anzahl_leuchtmodi`, `fernbedienung` | | Icon-Grid |
 | IP-Schutzart | `ip_schutzart` | Auswahl | Nachweise, Icon-Grid |
 | Spannung (V) | `spannung_v` | Dezimalzahl | Nachweise |

@@ -98,6 +98,7 @@
         "title": "Probier es aus",
         "brightness": "Helligkeit",
         "percent": "{{ value }} %",
+        "step": "Stufe {{ value }}",
         "mode": "Leuchtmodus",
         "modes": {
           "dauer": "Dauerlicht",

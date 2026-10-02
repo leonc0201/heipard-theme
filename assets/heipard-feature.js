@@ -29,11 +29,12 @@
     var levelButtons = root.querySelectorAll('[data-level]');
     var modeButtons = root.querySelectorAll('[data-mode]:not(.heipard-ctrl__stage)');
     var percentTemplate = root.dataset.percent || '__V__ %';
+    var levelMax = Number(root.dataset.levelMax) || 100;
 
     function setLevel(value) {
       var level = Number(value);
       if (!isFinite(level)) return;
-      stage.style.setProperty('--fb-level', String(level / 100));
+      stage.style.setProperty('--fb-level', String(level / levelMax));
       if (range && Number(range.value) !== level) range.value = String(level);
       if (output) output.textContent = percentTemplate.replace('__V__', String(level));
       levelButtons.forEach(function (button) {

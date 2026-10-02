@@ -389,6 +389,9 @@
   }
 }
 
+/* Reduzierte Form: nur die Gesamtlänge als eine durchgehende Linie */
+.heipard-plan--linie.heipard-plan--gesamt .heipard-plan__seg--chain { flex: 1 1 100%; }
+
 /* Flächenplan: Rechteck im echten Seitenverhältnis mit Lichtpunkt-Raster */
 .heipard-plan--flaeche {
   display: grid;

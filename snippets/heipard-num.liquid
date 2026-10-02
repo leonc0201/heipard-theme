@@ -5,7 +5,7 @@
 {%- endcomment -%}
 {%- liquid
   assign cents = value | times: 100 | round
-  assign whole = cents | divided_by: 100
+  assign whole = cents | divided_by: 100 | floor
   assign frac = cents | modulo: 100
   if frac == 0
     echo whole
