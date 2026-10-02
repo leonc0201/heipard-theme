@@ -113,16 +113,11 @@ Vollständige Referenz: **`heipard-taxonomie.md`**.
 
 Offen:
 
-- [ ] **OL-G40 lauter Block** — Steuerung und Schieber stehen beide im Set, Leon vergleicht im Editor und
-  entscheidet. Bis dahin ist die Steuerung laut, der Schieber leise, und das Icon-Grid fällt wegen des
-  Limits von acht Blöcken weg. Nach der Entscheidung den anderen Block aus dem Set nehmen.
-- [ ] **OL-G40 Hotspot-Bild** — das freigestellte Listing-Bild bleibt als Platzhalter, ein echtes Foto der
-  Fernbedienung kommt. Dann Bild tauschen und die vier Punkte neu setzen.
+- [ ] **OL-G40 Hotspot-Bild** — `OLG40_P1_01` (freigestelltes Listing-Bild) bleibt als Platzhalter. Das echte
+  Foto der Fernbedienung kommt als `OLG40_P1_02`. Dann Bild tauschen und die vier Punkte neu setzen.
 - [ ] **Rückfragen an Shenzhen (Leon)** — Timer-Tasten „4H" und „…0 Min" auf der Fernbedienung, Birnenabstand
   58 cm im Maßbild gegen 55 cm im Text, „Fuash" statt „Flash". Bis zur Antwort gelten die Werte aus dem
   Listing-Text (Timer 6 und 8 Stunden, 55 cm).
-- [ ] **Alt-Text Aus-Bild** — `OLG40_I1_01_aus.webp` hat im Manifest keinen eigenen Alt-Text (die Zeile
-  beschreibt die leuchtende Kette), das Feld ist deshalb leer. Auf der Seite wird es nicht ausgegeben.
 - [ ] **Serienleiter** — wird erst sichtbar, wenn die Produkte der Familie aktiv sind.
 - [ ] **CE-Kennzeichnung** — neues Metafeld `ce_kennzeichnung`. Bewusst nirgends gesetzt, bis je Produkt bestätigt.
 - [ ] **Begriff Spannung** — Vokabular und Listing sagen „24 V Niederspannung". Fachlich ist das Kleinspannung
@@ -141,6 +136,9 @@ Erledigt am 2026-10-01 (Leons Entscheidungen):
 - [x] **OL-G40 Bilder, Texte, Fragen** — die sieben Pipeline-Exporte liegen in den Shopify-Dateien (Alt-Texte
   aus dem Manifest), R1-Absätze und vier Produktfragen sind eingetragen. Frage 1 nennt jetzt Strahlwasser.
 - [x] **Serienleiter** zeigt die Gesamtlänge, von Leon bestätigt.
+- [x] **OL-G40 lauter Block** (2026-10-02) — die Steuerung. Der Schieber ist aus dem Set genommen, das
+  Icon-Grid erscheint wieder. Der Schieber bleibt als Block-Typ für Familien ohne Dimmen und Modi.
+- [x] **Alt-Text Aus-Bild** (2026-10-02) — von Leon in Shopify gesetzt.
 - [x] **Familien-Kollektionen** — technischer Name bleibt, ausgeblendet aus Kollektionsliste, Sitemap und
   Suche, noindex.
 - [x] **Fallback-Blöcke** — leere Dramaturgie gilt als Long-Tail, die generischen Blöcke im Produkt-Template

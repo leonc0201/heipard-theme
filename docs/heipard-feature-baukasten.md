@@ -293,23 +293,22 @@ nach `heipard-block-vokabular.md` Abschnitt 9. HP-OL-25 gehört nicht dazu (blei
 1. B1 „Gartenparty-Klassiker", Bild `OLG40_B1_01.webp`
 2. B2 „Warmes Licht, 2200 Kelvin", Bild `OLG40_B2_01.webp`
 3. R1 „Gebaut für draußen", zwei Absätze von Leon
-4. Steuerung „Volle Kontrolle" mit Dauer, Atem, Blinken, Basisbild `OLG40_B2_03.webp`
-5. **Im Test:** I1 Schieber Aus und An, Bilder `OLG40_I1_01_an.webp` und `OLG40_I1_01_aus.webp`
-6. Auto · Kettenplan (3 m Zuleitung, ca. 17 m Lichterkette, 20 m gesamt; OL-50: ca. 27 m, 30 m gesamt)
-7. P1 Hotspot „Fernbedienung", Bild `OLG40_P1_01.webp`. Platzhalter aus dem Listing-Bild, bis ein
-   echtes Foto der Fernbedienung kommt. Dann vier Punkte neu setzen (Modus, Dimmen, Timer, Ein und Aus)
-8. Zeitband Timer mit Satz zur Speicherfunktion
-9. Auto · Icon-Grid
+4. Steuerung „Volle Kontrolle" mit Dauer, Atem, Blinken, Basisbild `OLG40_B2_03.webp`. **Lauter Block
+   der Familie** (Leons Entscheidung vom 2026-10-02)
+5. Auto · Kettenplan (3 m Zuleitung, ca. 17 m Lichterkette, 20 m gesamt; OL-50: ca. 27 m, 30 m gesamt)
+6. P1 Hotspot „Fernbedienung", Bild `OLG40_P1_01.webp`. Platzhalter aus dem Listing-Bild. Das echte
+   Foto der Fernbedienung kommt als `OLG40_P1_02`, dann Bild tauschen und die vier Punkte neu setzen
+   (Modus, Dimmen, Timer, Ein und Aus)
+7. Zeitband Timer mit Satz zur Speicherfunktion
+8. Auto · Icon-Grid
 
 Daten-Zone: Auto · Serienleiter (Kollektion `familie-ol-g40`, sichtbar ab Aktivierung),
 Auto · Nachweise (IP45, 24 V), Auto · Lieferumfang, Auto · Fragen (vier Fragen von Leon,
 Einträge `ol-g40-frage-1` bis `-4`).
 
-**Laufender Vergleich Steuerung gegen Schieber (seit 2026-10-01):** Beide Blöcke stehen im Set.
-Laut ist, wer im Set weiter oben steht, der andere erscheint leise (Schieber als Bild, Steuerung
-nur mit Dimmregler). Zum Vergleichen die beiden Einträge im Set tauschen. Solange beide drin sind,
-hat das Set neun Blöcke, das Hero-Limit von acht schneidet deshalb den letzten ab (Icon-Grid).
-Nach Leons Entscheidung fliegt einer der beiden raus, dann ist das Icon-Grid wieder da.
+Der Schieber (I1) war bis 2026-10-02 zum Vergleich im Set und ist wieder draußen. Der Eintrag
+„OL-G40 · I1 Schieber Aus und An" mit dem Bildpaar `OLG40_I1_01_an` und `_aus` existiert weiter,
+ist aber keinem Set zugewiesen. Als Block-Typ ist der Schieber für Familien ohne Dimmen und Modi gedacht.
 
 Die Bilder kommen aus der Asset-Pipeline (`P:\Claude Code\Heipard Assets\02_export\web\OLG40`),
 die Alt-Texte aus `manifest.csv` dort. In der Galerie beider Produkte stehen `OLG40_GAL_01.webp`
