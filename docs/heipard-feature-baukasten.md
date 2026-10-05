@@ -253,10 +253,14 @@ Produkten geteilt. Bitte nicht mit Inhalten füllen und nicht löschen.
 
 ## Metafelder für die Daten-Blöcke (Namespace `heipard`)
 
-**Variantenabhängige Werte.** Sechs Felder gibt es zusätzlich als Varianten-Metafelder mit denselben
-Keys und Typen: `gesamtlaenge_m`, `beleuchtete_laenge_m`, `led_anzahl`, `akkulaufzeit_h`, `breite_m`,
-`hoehe_m`. Spec-Kacheln, Kettenplan, Zeitband (Leuchtdauer), Kennzahl und Serienleiter lesen den Wert
-zuerst an der gewählten Variante, sonst am Produkt. Beim Variantenwechsel aktualisiert
+**Variantenabhängige Werte.** Jedes `heipard`-Feld wird zuerst an der gewählten Variante gesucht, dann
+am Produkt (gilt für alle Daten-Blöcke, Spec-Kacheln, Gewährleistung). Als Varianten-Metafelder
+angelegt sind, mit denselben Keys und Typen wie am Produkt: `gesamtlaenge_m`, `beleuchtete_laenge_m`,
+`led_anzahl`, `akkulaufzeit_h`, `breite_m`, `hoehe_m`, `leistung_w`, `einsatzbereich`, `material`,
+`farbtemperatur_kelvin`, `anzahl_leuchtmodi`, `koppelbar_bis`, `spannung_v`, `dimmstufen_anzahl`,
+`ip_schutzart`, `zuleitung_m`, `stromquelle`, `birnenabstand_cm`. Lichtfarbe ist bei Varianten eine
+Option, kein Metafeld; die Spec-Kachel liest sie aus der Option „Lichtfarbe“. Die Spec-Kachel „Länge“
+heißt „Höhe“, wenn es nur `hoehe_m` gibt (Bäume, Kegel, Birken). Beim Variantenwechsel aktualisiert
 `assets/heipard-variant.js` die Spec-Kacheln und die Feature-Sektion ohne Neuladen (Section Rendering API
 mit `?variant=`). Bei Produkten mit nur einer Variante bleibt alles am Produkt.
 

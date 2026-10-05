@@ -29,6 +29,7 @@
     "product": {
       "specs": {
         "length": "Length",
+        "height": "Height",
         "power_source": "Power source",
         "light_color": "Light colour",
         "protection_rating": "Protection rating"

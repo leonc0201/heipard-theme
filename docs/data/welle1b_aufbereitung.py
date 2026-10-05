@@ -138,7 +138,7 @@ def lichtfarbe_norm(wert, titel=''):
     if v in ('weiß', 'weiss'):
         return 'Kaltweiß' if re.search(r'kaltwei(ß|ss)', titel.lower()) else 'Weiß'
     if v == 'rgb':
-        return 'RGB'
+        return 'Multicolor'  # Leon, 05.10.2026: RGB wird auf den Auswahllistenwert Multicolor abgebildet
     if v in LICHT_DUO:
         return 'Warmweiß & Multicolor'
     if v == 'orange lila':

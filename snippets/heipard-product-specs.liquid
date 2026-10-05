@@ -2,18 +2,33 @@
   HeiPard Spec-Kacheln (2x2) aus Metafeldern (Namespace heipard).
   Laenge / Stromquelle / Lichtfarbe / Schutzart, je Icon + Label + Wert.
   Fehlt ein Wert, wird sichtbar [TBD] angezeigt (Daten kommen im Produkt-Import).
-  Laenge: zuerst die gewaehlte Variante (Varianten-Metafeld), sonst das Produkt;
-  beleuchtete Laenge vor Gesamtlaenge. data-heipard-vswap: heipard-variant.js
-  tauscht die Kacheln beim Variantenwechsel aus.
+  Jedes Feld zuerst an der gewaehlten Variante (Varianten-Metafeld), sonst am Produkt.
+  Laenge: beleuchtete Laenge vor Gesamtlaenge; gibt es nur hoehe_m (Baeume, Kegel,
+  Birken), heisst die Kachel "Hoehe". Lichtfarbe: zuerst die Variantenoption
+  "Lichtfarbe", sonst das Metafeld. data-heipard-vswap: heipard-variant.js tauscht
+  die Kacheln beim Variantenwechsel aus.
   Parameter: product
 {% endcomment %}
 {%- liquid
   assign m = product.metafields.heipard
   assign vm = product.selected_or_first_available_variant.metafields.heipard
+  assign v = product.selected_or_first_available_variant
   assign laenge = vm.beleuchtete_laenge_m.value | default: vm.gesamtlaenge_m.value | default: m.beleuchtete_laenge_m.value | default: m.gesamtlaenge_m.value
-  assign strom = m.stromquelle.value
-  assign farbe = m.lichtfarbe.value
-  assign ip = m.ip_schutzart.value
+  assign hoehe = vm.hoehe_m.value | default: m.hoehe_m.value
+  assign laenge_key = 'heipard.product.specs.length'
+  if laenge == blank and hoehe != blank
+    assign laenge = hoehe
+    assign laenge_key = 'heipard.product.specs.height'
+  endif
+  assign strom = vm.stromquelle.value | default: m.stromquelle.value
+  assign farbe = ''
+  for opt in product.options_with_values
+    if opt.name == 'Lichtfarbe'
+      assign farbe = v.options[forloop.index0]
+    endif
+  endfor
+  assign farbe = farbe | default: vm.lichtfarbe.value | default: m.lichtfarbe.value
+  assign ip = vm.ip_schutzart.value | default: m.ip_schutzart.value
 -%}
 <ul class="heipard-specs list-unstyled" data-heipard-vswap="specs">
   <li class="heipard-specs__item">
@@ -21,7 +36,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></svg>
     </span>
     <span class="heipard-specs__text">
-      <span class="heipard-specs__label">{{ 'heipard.product.specs.length' | t }}</span>
+      <span class="heipard-specs__label">{{ laenge_key | t }}</span>
       <span class="heipard-specs__value">{% if laenge != blank %}{% render 'heipard-num', value: laenge %} m{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
     </span>
   </li>

@@ -12,9 +12,10 @@
 {%- endcomment -%}
 {%- liquid
   assign mf = product.metafields.heipard
-  assign ip = mf.ip_schutzart.value
-  assign volt = mf.spannung_v.value
-  assign ce = mf.ce_kennzeichnung.value
+  assign vmf = product.selected_or_first_available_variant.metafields.heipard
+  assign ip = vmf.ip_schutzart.value | default: mf.ip_schutzart.value
+  assign volt = vmf.spannung_v.value | default: mf.spannung_v.value
+  assign ce = vmf.ce_kennzeichnung.value | default: mf.ce_kennzeichnung.value
 
   assign has_ip = false
   if ip != blank

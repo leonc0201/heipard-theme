@@ -129,9 +129,9 @@ Offen:
 
 Erledigt am 2026-10-05:
 
-- [x] **Variantenabhängige Werte** — Varianten-Metafelder `gesamtlaenge_m`, `beleuchtete_laenge_m`, `led_anzahl`,
-  `akkulaufzeit_h`, `breite_m`, `hoehe_m` angelegt (Definitionen 433616912717 bis 433617076557). Theme liest
-  Variante vor Produkt, `heipard-variant.js` tauscht Spec-Kacheln und Feature-Sektion beim Wechsel aus,
+- [x] **Variantenabhängige Werte** — 18 Varianten-Metafelder angelegt (alle Keys aus `varianten_werte.csv`
+  außer Lichtfarbe; Definitionen 433616912717 bis 433617076557 und 433719705933 bis 433720066381). Theme liest
+  jedes `heipard`-Feld zuerst an der Variante, dann am Produkt, `heipard-variant.js` tauscht Spec-Kacheln und Feature-Sektion beim Wechsel aus,
   Serienleiter zeigt Varianten als Stufen. Werte schreibt die Asset-Instanz. Offen: Prüfung auf einer
   echten Produktseite, sobald Werte an `hp-dlm-100h` und `hp-rsp-180` stehen.
 
@@ -160,6 +160,9 @@ Erledigt am 2026-10-01 (Leons Entscheidungen):
   sind entfernt.
 - [x] **Altes Beispiel-Set** — gelöscht, das Metafeld an `hp-olh-g40-25` entfernt.
 - [x] **IP45** in der Auswahlliste `ip_schutzart` ergänzt, an HP-OL-30 und HP-OL-50 gesetzt.
+
+Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahllistenwert „Multicolor“ abgebildet
+(`welle1b_aufbereitung.py`). Bestehende Produkte mit Tag `RGB` sind nicht umgestellt.
 
 ## Fragen an Shenzhen
 

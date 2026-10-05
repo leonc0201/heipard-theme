@@ -6,10 +6,12 @@
   Über das JSON-Feld des Blocks lässt sich die Auswahl festlegen:
     { "kacheln": ["timer", "dimmbar", "koppelbar"] }
 
+  Jedes Feld zuerst an der gewählten Variante, sonst am Produkt.
   Parameter: product, data, label
 {%- endcomment -%}
 {%- liquid
   assign mf = product.metafields.heipard
+  assign vmf = product.selected_or_first_available_variant.metafields.heipard
   assign wanted = data.kacheln
   if wanted == blank
     assign wanted = 'timer,dimmbar,koppelbar,modi,fernbedienung,schutzart' | split: ','
@@ -26,17 +28,20 @@
       assign tile_value = ''
       case key
         when 'timer'
-          assign hours = mf.timer_dauer_h.value
+          assign hours = vmf.timer_dauer_h.value | default: mf.timer_dauer_h.value
           if hours != blank and hours.size > 0
             assign tile_label = 'heipard.blocks.icon_grid.timer' | t
             assign hours_txt = hours | sort | join: ' / '
             assign tile_value = 'heipard.blocks.icon_grid.timer_value' | t: hours: hours_txt
-          elsif mf.timer_funktion.value == true
+          else
+            assign timer_flag = vmf.timer_funktion.value | default: mf.timer_funktion.value
+          endif
+          if tile_label == blank and timer_flag == true
             assign tile_label = 'heipard.blocks.icon_grid.timer' | t
           endif
         when 'dimmbar'
-          assign levels = mf.dimmstufen.value
-          assign level_count = mf.dimmstufen_anzahl.value
+          assign levels = vmf.dimmstufen.value | default: mf.dimmstufen.value
+          assign level_count = vmf.dimmstufen_anzahl.value | default: mf.dimmstufen_anzahl.value
           if levels != blank and levels.size > 1
             assign tile_label = 'heipard.blocks.icon_grid.dimmable' | t
             assign tile_value = 'heipard.blocks.icon_grid.dimmable_value' | t: count: levels.size
@@ -45,25 +50,29 @@
             assign tile_value = 'heipard.blocks.icon_grid.dimmable_value' | t: count: level_count
           endif
         when 'koppelbar'
-          assign chains = mf.koppelbar_bis.value
+          assign chains = vmf.koppelbar_bis.value | default: mf.koppelbar_bis.value
           if chains != blank and chains > 1
             assign tile_label = 'heipard.blocks.icon_grid.connectable' | t
             assign tile_value = 'heipard.blocks.icon_grid.connectable_value' | t: count: chains
-          elsif mf.connectable.value == true
+          else
+            assign conn_flag = vmf.connectable.value | default: mf.connectable.value
+          endif
+          if tile_label == blank and conn_flag == true
             assign tile_label = 'heipard.blocks.icon_grid.connectable' | t
           endif
         when 'modi'
-          assign modes = mf.anzahl_leuchtmodi.value
+          assign modes = vmf.anzahl_leuchtmodi.value | default: mf.anzahl_leuchtmodi.value
           if modes != blank and modes > 1
             assign tile_label = 'heipard.blocks.icon_grid.modes' | t
             assign tile_value = 'heipard.blocks.icon_grid.modes_value' | t: count: modes
           endif
         when 'fernbedienung'
-          if mf.fernbedienung.value == true
+          assign remote_flag = vmf.fernbedienung.value | default: mf.fernbedienung.value
+          if remote_flag == true
             assign tile_label = 'heipard.blocks.icon_grid.remote' | t
           endif
         when 'schutzart'
-          assign ip = mf.ip_schutzart.value
+          assign ip = vmf.ip_schutzart.value | default: mf.ip_schutzart.value
           if ip != blank
             assign tile_label = 'heipard.blocks.icon_grid.protection' | t
             assign tile_value = ip

@@ -8,7 +8,7 @@
   Parameter: product, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
-  assign kelvin = product.metafields.heipard.farbtemperatur_kelvin.value
+  assign kelvin = product.selected_or_first_available_variant.metafields.heipard.farbtemperatur_kelvin.value | default: product.metafields.heipard.farbtemperatur_kelvin.value
   assign scale_min = 1800
   assign scale_max = 6500
   assign default_kicker = 'heipard.blocks.kelvin.kicker' | t

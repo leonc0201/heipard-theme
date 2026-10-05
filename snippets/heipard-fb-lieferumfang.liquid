@@ -9,7 +9,7 @@
   Parameter: product, image, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
-  assign raw = product.metafields.heipard.lieferumfang.value
+  assign raw = product.selected_or_first_available_variant.metafields.heipard.lieferumfang.value | default: product.metafields.heipard.lieferumfang.value
   assign items = raw | newline_to_br | split: '<br />'
   assign shown = 0
   assign default_kicker = 'heipard.blocks.lieferumfang.kicker' | t

@@ -21,7 +21,8 @@
   Parameter: product, image, data, kicker, title, body, label, uid, allow_loud
 {%- endcomment -%}
 {%- liquid
-  assign levels = product.metafields.heipard.dimmstufen.value
+  assign vmf = product.selected_or_first_available_variant.metafields.heipard
+  assign levels = vmf.dimmstufen.value | default: product.metafields.heipard.dimmstufen.value
   assign has_dimmer = false
   if levels != blank and levels.size > 1
     assign has_dimmer = true
@@ -44,7 +45,7 @@
   endif
 
   assign by_count = false
-  assign level_count = product.metafields.heipard.dimmstufen_anzahl.value
+  assign level_count = vmf.dimmstufen_anzahl.value | default: product.metafields.heipard.dimmstufen_anzahl.value
   if has_dimmer == false and level_count != blank and level_count > 1
     assign has_dimmer = true
     assign by_count = true

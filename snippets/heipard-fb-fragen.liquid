@@ -9,7 +9,7 @@
   Parameter: product, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
-  assign questions = product.metafields.heipard.fragen.value
+  assign questions = product.selected_or_first_available_variant.metafields.heipard.fragen.value | default: product.metafields.heipard.fragen.value
   assign shown = 0
   assign default_kicker = 'heipard.blocks.fragen.kicker' | t
   assign default_title = 'heipard.blocks.fragen.title' | t
