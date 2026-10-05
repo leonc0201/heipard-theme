@@ -30,7 +30,11 @@
 
   function refreshFeature(section, variantId) {
     var id = section.id.replace(/^shopify-section-/, '');
-    var url = window.location.pathname + '?variant=' + encodeURIComponent(variantId) + '&section_id=' + encodeURIComponent(id);
+    // Bestehende Parameter bleiben (z. B. preview_key bei Entwürfen), variant und section_id werden gesetzt.
+    var params = new URLSearchParams(window.location.search);
+    params.set('variant', variantId);
+    params.set('section_id', id);
+    var url = window.location.pathname + '?' + params.toString();
     return fetch(url)
       .then(function (r) { return r.text(); })
       .then(function (text) {
