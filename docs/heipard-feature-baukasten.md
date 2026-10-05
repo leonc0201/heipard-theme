@@ -83,7 +83,10 @@ Auf dem Handy bricht die Linie in zwei Zeilen (Zuleitung, darunter Kette).
 
 ### D4 Serienleiter
 
-Zeigt alle aktiven Produkte derselben Familie als Karten, das aktuelle Modell ist markiert.
+Hat das Produkt Varianten und tragen mindestens zwei davon eine Länge als Varianten-Metafeld
+(Gesamtlänge, sonst beleuchtete Länge, sonst Höhe), zeigt die Leiter die **Varianten als Stufen**
+(10 m, 15 m, 20 m), die gewählte Variante ist markiert; die Karten wechseln die Variante.
+Sonst zeigt sie alle aktiven Produkte derselben Familie als Karten, das aktuelle Modell ist markiert.
 Sortiert und beschriftet wird nach der Nennlänge: *Gesamtlänge inkl. Zuleitung*, falls gepflegt,
 sonst *Beleuchtete Länge*. Bitte je Familie einheitlich pflegen. Der Block steht immer am Ende in
 der Daten-Zone, egal wo er im Set liegt.
@@ -249,6 +252,13 @@ Die Einträge „Vorlage · …" und „Auto · …" gehören zu den drei Vorlag
 Produkten geteilt. Bitte nicht mit Inhalten füllen und nicht löschen.
 
 ## Metafelder für die Daten-Blöcke (Namespace `heipard`)
+
+**Variantenabhängige Werte.** Sechs Felder gibt es zusätzlich als Varianten-Metafelder mit denselben
+Keys und Typen: `gesamtlaenge_m`, `beleuchtete_laenge_m`, `led_anzahl`, `akkulaufzeit_h`, `breite_m`,
+`hoehe_m`. Spec-Kacheln, Kettenplan, Zeitband (Leuchtdauer), Kennzahl und Serienleiter lesen den Wert
+zuerst an der gewählten Variante, sonst am Produkt. Beim Variantenwechsel aktualisiert
+`assets/heipard-variant.js` die Spec-Kacheln und die Feature-Sektion ohne Neuladen (Section Rendering API
+mit `?variant=`). Bei Produkten mit nur einer Variante bleibt alles am Produkt.
 
 | Metafeld | Schlüssel | Typ | Für |
 |---|---|---|---|

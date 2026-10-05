@@ -16,18 +16,21 @@
     auto     flaeche, wenn Breite und Höhe gepflegt sind, sonst linie
 
   Fehlen Pflichtfelder, rendert der Block nichts (im Editor: Hinweis).
+  Variantenprodukte: Längen, LED-Anzahl, Breite und Höhe kommen zuerst aus den
+  Varianten-Metafeldern (heipard.*) der gewählten Variante, sonst vom Produkt.
   Parameter: product, variant, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
   assign mf = product.metafields.heipard
-  assign laenge = mf.beleuchtete_laenge_m.value
+  assign vmf = product.selected_or_first_available_variant.metafields.heipard
+  assign laenge = vmf.beleuchtete_laenge_m.value | default: mf.beleuchtete_laenge_m.value
   assign zuleitung = mf.zuleitung_m.value
-  assign punkte = mf.led_anzahl.value
+  assign punkte = vmf.led_anzahl.value | default: mf.led_anzahl.value
   assign abstand = mf.birnenabstand_cm.value
-  assign breite = mf.breite_m.value
-  assign hoehe = mf.hoehe_m.value
+  assign breite = vmf.breite_m.value | default: mf.breite_m.value
+  assign hoehe = vmf.hoehe_m.value | default: mf.hoehe_m.value
   assign koppel = mf.koppelbar_bis.value
-  assign gesamt = mf.gesamtlaenge_m.value
+  assign gesamt = vmf.gesamtlaenge_m.value | default: mf.gesamtlaenge_m.value
 
   assign variant = variant | default: 'auto'
   if variant == 'auto'

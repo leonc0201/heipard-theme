@@ -317,6 +317,10 @@
     {%- comment -%} PDP-Feature-Baukasten: global nach base.css, damit Abstaende nicht genullt werden {%- endcomment -%}
     {{ 'heipard-feature.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'heipard-theme-toggle.js' | asset_url }}" defer="defer"></script>
+    {%- if template.name == 'product' and product.has_only_default_variant == false -%}
+      {%- comment -%} Variantenabhängige Werte (Spec-Kacheln, Feature-Blöcke) ohne Neuladen {%- endcomment -%}
+      <script src="{{ 'heipard-variant.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}

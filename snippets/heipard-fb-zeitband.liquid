@@ -4,7 +4,8 @@
   Varianten:
     timer  An-Phase aus heipard.timer_dauer_h (Liste, z. B. 6 und 8). Bei mehreren
            Werten Auswahl per Chips (reines CSS über :has(), kein JavaScript).
-    solar  Tag laden, nachts leuchten; Leuchtdauer aus heipard.akkulaufzeit_h.
+    solar  Tag laden, nachts leuchten; Leuchtdauer aus heipard.akkulaufzeit_h
+           (zuerst an der gewählten Variante, sonst am Produkt).
            Die Darstellung ist schematisch (12 h Tag, 12 h Nacht).
     auto   solar, wenn heipard.stromquelle "Solar" ist, sonst timer
 
@@ -13,8 +14,9 @@
 {%- endcomment -%}
 {%- liquid
   assign mf = product.metafields.heipard
+  assign vmf = product.selected_or_first_available_variant.metafields.heipard
   assign timer = mf.timer_dauer_h.value
-  assign akku = mf.akkulaufzeit_h.value
+  assign akku = vmf.akkulaufzeit_h.value | default: mf.akkulaufzeit_h.value
 
   assign variant = variant | default: 'auto'
   if variant == 'auto'

@@ -1,0 +1,39 @@
+{%- comment -%}
+  Ein Eintrag der Serienleiter (D4). Gibt einen Sortierschlüssel, "@@key@@" und das
+  <li> aus; die Serienleiter sortiert die Einträge über den Schlüssel.
+  Parameter: p_len (Nennlänge in m oder blank), p_points, p_url, p_price (Cent),
+             p_title, is_current, max_len
+{%- endcomment -%}
+{%- liquid
+  assign sort_key = '99999999'
+  assign share = 100
+  if p_len != blank
+    assign sort_key = p_len | times: 100 | round | prepend: '00000000' | slice: -8, 8
+    if max_len > 0
+      assign share = p_len | times: 100.0 | divided_by: max_len | round
+    endif
+  endif
+-%}
+{{- sort_key -}}@@key@@
+<li class="heipard-serie__item{% if is_current %} is-current{% endif %}">
+  <a class="heipard-serie__link" href="{{ p_url }}"{% if is_current %} aria-current="page"{% endif %}>
+    <span class="heipard-serie__bar" style="--share: {{ share }}%;" aria-hidden="true"></span>
+    <span class="heipard-serie__length">
+      {%- if p_len != blank -%}
+        {%- capture p_len_txt -%}{%- render 'heipard-num', value: p_len -%}{%- endcapture -%}
+        {{- 'heipard.blocks.serienleiter.length' | t: value: p_len_txt -}}
+      {%- else -%}
+        {{- p_title | escape -}}
+      {%- endif -%}
+    </span>
+    {%- if p_points != blank and p_points > 0 -%}
+      <span class="heipard-serie__meta">{{ 'heipard.blocks.kettenplan.points' | t: count: p_points }}</span>
+    {%- endif -%}
+    <span class="heipard-serie__meta heipard-serie__price">{{ p_price | money }}</span>
+    {%- if is_current -%}
+      <span class="heipard-serie__flag">{{ 'heipard.blocks.serienleiter.current' | t }}</span>
+    {%- elsif p_len != blank -%}
+      <span class="visually-hidden">{{ p_title | escape }}</span>
+    {%- endif -%}
+  </a>
+</li>

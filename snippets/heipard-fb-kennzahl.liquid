@@ -23,7 +23,7 @@
   assign field = ''
   for candidate in candidates
     if known contains candidate
-      assign candidate_value = product.metafields.heipard[candidate].value
+      assign candidate_value = product.selected_or_first_available_variant.metafields.heipard[candidate].value | default: product.metafields.heipard[candidate].value
       if candidate_value != blank and candidate_value > 0
         assign field = candidate
         assign field_value = candidate_value

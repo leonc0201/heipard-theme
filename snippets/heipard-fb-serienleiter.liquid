@@ -1,21 +1,44 @@
 {%- comment -%}
-  D4 Serienleiter: Längenvarianten derselben Familie als Nachbarmodelle.
+  D4 Serienleiter: Längenstufen derselben Serie.
 
-  Quelle: Produkt-Metafeld heipard.familie (Code, z. B. "OL-G40"). Alle Produkte
-  der Familie liegen in der Smart Collection "familie-<code>" (Regel: Metafeld
-  Familie ist gleich Code). Die Kollektion liefert nur aktive Produkte.
-  Sortierung und Anzeige nach der Nennlänge: heipard.gesamtlaenge_m, falls gepflegt,
-  sonst heipard.beleuchtete_laenge_m. Das aktuelle Modell ist markiert.
+  Zwei Quellen, in dieser Reihenfolge:
+    Varianten  Hat das Produkt Varianten und tragen mindestens zwei davon eine Länge in
+               den Varianten-Metafeldern (heipard.gesamtlaenge_m, sonst beleuchtete_laenge_m,
+               sonst hoehe_m), zeigt die Leiter die Varianten als Stufen. Die gewählte
+               Variante ist markiert, die Links wechseln die Variante (?variant=).
+    Familie    Sonst alle aktiven Produkte der Familie (Produkt-Metafeld heipard.familie,
+               Smart Collection "familie-<code>"), sortiert nach Gesamtlänge, sonst
+               beleuchteter Länge. Das aktuelle Modell ist markiert.
 
-  Rendert nichts, wenn die Familie fehlt oder kein Nachbarmodell aktiv ist.
+  Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
+  assign current = product.selected_or_first_available_variant
+  assign mode = ''
+  assign max_len = 0
+
+  if product.has_only_default_variant == false
+    assign with_len = 0
+    for v in product.variants
+      assign v_len = v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.hoehe_m.value
+      if v_len != blank
+        assign with_len = with_len | plus: 1
+        if v_len > max_len
+          assign max_len = v_len
+        endif
+      endif
+    endfor
+    if with_len > 1
+      assign mode = 'varianten'
+    endif
+  endif
+
   assign familie = product.metafields.heipard.familie.value
-  assign others = 0
-  if familie != blank
+  if mode == blank and familie != blank
     assign fam_handle = familie | handleize | prepend: 'familie-'
     assign fam = collections[fam_handle]
+    assign others = 0
     assign max_len = 0
     for p in fam.products limit: 24
       if p.id != product.id
@@ -26,62 +49,54 @@
         assign max_len = p_len
       endif
     endfor
+    if others > 0
+      assign mode = 'familie'
+    endif
   endif
+
   assign default_kicker = 'heipard.blocks.serienleiter.kicker' | t
   assign default_title = 'heipard.blocks.serienleiter.title' | t
   assign head_kicker = kicker | default: default_kicker
   assign head_title = title | default: default_title
 -%}
-{%- if familie == blank -%}
-  {%- if request.design_mode -%}
+{%- if mode == blank -%}
+  {%- if request.design_mode and familie == blank -%}
     <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.familie' }}<!--fb-note-->
   {%- endif -%}
-{%- elsif others > 0 -%}
+{%- else -%}
   {%- capture entries -%}
-    {%- for p in fam.products limit: 24 -%}
-      {%- liquid
-        assign p_len = p.metafields.heipard.gesamtlaenge_m.value | default: p.metafields.heipard.beleuchtete_laenge_m.value
-        assign p_points = p.metafields.heipard.led_anzahl.value
-        assign sort_key = '99999999'
-        assign share = 100
-        if p_len != blank
-          assign sort_key = p_len | times: 100 | round | prepend: '00000000' | slice: -8, 8
-          if max_len > 0
-            assign share = p_len | times: 100.0 | divided_by: max_len | round
+    {%- if mode == 'varianten' -%}
+      {%- for v in product.variants -%}
+        {%- liquid
+          assign p_len = v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.hoehe_m.value
+          assign p_points = v.metafields.heipard.led_anzahl.value | default: product.metafields.heipard.led_anzahl.value
+          assign p_url = product.url | append: '?variant=' | append: v.id
+          assign p_price = v.price
+          assign p_title = v.title
+          assign is_current = false
+          if v.id == current.id
+            assign is_current = true
           endif
-        endif
-        assign is_current = false
-        if p.id == product.id
-          assign is_current = true
-        endif
-      -%}
-      {{- sort_key -}}@@key@@
-      <li class="heipard-serie__item{% if is_current %} is-current{% endif %}">
-        <a class="heipard-serie__link" href="{{ p.url }}"{% if is_current %} aria-current="page"{% endif %}>
-          <span class="heipard-serie__bar" style="--share: {{ share }}%;" aria-hidden="true"></span>
-          <span class="heipard-serie__length">
-            {%- if p_len != blank -%}
-              {%- capture p_len_txt -%}{%- render 'heipard-num', value: p_len -%}{%- endcapture -%}
-              {{- 'heipard.blocks.serienleiter.length' | t: value: p_len_txt -}}
-            {%- else -%}
-              {{- p.title | escape -}}
-            {%- endif -%}
-          </span>
-          {%- if p_points != blank and p_points > 0 -%}
-            <span class="heipard-serie__meta">{{ 'heipard.blocks.kettenplan.points' | t: count: p_points }}</span>
-          {%- endif -%}
-          <span class="heipard-serie__meta heipard-serie__price">{{ p.price | money }}</span>
-          {%- if is_current -%}
-            <span class="heipard-serie__flag">{{ 'heipard.blocks.serienleiter.current' | t }}</span>
-          {%- elsif p_len != blank -%}
-            <span class="visually-hidden">{{ p.title | escape }}</span>
-          {%- endif -%}
-        </a>
-      </li>
-      {%- unless forloop.last -%}@@item@@{%- endunless -%}
-    {%- endfor -%}
+        -%}
+        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, is_current: is_current, max_len: max_len -%}
+        {%- unless forloop.last -%}@@item@@{%- endunless -%}
+      {%- endfor -%}
+    {%- else -%}
+      {%- for p in fam.products limit: 24 -%}
+        {%- liquid
+          assign p_len = p.metafields.heipard.gesamtlaenge_m.value | default: p.metafields.heipard.beleuchtete_laenge_m.value
+          assign p_points = p.metafields.heipard.led_anzahl.value
+          assign is_current = false
+          if p.id == product.id
+            assign is_current = true
+          endif
+        -%}
+        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, is_current: is_current, max_len: max_len -%}
+        {%- unless forloop.last -%}@@item@@{%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
   {%- endcapture -%}
-  <div class="heipard-fb heipard-fb--serienleiter">
+  <div class="heipard-fb heipard-fb--serienleiter" data-heipard-serie="{{ mode }}">
     {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
     <ol class="heipard-serie">
       {%- assign sorted = entries | split: '@@item@@' | sort -%}

@@ -218,7 +218,7 @@
 {%- endif -%}
 
 {%- if main_html != blank or zone_html != blank or minis_html != blank -%}
-  <section class="heipard-section heipard-feature color-{{ section.settings.color_scheme }}">
+  <section class="heipard-section heipard-feature color-{{ section.settings.color_scheme }}" data-heipard-feature-section data-heipard-feature-script="{{ 'heipard-feature.js' | asset_url }}">
     <div class="page-width">
       {%- if main_html != blank -%}
         <div class="heipard-feature__head">

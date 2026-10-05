@@ -127,6 +127,14 @@ Offen:
 - [ ] **Kelvin-Skala** — der Verlauf endet in einem kühlen Weiß (Token `--heipard-kelvin-cool`). Bitte ansehen,
   ob das zur Regel „keine Blau-Verläufe" passt, sonst neutraler setzen.
 
+Erledigt am 2026-10-05:
+
+- [x] **Variantenabhängige Werte** — Varianten-Metafelder `gesamtlaenge_m`, `beleuchtete_laenge_m`, `led_anzahl`,
+  `akkulaufzeit_h`, `breite_m`, `hoehe_m` angelegt (Definitionen 433616912717 bis 433617076557). Theme liest
+  Variante vor Produkt, `heipard-variant.js` tauscht Spec-Kacheln und Feature-Sektion beim Wechsel aus,
+  Serienleiter zeigt Varianten als Stufen. Werte schreibt die Asset-Instanz. Offen: Prüfung auf einer
+  echten Produktseite, sobald Werte an `hp-dlm-100h` und `hp-rsp-180` stehen.
+
 Erledigt am 2026-10-02:
 
 - [x] **Kettenplan reduziert** — fehlt die beleuchtete Länge, ist aber `gesamtlaenge_m` gepflegt, zeigt der
