@@ -2,7 +2,8 @@
   Ein Eintrag der Serienleiter (D4). Gibt einen Sortierschlüssel, "@@key@@" und das
   <li> aus; die Serienleiter sortiert die Einträge über den Schlüssel.
   Parameter: p_len (Nennlänge in m oder blank), p_points, p_url, p_price (Cent),
-             p_title, is_current, max_len
+             p_title, p_label (optional: Beschriftung statt der Länge, z. B. Optionswert),
+             is_current, max_len
 {%- endcomment -%}
 {%- liquid
   assign sort_key = '99999999'
@@ -19,7 +20,9 @@
   <a class="heipard-serie__link" href="{{ p_url }}"{% if is_current %} aria-current="page"{% endif %}>
     <span class="heipard-serie__bar" style="--share: {{ share }}%;" aria-hidden="true"></span>
     <span class="heipard-serie__length">
-      {%- if p_len != blank -%}
+      {%- if p_label != blank -%}
+        {{- p_label | escape -}}
+      {%- elsif p_len != blank -%}
         {%- capture p_len_txt -%}{%- render 'heipard-num', value: p_len -%}{%- endcapture -%}
         {{- 'heipard.blocks.serienleiter.length' | t: value: p_len_txt -}}
       {%- else -%}

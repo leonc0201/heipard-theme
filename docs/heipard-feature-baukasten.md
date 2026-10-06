@@ -84,8 +84,9 @@ Auf dem Handy bricht die Linie in zwei Zeilen (Zuleitung, darunter Kette).
 ### D4 Serienleiter
 
 Hat das Produkt Varianten und tragen mindestens zwei davon eine Länge als Varianten-Metafeld
-(Gesamtlänge, sonst beleuchtete Länge, sonst Höhe), zeigt die Leiter die **Varianten als Stufen**
-(10 m, 15 m, 20 m), die gewählte Variante ist markiert; die Karten wechseln die Variante.
+(Gesamtlänge, sonst beleuchtete Länge, sonst Höhe), zeigt die Leiter die **Varianten als Stufen**,
+beschriftet mit dem Optionswert (10 m, 15 m, 20 m); die Länge aus dem Metafeld bestimmt Reihenfolge und
+Balken. Die gewählte Variante ist markiert; die Karten wechseln die Variante.
 Sonst zeigt sie alle aktiven Produkte derselben Familie als Karten, das aktuelle Modell ist markiert.
 Sortiert und beschriftet wird nach der Nennlänge: *Gesamtlänge inkl. Zuleitung*, falls gepflegt,
 sonst *Beleuchtete Länge*. Bitte je Familie einheitlich pflegen. Der Block steht immer am Ende in

@@ -185,11 +185,12 @@ Aus dem Produkt-Import Welle 1b (2026-10-02):
 - [ ] **OL-Familien** — Gegenüberstellung OL gegen OLA, OLH, OLS im Plan `docs/heipard-import-welle1b-plan.md`,
   Abschnitt 7. Die betroffenen Produkte tragen `pruefen-mapping-ol`.
 
-- [ ] **Ausverkauft-Zustand des Kaufbuttons** — bei `hp-dlm-100h` (Variante 20 m, Bestand 0) überlagern sich
-  „Ausverkauft" und „In den Warenkorb" im Button (`heipard-product.css` gegen Dawns Sold-out-Logik). Betrifft alle
-  Varianten ohne Bestand.
-- [ ] **Serienleiter-Beschriftung bei Variantenstufen** — zeigt die Gesamtlänge (13 m / 23 m), die Option heißt
-  10 m / 20 m. Entscheiden, ob die Leiter den Optionswert oder die beleuchtete Länge zeigen soll.
+- [ ] **Bestandsführung vor Launch klären** (Daniel) — Quelle der Bestände, Pflege, Verhalten beim Verkauf bei
+  Bestand 0. Stand 2026-10-06 stehen die Welle-1b-Varianten auf Bestand 0 und zeigen „Ausverkauft".
+- [x] **Ausverkauft-Zustand des Kaufbuttons** (2026-10-06) — Dawn schreibt den Sold-out-Text in das erste `span`
+  des Buttons, das war unser Icon. Text-Span steht jetzt zuerst, Icon per CSS davor, bei disabled ausgeblendet.
+- [x] **Serienleiter-Beschriftung** (2026-10-06) — Variantenstufen zeigen den Optionswert (10 m, 20 m), die
+  Familienansicht weiter die Länge aus dem Metafeld bzw. den Produktnamen.
 
 ## Produkt-Import Welle 1b (Stand 2026-10-02)
 

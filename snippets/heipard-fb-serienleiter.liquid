@@ -4,7 +4,9 @@
   Zwei Quellen, in dieser Reihenfolge:
     Varianten  Hat das Produkt Varianten und tragen mindestens zwei davon eine Länge in
                den Varianten-Metafeldern (heipard.gesamtlaenge_m, sonst beleuchtete_laenge_m,
-               sonst hoehe_m), zeigt die Leiter die Varianten als Stufen. Die gewählte
+               sonst hoehe_m), zeigt die Leiter die Varianten als Stufen, beschriftet mit
+               dem Optionswert (Option Länge, Höhe oder Größe, sonst Variantentitel); die
+               Länge aus dem Metafeld bestimmt Reihenfolge und Balken. Die gewählte
                Variante ist markiert, die Links wechseln die Variante (?variant=).
     Familie    Sonst alle aktiven Produkte der Familie (Produkt-Metafeld heipard.familie,
                Smart Collection "familie-<code>"), sortiert nach Gesamtlänge, sonst
@@ -31,6 +33,13 @@
     endfor
     if with_len > 1
       assign mode = 'varianten'
+      assign opt_index = -1
+      assign size_options = 'Länge,Höhe,Größe' | split: ','
+      for opt in product.options_with_values
+        if opt_index < 0 and size_options contains opt.name
+          assign opt_index = forloop.index0
+        endif
+      endfor
     endif
   endif
 
@@ -73,12 +82,16 @@
           assign p_url = product.url | append: '?variant=' | append: v.id
           assign p_price = v.price
           assign p_title = v.title
+          assign p_label = v.title
+          if opt_index >= 0
+            assign p_label = v.options[opt_index]
+          endif
           assign is_current = false
           if v.id == current.id
             assign is_current = true
           endif
         -%}
-        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, is_current: is_current, max_len: max_len -%}
+        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, p_label: p_label, is_current: is_current, max_len: max_len -%}
         {%- unless forloop.last -%}@@item@@{%- endunless -%}
       {%- endfor -%}
     {%- else -%}

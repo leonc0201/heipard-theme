@@ -120,11 +120,11 @@
             class="product-form__submit button button--primary heipard-atc"
             {% if atc_disabled %}disabled{% endif %}
           >
-            {%- unless atc_disabled -%}
-              <span class="heipard-atc__icon svg-wrapper" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v13a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              </span>
-            {%- endunless -%}
+            {%- comment -%}
+              Das Text-Span muss das erste span im Button sein: Dawns product-form.js schreibt
+              „Ausverkauft“ in button.querySelector('span'). Das Icon steht deshalb dahinter
+              und wird per CSS (order) nach vorn gesetzt; bei disabled blendet CSS es aus.
+            {%- endcomment -%}
             <span>
               {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
@@ -133,6 +133,9 @@
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
+            </span>
+            <span class="heipard-atc__icon svg-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v13a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             </span>
             {%- render 'loading-spinner' -%}
           </button>
