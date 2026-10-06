@@ -60,7 +60,8 @@
   }
 
   function start() {
-    if (typeof subscribe !== 'function' || !window.PUB_SUB_EVENTS) return false;
+    // PUB_SUB_EVENTS ist in constants.js als const deklariert und damit keine window-Eigenschaft.
+    if (typeof subscribe !== 'function' || typeof PUB_SUB_EVENTS === 'undefined') return false;
     subscribe(PUB_SUB_EVENTS.variantChange, onVariantChange);
     return true;
   }
