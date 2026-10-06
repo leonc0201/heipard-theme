@@ -132,8 +132,10 @@ Erledigt am 2026-10-05:
 - [x] **Variantenabhängige Werte** — 18 Varianten-Metafelder angelegt (alle Keys aus `varianten_werte.csv`
   außer Lichtfarbe; Definitionen 433616912717 bis 433617076557 und 433719705933 bis 433720066381). Theme liest
   jedes `heipard`-Feld zuerst an der Variante, dann am Produkt, `heipard-variant.js` tauscht Spec-Kacheln und Feature-Sektion beim Wechsel aus,
-  Serienleiter zeigt Varianten als Stufen. Werte schreibt die Asset-Instanz. Offen: Prüfung auf einer
-  echten Produktseite, sobald Werte an `hp-dlm-100h` und `hp-rsp-180` stehen.
+  Serienleiter zeigt Varianten als Stufen. Werte schreibt die Asset-Instanz. Am 2026-10-06 auf der echten
+  Seite von `hp-dlm-100h` geprüft (Edge headless): Spec-Kacheln, Kettenplan, Icon-Grid und Serienleiter wechseln
+  mit, die Steuerung wird neu aufgebaut. Dabei gefunden und behoben: `variant_picker` fehlte im Produkt-Template,
+  `heipard-variant.js` prüfte `window.PUB_SUB_EVENTS` statt der Konstante.
 
 Erledigt am 2026-10-02:
 
@@ -182,6 +184,12 @@ Aus dem Produkt-Import Welle 1b (2026-10-02):
   desselben Produkts (Titel 7,5 m/16 Birnen gegen 8,5 m/16+1 Birnen)? Wenn ja, welche gilt?
 - [ ] **OL-Familien** — Gegenüberstellung OL gegen OLA, OLH, OLS im Plan `docs/heipard-import-welle1b-plan.md`,
   Abschnitt 7. Die betroffenen Produkte tragen `pruefen-mapping-ol`.
+
+- [ ] **Ausverkauft-Zustand des Kaufbuttons** — bei `hp-dlm-100h` (Variante 20 m, Bestand 0) überlagern sich
+  „Ausverkauft" und „In den Warenkorb" im Button (`heipard-product.css` gegen Dawns Sold-out-Logik). Betrifft alle
+  Varianten ohne Bestand.
+- [ ] **Serienleiter-Beschriftung bei Variantenstufen** — zeigt die Gesamtlänge (13 m / 23 m), die Option heißt
+  10 m / 20 m. Entscheiden, ob die Leiter den Optionswert oder die beleuchtete Länge zeigen soll.
 
 ## Produkt-Import Welle 1b (Stand 2026-10-02)
 
