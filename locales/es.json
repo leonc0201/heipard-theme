@@ -200,6 +200,13 @@
           "image_alt": "Aviso sobre la garantía legal en la UE",
           "opens_new_tab": "Se abre en una pestaña nueva"
         },
+        "gpsr": {
+          "heading": "Información del fabricante",
+          "note": "Conforme al Reglamento (UE) 2023/988 relativo a la seguridad general de los productos (RSGP)",
+          "country": "Alemania",
+          "representative": "Sr. {{ name }} (gerente)",
+          "email": "Correo electrónico"
+        },
         "shipping_tab": {
           "shipping_heading": "Envío",
           "zone_domestic": "Alemania",

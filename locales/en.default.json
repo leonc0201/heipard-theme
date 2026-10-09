@@ -384,6 +384,13 @@
           "image_alt": "Notice on the statutory legal guarantee in the EU",
           "opens_new_tab": "Opens in a new tab"
         },
+        "gpsr": {
+          "heading": "Manufacturer information",
+          "note": "In accordance with the General Product Safety Regulation (EU) 2023/988 (GPSR)",
+          "country": "Germany",
+          "representative": "Mr {{ name }} (Managing Director)",
+          "email": "Email"
+        },
         "shipping_tab": {
           "shipping_heading": "Shipping",
           "zone_domestic": "Germany",

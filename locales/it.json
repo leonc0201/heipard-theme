@@ -200,6 +200,13 @@
           "image_alt": "Informativa sulla garanzia legale nell'UE",
           "opens_new_tab": "Si apre in una nuova scheda"
         },
+        "gpsr": {
+          "heading": "Informazioni sul produttore",
+          "note": "Ai sensi del Regolamento (UE) 2023/988 relativo alla sicurezza generale dei prodotti (GPSR)",
+          "country": "Germania",
+          "representative": "Sig. {{ name }} (amministratore)",
+          "email": "E-mail"
+        },
         "shipping_tab": {
           "shipping_heading": "Spedizione",
           "zone_domestic": "Germania",

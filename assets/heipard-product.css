@@ -353,3 +353,56 @@
   width: 100%;
   height: auto;
 }
+
+/* --- Herstellerangaben GPSR (heipard-gpsr) --------------------------------
+   Kleine Info-Box unter den Akkordeons, bewusst kein Tab: Pflichtangabe soll
+   ohne Klick sichtbar sein.
+--------------------------------------------------------------------------- */
+
+.heipard-gpsr {
+  margin: 2.4rem 0 0;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklch, var(--muted) 45%, transparent);
+  font-family: var(--font-heipard-sans);
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+}
+
+.heipard-gpsr__title {
+  margin: 0;
+  font-family: var(--font-heipard-sans);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-gpsr__note {
+  margin: 0.2rem 0 0.8rem;
+  font-size: 1.2rem;
+}
+
+.heipard-gpsr__address {
+  margin: 0;
+  font-style: normal;
+}
+
+.heipard-gpsr__address strong {
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.heipard-gpsr__address a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  word-break: break-word;
+}
+
+.heipard-gpsr__address a:hover,
+.heipard-gpsr__address a:focus-visible {
+  color: var(--primary);
+}

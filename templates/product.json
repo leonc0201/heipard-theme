@@ -87,6 +87,10 @@
             "content": "",
             "heipard_dynamic": "shipping_returns"
           }
+        },
+        "gpsr": {
+          "type": "custom_liquid",
+          "settings": { "custom_liquid": "{% render 'heipard-gpsr' %}" }
         }
       },
       "block_order": [
@@ -103,7 +107,8 @@
         "acc_guarantee",
         "acc_tech",
         "acc_install",
-        "acc_ship"
+        "acc_ship",
+        "gpsr"
       ],
       "settings": {
         "enable_sticky_info": true,

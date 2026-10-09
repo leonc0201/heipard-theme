@@ -1,0 +1,35 @@
+{%- comment -%}
+  HeiPard — Herstellerangaben nach GPSR (Verordnung (EU) 2023/988, Art. 19).
+
+  Kleine Info-Box unter den PDP-Akkordeons. Pflichtangaben im Fernabsatz:
+  Name, Postanschrift und elektronische Adresse des Herstellers. HeiPard ist
+  die Eigenmarke der C & L Handels GmbH, daher gilt sie als Hersteller
+  (Art. 3 Nr. 8 GPSR).
+
+  Firmendaten sind sprachunabhaengig und stehen deshalb hier im Snippet.
+  Alle Beschriftungen kommen aus products.product.heipard.gpsr.* (5 Sprachen).
+{%- endcomment -%}
+
+{%- liquid
+  assign gpsr_company = 'C & L Handels GmbH'
+  assign gpsr_street = 'Formerweg 12'
+  assign gpsr_city = '47877 Willich'
+  assign gpsr_ceo = 'Leon Chen'
+  assign gpsr_email = 'info@heipard.com'
+-%}
+
+<section class="heipard-gpsr" aria-labelledby="HeipardGpsr">
+  <h2 class="heipard-gpsr__title" id="HeipardGpsr">
+    {{- 'products.product.heipard.gpsr.heading' | t -}}
+  </h2>
+  <p class="heipard-gpsr__note">{{ 'products.product.heipard.gpsr.note' | t }}</p>
+  <address class="heipard-gpsr__address">
+    <strong>{{ gpsr_company | escape }}</strong><br>
+    {{ gpsr_street }}<br>
+    {{ gpsr_city }}<br>
+    {{ 'products.product.heipard.gpsr.country' | t }}<br>
+    {{ 'products.product.heipard.gpsr.representative' | t: name: gpsr_ceo }}<br>
+    {{ 'products.product.heipard.gpsr.email' | t }}:
+    <a href="mailto:{{ gpsr_email }}">{{ gpsr_email }}</a>
+  </address>
+</section>
