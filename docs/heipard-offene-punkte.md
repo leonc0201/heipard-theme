@@ -16,7 +16,7 @@ oder ein neutraler, faktisch sicherer Text.
 - [ ] **Garantie-Staffel je Produktkategorie** — konkrete Jahre pro Kategorie (via Metafield `heipard.garantie_jahre`).
 - [ ] **Rücksendekosten** — wer trägt sie? (AGB/Widerruf) → Wording „30 Tage Rückgaberecht".
 - [ ] **„Kunden" vs. „Kund:innen"** — Markenstimme-Entscheidung (aktuell „Kunden").
-- [ ] **DSGVO Schriften** — vor Launch Fraunces/Inter selbst hosten statt Google Fonts.
+- [x] **DSGVO Schriften** — Fraunces/Inter selbst gehostet (assets/heipard-*-var.woff2, Lizenzen in docs/fonts/).
 - [ ] **Hero-Bild** — aktuell KI-generiertes Platzhalterbild (`assets/heipard-hero.jpg`);
   final durch echtes Foto ersetzen? Lizenz/Endgültigkeit klären.
 - [ ] **Header — „kleine Fixes"** (von Leon erwähnt, im letzten Schritt sammeln/umsetzen).

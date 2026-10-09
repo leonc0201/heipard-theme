@@ -41,19 +41,43 @@
     {%- endunless -%}
 
     {%- comment -%}
-      HeiPard-Markenschriften: Fraunces (Display) + Inter (Body/UI).
-      [TBD: DSGVO] Vor dem Launch auf selbst-gehostete Fonts umstellen - das
-      direkte Laden von Google Fonts ist fuer DE-Shops abmahn-riskant. Fuer die
-      Bauphase/Preview vorerst ueber Google Fonts, damit die Optik 1:1 sitzt.
+      HeiPard-Markenschriften: Fraunces (Display) + Inter (Body/UI), selbst gehostet
+      (DSGVO: keine Verbindung zu Google). Variable WOFF2, Subset Latin + Latin-Ext,
+      Gewichtsachse 400–700. Fraunces mit opsz-Achse, Inter auf opsz 14 fixiert
+      (entspricht der bisherigen Google-Fonts-Einbindung). Lizenz: SIL OFL 1.1.
     {%- endcomment -%}
-    {% comment %}theme-check-disable RemoteAsset{% endcomment %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
-    >
-    {% comment %}theme-check-enable RemoteAsset{% endcomment %}
+    <link rel="preload" as="font" href="{{ 'heipard-inter-var.woff2' | asset_url }}" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="{{ 'heipard-fraunces-var.woff2' | asset_url }}" type="font/woff2" crossorigin>
+    {% style %}
+      @font-face {
+        font-family: "Fraunces";
+        src: url("{{ 'heipard-fraunces-var.woff2' | asset_url }}") format("woff2");
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Fraunces";
+        src: url("{{ 'heipard-fraunces-italic-var.woff2' | asset_url }}") format("woff2");
+        font-weight: 400 700;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("{{ 'heipard-inter-var.woff2' | asset_url }}") format("woff2");
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("{{ 'heipard-inter-italic-var.woff2' | asset_url }}") format("woff2");
+        font-weight: 400 700;
+        font-style: italic;
+        font-display: swap;
+      }
+    {% endstyle %}
 
     <title>
       {{ page_title }}
