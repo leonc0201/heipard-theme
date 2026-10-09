@@ -600,10 +600,6 @@
         "power_source": "Source d'alimentation",
         "light_color": "Couleur de la lumière",
         "protection_rating": "Indice de protection"
-      },
-      "warranty_years": {
-        "one": "{{ years }} ans de garantie",
-        "other": "{{ years }} ans de garantie"
       }
     }
   }

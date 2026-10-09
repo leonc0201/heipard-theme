@@ -4,7 +4,7 @@
   Welches Metafeld gezeigt wird, steht im JSON-Feld des Blocks:
     { "feld": "beleuchtete_laenge_m" }
   Erlaubt: beleuchtete_laenge_m, gesamtlaenge_m, led_anzahl, farbtemperatur_kelvin,
-  akkulaufzeit_h, hoehe_m, breite_m, koppelbar_bis, garantie_jahre.
+  akkulaufzeit_h, hoehe_m, breite_m, koppelbar_bis.
   Ohne Vorgabe nimmt der Block das erste gepflegte Feld in dieser Reihenfolge:
   akkulaufzeit_h, hoehe_m, beleuchtete_laenge_m, led_anzahl, farbtemperatur_kelvin.
 
@@ -14,7 +14,7 @@
   Parameter: product, data, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
-  assign known = 'beleuchtete_laenge_m,gesamtlaenge_m,led_anzahl,farbtemperatur_kelvin,akkulaufzeit_h,hoehe_m,breite_m,koppelbar_bis,garantie_jahre' | split: ','
+  assign known = 'beleuchtete_laenge_m,gesamtlaenge_m,led_anzahl,farbtemperatur_kelvin,akkulaufzeit_h,hoehe_m,breite_m,koppelbar_bis' | split: ','
   assign candidates = 'akkulaufzeit_h,hoehe_m,beleuchtete_laenge_m,led_anzahl,farbtemperatur_kelvin' | split: ','
   if data.feld != blank
     assign candidates = data.feld | split: ','

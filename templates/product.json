@@ -44,10 +44,6 @@
           "type": "custom_liquid",
           "settings": { "custom_liquid": "{% render 'heipard-product-specs', product: product %}" }
         },
-        "warranty": {
-          "type": "custom_liquid",
-          "settings": { "custom_liquid": "{% render 'heipard-product-warranty', product: product %}" }
-        },
         "quantity": { "type": "quantity_selector", "settings": {} },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -100,7 +96,6 @@
         "price",
         "variant_picker",
         "specs",
-        "warranty",
         "quantity",
         "buy_buttons",
         "description",

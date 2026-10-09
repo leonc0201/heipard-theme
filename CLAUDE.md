@@ -39,7 +39,7 @@ Headlines: charaktervolle Serif (Auswahl via Impeccable `/typeset`, Richtung Fra
 - Ansprache durchgängig "du"
 - VERBOTEN: "Made in …", "Designed in …", "Gemacht am/in …", "deutsche Ingenieurskunst", erfundene Gründungsjahre, erfundene Garantie-/Versandkonditionen. NIEMALS Fakten erfinden — fehlende Fakten als `[TBD: …]` markieren und nachfragen.
 - Herkunft NUR über faktische Trust-Signale: "Versand aus Deutschland", "Service & Support aus Deutschland", "Heimat am Niederrhein" (Über-uns-Story)
-- Garantie produktspezifisch via Metafield (2–5 Jahre), NIE pauschal sitewide
+- KEINE Garantie: HeiPard gibt keine Herstellergarantie, nur die gesetzliche Gewährleistung (2 Jahre). Keine Garantie-Zeile, keine Garantie-Badges/-Signale, kein Metafeld `garantie_jahre` im Theme
 - Preise clean, KEINE Streichpreis-/Rabatt-Optik (compare_at_price-Logik vorbereiten, aber Default ohne Badges)
 - Copyright: "© 2026 HeiPard — eine Marke der C&L Handels GmbH"
 
@@ -47,13 +47,13 @@ Headlines: charaktervolle Serif (Auswahl via Impeccable `/typeset`, Richtung Fra
 
 - Header: Kategorien direkt in der Navigation (kein generisches "Produkte"-Dropdown), Lichtschalter, Suche, Account, Warenkorb
 - Startseite: Hero (weiße Headline + Akzentwort Orange, dezenter Gradient, Saison-Badge, 2 CTAs) → Trust-Bar (4 Signale mit Sublines) → Kategorie-Bento-Grid (asymmetrisch; untere Reihe: hohe Kacheln, keine flachen Banner) → Bestseller → Anlass-Kollektionen (immer farbig) → Brand-Story → Händler-Teaser → Footer
-- PDP: Galerie (Produkt + Stimmung + Technik-Detail) → Spec-Kacheln aus Metafields → Garantie-Zeile → Beschreibung → Feature-Sektion (3 alternierende Bild/Text-Blöcke contained, danach 3er-Icon-Grid; befüllt via Metafields/Section-Blocks) → Accordions (Technische Details, Installation & Pflege, Versand & Rückgabe) → "Passt dazu"
+- PDP: Galerie (Produkt + Stimmung + Technik-Detail) → Spec-Kacheln aus Metafields → Beschreibung → Feature-Sektion (3 alternierende Bild/Text-Blöcke contained, danach 3er-Icon-Grid; befüllt via Metafields/Section-Blocks) → Accordions (Technische Details, Installation & Pflege, Versand & Rückgabe) → "Passt dazu"
 - Kollektion: Filter-Sidebar (Stromquelle, Länge, Lichtfarbe, Einsatzbereich, IP) via Search & Discovery, Karten mit Stromquellen-Pill
 - ABSOLUT VERBOTEN auf PDPs: Amazon-A+-Infografik-Bilder als Content, Text in Bildern
 
 ## Metafields (Namespace `heipard`)
 
-stromquelle · laenge_m · led_anzahl · lichtfarbe · ip_schutzart · einsatzbereich · leuchtmodi · connectable · smart · garantie_jahre · feature_blocks (für PDP-Feature-Sektion)
+stromquelle · laenge_m · led_anzahl · lichtfarbe · ip_schutzart · einsatzbereich · leuchtmodi · connectable · smart · feature_blocks (für PDP-Feature-Sektion)
 
 ## Workflow-Regeln
 

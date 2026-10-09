@@ -204,7 +204,7 @@ Aufklappbare Zeilen, jede nur wenn der Wert gepflegt ist. Steht in der Daten-Zon
 
 Im JSON-Feld steht, welches Metafeld groß gezeigt wird: `{"feld": "beleuchtete_laenge_m"}`.
 Möglich: `beleuchtete_laenge_m`, `gesamtlaenge_m`, `led_anzahl`, `farbtemperatur_kelvin`,
-`akkulaufzeit_h`, `hoehe_m`, `breite_m`, `koppelbar_bis`, `garantie_jahre`.
+`akkulaufzeit_h`, `hoehe_m`, `breite_m`, `koppelbar_bis`.
 Ohne Vorgabe nimmt der Block das erste gepflegte Feld aus: Leuchtzeit, Höhe, Länge, Lichtpunkte, Kelvin.
 Kicker, Titel und Text des Blocks erscheinen rechts neben der Zahl.
 

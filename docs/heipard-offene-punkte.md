@@ -13,7 +13,7 @@ oder ein neutraler, faktisch sicherer Text.
   „Krefeld" aus dem Prototyp ist eine Halluzination und bleibt draußen.
 - [ ] **Service-Telefonnummer** — echte Nummer für Footer/Kontakt (Zeiten Mo–Fr 9–16 Uhr ✅ bestätigt).
 - [ ] **Exakter Logo-Orange-Hexwert** — aktuell Arbeitswert `#E87A2E` / Token `--brand`; finalen Markenwert bestätigen.
-- [ ] **Garantie-Staffel je Produktkategorie** — konkrete Jahre pro Kategorie (via Metafield `heipard.garantie_jahre`).
+- [x] ~~Garantie-Staffel je Produktkategorie~~ — entfällt: keine Herstellergarantie, nur gesetzliche Gewährleistung (2 Jahre). Garantie-Zeile, Trust-Signal und `garantie_jahre` aus dem Theme entfernt.
 - [ ] **Rücksendekosten** — wer trägt sie? (AGB/Widerruf) → Wording „30 Tage Rückgaberecht".
 - [ ] **„Kunden" vs. „Kund:innen"** — Markenstimme-Entscheidung (aktuell „Kunden").
 - [x] **DSGVO Schriften** — Fraunces/Inter selbst gehostet (assets/heipard-*-var.woff2, Lizenzen in docs/fonts/).

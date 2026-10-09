@@ -33,10 +33,6 @@
         "power_source": "Stromquelle",
         "light_color": "Lichtfarbe",
         "protection_rating": "Schutzart"
-      },
-      "warranty_years": {
-        "one": "{{ years }} Jahr Garantie",
-        "other": "{{ years }} Jahre Garantie"
       }
     },
     "format": {
@@ -239,10 +235,6 @@
           "koppelbar_bis": {
             "value": "{{ value }}",
             "label": "Ketten koppelbar"
-          },
-          "garantie_jahre": {
-            "value": "{{ value }}",
-            "label": "Jahre Garantie"
           }
         }
       },

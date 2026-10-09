@@ -33,10 +33,6 @@
         "power_source": "Power source",
         "light_color": "Light colour",
         "protection_rating": "Protection rating"
-      },
-      "warranty_years": {
-        "one": "{{ years }} year warranty",
-        "other": "{{ years }} years warranty"
       }
     },
     "format": {
@@ -239,10 +235,6 @@
           "koppelbar_bis": {
             "value": "{{ value }}",
             "label": "connectable strings"
-          },
-          "garantie_jahre": {
-            "value": "{{ value }}",
-            "label": "year warranty"
           }
         }
       },

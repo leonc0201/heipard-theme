@@ -1,10 +1,11 @@
 {% comment %}
-  HeiPard Trust-Bar — 4 Vertrauenssignale (Icon + Titel + Subline)
+  HeiPard Trust-Bar — Vertrauenssignale (Icon + Titel + Subline); Spaltenzahl = Anzahl Bloecke.
+  Keine Garantie-Signale: HeiPard gibt keine Herstellergarantie, nur die gesetzliche Gewaehrleistung.
   Texte aus docs/lovable-reference Abschnitt 4 (bestätigt).
   Blöcke editierbar im Customizer.
 {% endcomment %}
 
-<section class="heipard-trust color-{{ section.settings.color_scheme }}">
+<section class="heipard-trust color-{{ section.settings.color_scheme }}" style="--heipard-trust-cols: {{ section.blocks.size | at_least: 1 | at_most: 4 }};">
   <div class="heipard-trust__inner page-width">
     {%- for block in section.blocks -%}
       <div class="heipard-trust__item" {{ block.shopify_attributes }}>
@@ -12,8 +13,6 @@
           {%- case block.settings.icon -%}
             {%- when 'shipping' -%}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5h11v9.5H3z"/><path d="M14 9.5h3.5L21 13v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/></svg>
-            {%- when 'guarantee' -%}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v5.2c0 4.6-3 7.6-7 9.2-4-1.6-7-4.6-7-9.2V5.6z"/><path d="M9 12l2 2 4-4"/></svg>
             {%- when 'returns' -%}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a8 8 0 0 1 13.7-3.7L20 8"/><path d="M20 4v4h-4"/><path d="M20 14a8 8 0 0 1-13.7 3.7L4 16"/><path d="M4 20v-4h4"/></svg>
             {%- when 'lights' -%}
@@ -68,7 +67,6 @@
           "label": "Icon",
           "options": [
             { "value": "shipping", "label": "Versand" },
-            { "value": "guarantee", "label": "Garantie" },
             { "value": "returns", "label": "Rueckgabe" },
             { "value": "lights", "label": "Sortiment/Leuchten" },
             { "value": "service", "label": "Service" }
@@ -86,7 +84,6 @@
       "name": "HeiPard Trust-Bar",
       "blocks": [
         { "type": "signal", "settings": { "icon": "shipping", "title": "Versand aus Deutschland", "subline": "Schnell bei dir" } },
-        { "type": "signal", "settings": { "icon": "guarantee", "title": "Bis zu 5 Jahre Garantie", "subline": "Auf ausgewählte Modelle" } },
         { "type": "signal", "settings": { "icon": "lights", "title": "Lichterketten & Solarleuchten", "subline": "Für drinnen und draußen" } },
         { "type": "signal", "settings": { "icon": "service", "title": "Service aus Deutschland", "subline": "Mo–Fr 9–16 Uhr" } }
       ]

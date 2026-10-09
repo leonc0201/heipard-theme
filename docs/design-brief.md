@@ -124,7 +124,7 @@
 ## 8. Fakten-Checkliste — VOR Theme-Build intern verifizieren
 
 - [ ] Versandkosten: "ab 4,90 € / kostenlos ab 50 €" (Prototyp-Erfindung — echte Konditionen einsetzen)
-- [ ] Garantie-Staffel je Produktkategorie (2–5 Jahre, Metafield-Werte)
+- [x] ~~Garantie-Staffel je Produktkategorie~~ — entfällt, keine Herstellergarantie (nur gesetzliche Gewährleistung)
 - [ ] "Versand aus Deutschland" faktisch korrekt?
 - [ ] Service-Telefonnummer + echte Erreichbarkeitszeiten
 - [ ] Standort-Wording ("Heimat am Niederrhein" ok? Jüchen vs. Willich)
