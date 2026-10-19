@@ -174,21 +174,29 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
   Handy unverändert. Umsetzung: `heipard_rail` in `product-media-gallery.liquid`, CSS in
   `heipard-product.css`, Logik in `assets/heipard-gallery.js`. Offline geprüft an hp-npt-210, hp-dct-200 und
   hp-ola-s14-15-eu (echtes Seiten-Markup, Live-CSS/JS vom CDN).
-- [ ] **Prüfung auf der echten Seite** — wegen des Shop-Passworts nur mit Bypass möglich (Passwort oder ein
-  Draft-Produkt für `onlineStorePreviewUrl`).
+- [x] **Prüfung auf der echten Seite** (2026-10-19, mit Storefront-Passwort) — siehe Farbfilter.
 - [x] **Medien anderer Varianten ausblenden** — Dawns `hide_variants` (seit Projektbeginn aktiv) blendet nur das
   eine Bild je Variante aus. Leon: so lassen.
 - [x] **Farbfilter** (2026-10-19) — Varianten-Metafeld `heipard.galerie_medien` (list.file_reference, schreibt die
   Asset-Instanz). Sichtbar: Liste der gewählten Variante, ihr Variantenbild und alle Medien, die in keiner Liste
   stehen. Position 1 bleibt sichtbar, auch wenn sie das Bild einer anderen Variante ist (dafür ist sie bei aktiver
   Liste von Dawns `hide_variants` ausgenommen). Reihenfolge wie Dawn: Variantenbild vorn, Position 1 direkt
-  dahinter. Ohne Liste für die gewählte Variante: keine Filterung. Beim Laden rechnet Liquid
+  dahinter (Dawn-Standard, so gewollt). Bei aktiver Liste sind Position 1 und alle Medien der eigenen Liste
+  von `hide_variants` ausgenommen (live an hp-dct-200 nötig: das Variantenbild von 3 x 2 m Kaltweiß steht in
+  der Liste von 3 x 3 m Kaltweiß). Ohne Liste für die gewählte Variante: keine Filterung. Beim Laden rechnet Liquid
   (`product-media-gallery`, Klasse `heipard-media--filtered`), beim Variantenwechsel `heipard-gallery.js` aus dem
   JSON `script[data-heipard-galerie]`, ohne zusätzlichen Serverabruf. Gefiltert werden Hauptbilder, Vorschaubilder
   und Lightbox; Spalte, Pfeile und Dawns Wischgalerie zählen die gefilterte Menge. Offline geprüft (Liquid mit
   LiquidJS, Variantenwechsel im Browser) mit einer aus den Dateinamen abgeleiteten Zuordnung.
-- [ ] **Farbfilter live prüfen** — an hp-npt-210 und hp-dct-200, sobald die Asset-Instanz die Listen geschrieben
-  hat und das Storefront-Passwort vorliegt.
+- [x] **Farbfilter live geprüft** (2026-10-19) — hp-npt-210, hp-dct-200, hp-ola-s14-15-eu, hp-isl-264,
+  hp-dfm-400-eu-2, Desktop und Handy, echte Variantenwahl: 53 Schritte, sichtbare Medien jeweils gleich der aus
+  den Admin-Daten berechneten Erwartung, Lightbox- und Handy-Zähler gleich der sichtbaren Menge, keine
+  JS-Fehler. Live gefunden und behoben: eigene Liste von `hide_variants` ausnehmen, Vorschaubilder nach dem
+  Wechsel in Hauptbild-Reihenfolge, Spalte ohne Verankerung und Einrasten (sonst Sprung um eine Kachel).
+  Liquid liest `galerie_medien` trotz Storefront-Zugriff NONE; im Code gibt es keinen Storefront-API-Aufruf.
+- [ ] **Medien ohne Liste, die eine Lichtfarbe zeigen** (für die Asset-Instanz) — erscheinen bei jeder Farbe:
+  hp-isl-264 `91Y4CjmKIxL` und `91hg9JtjqDL` (bunt), `91-UEcSvU0L` und `91VNLtarhlL` (kaltweiß);
+  hp-dfm-400-eu-2 `91F1cqoZPnL` (warmweiß), `91TSAOcpWkL` (bunt), `91kZ1Ub-gBL` (kaltweiß).
 
 ## Fragen an Shenzhen
 
