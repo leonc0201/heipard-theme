@@ -291,10 +291,11 @@
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    /* keine Scroll-Verankerung: Dawn stellt beim Variantenwechsel eine Kachel voran, der Browser
-       würde die Spalte dafür um eine Kachel verschieben, bevor sie zum aktiven Bild gleitet */
+    /* Weder Verankerung noch Einrasten: Dawn stellt beim Variantenwechsel eine Kachel voran, der
+       Browser würde die Spalte dafür sofort um eine Kachel verschieben (bzw. wieder auf die bisherige
+       Kachel einrasten), bevor sie zum aktiven Bild gleitet. */
     overflow-anchor: none;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none;
     scrollbar-width: none;
   }
 
@@ -305,7 +306,7 @@
   .product media-gallery.heipard-rail > .thumbnail-slider .thumbnail-list__item {
     flex: 0 0 auto;
     width: 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: none;
   }
 
   /* Aktive Kachel: Rahmen innen statt Schatten außen, sonst schneidet die Spalte ihn ab */
