@@ -46,14 +46,13 @@
   // Nur die Spalte scrollen, nie die Seite (deshalb kein scrollIntoView).
   function reveal(list, item, instant) {
     if (!item) return;
-    var top = item.offsetTop;
-    var bottom = top + item.offsetHeight;
-    var view = list.scrollTop;
+    var box = list.getBoundingClientRect();
+    var rect = item.getBoundingClientRect();
     var target = null;
-    if (top < view) target = top;
-    else if (bottom > view + list.clientHeight) target = bottom - list.clientHeight;
+    if (rect.top < box.top - 0.5) target = list.scrollTop - (box.top - rect.top);
+    else if (rect.bottom > box.bottom + 0.5) target = list.scrollTop + Math.ceil(rect.bottom - box.bottom);
     if (target === null) return;
-    list.scrollTo({ top: target, behavior: instant || reduceMotion.matches ? 'auto' : 'smooth' });
+    list.scrollTo({ top: Math.max(0, Math.floor(target)), behavior: instant || reduceMotion.matches ? 'auto' : 'smooth' });
   }
 
   function setupRail(gallery) {
@@ -152,7 +151,7 @@
     Object.keys(images).forEach(function (variant) {
       if (images[variant]) variantImages[images[variant]] = true;
     });
-    return { lists: lists, images: images, inAnyList: inAnyList, first: data.erstes, variantImages: variantImages };
+    return { lists: lists, images: images, inAnyList: inAnyList, first: data.erstes, variantImages: variantImages, hideVariants: data.variantenbilder_ausblenden !== false };
   }
 
   // Medien-IDs, die für diese Variante ausgeblendet werden; leeres Objekt = keine Filterung.
@@ -192,15 +191,22 @@
       });
     }
 
-    // Position 1 bleibt bei aktiver Liste sichtbar, auch wenn sie das Bild einer anderen Variante
-    // ist. Hauptbilder und Lightbox übernimmt Dawn beim Variantenwechsel aus dem neu gerenderten
-    // Markup (dort rechnet Liquid das schon), die Vorschaubilder rendert Dawn nicht neu.
-    if (filter.first && filter.variantImages[filter.first]) {
-      var keepFirst = (filter.lists[String(variantId)] || []).length > 0;
+    // Dawns Ausblendung der Bilder anderer Varianten (hide_variants): Bei aktiver Liste gelten
+    // Position 1 und die Medien der eigenen Liste nicht als fremde Variantenbilder. Hauptbilder und
+    // Lightbox übernimmt Dawn beim Variantenwechsel aus dem neu gerenderten Markup (dort rechnet
+    // Liquid das schon), die Vorschaubilder rendert Dawn nicht neu.
+    if (filter.hideVariants) {
+      var own = filter.lists[String(variantId)] || [];
+      var keep = {};
+      if (own.length) {
+        own.forEach(function (id) {
+          keep[id] = true;
+        });
+        if (filter.first) keep[filter.first] = true;
+      }
       gallery.querySelectorAll('li[data-target]').forEach(function (item) {
-        if (mediaId(item.dataset.target) === String(filter.first)) {
-          item.classList.toggle('thumbnail-list_item--variant', !keepFirst);
-        }
+        var id = mediaId(item.dataset.target);
+        if (filter.variantImages[id]) item.classList.toggle('thumbnail-list_item--variant', !keep[id]);
       });
     }
 

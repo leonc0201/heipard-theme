@@ -75,12 +75,17 @@
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   {%- liquid
     # HeiPard-Farbfilter: Hat die gewählte Variante eine Medienliste (heipard.galerie_medien),
-    # bleibt Position 1 sichtbar, auch wenn sie das Bild einer anderen Variante ist und Dawns
-    # hide_variants sie sonst ausblenden würde. Ohne Liste gilt Dawns Verhalten unverändert.
-    assign hp_keep_media = nil
-    assign hp_own_size = product.selected_or_first_available_variant.metafields.heipard.galerie_medien.value.size | default: 0
+    # bleiben Position 1 und alle Medien dieser Liste sichtbar, auch wenn sie das Bild einer
+    # anderen Variante sind und Dawns hide_variants sie sonst ausblenden würde.
+    # hp_keep_media = ",id,id,". Ohne Liste gilt Dawns Verhalten unverändert.
+    assign hp_keep_media = ','
+    assign hp_own = product.selected_or_first_available_variant.metafields.heipard.galerie_medien.value
+    assign hp_own_size = hp_own.size | default: 0
     if hp_own_size > 0
-      assign hp_keep_media = product.media.first.id
+      assign hp_keep_media = hp_keep_media | append: product.media.first.id | append: ','
+      for hp_media in hp_own
+        assign hp_keep_media = hp_keep_media | append: hp_media.id | append: ','
+      endfor
     endif
   -%}
   <div class="page-width">

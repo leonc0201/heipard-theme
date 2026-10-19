@@ -8,8 +8,8 @@
   - limit: {Number} (optional) When passed, limits the number of media items to render
   - heipard_rail: {Boolean} (optional) HeiPard: Vorschaubilder auf Desktop als vertikale Spalte
     links neben dem Hauptbild (nur Layout "thumbnail"; CSS heipard-product.css, JS heipard-gallery.js)
-  - heipard_keep_media: {Number} (optional) HeiPard: Medien-ID, die nie als Variantenbild ausgeblendet
-    wird (Position 1 bei aktivem Farbfilter, siehe main-product)
+  - heipard_keep_media: {String} (optional) HeiPard: ",id,id," der Medien, die nicht als Bild einer anderen
+    Variante ausgeblendet werden (Position 1 und eigene Liste bei aktivem Farbfilter, siehe main-product)
   - heipard_filter: {Boolean} (optional) HeiPard: Farbfilter über das Varianten-Metafeld
     heipard.galerie_medien (Liste der Medien der Lichtfarbe dieser Variante). Sichtbar sind die Liste
     der gewählten Variante, das Bild der Variante und alle Medien, die in keiner Liste stehen. Hat die
@@ -134,9 +134,12 @@
       {%- endif -%}
       {%- for media in product.media -%}
         {%- liquid
+          assign hp_key = ',' | append: media.id | append: ','
           assign hp_variant_image = false
-          if variant_images contains media.src and media.id != heipard_keep_media
-            assign hp_variant_image = true
+          if variant_images contains media.src
+            unless heipard_keep_media contains hp_key
+              assign hp_variant_image = true
+            endunless
           endif
         -%}
         {% if media_position >= limit
@@ -148,7 +151,6 @@
         {% endif %}
 
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-          {%- assign hp_key = ',' | append: media.id | append: ',' -%}
           <li
             id="Slide-{{ section.id }}-{{ media.id }}"
             class="product__media-item grid__item slider__slide{% if hp_hidden contains hp_key %} heipard-media--filtered{% endif %}{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == nil and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -333,10 +335,18 @@
               endcapture
               assign media_index = media_index | plus: 1
             -%}
-            {%- assign hp_key = ',' | append: media.id | append: ',' -%}
+            {%- liquid
+              assign hp_key = ',' | append: media.id | append: ','
+              assign hp_variant_image = false
+              if section.settings.hide_variants and variant_images contains media.src
+                unless heipard_keep_media contains hp_key
+                  assign hp_variant_image = true
+                endunless
+              endif
+            -%}
             <li
               id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}"
-              class="thumbnail-list__item slider__slide{% if hp_hidden contains hp_key %} heipard-media--filtered{% endif %}{% if section.settings.hide_variants and variant_images contains media.src and media.id != heipard_keep_media %} thumbnail-list_item--variant{% endif %}"
+              class="thumbnail-list__item slider__slide{% if hp_hidden contains hp_key %} heipard-media--filtered{% endif %}{% if hp_variant_image %} thumbnail-list_item--variant{% endif %}"
               data-target="{{ section.id }}-{{ media.id }}"
               data-media-position="{{ media_index }}"
             >
@@ -433,7 +443,8 @@
             "{{ hp_variant.id }}": {{ hp_variant.featured_media.id | default: 'null' }}{% unless forloop.last %},{% endunless %}
           {%- endfor -%}
         },
-        "erstes": {{ product.media.first.id | default: 'null' }}
+        "erstes": {{ product.media.first.id | default: 'null' }},
+        "variantenbilder_ausblenden": {{ section.settings.hide_variants | json }}
       }
     </script>
   {%- endif -%}
