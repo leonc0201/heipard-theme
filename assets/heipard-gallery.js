@@ -170,6 +170,37 @@
     return hidden;
   }
 
+  // Vorschaubilder in die Reihenfolge der Hauptbilder bringen. Dawn sortiert beim Variantenwechsel
+  // die Hauptbilder nach dem neu gerenderten Markup, stellt bei den Vorschaubildern aber nur das neue
+  // Variantenbild nach vorn. Bleibt das Bild der vorherigen Variante sichtbar (eigene Liste), stünde
+  // es sonst an zweiter Stelle statt an seinem Platz.
+  function syncThumbnailOrder(gallery) {
+    var list = gallery.querySelector('[id^="GalleryThumbnails"] .thumbnail-list');
+    if (!list) return;
+    var order = {};
+    gallery.querySelectorAll('[id^="GalleryViewer"] li[data-media-id]').forEach(function (item, index) {
+      order[mediaId(item.dataset.mediaId)] = index;
+    });
+    var items = Array.prototype.slice.call(list.children).filter(function (item) {
+      return item.hasAttribute('data-target');
+    });
+    var keyed = items.map(function (item, index) {
+      var position = order[mediaId(item.dataset.target)];
+      return { item: item, key: position === undefined ? 100000 + index : position };
+    });
+    keyed.sort(function (a, b) {
+      return a.key - b.key;
+    });
+    var changed = keyed.some(function (entry, index) {
+      return entry.item !== items[index];
+    });
+    if (changed) {
+      keyed.forEach(function (entry) {
+        list.appendChild(entry.item);
+      });
+    }
+  }
+
   function applyFilter(gallery, variantId) {
     var filter = gallery.heipardFilter;
     if (!filter || !variantId) return;
@@ -209,6 +240,8 @@
         if (filter.variantImages[id]) item.classList.toggle('thumbnail-list_item--variant', !keep[id]);
       });
     }
+
+    syncThumbnailOrder(gallery);
 
     // Ist das aktive Hauptbild jetzt ausgeblendet (Variante ohne eigenes Bild), das erste
     // sichtbare zeigen.
