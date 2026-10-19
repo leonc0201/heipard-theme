@@ -221,6 +221,13 @@
   box-shadow: 0 0 0 2px var(--primary);
 }
 
+/* --- Produktgalerie: Farbfilter (Varianten-Metafeld heipard.galerie_medien) ---
+   Medien anderer Lichtfarben ausblenden, in Hauptbild-Liste, Vorschaubildern und Lightbox.
+   Gesetzt beim Laden von product-media-gallery.liquid, beim Variantenwechsel von heipard-gallery.js. */
+.heipard-media--filtered {
+  display: none !important;
+}
+
 /* --- Produktgalerie: Vorschaubilder als vertikale Spalte links (Desktop ab 990 px) ---
    Nur im Hauptprodukt (media-gallery.heipard-rail, Galerie-Layout "thumbnail") und nur,
    wenn Vorschaubilder gerendert sind (:has; ohne :has bleibt Dawns Raster darunter).

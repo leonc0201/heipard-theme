@@ -176,11 +176,19 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
   hp-ola-s14-15-eu (echtes Seiten-Markup, Live-CSS/JS vom CDN).
 - [ ] **Prüfung auf der echten Seite** — wegen des Shop-Passworts nur mit Bypass möglich (Passwort oder ein
   Draft-Produkt für `onlineStorePreviewUrl`).
-- [ ] **Medien anderer Varianten ausblenden** — Dawns Einstellung `hide_variants` ist seit Projektbeginn aktiv.
-  Sie blendet nur das eine Bild aus, das jeder Variante zugeordnet ist (Shopify erlaubt eines pro Variante).
-  Alle übrigen Bilder bleiben für jede Variante sichtbar, auch Lifestyle-Bilder der anderen Lichtfarben
-  (z. B. `HP-NPT-210W_GAL_…` bei Multicolor). Ein Farbfilter über alle Bilder bräuchte eine Zuordnung, etwa
-  über den Dateinamen (`<SKU>_GAL_…` aus der Asset-Pipeline). Entscheidung Leon.
+- [x] **Medien anderer Varianten ausblenden** — Dawns `hide_variants` (seit Projektbeginn aktiv) blendet nur das
+  eine Bild je Variante aus. Leon: so lassen.
+- [x] **Farbfilter** (2026-10-19) — Varianten-Metafeld `heipard.galerie_medien` (list.file_reference, schreibt die
+  Asset-Instanz). Sichtbar: Liste der gewählten Variante, ihr Variantenbild und alle Medien, die in keiner Liste
+  stehen. Position 1 bleibt sichtbar, auch wenn sie das Bild einer anderen Variante ist (dafür ist sie bei aktiver
+  Liste von Dawns `hide_variants` ausgenommen). Reihenfolge wie Dawn: Variantenbild vorn, Position 1 direkt
+  dahinter. Ohne Liste für die gewählte Variante: keine Filterung. Beim Laden rechnet Liquid
+  (`product-media-gallery`, Klasse `heipard-media--filtered`), beim Variantenwechsel `heipard-gallery.js` aus dem
+  JSON `script[data-heipard-galerie]`, ohne zusätzlichen Serverabruf. Gefiltert werden Hauptbilder, Vorschaubilder
+  und Lightbox; Spalte, Pfeile und Dawns Wischgalerie zählen die gefilterte Menge. Offline geprüft (Liquid mit
+  LiquidJS, Variantenwechsel im Browser) mit einer aus den Dateinamen abgeleiteten Zuordnung.
+- [ ] **Farbfilter live prüfen** — an hp-npt-210 und hp-dct-200, sobald die Asset-Instanz die Listen geschrieben
+  hat und das Storefront-Passwort vorliegt.
 
 ## Fragen an Shenzhen
 

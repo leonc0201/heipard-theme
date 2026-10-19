@@ -4,6 +4,8 @@
   Accepts:
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
+  - heipard_keep_media: {Number} (optional) HeiPard: Medien-ID, die nie als Variantenbild ausgeblendet
+    wird (Position 1 bei aktivem Farbfilter, siehe main-product)
 
   Usage:
   {% render 'product-media-modal' %}
@@ -44,6 +46,9 @@
           if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
             assign variant_image = true
           else
+            assign variant_image = false
+          endif
+          if heipard_keep_media != nil and media.id == heipard_keep_media
             assign variant_image = false
           endif
 

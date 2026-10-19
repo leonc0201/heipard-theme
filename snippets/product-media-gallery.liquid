@@ -8,6 +8,13 @@
   - limit: {Number} (optional) When passed, limits the number of media items to render
   - heipard_rail: {Boolean} (optional) HeiPard: Vorschaubilder auf Desktop als vertikale Spalte
     links neben dem Hauptbild (nur Layout "thumbnail"; CSS heipard-product.css, JS heipard-gallery.js)
+  - heipard_keep_media: {Number} (optional) HeiPard: Medien-ID, die nie als Variantenbild ausgeblendet
+    wird (Position 1 bei aktivem Farbfilter, siehe main-product)
+  - heipard_filter: {Boolean} (optional) HeiPard: Farbfilter über das Varianten-Metafeld
+    heipard.galerie_medien (Liste der Medien der Lichtfarbe dieser Variante). Sichtbar sind die Liste
+    der gewählten Variante, das Bild der Variante und alle Medien, die in keiner Liste stehen. Hat die
+    gewählte Variante keine oder eine leere Liste, wird nicht gefiltert. Beim Laden rechnet Liquid
+    (Klasse heipard-media--filtered), beim Variantenwechsel heipard-gallery.js aus dem JSON unten.
 
   Usage:
   {% render 'product-media-gallery' %}
@@ -54,6 +61,32 @@
     endif
   endif
   assign gallery_class = gallery_class | strip
+
+  # Farbfilter: hp_hidden = ",id,id," der beim Laden ausgeblendeten Medien
+  assign hp_hidden = ','
+  assign hp_has_lists = false
+  if heipard_filter
+    assign hp_current = product.selected_or_first_available_variant
+    assign hp_own_size = hp_current.metafields.heipard.galerie_medien.value.size | default: 0
+    assign hp_keep = ','
+    for hp_media in hp_current.metafields.heipard.galerie_medien.value
+      assign hp_keep = hp_keep | append: hp_media.id | append: ','
+    endfor
+    if hp_current.featured_media != null
+      assign hp_keep = hp_keep | append: hp_current.featured_media.id | append: ','
+    endif
+    for hp_variant in product.variants
+      for hp_media in hp_variant.metafields.heipard.galerie_medien.value
+        assign hp_has_lists = true
+        if hp_own_size > 0
+          assign hp_key = ',' | append: hp_media.id | append: ','
+          unless hp_keep contains hp_key or hp_hidden contains hp_key
+            assign hp_hidden = hp_hidden | append: hp_media.id | append: ','
+          endunless
+        endif
+      endfor
+    endfor
+  endif
 -%}
 
 <media-gallery
@@ -100,18 +133,25 @@
         </li>
       {%- endif -%}
       {%- for media in product.media -%}
+        {%- liquid
+          assign hp_variant_image = false
+          if variant_images contains media.src and media.id != heipard_keep_media
+            assign hp_variant_image = true
+          endif
+        -%}
         {% if media_position >= limit
           or media_position >= 1
           and section.settings.hide_variants
-          and variant_images contains media.src
+          and hp_variant_image
         %}
           {% continue %}
         {% endif %}
 
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+          {%- assign hp_key = ',' | append: media.id | append: ',' -%}
           <li
             id="Slide-{{ section.id }}-{{ media.id }}"
-            class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == nil and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+            class="product__media-item grid__item slider__slide{% if hp_hidden contains hp_key %} heipard-media--filtered{% endif %}{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == nil and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
             data-media-id="{{ section.id }}-{{ media.id }}"
           >
             {%- liquid
@@ -293,9 +333,10 @@
               endcapture
               assign media_index = media_index | plus: 1
             -%}
+            {%- assign hp_key = ',' | append: media.id | append: ',' -%}
             <li
               id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}"
-              class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
+              class="thumbnail-list__item slider__slide{% if hp_hidden contains hp_key %} heipard-media--filtered{% endif %}{% if section.settings.hide_variants and variant_images contains media.src and media.id != heipard_keep_media %} thumbnail-list_item--variant{% endif %}"
               data-target="{{ section.id }}-{{ media.id }}"
               data-media-position="{{ media_index }}"
             >
@@ -370,5 +411,30 @@
         </span>
       </button>
     </slider-component>
+  {%- endif -%}
+  {%- if hp_has_lists -%}
+    {%- comment -%}
+      Zuordnung für heipard-gallery.js: Variante -> Medien ihrer Lichtfarbe, dazu das Bild der Variante.
+      Nur gerendert, wenn mindestens eine Variante eine Liste hat; sonst filtert das Skript nicht.
+    {%- endcomment -%}
+    <script type="application/json" data-heipard-galerie>
+      {
+        "listen": {
+          {%- for hp_variant in product.variants -%}
+            "{{ hp_variant.id }}": [
+              {%- for hp_media in hp_variant.metafields.heipard.galerie_medien.value -%}
+                {{ hp_media.id }}{% unless forloop.last %},{% endunless %}
+              {%- endfor -%}
+            ]{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        },
+        "bilder": {
+          {%- for hp_variant in product.variants -%}
+            "{{ hp_variant.id }}": {{ hp_variant.featured_media.id | default: 'null' }}{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        },
+        "erstes": {{ product.media.first.id | default: 'null' }}
+      }
+    </script>
   {%- endif -%}
 </media-gallery>
