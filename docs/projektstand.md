@@ -116,7 +116,8 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   (bei Leon, gehört nicht ins Repo) und das Cookie weiterverwenden (curl `-c`/`-b` oder Puppeteer). Für Aufnahmen
   den Cookie-Banner per CSS ausblenden, nicht zustimmen.
 - **Preview-Theme ohne CLI befüllen:** Branch zu GitHub pushen, dann `themeFilesUpsert` mit `body.type: URL` und
-  der Raw-URL der Datei (Repo ist öffentlich). Das Live-Theme lässt sich so nicht beschreiben, dafür gibt es den Sync.
+  der Raw-URL der Datei (geht nur, solange das Repo öffentlich ist; Stand 2026-10-19 öffentlich, Umstellung auf
+  privat geplant, dann Inhalt direkt als `body.type: TEXT` senden). Das Live-Theme lässt sich so nicht beschreiben, dafür gibt es den Sync.
 - **Lokaler Vorab-Test:** LiquidJS (`npm i liquidjs`) verhält sich wie Shopify-Liquid. python-liquid nicht
   (`3 >= 3` ist dort falsch, `nil == blank` ebenfalls).
 
