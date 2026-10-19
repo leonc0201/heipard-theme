@@ -166,6 +166,22 @@ Erledigt am 2026-10-01 (Leons Entscheidungen):
 Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahllistenwert „Multicolor“ abgebildet
 (`welle1b_aufbereitung.py`). Bestehende Produkte mit Tag `RGB` sind nicht umgestellt.
 
+## Produktgalerie (Stand 2026-10-19)
+
+- [x] **Vorschaubilder als Spalte links** (Desktop ab 990 px) — sechs Kacheln sichtbar, Rest per Mausrad,
+  Touch und Pfeilen (vorheriges/nächstes Bild); die aktive Kachel scrollt bei Klick, Pfeil und Variantenwahl
+  weich mit. Hauptbild quadratisch, Spalte plus Hauptbild so breit wie vorher die Medienhälfte. Tablet und
+  Handy unverändert. Umsetzung: `heipard_rail` in `product-media-gallery.liquid`, CSS in
+  `heipard-product.css`, Logik in `assets/heipard-gallery.js`. Offline geprüft an hp-npt-210, hp-dct-200 und
+  hp-ola-s14-15-eu (echtes Seiten-Markup, Live-CSS/JS vom CDN).
+- [ ] **Prüfung auf der echten Seite** — wegen des Shop-Passworts nur mit Bypass möglich (Passwort oder ein
+  Draft-Produkt für `onlineStorePreviewUrl`).
+- [ ] **Medien anderer Varianten ausblenden** — Dawns Einstellung `hide_variants` ist seit Projektbeginn aktiv.
+  Sie blendet nur das eine Bild aus, das jeder Variante zugeordnet ist (Shopify erlaubt eines pro Variante).
+  Alle übrigen Bilder bleiben für jede Variante sichtbar, auch Lifestyle-Bilder der anderen Lichtfarben
+  (z. B. `HP-NPT-210W_GAL_…` bei Multicolor). Ein Farbfilter über alle Bilder bräuchte eine Zuordnung, etwa
+  über den Dateinamen (`<SKU>_GAL_…` aus der Asset-Pipeline). Entscheidung Leon.
+
 ## Fragen an Shenzhen
 
 Sammelblatt für Rückfragen an Tyler. Die Rückfragen zu OL-G40 stehen oben unter „Feature-Baukasten".

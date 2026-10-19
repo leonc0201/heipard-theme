@@ -33,6 +33,10 @@
         "power_source": "Power source",
         "light_color": "Light colour",
         "protection_rating": "Protection rating"
+      },
+      "gallery": {
+        "previous_image": "Previous image",
+        "next_image": "Next image"
       }
     },
     "format": {

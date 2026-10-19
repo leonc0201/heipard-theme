@@ -6,6 +6,8 @@
   - product: {Object} Product liquid object
   - variant_images: {Array} Product images associated with a variant
   - limit: {Number} (optional) When passed, limits the number of media items to render
+  - heipard_rail: {Boolean} (optional) HeiPard: Vorschaubilder auf Desktop als vertikale Spalte
+    links neben dem Hauptbild (nur Layout "thumbnail"; CSS heipard-product.css, JS heipard-gallery.js)
 
   Usage:
   {% render 'product-media-gallery' %}
@@ -40,13 +42,25 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+
+  assign gallery_class = ''
+  if section.settings.enable_sticky_info
+    assign gallery_class = 'product__column-sticky'
+  endif
+  if heipard_rail and section.settings.gallery_layout == 'thumbnail'
+    assign gallery_class = gallery_class | append: ' heipard-rail'
+    if section.settings.constrain_to_viewport
+      assign gallery_class = gallery_class | append: ' heipard-rail--constrained'
+    endif
+  endif
+  assign gallery_class = gallery_class | strip
 -%}
 
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
-  {% if section.settings.enable_sticky_info %}
-    class="product__column-sticky"
+  {% if gallery_class != blank %}
+    class="{{ gallery_class }}"
   {% endif %}
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
@@ -197,6 +211,20 @@
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </span>
       </button>
+      {%- if heipard_rail -%}
+        <button
+          type="button"
+          class="heipard-thumbs__arrow heipard-thumbs__arrow--prev"
+          data-heipard-thumbs="prev"
+          aria-label="{{ 'heipard.product.gallery.previous_image' | t }}"
+          aria-controls="GalleryViewer-{{ section.id }}"
+          hidden
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      {%- endif -%}
       <ul
         id="Slider-Thumbnails-{{ section.id }}"
         class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}"
@@ -315,6 +343,20 @@
           {%- endunless -%}
         {%- endfor -%}
       </ul>
+      {%- if heipard_rail -%}
+        <button
+          type="button"
+          class="heipard-thumbs__arrow heipard-thumbs__arrow--next"
+          data-heipard-thumbs="next"
+          aria-label="{{ 'heipard.product.gallery.next_image' | t }}"
+          aria-controls="GalleryViewer-{{ section.id }}"
+          hidden
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      {%- endif -%}
       <button
         type="button"
         class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"

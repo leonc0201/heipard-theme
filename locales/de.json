@@ -33,6 +33,10 @@
         "power_source": "Stromquelle",
         "light_color": "Lichtfarbe",
         "protection_rating": "Schutzart"
+      },
+      "gallery": {
+        "previous_image": "Vorheriges Bild",
+        "next_image": "Nächstes Bild"
       }
     },
     "format": {
