@@ -194,9 +194,13 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
   JS-Fehler. Live gefunden und behoben: eigene Liste von `hide_variants` ausnehmen, Vorschaubilder nach dem
   Wechsel in Hauptbild-Reihenfolge, Spalte ohne Verankerung und Einrasten (sonst Sprung um eine Kachel).
   Liquid liest `galerie_medien` trotz Storefront-Zugriff NONE; im Code gibt es keinen Storefront-API-Aufruf.
-- [ ] **Medien ohne Liste, die eine Lichtfarbe zeigen** (für die Asset-Instanz) — erscheinen bei jeder Farbe:
+- [x] **Medien ohne Liste, die eine Lichtfarbe zeigen** (für die Asset-Instanz) — erschienen bei jeder Farbe:
   hp-isl-264 `91Y4CjmKIxL` und `91hg9JtjqDL` (bunt), `91-UEcSvU0L` und `91VNLtarhlL` (kaltweiß);
   hp-dfm-400-eu-2 `91F1cqoZPnL` (warmweiß), `91TSAOcpWkL` (bunt), `91kZ1Ub-gBL` (kaltweiß).
+  Erledigt 2026-10-19: Die Asset-Instanz hat alle sieben in die Listen ihrer Farbe aufgenommen (mit den übrigen
+  Collagen, auch an hp-dfm-750-eu). Live geprüft am 2026-10-20 an hp-isl-264, Desktop und Handy, echte
+  Variantenwahl: die vier Bilder erscheinen nur noch bei Multicolor bzw. Kaltweiß, sichtbare Medien und
+  Lightbox entsprechen der Erwartung, keine JS-Fehler.
 
 ## Fragen an Shenzhen
 
