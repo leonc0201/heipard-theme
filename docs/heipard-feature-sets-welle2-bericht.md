@@ -294,3 +294,12 @@ Auf der Testkopie zusätzlich geprüft, alle ohne Liquid-Fehler: hp-dct-200, hp-
 
 - main: `a6bb27c` (HOME-11 live), dieser Bericht.
 - Branch `pdp-layout-welle2`: `2a9ced8` (Layout-Code), `79a0f28` (Baukasten-Doku).
+
+### Nachtrag (2026-10-21, spät)
+
+- **Installation & Pflege:** Die elf Texte aus `heipard-pflegetexte.md` stehen in den Metaobjekt-Einträgen, ein
+  Absatz je Zeile. Auf der Testkopie an zehn Produkten geprüft: Der spezifische kat-Tag gewinnt, Solar-Ketten
+  (kat-solar und kat-stringlights) bekommen den Solar-Text. Der Rückfall kat-stringlights greift derzeit bei
+  keinem Produkt, weil alle Lichterketten einen spezifischen kat-Tag tragen.
+- **Technik-Tabelle:** ohne `leistung_w`, bis die Werte bestätigt sind (Branch-Commit `dca94fa`, in der Testkopie).
+- **`zz-feature-preview`:** nicht gelöscht, der Connector sperrt das Löschen von Themes. Bitte im Admin entfernen.
