@@ -213,6 +213,15 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **HOME-11 auf dem Live-Theme** — `templates/index.json` (Commit `365c4e5`) ist live, Prüfsumme gleich main
   (übertragen 2026-10-21, 17:12 Uhr). Die Theme-Abfrage hatte den neuen Stand nur verzögert gemeldet.
 - [ ] **DFM_B2_01** aus Hermes in den Block `dfm-b2` eintragen (vorbereitet, Bild leer).
+- [ ] **Layout-Test freigeben** — Branch `pdp-layout-welle2` (Paare, R1 linksbündig, Sektionskopf aus dem Set,
+  D6 ein Label, Abstände, Technik und Pflege in der Daten-Zone) liegt auf der Testkopie 197772607821. Nach Leons
+  Blick mergen und Sync prüfen; danach Testkopie und das defekte alte Vorschau-Theme `zz-feature-preview` löschen.
+- [ ] **Installation & Pflege: Texte** — Leon trägt sie in die Einträge von *HeiPard Installation & Pflege* ein
+  (Handle = kat-Tag). Ohne Text erscheint der Block nicht.
+- [ ] **Lieferumfang hp-dgm-001** — zeigt nur die Bedienungsanleitung, bis Tyler die Anzahl der Sterne klärt.
+- [ ] **SEO-Meta-Descriptions** — bei allen 119 Produkten leer (Stand 2026-10-21).
+- [ ] **Technik-Tabelle zeigt ungeprüfte Altwerte** — Werte aus dem Welle-1-Import ohne Bestätigung im
+  Welle-2-Blatt (z. B. SBLB Stromquelle, Leistung) erscheinen mit; bei Bedarf im Shop bereinigen.
 - [ ] **Datenlücken, die Blöcke leer lassen** (Leon/Asset-Instanz): VIT ohne Maße und Timer, OLAS14 ohne Timer,
   Stromquelle und beleuchtete Länge (kein Koppelplan), CTL ohne Länge und Timer, Lieferumfang bei allen 20,
   Schutzart bei SBLB und CTL-210/400, Gesamtlänge HP-DFM-600, LED-Anzahl HP-DFM-400.
