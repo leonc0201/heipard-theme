@@ -15,6 +15,17 @@ erklärt, wie du die Blöcke im Shopify-Admin pflegst.
 | **Metafeld `heipard.feature_set`** | zeigt vom Produkt auf sein Set | Produkt → Metafelder → *PDP Feature-Set* |
 | **Metafeld `heipard.dramaturgie`** | `hero`, `standard` oder `longtail` | Produkt → Metafelder → *PDP-Dramaturgie* |
 | **Metafeld `heipard.familie`** | Familien-Code, z. B. `OL-G40` | Produkt → Metafelder → *Familie (Code)* |
+| **Sektionsüberschrift** | Felder *Sektionsüberschrift: Kicker* und *Sektionsüberschrift* am Feature-Set | Inhalte → Metaobjekte → *HeiPard Feature-Set* |
+| **Installation & Pflege** (Metaobjekt) | ein Eintrag je Kategorie, Handle = kat-Tag | Inhalte → Metaobjekte → *HeiPard Installation & Pflege* |
+
+**Sektionskopf:** Kicker und Überschrift der Sektion kommen aus dem Feature-Set der Familie. Sind die
+Felder leer (oder greift eine Vorlage), steht die globale Zeile aus den Section-Einstellungen.
+
+**Daten-Zone, feste Reihenfolge:** Technische Details, Lieferumfang, Nachweise, Installation & Pflege,
+Fragen, Serienleiter. *Technische Details* ist eine Tabelle aus den Metafeldern (je Feld zuerst an der
+gewählten Variante, wie die Spec-Kacheln), *Installation & Pflege* kommt aus dem Metaobjekt zur Kategorie
+des Produkts. Beide stehen bei jedem Produkt, auch ohne eigenes Set, und gehören in kein Set. Die beiden
+früheren Aufklapper in der Kaufbox entfallen; *Versand & Rückgabe* und das Gewährleistungsrecht bleiben dort.
 
 Was die Sektion anzeigt, in dieser Reihenfolge:
 
@@ -203,6 +214,8 @@ Aufklappbare Zeilen, jede nur wenn der Wert gepflegt ist. Steht in der Daten-Zon
 ### D6 Große Kennzahl
 
 Im JSON-Feld steht, welches Metafeld groß gezeigt wird: `{"feld": "beleuchtete_laenge_m"}`.
+Unter der Zahl steht genau ein Label: der Kicker des Blocks, falls gepflegt, sonst die Feldbezeichnung aus
+den Sprachdateien. Titel und Text stehen rechts neben der Zahl.
 Möglich: `beleuchtete_laenge_m`, `gesamtlaenge_m`, `led_anzahl`, `farbtemperatur_kelvin`,
 `akkulaufzeit_h`, `hoehe_m`, `breite_m`, `koppelbar_bis`.
 Ohne Vorgabe nimmt der Block das erste gepflegte Feld aus: Leuchtzeit, Höhe, Länge, Lichtpunkte, Kelvin.
@@ -229,6 +242,9 @@ oder Zeitband".
 - **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Die Zäsur zählt nicht mit.
   Ohne Dramaturgie gibt es kein Limit.
 - **Zwei gleiche Typen hintereinander** werden gezeigt, der Theme-Editor weist aber darauf hin.
+- **Schmale Blöcke paarweise:** Folgen zwei schmale Blöcke (R1 Text, D6 Kennzahl, D2 Kelvin) aufeinander,
+  stehen sie ab Desktop nebeneinander. R1 steht linksbündig mit einer dünnen Terracotta-Linie, allein auf
+  sechs von zwölf Spalten.
 - **Daten-Zone:** Serienleiter, Nachweise, Lieferumfang und Fragen stehen immer am Ende unter einer
   Trennlinie und zählen nicht zum Limit.
 - **Leere Blöcke fallen weg:** Ein Daten-Block ohne Metafelder oder ein Bildblock ohne Inhalt wird nicht gezeigt und zählt nicht.
@@ -338,6 +354,12 @@ auf Position 2 und `OLG40_B2_02.webp` auf Position 3, Position 1 bleibt das Prod
 - Theme: `sections/heipard-feature.liquid` (Regeln), `snippets/heipard-feature-dispatch.liquid`
   (Typ-Weiche), `snippets/heipard-feature-block.liquid` (B1, B2), `snippets/heipard-fb-*.liquid`
   (je Block), `assets/heipard-feature.css`, `assets/heipard-feature.js`.
+- Felder des Metaobjekts `feature_set`: Bezeichnung (`label`), Blöcke (`blocks`), Sektionsüberschrift:
+  Kicker (`heading_kicker`), Sektionsüberschrift (`heading`).
+- Metaobjekt `heipard_pflege` (*HeiPard Installation & Pflege*): Kategorie, Überschrift (optional), Hinweise
+  (ein Absatz je Zeile). Handle = kat-Tag; gesucht wird zuerst unter den spezifischen kat-Tags des Produkts,
+  danach `kat-stringlights`. Ohne Text erscheint der Block nicht. Renderer `snippets/heipard-fb-pflege.liquid`.
+- Technische Details: `snippets/heipard-fb-technik.liquid`, Beschriftungen unter `heipard.blocks.technik`.
 - Felder des Metaobjekts `feature_block`: Block-Typ (`layout`), Variante, Bild, Zweites Bild
   (`image_2`), Bildfolge (`images`), Video, Medientyp, Medien-Seite, Overlay-Textfarbe, Kicker, Titel,
   Text, JSON (`data`), Bezeichnung.

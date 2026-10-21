@@ -1,0 +1,88 @@
+{%- comment -%}
+  Technische Details (Daten-Zone): Tabelle aus den heipard-Metafeldern, keine Freitexte.
+  Jedes Feld zuerst an der gewählten Variante, sonst am Produkt (wie Spec-Kacheln und
+  Daten-Blöcke); beim Variantenwechsel rendert heipard-variant.js die Sektion neu.
+  Lichtfarbe aus der Variantenoption „Lichtfarbe“, sonst aus dem Metafeld.
+  Nur gepflegte Felder erscheinen. Ohne ein einziges Feld rendert der Block nichts.
+  leistung_w steht bewusst nicht in der Tabelle, bis die Werte bestätigt sind (Leon 2026-10-21).
+  Beschriftungen und Einheiten: locales, heipard.blocks.technik.
+  Parameter: product
+{%- endcomment -%}
+{%- liquid
+  assign current = product.selected_or_first_available_variant
+  assign vmf = current.metafields.heipard
+  assign mf = product.metafields.heipard
+
+  assign color = ''
+  for opt in product.options_with_values
+    if opt.name == 'Lichtfarbe'
+      assign color = opt.selected_value
+    endif
+  endfor
+  if color == blank
+    assign color = mf.lichtfarbe.value
+  endif
+
+  assign keys = 'gesamtlaenge_m,beleuchtete_laenge_m,zuleitung_m,breite_m,hoehe_m,led_anzahl,birnenabstand_cm,farbtemperatur_kelvin,anzahl_leuchtmodi,dimmstufen,timer_dauer_h,fernbedienung,koppelbar_bis,stromquelle,spannung_v,akkulaufzeit_h,ip_schutzart,einsatzbereich,material' | split: ','
+  assign text_keys = 'stromquelle,ip_schutzart,einsatzbereich,material' | split: ','
+-%}
+{%- capture rows -%}
+  {%- if color != blank -%}
+    <div class="heipard-tech__row"><dt>{{ 'heipard.blocks.technik.rows.lichtfarbe' | t }}</dt><dd>{{ color | escape }}</dd></div>
+  {%- endif -%}
+  {%- for key in keys -%}
+    {%- liquid
+      assign cell = ''
+      case key
+        when 'dimmstufen'
+          assign levels = vmf.dimmstufen.value | default: mf.dimmstufen.value
+          assign level_count = vmf.dimmstufen_anzahl.value | default: mf.dimmstufen_anzahl.value
+          if levels != blank and levels.size > 0
+            assign joined = levels | join: ' / '
+            assign cell = 'heipard.blocks.technik.values.prozent' | t: value: joined
+          elsif level_count != blank and level_count > 1
+            assign cell = 'heipard.blocks.icon_grid.dimmable_value' | t: count: level_count
+          endif
+        when 'timer_dauer_h'
+          assign hours = vmf.timer_dauer_h.value | default: mf.timer_dauer_h.value
+          if hours != blank and hours.size > 0
+            assign hours_txt = hours | sort | join: ' / '
+            assign cell = 'heipard.blocks.icon_grid.timer_value' | t: hours: hours_txt
+          endif
+        when 'fernbedienung'
+          assign flag = mf.fernbedienung.value
+          if flag == true
+            assign cell = 'heipard.blocks.technik.values.ja' | t
+          endif
+        else
+          assign raw = vmf[key].value | default: mf[key].value
+          if raw != blank
+            if text_keys contains key
+              assign cell = raw | escape
+            else
+              capture num
+                render 'heipard-num', value: raw
+              endcapture
+              assign value_key = 'heipard.blocks.technik.values.' | append: key
+              assign cell = value_key | t: value: num
+            endif
+          endif
+      endcase
+      assign row_key = 'heipard.blocks.technik.rows.' | append: key
+    -%}
+    {%- if cell != blank -%}
+      <div class="heipard-tech__row"><dt>{{ row_key | t }}</dt><dd>{{ cell }}</dd></div>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign rows = rows | strip -%}
+{%- if rows != blank -%}
+  {%- liquid
+    assign tech_kicker = 'heipard.blocks.technik.kicker' | t
+    assign tech_title = 'heipard.blocks.technik.title' | t
+  -%}
+  <div class="heipard-fb heipard-fb--technik">
+    {%- render 'heipard-fb-head', kicker: tech_kicker, title: tech_title -%}
+    <dl class="heipard-tech">{{ rows }}</dl>
+  </div>
+{%- endif -%}

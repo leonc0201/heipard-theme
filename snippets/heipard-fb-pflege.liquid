@@ -1,0 +1,46 @@
+{%- comment -%}
+  Installation & Pflege (Daten-Zone): Text aus dem Metaobjekt heipard_pflege, ein Eintrag
+  je Kategorie. Zuordnung über das kat-Tag des Produkts: Der Handle des Eintrags ist das
+  Tag (z. B. kat-solar). Gesucht wird zuerst unter den spezifischen kat-Tags, danach im
+  Rückfall-Eintrag kat-stringlights. Ohne gepflegten Text rendert der Block nichts.
+  Feld „text“: ein Absatz je Zeile. Feld „titel“ optional, sonst Standard aus den Locales.
+  Parameter: product
+{%- endcomment -%}
+{%- liquid
+  assign entry = blank
+  for tag in product.tags
+    assign prefix = tag | slice: 0, 4
+    if prefix == 'kat-' and tag != 'kat-stringlights'
+      assign candidate = metaobjects.heipard_pflege[tag]
+      if candidate != blank and candidate.text.value != blank
+        assign entry = candidate
+        break
+      endif
+    endif
+  endfor
+  if entry == blank and product.tags contains 'kat-stringlights'
+    assign candidate = metaobjects.heipard_pflege['kat-stringlights']
+    if candidate != blank and candidate.text.value != blank
+      assign entry = candidate
+    endif
+  endif
+-%}
+{%- if entry != blank -%}
+  {%- liquid
+    assign care_kicker = 'heipard.blocks.pflege.kicker' | t
+    assign care_title = entry.titel.value | default: ''
+    if care_title == blank
+      assign care_title = 'heipard.blocks.pflege.title' | t
+    endif
+    assign lines = entry.text.value | newline_to_br | split: '<br />'
+  -%}
+  <div class="heipard-fb heipard-fb--pflege">
+    {%- render 'heipard-fb-head', kicker: care_kicker, title: care_title -%}
+    <div class="heipard-fb__prose">
+      {%- for line in lines -%}
+        {%- assign para = line | strip -%}
+        {%- if para != blank -%}<p>{{ para | escape }}</p>{%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}

@@ -157,6 +157,54 @@
           "batteriebox": "Battery box"
         }
       },
+      "technik": {
+        "kicker": "Technical details",
+        "title": "All specs at a glance",
+        "rows": {
+          "lichtfarbe": "Light colour",
+          "gesamtlaenge_m": "Total length incl. lead cable",
+          "beleuchtete_laenge_m": "Lit length",
+          "zuleitung_m": "Lead cable",
+          "breite_m": "Width",
+          "hoehe_m": "Height",
+          "led_anzahl": "Light points",
+          "birnenabstand_cm": "Spacing between lights",
+          "farbtemperatur_kelvin": "Colour temperature",
+          "anzahl_leuchtmodi": "Light modes",
+          "dimmstufen": "Dimming levels",
+          "timer_dauer_h": "Timer",
+          "fernbedienung": "Remote control",
+          "koppelbar_bis": "Connectable",
+          "stromquelle": "Power source",
+          "spannung_v": "Operating voltage",
+          "leistung_w": "Power",
+          "akkulaufzeit_h": "Lighting time",
+          "ip_schutzart": "Protection rating",
+          "einsatzbereich": "Use",
+          "material": "Material"
+        },
+        "values": {
+          "gesamtlaenge_m": "{{ value }} m",
+          "beleuchtete_laenge_m": "{{ value }} m",
+          "zuleitung_m": "{{ value }} m",
+          "breite_m": "{{ value }} m",
+          "hoehe_m": "{{ value }} m",
+          "led_anzahl": "{{ value }}",
+          "birnenabstand_cm": "{{ value }} cm",
+          "farbtemperatur_kelvin": "{{ value }} K",
+          "anzahl_leuchtmodi": "{{ value }}",
+          "koppelbar_bis": "up to {{ value }} strings",
+          "spannung_v": "{{ value }} V",
+          "leistung_w": "{{ value }} W",
+          "akkulaufzeit_h": "up to {{ value }} hours",
+          "prozent": "{{ value }} %",
+          "ja": "Yes"
+        }
+      },
+      "pflege": {
+        "kicker": "Installation & care",
+        "title": "How to enjoy it for longer"
+      },
       "lieferumfang": {
         "kicker": "In the box",
         "title": "What you get"

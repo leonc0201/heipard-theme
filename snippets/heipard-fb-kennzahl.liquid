@@ -9,7 +9,9 @@
   akkulaufzeit_h, hoehe_m, beleuchtete_laenge_m, led_anzahl, farbtemperatur_kelvin.
 
   Einheit und Beschriftung kommen aus den Locales (heipard.blocks.kennzahl.felder).
-  Das Textfeld des Blocks ergänzt optional einen Satz.
+  Nur ein Label: Ist der Kicker des Blocks gepflegt, steht er als Unterzeile unter der
+  Zahl statt der Beschriftung aus den Locales und wird nicht zusätzlich wiederholt.
+  Titel und Textfeld des Blocks stehen neben der Zahl.
 
   Parameter: product, data, kicker, title, body, label
 {%- endcomment -%}
@@ -39,15 +41,19 @@
     endcapture
     assign value_key = 'heipard.blocks.kennzahl.felder.' | append: field | append: '.value'
     assign label_key = 'heipard.blocks.kennzahl.felder.' | append: field | append: '.label'
+    assign kpi_label = label_key | t
+    if kicker != blank
+      assign kpi_label = kicker
+    endif
   -%}
   <div class="heipard-fb heipard-fb--kennzahl">
     <p class="heipard-kpi">
       <span class="heipard-kpi__value">{{ value_key | t: value: value_txt }}</span>
-      <span class="heipard-kpi__label">{{ label_key | t }}</span>
+      <span class="heipard-kpi__label">{{ kpi_label | escape }}</span>
     </p>
-    {%- if kicker != blank or title != blank or body != blank -%}
+    {%- if title != blank or body != blank -%}
       <div class="heipard-kpi__text">
-        {%- render 'heipard-fb-head', kicker: kicker, title: title, body: body -%}
+        {%- render 'heipard-fb-head', title: title, body: body -%}
       </div>
     {%- endif -%}
   </div>

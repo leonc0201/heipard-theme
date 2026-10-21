@@ -24,6 +24,16 @@
       Blöcke der Daten-Zone (Serienleiter, Nachweise, Lieferumfang, Fragen)
       zählen nicht mit und stehen am Ende.
     - Blöcke ohne Inhalt oder ohne Metafeld-Daten werden übersprungen.
+    - Schmale Blöcke (R1 Text, D6 Kennzahl, D2 Kelvin): folgen zwei aufeinander,
+      stehen sie ab Desktop nebeneinander (heipard-feature__pair).
+
+  Kopf: Kicker und Überschrift aus dem Feature-Set (Felder heading_kicker, heading),
+  sonst die Section-Einstellungen als Rückfall.
+
+  Daten-Zone in fester Reihenfolge: Technische Details (Tabelle aus den Metafeldern,
+  snippets/heipard-fb-technik.liquid), Lieferumfang, Nachweise, Installation & Pflege
+  (Metaobjekt heipard_pflege je kat-Tag, snippets/heipard-fb-pflege.liquid), Fragen,
+  Serienleiter. Technik und Pflege gehören keinem Set an und stehen bei jedem Produkt.
 
   Rendering je Block: snippets/heipard-feature-dispatch.liquid
   CSS liegt global in assets/heipard-feature.css (nach base.css), NICHT hier.
@@ -59,8 +69,14 @@
 
   assign main_html = ''
   assign zone_html = ''
+  assign zone_liefer = ''
+  assign zone_nachweise = ''
+  assign zone_fragen = ''
+  assign zone_serie = ''
   assign minis_html = ''
   assign notes_html = ''
+  assign narrow_types = 'text,kennzahl,kelvin' | split: ','
+  assign narrow_pending = ''
 -%}
 
 {%- if use_meta -%}
@@ -128,7 +144,16 @@
         endif
 
         if zone_types contains type
-          assign zone_html = zone_html | append: html
+          case type
+            when 'lieferumfang'
+              assign zone_liefer = zone_liefer | append: html
+            when 'nachweise'
+              assign zone_nachweise = zone_nachweise | append: html
+            when 'fragen'
+              assign zone_fragen = zone_fragen | append: html
+            else
+              assign zone_serie = zone_serie | append: html
+          endcase
           continue
         endif
 
@@ -140,7 +165,8 @@
 
         # R2 Zäsur ist ein Kapitelbruch: zählt nicht als Block
         if type == 'zaesur'
-          assign main_html = main_html | append: html
+          assign main_html = main_html | append: narrow_pending | append: html
+          assign narrow_pending = ''
           continue
         endif
 
@@ -157,10 +183,21 @@
         endif
         assign prev_type = type
         assign count = count | plus: 1
-        assign main_html = main_html | append: html
+        if narrow_types contains type
+          if narrow_pending == blank
+            assign narrow_pending = html
+          else
+            assign main_html = main_html | append: '<div class="heipard-feature__pair">' | append: narrow_pending | append: html | append: '</div>'
+            assign narrow_pending = ''
+          endif
+        else
+          assign main_html = main_html | append: narrow_pending | append: html
+          assign narrow_pending = ''
+        endif
       -%}
     {%- endfor -%}
   {%- endfor -%}
+  {%- assign main_html = main_html | append: narrow_pending -%}
 {%- else -%}
   {%- capture main_html -%}
     {%- assign feature_index = 0 -%}
@@ -205,10 +242,22 @@
   {%- endcapture -%}
 {%- endif -%}
 
+{%- capture tech_html -%}{%- render 'heipard-fb-technik', product: product -%}{%- endcapture -%}
+{%- capture pflege_html -%}{%- render 'heipard-fb-pflege', product: product -%}{%- endcapture -%}
 {%- liquid
+  assign zone_html = tech_html | strip | append: zone_liefer | append: zone_nachweise | append: pflege_html | append: zone_fragen | append: zone_serie
   assign main_html = main_html | strip
   assign zone_html = zone_html | strip
   assign minis_html = minis_html | strip
+
+  assign head_kicker = section.settings.kicker
+  assign head_title = section.settings.heading
+  assign head_accent = section.settings.heading_accent
+  if use_meta and fset.heading.value != blank
+    assign head_kicker = fset.heading_kicker.value | default: section.settings.kicker
+    assign head_title = fset.heading.value
+    assign head_accent = ''
+  endif
 -%}
 
 {%- if request.design_mode and notes_html != blank -%}
@@ -222,14 +271,14 @@
     <div class="page-width">
       {%- if main_html != blank -%}
         <div class="heipard-feature__head">
-          {%- if section.settings.kicker != blank -%}
-            <span class="heipard-kicker">{{ section.settings.kicker | escape }}</span>
+          {%- if head_kicker != blank -%}
+            <span class="heipard-kicker">{{ head_kicker | escape }}</span>
           {%- endif -%}
-          {%- if section.settings.heading != blank or section.settings.heading_accent != blank -%}
+          {%- if head_title != blank or head_accent != blank -%}
             <h2 class="heipard-feature__heading">
-              {{ section.settings.heading | escape }}
-              {%- if section.settings.heading_accent != blank %}
-                <span class="heipard-feature__accent">{{ section.settings.heading_accent | escape }}</span>
+              {{ head_title | escape }}
+              {%- if head_accent != blank %}
+                <span class="heipard-feature__accent">{{ head_accent | escape }}</span>
               {%- endif -%}
             </h2>
           {%- endif -%}
