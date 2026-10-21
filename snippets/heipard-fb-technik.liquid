@@ -4,6 +4,7 @@
   Daten-Blöcke); beim Variantenwechsel rendert heipard-variant.js die Sektion neu.
   Lichtfarbe aus der Variantenoption „Lichtfarbe“, sonst aus dem Metafeld.
   Nur gepflegte Felder erscheinen. Ohne ein einziges Feld rendert der Block nichts.
+  leistung_w steht bewusst nicht in der Tabelle, bis die Werte bestätigt sind (Leon 2026-10-21).
   Beschriftungen und Einheiten: locales, heipard.blocks.technik.
   Parameter: product
 {%- endcomment -%}
@@ -22,7 +23,7 @@
     assign color = mf.lichtfarbe.value
   endif
 
-  assign keys = 'gesamtlaenge_m,beleuchtete_laenge_m,zuleitung_m,breite_m,hoehe_m,led_anzahl,birnenabstand_cm,farbtemperatur_kelvin,anzahl_leuchtmodi,dimmstufen,timer_dauer_h,fernbedienung,koppelbar_bis,stromquelle,spannung_v,leistung_w,akkulaufzeit_h,ip_schutzart,einsatzbereich,material' | split: ','
+  assign keys = 'gesamtlaenge_m,beleuchtete_laenge_m,zuleitung_m,breite_m,hoehe_m,led_anzahl,birnenabstand_cm,farbtemperatur_kelvin,anzahl_leuchtmodi,dimmstufen,timer_dauer_h,fernbedienung,koppelbar_bis,stromquelle,spannung_v,akkulaufzeit_h,ip_schutzart,einsatzbereich,material' | split: ','
   assign text_keys = 'stromquelle,ip_schutzart,einsatzbereich,material' | split: ','
 -%}
 {%- capture rows -%}
