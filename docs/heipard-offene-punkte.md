@@ -210,9 +210,8 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Zweiter Durchlauf** (2026-10-21) — Schieber DCT/NPT an und aus, VIT nur an (Aus per CSS), vier Hotspots,
   KAT-B1 für CTL, DFM, SBLB, DGM, `SBLB_B2_01`, HOME-11 als Bild der Markenstory.
 - [x] **KAT-LED_B1_01** als B1 für BLT und BLM eingetragen (2026-10-21, ab 17:03 Uhr in Files).
-- [ ] **HOME-11 auf dem Live-Theme** — `templates/index.json` mit dem Bild ist auf main (Commit `365c4e5`), der
-  GitHub-Sync hat die Datei am 2026-10-21 aber nicht übertragen. Prüfen: Onlineshop → Themes → GitHub-Verbindung
-  von heipard-theme/main. Danach mit `theme.files{checksumMd5}` gegen `git show HEAD:templates/index.json` abgleichen.
+- [x] **HOME-11 auf dem Live-Theme** — `templates/index.json` (Commit `365c4e5`) ist live, Prüfsumme gleich main
+  (übertragen 2026-10-21, 17:12 Uhr). Die Theme-Abfrage hatte den neuen Stand nur verzögert gemeldet.
 - [ ] **DFM_B2_01** aus Hermes in den Block `dfm-b2` eintragen (vorbereitet, Bild leer).
 - [ ] **Datenlücken, die Blöcke leer lassen** (Leon/Asset-Instanz): VIT ohne Maße und Timer, OLAS14 ohne Timer,
   Stromquelle und beleuchtete Länge (kein Koppelplan), CTL ohne Länge und Timer, Lieferumfang bei allen 20,

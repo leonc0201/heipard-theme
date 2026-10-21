@@ -83,8 +83,8 @@ beiden VIT-Sets. Das Steuerungs-Basisbild von OLAS14 ist dasselbe wie das B2-Bil
   `KAT-CURTAIN_B1_01` und `_B2_01` liegen ebenfalls in Files, sind aber keinem Welle-2-Block zugeordnet.
 - **Offen:** `DFM_B2_01` kommt aus Hermes, der Block ist vorbereitet, das Bild leer.
 - **Startseite:** `HOME-11_Markenstory_01.webp` als Bild der Markenstory (`templates/index.json`, Commit
-  `365c4e5`, gepusht 17:03 Uhr). Der GitHub-Sync hat die Datei bis zum Berichtsende nicht aufs Live-Theme
-  übertragen (Prüfsumme im Theme unverändert, Stand 9.10.); siehe offene Punkte.
+  `365c4e5`, gepusht 17:03 Uhr). Live seit 17:12 Uhr (Prüfsumme gleich main); die Theme-Abfrage hatte den
+  neuen Stand zunächst verzögert gemeldet.
 
 ## Live-Stand nach Durchlauf 2
 
