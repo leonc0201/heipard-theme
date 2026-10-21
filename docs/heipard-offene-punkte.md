@@ -202,6 +202,27 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
   Variantenwahl: die vier Bilder erscheinen nur noch bei Multicolor bzw. Kaltweiß, sichtbare Medien und
   Lightbox entsprechen der Erwartung, keine JS-Fehler.
 
+## Feature-Sets Welle 2 (Stand 2026-10-21)
+
+Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Familien-Kollektionen für die
+20 Welle-2-Produkte stehen, Durchlauf 1 ist live.
+
+- [ ] **Zweiter Durchlauf** — sobald `reports/auftrag_13.md` der Asset-Instanz vorliegt: Schieber-Bilder
+  (DCT, NPT, VIT 01 und 02), Hotspot-Bilder (DCT_P1_04, NPT_P1_06, VIT_P1_01, OLAS14_P1_01) samt neuen
+  Hotspot-JSONs, KAT-B1-Bilder (CTL, LED, CLUSTER, SOLAR, MOTIF), `DFM_B2_01`, `SBLB_B2_01` eintragen.
+  Danach HOME-11 als Bild der Markenstory auf der Startseite.
+- [ ] **Datenlücken, die Blöcke leer lassen** (Leon/Asset-Instanz): VIT ohne Maße und Timer, OLAS14 ohne Timer
+  und ohne beleuchtete Länge (kein Koppelplan), CTL ohne Länge und Timer, Lieferumfang bei allen 20,
+  Schutzart bei SBLB und CTL-210/400, Gesamtlänge HP-DFM-600, LED-Anzahl HP-DFM-400.
+- [ ] **Fragen in Standard- und Long-Tail-Sets** — gepflegt, aber laut Vokabular ohne Fragen-Block in der
+  Daten-Zone. Entscheidung Leon: „Auto · Fragen" ergänzen oder so lassen.
+- [ ] **Serienleiter bei Farbe und Größe** — zeigt jede Variante als Stufe (hp-dct-200 sechs Karten, DFM
+  ebenso). Gruppierung nach Größe wäre eine Code-Änderung, erst nach Freigabe.
+- [ ] **familie-dgm** — enthält Stern (hp-dgm-001), Spirale (hp-dgm-002) und Geschenkboxen (hp-dgm-048).
+  Die Serienleiter zeigt sie als eine Serie. Eigene Codes je Motiv wären klarer (Entscheidung Leon).
+- [ ] **dimmstufen an HP-NPT-210M** — als Varianten-Metafeld ohne Definition geschrieben. Für die Pflege im
+  Admin fehlt eine Varianten-Definition `heipard.dimmstufen`.
+
 ## Fragen an Shenzhen
 
 Sammelblatt für Rückfragen an Tyler. Die Rückfragen zu OL-G40 stehen oben unter „Feature-Baukasten".

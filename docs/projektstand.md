@@ -27,6 +27,9 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Produkt-Template sind geleert, Familien-Kollektionen (`familie-…`) sind ausgeblendet (Liste, noindex,
   Sitemap über `seo.hidden`), OL-G40 ist mit Bildern, Texten und Fragen befüllt.
   Anleitung: `heipard-feature-baukasten.md`.
+- **Feature-Sets Welle 2** (2026-10-21): 11 Sets für die zehn Welle-2-Familien, 40 Blöcke, 38 Fragen,
+  Familien-Kollektionen für alle zehn Codes; Bilder für Schieber, Hotspots und KAT-B1 folgen im zweiten
+  Durchlauf. Bericht `heipard-feature-sets-welle2-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
