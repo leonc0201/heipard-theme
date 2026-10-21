@@ -22,11 +22,25 @@
 }
 .heipard-feature__accent { color: var(--primary); }
 
-/* --- Block-Stapel (großzügige vertikale Abstände) ---------------------- */
+/* --- Block-Stapel ------------------------------------------------------ */
+/* Abstand 2026-10-21 um ein Drittel verringert (vorher clamp(5rem, 8vw, 8rem)) */
 .heipard-feature__blocks {
   display: flex;
   flex-direction: column;
-  gap: clamp(5rem, 8vw, 8rem);
+  gap: clamp(3.4rem, 5.4vw, 5.4rem);
+}
+
+/* Zwei schmale Blöcke (R1, D6, D2) in Folge: ab Desktop nebeneinander */
+.heipard-feature__pair {
+  display: grid;
+  gap: clamp(3.4rem, 5.4vw, 5.4rem);
+}
+@media screen and (min-width: 990px) {
+  .heipard-feature__pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(3.2rem, 4vw, 6.4rem);
+    align-items: start;
+  }
 }
 
 /* --- Alternierende Bild/Text-Zeile ------------------------------------- */
@@ -262,10 +276,17 @@
 .heipard-fb-notes li + li { margin-top: 0.6rem; }
 
 /* --- R1 Text schmal ---------------------------------------------------- */
+/* Linksbündig, ab Desktop 6 von 12 Spalten; dünne Terracotta-Linie links */
 .heipard-fb--text {
   width: 100%;
   max-width: 68rem;
-  margin-inline: auto;
+  margin-inline: 0;
+  padding-left: clamp(1.6rem, 2vw, 2.4rem);
+  border-left: 2px solid var(--primary);
+}
+@media screen and (min-width: 990px) {
+  .heipard-feature__blocks > .heipard-fb--text { width: 50%; max-width: none; }
+  .heipard-feature__pair > .heipard-fb--text { width: 100%; max-width: none; }
 }
 .heipard-fb__prose {
   display: grid;
@@ -626,9 +647,9 @@
 .heipard-feature__zone {
   display: flex;
   flex-direction: column;
-  gap: clamp(4rem, 6vw, 6rem);
-  margin-top: clamp(6rem, 9vw, 10rem);
-  padding-top: clamp(4rem, 5vw, 5.6rem);
+  gap: clamp(2.8rem, 4vw, 4rem);
+  margin-top: clamp(4rem, 6vw, 6.8rem);
+  padding-top: clamp(2.8rem, 3.4vw, 3.8rem);
   border-top: 1px solid var(--border);
 }
 .heipard-feature__zone--solo {
@@ -1353,6 +1374,8 @@
 @media screen and (min-width: 750px) {
   .heipard-fb--kennzahl:has(.heipard-kpi__text) { grid-template-columns: auto minmax(0, 1fr); }
 }
+.heipard-feature__pair > .heipard-fb--kennzahl,
+.heipard-feature__pair > .heipard-fb--kelvin { margin-inline: 0; max-width: none; }
 .heipard-kpi {
   display: flex;
   flex-direction: column;
@@ -1599,3 +1622,38 @@
 @media (prefers-reduced-motion: reduce) {
   .heipard-color__img--alt { transition: none; }
 }
+
+/* --- Technische Details (Daten-Zone) ----------------------------------- */
+.heipard-tech {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+.heipard-tech__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 1.6rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+.heipard-tech dt {
+  color: color-mix(in oklch, rgb(var(--color-foreground)) 62%, transparent);
+}
+.heipard-tech dd {
+  margin: 0;
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+}
+@media screen and (min-width: 990px) {
+  .heipard-tech {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(3.2rem, 4vw, 6.4rem);
+    border-top: 0;
+  }
+  .heipard-tech__row:nth-child(-n + 2) { border-top: 1px solid var(--border); }
+}
+
+/* --- Installation & Pflege (Daten-Zone) -------------------------------- */
+.heipard-fb--pflege .heipard-fb__prose { max-width: 68rem; }

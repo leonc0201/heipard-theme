@@ -157,6 +157,54 @@
           "batteriebox": "Batteriebox"
         }
       },
+      "technik": {
+        "kicker": "Technische Details",
+        "title": "Alle Daten auf einen Blick",
+        "rows": {
+          "lichtfarbe": "Lichtfarbe",
+          "gesamtlaenge_m": "Gesamtlänge mit Zuleitung",
+          "beleuchtete_laenge_m": "Beleuchtete Länge",
+          "zuleitung_m": "Zuleitung",
+          "breite_m": "Breite",
+          "hoehe_m": "Höhe",
+          "led_anzahl": "Lichtpunkte",
+          "birnenabstand_cm": "Abstand der Lichtpunkte",
+          "farbtemperatur_kelvin": "Farbtemperatur",
+          "anzahl_leuchtmodi": "Leuchtmodi",
+          "dimmstufen": "Dimmstufen",
+          "timer_dauer_h": "Timer",
+          "fernbedienung": "Fernbedienung",
+          "koppelbar_bis": "Koppelbar",
+          "stromquelle": "Stromquelle",
+          "spannung_v": "Betriebsspannung",
+          "leistung_w": "Leistung",
+          "akkulaufzeit_h": "Leuchtdauer",
+          "ip_schutzart": "Schutzart",
+          "einsatzbereich": "Einsatzbereich",
+          "material": "Material"
+        },
+        "values": {
+          "gesamtlaenge_m": "{{ value }} m",
+          "beleuchtete_laenge_m": "{{ value }} m",
+          "zuleitung_m": "{{ value }} m",
+          "breite_m": "{{ value }} m",
+          "hoehe_m": "{{ value }} m",
+          "led_anzahl": "{{ value }}",
+          "birnenabstand_cm": "{{ value }} cm",
+          "farbtemperatur_kelvin": "{{ value }} K",
+          "anzahl_leuchtmodi": "{{ value }}",
+          "koppelbar_bis": "bis zu {{ value }} Ketten",
+          "spannung_v": "{{ value }} V",
+          "leistung_w": "{{ value }} W",
+          "akkulaufzeit_h": "bis zu {{ value }} Stunden",
+          "prozent": "{{ value }} %",
+          "ja": "Ja"
+        }
+      },
+      "pflege": {
+        "kicker": "Installation & Pflege",
+        "title": "So hältst du lange Freude daran"
+      },
       "lieferumfang": {
         "kicker": "Lieferumfang",
         "title": "Das ist im Karton"
