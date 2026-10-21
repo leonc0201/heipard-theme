@@ -205,23 +205,24 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
 ## Feature-Sets Welle 2 (Stand 2026-10-21)
 
 Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Familien-Kollektionen für die
-20 Welle-2-Produkte stehen, Durchlauf 1 ist live.
+20 Welle-2-Produkte stehen, Durchlauf 1 und 2 sind live.
 
-- [ ] **Zweiter Durchlauf** — sobald `reports/auftrag_13.md` der Asset-Instanz vorliegt: Schieber-Bilder
-  (DCT, NPT, VIT 01 und 02), Hotspot-Bilder (DCT_P1_04, NPT_P1_06, VIT_P1_01, OLAS14_P1_01) samt neuen
-  Hotspot-JSONs, KAT-B1-Bilder (CTL, LED, CLUSTER, SOLAR, MOTIF), `DFM_B2_01`, `SBLB_B2_01` eintragen.
-  Danach HOME-11 als Bild der Markenstory auf der Startseite.
-- [ ] **Datenlücken, die Blöcke leer lassen** (Leon/Asset-Instanz): VIT ohne Maße und Timer, OLAS14 ohne Timer
-  und ohne beleuchtete Länge (kein Koppelplan), CTL ohne Länge und Timer, Lieferumfang bei allen 20,
+- [x] **Zweiter Durchlauf** (2026-10-21) — Schieber DCT/NPT an und aus, VIT nur an (Aus per CSS), vier Hotspots,
+  KAT-B1 für CTL, DFM, SBLB, DGM, `SBLB_B2_01`, HOME-11 als Bild der Markenstory.
+- [ ] **KAT-LED_B1_01** als B1 für BLT und BLM eintragen, sobald freigegeben und in Files (Blöcke `blt-b1`,
+  `blm-b1` sind vorbereitet).
+- [ ] **DFM_B2_01** aus Hermes in den Block `dfm-b2` eintragen (vorbereitet, Bild leer).
+- [ ] **Datenlücken, die Blöcke leer lassen** (Leon/Asset-Instanz): VIT ohne Maße und Timer, OLAS14 ohne Timer,
+  Stromquelle und beleuchtete Länge (kein Koppelplan), CTL ohne Länge und Timer, Lieferumfang bei allen 20,
   Schutzart bei SBLB und CTL-210/400, Gesamtlänge HP-DFM-600, LED-Anzahl HP-DFM-400.
-- [ ] **Fragen in Standard- und Long-Tail-Sets** — gepflegt, aber laut Vokabular ohne Fragen-Block in der
-  Daten-Zone. Entscheidung Leon: „Auto · Fragen" ergänzen oder so lassen.
+- [x] **Fragen in Standard- und Long-Tail-Sets** — „Auto · Fragen" auf Leons Entscheidung in allen Sets und
+  in den Vorlagen Standard und Long-Tail; D7 im Vokabular bei allen drei Dramaturgien (2026-10-21).
 - [ ] **Serienleiter bei Farbe und Größe** — zeigt jede Variante als Stufe (hp-dct-200 sechs Karten, DFM
-  ebenso). Gruppierung nach Größe wäre eine Code-Änderung, erst nach Freigabe.
-- [ ] **familie-dgm** — enthält Stern (hp-dgm-001), Spirale (hp-dgm-002) und Geschenkboxen (hp-dgm-048).
-  Die Serienleiter zeigt sie als eine Serie. Eigene Codes je Motiv wären klarer (Entscheidung Leon).
-- [ ] **dimmstufen an HP-NPT-210M** — als Varianten-Metafeld ohne Definition geschrieben. Für die Pflege im
-  Admin fehlt eine Varianten-Definition `heipard.dimmstufen`.
+  ebenso). Gruppierung nach Größe wäre eine Code-Änderung. Notiert, nichts geändert (Leon 2026-10-21).
+- [ ] **familie-dgm** — enthält Stern (hp-dgm-001), Spirale (hp-dgm-002) und Geschenkboxen (hp-dgm-048), die
+  Serienleiter zeigt sie als eine Serie. Notiert, nichts geändert (Leon 2026-10-21).
+- [x] **dimmstufen an HP-NPT-210M** — Varianten-Definition `heipard.dimmstufen` (Liste Ganzzahl) angelegt, der
+  Wert hängt daran (2026-10-21).
 
 ## Fragen an Shenzhen
 
