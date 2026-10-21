@@ -303,3 +303,11 @@ Auf der Testkopie zusätzlich geprüft, alle ohne Liquid-Fehler: hp-dct-200, hp-
   keinem Produkt, weil alle Lichterketten einen spezifischen kat-Tag tragen.
 - **Technik-Tabelle:** ohne `leistung_w`, bis die Werte bestätigt sind (Branch-Commit `dca94fa`, in der Testkopie).
 - **`zz-feature-preview`:** nicht gelöscht, der Connector sperrt das Löschen von Themes. Bitte im Admin entfernen.
+
+### Ausgerollt (2026-10-21, 20:07 Uhr)
+
+`pdp-layout-welle2` ist nach Leons Go auf main gemergt (Merge-Commit `3ddf2c6`, getesteter Stand `dca94fa`).
+Der GitHub-Sync hat alle acht Dateien um 20:07 Uhr übertragen. Sieben Prüfsummen sind gleich main; die
+Produktvorlage hat dieselbe normalisierte Prüfsumme (`e800f09e`) wie in der Testkopie. Live geprüft an den
+20 Welle-2-Produkten und fünf weiteren: keine Liquid-Fehler, keine [TBD]-Platzhalter, Daten-Zone in der neuen
+Reihenfolge, Sektionsüberschriften aus den Sets. Die Testkopie kann im Admin gelöscht werden.

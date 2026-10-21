@@ -213,9 +213,10 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **HOME-11 auf dem Live-Theme** — `templates/index.json` (Commit `365c4e5`) ist live, Prüfsumme gleich main
   (übertragen 2026-10-21, 17:12 Uhr). Die Theme-Abfrage hatte den neuen Stand nur verzögert gemeldet.
 - [ ] **DFM_B2_01** aus Hermes in den Block `dfm-b2` eintragen (vorbereitet, Bild leer).
-- [ ] **Layout-Test freigeben** — Branch `pdp-layout-welle2` (Paare, R1 linksbündig, Sektionskopf aus dem Set,
-  D6 ein Label, Abstände, Technik und Pflege in der Daten-Zone) liegt auf der Testkopie 197772607821. Nach Leons
-  Blick mergen und Sync prüfen; danach die Testkopie im Admin löschen.
+- [x] **Layout ausgerollt** (2026-10-21, 20:07 Uhr) — `pdp-layout-welle2` nach Leons Go auf main gemergt
+  (Merge-Commit `3ddf2c6`), alle acht Dateien per Prüfsumme im Live-Theme bestätigt, 25 Produktseiten live
+  geprüft (keine Liquid-Fehler, keine [TBD]-Platzhalter mehr).
+- [ ] **Testkopie `zz-layout-test (pdp-layout-welle2)` löschen** (Leon, im Admin; ID 197772607821).
 - [ ] **Theme `zz-feature-preview` löschen** (Leon, im Admin) — veraltet und liefert eine Fehlerseite. Der
   Connector sperrt das Löschen von Themes grundsätzlich, auch unveröffentlichter.
 - [x] **Installation & Pflege: Texte** (2026-10-21) — elf Einträge aus `heipard-pflegetexte.md`, ein Absatz je
