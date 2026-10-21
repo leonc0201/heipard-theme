@@ -108,14 +108,14 @@ Für Familien mit mehreren SKUs, die nicht prominent beworben werden.
 
 B1 Full-Width → B2 Split → R1 Text → D1 Kettenplan oder D3 Zeitband → B4 Icon-Grid
 
-Daten-Zone danach: D4 Serienleiter, D5 Nachweise, P3 Lieferumfang.
+Daten-Zone danach: D4 Serienleiter, D5 Nachweise, P3 Lieferumfang, D7 Fragen.
 
 **Long-Tail (3 Blöcke)**
 Für Einzel-SKUs, Auslaufmodelle und alles, wofür kein Basisbild generiert wird.
 
 B1 Full-Width (Familien- oder Kategoriebild) → R1 Text → D6 Kennzahl oder P3 Lieferumfang
 
-Daten-Zone danach: D4 Serienleiter, D5 Nachweise.
+Daten-Zone danach: D4 Serienleiter, D5 Nachweise, D7 Fragen.
 
 **Kategorie-Besonderheiten innerhalb der Dramaturgien**
 | Kategorie | Was sich ändert | Lauter Block (nur Hero) |

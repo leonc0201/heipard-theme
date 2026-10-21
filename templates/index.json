@@ -87,6 +87,7 @@
     "heipard_story": {
       "type": "heipard-brand-story",
       "settings": {
+        "image": "shopify://shop_images/HOME-11_Markenstory_01.webp",
         "kicker": "Über HeiPard",
         "heading": "Licht, das Abende länger macht.",
         "heading_accent": "",
