@@ -1,6 +1,9 @@
 # Welle 2: Textentwurf für die 20 Produkte
 
-**Status: Entwurf, nichts im Shop geschrieben.** Leon sieht die Tabelle vor dem Schreiben. Stand 2026-10-22.
+**Status: geschrieben am 2026-10-22**, mit Leons Festlegungen (VIT 586L „warmweiß oder bunt, umschaltbar",
+CTL 180M/240M „für innen und außen", BLT-5-m-Hinweis zu den AA-Batterien). Diese Tabelle zeigt den Entwurf davor;
+der geschriebene Stand und die Festlegungen stehen im Bericht `heipard-feature-sets-welle2-bericht.md`, Abschnitt
+„Durchlauf 3 und Welle-2-Texte".
 
 **Quellen:** Metafeld-Blatt `reports/metafelder/welle2_metafelder.csv` (nur Status eindeutig, bestätigt, Titel
 maßgeblich, Vorgabe Leon), Faktenlisten `reports/fakten/<SKU>.json`, Lieferumfang aus dem Blatt, Fragen

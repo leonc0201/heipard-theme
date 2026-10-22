@@ -202,7 +202,7 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
   Variantenwahl: die vier Bilder erscheinen nur noch bei Multicolor bzw. Kaltweiß, sichtbare Medien und
   Lightbox entsprechen der Erwartung, keine JS-Fehler.
 
-## Feature-Sets Welle 2 (Stand 2026-10-21)
+## Feature-Sets Welle 2 (Stand 2026-10-22)
 
 Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Familien-Kollektionen für die
 20 Welle-2-Produkte stehen, Durchlauf 1 und 2 sind live.
@@ -221,8 +221,23 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   Connector sperrt das Löschen von Themes grundsätzlich, auch unveröffentlichter.
 - [x] **Installation & Pflege: Texte** (2026-10-21) — elf Einträge aus `heipard-pflegetexte.md`, ein Absatz je
   Zeile. Sichtbar ab dem Ausrollen des Layout-Branches; auf der Testkopie an zehn Produkten geprüft.
-- [ ] **Lieferumfang hp-dgm-001** — zeigt nur die Bedienungsanleitung, bis Tyler die Anzahl der Sterne klärt.
-- [ ] **SEO-Meta-Descriptions** — bei allen 119 Produkten leer (Stand 2026-10-21).
+- [ ] **Lieferumfang hp-dgm-001** — das Long-Tail-Set `dgm` hat keinen Lieferumfang-Block, die Seite zeigt
+  keinen Lieferumfang. Daten offen, bis Tyler die Anzahl der Sterne klärt.
+- [ ] **SEO-Meta-Descriptions** — bei den 20 Welle-2-Produkten geschrieben (2026-10-22), bei den übrigen 99 leer.
+- [x] **Durchlauf 3** (2026-10-22) — hero für SBLB, BLT, BLM, DFM, CTL; Schieber SBLB/BLT/BLM, CTL Farbwechsel,
+  fünf Hotspots, Sticky-B2 für DCT und NPT. Bericht, Abschnitt „Durchlauf 3 und Welle-2-Texte".
+- [x] **Welle-2-Texte** (2026-10-22) — Titel, Beschreibung, subtitle, Meta an allen 20 Produkten, BLT-5-m-Hinweis
+  im Lieferumfang von HP-BLT-050; live geprüft.
+- [ ] **Bilder folgen:** DFM-Schieber (An/Aus), Aus-Bilder BLT/BLM, Hermes-Bilder für die Sticky-Blöcke CTL,
+  OLAS14, VIT (angelegt, noch nicht im Set) und für DGM (bleibt bis dahin Long-Tail).
+- [ ] **SEO-Titel** — 14 der 20 Produkttitel sind länger als 70 Zeichen, Shopify schneidet den `<title>` ab.
+  Vorschläge im Bericht, Schreiben auf Leons Go.
+- [ ] **Hotspot-Inhalte prüfen** — Timer-Punkt bei BLT (gilt auch für hp-blt-100-eu-1 ohne Timer), CTL und DFM;
+  CTL-Fernbedienung fehlt im Lieferumfang von CTL 210/400.
+- [ ] **CTL-Set** — Farbwechsel auch bei 180M/240M (nur Multicolor); `ctl-b2` doppelt das Farbthema.
+- [ ] **Lieferumfang „nicht enthalten"** ohne Häkchen zeigen (Code-Vorschlag, nicht umgesetzt).
+- [ ] **VIT 864L Lichtfarbe** — Titel „bunt", Schieberbild warmweiß und bunt; 586L-Farb-Tag nur „Warmweiß".
+- [ ] **Tag `todo-text`** an zehn Welle-2-Produkten entfernen (Texte stehen), auf Leons Go.
 - [ ] **Technik-Tabelle zeigt ungeprüfte Altwerte** — Werte aus dem Welle-1-Import ohne Bestätigung im
   Welle-2-Blatt erscheinen mit; Prüfung mit dem Welle-1-Textbatch (Leon 2026-10-21). `leistung_w` ist bis zur
   Bestätigung aus der Tabelle genommen (Branch-Commit `dca94fa`).

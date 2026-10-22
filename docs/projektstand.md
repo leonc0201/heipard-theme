@@ -32,6 +32,9 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   erledigt (HOME-11 live seit 21.10., 17:12 Uhr), offen DFM_B2_01. Neues PDP-Layout live seit 21.10.:
   Sektionskopf aus dem Set, schmale Blöcke paarweise, Daten-Zone mit Technischen Details (Tabelle aus Metafeldern)
   und Installation & Pflege (Metaobjekt je kat-Tag), die Aufklapper in der Kaufbox entfallen. Bericht `heipard-feature-sets-welle2-bericht.md`.
+  **Durchlauf 3** (2026-10-22): 19 der 20 Produkte auf hero (DGM Long-Tail bis zu den Hermes-Bildern), neue
+  Schieber, CTL-Farbwechsel, fünf Hotspots, Sticky-B2 bei DCT und NPT. **Welle-2-Texte** (2026-10-22): Titel,
+  Beschreibung, subtitle und Meta-Description an allen 20 Produkten geschrieben und live geprüft.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

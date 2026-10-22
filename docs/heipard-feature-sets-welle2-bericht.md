@@ -311,3 +311,156 @@ Der GitHub-Sync hat alle acht Dateien um 20:07 Uhr übertragen. Sieben Prüfsumm
 Produktvorlage hat dieselbe normalisierte Prüfsumme (`e800f09e`) wie in der Testkopie. Live geprüft an den
 20 Welle-2-Produkten und fünf weiteren: keine Liquid-Fehler, keine [TBD]-Platzhalter, Daten-Zone in der neuen
 Reihenfolge, Sektionsüberschriften aus den Sets. Die Testkopie kann im Admin gelöscht werden.
+
+## Durchlauf 3 und Welle-2-Texte (2026-10-22)
+
+Auftrag von Leon nach dem Bericht zu Auftrag 14, zwei Teile nacheinander. Shop vor jedem Schreiben geprüft
+(HeiPard). Die Asset-Instanz hat in dieser Zeit nicht geschrieben.
+
+### A. Durchlauf 3: Feature-Sets
+
+**Dramaturgie hero** neu an zwölf Produkten: SBLB (2), BLT (2), BLM, DFM (3), CTL (4). Damit stehen 19 der 20
+Produkte auf hero, hp-dgm-001 bleibt Long-Tail, bis die Hermes-Bilder da sind.
+
+**15 neue Blöcke, ein geänderter:**
+
+- **Laute Blöcke (5):** SBLB Schieber mit `SBLB_I1_01_an` / `_aus`; BLT und BLM Schieber mit `BLT_B2_01` bzw.
+  `BLM_B2_01` als An-Bild, die Aus-Seite leitet das Theme per CSS ab; DFM Schieber vorbereitet ohne Bilder (der
+  Block bleibt unsichtbar, bis sie da sind); CTL Farbwechsel als Überblendung `CTL_I4_01_ww` / `CTL_I4_01_mc`.
+- **Hotspots (5)** mit den Punkt-JSONs aus Auftrag 14: `BLT_P1_03`, `BLM_P1_01`, `CTL_P1_05`, `DFM_P1_01`,
+  `SBLB_P1_01`.
+- **Zweites B2 als Sticky (5):** DCT mit `DCT_B2_08` (4 Punkte) und NPT mit `NPT_B2_06` (3 Punkte) stehen in
+  ihren Sets. CTL (4 Punkte), OLAS14 (4) und VIT (3) sind angelegt, aber noch ohne Bild und deshalb nicht im
+  Set, damit kein Platzhalter erscheint. Sobald die Hermes-Bilder da sind: Bild eintragen, Block ins Set.
+- **Geändert:** Schieber-Text der 586L nach Leons Festlegung („warmweiß oder bunt, umschaltbar").
+- Die Hero-Grenze von acht Blöcken hat bei DCT und NPT Platz gekostet: Das Icon-Grid ist dort für den Sticky-Block
+  herausgenommen.
+
+**Set-Übersicht** (fett = neu in Durchlauf 3; danach folgt bei allen die Daten-Zone: Technische Details,
+Lieferumfang, Nachweise, Installation & Pflege, Fragen, Serienleiter; bei DGM ohne Lieferumfang)
+
+| Set | Produkte | Dramaturgie | Blöcke |
+|---|---|---|---|
+| `dct` | hp-dct-200 | hero | B1, B2, R1, Schieber, Kettenplan, **Sticky**, Hotspot, Zeitband |
+| `npt` | hp-npt-210 | hero | B1, B2, R1, Schieber, Kettenplan, **Sticky**, Hotspot, Zeitband |
+| `vit-864l` | hp-vit-864l-eu-1 | hero | B1, B2, R1, Schieber 864L, Kettenplan, Hotspot, Zeitband, Icon-Grid |
+| `vit-586l` | hp-vit-586l-eu-1 | hero | B1, B2, R1, Schieber 586L, Kettenplan, Hotspot, Zeitband, Icon-Grid |
+| `olas14` | hp-ola-s14-15/30/50-eu | hero | B1, B2, R1, Steuerung, Kettenplan, Hotspot, Zeitband, Icon-Grid |
+| `ctl` | hp-ctl-180m, -240m, -210-eu-1, -400-eu-1 | **hero** | B1, B2, R1, **Farbwechsel**, Kettenplan, **Hotspot**, Zeitband, Icon-Grid |
+| `blt` | hp-blt-050, hp-blt-100-eu-1 | **hero** | B1, B2, R1, **Schieber**, Kettenplan, **Hotspot**, Zeitband, Icon-Grid |
+| `blm` | hp-blm-100-eu | **hero** | B1, B2, R1, **Schieber**, Kettenplan, **Hotspot**, Zeitband, Icon-Grid |
+| `dfm` | hp-dfm-400-eu-2, -600, -750-eu | **hero** | B1, B2, R1, D6, **Schieber** (Bilder folgen), Kettenplan, **Hotspot**, Zeitband, Icon-Grid |
+| `sblb` | hp-sblb-60l-ww-new, -100l-ww-new | **hero** | B1, B2, R1, D6, **Schieber**, Kettenplan, **Hotspot**, Zeitband |
+| `dgm` | hp-dgm-001 | longtail | B1, R1, D6 |
+
+Kettenplan und Zeitband erscheinen nur, wo die Metafelder der gewählten Variante sie füllen.
+
+**Texte der neuen Blöcke** nach der Textregel vom 21.10. (per Skript geprüft: Kicker zwei bis drei Worte, zwei
+Sätze mit Zahl, keine Dopplung zwischen Headline und Text, keine Gedankenstriche). Hotspots haben keinen Text,
+weil das Textfeld dort die Punkt-Beschriftungen liefert. Sticky-Punkte stehen als „Titel | Satz".
+
+| Block | Kicker | Headline | Text |
+|---|---|---|---|
+| SBLB Schieber | Mit und ohne | Abends verwandelt sich die Terrasse | Zieh den Regler und vergleiche den Sitzplatz ohne und mit Licht. Je nach Länge leuchten 60 oder 100 Kristallkugeln über Tisch und Stühlen. |
+| BLT Schieber | Mit und ohne | So viel Stimmung bringt eine Kette | Zieh den Regler und sieh dieselbe Gartenparty ohne und mit Licht. Je nach Länge leuchten 50 bis 200 warmweiße LEDs. |
+| BLM Schieber | Mit und ohne | Erst das Licht macht den Abend gemütlich | Zieh den Regler und vergleiche dieselbe Szene ohne und mit Lichterkette. Je nach Länge leuchten 100 oder 150 warmweiße LEDs. |
+| DFM Schieber | Mit und ohne | Ein Lichtband statt einzelner Punkte | Zieh den Regler und vergleiche dieselbe Szene ohne und mit Cluster-Kette. Je nach Länge sitzen 400 bis 1500 LEDs dicht an dicht. |
+| CTL Farbwechsel | Zwei Lichtfarben | Probier aus, was zu deinem Baum passt | Tipp auf die Buttons und sieh denselben Weihnachtsbaum in Warmweiß und in Multicolor. Die Modelle mit 210 und 400 LEDs gibt es in beiden Lichtfarben, die mit 180 und 240 LEDs in Multicolor. |
+| VIT Schieber 586L (geändert) | Mit und ohne | So verwandelt sich die Hausfront am Abend | Zieh den Regler und vergleiche das Haus ohne und mit Eisregen. Die 586L leuchtet warmweiß oder bunt, umschaltbar, mit 11 Leuchtmodi und vier Dimmstufen. |
+| BLT Hotspot | Die Bedienung | Alles direkt an der Batteriebox | (Punkt-Beschriftungen) |
+| BLM Hotspot | Die Bedienung | Alles direkt an der Batteriebox | (Punkt-Beschriftungen) |
+| CTL Hotspot | Die Fernbedienung | Bedienen, ohne aufzustehen | (Punkt-Beschriftungen) |
+| DFM Hotspot | Die Fernbedienung | Dimmen und umschalten aus der Ferne | (Punkt-Beschriftungen) |
+| SBLB Hotspot | Das Solarpanel | Hier entsteht die Energie für den Abend | (Punkt-Beschriftungen) |
+| DCT Sticky | Für draußen | Bereit für die Pergola | Spritzwasser: Nach IP44 geschützt, Regen von der Seite macht dem Vorhang nichts aus. · 3 m Zuleitung: Die Steckdose darf ein Stück vom Vorhang entfernt sein. · Timer: Nach 6 oder 8 Stunden geht der Vorhang von selbst aus. · 5 V: Der Vorhang arbeitet mit Kleinspannung. |
+| NPT Sticky | Hecke und Busch | Ein Netz statt vieler Meter Kette | 3 x 2 m: So viel Fläche bedeckt ein einzelnes Netz. · Weitere Netze: Für größere Flächen schließt du einfach ein zweites an. · Timer: Nach 6 oder 8 Stunden geht das Netz von selbst aus. |
+| CTL Sticky (ohne Bild) | Auf einen Blick | Was die Baumkette mitbringt | Von oben nach unten: Die Stränge fallen von der Spitze gleichmäßig über die Äste. · Je nach Modell: 180, 210, 240 oder 400 LEDs sitzen auf den Strängen. · 8 Leuchtmodi: Für jeden Abend die passende Stimmung. · Netzteil: Den Strom liefert ein Netzteil, Batterien brauchst du keine. |
+| OLAS14 Sticky (ohne Bild) | Auf einen Blick | Was die Außenkette mitbringt | Ersatzbirnen: Je nach Länge liegen eine oder zwei bei. · Koppelbar: Bei der 20-m-Kette verbindest du bis zu vier Ketten. · Fernbedienung: Sie reicht bis 25 m, alternativ steuerst du per App. · 24 V: Die Kette arbeitet mit Kleinspannung. |
+| VIT Sticky (ohne Bild) | Auf einen Blick | Was die Eisregen-Kette mitbringt | Spritzwasser: Nach IP44 aus allen Richtungen geschützt. · Netzteil: Den Strom liefert ein Netzteil, Batterien brauchst du keine. · Fernbedienung: Modus und Helligkeit stellst du bequem vom Boden aus ein. |
+
+### B. Welle-2-Texte
+
+Grundlage ist der Entwurf `heipard-welle2-texte-entwurf.md` mit Leons Festlegungen vom 22.10.:
+
+- **VIT 586L:** „warmweiß oder bunt, umschaltbar" in Titel, Beschreibung, Meta und Schieber-Text, ohne Länge.
+- **Innen und außen** nur bei eindeutigem IP44: neu bei CTL 180M und 240M, NPT ohne.
+- **Bleiben draußen:** CTL-400-Länge, OLAS14-50-Birnenzahl, CTL-Timer.
+- **BLT 5 m:** „3 x AA-Batterien nicht enthalten" als Hinweis in der Beschreibung und als zweite Zeile im
+  Lieferumfang der Variante HP-BLT-050. Die 20-m-Variante zeigt weiter nur die Kette (live geprüft).
+- **DGM:** ohne Stückzahl und Stromquelle.
+
+**Geschrieben: 81 Felder.** An allen 20 Produkten Titel, Beschreibung (descriptionHtml), subtitle und
+Meta-Description (80 Felder), dazu der Lieferumfang an HP-BLT-050. Keine Fehlermeldungen, aus dem Admin
+zurückgelesen. Meta-Descriptions 140 bis 155 Zeichen. Handles unverändert.
+
+**Live geprüft** (17:40 Uhr, alle 20 Seiten, per Skript gegen die Vorlage): Titel, subtitle, jeder Absatz der
+Beschreibung und `<meta name="description">` stimmen wörtlich, keine Liquid-Fehler. Der Pflege-Kicker zeigt jetzt „Installation & Pflege" statt „&amp;" (Fix
+`be7ff76`, seit 17:36 Uhr im Live-Theme, Prüfsumme gleich main).
+
+### Zur Kenntnis und zur Entscheidung
+
+1. **SEO-Titel wird abgeschnitten.** Ohne eigenen SEO-Titel nimmt Shopify den Produkttitel und kürzt ihn nach
+   70 Zeichen, auch mitten im Wort. Das betrifft 14 der 20 Seiten (z. B. `<title>` „HeiPard
+   Batterie-Lichterkette 5 m oder 20 m, warmweiß, für innen und a"). Vorschlag für einen SEO-Titel, nicht
+   geschrieben:
+
+   | Produkt | Vorschlag SEO-Titel | Zeichen |
+   |---|---|---|
+   | hp-dct-200 | HeiPard LED-Lichtervorhang 3 x 2 m oder 3 x 3 m, für innen und außen | 68 |
+   | hp-vit-586l-eu-1 | HeiPard Eisregen-Lichterkette außen, warmweiß oder bunt, umschaltbar | 68 |
+   | hp-ola-s14-50-eu | HeiPard Außenlichterkette S14, 30 m, warmweiß, dimmbar | 54 |
+   | hp-ctl-180m | HeiPard Baum-Lichterkette 1,5 m, 180 LEDs, bunt, für innen und außen | 68 |
+   | hp-ctl-210-eu-1 | HeiPard Baum-Lichterkette mit Ring, 210 LEDs, warmweiß oder bunt | 64 |
+   | hp-ctl-400-eu-1 | HeiPard Baum-Lichterkette mit Ring, 400 LEDs, warmweiß oder bunt | 64 |
+   | hp-blt-050 | HeiPard Batterie-Lichterkette 5 m oder 20 m, warmweiß, mit Timer | 64 |
+   | hp-blt-100-eu-1 | HeiPard Batterie-Lichterkette 10 m oder 15 m, für innen und außen | 65 |
+   | hp-blm-100-eu | HeiPard Batterie-Lichterkette 10 m oder 15 m, warmweiß, mit Timer | 65 |
+   | hp-dfm-400-eu-2 | HeiPard Cluster-Lichterkette 6 m oder 15 m, in drei Lichtfarben | 63 |
+   | hp-dfm-600 | HeiPard Cluster-Lichterkette 9 m oder 18 m, warmweiß oder bunt | 62 |
+   | hp-dfm-750-eu | HeiPard Cluster-Lichterkette 11,25 m oder 22,5 m, warmweiß oder bunt | 68 |
+   | hp-sblb-60l-ww-new | HeiPard Solar-Lichterkette mit Kristallkugeln, 11 m, für außen | 62 |
+   | hp-sblb-100l-ww-new | HeiPard Solar-Lichterkette mit Kristallkugeln, 17 m, für außen | 62 |
+
+2. **Timer-Punkte in Hotspots:** `BLT_P1_03` zeigt einen Timer-Punkt, das BLT-Set gilt aber auch für
+   hp-blt-100-eu-1 ohne Timer. `CTL_P1_05` und `DFM_P1_01` zeigen ebenfalls einen Timer, obwohl kein Timer-Fakt
+   bestätigt ist (CTL-Timer bleibt laut Festlegung draußen).
+3. **CTL-Fernbedienung:** Der Lieferumfang von CTL 210 und 400 nennt keine Fernbedienung, der CTL-Hotspot zeigt
+   eine. Das Set gilt für alle vier CTL.
+4. **CTL Farbwechsel** steht auch bei 180M und 240M, die es nur in Multicolor gibt. Der Text sagt das, ein
+   eigenes Set für die beiden wäre die Alternative. Außerdem behandeln `ctl-b2` und der Farbwechsel beide die
+   Lichtfarben; B2 könnte ein anderes Thema bekommen.
+5. **BLT/BLM-Schieber** zeigen bis zu den Aus-Bildern dasselbe Bild wie B2.
+6. **Lieferumfang:** Auch die Zeile „3 x AA-Batterien nicht enthalten" bekommt das Häkchen. Vorschlag: Zeilen
+   mit „nicht enthalten" im Theme ohne Häkchen zeigen (kleine Code-Änderung, nicht gemacht).
+7. **VIT 864L:** Titel und Meta sagen „bunt" (Shop-Wert), das Schieberbild zeigt warmweiß und bunt. Festgelegt
+   ist nur die 586L. Die 586L trägt als Farb-Tag nur „Warmweiß", im Farbfilter fehlt sie unter Multicolor.
+8. **Tag `todo-text`** steht noch an zehn Produkten, deren Texte jetzt geschrieben sind: hp-dct-200, hp-npt-210,
+   hp-ctl-180m, hp-ctl-240m, hp-blt-050, hp-blt-100-eu-1, hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu,
+   hp-dgm-001. Nicht entfernt.
+9. **DGM:** Das Long-Tail-Set hat keinen Lieferumfang-Block, die Seite zeigt also gar keinen Lieferumfang (nicht
+   nur die Bedienungsanleitung, wie im Bericht vom 21.10. stand).
+
+### Produkt-URLs
+
+Shop passwortgeschützt, Passwort bei Leon.
+
+- https://heipard.myshopify.com/products/hp-dct-200
+- https://heipard.myshopify.com/products/hp-npt-210
+- https://heipard.myshopify.com/products/hp-vit-864l-eu-1
+- https://heipard.myshopify.com/products/hp-vit-586l-eu-1
+- https://heipard.myshopify.com/products/hp-ola-s14-15-eu
+- https://heipard.myshopify.com/products/hp-ola-s14-30-eu
+- https://heipard.myshopify.com/products/hp-ola-s14-50-eu
+- https://heipard.myshopify.com/products/hp-ctl-180m
+- https://heipard.myshopify.com/products/hp-ctl-240m
+- https://heipard.myshopify.com/products/hp-ctl-210-eu-1
+- https://heipard.myshopify.com/products/hp-ctl-400-eu-1
+- https://heipard.myshopify.com/products/hp-blt-050
+- https://heipard.myshopify.com/products/hp-blt-100-eu-1
+- https://heipard.myshopify.com/products/hp-blm-100-eu
+- https://heipard.myshopify.com/products/hp-dfm-400-eu-2
+- https://heipard.myshopify.com/products/hp-dfm-600
+- https://heipard.myshopify.com/products/hp-dfm-750-eu
+- https://heipard.myshopify.com/products/hp-sblb-60l-ww-new
+- https://heipard.myshopify.com/products/hp-sblb-100l-ww-new
+- https://heipard.myshopify.com/products/hp-dgm-001
