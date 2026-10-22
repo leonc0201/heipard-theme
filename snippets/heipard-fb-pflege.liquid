@@ -27,7 +27,8 @@
 -%}
 {%- if entry != blank -%}
   {%- liquid
-    assign care_kicker = 'heipard.blocks.pflege.kicker' | t
+    # t liefert „&“ bereits maskiert, heipard-fb-head maskiert erneut: hier entmaskieren
+    assign care_kicker = 'heipard.blocks.pflege.kicker' | t | replace: '&amp;', '&'
     assign care_title = entry.titel.value | default: ''
     if care_title == blank
       assign care_title = 'heipard.blocks.pflege.title' | t
