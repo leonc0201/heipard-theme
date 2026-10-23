@@ -202,7 +202,7 @@ Import-Regel seit 2026-10-05: „RGB“ als Lichtfarbe wird auf den Auswahlliste
   Variantenwahl: die vier Bilder erscheinen nur noch bei Multicolor bzw. Kaltweiß, sichtbare Medien und
   Lightbox entsprechen der Erwartung, keine JS-Fehler.
 
-## Feature-Sets Welle 2 (Stand 2026-10-22)
+## Feature-Sets Welle 2 (Stand 2026-10-23, abgeschlossen bis auf die Hermes-Bilder)
 
 Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Familien-Kollektionen für die
 20 Welle-2-Produkte stehen, Durchlauf 1 und 2 sind live.
@@ -212,7 +212,7 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **KAT-LED_B1_01** als B1 für BLT und BLM eingetragen (2026-10-21, ab 17:03 Uhr in Files).
 - [x] **HOME-11 auf dem Live-Theme** — `templates/index.json` (Commit `365c4e5`) ist live, Prüfsumme gleich main
   (übertragen 2026-10-21, 17:12 Uhr). Die Theme-Abfrage hatte den neuen Stand nur verzögert gemeldet.
-- [ ] **DFM_B2_01** aus Hermes in den Block `dfm-b2` eintragen (vorbereitet, Bild leer).
+- [ ] **DFM_B2_01** aus Hermes in den Block `dfm-b2` eintragen (vorbereitet, Bild leer; siehe „Bilder folgen").
 - [x] **Layout ausgerollt** (2026-10-21, 20:07 Uhr) — `pdp-layout-welle2` nach Leons Go auf main gemergt
   (Merge-Commit `3ddf2c6`), alle acht Dateien per Prüfsumme im Live-Theme bestätigt, 25 Produktseiten live
   geprüft (keine Liquid-Fehler, keine [TBD]-Platzhalter mehr).
@@ -221,23 +221,27 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   Connector sperrt das Löschen von Themes grundsätzlich, auch unveröffentlichter.
 - [x] **Installation & Pflege: Texte** (2026-10-21) — elf Einträge aus `heipard-pflegetexte.md`, ein Absatz je
   Zeile. Sichtbar ab dem Ausrollen des Layout-Branches; auf der Testkopie an zehn Produkten geprüft.
-- [ ] **Lieferumfang hp-dgm-001** — das Long-Tail-Set `dgm` hat keinen Lieferumfang-Block, die Seite zeigt
-  keinen Lieferumfang. Daten offen, bis Tyler die Anzahl der Sterne klärt.
+- [ ] **Lieferumfang hp-dgm-001** — „Auto · Lieferumfang" steht seit 2026-10-23 im Set `dgm` und in der
+  Long-Tail-Vorlage; die Seite zeigt „1 × Bedienungsanleitung". Die Sternzeile fehlt, bis Tyler die Anzahl klärt.
 - [ ] **SEO-Meta-Descriptions** — bei den 20 Welle-2-Produkten geschrieben (2026-10-22), bei den übrigen 99 leer.
 - [x] **Durchlauf 3** (2026-10-22) — hero für SBLB, BLT, BLM, DFM, CTL; Schieber SBLB/BLT/BLM, CTL Farbwechsel,
   fünf Hotspots, Sticky-B2 für DCT und NPT. Bericht, Abschnitt „Durchlauf 3 und Welle-2-Texte".
 - [x] **Welle-2-Texte** (2026-10-22) — Titel, Beschreibung, subtitle, Meta an allen 20 Produkten, BLT-5-m-Hinweis
   im Lieferumfang von HP-BLT-050; live geprüft.
-- [ ] **Bilder folgen:** DFM-Schieber (An/Aus), Aus-Bilder BLT/BLM, Hermes-Bilder für die Sticky-Blöcke CTL,
-  OLAS14, VIT (angelegt, noch nicht im Set) und für DGM (bleibt bis dahin Long-Tail).
-- [ ] **SEO-Titel** — 14 der 20 Produkttitel sind länger als 70 Zeichen, Shopify schneidet den `<title>` ab.
-  Vorschläge im Bericht, Schreiben auf Leons Go.
-- [ ] **Hotspot-Inhalte prüfen** — Timer-Punkt bei BLT (gilt auch für hp-blt-100-eu-1 ohne Timer), CTL und DFM;
-  CTL-Fernbedienung fehlt im Lieferumfang von CTL 210/400.
-- [ ] **CTL-Set** — Farbwechsel auch bei 180M/240M (nur Multicolor); `ctl-b2` doppelt das Farbthema.
-- [ ] **Lieferumfang „nicht enthalten"** ohne Häkchen zeigen (Code-Vorschlag, nicht umgesetzt).
-- [ ] **VIT 864L Lichtfarbe** — Titel „bunt", Schieberbild warmweiß und bunt; 586L-Farb-Tag nur „Warmweiß".
-- [ ] **Tag `todo-text`** an zehn Welle-2-Produkten entfernen (Texte stehen), auf Leons Go.
+- [ ] **Bilder folgen (Hermes, letzter offener Teil von Welle 2):** DFM_B2_01, DFM-Schieber (An/Aus), Aus-Bilder
+  BLT/BLM (Schieber bleiben bis dahin), Bilder für die Sticky-Blöcke CTL, OLAS14, VIT (angelegt, noch nicht im
+  Set) und für DGM (bleibt bis dahin Long-Tail).
+- [x] **SEO-Titel** (2026-10-23) — an allen 20 Produkten, höchstens 70 Zeichen, live vollständig im `<title>`.
+- [x] **Hotspots nur mit belegten Funktionen** (2026-10-23) — Timer-Punkt entfernt bei BLT, CTL, DFM sowie nach
+  derselben Regel bei VIT und OLAS14; P1 bleibt nur in CTL (M), aus CTL (WW/MC) und DFM entfernt.
+- [ ] **DFM-600 Fernbedienung** — der Lieferumfang nennt sie, der P1-Block ist mit dem DFM-Set aber auch bei
+  400/750 (ohne Fernbedienung) entfernt. Eigenes Set für die 600 wäre möglich (wie bei CTL).
+- [x] **CTL geteilt** (2026-10-23) — „CTL (WW/MC)" für 210/400 mit Farbwechsel, „CTL (M)" für 180M/240M mit
+  Steuerung; B2 je Set ohne Farbthema.
+- [x] **Lieferumfang „nicht enthalten"/„ohne"** ohne Häkchen (Commit `04ea287`, live 2026-10-23).
+- [x] **VIT 864L** (2026-10-23) — „warmweiß oder bunt, umschaltbar" in Titel, Meta, Beschreibung. Die
+  `lichtfarbe`-Auswahlliste hat keine Zweifarb-Option, beide VIT unverändert.
+- [x] **Tag `todo-text`** an den zehn Welle-2-Produkten entfernt (2026-10-23).
 - [ ] **Technik-Tabelle zeigt ungeprüfte Altwerte** — Werte aus dem Welle-1-Import ohne Bestätigung im
   Welle-2-Blatt erscheinen mit; Prüfung mit dem Welle-1-Textbatch (Leon 2026-10-21). `leistung_w` ist bis zur
   Bestätigung aus der Tabelle genommen (Branch-Commit `dca94fa`).

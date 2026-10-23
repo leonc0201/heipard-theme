@@ -35,6 +35,9 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   **Durchlauf 3** (2026-10-22): 19 der 20 Produkte auf hero (DGM Long-Tail bis zu den Hermes-Bildern), neue
   Schieber, CTL-Farbwechsel, fünf Hotspots, Sticky-B2 bei DCT und NPT. **Welle-2-Texte** (2026-10-22): Titel,
   Beschreibung, subtitle und Meta-Description an allen 20 Produkten geschrieben und live geprüft.
+  **Abschluss** (2026-10-23): SEO-Titel an allen 20, CTL in zwei Sets (WW/MC mit Farbwechsel, M mit Steuerung),
+  Hotspots nur mit belegten Funktionen, Lieferumfang-Zeilen „nicht enthalten"/„ohne" ohne Häkchen. Welle 2 ist
+  bis auf die Hermes-Bilder abgeschlossen.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

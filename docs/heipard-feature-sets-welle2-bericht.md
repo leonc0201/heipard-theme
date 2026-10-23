@@ -464,3 +464,46 @@ Shop passwortgeschützt, Passwort bei Leon.
 - https://heipard.myshopify.com/products/hp-sblb-60l-ww-new
 - https://heipard.myshopify.com/products/hp-sblb-100l-ww-new
 - https://heipard.myshopify.com/products/hp-dgm-001
+
+## Abschluss Welle 2 (2026-10-23)
+
+Leons Entscheidungen zu den Punkten 1 bis 6 aus dem Bericht vom 22.10. Shop vor jedem Schreiben geprüft
+(HeiPard). Welle 2 ist damit bis auf die Hermes-Bilder abgeschlossen.
+
+| Punkt | Umgesetzt |
+|---|---|
+| 1. SEO-Titel | An allen 20 Produkten, alle höchstens 70 Zeichen (52 bis 69). 15 eigene Werte; bei 5 Produkten ist der SEO-Titel gleich dem Produkttitel, dort speichert Shopify keinen eigenen Wert. Live steht der `<title>` auf allen 20 Seiten vollständig. |
+| 2. Hotspots | Timer-Punkt entfernt bei BLT, CTL und DFM, nach derselben Regel auch bei VIT und OLAS14 (Timer dort „mehrdeutig" bzw. fehlt). Belegt und geblieben: DCT, NPT, BLM. Das Metafeld `fernbedienung` ist bei allen leer, entschieden hat der Lieferumfang: P1 bleibt in CTL (M) (180M/240M nennen die Fernbedienung), raus aus CTL (WW/MC) und aus dem DFM-Set. |
+| 3. CTL geteilt | Set `ctl` heißt jetzt „CTL (WW/MC)" (210, 400): B1, B2, R1, Farbwechsel, Kettenplan, Zeitband, Icon-Grid. Neues Set `ctl-m` „CTL (M)" (180M, 240M): B1, B2, R1, Steuerung, Kettenplan, Hotspot, Zeitband, Icon-Grid. Daten-Zone in beiden wie bisher. |
+| 4. VIT 864L | Titel, Meta (148 Zeichen) und Beschreibung mit „warmweiß oder bunt, umschaltbar", dazu SEO-Titel. Die `lichtfarbe`-Auswahlliste kennt nur Warmweiß, Kaltweiß, Multicolor und RGB, keine Zweifarb-Option: beide VIT unverändert. |
+| 5. `todo-text` | An den zehn Produkten entfernt. |
+| 6. Lieferumfang | Theme-Commit `04ea287`, live seit 12:04 Uhr (Prüfsummen gleich main, vorher auf der Testkopie geprüft). Zeilen, die mit „nicht enthalten" oder „ohne" beginnen, stehen ohne Häkchen. Damit die BLT-Zeile in Leons Wortlaut bleibt, gilt das auch für Zeilen, die auf „nicht enthalten" enden. „Auto · Lieferumfang" steht in der Long-Tail-Vorlage und im DGM-Set; hp-dgm-001 zeigt „1 × Bedienungsanleitung". |
+
+**Neue und geänderte CTL-Blöcke** (Textregel per Skript geprüft, nur belegte Fakten):
+
+| Block | Set | Kicker | Headline | Text |
+|---|---|---|---|---|
+| `ctl-b2` (geändert) | WW/MC | Mit Ring | Gleichmäßig verteilt, ohne langes Wickeln | Beim Schmücken legst du den Ring auf die Baumspitze und lässt die Stränge über die Äste fallen. Je nach Modell hängen daran 210 oder 400 LEDs. |
+| `ctl-farbwechsel` (geändert) | WW/MC | Zwei Lichtfarben | Probier aus, was zu deinem Baum passt | Tipp auf die Buttons und sieh denselben Weihnachtsbaum in Warmweiß und in Multicolor. Beide Lichtfarben gibt es für die Kette mit 210 und mit 400 LEDs. |
+| `ctl-m-b2` (neu) | M | Innen und außen | Leuchtet am Sessel und vor der Haustür | Steht die Tanne draußen, bekommt sie Regen und Schnee ab. Nach IP44 ist die Kette gegen Spritzwasser geschützt, und dank 3 m Zuleitung darf die Steckdose ein Stück entfernt sein. |
+| `ctl-m-r1` (neu) | M | Dicht gesetzt | Das Licht verteilt sich über den ganzen Baum | Abends fällt am Baum jede Lücke sofort auf. Auf den Strängen sitzen die LEDs im Abstand von 10 cm. |
+| `ctl-m-steuerung` (neu) | M | Probier es aus | So wirkt dein Baum in jeder Stimmung | Zum Auspacken der Geschenke darf es hell sein, später reicht ein sanftes Glimmen. Du dimmst in vier Stufen von 25 bis 100 Prozent und wählst zwischen 8 Leuchtmodi. |
+
+- **Steuerung CTL (M):** Basisbild `CTL_I4_01_mc`, Dimmstufen 25/50/75/100 aus dem Metafeld. Der Block kann nur
+  drei Modi zeigen (Dauerlicht, Atemlicht, Blinken); alle drei gehören zu den acht belegten Modi (Dauerlicht und
+  Blinken wörtlich, Atemlicht = SLO-GLO). Die Zahl 8 steht im Text.
+- **Eigenes R1 für CTL (M):** Das gemeinsame R1 („Helligkeit und Modi") hätte neben der Steuerung dasselbe
+  gesagt, deshalb steht dort der belegte 10-cm-Abstand.
+- **VIT-R1:** „Leuchtmodus und Timer" ersetzt durch „Leuchtmodus und Helligkeit", weil der Timer bei VIT nicht
+  belegt ist (Fehler im Text vom 21.10.).
+
+**Live geprüft** (alle 20 Seiten, per Skript): Seitentitel = SEO-Titel und höchstens 70 Zeichen, Meta,
+Titel und Beschreibung wörtlich, keine Liquid-Fehler, Timer nur noch in den Hotspots von DCT, NPT und BLM,
+CTL (M) mit Steuerung (vier Stufen, drei Modi) und Hotspot, CTL (WW/MC) mit Farbwechsel ohne Hotspot, DFM ohne
+Hotspot, BLT 5 m mit „3 x AA-Batterien nicht enthalten" ohne Häkchen.
+
+**Offen:**
+- Hermes-Bilder: DFM_B2_01, DFM-Schieber, Aus-Bilder BLT/BLM, Sticky-Bilder CTL/OLAS14/VIT, DGM.
+- Zur Kenntnis: Die 600 ist die einzige DFM mit Fernbedienung im Lieferumfang. Ein eigenes Set wie bei CTL
+  würde ihr den Hotspot zurückgeben.
+- Zur Kenntnis: CTL (M) zeigt in B1 und B2 noch warmweiße Bilder, obwohl 180M/240M nur Multicolor sind.
