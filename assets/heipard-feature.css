@@ -1207,6 +1207,14 @@
   border-bottom: 2px solid var(--primary);
   transform: rotate(45deg);
 }
+/* Nicht im Karton (z. B. „3 x AA-Batterien nicht enthalten“): kein Häkchen */
+.heipard-box__item--ohne {
+  color: rgba(var(--color-foreground), 0.75);
+}
+.heipard-box__item--ohne::before,
+.heipard-box__item--ohne::after {
+  content: none;
+}
 
 /* --- I1 Schieber Aus und An -------------------------------------------- */
 .heipard-slide {

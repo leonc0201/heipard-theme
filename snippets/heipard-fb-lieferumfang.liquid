@@ -6,6 +6,9 @@
     Liste   Produkt-Metafeld heipard.lieferumfang (mehrzeilig, ein Teil je Zeile)
     Bild    Bildfeld des Blocks (optional, Flatlay 16:9)
 
+  Zeilen ohne Häkchen: beginnt die Zeile mit „nicht enthalten“ oder „ohne“ oder endet sie
+  auf „nicht enthalten“ (z. B. „3 x AA-Batterien nicht enthalten“), steht sie ohne Häkchen.
+
   Parameter: product, image, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
@@ -21,8 +24,18 @@
   {%- for item in items -%}
     {%- assign text = item | strip -%}
     {%- if text != blank -%}
-      {%- assign shown = shown | plus: 1 -%}
-      <li class="heipard-box__item">{{ text | escape }}</li>
+      {%- liquid
+        assign shown = shown | plus: 1
+        assign lc = text | downcase
+        assign lc_head = lc | slice: 0, 15
+        assign lc_tail = lc | slice: -15, 15
+        assign lc_word = lc | append: ' ' | slice: 0, 5
+        assign excluded = false
+        if lc_head == 'nicht enthalten' or lc_tail == 'nicht enthalten' or lc_word == 'ohne '
+          assign excluded = true
+        endif
+      -%}
+      <li class="heipard-box__item{% if excluded %} heipard-box__item--ohne{% endif %}">{{ text | escape }}</li>
     {%- endif -%}
   {%- endfor -%}
 {%- endcapture -%}

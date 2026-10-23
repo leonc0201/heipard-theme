@@ -189,7 +189,8 @@ optional. Die Zäsur zählt nicht zum Block-Limit.
 ### P3 Lieferumfang
 
 Liest das Produkt-Metafeld *Lieferumfang* (ein Teil je Zeile). Optional ein Flatlay-Bild im Block.
-Steht immer in der Daten-Zone.
+Steht immer in der Daten-Zone. Zeilen, die mit „nicht enthalten" oder „ohne" beginnen oder auf „nicht
+enthalten" enden, stehen ohne Häkchen (z. B. „3 x AA-Batterien nicht enthalten").
 
 ### I1 Schieber Aus und An
 
