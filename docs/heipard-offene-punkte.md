@@ -234,8 +234,11 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **SEO-Titel** (2026-10-23) — an allen 20 Produkten, höchstens 70 Zeichen, live vollständig im `<title>`.
 - [x] **Hotspots nur mit belegten Funktionen** (2026-10-23) — Timer-Punkt entfernt bei BLT, CTL, DFM sowie nach
   derselben Regel bei VIT und OLAS14; P1 bleibt nur in CTL (M), aus CTL (WW/MC) und DFM entfernt.
-- [ ] **DFM-600 Fernbedienung** — der Lieferumfang nennt sie, der P1-Block ist mit dem DFM-Set aber auch bei
-  400/750 (ohne Fernbedienung) entfernt. Eigenes Set für die 600 wäre möglich (wie bei CTL).
+- [x] **DFM-600 Fernbedienung** (2026-10-23) — eigenes Set `dfm-600` „DFM (600)" mit Fernbedienungs-Hotspot,
+  sonst wie das DFM-Set; live geprüft.
+- [x] **CTL (M) B2** (2026-10-23) — Bild `CTL_I4_01_mc` (dasselbe Bild wie die Steuerung im Set), B1 unverändert.
+- [ ] **Welle 1: Feature-Stand** — Übersicht `heipard-welle1-feature-stand.md` (2026-10-23, nur gelesen) als
+  Grundlage für den nächsten Block.
 - [x] **CTL geteilt** (2026-10-23) — „CTL (WW/MC)" für 210/400 mit Farbwechsel, „CTL (M)" für 180M/240M mit
   Steuerung; B2 je Set ohne Farbthema.
 - [x] **Lieferumfang „nicht enthalten"/„ohne"** ohne Häkchen (Commit `04ea287`, live 2026-10-23).

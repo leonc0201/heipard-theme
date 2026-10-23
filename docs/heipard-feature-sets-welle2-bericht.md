@@ -507,3 +507,10 @@ Hotspot, BLT 5 m mit „3 x AA-Batterien nicht enthalten" ohne Häkchen.
 - Zur Kenntnis: Die 600 ist die einzige DFM mit Fernbedienung im Lieferumfang. Ein eigenes Set wie bei CTL
   würde ihr den Hotspot zurückgeben.
 - Zur Kenntnis: CTL (M) zeigt in B1 und B2 noch warmweiße Bilder, obwohl 180M/240M nur Multicolor sind.
+
+### Nachtrag (2026-10-23, nachmittags)
+
+- **Set `dfm-600` „DFM (600)"** für hp-dfm-600: wie das DFM-Set, zusätzlich der Fernbedienungs-Hotspot (drei
+  Punkte, ohne Timer). Live geprüft: hp-dfm-600 zeigt ihn, hp-dfm-400-eu-2 nicht.
+- **CTL (M), B2:** Bild jetzt `CTL_I4_01_mc`, B1 unverändert. Dasselbe Bild ist das Basisbild der Steuerung im
+  selben Set. Live geprüft an hp-ctl-180m und hp-ctl-240m.
