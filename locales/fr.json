@@ -599,7 +599,275 @@
         "length": "Longueur",
         "power_source": "Source d'alimentation",
         "light_color": "Couleur de la lumière",
-        "protection_rating": "Indice de protection"
+        "protection_rating": "Indice de protection",
+        "height": "Hauteur"
+      },
+      "gallery": {
+        "previous_image": "Image précédent",
+        "next_image": "Image suivante"
+      }
+    },
+    "blocks": {
+      "kettenplan": {
+        "kicker": "Dimensions",
+        "title_line": "Voici le chemin de ta guirlande lumineuse",
+        "title_area": "Voici la taille de la surface lumineuse",
+        "title_couple": "Voici jusqu’à combien tu peux prolonger",
+        "plug": "Prise",
+        "lead": "{{ value }} m de câble d’alimentation",
+        "chain": "{{ value }} m de guirlande lumineuse",
+        "points": {
+          "one": "{{ count }} point lumineux",
+          "other": "{{ count }} points lumineux"
+        },
+        "spacing": "{{ value }} cm d’écart",
+        "width": "{{ value }} m de large",
+        "height": "{{ value }} m de haut",
+        "chain_n": "Chaîne {{ n }}",
+        "couple_count": {
+          "one": "{{ count }} chaîne",
+          "other": "Jusqu’à {{ count }} chaînes peuvent être couplées"
+        },
+        "couple_total": "{{ value }} m de longueur totale",
+        "chain_approx": "env. {{ value }} m de guirlande lumineuse",
+        "total": "{{ value }} m au total"
+      },
+      "zeitband": {
+        "kicker_timer": "Minuteur",
+        "title_timer": "Le minuteur au cours de la journée",
+        "kicker_solar": "Solaire",
+        "title_solar": "Charge le jour, brille la nuit",
+        "choose": "Durée du minuteur",
+        "option": "{{ hours }} h",
+        "on": {
+          "one": "{{ count }} heure(s) d'",
+          "other": "{{ count }} heures à"
+        },
+        "off": {
+          "one": "{{ count }} heure d’arrêt",
+          "other": "{{ count }} heures d’utilisation"
+        },
+        "tick": "{{ hours }} h",
+        "day": "Jour",
+        "night": "Nuit",
+        "charge": "Charge à la lumière du jour",
+        "glow": "Jusqu’à {{ value }} heures de lumière"
+      },
+      "serienleiter": {
+        "kicker": "La série",
+        "title": "Même guirlande lumineuse dans une autre longueur",
+        "current": "Ce modèle",
+        "length": "{{ value }} m"
+      },
+      "steuerung": {
+        "kicker": "Contrôle",
+        "title": "Essaie-le",
+        "brightness": "Luminosité",
+        "percent": "{{ value }} %",
+        "step": "Étape {{ value }}",
+        "mode": "Mode d'éclairage",
+        "modes": {
+          "dauer": "Lumière continue",
+          "atem": "Lumière respiratoire",
+          "blinken": "Clignoter"
+        },
+        "note": "Représentation simplifiée",
+        "reduced_motion": "Le mouvement est réduit dans vos réglages système. Les modes lumineux ne sont donc pas animés."
+      },
+      "icon_grid": {
+        "timer": "Minuteur",
+        "timer_value": "{{ hours }} heures",
+        "dimmable": "Dimmable",
+        "dimmable_value": {
+          "one": "{{ count }} niveau",
+          "other": "{{ count }} étapes"
+        },
+        "connectable": "Jumelable",
+        "connectable_value": {
+          "one": "{{ count }} chaîne",
+          "other": "Jusqu'à {{ count }} chaînes"
+        },
+        "modes": "Modes d'éclairage",
+        "modes_value": {
+          "one": "{{ count }} mode",
+          "other": "{{ count }} modes"
+        },
+        "remote": "Télécommande",
+        "protection": "Indice de protection"
+      },
+      "editor": {
+        "missing": "Le bloc « {{ block }} » ne s’affiche pas. Il manque : {{ fields }}",
+        "loud": "Le bloc « {{ block }} » est affiché en mode silencieux (vidéo sous forme d’image fixe, curseur et changement de couleur sous forme d’image, contrôle sans modes lumineux). Un seul bloc sonore est autorisé par ensemble de fonctionnalités, aucun dans les versions Standard et Long Tail.",
+        "limit": "Le bloc « {{ block }} » ne s’affiche pas. La mise en scène autorise au maximum {{ max }} blocs.",
+        "no_b1": "Cet ensemble de fonctionnalités ne comporte pas d'image en pleine largeur. Le premier bloc doit toujours être B1.",
+        "repeat": "Deux blocs de type « {{ block }} » se suivent directement.",
+        "template": "Ce produit ne possède pas de propre ensemble de fonctionnalités. Il utilise le modèle « {{ name }} », qui ne remplit que les blocs de données à partir des méta-champs."
+      },
+      "hotspot": {
+        "kicker": "En détail",
+        "title": "L'essentiel en un coup d'œil",
+        "point": "Point {{ n }}",
+        "labels": {
+          "fernbedienung": "Télécommande",
+          "modus": "Choisir le mode d’éclairage",
+          "dimmen": "Dimmer la luminosité",
+          "timer": "Régler la minuterie",
+          "ein_aus": "Entrée et sortie",
+          "birne": "Poire",
+          "stecker": "Prise",
+          "solarpanel": "Panneau solaire",
+          "schalter": "Interrupteur",
+          "erdspiess": "Pieu de terre",
+          "controller": "Contrôleur",
+          "batteriebox": "Boîte de batterie"
+        }
+      },
+      "technik": {
+        "kicker": "Détails techniques",
+        "title": "Toutes les données en un coup d'œil",
+        "rows": {
+          "lichtfarbe": "Température de couleur",
+          "gesamtlaenge_m": "Longueur totale avec cordon d’alimentation",
+          "beleuchtete_laenge_m": "Longueur éclairée",
+          "zuleitung_m": "Alimentation",
+          "breite_m": "Largeur",
+          "hoehe_m": "Hauteur",
+          "led_anzahl": "Points lumineux",
+          "birnenabstand_cm": "Espacement des points lumineux",
+          "farbtemperatur_kelvin": "Température de couleur",
+          "anzahl_leuchtmodi": "Modes d'éclairage",
+          "dimmstufen": "Niveaux de gradation",
+          "timer_dauer_h": "Minuteur",
+          "fernbedienung": "Télécommande",
+          "koppelbar_bis": "Jumelable",
+          "stromquelle": "Source d'alimentation",
+          "spannung_v": "Tension de service",
+          "leistung_w": "Performance",
+          "akkulaufzeit_h": "Durée d'éclairage",
+          "ip_schutzart": "Indice de protection",
+          "einsatzbereich": "Domaine d'application",
+          "material": "Matériel"
+        },
+        "values": {
+          "gesamtlaenge_m": "{{ value }} m",
+          "beleuchtete_laenge_m": "{{ value }} m",
+          "zuleitung_m": "{{ value }} m",
+          "breite_m": "{{ value }} m",
+          "hoehe_m": "{{ value }} m",
+          "birnenabstand_cm": "{{ value }} cm",
+          "farbtemperatur_kelvin": "{{ value }} K",
+          "koppelbar_bis": "jusqu’à {{ value }} chaînes",
+          "spannung_v": "{{ value }} V",
+          "leistung_w": "{{ value }} W",
+          "akkulaufzeit_h": "jusqu’à {{ value }} heures",
+          "prozent": "{{ value }} %",
+          "ja": "Oui"
+        }
+      },
+      "pflege": {
+        "kicker": "Installation & Entretien",
+        "title": "Voici comment tu en garderas longtemps le plaisir"
+      },
+      "lieferumfang": {
+        "kicker": "Contenu de la livraison",
+        "title": "C'est dans le carton"
+      },
+      "schieber": {
+        "kicker": "Éteint et allumé",
+        "title": "Tire le curseur",
+        "label": "Comparer l’avant et l’après allumage",
+        "off": "De",
+        "on": "Un"
+      },
+      "kelvin": {
+        "kicker": "Température de couleur",
+        "title": "Elle brille d’une lumière si chaude",
+        "value": "{{ value }} K",
+        "candle": "Bougie",
+        "daylight": "Lumière du jour",
+        "this": "Ce modèle"
+      },
+      "nachweise": {
+        "kicker": "Justificatifs",
+        "title": "Protection et sécurité",
+        "ip_title": "Indice de protection {{ value }}",
+        "ip_intro": "Le premier chiffre correspond à la protection contre les corps étrangers, le second à la protection contre l'eau.",
+        "ip_first": {
+          "0": "Aucune protection contre les corps étrangers",
+          "1": "Protégé contre les corps étrangers solides à partir de 50 mm de diamètre",
+          "2": "Protection contre les corps étrangers solides à partir de 12,5 mm de diamètre",
+          "3": "Protection contre les corps étrangers solides à partir de 2,5 mm de diamètre",
+          "4": "Protégé contre les corps étrangers solides à partir de 1 mm de diamètre",
+          "5": "Protégé contre la poussière",
+          "6": "Étanche à la poussière"
+        },
+        "ip_second": {
+          "0": "Aucune protection contre l'eau",
+          "1": "Protégé contre les gouttes d'eau tombant verticalement",
+          "2": "Protégé contre les gouttes d’eau jusqu’à une inclinaison de 15 degrés",
+          "3": "Protégé contre les projections d'eau",
+          "4": "Protégé contre les projections d'eau de toutes directions",
+          "5": "Protégé contre les jets d’eau de n’importe quel angle",
+          "6": "Protégé contre les jets d'eau puissants",
+          "7": "Protégé contre une immersion temporaire",
+          "8": "Protégé contre l’immersion prolongée"
+        },
+        "voltage_title": "Tension d’alimentation {{ value }} V",
+        "voltage_low": "Les tensions alternatives jusqu’à 50 volts sont considérées comme de basse tension.",
+        "ce_title": "Marquage CE",
+        "ce_text": "Le produit porte le marquage CE. Par ce faisant, le fabricant déclare qu’il répond aux exigences applicables de l’Union européenne."
+      },
+      "kennzahl": {
+        "felder": {
+          "beleuchtete_laenge_m": {
+            "value": "{{ value }} m",
+            "label": "longueur éclairée"
+          },
+          "gesamtlaenge_m": {
+            "value": "{{ value }} m",
+            "label": "Longueur totale avec cordon d’alimentation"
+          },
+          "led_anzahl": {
+            "label": "Points lumineux"
+          },
+          "farbtemperatur_kelvin": {
+            "value": "{{ value }} K",
+            "label": "Température de couleur"
+          },
+          "akkulaufzeit_h": {
+            "value": "{{ value }} h",
+            "label": "Durée d'éclairage"
+          },
+          "hoehe_m": {
+            "value": "{{ value }} m",
+            "label": "Hauteur"
+          },
+          "breite_m": {
+            "value": "{{ value }} m",
+            "label": "Largeur"
+          },
+          "koppelbar_bis": {
+            "label": "Chaînes couplables"
+          }
+        }
+      },
+      "fragen": {
+        "kicker": "Questions",
+        "title": "Foire aux questions sur le produit"
+      },
+      "sequenz": {
+        "kicker": "Étape par étape",
+        "title": "C'est aussi simple que ça",
+        "step": "Étape {{ n }}"
+      },
+      "farbwechsel": {
+        "kicker": "Température de couleur",
+        "title": "Change la couleur",
+        "choose": "Choisir la couleur de la lumière",
+        "warm": "Blanc chaud",
+        "multi": "Multicolore",
+        "hue": "Teinte",
+        "note": "Représentation simplifiée"
       }
     }
   }
