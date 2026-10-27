@@ -599,7 +599,147 @@
         "length": "Lunghezza",
         "power_source": "Fonte di corrente",
         "light_color": "Colore della luce",
-        "protection_rating": "Grado di protezione"
+        "protection_rating": "Grado di protezione",
+        "height": "Altezza"
+      },
+      "gallery": {
+        "previous_image": "Immagine precedente",
+        "next_image": "Immagine successiva"
+      }
+    },
+    "blocks": {
+      "kettenplan": {
+        "kicker": "Dimensioni",
+        "title_line": "Ecco come si sviluppa la tua catena di luci",
+        "title_area": "Questa è la dimensione della superficie luminosa",
+        "title_couple": "Puoi prolungare fino a questo punto",
+        "plug": "Spina",
+        "lead": "{{ value }} m di cavo di collegamento",
+        "chain": "{{ value }} m di catena luminosa",
+        "points": {
+          "one": "{{ count }} punto luce",
+          "other": "{{ count }} punti luce"
+        },
+        "spacing": "{{ value }} cm di distanza",
+        "width": "{{ value }} m di larghezza",
+        "height": "{{ value }} m di altezza",
+        "chain_n": "Catena {{ n }}",
+        "couple_count": {
+          "one": "{{ count }} catena",
+          "other": "Fino a {{ count }} catene collegabili"
+        },
+        "couple_total": "{{ value }} m di lunghezza totale",
+        "chain_approx": "ca. {{ value }} m di catena luminosa",
+        "total": "{{ value }} m in totale"
+      },
+      "zeitband": {
+        "kicker_timer": "Timer",
+        "title_timer": "Il timer nell'arco della giornata",
+        "kicker_solar": "Solare",
+        "title_solar": "Carica di giorno, risplendi di sera",
+        "choose": "Durata del timer",
+        "option": "{{ hours }} h",
+        "on": {
+          "one": "{{ count }} ore di",
+          "other": "{{ count }} ore a"
+        },
+        "off": {
+          "one": "{{ count }} ore fuori",
+          "other": "{{ count }} ore dalla fine"
+        },
+        "tick": "{{ hours }} h",
+        "day": "Giorno",
+        "night": "Notte",
+        "charge": "Si ricarica alla luce del giorno",
+        "glow": "Fino a {{ value }} ore di luce"
+      },
+      "serienleiter": {
+        "kicker": "La serie",
+        "title": "Stessa catena di luci in una lunghezza diversa",
+        "current": "Questo modello",
+        "length": "{{ value }} m"
+      },
+      "steuerung": {
+        "kicker": "Controllo",
+        "title": "Provalo",
+        "brightness": "Luminosità",
+        "percent": "{{ value }} %",
+        "step": "Livello {{ value }}",
+        "mode": "Modalità illuminazione",
+        "modes": {
+          "dauer": "Luce fissa",
+          "atem": "Luce del respiro",
+          "blinken": "Lampeggiare"
+        },
+        "note": "Rappresentazione semplificata",
+        "reduced_motion": "Il movimento è ridotto nelle tue impostazioni di sistema. Per questo motivo le modalità di illuminazione non sono animate."
+      },
+      "icon_grid": {
+        "timer": "Timer",
+        "timer_value": "{{ hours }} ore",
+        "dimmable": "Dimmerabile",
+        "dimmable_value": {
+          "one": "{{ count }} livello",
+          "other": "{{ count }} livelli"
+        },
+        "connectable": "Accoppiabile",
+        "connectable_value": {
+          "one": "{{ count }} catena",
+          "other": "Fino a {{ count }} catene"
+        },
+        "modes": "Modalità di illuminazione",
+        "modes_value": {
+          "one": "{{ count }} modalità",
+          "other": "{{ count }} modalità"
+        },
+        "remote": "Telecomando",
+        "protection": "Grado di protezione"
+      },
+      "editor": {
+        "missing": "Il blocco „{{ block }}“ non viene visualizzato. Mancano: {{ fields }}",
+        "loud": "Il blocco „{{ block }}“ viene mostrato in modo discreto (video come immagine statica, slider e cambio colore come immagine, controllo senza modalità luminose). Per set di funzionalità è consentito un blocco visibile, mentre per standard e long-tail non ne è consentito alcuno.",
+        "limit": "Il blocco „{{ block }}“ non viene visualizzato. La struttura consente al massimo {{ max }} blocchi.",
+        "no_b1": "Questo set di funzionalità non ha un'immagine a larghezza intera. Il primo blocco dovrebbe essere sempre B1.",
+        "repeat": "Due blocchi di tipo “{{ block }}” si susseguono direttamente.",
+        "template": "Questo prodotto non ha un proprio set di funzionalità. Utilizza il modello “{{ name }}”, che popola esclusivamente i blocchi dati con le informazioni provenienti dai met campi."
+      },
+      "hotspot": {
+        "kicker": "Nel dettaglio",
+        "title": "Tutto ciò che c'è da sapere a colpo d'occhio",
+        "point": "Punto {{ n }}",
+        "labels": {
+          "fernbedienung": "Telecomando",
+          "modus": "Seleziona la modalità di illuminazione",
+          "dimmen": "Dimmerare la luminosità",
+          "timer": "Imposta il timer",
+          "ein_aus": "Dentro e fuori",
+          "birne": "Pera",
+          "stecker": "Spina",
+          "solarpanel": "Pannello solare",
+          "schalter": "Interruttore",
+          "erdspiess": "Picchetto da terra",
+          "controller": "Revisore dei conti",
+          "batteriebox": "Scatola batterie"
+        }
+      },
+      "technik": {
+        "kicker": "Dettagli tecnici",
+        "title": "Tutti i dati a colpo d'occhio",
+        "rows": {
+          "lichtfarbe": "Colore della luce",
+          "gesamtlaenge_m": "Lunghezza totale con cavo di collegamento",
+          "beleuchtete_laenge_m": "Lunghezza illuminata",
+          "zuleitung_m": "Linea di alimentazione",
+          "breite_m": "Larghezza",
+          "hoehe_m": "Altezza",
+          "led_anzahl": "Punti luce",
+          "birnenabstand_cm": "Distanza tra i punti luce",
+          "farbtemperatur_kelvin": "Temperatura del colore",
+          "anzahl_leuchtmodi": "Modalità di illuminazione",
+          "dimmstufen": "Livelli di attenuazione",
+          "timer_dauer_h": "Timer",
+          "fernbedienung": "Telecomando"
+        }
       }
     }
   }
