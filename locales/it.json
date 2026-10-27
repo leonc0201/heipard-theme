@@ -738,8 +738,136 @@
           "anzahl_leuchtmodi": "Modalità di illuminazione",
           "dimmstufen": "Livelli di attenuazione",
           "timer_dauer_h": "Timer",
-          "fernbedienung": "Telecomando"
+          "fernbedienung": "Telecomando",
+          "koppelbar_bis": "Accoppiabile",
+          "stromquelle": "Fonte di alimentazione",
+          "spannung_v": "Tensione d'esercizio",
+          "leistung_w": "Prestazione",
+          "akkulaufzeit_h": "Durata dell'accensione",
+          "ip_schutzart": "Grado di protezione",
+          "einsatzbereich": "Campo d'applicazione",
+          "material": "Materiale"
+        },
+        "values": {
+          "gesamtlaenge_m": "{{ value }} m",
+          "beleuchtete_laenge_m": "{{ value }} m",
+          "zuleitung_m": "{{ value }} m",
+          "breite_m": "{{ value }} m",
+          "hoehe_m": "{{ value }} m",
+          "birnenabstand_cm": "{{ value }} cm",
+          "farbtemperatur_kelvin": "{{ value }} K",
+          "koppelbar_bis": "fino a {{ value }} catene",
+          "spannung_v": "{{ value }} V",
+          "leistung_w": "{{ value }} W",
+          "akkulaufzeit_h": "fino a {{ value }} ore",
+          "prozent": "{{ value }} %",
+          "ja": "Sì"
         }
+      },
+      "pflege": {
+        "kicker": "Installazione e manutenzione",
+        "title": "Ecco come mantenerne vivo l'entusiasmo a lungo"
+      },
+      "lieferumfang": {
+        "kicker": "Contenuto della confezione",
+        "title": "Questo è nel cartone"
+      },
+      "schieber": {
+        "kicker": "Spegni e riaccendi",
+        "title": "Tira il cursore",
+        "label": "Confrontare luce spenta e accesa",
+        "off": "Da",
+        "on": "An"
+      },
+      "kelvin": {
+        "kicker": "Colore della luce",
+        "title": "Così intensamente risplende",
+        "value": "{{ value }} K",
+        "candle": "Candela",
+        "daylight": "Luce diurna",
+        "this": "Questo modello"
+      },
+      "nachweise": {
+        "kicker": "Prove",
+        "title": "Protezione e sicurezza",
+        "ip_title": "Grado di protezione {{ value }}",
+        "ip_intro": "La prima cifra indica la protezione contro i corpi estranei, la seconda la protezione contro l'acqua.",
+        "ip_first": {
+          "0": "Nessuna protezione contro i corpi estranei",
+          "1": "Protezione contro corpi estranei solidi a partire da 50 mm di diametro",
+          "2": "Protezione contro corpi estranei solidi a partire da 12,5 mm di diametro",
+          "3": "Protezione contro corpi estranei solidi a partire da 2,5 mm di diametro",
+          "4": "Protezione contro corpi estranei solidi a partire da 1 mm di diametro",
+          "5": "Protezione dalla polvere",
+          "6": "A prova di polvere"
+        },
+        "ip_second": {
+          "0": "Nessuna protezione dall'acqua",
+          "1": "Protezione contro le gocce d'acqua cadenti verticalmente",
+          "2": "Protezione contro l'acqua gocciolante con un'inclinazione fino a 15 gradi",
+          "3": "Protezione contro gli spruzzi d'acqua",
+          "4": "Protezione contro gli spruzzi d'acqua da qualsiasi direzione",
+          "5": "Protezione contro getti d'acqua da qualsiasi angolazione",
+          "6": "Protezione contro forti getti d'acqua",
+          "7": "Protezione contro immersioni temporanee",
+          "8": "Protezione contro l'immersione prolungata"
+        },
+        "voltage_title": "Tensione di esercizio {{ value }} V",
+        "voltage_low": "Le tensioni fino a 50 Volt in corrente alternata sono considerate basse tensioni.",
+        "ce_title": "Marcatura CE",
+        "ce_text": "Il prodotto reca il marchio CE. Con esso, il produttore dichiara che soddisfa i requisiti vigenti dell'Unione Europea."
+      },
+      "kennzahl": {
+        "felder": {
+          "beleuchtete_laenge_m": {
+            "value": "{{ value }} m",
+            "label": "lunghezza illuminata"
+          },
+          "gesamtlaenge_m": {
+            "value": "{{ value }} m",
+            "label": "Lunghezza totale con cavo di collegamento"
+          },
+          "led_anzahl": {
+            "label": "Punti luce"
+          },
+          "farbtemperatur_kelvin": {
+            "value": "{{ value }} K",
+            "label": "Temperatura del colore"
+          },
+          "akkulaufzeit_h": {
+            "value": "{{ value }} h",
+            "label": "Tempo di accensione"
+          },
+          "hoehe_m": {
+            "value": "{{ value }} m",
+            "label": "Altezza"
+          },
+          "breite_m": {
+            "value": "{{ value }} m",
+            "label": "Larghezza"
+          },
+          "koppelbar_bis": {
+            "label": "Catene collegabili"
+          }
+        }
+      },
+      "fragen": {
+        "kicker": "Domande",
+        "title": "Domande frequenti sul prodotto"
+      },
+      "sequenz": {
+        "kicker": "Passo dopo passo",
+        "title": "Così è facile",
+        "step": "Passaggio {{ n }}"
+      },
+      "farbwechsel": {
+        "kicker": "Colore della luce",
+        "title": "Cambia il colore",
+        "choose": "Seleziona il colore della luce",
+        "warm": "Bianco caldo",
+        "multi": "Multicolore",
+        "hue": "Tonalità",
+        "note": "Rappresentazione semplificata"
       }
     }
   }
