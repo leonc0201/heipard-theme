@@ -599,7 +599,275 @@
         "length": "Longitud",
         "power_source": "Fuente de alimentación",
         "light_color": "Color de la luz",
-        "protection_rating": "Índice de protección"
+        "protection_rating": "Índice de protección",
+        "height": "Altura"
+      },
+      "gallery": {
+        "previous_image": "Imagen anterior",
+        "next_image": "Siguiente imagen"
+      }
+    },
+    "blocks": {
+      "kettenplan": {
+        "kicker": "Dimensiones",
+        "title_line": "Así se distribuye tu guirnalda de luces",
+        "title_area": "Así de grande es la superficie de luz",
+        "title_couple": "Hasta aquí puedes ampliar",
+        "plug": "Enchufe",
+        "lead": "{{ value }} m de cable de alimentación",
+        "chain": "{{ value }} m de guirnalda de luces",
+        "points": {
+          "one": "{{ count }} punto de luz",
+          "other": "{{ count }} puntos de luz"
+        },
+        "spacing": "{{ value }} cm de distancia",
+        "width": "{{ value }} m de ancho",
+        "height": "{{ value }} m de altura",
+        "chain_n": "Cadena {{ n }}",
+        "couple_count": {
+          "one": "{{ count }} cadena",
+          "other": "Se pueden acoplar hasta {{ count }} cadenas"
+        },
+        "couple_total": "{{ value }} m de longitud total",
+        "chain_approx": "aprox. {{ value }} m de guirnalda de luces",
+        "total": "{{ value }} m en total"
+      },
+      "zeitband": {
+        "kicker_timer": "Temporizador",
+        "title_timer": "El temporizador a lo largo del día",
+        "kicker_solar": "Solar",
+        "title_solar": "Cargar de día, brillar de noche",
+        "choose": "Duración del temporizador",
+        "option": "{{ hours }} h",
+        "on": {
+          "one": "{{ count }} hora encendida",
+          "other": "{{ count }} horas en"
+        },
+        "off": {
+          "one": "{{ count }} horas restantes",
+          "other": "{{ count }} horas restantes"
+        },
+        "tick": "{{ hours }} h",
+        "day": "Día",
+        "night": "Noche",
+        "charge": "Carga con luz diurna",
+        "glow": "Hasta {{ value }} horas de luz"
+      },
+      "serienleiter": {
+        "kicker": "La serie",
+        "title": "La misma guirnalda de luces en otra longitud",
+        "current": "Este modelo",
+        "length": "{{ value }} m"
+      },
+      "steuerung": {
+        "kicker": "Control",
+        "title": "Pruébalo",
+        "brightness": "Brillo",
+        "percent": "{{ value }} %",
+        "step": "Nivel {{ value }}",
+        "mode": "Modo de iluminación",
+        "modes": {
+          "dauer": "Luz continua",
+          "atem": "Luz de respiración",
+          "blinken": "Parpadear"
+        },
+        "note": "Representación simplificada",
+        "reduced_motion": "El movimiento está reducido en los ajustes de tu sistema. Por eso, los modos de iluminación no están animados."
+      },
+      "icon_grid": {
+        "timer": "Temporizador",
+        "timer_value": "{{ hours }} horas",
+        "dimmable": "Regulable",
+        "dimmable_value": {
+          "one": "{{ count }} Nivel",
+          "other": "{{ count }} niveles"
+        },
+        "connectable": "Acoplable",
+        "connectable_value": {
+          "one": "{{ count }} cadena",
+          "other": "Hasta {{ count }} cadenas"
+        },
+        "modes": "Modos de iluminación",
+        "modes_value": {
+          "one": "{{ count }} modo",
+          "other": "{{ count }} modos"
+        },
+        "remote": "Control remoto",
+        "protection": "Grado de protección"
+      },
+      "editor": {
+        "missing": "El bloque «{{ block }}» no se muestra. Falta: {{ fields }}",
+        "loud": "El bloque «{{ block }}» se muestra de forma discreta (vídeo como imagen estática, deslizador y cambio de color como imagen, control sin modos luminosos). Se permite un bloque destacado por conjunto de características, ninguno en estándar y Long Tail.",
+        "limit": "El bloque «{{ block }}» no se muestra. La estructura permite un máximo de {{ max }} bloques.",
+        "no_b1": "Este conjunto de características no tiene una imagen de ancho completo. El primer bloque siempre debe ser B1.",
+        "repeat": "Dos bloques del tipo “{{ block }}” aparecen uno inmediatamente después del otro.",
+        "template": "Este producto no tiene un conjunto de características propio. Utiliza la plantilla «{{ name }}», que solo rellena los bloques de datos con la información de los metacampos."
+      },
+      "hotspot": {
+        "kicker": "En detalle",
+        "title": "Todo lo importante de un vistazo",
+        "point": "Punto {{ n }}",
+        "labels": {
+          "fernbedienung": "Control remoto",
+          "modus": "Seleccionar modo de iluminación",
+          "dimmen": "Atenuar el brillo",
+          "timer": "Ajustar el temporizador",
+          "ein_aus": "Entrada y salida",
+          "birne": "Pera",
+          "stecker": "Enchufe",
+          "solarpanel": "Panel solar",
+          "schalter": "Interruptor",
+          "erdspiess": "Piqueta de tierra",
+          "controller": "Controlador",
+          "batteriebox": "Caja de baterías"
+        }
+      },
+      "technik": {
+        "kicker": "Detalles técnicos",
+        "title": "Todos los datos de un vistazo",
+        "rows": {
+          "lichtfarbe": "Color de la luz",
+          "gesamtlaenge_m": "Longitud total con cable de alimentación",
+          "beleuchtete_laenge_m": "Longitud iluminada",
+          "zuleitung_m": "Línea de suministro",
+          "breite_m": "Anchura",
+          "hoehe_m": "Altura",
+          "led_anzahl": "Puntos de luz",
+          "birnenabstand_cm": "Distancia entre los puntos de luz",
+          "farbtemperatur_kelvin": "Temperatura de color",
+          "anzahl_leuchtmodi": "Modos de iluminación",
+          "dimmstufen": "Niveles de atenuación",
+          "timer_dauer_h": "Temporizador",
+          "fernbedienung": "Control remoto",
+          "koppelbar_bis": "Acoplable",
+          "stromquelle": "Fuente de alimentación",
+          "spannung_v": "Tensión de servicio",
+          "leistung_w": "Rendimiento",
+          "akkulaufzeit_h": "Duración de la iluminación",
+          "ip_schutzart": "Grado de protección",
+          "einsatzbereich": "Ámbito de aplicación",
+          "material": "Material"
+        },
+        "values": {
+          "gesamtlaenge_m": "{{ value }} m",
+          "beleuchtete_laenge_m": "{{ value }} m",
+          "zuleitung_m": "{{ value }} m",
+          "breite_m": "{{ value }} m",
+          "hoehe_m": "{{ value }} m",
+          "birnenabstand_cm": "{{ value }} cm",
+          "farbtemperatur_kelvin": "{{ value }} K",
+          "koppelbar_bis": "hasta {{ value }} cadenas",
+          "spannung_v": "{{ value }} V",
+          "leistung_w": "{{ value }} W",
+          "akkulaufzeit_h": "hasta {{ value }} horas",
+          "prozent": "{{ value }} %",
+          "ja": "Sí"
+        }
+      },
+      "pflege": {
+        "kicker": "Instalación y mantenimiento",
+        "title": "Así disfrutarás de él durante mucho tiempo"
+      },
+      "lieferumfang": {
+        "kicker": "Volumen de suministro",
+        "title": "Eso está en la caja"
+      },
+      "schieber": {
+        "kicker": "Apagar y encender",
+        "title": "Tira del regulador",
+        "label": "Comparar con la luz apagada y encendida",
+        "off": "De",
+        "on": "A"
+      },
+      "kelvin": {
+        "kicker": "Color de la luz",
+        "title": "Así de cálida brilla",
+        "value": "{{ value }} K",
+        "candle": "Vela",
+        "daylight": "Luz del día",
+        "this": "Este modelo"
+      },
+      "nachweise": {
+        "kicker": "Comprobantes",
+        "title": "Protección y seguridad",
+        "ip_title": "Grado de protección {{ value }}",
+        "ip_intro": "El primer dígito indica la protección contra cuerpos extraños, el segundo, la protección contra el agua.",
+        "ip_first": {
+          "0": "Sin protección contra objetos extraños",
+          "1": "Protegido contra cuerpos extraños sólidos a partir de 50 mm de diámetro",
+          "2": "Protección contra cuerpos extraños sólidos a partir de 12,5 mm de diámetro",
+          "3": "Protección contra cuerpos extraños sólidos a partir de 2,5 mm de diámetro",
+          "4": "Protección contra cuerpos extraños sólidos a partir de 1 mm de diámetro",
+          "5": "Protegido contra el polvo",
+          "6": "Hermético al polvo"
+        },
+        "ip_second": {
+          "0": "Sin protección contra el agua",
+          "1": "Protegido contra el agua que gotea verticalmente",
+          "2": "Protegido contra salpicaduras de agua con una inclinación de hasta 15 grados",
+          "3": "Protegido contra salpicaduras de agua",
+          "4": "Protegido contra salpicaduras de agua desde todas las direcciones",
+          "5": "Protegido contra chorros de agua desde cualquier ángulo",
+          "6": "Protegido contra chorros de agua potentes",
+          "7": "Protegido contra inmersiones temporales",
+          "8": "Protegido contra la inmersión prolongada"
+        },
+        "voltage_title": "Tensión de funcionamiento {{ value }} V",
+        "voltage_low": "Las tensiones de hasta 50 voltios de corriente alterna se consideran tensión de seguridad.",
+        "ce_title": "Marcado CE",
+        "ce_text": "El producto lleva el marcado CE. Con ello, el fabricante declara que cumple los requisitos vigentes de la Unión Europea."
+      },
+      "kennzahl": {
+        "felder": {
+          "beleuchtete_laenge_m": {
+            "value": "{{ value }} m",
+            "label": "longitud iluminada"
+          },
+          "gesamtlaenge_m": {
+            "value": "{{ value }} m",
+            "label": "Longitud total con cable de alimentación"
+          },
+          "led_anzahl": {
+            "label": "Puntos de luz"
+          },
+          "farbtemperatur_kelvin": {
+            "value": "{{ value }} K",
+            "label": "Temperatura de color"
+          },
+          "akkulaufzeit_h": {
+            "value": "{{ value }} h",
+            "label": "Tiempo de iluminación"
+          },
+          "hoehe_m": {
+            "value": "{{ value }} m",
+            "label": "Altura"
+          },
+          "breite_m": {
+            "value": "{{ value }} m",
+            "label": "Anchura"
+          },
+          "koppelbar_bis": {
+            "label": "Cadenas acoplables"
+          }
+        }
+      },
+      "fragen": {
+        "kicker": "Preguntas",
+        "title": "Preguntas frecuentes sobre el producto"
+      },
+      "sequenz": {
+        "kicker": "Paso a paso",
+        "title": "Así de fácil es",
+        "step": "Paso {{ n }}"
+      },
+      "farbwechsel": {
+        "kicker": "Color de la luz",
+        "title": "Cambia el color",
+        "choose": "Seleccionar el color de la luz",
+        "warm": "Blanco cálido",
+        "multi": "Multicolor彩在线",
+        "hue": "Tono",
+        "note": "Representación simplificada"
       }
     }
   }
