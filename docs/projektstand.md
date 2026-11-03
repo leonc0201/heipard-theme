@@ -38,6 +38,10 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   **Abschluss** (2026-10-23): SEO-Titel an allen 20, CTL in zwei Sets (WW/MC mit Farbwechsel, M mit Steuerung),
   Hotspots nur mit belegten Funktionen, Lieferumfang-Zeilen „nicht enthalten"/„ohne" ohne Häkchen. Welle 2 ist
   bis auf die Hermes-Bilder abgeschlossen.
+- **Welle 1 Grundausbau** (2026-11-03): alle 97 Welle-1-Produkte (48 Familien) mit eigenem Set, 38 Standard
+  und 10 Long-Tail, 125 Blöcke (B1 Kategoriebild, B2 Text mit leerem Bild, R1), 350 Metafelder (`familie`,
+  `dramaturgie`, `lieferumfang`, Fachwerte), 149 Fragen, 46 Familien-Kollektionen; Hauptbilder RSP/RFM korrigiert,
+  hp-stt-050 Entwurf. Offen: 37 B2-Bilder aus Hermes. Bericht `heipard-welle1-grundausbau-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
@@ -63,6 +67,7 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
 | `heipard-feature-baukasten.md` | PDP-Feature-Baukasten für die Content-Produktion |
 | `heipard-block-vokabular.md` | Block-Vokabular (20 Typen), Dramaturgien, Bildspezifikation, Vorgabe fürs Theme |
 | `heipard-import-welle1b*.md` | Welle 1b: Spezifikation, Trockenlauf-Plan, Abschlussbericht |
+| `heipard-welle1-feature-stand.md`, `heipard-welle1-grundausbau-bericht.md` | Welle 1: Stand vor dem Ausbau, Bericht Grundausbau (Sets, Metafelder, Fragen, URLs) |
 | `heipard-offene-punkte.md` | laufende [TBD]-Liste |
 | `design-brief.md`, `lovable-reference/`, `../PRODUCT.md` | Design-Grundlage (vor UI-Arbeit lesen) |
 
