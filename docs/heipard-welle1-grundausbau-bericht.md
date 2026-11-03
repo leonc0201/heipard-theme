@@ -1,6 +1,6 @@
 # Welle 1 Grundausbau: Bericht
 
-Stand 2026-11-03, 11:50 Uhr. Auftrag: `heipard-theme-auftrag-welle1-grundausbau.md` (von Leon). Quellen im
+Stand 2026-11-03, 12:50 Uhr. Auftrag: `heipard-theme-auftrag-welle1-grundausbau.md` (von Leon). Quellen im
 Asset-Ordner: `reports/metafelder/welle1_metafelder.csv` (1194 Zeilen), `reports/metafelder/fragen_<FAMILIE>.md`
 und für CTL und DGM `fragen_<FAMILIE>_welle1.md` (151 Fragen), `reports/auftrag_15.md` Teil B, für die Blocktexte
 zusätzlich `reports/hermes/welle1_faktensatz.md`. Grundlage im Repo: `docs/heipard-welle1-feature-stand.md`.
@@ -17,7 +17,33 @@ geändert ist nur Dokumentation.
 - **Hauptbilder:** RSP und RFM korrigiert, STT auf Entwurf, RIT, RNM und RTM unverändert.
 - **Live geprüft:** 96 Seiten ohne Fehler, Texte, Bilder, Lieferumfang und Fragen wie geplant. hp-stt-050 ist
   Entwurf und liefert 404.
-- **Offen:** 37 B2-Bilder aus Hermes (`<FAMILIE>_B2_01`), Datenlücken laut Theme-Editor-Hinweisen.
+- **Offen:** 36 B2-Bilder aus Hermes (`<FAMILIE>_B2_01`, Stand nach dem Nachtrag), Datenlücken laut
+  Theme-Editor-Hinweisen; die Werte kommen mit der Antwort von Tyler.
+
+## Nachtrag 2026-11-03: Leons Entscheidungen
+
+Angenommen am 2026-11-03, umgesetzt und live geprüft (13:16 Uhr). Die Tabellen unten zeigen den Stand danach.
+
+1. **WWF auf Standard:** `dramaturgie` von hp-wwf-180 = `standard`, Set „WWF (Standard)“. Neuer Block `wwf-b2`
+   „WWF · B2 Warmweiß“ mit dem Szenenbild `HP-WWF-180_GAL_02` (Birke neben Weihnachtsbaum und Kamin; dieselbe
+   Szene wie das lokale `WWF_B2_01`, das als 16:9-Ausschnitt die Birke oben und unten anschneidet). Text: Kicker
+   „Warmweißes Licht“, Headline „Ruhiges Licht zum Weihnachtsbaum“, Text „Im festlich geschmückten Wohnzimmer
+   soll die Birke den Baum ergänzen, nicht überstrahlen. Sie leuchtet warmweiß, den Strom liefert ein Netzteil mit
+   3 m Zuleitung.“ Reihenfolge: B1, B2, R1, Auto Kettenplan sonst Zeitband, Auto Icon-Grid, Auto Kennzahl. Kettenplan
+   und Icon-Grid bleiben ohne Werte leer, sichtbar sind B1, B2, R1 und die Kennzahl. Füllen Tylers Werte später
+   Zeitband und Icon-Grid, fällt die Kennzahl über das Limit von fünf Blöcken weg.
+2. **Kategoriebilder nach Sichtung:** `rtm-b1` und `tpm-b1` zeigen `KAT-CTL_B1_01` (Lichterkette an der Tanne im
+   Wohnzimmer; `KAT-BAUM_B1_01` zeigt den Baum selbst als Produkt), `rfm-b1` zeigt `KAT-CLUSTER_B1_01` (Cluster um
+   einen Gartenbaum gewickelt). RGB bleibt bei `KAT-LED_B1_01`. Die Tags sind unverändert.
+3. **BSM auf Long-Tail:** `dramaturgie` von hp-bsm-002 = `longtail`, Set „BSM (Long-Tail)“. Der bisherige
+   B2-Block ist jetzt Textblock `bsm-r1` „BSM · R1 2er-Set“ (Text unverändert), Reihenfolge B1, R1, Auto Kennzahl.
+   Damit entfällt das offene Bild `BSM_B2_01`. Der fehlende kat-Tag bleibt.
+4. **BSL:** Zeile „Batterien nicht enthalten“ am Ende des Lieferumfangs aller vier Produkte, wie bei BLT; das Theme
+   zeigt sie ohne Häkchen.
+5. **Leere Blöcke** bleiben leer, die Werte kommen mit der Antwort von Tyler.
+
+Zählung danach: 85 `standard`, 12 `longtail` (WWF und BSM getauscht), 38 Standard- und 10 Long-Tail-Sets,
+126 Blöcke.
 
 ## 1. Hauptbild-Korrekturen
 
@@ -131,7 +157,7 @@ Leere Blöcke blendet das Theme aus.
 | CL (Standard) `cl` | hp-cl-1-eu, hp-cl-2-eu | B1 Camping (`KAT-LED_B1_01`) · B2 3000 Kelvin · R1 USB-Ladekabel · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Nachweise, Lieferumfang, Fragen | 4 | `CL_B2_01` (Hermes) |
 | OLS-S17 (Standard) `ols-s17` | hp-ols-s17-16, hp-ols-s17-16-eu | B1 Solarpanel (`KAT-SOLAR_B1_01`) · B2 Timer · R1 Leuchtmodi · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Lieferumfang, Fragen | 4 | `OLS-S17_B2_01` (Hermes) |
 | SCWL (Standard) `scwl` | hp-scwl-10m2p-mc, hp-scwl-15m2p-mc | B1 Solarstrom (`KAT-SOLAR_B1_01`) · B2 2er-Set · R1 LED-Abstand · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan / Serienleiter, Lieferumfang, Fragen | 4 | `SCWL_B2_01` (Hermes) |
-| BSM (Standard) `bsm` | hp-bsm-002 | B1 Fenster und Wand (`KAT-MOTIF_B1_01`) · B2 2er-Set · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | nichts / Lieferumfang | 0 | `BSM_B2_01` (Hermes) |
+| BSM (Long-Tail) `bsm` | hp-bsm-002 | B1 Fenster und Wand (`KAT-MOTIF_B1_01`) · R1 2er-Set · Auto Kennzahl | nichts / Lieferumfang | 0 | keins |
 | DLM (Standard) `dlm` | hp-dlm-100h | B1 Hauseingang (`KAT-LED_B1_01`) · B2 Längen · R1 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Nachweise, Lieferumfang, Fragen | 4 | `DLM_B2_01` (Hermes) |
 | DNM (Standard) `dnm` | hp-dnm-208 | B1 Vorgarten (`KAT-NET_B1_01`) · B2 IP67 · R1 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `DNM_B2_01` (Hermes) |
 | DPM (Standard) `dpm` | hp-dpm-300 | B1 Kabelspule (`KAT-LED_B1_01`) · B2 Innen und außen · R1 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Nachweise, Lieferumfang, Fragen | 4 | `DPM_B2_01` (Hermes) |
@@ -140,14 +166,14 @@ Leere Blöcke blendet das Theme aus.
 | OLS-S11 (Standard) `ols-s11` | hp-ols-s11-16 | B1 Solarpanel (`KAT-SOLAR_B1_01`) · B2 Fernbedienung · R1 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Lieferumfang, Fragen | 4 | `OLS-S11_B2_01` (Hermes) |
 | OLS-ST38 (Standard) `ols-st38` | hp-ols-st38-16 | B1 Solarpanel (`KAT-SOLAR_B1_01`) · B2 Birnenzahl · R1 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Lieferumfang, Fragen | 4 | `OLS-ST38_B2_01` (Hermes) |
 | RCT (Standard) `rct` | hp-rct-400 | B1 Fenster (`KAT-CURTAIN_B1_01`) · B2 Leuchtmodi · R1 IP44 · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `RCT_B2_01` (Hermes) |
-| RFM (Standard) `rfm` | hp-rfm-600 | B1 Lichtband (`KAT-LED_B1_01`) · B2 Hausfassade (`HP-RFM-600_GAL_02`) · R1 IP44 · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | keins |
+| RFM (Standard) `rfm` | hp-rfm-600 | B1 Lichtband (`KAT-CLUSTER_B1_01`) · B2 Hausfassade (`HP-RFM-600_GAL_02`) · R1 IP44 · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | keins |
 | RIT (Standard) `rit` | hp-rit-280 | B1 Dachkante (`KAT-ICICLE_B1_01`) · B2 IP44 · R1 Timer · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `RIT_B2_01` (Hermes) |
 | RNM (Standard) `rnm` | hp-rnm-200 | B1 Vorgarten (`KAT-NET_B1_01`) · B2 IP44 · R1 LED-Abstand · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `RNM_B2_01` (Hermes) |
 | RPM (Standard) `rpm` | hp-rpm-200 | B1 Kabelrolle (`KAT-LED_B1_01`) · B2 IP67 · R1 Leuchtmodi · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Nachweise, Lieferumfang, Fragen | 3 | `RPM_B2_01` (Hermes) |
-| RTM (Standard) `rtm` | hp-rtm-400 | B1 Ring am Wipfel (`KAT-LED_B1_01`) · B2 Innen und außen · R1 LED-Abstand · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `RTM_B2_01` (Hermes) |
+| RTM (Standard) `rtm` | hp-rtm-400 | B1 Ring am Wipfel (`KAT-CTL_B1_01`) · B2 Innen und außen · R1 LED-Abstand · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `RTM_B2_01` (Hermes) |
 | SOLM (Standard) `solm` | hp-solm-12m-ww | B1 Solarstrom (`KAT-SOLAR_B1_01`) · B2 Länge · R1 Wandhalterung · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan / Lieferumfang, Fragen | 4 | `SOLM_B2_01` (Hermes) |
 | STT (Standard) `stt` | hp-stt-050 | B1 Fest im Freien (`KAT-LED_B1_01`) · B2 2700 Kelvin · R1 Fernbedienung · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Entwurf, nicht live geprüft | 4 | `STT_B2_01` (Hermes) |
-| TPM (Standard) `tpm` | hp-tpm-400-eu-1 | B1 Ring am Wipfel (`KAT-LED_B1_01`) · B2 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Icon-Grid / Nachweise, Lieferumfang, Fragen | 2 | `TPM_B2_01` (Hermes) |
+| TPM (Standard) `tpm` | hp-tpm-400-eu-1 | B1 Ring am Wipfel (`KAT-CTL_B1_01`) · B2 Modi und Helligkeit · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Icon-Grid / Nachweise, Lieferumfang, Fragen | 2 | `TPM_B2_01` (Hermes) |
 | U20 (Standard) `u20` | hp-u20-200 | B1 Gartenweg (`KAT-LED_B1_01`) · B2 Längen · R1 Dimmstufen · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Serienleiter, Nachweise, Lieferumfang, Fragen | 4 | `U20_B2_01` (Hermes) |
 | UCP (Standard) `ucp` | hp-ucp-200 | B1 Fenster (`KAT-CURTAIN_B1_01`) · B2 Modi und Helligkeit · R1 IP44 · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 4 | `UCP_B2_01` (Hermes) |
 | UCT (Standard) `uct` | hp-uct-200-eu | B1 Fenster (`KAT-CURTAIN_B1_01`) · B2 Lichtfarben · R1 IP44 · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | Kettenplan, Icon-Grid / Nachweise, Lieferumfang, Fragen | 3 | `UCT_B2_01` (Hermes) |
@@ -160,17 +186,17 @@ Leere Blöcke blendet das Theme aus.
 | RMP (Long-Tail) `rmp` | hp-rmp-180 | B1 Hof und Garten (`KAT-MOTIF_B1_01`) · R1 2700 Kelvin · Auto Kennzahl | Kennzahl / Lieferumfang, Fragen | 1 | keins |
 | RSP (Long-Tail) `rsp` | hp-rsp-180 | B1 Lichterkegel (`KAT-BAUM_B1_01`) · R1 Leuchtmodi · Auto Kennzahl | Kennzahl / Serienleiter, Lieferumfang, Fragen | 4 | keins |
 | WBF (Long-Tail) `wbf` | hp-wbf-180, hp-wbf-210 | B1 Warmweiß (`KAT-MOTIF_B1_01`) · Auto Kennzahl | Kennzahl / Serienleiter, Lieferumfang, Fragen | 2 | keins |
-| WWF (Long-Tail) `wwf` | hp-wwf-180 | B1 Kamin und Hauseingang (`KAT-MOTIF_B1_01`) · R1 LED-Anzahl · Auto Kennzahl | Kennzahl / Serienleiter, Nachweise, Lieferumfang, Fragen | 4 | keins |
+| WWF (Standard) `wwf` | hp-wwf-180 | B1 Kamin und Hauseingang (`KAT-MOTIF_B1_01`) · B2 Warmweiß (`HP-WWF-180_GAL_02`) · R1 LED-Anzahl · Auto Kettenplan sonst Zeitband · Auto Icon-Grid · Auto Kennzahl | Kennzahl / Serienleiter, Nachweise, Lieferumfang, Fragen | 4 | keins |
 | BAUM-PEC (Long-Tail) `baum-pec` | pec-150g | B1 Adventszeit (`KAT-BAUM_B1_01`) · Auto Kennzahl | Kennzahl / Serienleiter, Lieferumfang, Fragen | 1 | keins |
 | BAUM-PVC (Long-Tail) `baum-pvc` | pvc-150g | B1 Eingang (`KAT-BAUM_B1_01`) · Auto Kennzahl | Kennzahl / Lieferumfang | 0 | keins |
 
-**Bilder:** In 37 Standard-Sets ist B2 ohne Bild, die Seiten zeigen dort die ruhige Bildfläche. Die Bilder kommen
-später aus Hermes als `<FAMILIE>_B2_01` und werden am Block `<code>-b2` eingetragen. Nur RFM hat schon ein B2
-(`HP-RFM-600_GAL_02`, dasselbe Bild wie das neue Hauptbild). RSP und WWF haben lokale Szenenbilder, sind aber
-Long-Tail ohne B2: Das RSP-Bild ist jetzt Hauptbild, das WWF-Bild ist nicht verbaut. Long-Tail-Sets haben kein
+**Bilder:** In 36 Standard-Sets ist B2 ohne Bild, die Seiten zeigen dort die ruhige Bildfläche. Die Bilder kommen
+später aus Hermes als `<FAMILIE>_B2_01` und werden am Block `<code>-b2` eingetragen. RFM und WWF haben schon ein B2
+(`HP-RFM-600_GAL_02`, dasselbe Bild wie das neue Hauptbild, und `HP-WWF-180_GAL_02`). RSP hat ein lokales
+Szenenbild, ist aber Long-Tail ohne B2: Das RSP-Bild ist jetzt Hauptbild. Long-Tail-Sets haben kein
 offenes Bild.
 
-## 5. Live-Prüfung (2026-11-03, 11:37 Uhr)
+## 5. Live-Prüfung (2026-11-03, 12:37 Uhr)
 
 Alle 97 Seiten mit Shop-Passwort geladen und gegen den Plan geprüft:
 
@@ -186,11 +212,11 @@ Alle 97 Seiten mit Shop-Passwort geladen und gegen den Plan geprüft:
 Diese Hinweise zeigt der Theme-Editor über der Sektion, Kunden sehen sie nicht. Sie entstehen aus fehlenden
 Metafeldern, die Quellen geben die Werte nicht her.
 
-- **Kettenplan sonst Zeitband** nicht angezeigt (weder Länge noch Timer): hp-bsm-002, hp-tpm-400-eu-1.
+- **Kettenplan sonst Zeitband** nicht angezeigt (weder Länge noch Timer): hp-tpm-400-eu-1, hp-wwf-180.
 - **Icon-Grid** nicht angezeigt (kein `timer_dauer_h`, `dimmstufen`, `koppelbar_bis`): hp-ol-15-g, hp-olh-g40-15,
-  hp-scwl-10m2p-mc, hp-scwl-15m2p-mc, hp-bsm-002, hp-dpt-300, hp-solm-12m-ww, hp-vam-400l-eu-1.
+  hp-scwl-10m2p-mc, hp-scwl-15m2p-mc, hp-dpt-300, hp-solm-12m-ww, hp-vam-400l-eu-1, hp-wwf-180.
 - **Kennzahl** nicht angezeigt (kein `akkulaufzeit_h`, `hoehe_m`, `beleuchtete_laenge_m`, `led_anzahl`,
-  `farbtemperatur_kelvin`): hp-bsx-002, hp-fsf-120, hp-fxf-001.
+  `farbtemperatur_kelvin`): hp-bsm-002, hp-bsx-002, hp-fsf-120, hp-fxf-001.
 - **Nachweise** nicht angezeigt (kein `ip_schutzart`, `spannung_v`, `ce_kennzeichnung`): hp-ol-15-g, hp-olh-g40-15,
   -20, -25, -35, -50, hp-ols-g40-16, -25, -35, hp-ols-s17-16, -16-eu, hp-scwl-10m2p-mc, -15m2p-mc, hp-bsm-002,
   hp-dpt-300, hp-ols-a60-16-eu, hp-ols-s11-16, hp-ols-st38-16, hp-solm-12m-ww, hp-vam-400l-eu-1, hp-bsx-002,
@@ -204,20 +230,17 @@ hp-rfm-600, hp-rit-280, hp-rnm-200, hp-rtm-400, hp-solm-12m-ww, hp-tpm-400-eu-1,
 hp-vam-400l-eu-1, hp-rmp-180, hp-fsf-120, hp-fxf-001, hp-bsx-002, hp-bsm-002, pvc-150g). Das ist so gewollt,
 `familie` ist überall gesetzt, der Editor zeigt dafür keinen Hinweis.
 
-## Weitere Auffälligkeiten (nichts geändert)
+## Weitere Auffälligkeiten
 
-- **KAT-Bild folgt dem Tag:** RGB trägt `kat-smart`, dafür gibt es kein Kategoriebild, B1 nutzt `KAT-LED_B1_01`.
-  RTM und TPM (Baum-Lichterketten mit Ring) und RFM (Cluster) tragen `kat-led` und bekommen `KAT-LED_B1_01`;
-  `KAT-CTL_B1_01` bzw. `KAT-CLUSTER_B1_01` würden besser passen, wenn die Tags angepasst werden.
-- **BSM ohne kat-Tag:** hp-bsm-002 (Hängedeko Hirsch) hat keinen `kat-`Tag, fehlt deshalb in den
-  Kategorie-Kollektionen und steht auf `standard`, während das Gegenstück BSX (Stern) als Motiv-Deko `longtail`
-  ist. B1 nutzt `KAT-MOTIF_B1_01`. Auf `longtail` umstellen, wenn Leon das so sieht.
+- **KAT-Bild:** RGB trägt `kat-smart`, dafür gibt es kein Kategoriebild, B1 bleibt `KAT-LED_B1_01` (Leon).
+  RTM, TPM und RFM tragen `kat-led`, ihr B1 ist seit dem Nachtrag nach Sichtung gewählt (`KAT-CTL_B1_01` bzw.
+  `KAT-CLUSTER_B1_01`). Alle Familien bekommen später eigene B1 aus Hermes.
+- **BSM ohne kat-Tag:** hp-bsm-002 (Hängedeko Hirsch) hat keinen `kat-`Tag und fehlt deshalb in den
+  Kategorie-Kollektionen. Seit dem Nachtrag steht es wie BSX auf `longtail`, B1 nutzt `KAT-MOTIF_B1_01`.
 - **Installation & Pflege** kommt aus dem Metaobjekt je kat-Tag. OLG und OLT tragen `kat-christmas-tree-lights`
   und zeigen den Baum-Text (Ring an der Baumspitze).
-- **BSL Batterien:** Das Blatt vermerkt „Batterien nicht enthalten“ (Amazon-Attribut und Text) nur im Hinweis,
-  nicht als Lieferumfang-Zeile. Der Block zeigt Kette und Batteriekasten (hp-bsl-100-1p nur die Kette, dort fehlt
-  die Batteriekasten-Zeile im Blatt). Eine Zeile „Batterien nicht enthalten“ würde das Theme ohne Häkchen zeigen,
-  braucht aber Leons Freigabe.
+- **BSL Batterien:** Seit dem Nachtrag steht „Batterien nicht enthalten“ als letzte Lieferumfang-Zeile an allen
+  vier Produkten (ohne Häkchen). hp-bsl-100-1p zeigt keinen Batteriekasten, dort fehlt die Zeile im Blatt.
 - **ISL-264 Lieferumfang:** Am Produkt steht nur „1 × Fernbedienung“ (die einzige Familienzeile), die vollständigen
   Listen hängen an den sechs Varianten (Kette, Fernbedienung, bei 108M, 108W, 264M, 264W zusätzlich die
   Bedienungsanleitung). Die Seite zeigt die Liste der gewählten Variante.

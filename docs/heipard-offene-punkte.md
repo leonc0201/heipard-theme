@@ -242,15 +242,14 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Welle 1 Grundausbau** (2026-11-03) — 48 Sets (38 Standard, 10 Long-Tail) mit 125 Blöcken an allen 97
   Produkten, 350 Metafelder, 149 Fragen, 46 Familien-Kollektionen, Hauptbilder RSP und RFM korrigiert, hp-stt-050
   Entwurf. Live geprüft. Bericht `heipard-welle1-grundausbau-bericht.md`.
-- [ ] **Welle 1 B2-Bilder** — 37 Standard-Sets ohne B2-Bild, kommen aus Hermes als `<FAMILIE>_B2_01`, eintragen
-  am Block `<code>-b2`. Das lokale WWF-Szenenbild ist nicht verbaut (WWF ist Long-Tail ohne B2).
+- [ ] **Welle 1 B2-Bilder** — 36 Standard-Sets ohne B2-Bild, kommen aus Hermes als `<FAMILIE>_B2_01`, eintragen
+  am Block `<code>-b2`. Bis dahin kein offener Auftrag (Leon 2026-11-03).
 - [ ] **Welle 1 Datenlücken** — Kettenplan/Zeitband, Icon-Grid, Kennzahl, Nachweise, Lieferumfang und Fragen
-  bleiben bei einzelnen Produkten leer, Liste im Bericht unter „Theme-Editor-Hinweise“.
-- [ ] **kat-Tags prüfen** (Leon) — RTM und TPM (Baum-Lichterketten) und RFM (Cluster) tragen `kat-led`, RGB
-  `kat-smart` ohne Kategoriebild; hp-bsm-002 hat keinen kat-Tag und steht auf `standard`, das Gegenstück BSX auf
-  `longtail`.
-- [ ] **BSL „Batterien nicht enthalten“** — steht im Blatt nur als Hinweis; als Lieferumfang-Zeile nur nach
-  Leons Freigabe. hp-bsl-100-1p ohne Batteriekasten-Zeile im Blatt.
+  bleiben bei einzelnen Produkten leer, Liste im Bericht unter „Theme-Editor-Hinweise“. Leere Blöcke bleiben leer,
+  die Werte kommen mit der Antwort von Tyler (Leon 2026-11-03).
+- [x] **Entscheidungen zum Grundausbau** (2026-11-03) — WWF auf Standard mit Szenen-B2 `HP-WWF-180_GAL_02`;
+  B1 nach Sichtung: RTM und TPM `KAT-CTL_B1_01`, RFM `KAT-CLUSTER_B1_01`, RGB bleibt `KAT-LED_B1_01`; hp-bsm-002
+  auf Long-Tail (B2 wurde R1); BSL mit Lieferumfang-Zeile „Batterien nicht enthalten“. Live geprüft.
 - [x] **CTL geteilt** (2026-10-23) — „CTL (WW/MC)" für 210/400 mit Farbwechsel, „CTL (M)" für 180M/240M mit
   Steuerung; B2 je Set ohne Farbthema.
 - [x] **Lieferumfang „nicht enthalten"/„ohne"** ohne Häkchen (Commit `04ea287`, live 2026-10-23).

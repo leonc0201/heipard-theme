@@ -39,9 +39,11 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Hotspots nur mit belegten Funktionen, Lieferumfang-Zeilen „nicht enthalten"/„ohne" ohne Häkchen. Welle 2 ist
   bis auf die Hermes-Bilder abgeschlossen.
 - **Welle 1 Grundausbau** (2026-11-03): alle 97 Welle-1-Produkte (48 Familien) mit eigenem Set, 38 Standard
-  und 10 Long-Tail, 125 Blöcke (B1 Kategoriebild, B2 Text mit leerem Bild, R1), 350 Metafelder (`familie`,
+  und 10 Long-Tail, 126 Blöcke (B1 Kategoriebild, B2 Text mit leerem Bild, R1), 350 Metafelder (`familie`,
   `dramaturgie`, `lieferumfang`, Fachwerte), 149 Fragen, 46 Familien-Kollektionen; Hauptbilder RSP/RFM korrigiert,
-  hp-stt-050 Entwurf. Offen: 37 B2-Bilder aus Hermes. Bericht `heipard-welle1-grundausbau-bericht.md`.
+  hp-stt-050 Entwurf. Leons Nachtrag am selben Tag: WWF Standard mit Szenen-B2, BSM Long-Tail, B1 RTM/TPM/RFM nach
+  Sichtung, BSL „Batterien nicht enthalten“. Offen: 36 B2-Bilder aus Hermes, bis dahin kein Auftrag. Bericht
+  `heipard-welle1-grundausbau-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
