@@ -42,7 +42,10 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   und 10 Long-Tail, 126 Blöcke (B1 Kategoriebild, B2 Text mit leerem Bild, R1), 350 Metafelder (`familie`,
   `dramaturgie`, `lieferumfang`, Fachwerte), 149 Fragen, 46 Familien-Kollektionen; Hauptbilder RSP/RFM korrigiert,
   hp-stt-050 Entwurf. Leons Nachtrag am selben Tag: WWF Standard mit Szenen-B2, BSM Long-Tail, B1 RTM/TPM/RFM nach
-  Sichtung, BSL „Batterien nicht enthalten“. Offen: 36 B2-Bilder aus Hermes, bis dahin kein Auftrag. Bericht
+  Sichtung, BSL „Batterien nicht enthalten“. **Fassung 07.11.:** echte Bilder aus Auftrag 16 in allen Sets (B1 21:9,
+  B2 16:9, kein KAT-Platzhalter außer OLS-S11), `feature_b1`/`feature_b2` an 90 Produkten (neue Definitionen),
+  Kollektionsbilder an 44 Familien, 36 Blocktexte an die Motive angepasst, eigenes Set `dgm-w1-048`, Lichtfarbe
+  hp-ols-s17-16-eu. Offen: `OLS11_B1_01`, B2 OL-ST38, `DGM_B1_01`, hp-dgm-048. Bericht
   `heipard-welle1-grundausbau-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.

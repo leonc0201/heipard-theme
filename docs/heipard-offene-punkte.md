@@ -242,8 +242,14 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Welle 1 Grundausbau** (2026-11-03) — 48 Sets (38 Standard, 10 Long-Tail) mit 125 Blöcken an allen 97
   Produkten, 350 Metafelder, 149 Fragen, 46 Familien-Kollektionen, Hauptbilder RSP und RFM korrigiert, hp-stt-050
   Entwurf. Live geprüft. Bericht `heipard-welle1-grundausbau-bericht.md`.
-- [ ] **Welle 1 B2-Bilder** — 36 Standard-Sets ohne B2-Bild, kommen aus Hermes als `<FAMILIE>_B2_01`, eintragen
-  am Block `<code>-b2`. Bis dahin kein offener Auftrag (Leon 2026-11-03).
+- [x] **Welle 1 Bilder** (2026-11-07) — Bildzuordnung aus Auftrag 16 eingespielt: B1 und B2 in allen Sets,
+  `feature_b1`/`feature_b2` an 90 Produkten, Kollektionsbilder an 44 Familien, 36 Blocktexte an die Motive
+  angepasst, eigenes Set für hp-dgm-048. Bericht `heipard-welle1-grundausbau-bericht.md`.
+- [ ] **Welle 1 ausstehende Bilder** — `OLS11_B1_01` (OL-S11 B1, OLS-S11 B1 statt KAT-LED), B2 für OL-ST38 (Block
+  wieder ins Set), neue Fassung `DGM_B1_01`, Identität hp-dgm-048; je Bild Block, Metafeld und bei B1 das
+  Kollektionsbild nachziehen. STT und SOLM haben keine Bilder.
+- [ ] **Welle 1 Long-Tail mit B2** (Leon) — RSP, WBF und DGM-002 haben ein B2 in der Bildzuordnung, Long-Tail zeigt
+  keins. Sichtbar nur mit `standard` (wie WWF).
 - [ ] **Welle 1 Datenlücken** — Kettenplan/Zeitband, Icon-Grid, Kennzahl, Nachweise, Lieferumfang und Fragen
   bleiben bei einzelnen Produkten leer, Liste im Bericht unter „Theme-Editor-Hinweise“. Leere Blöcke bleiben leer,
   die Werte kommen mit der Antwort von Tyler (Leon 2026-11-03).
