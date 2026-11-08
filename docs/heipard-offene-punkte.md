@@ -247,12 +247,16 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   angepasst, eigenes Set für hp-dgm-048. Bericht `heipard-welle1-grundausbau-bericht.md`.
 - [ ] **Welle 1 ausstehende Bilder** — `OLS11_B1_01` (OL-S11 B1, OLS-S11 B1 statt KAT-LED), B2 für OL-ST38 (Block
   wieder ins Set), neue Fassung `DGM_B1_01`, Identität hp-dgm-048; je Bild Block, Metafeld und bei B1 das
-  Kollektionsbild nachziehen. STT und SOLM haben keine Bilder.
-- [ ] **Welle 1 Long-Tail mit B2** (Leon) — RSP, WBF und DGM-002 haben ein B2 in der Bildzuordnung, Long-Tail zeigt
-  keins. Sichtbar nur mit `standard` (wie WWF).
+  Kollektionsbild nachziehen. STT und SOLM haben keine Bilder. Die Bilder kommen nach Auftrag 17 der
+  Asset-Instanz als eigener Nachtrag mit den Files-IDs, zusammen mit `OLAS14_B2_02` und `VIT_B2_06` (Leon 2026-11-08).
+- [x] **Welle 1 Long-Tail mit B2** (2026-11-08) — Leon: RSP, WBF und DGM-002 auf Standard, mit Rückweg als Test.
+  DGM-002 ist Standard (B1, B2, R1, Zeitband, Icon-Grid). RSP und WBF sind zurück auf Long-Tail: kein
+  `timer_dauer_h`, bei WBF auch kein Icon-Grid und kein R1. B2-Blöcke `rsp-b2` und `wbf-b2` sind vorbereitet und in
+  keinem Set. Bericht Abschnitt 7.
 - [ ] **Welle 1 Datenlücken** — Kettenplan/Zeitband, Icon-Grid, Kennzahl, Nachweise, Lieferumfang und Fragen
   bleiben bei einzelnen Produkten leer, Liste im Bericht unter „Theme-Editor-Hinweise“. Leere Blöcke bleiben leer,
-  die Werte kommen mit der Antwort von Tyler (Leon 2026-11-03).
+  die Werte kommen mit der Antwort von Tyler (Leon 2026-11-03). Mit einem Timer-Wert können RSP und WBF auf
+  Standard (B2-Blöcke vorbereitet, WBF braucht dazu einen Fakt für ein R1).
 - [x] **Entscheidungen zum Grundausbau** (2026-11-03) — WWF auf Standard mit Szenen-B2 `HP-WWF-180_GAL_02`;
   B1 nach Sichtung: RTM und TPM `KAT-CTL_B1_01`, RFM `KAT-CLUSTER_B1_01`, RGB bleibt `KAT-LED_B1_01`; hp-bsm-002
   auf Long-Tail (B2 wurde R1); BSL mit Lieferumfang-Zeile „Batterien nicht enthalten“. Live geprüft.

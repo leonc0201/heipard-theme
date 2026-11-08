@@ -1,6 +1,7 @@
 # Welle 1 Grundausbau: Bericht
 
-Stand 2026-11-07. Auftrag: `heipard-theme-auftrag-welle1-grundausbau.md`, Fassung vom 07.11. (ersetzt die
+Stand 2026-11-07, Nachtrag 2026-11-08 (Abschnitt 7: RSP, WBF und DGM-002 auf Standard, Auftrag
+`heipard-theme-auftrag-longtail-standard.md`). Auftrag: `heipard-theme-auftrag-welle1-grundausbau.md`, Fassung vom 07.11. (ersetzt die
 Fassungen vom 03.11. und 06.11.). Quellen im Asset-Ordner: `reports/welle1_bildzuordnung.csv` (einzige Quelle für
 Bilder), `reports/auftrag_16.md`, `reports/metafelder/welle1_metafelder.csv` (1194 Zeilen),
 `reports/metafelder/fragen_<FAMILIE>.md` bzw. `fragen_<FAMILIE>_welle1.md` (151 Fragen), `reports/auftrag_15.md`
@@ -14,9 +15,14 @@ Dieser Bericht beschreibt den Stand nach dem Durchlauf vom 07.11. mit den echten
 
 ## Kurzfassung
 
-- **97 Produkte, 49 Sets:** 38 Standard, 11 Long-Tail (neu: eigenes Set für hp-dgm-048), 127 eigene Blöcke.
+- **97 Produkte, 49 Sets:** seit 08.11. 39 Standard, 10 Long-Tail (neu: eigenes Set für hp-dgm-048), 130 eigene
+  Blöcke (127 am 07.11., dazu drei B2 am 08.11., davon zwei vorbereitet und in keinem Set).
 - **Bilder in den Sets:** 44 Sets zeigen ein echtes B1, OLS-S11 den Platzhalter `KAT-LED_B1_01`. OL-S11, STT, SOLM
-  und hp-dgm-048 zeigen die Ersatzfläche. 34 Standard-Sets zeigen ein B2. Kein KAT-Platzhalter sonst.
+  und hp-dgm-048 zeigen die Ersatzfläche. 35 Standard-Sets zeigen ein B2 (34 am 07.11., dazu DGM-002). Kein
+  KAT-Platzhalter sonst.
+- **Nachtrag 08.11.:** DGM-002 läuft jetzt als Standard mit B2 und Zeitband. RSP und WBF sind nach dem Test zurück
+  auf Long-Tail, weil ihnen der Timer für das Zeitband fehlt. Bei WBF bleiben dazu Icon-Grid und R1 leer.
+  Einzelheiten in Abschnitt 7.
 - **Texte:** 36 Blocktexte an die echten Motive angepasst, nur aus Blatt und Faktensatz. Alle 127 bestehen die
   Textregel.
 - **Metafelder:** heute 169 geschrieben (168 Bild-Metafelder an 90 Produkten, 1 Lichtfarbe). Die Blattwerte stehen
@@ -44,7 +50,7 @@ bestätigt; Wert wie am Schwesterprodukt hp-ols-s17-16). Damit kann die Asset-In
 
 | Zeilen | Grund |
 |---|---|
-| 12 × `dramaturgie` = standard bei hp-bsm-002, hp-bsx-002, hp-dgm-002, hp-dgm-048, hp-fsf-120, hp-fxf-001, hp-rmp-180, hp-rsp-180, hp-wbf-180, hp-wbf-210, pec-150g, pvc-150g | Auftrag: Motivleuchten, Lichterbäume und Weihnachtsbäume bekommen `longtail`. hp-wwf-180 steht nach Leons Entscheidung vom 03.11. auf `standard` (wie im Blatt), hp-bsm-002 auf `longtail`. hp-ol-30/-50 (OL-G40) sind nicht im Blatt und bleiben `hero`. |
+| 11 × `dramaturgie` = standard bei hp-bsm-002, hp-bsx-002, hp-dgm-048, hp-fsf-120, hp-fxf-001, hp-rmp-180, hp-rsp-180, hp-wbf-180, hp-wbf-210, pec-150g, pvc-150g | Auftrag: Motivleuchten, Lichterbäume und Weihnachtsbäume bekommen `longtail`. hp-wwf-180 steht nach Leons Entscheidung vom 03.11. auf `standard` (wie im Blatt), hp-bsm-002 auf `longtail`. hp-dgm-002 steht seit 08.11. auf `standard` wie im Blatt, RSP und WBF sind nach dem Test zurück auf `longtail` (Abschnitt 7). hp-ol-30/-50 (OL-G40) sind nicht im Blatt und bleiben `hero`. |
 | 6 × `gesamtlaenge_m`: hp-isl-264 (HP-ISL-264 8,25 statt 11,25; HP-ISL-108M 3,38 statt 6,38; HP-ISL-264W 8,25 statt 11,25), hp-dlm-100h (HP-DLM-100H 10 statt 13; HP-DLM-200H 20 statt 23), hp-u20-200 (HP-U20-400 20 statt 23) | Auftrag: bei den Gesamtlängen-Abweichungen gilt der Shop-Wert. Der Unterschied ist jeweils die Zuleitung von 3 m. |
 | `lieferumfang` der vier BSL-Produkte | Geschrieben wie im Blatt, dazu die Zeile „Batterien nicht enthalten“ (Leon 03.11., wie bei BLT). |
 
@@ -65,7 +71,8 @@ Blöcke der Sets (Abschnitt 5).
 - **Kontrolle gegen die Regeln im Auftrag:** alles wie beschrieben, mit einer Ausnahme. Der Auftrag nennt
   „OLS-ST38: B1 `OLST38_B1_01`, B2 leer“, die Bildzuordnung hat das B2 bei OLS-ST38 (`OLSST38_B2_01`) und keins bei
   OL-ST38. Nach der Bildzuordnung umgesetzt, sie ist die einzige Quelle; die Liste der ausstehenden Bilder im Auftrag
-  („B2 für OL-ST38“) passt dazu.
+  („B2 für OL-ST38“) passt dazu. Leon hat das am 08.11. bestätigt: Die Bildzuordnung war richtig, im Auftrag waren die
+  beiden Familien vertauscht.
 - **Annahmen der Asset-Instanz** (Auftrag 16, unbestätigt): UCP nutzt die UCT-Bilder, WBF die WWF-Bilder.
 
 ## 3. Fragen
@@ -103,7 +110,8 @@ Fragen. Jedes Set hat eine Sektionsüberschrift; Bezeichnungen nach Schema „OL
   fremdes Produkt gezeigt. Neues Set `dgm-w1-048` mit Block `dgm-w1-048-b1` (gleicher Text, ohne Bild), R1 und Daten-Zone
   wie `dgm-w1`.
 - **Long-Tail mit B2 in der Zuordnung:** RSP (`RSP_B2_04`), WBF (`WWF_B2_04`) und DGM-002 (`DGM002_B2_01`). Long-Tail hat
-  kein B2, die Bilder stehen nur im Metafeld `feature_b2`. Sichtbar würden sie mit `standard` (wie bei WWF).
+  kein B2, die Bilder standen am 07.11. nur im Metafeld `feature_b2`. Leon hat am 08.11. Standard für alle drei
+  entschieden. Nach dem Test ist DGM-002 Standard, RSP und WBF sind zurück auf Long-Tail (Abschnitt 7).
 - **WWF** (Standard seit 03.11.) hat zusätzlich die Kennzahl im Set, weil Kettenplan und Zeitband ohne Länge und
   Timer leer bleiben. Sichtbar sind B1, B2, R1, Icon-Grid (Schutzart IP44) und Kennzahl, genau die fünf erlaubten.
 - **Textregel** (21.10.): Kicker 2 bis 3 Wörter, genau zwei Sätze, keine Gedankenstriche, keine Reizwörter, kein
@@ -152,12 +160,12 @@ Fragen. Jedes Set hat eine Sektionsüberschrift; Bezeichnungen nach Schema „OL
 | VAM (Standard) `vam` | hp-vam-400l-eu-1 | B1 Hecke und Tor (`VLM_B1_01`) · B2 Lichtfarben (`VLM_B2_01`) · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | nichts |
 | VLM (Standard) `vlm` | hp-vlm-100l | B1 Hecke und Tor (`VLM_B1_01`) · B2 Längen (`VLM_B2_01`) · R1 Leuchtmodi · Auto Kettenplan sonst Zeitband · Auto Icon-Grid | nichts |
 | BSX (Long-Tail) `bsx` | hp-bsx-002 | B1 Adventszeit (`BSX_B1_01`) · Auto Kennzahl | nichts |
-| DGM (Welle 1, Long-Tail) `dgm-w1` | hp-dgm-002 (Set `dgm-w1`), hp-dgm-048 (Set `dgm-w1-048`, B1 ohne Bild) | B1 Timer (`DGM002_B1_01`) · R1 LED-Anzahl · Auto Kennzahl | B2 `DGM002_B2_01` nur im Metafeld (Long-Tail ohne B2) |
+| DGM (Welle 1, hp-dgm-002, Standard) `dgm-w1`, seit 08.11. | hp-dgm-002 (Set `dgm-w1`), hp-dgm-048 (Set `dgm-w1-048`, Long-Tail, B1 ohne Bild, R1 und Kennzahl wie bisher) | B1 Timer (`DGM002_B1_01`) · B2 Beet (`DGM002_B2_01`) · R1 LED-Anzahl · Auto Zeitband · Auto Icon-Grid | nichts |
 | FSF (Long-Tail) `fsf` | hp-fsf-120 | B1 Vorgarten (`FSF_B1_01`) · R1 Fernbedienung · Auto Kennzahl | nichts |
 | FXF (Long-Tail) `fxf` | hp-fxf-001 | B1 Advent (`FXF_B1_01`) · Auto Kennzahl | nichts |
 | RMP (Long-Tail) `rmp` | hp-rmp-180 | B1 Hof und Garten (`RMP_B1_01`) · R1 2700 Kelvin · Auto Kennzahl | nichts |
-| RSP (Long-Tail) `rsp` | hp-rsp-180 | B1 Lichterkegel (`RSP_B1_01`) · R1 Leuchtmodi · Auto Kennzahl | B2 `RSP_B2_04` nur im Metafeld (Long-Tail ohne B2) |
-| WBF (Long-Tail) `wbf` | hp-wbf-180, hp-wbf-210 | B1 Warmweiß (`WWF_B1_01`) · Auto Kennzahl | B2 `WWF_B2_04` nur im Metafeld (Long-Tail ohne B2) |
+| RSP (Long-Tail) `rsp` | hp-rsp-180 | B1 Lichterkegel (`RSP_B1_01`) · R1 Leuchtmodi · Auto Kennzahl | B2 `RSP_B2_04` nur im Metafeld; Block `rsp-b2` vorbereitet, Standard-Test 08.11. ohne Zeitband (Abschnitt 7) |
+| WBF (Long-Tail) `wbf` | hp-wbf-180, hp-wbf-210 | B1 Warmweiß (`WWF_B1_01`) · Auto Kennzahl | B2 `WWF_B2_04` nur im Metafeld; Block `wbf-b2` vorbereitet, Standard-Test 08.11. ohne R1, Zeitband und Icon-Grid (Abschnitt 7) |
 | WWF (Standard) `wwf` | hp-wwf-180 | B1 Kamin und Hauseingang (`WWF_B1_01`) · B2 Warmweiß (`WWF_B2_04`) · R1 LED-Anzahl · Auto Kettenplan sonst Zeitband · Auto Icon-Grid · Auto Kennzahl | nichts |
 | BAUM-PEC (Long-Tail) `baum-pec` | pec-150g | B1 Adventszeit (`BAUMPEC_B1_01`) · Auto Kennzahl | nichts |
 | BAUM-PVC (Long-Tail) `baum-pvc` | pvc-150g | B1 Wohnzimmer (`BAUMPVC_B1_01`) · Auto Kennzahl | nichts |
@@ -222,6 +230,80 @@ Seiten sind deshalb über Edge (puppeteer-core) geladen.
 - Kollektionen: alle 44 Bilder in voller Größe (2800 x 1200) angelegt; die Kollektionen sind ausgeblendet und hier
   nicht im Storefront geprüft.
 
+
+## 7. Nachtrag 08.11.: RSP, WBF und DGM-002 auf Standard
+
+Auftrag `heipard-theme-auftrag-longtail-standard.md` (Stand 07.11., Freigabe Leon): Die drei Familien mit
+freigegebenem B2 wechseln auf Standard. Set B1, B2, R1, D3 Zeitband (nicht Kettenplan), B4 Icon-Grid, dazu die
+Daten-Zone. Rückweg als Test: Bleibt ein Block ohne Fakten, geht die Familie zurück auf `longtail`. Am 08.11.
+zwischen 2:50 und 3:05 Uhr umgesetzt. Vor jedem Schreiben `get-shop-info` = HeiPard. Nicht angefasst: Produktmedien,
+Position 1, `galerie_medien`, Produktstatus, Theme-Code. hp-dgm-048 bleibt Long-Tail ohne Bild.
+
+**Ablauf**
+
+1. Drei B2-Blöcke angelegt (Texte unten).
+2. Sets `rsp`, `wbf` und `dgm-w1` auf den Standard-Aufbau gestellt. `dramaturgie` = standard an hp-rsp-180,
+   hp-wbf-180, hp-wbf-210 und hp-dgm-002. Als D3 dient der vorhandene Block `auto-zeitband` (nur Zeitband, Variante
+   auto, bei Netzbetrieb Timer), nicht `auto-kettenplan-sonst-zeitband`.
+3. Live-Prüfung über Edge, eine Seite alle 8 Sekunden, dazu hp-wwf-180 zum Vergleich.
+4. RSP und WBF zurückgestellt: `dramaturgie` = longtail, Bezeichnung und Blockliste der Sets wie vor dem Test. Die drei
+   Seiten danach noch einmal geladen, sie zeigen dieselben Blöcke wie am 07.11.
+5. Zwei Texte nach dem Abgleich mit dem Faktensatz korrigiert (siehe unten), DGM-002 danach noch einmal live geprüft.
+
+**Ergebnis je Familie**
+
+| Familie | Set | Blöcke im Test | Live mit Standard | Leer geblieben | Ergebnis |
+|---|---|---|---|---|---|
+| DGM-002 | `dgm-w1` „DGM (Welle 1, hp-dgm-002, Standard)“ | B1 Timer (`DGM002_B1_01`) · B2 Beet (`DGM002_B2_01`) · R1 LED-Anzahl · Auto Zeitband · Auto Icon-Grid | B1, B2, R1, Zeitband (6 h an), Icon-Grid mit Timer 6 h und Schutzart IP44; Daten-Zone mit Lieferumfang, Nachweisen, Fragen, Serienleiter | nichts | bleibt Standard |
+| RSP | `rsp` „RSP (Long-Tail)“ | B1 Lichterkegel (`RSP_B1_01`) · B2 Veranda (`RSP_B2_04`) · R1 Leuchtmodi · Auto Zeitband · Auto Icon-Grid | B1, B2, R1, Icon-Grid mit nur einer Kachel (82 Leuchtmodi); Daten-Zone mit Lieferumfang, Fragen, Serienleiter | D3 Zeitband (kein `timer_dauer_h`, auch nicht an den Varianten) | zurück auf Long-Tail |
+| WBF | `wbf` „WBF (Long-Tail)“ | B1 Warmweiß (`WWF_B1_01`) · B2 Wohnzimmer (`WWF_B2_04`) · Auto Zeitband · Auto Icon-Grid | B1, B2; Daten-Zone mit Lieferumfang, Fragen, Serienleiter | R1 (kein Fakt für beide Größen, 128 LEDs gelten nur für 1,8 m), D3 Zeitband (kein Timer), B4 Icon-Grid (weder Timer noch Dimmstufen, Koppeln, Modi, Fernbedienung oder Schutzart) | zurück auf Long-Tail |
+
+Nach dem Rückweg zeigen RSP und WBF wieder B1, R1 (nur RSP) und Kennzahl wie am 07.11. Das B2 steht dort weiter nur
+im Metafeld `feature_b2`. Die Nachweise fehlen bei RSP und WBF wie schon am 07.11. (kein `ip_schutzart`,
+`spannung_v`, `ce_kennzeichnung`).
+
+**Neue B2-Blöcke** (Textregel vom 21.10. geprüft)
+
+| Block | Kicker / Headline | Text | Fakt |
+|---|---|---|---|
+| `dgm-w1-b2` „DGM · B2 Beet“, im Set | Für das Beet / Spiralen zwischen den Pflanzen | Mit dem Stecker kommt die Deko direkt in die Erde, neben Sträucher und Steine. Nach IP44 ist sie gegen Spritzwasser geschützt. | Blatt: Lieferumfang „LED-Gartenstecker“, IP44 |
+| `rsp-b2` „RSP · B2 Veranda“, vorbereitet | Lange Zuleitung / Frei vor der Veranda | Der Kegel muss nicht direkt an der Hauswand stehen, um Strom zu bekommen. Die Zuleitung ist 5 m lang. | Blatt: Zuleitung 5 m; Faktensatz: Netzteil |
+| `wbf-b2` „WBF · B2 Wohnzimmer“, vorbereitet | Im Wohnzimmer / Ein ruhiger Schein vor der Gardine | Am Abend soll die Krone den Raum sanft erhellen und nicht blenden. Die LEDs leuchten warmweiß. | Faktensatz: Lichtfarbe warmweiß (der einzige Fakt für beide Größen, steht auch im B1) |
+
+Die Motive: `DGM002_B2_01` zeigt Spiralen im Beet bei Dämmerung, eine davon scharf im Vordergrund. `RSP_B2_04`
+zeigt den Kegel vor der verschneiten Veranda mit Kranz und Geländer, `WWF_B2_04` die Krone der Birke vor der Gardine
+(wie bei WWF).
+
+**Korrektur nach dem Test:** Zwei Testtexte stützten sich auf Shop-Werte, die weder im Blatt noch im Faktensatz
+stehen. Bei WBF waren das die Höhen 1,8 und 2,1 m, die nur aus den Produkttiteln kommen; der Faktensatz markiert
+die Größe sogar als auffällig, weil das Bild kleine Bäume auf einem Kaminsims zeigt. Bei DGM-002 stand „Bunte“ in der
+Headline, die Lichtfarbe ist dort aber nicht belegt. Beide Texte sind korrigiert. Sichtbar war der alte WBF-Text nur
+während des Tests (wenige Minuten, Shop mit Passwort).
+
+**Hinweise**
+
+- `rsp-b2` und `wbf-b2` bleiben angelegt, gehören aber zu keinem Set. Kommt ein Timer-Wert für RSP oder WBF (mit der
+  Antwort von Tyler), reicht ein neuer Durchlauf: B2 ins Set, `auto-zeitband` und `auto-icon-grid` anhängen,
+  `dramaturgie` auf standard. WBF braucht zusätzlich einen Fakt für ein R1, der für beide Größen gilt.
+- RSP: Für den Einsatzort gibt es weder im Blatt noch im Faktensatz eine Angabe. Der B2-Text beschreibt nur den
+  Platz im Bild und nennt keine Schutzart. Die Fernbedienung steht im Lieferumfang, das Metafeld `fernbedienung` ist
+  nicht gesetzt (keine Zeile im Blatt). Mit diesem Feld hätte das Icon-Grid eine zweite Kachel.
+- DGM-002: Der B1-Text spricht vom Timer, jetzt zeigen ihn auch das Zeitband und eine Icon-Grid-Kachel. B1 ist
+  unverändert, weil der Auftrag nur den B2-Text nennt. Wenn die Wiederholung stört, könnte B1 das Motiv aufnehmen
+  (drei Stecker am verschneiten Weg). Der Faktensatz merkt an, dass die Bilder eine Batteriebox zeigen, der Shop aber
+  Netz führt. Das Zeitband ist davon nicht betroffen, es zeigt den Timer in beiden Fällen.
+- hp-dgm-048 unverändert: eigenes Set `dgm-w1-048`, Long-Tail, B1 ohne Bild. Das R1 `dgm-w1-r1` gehört weiter zu beiden
+  Sets.
+
+**Produkt-URLs** (Shop mit Passwort)
+
+| Familie | URL | Stand |
+|---|---|---|
+| DGM | https://heipard.myshopify.com/products/hp-dgm-002 | Standard |
+| RSP | https://heipard.myshopify.com/products/hp-rsp-180 | Long-Tail, Variante 1,8 m (live geprüft) |
+| RSP | https://heipard.myshopify.com/products/hp-rsp-180?variant=54933464580429 | Long-Tail, Variante 2,5 m (gleiches Set, ohne Timer-Wert, im Admin gelesen) |
+| WBF | https://heipard.myshopify.com/products/hp-wbf-180 | Long-Tail |
+| WBF | https://heipard.myshopify.com/products/hp-wbf-210 | Long-Tail |
 
 ## Theme-Editor-Hinweise
 
