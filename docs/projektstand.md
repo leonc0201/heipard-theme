@@ -46,8 +46,10 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   B2 16:9, kein KAT-Platzhalter außer OLS-S11), `feature_b1`/`feature_b2` an 90 Produkten (neue Definitionen),
   Kollektionsbilder an 44 Familien, 36 Blocktexte an die Motive angepasst, eigenes Set `dgm-w1-048`, Lichtfarbe
   hp-ols-s17-16-eu. **Nachtrag 08.11.:** DGM-002 auf Standard mit B2 und Zeitband; RSP und WBF nach dem Test
-  zurück auf Long-Tail (kein Timer-Wert), ihre B2-Blöcke sind vorbereitet. Offen: `OLS11_B1_01`, B2 OL-ST38,
-  `DGM_B1_01`, hp-dgm-048. Bericht `heipard-welle1-grundausbau-bericht.md`.
+  zurück auf Long-Tail (kein Timer-Wert), ihre B2-Blöcke sind vorbereitet. **Nachtrag 09.11.:** Nachzügler-Bilder
+  eingesetzt (OL-S11 und OLS-S11 B1, OL-ST38 B2, DGM B1, Sticky VIT und OLAS14), drei B1-Texte an die Motive,
+  `fernbedienung` an RSP. Offen: hp-dgm-048, Kollektionsbilder OL-S11/OLS-S11. Bericht
+  `heipard-welle1-grundausbau-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

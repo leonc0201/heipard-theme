@@ -229,8 +229,9 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Welle-2-Texte** (2026-10-22) — Titel, Beschreibung, subtitle, Meta an allen 20 Produkten, BLT-5-m-Hinweis
   im Lieferumfang von HP-BLT-050; live geprüft.
 - [ ] **Bilder folgen (Hermes, letzter offener Teil von Welle 2):** DFM_B2_01, DFM-Schieber (An/Aus), Aus-Bilder
-  BLT/BLM (Schieber bleiben bis dahin), Bilder für die Sticky-Blöcke CTL, OLAS14, VIT (angelegt, noch nicht im
-  Set) und für DGM (bleibt bis dahin Long-Tail).
+  BLT/BLM (Schieber bleiben bis dahin), Bild für den Sticky-Block CTL (angelegt, noch nicht im Set). Erledigt am
+  2026-11-09: Sticky VIT (`VIT_B2_06`) und OLAS14 (`OLAS14_B2_02`) in ihren Sets, DGM B1 (`DGM_B1_01`, Set `dgm`
+  bleibt Long-Tail). Welle-1-Bericht Abschnitt 8.
 - [x] **SEO-Titel** (2026-10-23) — an allen 20 Produkten, höchstens 70 Zeichen, live vollständig im `<title>`.
 - [x] **Hotspots nur mit belegten Funktionen** (2026-10-23) — Timer-Punkt entfernt bei BLT, CTL, DFM sowie nach
   derselben Regel bei VIT und OLAS14; P1 bleibt nur in CTL (M), aus CTL (WW/MC) und DFM entfernt.
@@ -245,10 +246,18 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Welle 1 Bilder** (2026-11-07) — Bildzuordnung aus Auftrag 16 eingespielt: B1 und B2 in allen Sets,
   `feature_b1`/`feature_b2` an 90 Produkten, Kollektionsbilder an 44 Familien, 36 Blocktexte an die Motive
   angepasst, eigenes Set für hp-dgm-048. Bericht `heipard-welle1-grundausbau-bericht.md`.
-- [ ] **Welle 1 ausstehende Bilder** — `OLS11_B1_01` (OL-S11 B1, OLS-S11 B1 statt KAT-LED), B2 für OL-ST38 (Block
-  wieder ins Set), neue Fassung `DGM_B1_01`, Identität hp-dgm-048; je Bild Block, Metafeld und bei B1 das
-  Kollektionsbild nachziehen. STT und SOLM haben keine Bilder. Die Bilder kommen nach Auftrag 17 der
-  Asset-Instanz als eigener Nachtrag mit den Files-IDs, zusammen mit `OLAS14_B2_02` und `VIT_B2_06` (Leon 2026-11-08).
+- [x] **Welle 1 ausstehende Bilder** (2026-11-09) — `OLS11_B1_01` bei OL-S11 und OLS-S11 (gemeinsamer Block
+  `ol-s11-b1`), `OLST38_B2_04` (zweite Fassung) im B2 von OL-ST38, `DGM_B1_01` im Block `dgm-b1`, `VIT_B2_06` und
+  `OLAS14_B2_02` in den Sticky-Blöcken; B1-Texte DGM, DGM-002 und OL-S11 an die Motive angepasst, `fernbedienung`
+  an RSP. Live geprüft. Bericht Abschnitt 8.
+- [ ] **Kollektionsbilder „Serie OL-S11“ und „Serie OLS-S11“** — noch ohne Bild; nach der Regel `OLS11_B1_01`. Am
+  09.11. nicht gesetzt, der Nachtrag umfasste nur Blöcke und Bild-Metafelder.
+- [ ] **DGM-002 Set-Überschrift** — „Licht mit eingebautem Timer“; mit Zeitband und Icon-Kachel steht der Timer
+  weiter dreimal in der Feature-Sektion. Vorschlag „Lichtspiralen für Weg und Beet“, Leon entscheidet.
+- [ ] **OLAS14_B2_02** — Fassungen an kurzen Schnüren, Birnen mit Spitze, das Produkt hat Hakenclip direkt am Kabel
+  und runde S14-Tropfen. Im Sticky-Block eingesetzt (Leons Vorgabe); zurück in einem Schritt, falls es nicht bleibt.
+- [ ] **Metafeld `fernbedienung` leer trotz Lieferumfang** — hp-ol-st38-25, -30, -50, hp-ol-s11-50, hp-dgm-002 (bei
+  DGM-002 fraglich, die Bilder zeigen eine Batteriebox). Bei RSP am 09.11. gesetzt.
 - [x] **Welle 1 Long-Tail mit B2** (2026-11-08) — Leon: RSP, WBF und DGM-002 auf Standard, mit Rückweg als Test.
   DGM-002 ist Standard (B1, B2, R1, Zeitband, Icon-Grid). RSP und WBF sind zurück auf Long-Tail: kein
   `timer_dauer_h`, bei WBF auch kein Icon-Grid und kein R1. B2-Blöcke `rsp-b2` und `wbf-b2` sind vorbereitet und in
