@@ -51,6 +51,11 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   `fernbedienung` an RSP. **Nachtrag 10.11.:** Set-Überschrift DGM-002 „Lichtspiralen für Weg und Beet“,
   Kollektionsbilder OL-S11/OLS-S11, `fernbedienung` an hp-ol-st38-25, -30, -50 und hp-ol-s11-50. Offen:
   hp-dgm-048, `fernbedienung` hp-dgm-002 (Shenzhen). Bericht `heipard-welle1-grundausbau-bericht.md`.
+- **Feature-Sektion dichter, Schritt A** (2026-11-10, Auftrag `heipard-theme-auftrag-featuresektion-dichte.md`):
+  Kaufbox-Kacheln nur mit Wert (kein [TBD]), Serie nur gleiche Bauart (Familie und Stromquelle), Icon-Grid bis vier
+  Kacheln in fester Reihenfolge, Long-Tail mit B2 bei gesetztem `feature_b2` (Limit 4; RSP und WBF), R1 mit
+  optionalem Bild (Block-Bild oder `feature_r1`, im Shop noch keins). Commits `a7d0a9f`, `79892b2`, `621f3ad`,
+  `d0ff77f`, `bfb0605`. Bericht `heipard-featuresektion-dichte-bericht.md` mit den Listen für Schritt B.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

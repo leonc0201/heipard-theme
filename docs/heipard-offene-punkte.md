@@ -259,9 +259,23 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   und runde S14-Tropfen. Leon 10.11.: bleibt im Sticky-Block, die Asset-Instanz ersetzt die Datei später per
   `fileUpdate` unter derselben ID, am Block ändert sich nichts. Offen nur: nach dem Tausch einmal live ansehen.
 - [x] **Metafeld `fernbedienung` an OL-ST38 und OL-S11** (2026-11-10) — hp-ol-st38-25, -30, -50 und hp-ol-s11-50
-  gesetzt (Lieferumfang), RSP am 09.11. Live: Technik „Fernbedienung Ja“, bei hp-ol-st38-50 dritte Icon-Kachel.
+  gesetzt (Lieferumfang), RSP am 09.11. Live: Technik „Fernbedienung Ja“, bei hp-ol-st38-50 dritte Icon-Kachel
+  (seit der Kachelregel vom 10.11. nicht mehr unter den ersten vier).
 - [ ] **`fernbedienung` an hp-dgm-002** — Lieferumfang nennt eine Fernbedienung, die Bilder zeigen eine Batteriebox.
   Leon klärt mit Shenzhen, bis dahin leer.
+- [x] **Feature-Sektion dichter, Schritt A** (2026-11-10) — Kaufbox ohne [TBD], Serie nur gleiche Bauart (Familie
+  und Stromquelle), Icon-Grid bis vier Kacheln in Leons Reihenfolge, Long-Tail mit B2 (RSP, WBF), R1 mit optionalem
+  Bild im Theme (`feature_r1`). Live an allen 118 Seiten geprüft. Bericht `heipard-featuresektion-dichte-bericht.md`.
+- [ ] **Schritt B: R1-Bilder** — 48 Familien ohne eigenes R1-Bild (Bericht, Liste 1). Galeriebilder der
+  Asset-Instanz sind fast alle aus B1/B2 geschnitten; OLAS14 GAL_01 zeigt dieselbe Szene wie `OLAS14_B2_01`
+  (eingesetzt und zurückgenommen). Listing-Fotos von CTL, DFM, ISL, UCT, DPM, NPT nur nach Sichtung.
+- [ ] **Icon-Grid-Reihenfolge** — Lichtfarbe, Lichtpunkte, Schutzart, Stromquelle stehen jetzt meist vorn und
+  wiederholen die Kaufbox; Dimmbar, Koppelbar, Leuchtmodi und bei OL-ST38 die Fernbedienung fallen heraus. Leon
+  entscheidet, ob die Reihenfolge so bleibt. Unter drei Kacheln: CL, DPT, hp-ol-15-g, VAM (Liste 2).
+- [ ] **Nachfrage Shenzhen: leere Kaufbox-Felder** — 70 Felder an 52 Produkten (Schutzart 36, Stromquelle 16,
+  Länge 10, Lichtfarbe 8), Bericht Liste 3. Die Kacheln sind bis dahin ausgeblendet.
+- [ ] **Serie: Stern und Spirale** — DGM-001 und DGM-002 stehen weiter zusammen (gleiche Familie, beide Netz);
+  trennen nur über ein eigenes `familie`. Ebenso offen: CTL Welle 1 und 2 in einer Serie, OLS-S17 mit Dublette.
 - [x] **Welle 1 Long-Tail mit B2** (2026-11-08) — Leon: RSP, WBF und DGM-002 auf Standard, mit Rückweg als Test.
   DGM-002 ist Standard (B1, B2, R1, Zeitband, Icon-Grid). RSP und WBF sind zurück auf Long-Tail: kein
   `timer_dauer_h`, bei WBF auch kein Icon-Grid und kein R1. B2-Blöcke `rsp-b2` und `wbf-b2` sind vorbereitet und in
@@ -290,7 +304,8 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [ ] **Serienleiter bei Farbe und Größe** — zeigt jede Variante als Stufe (hp-dct-200 sechs Karten, DFM
   ebenso). Gruppierung nach Größe wäre eine Code-Änderung. Notiert, nichts geändert (Leon 2026-10-21).
 - [ ] **familie-dgm** — enthält Stern (hp-dgm-001), Spirale (hp-dgm-002) und Geschenkboxen (hp-dgm-048), die
-  Serienleiter zeigt sie als eine Serie. Notiert, nichts geändert (Leon 2026-10-21).
+  Serienleiter zeigt sie als eine Serie. Notiert, nichts geändert (Leon 2026-10-21). Seit 10.11. trennt die
+  Stromquelle hp-dgm-048 (Batterie) ab; Stern und Spirale bleiben zusammen (Punkt „Serie: Stern und Spirale“).
 - [x] **dimmstufen an HP-NPT-210M** — Varianten-Definition `heipard.dimmstufen` (Liste Ganzzahl) angelegt, der
   Wert hängt daran (2026-10-21).
 
