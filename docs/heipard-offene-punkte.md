@@ -269,9 +269,9 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [ ] **Schritt B: R1-Bilder** — 48 Familien ohne eigenes R1-Bild (Bericht, Liste 1). Galeriebilder der
   Asset-Instanz sind fast alle aus B1/B2 geschnitten; OLAS14 GAL_01 zeigt dieselbe Szene wie `OLAS14_B2_01`
   (eingesetzt und zurückgenommen). Listing-Fotos von CTL, DFM, ISL, UCT, DPM, NPT nur nach Sichtung.
-- [ ] **Icon-Grid-Reihenfolge** — Lichtfarbe, Lichtpunkte, Schutzart, Stromquelle stehen jetzt meist vorn und
-  wiederholen die Kaufbox; Dimmbar, Koppelbar, Leuchtmodi und bei OL-ST38 die Fernbedienung fallen heraus. Leon
-  entscheidet, ob die Reihenfolge so bleibt. Unter drei Kacheln: CL, DPT, hp-ol-15-g, VAM (Liste 2).
+- [x] **Icon-Grid-Reihenfolge** (2026-11-10) — Leon: Unterscheidungsmerkmale zuerst. Jetzt Timer, Dimmbar,
+  Koppelbar, Leuchtmodi, Fernbedienung, Lichtpunkte, Schutzart, Lichtfarbe, Stromquelle (Commit `dbe55bd`, Bericht
+  Abschnitt 8). Unter drei Kacheln weiter CL, DPT, hp-ol-15-g, VAM (Liste 2).
 - [ ] **Nachfrage Shenzhen: leere Kaufbox-Felder** — 70 Felder an 52 Produkten (Schutzart 36, Stromquelle 16,
   Länge 10, Lichtfarbe 8), Bericht Liste 3. Die Kacheln sind bis dahin ausgeblendet.
 - [ ] **Serie: Stern und Spirale** — DGM-001 und DGM-002 stehen weiter zusammen (gleiche Familie, beide Netz);

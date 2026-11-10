@@ -13,7 +13,7 @@ getestet und `shopify theme check` gegen den Ausgangsstand verglichen (keine neu
   deshalb nichts; die leeren Felder je Produkt stehen unten als Nachfrageliste (Liste 3).
 - **Serie nur gleiche Bauart:** gleiche `familie` und keine abweichende Stromquelle. hp-dgm-048 steht nicht mehr bei
   DGM-001 und DGM-002 und zeigt selbst keine Serie. Der Stern (hp-dgm-001) bleibt bei DGM-002, siehe Abschnitt 3.
-- **Icon-Grid bis vier Kacheln** in Leons Reihenfolge: 92 von 118 Seiten zeigen jetzt vier Kacheln (vorher
+- **Icon-Grid bis vier Kacheln** (Reihenfolge am Abend umgestellt, Abschnitt 8): 92 von 118 Seiten zeigen jetzt vier Kacheln (vorher
   höchstens drei). Sieben Standard-Seiten, die bisher gar kein Icon-Grid hatten, zeigen jetzt eins. Unter drei
   Kacheln bleiben fünf Produkte (Liste 2).
 - **Long-Tail mit B2:** RSP und WBF (180, 210) zeigen ihr B2, Limit Long-Tail jetzt 4. Ohne `feature_b2` bleibt
@@ -201,7 +201,7 @@ sie in Frage kommen, müssten sie einzeln gesichtet werden (Schritt B).
 
 ## 7. Hinweise für Leon
 
-- **Icon-Grid wiederholt die Kaufbox:** Mit der neuen Reihenfolge stehen auf den meisten Seiten Lichtfarbe,
+- **Icon-Grid wiederholt die Kaufbox** (am Abend nach Leon umgestellt, Abschnitt 8): Mit der neuen Reihenfolge stehen auf den meisten Seiten Lichtfarbe,
   Lichtpunkte, Schutzart und Stromquelle vorn; drei davon zeigt die Kaufbox schon. Dimmbar, Koppelbar und Leuchtmodi
   fallen dadurch oft heraus, bei OL-ST38 auch die Fernbedienung vom 09.11. (OL-S11 15 m vorher Dimmbar, Koppelbar,
   Leuchtmodi; jetzt Lichtfarbe, Lichtpunkte, Schutzart, Stromquelle). Umgesetzt wie vorgegeben. Wenn die
@@ -214,6 +214,30 @@ sie in Frage kommen, müssten sie einzeln gesichtet werden (Schritt B).
   Galeriebilder taugen nicht, weil sie fast alle aus B1/B2 geschnitten sind.
 - **Long-Tail und B2:** Für eine weitere Long-Tail-Familie braucht es drei Dinge: B2-Block mit Text, Block ins Set
   nach dem B1, Metafeld `feature_b2` an jedem Produkt. Ohne Metafeld bleibt das B2 aus.
+
+## 8. Nachtrag 10.11. abends: Icon-Grid-Reihenfolge
+
+Freigabe Leon: Unterscheidungsmerkmale zuerst. Neue feste Reihenfolge Timer, Dimmbar, Koppelbar, Leuchtmodi,
+Fernbedienung, Lichtpunkte, Schutzart, Lichtfarbe, Stromquelle; weiter die ersten vier Kacheln mit Wert. Commit
+`dbe55bd`, live ab 22:26:59 (Prüfsumme Live-Theme gleich main). Vorher lokal mit LiquidJS getestet (fünf Fälle),
+`shopify theme check` ohne neue Meldungen. Die Zahl der Kacheln je Seite ändert sich dadurch nicht, nur Auswahl und
+Abfolge; Liste 2 gilt unverändert.
+
+Live geprüft 22:27 bis 22:28 (eine Seite alle 8 Sekunden), dazu zwei Aufnahmen des Icon-Grids 22:28 bis 22:29
+(Desktop hp-ol-st38-50, Handy hp-ol-50). Vorher: Aufnahme nach Schritt 2 (18:45 bis 19:02).
+
+| Seite | vorher | nachher |
+|---|---|---|
+| [hp-ol-st38-50](https://heipard.myshopify.com/products/hp-ol-st38-50) (OL-ST38, Standard) | Lichtfarbe, Lichtpunkte, Schutzart, Stromquelle | Leuchtmodi (3 Modi), Fernbedienung, Lichtpunkte (50), Schutzart (IP45) |
+| [hp-dgm-002](https://heipard.myshopify.com/products/hp-dgm-002) (DGM, Standard) | Lichtfarbe, Lichtpunkte, Timer, Schutzart | Timer (6 Stunden), Lichtpunkte (70), Schutzart (IP44), Lichtfarbe (Multicolor) |
+| [hp-rit-280](https://heipard.myshopify.com/products/hp-rit-280) (RIT, Standard) | Lichtfarbe, Lichtpunkte, Timer, Schutzart | Timer (8 Stunden), Lichtpunkte (280), Schutzart (IP44), Lichtfarbe (Multicolor) |
+| [hp-ol-50](https://heipard.myshopify.com/products/hp-ol-50) (OL-G40, Hero, Gegenprobe) | Lichtfarbe, Lichtpunkte, Timer, Schutzart | Timer (6 / 8 Stunden), Dimmbar (4 Stufen), Koppelbar (bis zu 4 Ketten), Leuchtmodi (3 Modi) |
+
+Alle vier Seiten 200, keine Liquid-Fehler, kein sichtbares „[TBD]“. Blockfolge, Kaufbox und Serie unverändert
+gegenüber der Aufnahme nach Schritt 2. Desktop eine Reihe mit vier Kacheln, Handy 2 x 2. Die Fernbedienung vom
+09.11. ist bei OL-ST38 wieder zu sehen. Bei DGM-002 und RIT-280 fehlen Dimmbar, Koppelbar, Leuchtmodi und
+Fernbedienung in den Daten; dort füllen Lichtpunkte, Schutzart und Lichtfarbe auf, Schutzart und Lichtfarbe stehen
+also weiter auch in der Kaufbox.
 
 ## Liste 1: R1 ohne eigenes Bild (für Schritt B)
 

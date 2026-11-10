@@ -56,6 +56,8 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Kacheln in fester Reihenfolge, Long-Tail mit B2 bei gesetztem `feature_b2` (Limit 4; RSP und WBF), R1 mit
   optionalem Bild (Block-Bild oder `feature_r1`, im Shop noch keins). Commits `a7d0a9f`, `79892b2`, `621f3ad`,
   `d0ff77f`, `bfb0605`. Bericht `heipard-featuresektion-dichte-bericht.md` mit den Listen für Schritt B.
+  Am Abend Icon-Grid-Reihenfolge nach Leon: Timer, Dimmbar, Koppelbar, Leuchtmodi, Fernbedienung, Lichtpunkte,
+  Schutzart, Lichtfarbe, Stromquelle (`dbe55bd`).
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
