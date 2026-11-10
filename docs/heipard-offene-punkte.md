@@ -250,14 +250,18 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   `ol-s11-b1`), `OLST38_B2_04` (zweite Fassung) im B2 von OL-ST38, `DGM_B1_01` im Block `dgm-b1`, `VIT_B2_06` und
   `OLAS14_B2_02` in den Sticky-Blöcken; B1-Texte DGM, DGM-002 und OL-S11 an die Motive angepasst, `fernbedienung`
   an RSP. Live geprüft. Bericht Abschnitt 8.
-- [ ] **Kollektionsbilder „Serie OL-S11“ und „Serie OLS-S11“** — noch ohne Bild; nach der Regel `OLS11_B1_01`. Am
-  09.11. nicht gesetzt, der Nachtrag umfasste nur Blöcke und Bild-Metafelder.
-- [ ] **DGM-002 Set-Überschrift** — „Licht mit eingebautem Timer“; mit Zeitband und Icon-Kachel steht der Timer
-  weiter dreimal in der Feature-Sektion. Vorschlag „Lichtspiralen für Weg und Beet“, Leon entscheidet.
+- [x] **Kollektionsbilder „Serie OL-S11“ und „Serie OLS-S11“** (2026-11-10) — beide mit `OLS11_B1_01` (Kopie, bei
+  einem Bildtausch in Files neuer `collectionUpdate` nötig). Live als `og:image`; den Kopf der Kollektionsseite
+  zeigt die Vorlage bei keiner Kollektion (`show_collection_image` aus). Bericht Abschnitt 9.
+- [x] **DGM-002 Set-Überschrift** (2026-11-10) — Set `dgm-w1` jetzt „Lichtspiralen für Weg und Beet“ (Leon). Den
+  Timer nennen oben nur noch Zeitband und Icon-Kachel. Live geprüft.
 - [ ] **OLAS14_B2_02** — Fassungen an kurzen Schnüren, Birnen mit Spitze, das Produkt hat Hakenclip direkt am Kabel
-  und runde S14-Tropfen. Im Sticky-Block eingesetzt (Leons Vorgabe); zurück in einem Schritt, falls es nicht bleibt.
-- [ ] **Metafeld `fernbedienung` leer trotz Lieferumfang** — hp-ol-st38-25, -30, -50, hp-ol-s11-50, hp-dgm-002 (bei
-  DGM-002 fraglich, die Bilder zeigen eine Batteriebox). Bei RSP am 09.11. gesetzt.
+  und runde S14-Tropfen. Leon 10.11.: bleibt im Sticky-Block, die Asset-Instanz ersetzt die Datei später per
+  `fileUpdate` unter derselben ID, am Block ändert sich nichts. Offen nur: nach dem Tausch einmal live ansehen.
+- [x] **Metafeld `fernbedienung` an OL-ST38 und OL-S11** (2026-11-10) — hp-ol-st38-25, -30, -50 und hp-ol-s11-50
+  gesetzt (Lieferumfang), RSP am 09.11. Live: Technik „Fernbedienung Ja“, bei hp-ol-st38-50 dritte Icon-Kachel.
+- [ ] **`fernbedienung` an hp-dgm-002** — Lieferumfang nennt eine Fernbedienung, die Bilder zeigen eine Batteriebox.
+  Leon klärt mit Shenzhen, bis dahin leer.
 - [x] **Welle 1 Long-Tail mit B2** (2026-11-08) — Leon: RSP, WBF und DGM-002 auf Standard, mit Rückweg als Test.
   DGM-002 ist Standard (B1, B2, R1, Zeitband, Icon-Grid). RSP und WBF sind zurück auf Long-Tail: kein
   `timer_dauer_h`, bei WBF auch kein Icon-Grid und kein R1. B2-Blöcke `rsp-b2` und `wbf-b2` sind vorbereitet und in

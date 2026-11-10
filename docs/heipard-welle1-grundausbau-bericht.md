@@ -2,7 +2,8 @@
 
 Stand 2026-11-07, Nachtrag 2026-11-08 (Abschnitt 7: RSP, WBF und DGM-002 auf Standard, Auftrag
 `heipard-theme-auftrag-longtail-standard.md`), Nachtrag 2026-11-09 (Abschnitt 8: Nachzügler-Bilder, B1-Texte,
-RSP-Fernbedienung). Auftrag: `heipard-theme-auftrag-welle1-grundausbau.md`, Fassung vom 07.11. (ersetzt die
+RSP-Fernbedienung), Nachtrag 2026-11-10 (Abschnitt 9: Set-Überschrift DGM-002, Kollektionsbilder OL-S11/OLS-S11,
+Fernbedienung an OL-ST38 und OL-S11). Auftrag: `heipard-theme-auftrag-welle1-grundausbau.md`, Fassung vom 07.11. (ersetzt die
 Fassungen vom 03.11. und 06.11.). Quellen im Asset-Ordner: `reports/welle1_bildzuordnung.csv` (einzige Quelle für
 Bilder), `reports/auftrag_16.md`, `reports/metafelder/welle1_metafelder.csv` (1194 Zeilen),
 `reports/metafelder/fragen_<FAMILIE>.md` bzw. `fragen_<FAMILIE>_welle1.md` (151 Fragen), `reports/auftrag_15.md`
@@ -21,6 +22,9 @@ Dieser Bericht beschreibt den Stand nach dem Durchlauf vom 07.11. mit den echten
 - **Bilder in den Sets:** seit 09.11. zeigen 46 Sets ein echtes B1 (dazu OL-S11 und OLS-S11 mit `OLS11_B1_01`),
   kein Set zeigt mehr einen KAT-Platzhalter. STT, SOLM und hp-dgm-048 zeigen die Ersatzfläche. 36 Standard-Sets
   zeigen ein B2 (34 am 07.11., DGM-002 am 08.11., OL-ST38 am 09.11.).
+- **Nachtrag 10.11.:** Set-Überschrift DGM-002 jetzt „Lichtspiralen für Weg und Beet“ (ohne Timer), Kollektionsbilder
+  „Serie OL-S11“ und „Serie OLS-S11“ mit `OLS11_B1_01`, `fernbedienung` an hp-ol-st38-25, -30, -50 und hp-ol-s11-50.
+  Einzelheiten in Abschnitt 9.
 - **Nachtrag 09.11.:** Nachzügler-Bilder eingesetzt (`OLS11_B1_01`, `OLST38_B2_04`, dazu aus Welle 2 `DGM_B1_01`,
   `VIT_B2_06`, `OLAS14_B2_02` in den Sticky-Blöcken), B1-Texte von DGM, DGM-002 und OL-S11 an die Motive angepasst,
   `fernbedienung` an RSP. Einzelheiten in Abschnitt 8.
@@ -32,10 +36,10 @@ Dieser Bericht beschreibt den Stand nach dem Durchlauf vom 07.11. mit den echten
 - **Metafelder:** heute 169 geschrieben (168 Bild-Metafelder an 90 Produkten, 1 Lichtfarbe). Die Blattwerte stehen
   seit dem 03.11. (350 geschrieben, 663 waren schon richtig), das Blatt ist seitdem unverändert.
 - **Fragen:** 149, verknüpft an 93 Produkten (313 Verknüpfungen), unverändert seit dem 03.11.
-- **Kollektionen:** alle 48 Familien haben eine, 44 jetzt mit Kollektionsbild.
+- **Kollektionen:** alle 48 Familien haben eine, 46 mit Kollektionsbild (44 am 07.11., OL-S11 und OLS-S11 am 10.11.).
 - **Live geprüft:** siehe Abschnitt 6.
-- **Ausstehend:** Identität hp-dgm-048; Kollektionsbilder „Serie OL-S11“ und „Serie OLS-S11“ (Abschnitt 8). Die
-  Bilder vom 08.11. sind seit dem 09.11. alle eingesetzt.
+- **Ausstehend:** Identität hp-dgm-048; `fernbedienung` an hp-dgm-002 (Klärung mit Shenzhen). Die Bilder vom 08.11.
+  sind seit dem 09.11. alle eingesetzt, die Kollektionsbilder seit dem 10.11.
 
 ## 1. Metafelder
 
@@ -95,7 +99,7 @@ Alle 48 Familien haben ihre Kollektion `familie-<code>` (46 am 03.11. angelegt w
 
 - **Kollektionsbild an 44:** das B1 der Familie aus der Bildzuordnung, Alt-Text wie in Files. Geteilte Bilder:
   OL, OLA-G40, OLH-G40 `OLG40_B1_01`; TPM `CTL_B1_01`; UCP `UCT_B1_01`; VAM `VLM_B1_01`; WBF `WWF_B1_01`.
-- **Ohne Bild:** OL-S11, OLS-S11 (`OLS11_B1_01` ausstehend), STT, SOLM.
+- **Ohne Bild:** STT, SOLM. OL-S11 und OLS-S11 zeigen seit dem 10.11. `OLS11_B1_01` (Abschnitt 9).
 - **Geteilte Kollektionen:** `familie-ctl` enthält auch die vier Welle-2-CTL und zeigt jetzt `CTL_B1_01`;
   `familie-dgm` enthält Stern, Spiralen und Geschenkboxen und zeigt die Spiralen (`DGM002_B1_01`).
 - Shopify legt das Kollektionsbild als eigene Kopie an, nicht als Verweis auf die Datei in Files. Ein späterer
@@ -403,7 +407,7 @@ Keine Liquid-Fehler, Texte wörtlich gefunden, Screenshots von B2 und Sticky in 
 - **DGM-002, Timer:** Im B1 steht der Timer nicht mehr. In der Feature-Sektion steht er aber weiter dreimal: in der
   Set-Überschrift „Licht mit eingebautem Timer“ (Set `dgm-w1`, Feld `heading`), im Zeitband und in der Icon-Kachel.
   Die Überschrift gehört zum Set, nicht zu einem Block, deshalb unverändert. Ein Vorschlag zum Motiv wäre
-  „Lichtspiralen für Weg und Beet“.
+  „Lichtspiralen für Weg und Beet“. *Erledigt 10.11., Abschnitt 9.*
 - **DGM-002, Lichtfarbe:** Die Technischen Details zeigen „Multicolor“ aus dem Shop-Metafeld. Blatt und Faktensatz
   bestätigen keine Lichtfarbe, die Blocktexte nennen keine.
 - **DGM_B1_01:** Im Bild sind sechs Sterne, der Alt-Text sagt „Fünf“ (Asset-Bericht 17, offener Punkt 3). Der
@@ -412,9 +416,11 @@ Keine Liquid-Fehler, Texte wörtlich gefunden, Screenshots von B2 und Sticky in 
   erscheint erst, wenn RSP auf Standard geht. Live sichtbar ist das Feld jetzt in den Technischen Details.
 - **Gleiche Lücke wie bei RSP, nicht geändert:** Die Fernbedienung steht im Blatt im Lieferumfang, das Metafeld
   `fernbedienung` ist leer bei hp-ol-st38-25, -30, -50, hp-ol-s11-50 und hp-dgm-002. Bei hp-dgm-002 zeigen die Bilder
-  laut Faktensatz eine Batteriebox mit Schalter, die Fernbedienung ist dort also fraglich.
+  laut Faktensatz eine Batteriebox mit Schalter, die Fernbedienung ist dort also fraglich. *10.11.: an den vier
+  OL-ST38/OL-S11 gesetzt, hp-dgm-002 bleibt offen (Abschnitt 9).*
 - **Kollektionsbilder:** „Serie OL-S11“ und „Serie OLS-S11“ haben noch kein Bild. Nach der Regel aus diesem Bericht
   bekäme jede ein B1 (`OLS11_B1_01`). Nicht gesetzt, weil der Nachtrag nur Blöcke und Bild-Metafelder umfasst.
+  *Erledigt 10.11., Abschnitt 9.*
 - **VIT:** `feature_b2` bleibt leer. `VIT_B2_06` ist das Bild des zweiten B2 (Sticky), nicht des Blocks `vit-b2`
   (`VIT_B2_01`). Die Welle-2-Produkte tragen sonst keine Bild-Metafelder; hp-dgm-001 hat jetzt `feature_b1`, weil die
   Bildzuordnung es so führt. Ebenso ohne `feature_b2` bleibt OL-A S14 (`OLAS14_B2_02` ist dort das Sticky-Bild). Der
@@ -435,6 +441,58 @@ Keine Liquid-Fehler, Texte wörtlich gefunden, Screenshots von B2 und Sticky in 
 | VIT 864L | https://heipard.myshopify.com/products/hp-vit-864l-eu-1 |
 | OL-A S14 | https://heipard.myshopify.com/products/hp-ola-s14-15-eu |
 | RSP | https://heipard.myshopify.com/products/hp-rsp-180 |
+
+## 9. Nachtrag 10.11.: Set-Überschrift DGM-002, Kollektionsbilder, Fernbedienung
+
+Leons Freigabe vom 10.11. zu drei Hinweisen aus Abschnitt 8. Shop vor dem Schreiben geprüft (`get-shop-info` =
+HeiPard), alles in einem Schritt um 00:56 Uhr geschrieben, ohne Fehler. Nicht angefasst: Medien, Position 1,
+`galerie_medien`, Produktstatus, Theme-Code, Blöcke.
+
+| Was | Vorher | Nachher |
+|---|---|---|
+| Set `dgm-w1` (hp-dgm-002), Feld `heading` | „Licht mit eingebautem Timer“ | „Lichtspiralen für Weg und Beet“, Kicker „LED-Deko“ unverändert |
+| Kollektion „Serie OL-S11“ (`familie-ol-s11`) | ohne Bild | `OLS11_B1_01`, Alt-Text wie in Files, 2800 x 1200 |
+| Kollektion „Serie OLS-S11“ (`familie-ols-s11`) | ohne Bild | ebenso; Shopify legt dafür eine zweite Kopie mit Namenszusatz an |
+| `fernbedienung` an hp-ol-st38-25, -30, -50 und hp-ol-s11-50 | leer | true; Lieferumfang „1 × Fernbedienung“ bei allen vier |
+
+Damit führen alle vier OL-ST38, alle vier OL-S11 und OLS-S11 das Feld. hp-dgm-002 bleibt ohne `fernbedienung`, bis
+die Frage mit Shenzhen geklärt ist.
+
+`collectionUpdate` mit dem Argument `input` lehnt die Schnittstelle (Version 2026-10) jetzt ab, ohne etwas zu
+schreiben. Geschrieben über das neue Argument `collection` mit denselben Feldern (`id`, `image`). Für spätere
+Bildtausche an Kollektionen gilt dasselbe.
+
+**Live nachher** (00:57 Uhr, langsam geladen, alle Seiten 200, keine Liquid-Fehler)
+
+| Seite | Ergebnis |
+|---|---|
+| hp-dgm-002 | Überschrift „Lichtspiralen für Weg und Beet“, Blockfolge unverändert (B1, B2, R1, Zeitband, Icon-Grid). Den Timer nennen oben nur noch das Zeitband (Kicker und Titel) und die Kachel „Timer“, in der Daten-Zone die Technik-Zeile „Timer 6 Stunden“ und eine Frage. Auf dem Screenshot bricht die Überschrift sauber in zwei Zeilen um. |
+| hp-ol-st38-25, -30 | Technische Details „Fernbedienung Ja“. Icon-Grid unverändert (Dimmbar, Koppelbar, Leuchtmodi): Die Fernbedienung steht in der Reihenfolge an fünfter Stelle, das Grid zeigt höchstens drei Kacheln. |
+| hp-ol-st38-50 | Technische Details „Fernbedienung Ja“, Icon-Grid jetzt mit drei Kacheln: Leuchtmodi, Fernbedienung, Schutzart (vorher zwei). |
+| hp-ol-s11-50 | Technische Details „Fernbedienung Ja“, Icon-Grid unverändert (Dimmbar, Koppelbar, Leuchtmodi). |
+| Kollektionen `familie-ol-s11`, `familie-ols-s11` | Das Bild steht im Vorschaubild für geteilte Links (`og:image`). Im Kopf der Kollektionsseite erscheint es nicht, weil die Vorlage `collection.json` `show_collection_image` ausgeschaltet hat; das gilt für alle Kollektionen. |
+
+**Hinweise**
+
+- **Kollektionsbilder sind Kopien** (siehe Abschnitt 4). Ersetzt die Asset-Instanz `OLS11_B1_01` später in Files,
+  bleiben beide Kollektionen beim alten Bild und brauchen einen neuen `collectionUpdate`.
+- **OLAS14_B2_02** bleibt im Sticky-Block (Leon 10.11.). Die Asset-Instanz ersetzt die Datei später per
+  `fileUpdate`. Der Block verweist auf die Datei, nicht auf eine Kopie, und zeigt danach das neue Bild ohne
+  Änderung am Block. Danach einmal live ansehen.
+- **Kachel Fernbedienung** hat keinen Kurzwert unter dem Label, so ist die Kachel im Theme angelegt (anders als
+  Leuchtmodi „3 Modi“ oder Schutzart „IP45“).
+
+**URLs** (Shop mit Passwort, alle am 10.11. live geprüft)
+
+| Seite | URL |
+|---|---|
+| DGM-002 | https://heipard.myshopify.com/products/hp-dgm-002 |
+| OL-ST38 25 m | https://heipard.myshopify.com/products/hp-ol-st38-25 |
+| OL-ST38 30 m | https://heipard.myshopify.com/products/hp-ol-st38-30 |
+| OL-ST38 50 m | https://heipard.myshopify.com/products/hp-ol-st38-50 |
+| OL-S11 50 m | https://heipard.myshopify.com/products/hp-ol-s11-50 |
+| Serie OL-S11 | https://heipard.myshopify.com/collections/familie-ol-s11 |
+| Serie OLS-S11 | https://heipard.myshopify.com/collections/familie-ols-s11 |
 
 ## Theme-Editor-Hinweise
 
@@ -475,8 +533,8 @@ keinen Hinweis. Leere Blöcke bleiben leer, die Werte kommen mit der Antwort von
 ## Wenn die ausstehenden Bilder kommen
 
 Je Bild drei Stellen: Block-Bild im Set (`<code>-b1` bzw. `<code>-b2`), Produkt-Metafeld `feature_b1`/`feature_b2`
-und bei B1 das Kollektionsbild. Stand 09.11.: OL-S11, OLS-S11 und OL-ST38 sind erledigt bis auf die zwei
-Kollektionsbilder. OL-S11 hat weiter kein B2 (`ol-s11-b2` bleibt ohne Bild außerhalb des Sets). Bei hp-dgm-048
+und bei B1 das Kollektionsbild. Stand 10.11.: OL-S11, OLS-S11 und OL-ST38 sind an allen drei Stellen erledigt
+(Kollektionsbilder am 10.11.). OL-S11 hat weiter kein B2 (`ol-s11-b2` bleibt ohne Bild außerhalb des Sets). Bei hp-dgm-048
 nach der Klärung entscheiden, ob es zurück ins Set `dgm-w1` gehört.
 
 ## Produkt-URLs zum Durchsehen

@@ -48,8 +48,9 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   hp-ols-s17-16-eu. **Nachtrag 08.11.:** DGM-002 auf Standard mit B2 und Zeitband; RSP und WBF nach dem Test
   zurück auf Long-Tail (kein Timer-Wert), ihre B2-Blöcke sind vorbereitet. **Nachtrag 09.11.:** Nachzügler-Bilder
   eingesetzt (OL-S11 und OLS-S11 B1, OL-ST38 B2, DGM B1, Sticky VIT und OLAS14), drei B1-Texte an die Motive,
-  `fernbedienung` an RSP. Offen: hp-dgm-048, Kollektionsbilder OL-S11/OLS-S11. Bericht
-  `heipard-welle1-grundausbau-bericht.md`.
+  `fernbedienung` an RSP. **Nachtrag 10.11.:** Set-Überschrift DGM-002 „Lichtspiralen für Weg und Beet“,
+  Kollektionsbilder OL-S11/OLS-S11, `fernbedienung` an hp-ol-st38-25, -30, -50 und hp-ol-s11-50. Offen:
+  hp-dgm-048, `fernbedienung` hp-dgm-002 (Shenzhen). Bericht `heipard-welle1-grundausbau-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
