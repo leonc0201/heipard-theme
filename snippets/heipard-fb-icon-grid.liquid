@@ -1,10 +1,13 @@
 {%- comment -%}
   B4 Icon-Grid aus Metafeldern: bis zu vier Kacheln mit Icon, Label und Kurzwert.
 
-  Kachelregel (Auftrag Feature-Sektion dichter, 10.11.2026): Ohne Vorgabe zeigt der
-  Block die ersten vier Kacheln, für die das Produkt Daten hat, in dieser Reihenfolge:
-    lichtfarbe, lichtpunkte, timer, schutzart, stromquelle, fernbedienung, modi,
-    dimmbar, koppelbar.
+  Kachelregel (Auftrag Feature-Sektion dichter, 10.11.2026; Reihenfolge Leon 10.11.2026):
+  Ohne Vorgabe zeigt der Block die ersten vier Kacheln, für die das Produkt Daten hat,
+  in dieser Reihenfolge:
+    timer, dimmbar, koppelbar, modi, fernbedienung, lichtpunkte, schutzart,
+    lichtfarbe, stromquelle.
+  Die Unterscheidungsmerkmale stehen vorn; Schutzart, Lichtfarbe und Stromquelle zeigt
+  auch die Kaufbox, sie füllen nur auf.
   Kacheln ohne Wert werden übersprungen, ebenso Platzhalter (Wert beginnt mit "[TBD").
   Über das JSON-Feld des Blocks lässt sich die Auswahl festlegen (heute nirgends genutzt):
     { "kacheln": ["timer", "dimmbar", "koppelbar"] }
@@ -19,7 +22,7 @@
   assign vmf = current.metafields.heipard
   assign wanted = data.kacheln
   if wanted == blank
-    assign wanted = 'lichtfarbe,lichtpunkte,timer,schutzart,stromquelle,fernbedienung,modi,dimmbar,koppelbar' | split: ','
+    assign wanted = 'timer,dimmbar,koppelbar,modi,fernbedienung,lichtpunkte,schutzart,lichtfarbe,stromquelle' | split: ','
   endif
   assign max_tiles = 4
   assign shown = 0

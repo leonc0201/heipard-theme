@@ -33,7 +33,7 @@ Legende: ● Kernblock, ○ optional, – passt nicht.
 | B1 | Full-Width-Bild | Bild über volle Breite, Overlay mit Kicker und Headline, Freiraum unten links | Basis | |
 | B2 | Split | Bild und Text nebeneinander, Seiten wechseln sich ab. Option sticky: Bild bleibt stehen, 3 bis 4 Textpunkte ziehen vorbei | Basis | |
 | B3 | Video | 16:9-Loop, autoplay, stumm, ohne Bedienelemente, mit Poster-Fallback | Video | laut |
-| B4 | Icon-Grid | Bis zu vier Kacheln mit Icon, Label und Kurzwert, feste Reihenfolge: Lichtfarbe, Lichtpunkte, Timer, Schutzart, Stromquelle, Fernbedienung, Leuchtmodi, Dimmbar, Koppelbar; ohne Wert entfällt die Kachel (10.11.2026) | CSS | |
+| B4 | Icon-Grid | Bis zu vier Kacheln mit Icon, Label und Kurzwert, feste Reihenfolge: Timer, Dimmbar, Koppelbar, Leuchtmodi, Fernbedienung, Lichtpunkte, Schutzart, Lichtfarbe, Stromquelle; ohne Wert entfällt die Kachel (10.11.2026, Reihenfolge nach Leon) | CSS | |
 
 ### Redaktionell
 | ID | Block | Kurzbeschreibung | Aufwand | Laut |
