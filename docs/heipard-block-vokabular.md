@@ -13,7 +13,7 @@ Rhythmus-Regeln, gelten immer:
 - Breit und schmal wechseln sich ab.
 - Pro Seite höchstens ein lauter Block (Video, Schieber, Modus-Umschalter, Farbwechsel). Standard und Long-Tail haben keinen.
 - Erster Block ist immer das Full-Width-Bild. Letzter Block der Feature-Sektion ist das Icon-Grid oder reiner Text.
-- Long-Tail: drei Blöcke, fertig.
+- Long-Tail: drei Blöcke, mit B2 vier (seit 10.11.2026 nur, wenn `feature_b2` gesetzt ist).
 
 Drei Grundregeln aus dem Markenbrief bleiben unberührt: Bilder sind textfrei, Overlays rendert das Theme. Keine erfundenen Fakten. Position 1 der Galerie ist ein echtes Produktfoto.
 
@@ -110,10 +110,10 @@ B1 Full-Width → B2 Split → R1 Text → D1 Kettenplan oder D3 Zeitband → B4
 
 Daten-Zone danach: D4 Serienleiter, D5 Nachweise, P3 Lieferumfang, D7 Fragen.
 
-**Long-Tail (3 Blöcke)**
+**Long-Tail (3 Blöcke, mit B2 4)**
 Für Einzel-SKUs, Auslaufmodelle und alles, wofür kein Basisbild generiert wird.
 
-B1 Full-Width (Familien- oder Kategoriebild) → R1 Text → D6 Kennzahl oder P3 Lieferumfang
+B1 Full-Width (Familien- oder Kategoriebild) → B2 Split (nur wenn das Produkt-Metafeld `feature_b2` gesetzt ist, 10.11.2026) → R1 Text → D6 Kennzahl oder P3 Lieferumfang
 
 Daten-Zone danach: D4 Serienleiter, D5 Nachweise, D7 Fragen.
 

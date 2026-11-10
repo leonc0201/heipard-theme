@@ -137,6 +137,7 @@
         "missing": "Block „{{ block }}“ wird nicht angezeigt. Es fehlt: {{ fields }}",
         "loud": "Block „{{ block }}“ wird leise gezeigt (Video als Standbild, Schieber und Farbwechsel als Bild, Steuerung ohne Leuchtmodi). Pro Feature-Set ist ein lauter Block erlaubt, in Standard und Long-Tail keiner.",
         "limit": "Block „{{ block }}“ wird nicht angezeigt. Die Dramaturgie erlaubt höchstens {{ max }} Blöcke.",
+        "longtail_b2": "Block „{{ block }}“ wird nicht angezeigt. Long-Tail zeigt ein B2 nur, wenn das Metafeld heipard.feature_b2 gesetzt ist.",
         "no_b1": "Dieses Feature-Set hat kein Full-Width-Bild. Der erste Block sollte immer B1 sein.",
         "repeat": "Zwei Blöcke vom Typ „{{ block }}“ folgen direkt aufeinander.",
         "template": "Dieses Produkt hat kein eigenes Feature-Set. Es greift die Vorlage „{{ name }}“, die nur die Daten-Blöcke aus den Metafeldern füllt."

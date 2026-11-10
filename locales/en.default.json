@@ -137,6 +137,7 @@
         "missing": "Block “{{ block }}” is not shown. Missing: {{ fields }}",
         "loud": "Block “{{ block }}” is shown quietly (video as a still image, slider and colour switch as an image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
         "limit": "Block “{{ block }}” is not shown. The dramaturgy allows at most {{ max }} blocks.",
+        "longtail_b2": "Block “{{ block }}” is not shown. Long-tail shows a B2 only when the metafield heipard.feature_b2 is set.",
         "no_b1": "This feature set has no full-width image. The first block should always be B1.",
         "repeat": "Two blocks of type “{{ block }}” follow each other directly.",
         "template": "This product has no feature set of its own. The template “{{ name }}” is used, which only fills the data blocks from metafields."
