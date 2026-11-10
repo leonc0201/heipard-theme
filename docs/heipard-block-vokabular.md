@@ -38,7 +38,7 @@ Legende: ● Kernblock, ○ optional, – passt nicht.
 ### Redaktionell
 | ID | Block | Kurzbeschreibung | Aufwand | Laut |
 |---|---|---|---|---|
-| R1 | Text schmal | Nur Text im 6-Spalten-Maß, Kicker und zwei kurze Absätze | CSS | |
+| R1 | Text schmal | Nur Text im 6-Spalten-Maß, Kicker und zwei kurze Absätze. Optional mit Bild (Block-Bild, sonst Metafeld `feature_r1`): dann Bild-Text-Zeile wie B2, Bild auf der Gegenseite der Zeile davor (10.11.2026) | CSS | |
 | R2 | Zäsur | Ein Satz in großer Fraunces über volle Breite, Kapitelbruch | CSS | |
 
 ### Produkt (aus Material)

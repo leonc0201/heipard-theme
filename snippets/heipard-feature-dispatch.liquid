@@ -29,7 +29,10 @@
   JSON-Feld { "sonst": "<typ>" }, wird dann dieser Typ versucht (z. B. Kettenplan,
   sonst Zeitband).
 
-  Parameter: blk, product, index, allow_loud, uid
+  R1 mit Bild gibt vor dem Markup <!--fb-split--> aus: die Sektion behandelt den Block
+  dann wie eine Bild-Text-Zeile (kein schmales Paar, zählt für den Seitenwechsel).
+
+  Parameter: blk, product, index, allow_loud, uid, split_side ('left' | 'right', für R1 mit Bild)
 {%- endcomment -%}
 {%- liquid
   assign type = blk.layout.value | default: 'media_text'
@@ -74,7 +77,20 @@
           endif
         -%}
       {%- when 'text' -%}
-        {%- render 'heipard-fb-text', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value -%}
+        {%- liquid
+          # R1 mit Bild (Block-Bild, sonst Produkt-Metafeld feature_r1): Bild-Text-Zeile wie B2,
+          # Seite kommt aus der Sektion (split_side). Ohne Bild schmaler Text wie bisher.
+          assign r1_img = blk.image.value
+          if r1_img == blank
+            assign r1_img = product.metafields.heipard.feature_r1.value
+          endif
+          if r1_img != blank
+            echo '<!--fb-split-->'
+            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: r1_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'r1'
+          else
+            render 'heipard-fb-text', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value
+          endif
+        -%}
       {%- when 'kettenplan' -%}
         {%- render 'heipard-fb-kettenplan', product: product, variant: blk.variant.value, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, label: blk_label -%}
       {%- when 'zeitband' -%}

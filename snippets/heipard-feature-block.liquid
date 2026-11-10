@@ -19,6 +19,8 @@
     variant      'sticky' (nur media_text): ab Desktop bleibt das Bild stehen, die
                  Textpunkte ziehen vorbei. Jede Zeile im Text ist ein Punkt,
                  optional mit Titel davor: "Titel | Text".
+                 'r1' (nur media_text): R1-Text mit Bild aus der Block-Weiche, Klasse
+                 heipard-feature__row--r1, sonst wie B2.
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -105,7 +107,7 @@
       assign is_sticky = true
     endif
   -%}
-  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}{% if is_sticky %} heipard-feature__row--sticky{% endif %}">
+  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}{% if is_sticky %} heipard-feature__row--sticky{% endif %}{% if variant == 'r1' %} heipard-feature__row--r1{% endif %}">
     <div class="heipard-feature__media">{{ media_html }}</div>
     <div class="heipard-feature__text">
       {%- if is_sticky -%}

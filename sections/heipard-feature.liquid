@@ -26,6 +26,9 @@
     - Long-Tail: B1 -> B2 -> R1 -> D6 oder P3. Ein B2 (media_text) erscheint dort nur,
       wenn das Produkt-Metafeld heipard.feature_b2 gesetzt ist; sonst wird es
       übersprungen (Hinweis im Editor). Auftrag Feature-Sektion dichter, 10.11.2026.
+    - R1 mit Bild (Bild am Block, sonst Produkt-Metafeld heipard.feature_r1) wird als
+      Bild-Text-Zeile wie B2 gerendert, das Bild auf der anderen Seite als in der
+      Zeile davor; ohne Bild bleibt R1 schmaler Text.
     - Blöcke ohne Inhalt oder ohne Metafeld-Daten werden übersprungen.
     - Schmale Blöcke (R1 Text, D6 Kennzahl, D2 Kelvin): folgen zwei aufeinander,
       stehen sie ab Desktop nebeneinander (heipard-feature__pair).
@@ -106,6 +109,7 @@
     assign loud_count = 0
     assign mt_index = 0
     assign prev_type = ''
+    assign last_reverse = false
     assign has_b2_meta = false
     if product.metafields.heipard.feature_b2.value != blank
       assign has_b2_meta = true
@@ -138,9 +142,15 @@
           endif
           continue
         endif
+
+        # R1 mit Bild: Bild auf die andere Seite als in der Bild-Text-Zeile davor.
+        assign split_side = 'right'
+        if last_reverse
+          assign split_side = 'left'
+        endif
       -%}
       {%- capture out -%}
-        {%- render 'heipard-feature-dispatch', blk: blk, product: product, index: next_mt, allow_loud: allow_loud, uid: uid -%}
+        {%- render 'heipard-feature-dispatch', blk: blk, product: product, index: next_mt, allow_loud: allow_loud, uid: uid, split_side: split_side -%}
       {%- endcapture -%}
       {%- liquid
         assign parts = out | split: '<!--fb-note-->'
@@ -190,16 +200,25 @@
           assign loud_count = loud_count | plus: 1
           assign html = html | remove: '<!--fb-loud-->'
         endif
+        assign is_split = false
+        if html contains '<!--fb-split-->'
+          assign is_split = true
+          assign html = html | remove: '<!--fb-split-->'
+        endif
         if type == prev_type
           assign note = 'heipard.blocks.editor.repeat' | t: block: type
           assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
         endif
-        if type == 'media_text'
+        if type == 'media_text' or is_split
           assign mt_index = next_mt
+          assign last_reverse = false
+          if html contains 'heipard-feature__row--reverse'
+            assign last_reverse = true
+          endif
         endif
         assign prev_type = type
         assign count = count | plus: 1
-        if narrow_types contains type
+        if narrow_types contains type and is_split == false
           if narrow_pending == blank
             assign narrow_pending = html
           else
