@@ -54,7 +54,7 @@ Legende: ● Kernblock, ○ optional, – passt nicht.
 | D1 | Kettenplan | Zuleitung, Kettenlänge und Birnenabstand als proportionale Linie mit Maßen. Variante Flächenplan für Vorhang, Eiszapfen und Netz (Breite mal Höhe). Variante Koppelplan: bis zu vier Ketten als Gesamtlänge | CSS | |
 | D2 | Kelvin-Skala | Lichtfarbe auf einer Skala von Kerze (1800 K) bis Tageslicht (6500 K), Produktwert markiert | CSS | |
 | D3 | Zeitband | 24-Stunden-Band. Variante Timer: 6 Stunden an, 18 aus. Variante Solar: tagsüber laden, abends leuchten | CSS | |
-| D4 | Serienleiter | Längenvarianten als Nachbarmodelle mit Link, aktuelles Modell markiert | CSS | |
+| D4 | Serienleiter | Längenvarianten als Nachbarmodelle mit Link, aktuelles Modell markiert. Nur gleiche Bauart: gleiche `familie` und keine abweichende Stromquelle (10.11.2026) | CSS | |
 | D5 | Nachweise | IP-Schutzart erklärt, Niederspannung, CE. Aufklappbar | CSS | |
 | D6 | Große Kennzahl | Eine Zahl in Terracotta mit Erklärung: 30 m, 2200 K, 50 Birnen, 8 Stunden Leuchtzeit | CSS | |
 | D7 | Fragen zum Produkt | 3 bis 4 produktspezifische Fragen, Antworten aus Faktenliste | CSS | |

@@ -11,6 +11,11 @@
     Familie    Sonst alle aktiven Produkte der Familie (Produkt-Metafeld heipard.familie,
                Smart Collection "familie-<code>"), sortiert nach Gesamtlänge, sonst
                beleuchteter Länge. Das aktuelle Modell ist markiert.
+               Nur gleiche Bauart (Auftrag Feature-Sektion dichter, 10.11.2026): Ein
+               Nachbarmodell zählt nur, wenn sein Metafeld familie genau gleich ist und
+               seine Stromquelle nicht abweicht (Netz, Batterie und Solar sind eigene
+               Bauarten; fehlt die Stromquelle an einer Seite, entscheidet die Familie).
+               So steht z. B. hp-dgm-048 (Batterie) nicht bei DGM-001/-002 (Netz).
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -44,6 +49,8 @@
   endif
 
   assign familie = product.metafields.heipard.familie.value
+  assign own_strom = product.metafields.heipard.stromquelle.value
+  assign member_ids = ','
   if mode == blank and familie != blank
     assign fam_handle = familie | handleize | prepend: 'familie-'
     assign fam = collections[fam_handle]
@@ -51,8 +58,16 @@
     assign max_len = 0
     for p in fam.products limit: 24
       if p.id != product.id
+        if p.metafields.heipard.familie.value != familie
+          continue
+        endif
+        assign p_strom = p.metafields.heipard.stromquelle.value
+        if own_strom != blank and p_strom != blank and p_strom != own_strom
+          continue
+        endif
         assign others = others | plus: 1
       endif
+      assign member_ids = member_ids | append: p.id | append: ','
       assign p_len = p.metafields.heipard.gesamtlaenge_m.value | default: p.metafields.heipard.beleuchtete_laenge_m.value
       if p_len != blank and p_len > max_len
         assign max_len = p_len
@@ -97,6 +112,10 @@
     {%- else -%}
       {%- for p in fam.products limit: 24 -%}
         {%- liquid
+          assign p_key = ',' | append: p.id | append: ','
+          unless member_ids contains p_key
+            continue
+          endunless
           assign p_len = p.metafields.heipard.gesamtlaenge_m.value | default: p.metafields.heipard.beleuchtete_laenge_m.value
           assign p_points = p.metafields.heipard.led_anzahl.value
           assign is_current = false
