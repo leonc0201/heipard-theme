@@ -568,3 +568,7 @@
 .heipard-gpsr__address a:focus-visible {
   color: var(--primary);
 }
+
+/* Ungerade Kachelzahl: die letzte Kachel nimmt die volle Breite (Kacheln ohne Wert entfallen). */
+.heipard-specs__item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.heipard-specs[hidden] { display: none; }

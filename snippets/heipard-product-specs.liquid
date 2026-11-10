@@ -1,12 +1,15 @@
 {% comment %}
   HeiPard Spec-Kacheln (2x2) aus Metafeldern (Namespace heipard).
   Laenge / Stromquelle / Lichtfarbe / Schutzart, je Icon + Label + Wert.
-  Fehlt ein Wert, wird sichtbar [TBD] angezeigt (Daten kommen im Produkt-Import).
+  Eine Kachel erscheint nur, wenn ihr Wert gesetzt ist und kein Platzhalter ist
+  (Wert beginnt mit "[TBD"). Fehlende Werte stehen im Bericht als Nachfrageliste,
+  nicht im Shop (Auftrag Feature-Sektion dichter, 10.11.2026).
   Jedes Feld zuerst an der gewaehlten Variante (Varianten-Metafeld), sonst am Produkt.
   Laenge: beleuchtete Laenge vor Gesamtlaenge; gibt es nur hoehe_m (Baeume, Kegel,
   Birken), heisst die Kachel "Hoehe". Lichtfarbe: zuerst die Variantenoption
   "Lichtfarbe", sonst das Metafeld. data-heipard-vswap: heipard-variant.js tauscht
-  die Kacheln beim Variantenwechsel aus.
+  die Kacheln beim Variantenwechsel aus; die Liste steht deshalb immer im Markup,
+  ohne Kachel mit dem Attribut hidden.
   Parameter: product
 {% endcomment %}
 {%- liquid
@@ -29,42 +32,81 @@
   endfor
   assign farbe = farbe | default: vm.lichtfarbe.value | default: m.lichtfarbe.value
   assign ip = vm.ip_schutzart.value | default: m.ip_schutzart.value
+
+  assign laenge_txt = laenge | append: '' | strip
+  if laenge_txt contains '[TBD'
+    assign laenge = ''
+  endif
+  assign strom_txt = strom | append: '' | strip
+  if strom_txt == blank or strom_txt contains '[TBD'
+    assign strom = ''
+  endif
+  assign farbe_txt = farbe | append: '' | strip
+  if farbe_txt == blank or farbe_txt contains '[TBD'
+    assign farbe = ''
+  endif
+  assign ip_txt = ip | append: '' | strip
+  if ip_txt == blank or ip_txt contains '[TBD'
+    assign ip = ''
+  endif
+
+  assign tile_count = 0
+  if laenge != blank
+    assign tile_count = tile_count | plus: 1
+  endif
+  if strom != blank
+    assign tile_count = tile_count | plus: 1
+  endif
+  if farbe != blank
+    assign tile_count = tile_count | plus: 1
+  endif
+  if ip != blank
+    assign tile_count = tile_count | plus: 1
+  endif
 -%}
-<ul class="heipard-specs list-unstyled" data-heipard-vswap="specs">
+<ul class="heipard-specs list-unstyled" data-heipard-vswap="specs"{% if tile_count == 0 %} hidden{% endif %}>
+  {%- if laenge != blank -%}
   <li class="heipard-specs__item">
     <span class="heipard-specs__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></svg>
     </span>
     <span class="heipard-specs__text">
       <span class="heipard-specs__label">{{ laenge_key | t }}</span>
-      <span class="heipard-specs__value">{% if laenge != blank %}{% render 'heipard-num', value: laenge %} m{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
+      <span class="heipard-specs__value">{% render 'heipard-num', value: laenge %} m</span>
     </span>
   </li>
+  {%- endif -%}
+  {%- if strom != blank -%}
   <li class="heipard-specs__item">
     <span class="heipard-specs__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
     </span>
     <span class="heipard-specs__text">
       <span class="heipard-specs__label">{{ 'heipard.product.specs.power_source' | t }}</span>
-      <span class="heipard-specs__value">{% if strom != blank %}{{ strom | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
+      <span class="heipard-specs__value">{{ strom | escape }}</span>
     </span>
   </li>
+  {%- endif -%}
+  {%- if farbe != blank -%}
   <li class="heipard-specs__item">
     <span class="heipard-specs__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
     </span>
     <span class="heipard-specs__text">
       <span class="heipard-specs__label">{{ 'heipard.product.specs.light_color' | t }}</span>
-      <span class="heipard-specs__value">{% if farbe != blank %}{{ farbe | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
+      <span class="heipard-specs__value">{{ farbe | escape }}</span>
     </span>
   </li>
+  {%- endif -%}
+  {%- if ip != blank -%}
   <li class="heipard-specs__item">
     <span class="heipard-specs__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.5 3 6 4 8 4 0 6-2.5 11-8 13C6.5 17.5 4 12.5 4 6.5c2 0 4.5-1 8-4z"/><path d="M12 8v4"/><path d="M12 15h.01"/></svg>
     </span>
     <span class="heipard-specs__text">
       <span class="heipard-specs__label">{{ 'heipard.product.specs.protection_rating' | t }}</span>
-      <span class="heipard-specs__value">{% if ip != blank %}{{ ip | escape }}{% else %}<span class="heipard-tbd-inline">[TBD]</span>{% endif %}</span>
+      <span class="heipard-specs__value">{{ ip | escape }}</span>
     </span>
   </li>
+  {%- endif -%}
 </ul>
