@@ -128,7 +128,10 @@
           "other": "{{ count }} Modi"
         },
         "remote": "Fernbedienung",
-        "protection": "Schutzart"
+        "protection": "Schutzart",
+        "light_color": "Lichtfarbe",
+        "light_points": "Lichtpunkte",
+        "power_source": "Stromquelle"
       },
       "editor": {
         "missing": "Block „{{ block }}“ wird nicht angezeigt. Es fehlt: {{ fields }}",

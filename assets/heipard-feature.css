@@ -908,9 +908,12 @@
   width: 100%;
   margin-top: 0;
 }
+/* Vier Kacheln: auf dem Handy 2 x 2, ab Tablet in einer Reihe. */
+.heipard-feature__minis--4 { grid-template-columns: repeat(2, 1fr); gap: 2.4rem 1.6rem; }
 @media screen and (min-width: 750px) {
   .heipard-feature__minis--1 { grid-template-columns: 1fr; }
   .heipard-feature__minis--2 { grid-template-columns: repeat(2, 1fr); }
+  .heipard-feature__minis--4 { grid-template-columns: repeat(4, 1fr); gap: 2.4rem 2.4rem; }
 }
 
 /* --- Reduzierte Bewegung ----------------------------------------------- */

@@ -1,32 +1,64 @@
 {%- comment -%}
-  B4 Icon-Grid aus Metafeldern: bis zu drei Kacheln mit Icon, Label und Kurzwert.
+  B4 Icon-Grid aus Metafeldern: bis zu vier Kacheln mit Icon, Label und Kurzwert.
 
-  Ohne Vorgabe wählt der Block die ersten drei Kacheln, für die das Produkt Daten
-  hat, in dieser Reihenfolge: timer, dimmbar, koppelbar, modi, fernbedienung, schutzart.
-  Über das JSON-Feld des Blocks lässt sich die Auswahl festlegen:
+  Kachelregel (Auftrag Feature-Sektion dichter, 10.11.2026): Ohne Vorgabe zeigt der
+  Block die ersten vier Kacheln, für die das Produkt Daten hat, in dieser Reihenfolge:
+    lichtfarbe, lichtpunkte, timer, schutzart, stromquelle, fernbedienung, modi,
+    dimmbar, koppelbar.
+  Kacheln ohne Wert werden übersprungen, ebenso Platzhalter (Wert beginnt mit "[TBD").
+  Über das JSON-Feld des Blocks lässt sich die Auswahl festlegen (heute nirgends genutzt):
     { "kacheln": ["timer", "dimmbar", "koppelbar"] }
 
-  Jedes Feld zuerst an der gewählten Variante, sonst am Produkt.
+  Jedes Feld zuerst an der gewählten Variante, sonst am Produkt. Lichtfarbe zuerst aus
+  der Variantenoption „Lichtfarbe“ (wie Spec-Kacheln und Technik).
   Parameter: product, data, label
 {%- endcomment -%}
 {%- liquid
   assign mf = product.metafields.heipard
-  assign vmf = product.selected_or_first_available_variant.metafields.heipard
+  assign current = product.selected_or_first_available_variant
+  assign vmf = current.metafields.heipard
   assign wanted = data.kacheln
   if wanted == blank
-    assign wanted = 'timer,dimmbar,koppelbar,modi,fernbedienung,schutzart' | split: ','
+    assign wanted = 'lichtfarbe,lichtpunkte,timer,schutzart,stromquelle,fernbedienung,modi,dimmbar,koppelbar' | split: ','
   endif
+  assign max_tiles = 4
   assign shown = 0
 -%}
 {%- capture tiles -%}
   {%- for key in wanted -%}
     {%- liquid
-      if shown >= 3
+      if shown >= max_tiles
         break
       endif
       assign tile_label = ''
       assign tile_value = ''
+      assign tile_icon = key
+      assign timer_flag = false
+      assign conn_flag = false
       case key
+        when 'lichtfarbe'
+          assign color = ''
+          for opt in product.options_with_values
+            if opt.name == 'Lichtfarbe'
+              assign color = current.options[forloop.index0]
+            endif
+          endfor
+          assign color = color | default: vmf.lichtfarbe.value | default: mf.lichtfarbe.value
+          assign color_txt = color | append: '' | strip
+          if color_txt != blank
+            unless color_txt contains '[TBD'
+              assign tile_label = 'heipard.blocks.icon_grid.light_color' | t
+              assign tile_value = color_txt
+            endunless
+          endif
+        when 'lichtpunkte'
+          assign points = vmf.led_anzahl.value | default: mf.led_anzahl.value
+          if points != blank and points > 0
+            assign tile_label = 'heipard.blocks.icon_grid.light_points' | t
+            capture tile_value
+              render 'heipard-num', value: points
+            endcapture
+          endif
         when 'timer'
           assign hours = vmf.timer_dauer_h.value | default: mf.timer_dauer_h.value
           if hours != blank and hours.size > 0
@@ -38,6 +70,43 @@
           endif
           if tile_label == blank and timer_flag == true
             assign tile_label = 'heipard.blocks.icon_grid.timer' | t
+          endif
+        when 'schutzart'
+          assign ip = vmf.ip_schutzart.value | default: mf.ip_schutzart.value
+          assign ip_txt = ip | append: '' | strip
+          if ip_txt != blank
+            unless ip_txt contains '[TBD'
+              assign tile_label = 'heipard.blocks.icon_grid.protection' | t
+              assign tile_value = ip_txt
+            endunless
+          endif
+        when 'stromquelle'
+          assign power = vmf.stromquelle.value | default: mf.stromquelle.value
+          assign power_txt = power | append: '' | strip
+          if power_txt != blank
+            unless power_txt contains '[TBD'
+              assign tile_label = 'heipard.blocks.icon_grid.power_source' | t
+              assign tile_value = power_txt
+              assign power_down = power_txt | downcase
+              if power_down contains 'solar'
+                assign tile_icon = 'sonne'
+              elsif power_down contains 'batterie' or power_down contains 'akku'
+                assign tile_icon = 'batterie'
+              else
+                assign tile_icon = 'stecker'
+              endif
+            endunless
+          endif
+        when 'fernbedienung'
+          assign remote_flag = vmf.fernbedienung.value | default: mf.fernbedienung.value
+          if remote_flag == true
+            assign tile_label = 'heipard.blocks.icon_grid.remote' | t
+          endif
+        when 'modi'
+          assign modes = vmf.anzahl_leuchtmodi.value | default: mf.anzahl_leuchtmodi.value
+          if modes != blank and modes > 1
+            assign tile_label = 'heipard.blocks.icon_grid.modes' | t
+            assign tile_value = 'heipard.blocks.icon_grid.modes_value' | t: count: modes
           endif
         when 'dimmbar'
           assign levels = vmf.dimmstufen.value | default: mf.dimmstufen.value
@@ -60,29 +129,13 @@
           if tile_label == blank and conn_flag == true
             assign tile_label = 'heipard.blocks.icon_grid.connectable' | t
           endif
-        when 'modi'
-          assign modes = vmf.anzahl_leuchtmodi.value | default: mf.anzahl_leuchtmodi.value
-          if modes != blank and modes > 1
-            assign tile_label = 'heipard.blocks.icon_grid.modes' | t
-            assign tile_value = 'heipard.blocks.icon_grid.modes_value' | t: count: modes
-          endif
-        when 'fernbedienung'
-          assign remote_flag = vmf.fernbedienung.value | default: mf.fernbedienung.value
-          if remote_flag == true
-            assign tile_label = 'heipard.blocks.icon_grid.remote' | t
-          endif
-        when 'schutzart'
-          assign ip = vmf.ip_schutzart.value | default: mf.ip_schutzart.value
-          if ip != blank
-            assign tile_label = 'heipard.blocks.icon_grid.protection' | t
-            assign tile_value = ip
-          endif
       endcase
+      assign tile_value = tile_value | strip
     -%}
     {%- if tile_label != blank -%}
       {%- assign shown = shown | plus: 1 -%}
-      <li class="heipard-feature__mini">
-        <span class="heipard-feature__mini-icon" aria-hidden="true">{%- render 'heipard-fb-icon', name: key -%}</span>
+      <li class="heipard-feature__mini" data-kachel="{{ key }}">
+        <span class="heipard-feature__mini-icon" aria-hidden="true">{%- render 'heipard-fb-icon', name: tile_icon -%}</span>
         <span class="heipard-feature__mini-text">
           <span class="heipard-feature__mini-label">{{ tile_label }}</span>
           {%- if tile_value != blank -%}
@@ -98,5 +151,5 @@
     {{- tiles -}}
   </ul>
 {%- elsif request.design_mode -%}
-  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.timer_dauer_h, heipard.dimmstufen, heipard.koppelbar_bis' }}<!--fb-note-->
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.lichtfarbe, heipard.led_anzahl, heipard.timer_dauer_h, heipard.ip_schutzart, heipard.stromquelle' }}<!--fb-note-->
 {%- endif -%}

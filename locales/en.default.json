@@ -128,7 +128,10 @@
           "other": "{{ count }} modes"
         },
         "remote": "Remote control",
-        "protection": "Protection rating"
+        "protection": "Protection rating",
+        "light_color": "Light colour",
+        "light_points": "Light points",
+        "power_source": "Power source"
       },
       "editor": {
         "missing": "Block “{{ block }}” is not shown. Missing: {{ fields }}",
