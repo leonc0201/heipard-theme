@@ -693,7 +693,10 @@
           "other": "{{ count }} modes"
         },
         "remote": "Télécommande",
-        "protection": "Indice de protection"
+        "protection": "Indice de protection",
+        "light_color": "Température de couleur",
+        "light_points": "Points lumineux",
+        "power_source": "Source d'alimentation"
       },
       "editor": {
         "missing": "Le bloc « {{ block }} » ne s’affiche pas. Il manque : {{ fields }}",
@@ -701,7 +704,8 @@
         "limit": "Le bloc « {{ block }} » ne s’affiche pas. La mise en scène autorise au maximum {{ max }} blocs.",
         "no_b1": "Cet ensemble de fonctionnalités ne comporte pas d'image en pleine largeur. Le premier bloc doit toujours être B1.",
         "repeat": "Deux blocs de type « {{ block }} » se suivent directement.",
-        "template": "Ce produit ne possède pas de propre ensemble de fonctionnalités. Il utilise le modèle « {{ name }} », qui ne remplit que les blocs de données à partir des méta-champs."
+        "template": "Ce produit ne possède pas de propre ensemble de fonctionnalités. Il utilise le modèle « {{ name }} », qui ne remplit que les blocs de données à partir des méta-champs.",
+        "longtail_b2": "Le bloc « {{ block }} » ne s’affiche pas. Long-Tail n’affiche un B2 que si le méta-champ heipard.feature_b2 est défini."
       },
       "hotspot": {
         "kicker": "En détail",
