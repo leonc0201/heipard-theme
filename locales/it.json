@@ -693,7 +693,10 @@
           "other": "{{ count }} modalità"
         },
         "remote": "Telecomando",
-        "protection": "Grado di protezione"
+        "protection": "Grado di protezione",
+        "light_color": "Colore della luce",
+        "light_points": "Punti luce",
+        "power_source": "Fonte di alimentazione"
       },
       "editor": {
         "missing": "Il blocco „{{ block }}“ non viene visualizzato. Mancano: {{ fields }}",
@@ -701,7 +704,8 @@
         "limit": "Il blocco „{{ block }}“ non viene visualizzato. La struttura consente al massimo {{ max }} blocchi.",
         "no_b1": "Questo set di funzionalità non ha un'immagine a larghezza intera. Il primo blocco dovrebbe essere sempre B1.",
         "repeat": "Due blocchi di tipo “{{ block }}” si susseguono direttamente.",
-        "template": "Questo prodotto non ha un proprio set di funzionalità. Utilizza il modello “{{ name }}”, che popola esclusivamente i blocchi dati con le informazioni provenienti dai met campi."
+        "template": "Questo prodotto non ha un proprio set di funzionalità. Utilizza il modello “{{ name }}”, che popola esclusivamente i blocchi dati con le informazioni provenienti dai met campi.",
+        "longtail_b2": "Il blocco „{{ block }}“ non viene visualizzato. Long-Tail mostra un B2 solo se il meta campo heipard.feature_b2 è impostato."
       },
       "hotspot": {
         "kicker": "Nel dettaglio",

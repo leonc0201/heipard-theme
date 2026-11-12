@@ -693,7 +693,10 @@
           "other": "{{ count }} modos"
         },
         "remote": "Control remoto",
-        "protection": "Grado de protección"
+        "protection": "Grado de protección",
+        "light_color": "Color de la luz",
+        "light_points": "Puntos de luz",
+        "power_source": "Fuente de alimentación"
       },
       "editor": {
         "missing": "El bloque «{{ block }}» no se muestra. Falta: {{ fields }}",
@@ -701,7 +704,8 @@
         "limit": "El bloque «{{ block }}» no se muestra. La estructura permite un máximo de {{ max }} bloques.",
         "no_b1": "Este conjunto de características no tiene una imagen de ancho completo. El primer bloque siempre debe ser B1.",
         "repeat": "Dos bloques del tipo “{{ block }}” aparecen uno inmediatamente después del otro.",
-        "template": "Este producto no tiene un conjunto de características propio. Utiliza la plantilla «{{ name }}», que solo rellena los bloques de datos con la información de los metacampos."
+        "template": "Este producto no tiene un conjunto de características propio. Utiliza la plantilla «{{ name }}», que solo rellena los bloques de datos con la información de los metacampos.",
+        "longtail_b2": "El bloque «{{ block }}» no se muestra. Long-Tail solo muestra un B2 si el metacampos heipard.feature_b2 está establecido."
       },
       "hotspot": {
         "kicker": "En detalle",
