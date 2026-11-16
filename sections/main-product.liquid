@@ -225,6 +225,10 @@
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
                 {%- liquid
+                  # Showroom-Modus: ohne Kauf kein Versand und keine Rückgabe (Akkordeon mit Versandkosten aus)
+                  if settings.showroom_mode and block.settings.heipard_dynamic == 'shipping_returns'
+                    continue
+                  endif
                   # HeiPard: Ist keine Ueberschrift gesetzt, liefert der dynamische Inhalt
                   # sie aus den Locale-Dateien — dann ist sie ohne Admin-Uebersetzung
                   # in allen Sprachen korrekt.

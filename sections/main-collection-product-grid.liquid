@@ -56,6 +56,7 @@
                   aria-describedby="a11y-refresh-page-message"
                 >
                   {%- for option in collection.sort_options -%}
+                    {%- if settings.showroom_mode and option.value contains 'price' -%}{%- continue -%}{%- endif -%}
                     <option
                       value="{{ option.value | escape }}"
                       {% if option.value == sort_by %}
