@@ -1,0 +1,21 @@
+{%- comment -%}
+  Showroom-Modus: Hinweisseite statt Warenkorb unter /cart.
+  Parameter: section (für die Abstände der Warenkorb-Sektion)
+{%- endcomment -%}
+{%- liquid
+  assign sr_label = settings.showroom_button_label
+  if sr_label == blank
+    assign sr_label = 'heipard.showroom.button' | t
+  endif
+  assign sr_url = settings.showroom_button_url
+  if sr_url == blank
+    assign sr_url = routes.root_url | append: '/pages/contact' | replace: '//', '/'
+  endif
+-%}
+<div class="page-width heipard-showroom-cart section-{{ section.id }}-padding">
+  <h1 class="title title--primary">{{ 'heipard.showroom.cart_title' | t }}</h1>
+  <div class="heipard-showroom-cart__actions">
+    <a class="button" href="{{ routes.all_products_collection_url }}">{{ 'heipard.showroom.cart_products' | t }}</a>
+    <a class="button button--secondary" href="{{ sr_url }}">{{ sr_label | escape }}</a>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- unless settings.showroom_mode -%}<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">{%- endunless -%}
 
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -96,7 +96,7 @@
   }
 {%- endstyle -%}
 
-<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{%- unless settings.showroom_mode -%}<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>{%- endunless -%}
 
 {%- liquid
   for block in section.blocks
@@ -273,6 +273,7 @@
         {%- endcase -%}
       {%- endfor -%}
 
+      {%- unless settings.showroom_mode -%}
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
@@ -289,11 +290,12 @@
           </div>
         {%- endif -%}
       </a>
+      {%- endunless -%}
     </div>
   </header>
 </{{ header_tag }}>
 
-{%- if settings.cart_type == "notification" -%}
+{%- if settings.cart_type == "notification" and settings.showroom_mode == false -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
 {%- endif -%}
 

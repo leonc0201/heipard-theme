@@ -19,6 +19,10 @@
   }
 {%- endstyle -%}
 
+{%- if settings.showroom_mode -%}
+  {%- render 'heipard-showroom-cart', section: section -%}
+{%- else -%}
+
 {%- unless settings.cart_type == 'drawer' -%}
   <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
@@ -456,6 +460,8 @@
     </form>
   </div>
 </cart-items>
+
+{%- endif -%}
 
 {% schema %}
 {

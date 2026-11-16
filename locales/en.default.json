@@ -9,6 +9,12 @@
  */
 {
   "heipard": {
+    "showroom": {
+      "text": "Coming soon to our shop",
+      "button": "Questions? Write to us",
+      "cart_title": "The shop opens soon",
+      "cart_products": "View products"
+    },
     "theme_toggle": {
       "label": "Switch between day and evening mood",
       "day": "Day",

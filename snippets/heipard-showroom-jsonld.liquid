@@ -1,0 +1,27 @@
+{%- comment -%}
+  Showroom-Modus: Product-JSON-LD ohne offers (keine Preis- oder Verfügbarkeitsangabe an
+  Suchmaschinen). Ersetzt {{ product | structured_data }}, solange showroom_mode an ist.
+  Parameter: product
+{%- endcomment -%}
+{%- liquid
+  assign sr_variant = product.selected_or_first_available_variant
+  assign sr_img = sr_variant.featured_media | default: product.featured_media
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ request.origin | append: product.url | json }},
+    {%- if sr_img != blank %}
+    "image": [{{ sr_img | image_url: width: 1920 | prepend: 'https:' | json }}],
+    {%- endif %}
+    {%- if product.description != blank %}
+    "description": {{ product.description | strip_html | strip | json }},
+    {%- endif %}
+    {%- if sr_variant.sku != blank %}
+    "sku": {{ sr_variant.sku | json }},
+    {%- endif %}
+    "brand": { "@type": "Brand", "name": {{ product.vendor | json }} }
+  }
+</script>

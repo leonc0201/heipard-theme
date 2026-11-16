@@ -150,7 +150,13 @@
                         height="{{ 50 | divided_by: product.featured_media.preview_image.aspect_ratio }}"
                       >
                     {%- endif -%}
-                    <div class="predictive-search__item-content{% unless settings.predictive_search_show_vendor or settings.predictive_search_show_price %} predictive-search__item-content--centered{% endunless %}">
+                    {%- liquid
+                      assign ps_price_on = settings.predictive_search_show_price
+                      if settings.showroom_mode
+                        assign ps_price_on = false
+                      endif
+                    -%}
+                    <div class="predictive-search__item-content{% unless settings.predictive_search_show_vendor or ps_price_on %} predictive-search__item-content--centered{% endunless %}">
                       {%- if settings.predictive_search_show_vendor -%}
                         <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
                         <div class="predictive-search__item-vendor caption-with-letter-spacing">
@@ -158,7 +164,7 @@
                         </div>
                       {%- endif -%}
                       <p class="predictive-search__item-heading h5">{{ product.title | escape }}</p>
-                      {%- if settings.predictive_search_show_price -%}
+                      {%- if ps_price_on -%}
                         {% render 'price', product: product, use_variant: true, show_badges: false %}
                       {%- endif -%}
                     </div>

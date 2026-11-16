@@ -32,7 +32,9 @@
     {%- if p_points != blank and p_points > 0 -%}
       <span class="heipard-serie__meta">{{ 'heipard.blocks.kettenplan.points' | t: count: p_points }}</span>
     {%- endif -%}
-    <span class="heipard-serie__meta heipard-serie__price">{{ p_price | money }}</span>
+    {%- unless settings.showroom_mode -%}
+      <span class="heipard-serie__meta heipard-serie__price">{{ p_price | money }}</span>
+    {%- endunless -%}
     {%- if is_current -%}
       <span class="heipard-serie__flag">{{ 'heipard.blocks.serienleiter.current' | t }}</span>
     {%- elsif p_len != blank -%}

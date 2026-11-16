@@ -572,3 +572,30 @@
 /* Ungerade Kachelzahl: die letzte Kachel nimmt die volle Breite (Kacheln ohne Wert entfallen). */
 .heipard-specs__item:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .heipard-specs[hidden] { display: none; }
+
+/* --- Showroom-Modus (Theme-Einstellung showroom_mode) ---------------------------------
+   Kaufbox: Hinweis und Kontakt-Button statt Preis und Kauf; /cart: Hinweisseite. */
+.heipard-showroom {
+  display: grid;
+  justify-items: start;
+  gap: 1.4rem;
+  margin: 2.4rem 0;
+  padding: 2rem 2.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.heipard-showroom__text {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.heipard-showroom-cart {
+  text-align: center;
+}
+.heipard-showroom-cart__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}

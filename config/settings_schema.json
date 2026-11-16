@@ -8,6 +8,39 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Showroom",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Showroom-Modus: Der Shop zeigt die Produkte ohne Preise und ohne Kauffunktion (Preise, Menge, Warenkorb, Kauf- und Express-Buttons, Verfügbarkeit, Preis im JSON-LD und in og:price). Ausschalten, sobald der Shop verkaufen soll."
+      },
+      {
+        "type": "checkbox",
+        "id": "showroom_mode",
+        "label": "Showroom-Modus: Preise und Kauf ausblenden",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "showroom_text",
+        "label": "Hinweis in der Kaufbox",
+        "info": "Leer lassen für den Standardtext: Bald im Shop erhältlich (Englisch: Coming soon to our shop)."
+      },
+      {
+        "type": "text",
+        "id": "showroom_button_label",
+        "label": "Beschriftung des Kontakt-Buttons",
+        "info": "Leer lassen für: Bei Fragen schreiben (Englisch: Questions? Write to us)."
+      },
+      {
+        "type": "url",
+        "id": "showroom_button_url",
+        "label": "Ziel des Kontakt-Buttons",
+        "info": "Leer lassen für die Kontaktseite (/pages/contact)."
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

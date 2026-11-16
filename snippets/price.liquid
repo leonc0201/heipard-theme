@@ -40,6 +40,7 @@
   endif
 -%}
 
+{%- unless settings.showroom_mode -%}
 {%- unless target == null and placeholder == null -%}
   <div
     class="
@@ -123,3 +124,4 @@
     {%- endif -%}
   </div>
 {% endunless %}
+{%- endunless -%}

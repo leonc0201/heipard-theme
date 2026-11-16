@@ -121,6 +121,7 @@
                   </a>
                 </div>
               {%- when 'price' -%}
+                {%- unless settings.showroom_mode -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
@@ -150,7 +151,9 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                {%- endunless -%}
               {%- when 'inventory' -%}
+                {%- unless settings.showroom_mode -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                   {{ block.shopify_attributes }}
@@ -201,6 +204,7 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
+                {%- endunless -%}
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -269,6 +273,7 @@
                   </details>
                 </div>
               {%- when 'quantity_selector' -%}
+                {%- unless settings.showroom_mode -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
                   class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -495,6 +500,7 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
+                {%- endunless -%}
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -519,6 +525,9 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
+                {%- if settings.showroom_mode -%}
+                  {%- render 'heipard-showroom-box', block: block -%}
+                {%- else -%}
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -526,6 +535,7 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                {%- endif -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -774,9 +784,13 @@
       endif
     -%}
 
+    {%- if settings.showroom_mode -%}
+      {%- render 'heipard-showroom-jsonld', product: product -%}
+    {%- else -%}
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
+    {%- endif -%}
   </div>
 </product-info>
 

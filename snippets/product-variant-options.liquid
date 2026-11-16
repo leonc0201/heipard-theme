@@ -37,6 +37,9 @@
     if value.available
       assign option_disabled = false
     endif
+    if settings.showroom_mode and value.exists
+      assign option_disabled = false
+    endif
   -%}
 
   {%- capture input_id -%}

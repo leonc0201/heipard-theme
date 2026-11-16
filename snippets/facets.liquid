@@ -72,7 +72,7 @@
                     </a>
                   </facet-remove>
                 </div>
-                {%- for filter in results.filters -%}
+                {%- for filter in results.filters -%}{%- if settings.showroom_mode and filter.type == 'price_range' -%}{%- continue -%}{%- endif -%}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -109,7 +109,7 @@
 
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
-            {%- for filter in results.filters -%}
+            {%- for filter in results.filters -%}{%- if settings.showroom_mode and filter.type == 'price_range' -%}{%- continue -%}{%- endif -%}
               {% liquid
                 assign total_active_values = total_active_values | plus: filter.active_values.size
                 assign presentation = filter.presentation | default: default_presentation
@@ -338,7 +338,7 @@
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
-              {%- for filter in results.filters -%}
+              {%- for filter in results.filters -%}{%- if settings.showroom_mode and filter.type == 'price_range' -%}{%- continue -%}{%- endif -%}
                 {%- for value in filter.active_values -%}
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -399,7 +399,7 @@
                     id="SortBy"
                     aria-describedby="a11y-refresh-page-message"
                   >
-                    {%- for option in results.sort_options -%}
+                    {%- for option in results.sort_options -%}{%- if settings.showroom_mode and option.value contains 'price' -%}{%- continue -%}{%- endif -%}
                       <option
                         value="{{ option.value | escape }}"
                         {% if option.value == sort_by %}
@@ -508,7 +508,7 @@
               class="mobile-facets__main has-submenu gradient"
             >
               {%- if enable_filtering -%}
-                {%- for filter in results.filters -%}
+                {%- for filter in results.filters -%}{%- if settings.showroom_mode and filter.type == 'price_range' -%}{%- continue -%}{%- endif -%}
                   {% liquid
                     assign presentation = filter.presentation | default: default_presentation
                     if presentation == 'image'
@@ -732,7 +732,7 @@
                           id="SortBy-mobile"
                           aria-describedby="a11y-refresh-page-message"
                         >
-                          {%- for option in results.sort_options -%}
+                          {%- for option in results.sort_options -%}{%- if settings.showroom_mode and option.value contains 'price' -%}{%- continue -%}{%- endif -%}
                             <option
                               value="{{ option.value | escape }}"
                               {% if option.value == sort_by %}
@@ -783,7 +783,7 @@
   </menu-drawer>
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
-    {%- for filter in results.filters -%}
+    {%- for filter in results.filters -%}{%- if settings.showroom_mode and filter.type == 'price_range' -%}{%- continue -%}{%- endif -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -839,7 +839,7 @@
                 id="SortBy"
                 aria-describedby="a11y-refresh-page-message"
               >
-                {%- for option in results.sort_options -%}
+                {%- for option in results.sort_options -%}{%- if settings.showroom_mode and option.value contains 'price' -%}{%- continue -%}{%- endif -%}
                   <option
                     value="{{ option.value | escape }}"
                     {% if option.value == sort_by %}
@@ -892,7 +892,7 @@
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
-          {%- for filter in results.filters -%}
+          {%- for filter in results.filters -%}{%- if settings.showroom_mode and filter.type == 'price_range' -%}{%- continue -%}{%- endif -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">

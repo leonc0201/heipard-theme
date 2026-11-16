@@ -61,7 +61,7 @@
                 </div>
                 <div class="heipard-card__row">
                   <span class="heipard-skel heipard-skel--name"></span>
-                  <span class="heipard-skel heipard-skel--price"></span>
+                  {%- unless settings.showroom_mode -%}<span class="heipard-skel heipard-skel--price"></span>{%- endunless -%}
                 </div>
                 <span class="heipard-skel heipard-skel--sub"></span>
               </div>

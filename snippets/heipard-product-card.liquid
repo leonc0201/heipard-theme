@@ -32,7 +32,9 @@
 
   <div class="heipard-card__row">
     <span class="heipard-card__name">{{ product.title | escape }}</span>
-    <span class="heipard-card__price">{{ product.price | money }}</span>
+    {%- unless settings.showroom_mode -%}
+      <span class="heipard-card__price">{{ product.price | money }}</span>
+    {%- endunless -%}
   </div>
 
   {%- assign subtitle = product.metafields.heipard.subtitle.value -%}

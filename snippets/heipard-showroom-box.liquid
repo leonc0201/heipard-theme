@@ -1,0 +1,25 @@
+{%- comment -%}
+  Showroom-Modus (Theme-Einstellung showroom_mode): ersetzt in der Kaufbox Preis, Menge und
+  Kaufbuttons durch einen Hinweis und einen Kontakt-Button. Die Variantenauswahl bleibt.
+  Texte und Ziel aus den Theme-Einstellungen showroom_text, showroom_button_label und
+  showroom_button_url; leer = Standardtext aus den Sprachdateien (DE/EN) bzw. die Kontaktseite.
+  Parameter: block (optional, für den Theme-Editor)
+{%- endcomment -%}
+{%- liquid
+  assign sr_text = settings.showroom_text
+  if sr_text == blank
+    assign sr_text = 'heipard.showroom.text' | t
+  endif
+  assign sr_label = settings.showroom_button_label
+  if sr_label == blank
+    assign sr_label = 'heipard.showroom.button' | t
+  endif
+  assign sr_url = settings.showroom_button_url
+  if sr_url == blank
+    assign sr_url = routes.root_url | append: '/pages/contact' | replace: '//', '/'
+  endif
+-%}
+<div class="heipard-showroom"{% if block %} {{ block.shopify_attributes }}{% endif %}>
+  <p class="heipard-showroom__text">{{ sr_text | escape }}</p>
+  <a class="button button--secondary heipard-showroom__button" href="{{ sr_url }}">{{ sr_label | escape }}</a>
+</div>
