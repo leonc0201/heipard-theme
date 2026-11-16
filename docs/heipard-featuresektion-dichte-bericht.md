@@ -241,6 +241,8 @@ also weiter auch in der Kaufbox.
 
 ## Liste 1: R1 ohne eigenes Bild (für Schritt B)
 
+Nachtrag 16.11.2026: Schritt B hat 39 Familien mit R1-Bild versorgt; was offen bleibt, steht in `heipard-r1-bilder-bericht.md`, Abschnitt 2.
+
 | Familie | Dramaturgie | Grund |
 |---|---|---|
 | BLM | Hero | alle Galeriebilder aus B1/B2 geschnitten |

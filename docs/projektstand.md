@@ -58,6 +58,10 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   `d0ff77f`, `bfb0605`. Bericht `heipard-featuresektion-dichte-bericht.md` mit den Listen für Schritt B.
   Am Abend Icon-Grid-Reihenfolge nach Leon: Timer, Dimmbar, Koppelbar, Leuchtmodi, Fernbedienung, Lichtpunkte,
   Schutzart, Lichtfarbe, Stromquelle (`dbe55bd`).
+- **R1-Bilder, Schritt B** (2026-11-16, Auftrag `heipard-theme-auftrag-r1-bilder.md`): R1-Bilder aus Auftrag 18 an
+  39 Familien und 87 Seiten (Block-Bild plus `feature_r1`; DGM-002 nur Metafeld), Bild rechts gegenüber B2, Alt-Text
+  aus der Datei (`6d1dee2`), Limits unverändert. Acht Familien ohne R1-Block (fehlender R1-Text). Lichtfarbe
+  hp-wbf-210 gesetzt. Bericht `heipard-r1-bilder-bericht.md`.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

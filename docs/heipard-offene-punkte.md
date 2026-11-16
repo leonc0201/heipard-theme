@@ -266,14 +266,20 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Feature-Sektion dichter, Schritt A** (2026-11-10) — Kaufbox ohne [TBD], Serie nur gleiche Bauart (Familie
   und Stromquelle), Icon-Grid bis vier Kacheln in Leons Reihenfolge, Long-Tail mit B2 (RSP, WBF), R1 mit optionalem
   Bild im Theme (`feature_r1`). Live an allen 118 Seiten geprüft. Bericht `heipard-featuresektion-dichte-bericht.md`.
-- [ ] **Schritt B: R1-Bilder** — 48 Familien ohne eigenes R1-Bild (Bericht, Liste 1). Galeriebilder der
-  Asset-Instanz sind fast alle aus B1/B2 geschnitten; OLAS14 GAL_01 zeigt dieselbe Szene wie `OLAS14_B2_01`
-  (eingesetzt und zurückgenommen). Listing-Fotos von CTL, DFM, ISL, UCT, DPM, NPT nur nach Sichtung.
+- [x] **Schritt B: R1-Bilder** (2026-11-16) — R1-Bilder aus Auftrag 18 an 39 Familien und 87 Seiten (38 Block-Bilder
+  plus `feature_r1`, DGM-002 nur Metafeld), Alt-Text aus der Datei (`6d1dee2`). Live an allen 118 Seiten geprüft.
+  Bericht `heipard-r1-bilder-bericht.md`.
+- [ ] **R1-Text für acht Familien ohne R1-Block** — BAUM-PEC, BAUM-PVC, BSX, DPT, FXF, TPM, VAM, WBF haben eine
+  R1-Datei, aber kein R1 im Set (Welle 1 mangels Fakten). Mit belegtem R1-Text: Block `<code>-r1` ins Set, das
+  Bild ist da. `BSX_R1_01` (seit 16.11. in Files) fehlt noch in `welle1_bildzuordnung.csv` (Asset-Instanz).
+- [ ] **Welle-2-Hero ohne R1-Bild** — BLM, BLT, CTL Welle 2, DCT, DFM, NPT, SBLB zeigen R1 weiter als Text; kein
+  R1-Bild geliefert. OLAS14, VIT, SOLM, STT, hp-dgm-001 und hp-dgm-048 laut Auftrag ohne R1.
 - [x] **Icon-Grid-Reihenfolge** (2026-11-10) — Leon: Unterscheidungsmerkmale zuerst. Jetzt Timer, Dimmbar,
   Koppelbar, Leuchtmodi, Fernbedienung, Lichtpunkte, Schutzart, Lichtfarbe, Stromquelle (Commit `dbe55bd`, Bericht
   Abschnitt 8). Unter drei Kacheln weiter CL, DPT, hp-ol-15-g, VAM (Liste 2).
 - [ ] **Nachfrage Shenzhen: leere Kaufbox-Felder** — 70 Felder an 52 Produkten (Schutzart 36, Stromquelle 16,
-  Länge 10, Lichtfarbe 8), Bericht Liste 3. Die Kacheln sind bis dahin ausgeblendet.
+  Länge 10, Lichtfarbe 8), Bericht Liste 3. Die Kacheln sind bis dahin ausgeblendet. Seit 16.11. erledigt:
+  Lichtfarbe hp-wbf-210 (Warmweiß laut Faktensatz, Bericht R1-Bilder Abschnitt 5); offen damit 69 Felder.
 - [ ] **Serie: Stern und Spirale** — DGM-001 und DGM-002 stehen weiter zusammen (gleiche Familie, beide Netz);
   trennen nur über ein eigenes `familie`. Ebenso offen: CTL Welle 1 und 2 in einer Serie, OLS-S17 mit Dublette.
 - [x] **Welle 1 Long-Tail mit B2** (2026-11-08) — Leon: RSP, WBF und DGM-002 auf Standard, mit Rückweg als Test.
