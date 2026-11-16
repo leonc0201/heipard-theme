@@ -62,6 +62,8 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   39 Familien und 87 Seiten (Block-Bild plus `feature_r1`; DGM-002 nur Metafeld), Bild rechts gegenüber B2, Alt-Text
   aus der Datei (`6d1dee2`), Limits unverändert. Acht Familien ohne R1-Block (fehlender R1-Text). Lichtfarbe
   hp-wbf-210 gesetzt. Bericht `heipard-r1-bilder-bericht.md`.
+  Am Abend R1 mit Szenentext (kein Fakt) für BAUM-PEC, BAUM-PVC, BSX, DPT, FXF, TPM, VAM, WBF, DE und EN
+  (Bericht Abschnitt 9).
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

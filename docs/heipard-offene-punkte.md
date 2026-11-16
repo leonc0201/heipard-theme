@@ -269,9 +269,12 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Schritt B: R1-Bilder** (2026-11-16) — R1-Bilder aus Auftrag 18 an 39 Familien und 87 Seiten (38 Block-Bilder
   plus `feature_r1`, DGM-002 nur Metafeld), Alt-Text aus der Datei (`6d1dee2`). Live an allen 118 Seiten geprüft.
   Bericht `heipard-r1-bilder-bericht.md`.
-- [ ] **R1-Text für acht Familien ohne R1-Block** — BAUM-PEC, BAUM-PVC, BSX, DPT, FXF, TPM, VAM, WBF haben eine
-  R1-Datei, aber kein R1 im Set (Welle 1 mangels Fakten). Mit belegtem R1-Text: Block `<code>-r1` ins Set, das
-  Bild ist da. `BSX_R1_01` (seit 16.11. in Files) fehlt noch in `welle1_bildzuordnung.csv` (Asset-Instanz).
+- [ ] **R1-Szenentexte gegen Fakten tauschen** — BAUM-PEC, BAUM-PVC, BSX, DPT, FXF, TPM, VAM, WBF zeigen seit
+  16.11. R1 mit „Szenentext, kein Fakt“ (Blöcke `<code>-r1`, Bericht R1-Bilder Abschnitt 9). Sobald Shenzhen
+  Fakten liefert, nur Titel und Text tauschen (DE und EN), Bild bleibt. `BSX_R1_01` fehlt noch in
+  `welle1_bildzuordnung.csv` (Asset-Instanz).
+- [ ] **Alt-Text auf Englisch** — Die EN-Übersetzung der Datei-Alt-Texte ist hinterlegt, auf `/en/`-Seiten steht
+  beim R1-Bild trotzdem der deutsche Alt-Text (Bericht R1-Bilder Abschnitt 9). Lösung braucht eigenen Auftrag.
 - [ ] **Welle-2-Hero ohne R1-Bild** — BLM, BLT, CTL Welle 2, DCT, DFM, NPT, SBLB zeigen R1 weiter als Text; kein
   R1-Bild geliefert. OLAS14, VIT, SOLM, STT, hp-dgm-001 und hp-dgm-048 laut Auftrag ohne R1.
 - [x] **Icon-Grid-Reihenfolge** (2026-11-10) — Leon: Unterscheidungsmerkmale zuerst. Jetzt Timer, Dimmbar,

@@ -17,7 +17,8 @@ Produktstatus. Uhrzeiten deutsche Zeit.
 - **Block-Limits:** unverändert. R1 mit Bild zählt wie vorher als ein Block, kein Block ist weggefallen.
 - **Ohne R1-Bild:** Acht Familien haben eine R1-Datei in Files, aber keinen R1-Block im Set: BAUM-PEC, BAUM-PVC,
   BSX, DPT, FXF, TPM, VAM und WBF. In Welle 1 blieb R1 dort weg, weil Fakten für den Text fehlten. Einen R1-Text
-  erfinde ich nicht, die Familien stehen in Abschnitt 2. Ohne R1 bleiben außerdem die Familien, die der Auftrag
+  erfinde ich nicht, die Familien stehen in Abschnitt 2. Nachtrag: Seit dem Abend haben sie einen R1 mit
+  Szenentext (Abschnitt 9). Ohne R1 bleiben außerdem die Familien, die der Auftrag
   ausnimmt, und die Welle-2-Hero-Familien ohne geliefertes Bild.
 - **hp-wbf-210:** Lichtfarbe „Warmweiß“ gesetzt. Quelle ist der Faktensatz (eindeutig, Amazon-Titel). Die
   Kaufbox zeigt jetzt die Lichtfarbe.
@@ -94,7 +95,8 @@ Metafeld. „geprüft“ zählt die Seiten, die live genau dieses Bild zeigen.
 | laut Auftrag ohne R1 | STT (hp-stt-050, Entwurf, nicht geprüft), SOLM (hp-solm-12m-ww), OLAS14 (3), VIT (2), hp-dgm-001, hp-dgm-048 |
 | Welle-2-Hero ohne geliefertes R1-Bild, R1 bleibt Text | BLM (1), BLT (2), CTL Welle 2 (hp-ctl-180m, hp-ctl-240m, hp-ctl-210-eu-1, hp-ctl-400-eu-1), DCT (1), DFM (3), NPT (1), SBLB (2) |
 
-Damit bei den acht Familien der ersten beiden Zeilen ein R1-Bild erscheint, braucht es einen R1-Text aus belegten
+Nachtrag 16.11.: Die acht Familien der ersten beiden Zeilen haben jetzt einen R1 mit Szenentext (Abschnitt 9).
+Ursprünglicher Stand: Damit bei den acht Familien der ersten beiden Zeilen ein R1-Bild erscheint, braucht es einen R1-Text aus belegten
 Fakten. Danach kommt ein Block `<code>-r1` mit diesem Text ins Set: hinter das B2, bei Long-Tail ohne B2 hinter
 das B1. Das Bild liegt schon bereit (CSV bzw. Files), und `feature_r1` würde es ohne weiteren Theme-Code
 übernehmen.
@@ -121,8 +123,8 @@ Die Bild-Text-Zeile nahm bisher als Alt-Text zuerst die Block-Überschrift. Für
 Files und nur ersatzweise aus der Überschrift (`snippets/heipard-feature-block.liquid`, Commit `6d1dee2`, live
 seit 15:29:02, lokal mit LiquidJS getestet, `shopify theme check` ohne neue Meldungen). B1 und B2 sind unverändert.
 Live tragen alle 87 R1-Bilder den deutschen Alt-Text der Datei. Beispiel BSL: „Warmweiße HeiPard Mikro-LED-Lichterkette auf Kupferdraht, locker um den Rahmen eines runden Spiegels gewickelt.“
-Die englische Fassung ist an der Datei als Übersetzung hinterlegt (Auftrag 18). Auf einer englischen
-Shop-Seite ist sie nicht geprüft.
+Die englische Fassung ist an der Datei als Übersetzung hinterlegt (Auftrag 18). Auf englischen Shop-Seiten
+erscheint sie nicht, dort steht der deutsche Alt-Text (Abschnitt 9).
 
 ## 5. hp-wbf-210: Lichtfarbe
 
@@ -194,3 +196,70 @@ Geprüfte Seiten (Auswahl nach Auftrag, je Dramaturgie zwei, dazu die genannten 
 Vorher waren alle 38 Block-Bilder leer, `feature_r1` an allen 87 Produkten leer und `lichtfarbe` an hp-wbf-210
 leer. Zurück ginge es so: Block-Bild per `metaobjectUpdate` leeren, `feature_r1` per `metafieldsDelete` löschen
 und `6d1dee2` zurücknehmen. Die Dateien in Files bleiben davon unberührt.
+
+## 9. Nachtrag 16.11.: R1 mit Szenentext für acht Familien
+
+Auftrag `heipard-theme-auftrag-r1-szenentexte.md` (Freigabe Leon). Die acht Familien aus Abschnitt 2 ohne R1-Block
+haben jetzt je einen R1-Block mit **Szenentext, kein Fakt**: Der Text beschreibt nur, was im Bild zu sehen ist, und
+trägt keine Produkteigenschaft. Sobald Shenzhen Fakten liefert, wird nur der Text getauscht, das Bild bleibt.
+Markiert ist das an drei Stellen: in der Blockbezeichnung (zum Beispiel „BSX · R1 Szenentext, kein Fakt“), in der
+Set-Bezeichnung (zum Beispiel „WBF (Long-Tail) · R1 Szenentext, kein Fakt“) und hier im Bericht.
+
+| Familie | Block (im Set) | Bild | Überschrift DE | Text DE (Szenentext, kein Fakt) | Überschrift EN | Blockfolge live (Limit) |
+|---|---|---|---|---|---|---|
+| BAUM-PEC | `baum-pec-r1`, hinter B1 | `BAUMPEC_R1_01` | Ungeschmückt im Esszimmer | So steht der Baum, bevor der Schmuck kommt: auf dem Holzkreuzständer neben dem langen Tisch, im Tageslicht vom Fenster. | Undecorated in the dining room | B1 · R1 · Kennzahl (3 von 4) |
+| BAUM-PVC | `baum-pvc-r1`, hinter B1 | `BAUMPVC_R1_01` | Am Fuß der Treppe | Der Baum steht ungeschmückt im hellen Flur am Fuß der Holztreppe, dort, wo er beim Hereinkommen als Erstes ins Auge fällt. | At the foot of the stairs | B1 · R1 · Kennzahl (3 von 4) |
+| BSX | `bsx-r1`, hinter B1 | `BSX_R1_01` | Im Bücherregal | Der Stern hängt an seinem Faden vom oberen Regalbrett in einer Leseecke, zwischen Büchern, Sessel und Stehlampe. | On the bookshelf | B1 · R1 (2 von 4) |
+| DPT | `dpt-r1`, hinter B2 | `DPT_R1_01` | Auf der Dachterrasse | Die Lichterkette läuft auf ihrem transparenten Kabel am Geländer entlang und weiter über die Pergola der Dachterrasse. | On the rooftop terrace | B1 · B2 · R1 · Kettenplan · Icon-Grid (5 von 5) |
+| FXF | `fxf-r1`, hinter B1 | `FXF_R1_01` | Am Rand der Terrasse | Rentier und Schlitten stehen aus Lichtschlauch geformt am Rand der verschneiten Terrasse vor einer dunklen Hecke. | At the edge of the terrace | B1 · R1 (2 von 4) |
+| TPM | `tpm-r1`, hinter B2 | `CTL_R1_01` | Vom Garten aus gesehen | Durch das Wohnzimmerfenster leuchtet der Baum mit dem Lichtermantel in den verschneiten Garten hinaus. | Seen from the garden | B1 · B2 · R1 · Icon-Grid (4 von 5) |
+| VAM | `vam-r1`, hinter B2 | `VLM_R1_01` | Um Stamm und Äste | Die Lichterkette ist um den Stamm und die unteren Äste eines kleinen Baums im verschneiten Vorgarten gewickelt. | Around trunk and branches | B1 · B2 · R1 · Kettenplan · Icon-Grid (5 von 5) |
+| WBF | `wbf-r1`, hinter B2 | `WWF_R1_01` | Im Flur neben der Haustür | Der Birken-Lichterbaum steht im Flur neben der Haustür und einer Holzbank und leuchtet den Eingang aus. | In the hall by the front door | B1 · B2 · R1 · Kennzahl (4 von 4) |
+
+- **Texte** wörtlich aus dem Auftrag. Gegengeprüft über die Prüfsummen im Shop: Die deutschen Texte stehen Zeichen
+  für Zeichen so im Shop wie im Auftrag. Einen Kicker nennt der Auftrag nicht, die acht Blöcke haben deshalb
+  keinen.
+- **Englisch:** Blöcke sind übersetzbar, und Englisch ist im Shop veröffentlicht. Die EN-Texte stehen deshalb als
+  Übersetzung am Block. Live auf `/en/` geprüft bei WBF und TPM, Überschrift und Text erscheinen auf Englisch.
+- **Bild:** Der Auftrag nahm an, `feature_r1` sei an diesen Produkten schon gesetzt. Das war nicht so, ich hatte es
+  ohne R1-Block bewusst weggelassen (Abschnitt 2). Gesetzt sind jetzt wie bei den anderen R1 das Block-Bild und
+  `feature_r1` an allen neun Produkten (WBF mit zwei).
+- **Darstellung** wie die anderen R1: Text links, Bild rechts. Bei DPT, TPM, VAM und WBF folgt R1 auf das B2, bei
+  BAUM-PEC, BAUM-PVC, BSX und FXF auf das B1.
+- **Limits:** Kein Limit greift, keins geändert. Long-Tail WBF liegt mit B1, B2, R1 und Kennzahl genau bei 4 von 4,
+  DPT und VAM bei 5 von 5 (Standard).
+- **Gegenproben** CTL, VLM und WWF: Blöcke, Texte, Bilder und Blockfolge unverändert. Bei CTL und VLM ist nur der
+  Alt-Text des Bilds anders als um 16:08. `CTL_R1_01` und `VLM_R1_01` wurden um 16:52 in Files neu beschriftet,
+  die EN-Übersetzung gleich mit. Das kam nicht von mir, vermutlich von der Asset-Instanz. Es betrifft auch TPM
+  und VAM.
+- **Alt-Text auf Englisch:** Auf den englischen Seiten steht beim R1-Bild der deutsche Alt-Text. Die englische
+  Übersetzung ist an der Datei hinterlegt und aktuell (geprüft an `WWF_R1_01` und `CTL_R1_01`), kommt im Theme aber
+  nicht an: Der Alt-Text eines Datei-Verweises erscheint auf englischen Seiten auf Deutsch. Das gilt für alle
+  R1-Bilder. Eine Lösung braucht einen eigenen Auftrag.
+- **BSX:** Gezeigt wird die Neufassung `BSX_R1_01` (in Files seit 16.11. um 15:23). In
+  `welle1_bildzuordnung.csv` steht sie noch nicht, das trägt die Asset-Instanz nach.
+
+Live geprüft von 17:00 bis 17:02, eine Seite alle 8 Sekunden. Alle Seiten laden mit Status 200, ohne
+Liquid-Fehler und ohne „[TBD]“. Die Blockfolge ist gegenüber der Aufnahme von 16:08 nur um R1 ergänzt.
+Bildschirmaufnahmen um 17:03 (Desktop hp-wbf-180, Handy hp-bsx-002): Szenentext links, Bild rechts, kein Bild
+doppelt auf der Seite.
+
+| Seite | URL | Befund |
+|---|---|---|
+| BAUM-PEC | https://heipard.myshopify.com/products/pec-150g | R1 mit `BAUMPEC_R1_01`, Szenentext DE, Bild rechts |
+| BAUM-PVC | https://heipard.myshopify.com/products/pvc-150g | R1 mit `BAUMPVC_R1_01`, Szenentext DE, Bild rechts |
+| BSX | https://heipard.myshopify.com/products/hp-bsx-002 | R1 mit `BSX_R1_01`, Szenentext DE, Bild rechts |
+| DPT | https://heipard.myshopify.com/products/hp-dpt-300 | R1 mit `DPT_R1_01`, Szenentext DE, Bild rechts |
+| FXF | https://heipard.myshopify.com/products/hp-fxf-001 | R1 mit `FXF_R1_01`, Szenentext DE, Bild rechts |
+| TPM | https://heipard.myshopify.com/products/hp-tpm-400-eu-1 | R1 mit `CTL_R1_01`, Szenentext DE, Bild rechts |
+| VAM | https://heipard.myshopify.com/products/hp-vam-400l-eu-1 | R1 mit `VLM_R1_01`, Szenentext DE, Bild rechts |
+| WBF | https://heipard.myshopify.com/products/hp-wbf-180 | R1 mit `WWF_R1_01`, Szenentext DE, Bild rechts |
+| WBF | https://heipard.myshopify.com/products/hp-wbf-210 | R1 mit `WWF_R1_01`, Szenentext DE, Bild rechts |
+| CTL (Gegenprobe) | https://heipard.myshopify.com/products/hp-ctl-180 | unverändert (Block, Text, Bild, Blockfolge); Alt-Text der Datei um 16:52 in Files geändert |
+| VLM (Gegenprobe) | https://heipard.myshopify.com/products/hp-vlm-100l | unverändert (Block, Text, Bild, Blockfolge); Alt-Text der Datei um 16:52 in Files geändert |
+| WWF (Gegenprobe) | https://heipard.myshopify.com/products/hp-wwf-180 | unverändert (Block, Text, Bild, Blockfolge) |
+| WBF englisch | https://heipard.myshopify.com/en/products/hp-wbf-180 | Szenentext EN, Alt-Text deutsch |
+| TPM englisch | https://heipard.myshopify.com/en/products/hp-tpm-400-eu-1 | Szenentext EN, Alt-Text deutsch |
+
+Rückweg: In den acht Sets die vorherige Blockliste und Bezeichnung wieder eintragen (Stand vorher gesichert), die
+Blöcke `<code>-r1` löschen und `feature_r1` an den neun Produkten löschen.
