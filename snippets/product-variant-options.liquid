@@ -37,7 +37,8 @@
     if value.available
       assign option_disabled = false
     endif
-    if settings.showroom_mode and value.exists
+    # Showroom-Modus: nur nicht existierende Kombinationen sperren, nichts als ausverkauft zeigen
+    if settings.showroom_mode and value.variant != blank
       assign option_disabled = false
     endif
   -%}
