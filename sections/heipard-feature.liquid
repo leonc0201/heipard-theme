@@ -304,7 +304,6 @@
 {%- if main_html != blank or zone_html != blank or minis_html != blank -%}
   <section class="heipard-section heipard-feature color-{{ section.settings.color_scheme }}" data-heipard-feature-section data-heipard-feature-script="{{ 'heipard-feature.js' | asset_url }}">
     <div class="page-width">
-      {%- if product.handle == 'hp-wbf-180' -%}<!--alt-test locale={{ request.locale.iso_code }}{% for b in fblocks %}{% if b.image.value != blank %} || block {{ b.label.value | escape }}: alt={{ b.image.value.alt | escape }} / preview={{ b.image.value.preview_image.alt | escape }} / title={{ b.title.value | escape }}{% endif %}{% endfor %} || mf_b1={{ product.metafields.heipard.feature_b1.value.alt | escape }} || mf_b2={{ product.metafields.heipard.feature_b2.value.alt | escape }} || mf_r1={{ product.metafields.heipard.feature_r1.value.alt | escape }} || media1={{ product.featured_media.alt | escape }}-->{%- endif -%}
       {%- if main_html != blank -%}
         <div class="heipard-feature__head">
           {%- if head_kicker != blank -%}

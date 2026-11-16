@@ -73,7 +73,7 @@
                 endif
               endif
             endif
-            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value
+            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk.alt.value
           endif
         -%}
       {%- when 'text' -%}
@@ -86,7 +86,7 @@
           endif
           if r1_img != blank
             echo '<!--fb-split-->'
-            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: r1_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'r1'
+            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: r1_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'r1', alt: blk.alt.value
           else
             render 'heipard-fb-text', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value
           endif

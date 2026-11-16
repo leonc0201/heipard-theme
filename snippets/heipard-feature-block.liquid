@@ -20,8 +20,11 @@
                  Textpunkte ziehen vorbei. Jede Zeile im Text ist ein Punkt,
                  optional mit Titel davor: "Titel | Text".
                  'r1' (nur media_text): R1-Text mit Bild aus der Block-Weiche, Klasse
-                 heipard-feature__row--r1, sonst wie B2. Alt-Text aus der Datei in Files
-                 (sonst die Überschrift); B1 und B2 nehmen zuerst die Überschrift.
+                 heipard-feature__row--r1, sonst wie B2.
+    alt          Alt-Text aus dem Blockfeld alt (übersetzbar, DE und EN aus dem Alt der Datei in
+                 Files). Hat Vorrang. Fehlt er: R1 nimmt den Alt der Datei, sonst die Überschrift;
+                 B1 und B2 nehmen die Überschrift, sonst den Alt der Datei. Der Alt der Datei kommt
+                 in Liquid nur in der Hauptsprache an (geprüft 16.11.2026), daher das Blockfeld.
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -37,6 +40,9 @@
   assign img_alt = title | default: image.alt
   if variant == 'r1'
     assign img_alt = image.alt | default: title
+  endif
+  if alt != blank
+    assign img_alt = alt
   endif
 -%}
 
