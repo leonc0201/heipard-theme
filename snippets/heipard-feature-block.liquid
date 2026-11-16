@@ -20,7 +20,8 @@
                  Textpunkte ziehen vorbei. Jede Zeile im Text ist ein Punkt,
                  optional mit Titel davor: "Titel | Text".
                  'r1' (nur media_text): R1-Text mit Bild aus der Block-Weiche, Klasse
-                 heipard-feature__row--r1, sonst wie B2.
+                 heipard-feature__row--r1, sonst wie B2. Alt-Text aus der Datei in Files
+                 (sonst die Überschrift); B1 und B2 nehmen zuerst die Überschrift.
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -32,6 +33,10 @@
     assign img_sizes = '(min-width: 1400px) 1400px, 100vw'
   else
     assign img_sizes = '(min-width: 750px) 50vw, 100vw'
+  endif
+  assign img_alt = title | default: image.alt
+  if variant == 'r1'
+    assign img_alt = image.alt | default: title
   endif
 -%}
 
@@ -66,7 +71,7 @@
         loading: 'lazy',
         widths: '500, 750, 1000, 1200, 1400',
         sizes: img_sizes,
-        alt: title | default: image.alt
+        alt: img_alt
     }}
   {%- else -%}
     <span class="heipard-feature__media-el heipard-feature__fallback" aria-hidden="true"></span>
