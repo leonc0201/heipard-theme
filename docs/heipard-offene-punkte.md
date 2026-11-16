@@ -279,6 +279,12 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [ ] **21 Dateien ohne EN-Alt in Files** — Welle-2-Hero und die ersten G40-Bilder (27 Blöcke B1/B2, 34 Seiten auf
   `/en/` mit deutschem Alt). Asset-Instanz übersetzt, danach EN am Blockfeld `alt` ergänzen.
 - [ ] **Pflegeregel Alt-Text** — Neubeschriftung in Files immer auch im Blockfeld `alt` (DE und EN) nachziehen.
+- [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
+  keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live
+  geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`.
+- [ ] **Showroom: Shopify-Einstellungen (Leon)** — echte Preise im Backend sind über Quelltext und
+  `/products/<handle>.js` auffindbar (0,00 € falls unerwünscht); `/checkout` und `/cart/add` nur über Bestand 0 ohne
+  Weiterverkauf oder ohne Zahlungsanbieter zu sperren; Passwortschutz in den Shopify-Einstellungen aufheben.
 - [ ] **Blocktexte ohne EN** — Überschriften und Texte von B1/B2/R1 sind außer den acht Szenentexten nicht übersetzt;
   auf `/en/` deutsch.
 - [ ] **Welle-2-Hero ohne R1-Bild** — BLM, BLT, CTL Welle 2, DCT, DFM, NPT, SBLB zeigen R1 weiter als Text; kein
