@@ -273,8 +273,14 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   16.11. R1 mit „Szenentext, kein Fakt“ (Blöcke `<code>-r1`, Bericht R1-Bilder Abschnitt 9). Sobald Shenzhen
   Fakten liefert, nur Titel und Text tauschen (DE und EN), Bild bleibt. `BSX_R1_01` fehlt noch in
   `welle1_bildzuordnung.csv` (Asset-Instanz).
-- [ ] **Alt-Text auf Englisch** — Die EN-Übersetzung der Datei-Alt-Texte ist hinterlegt, auf `/en/`-Seiten steht
-  beim R1-Bild trotzdem der deutsche Alt-Text (Bericht R1-Bilder Abschnitt 9). Lösung braucht eigenen Auftrag.
+- [x] **Alt-Text auf Englisch** (2026-11-16) — Datei-Alt kommt in Liquid nur deutsch an. Neues Blockfeld `alt`
+  (übersetzbar) an 156 Blöcken B1/B2/R1, DE und EN aus Files; Theme liest es zuerst (`f586ffd`). Bericht R1-Bilder
+  Abschnitt 10.
+- [ ] **21 Dateien ohne EN-Alt in Files** — Welle-2-Hero und die ersten G40-Bilder (27 Blöcke B1/B2, 34 Seiten auf
+  `/en/` mit deutschem Alt). Asset-Instanz übersetzt, danach EN am Blockfeld `alt` ergänzen.
+- [ ] **Pflegeregel Alt-Text** — Neubeschriftung in Files immer auch im Blockfeld `alt` (DE und EN) nachziehen.
+- [ ] **Blocktexte ohne EN** — Überschriften und Texte von B1/B2/R1 sind außer den acht Szenentexten nicht übersetzt;
+  auf `/en/` deutsch.
 - [ ] **Welle-2-Hero ohne R1-Bild** — BLM, BLT, CTL Welle 2, DCT, DFM, NPT, SBLB zeigen R1 weiter als Text; kein
   R1-Bild geliefert. OLAS14, VIT, SOLM, STT, hp-dgm-001 und hp-dgm-048 laut Auftrag ohne R1.
 - [x] **Icon-Grid-Reihenfolge** (2026-11-10) — Leon: Unterscheidungsmerkmale zuerst. Jetzt Timer, Dimmbar,

@@ -124,7 +124,7 @@ Files und nur ersatzweise aus der Überschrift (`snippets/heipard-feature-block.
 seit 15:29:02, lokal mit LiquidJS getestet, `shopify theme check` ohne neue Meldungen). B1 und B2 sind unverändert.
 Live tragen alle 87 R1-Bilder den deutschen Alt-Text der Datei. Beispiel BSL: „Warmweiße HeiPard Mikro-LED-Lichterkette auf Kupferdraht, locker um den Rahmen eines runden Spiegels gewickelt.“
 Die englische Fassung ist an der Datei als Übersetzung hinterlegt (Auftrag 18). Auf englischen Shop-Seiten
-erscheint sie nicht, dort steht der deutsche Alt-Text (Abschnitt 9).
+erscheint sie nicht, dort steht der deutsche Alt-Text (Abschnitt 9). Gelöst über das Blockfeld „Alt-Text“ (Abschnitt 10).
 
 ## 5. hp-wbf-210: Lichtfarbe
 
@@ -263,3 +263,65 @@ doppelt auf der Seite.
 
 Rückweg: In den acht Sets die vorherige Blockliste und Bezeichnung wieder eintragen (Stand vorher gesichert), die
 Blöcke `<code>-r1` löschen und `feature_r1` an den neun Produkten löschen.
+
+## 10. Nachtrag 16.11.: Alt-Text auf englischen Seiten
+
+Auftrag: Erst prüfen, ob die Übersetzung des Datei-Alt-Texts in Liquid ankommt. Wenn nicht, bekommt der Block ein
+übersetzbares Feld „Alt-Text“, DE und EN aus dem Alt der Datei in Files. B1 und B2 gleich mitlösen.
+
+**Test.** Commit `7d25ec4` (live ab 17:32:57) hat nur auf hp-wbf-180 einen unsichtbaren HTML-Kommentar ausgegeben.
+Er enthielt je Bild den Alt aus dem Block-Bild (auch `preview_image.alt`) und aus den Metafeldern `feature_b1`,
+`feature_b2` und `feature_r1`. Geladen um 17:34, auf Deutsch und auf `/en/`. Ergebnis: Auf der englischen Seite
+kommt der Alt der Datei auf beiden Wegen nur deutsch an, obwohl die EN-Übersetzung an allen drei Dateien
+hinterlegt und aktuell ist. Übersetzt kommen dagegen der Alt der Produktmedien und übersetzte Blocktexte an
+(Szenentext R1). Der Kommentar ist mit `f586ffd` wieder entfernt.
+
+**B1 und B2** hatten dasselbe Problem auf anderem Weg: Sie nahmen die Block-Überschrift als Alt. Diese Überschriften
+sind nicht übersetzt, also stand auch dort auf `/en/` Deutsch. Über den Alt der Datei wäre es ebenso deutsch
+geblieben.
+
+**Lösung.**
+- Neues Feld `alt` („Alt-Text“, einzeiliger Text) an der Definition `feature_block`. Die Blöcke sind übersetzbar.
+  In Translate & Adapt steht das Feld unter den Metaobjekten (Feature-Block), nicht unter Theme-Inhalten.
+- Befüllt an allen 156 Blöcken mit Bild: 57 B1, 52 B2 (mit Sticky) und 47 R1. `dgm-w1-r1` trägt den Alt von
+  `DGM002_R1_01`, weil DGM-002 sein R1-Bild aus `feature_r1` bekommt. Deutsch kommt aus dem Alt der Datei in
+  Files, Englisch aus ihrer Übersetzung.
+- Theme (`f586ffd`, live ab 17:48:39): Die Weiche gibt `blk.alt` an den Baustein, das Blockfeld hat Vorrang. Ohne
+  Blockfeld bleibt alles wie vorher. Lokal mit LiquidJS getestet, `shopify theme check` ohne neue Meldungen.
+- Folge für B1 und B2: Der Alt beschreibt jetzt das Bild statt die Überschrift zu wiederholen. Die Überschrift steht
+  weiter sichtbar daneben.
+
+**Quelle geprüft.** 134 Dateien in Files gelesen (Alt, Prüfsumme, EN-Übersetzung).
+- **113 Dateien mit Eintrag im Register** `reports/alt_en.csv` der Asset-Instanz: Der deutsche Alt in Files ist
+  laut Prüfsumme wortgleich mit dem Register. Der englische ist identisch und nicht veraltet.
+- **21 ältere Dateien** (Welle-2-Hero und die ersten G40-Bilder) haben in Files keine EN-Übersetzung. Ihre 27
+  Blöcke (14 B1, 13 B2) haben deshalb nur den deutschen Alt; auf `/en/` steht dort weiter Deutsch.
+- Beim Eintragen der 129 EN-Übersetzungen hat Shopify jede Prüfsumme akzeptiert. Damit ist auch der deutsche
+  Blockwert dieser 129 Blöcke exakt der aus Files.
+
+**Live.** Die vier vorgegebenen Seiten habe ich um 17:49 geladen, eine Seite alle 8 Sekunden:
+
+| Seite | Sprache | Alt-Texte (B1, B2, R1) |
+|---|---|---|
+| https://heipard.myshopify.com/products/hp-wbf-180 | DE | Stehender künstlicher Birkenbaum mit weißem Stamm …; Krone eines HeiPard LED-Lichterbaums in Birkenoptik …; Künstlicher Birken-Lichterbaum mit warmweißen LED-Tropfen … |
+| https://heipard.myshopify.com/products/hp-ol-50 (Hero) | DE | Warm beleuchtete Gartenterrasse am Abend mit G40 Lichterkette im Hintergrund; Nahaufnahme einer warmweiß leuchtenden G40 LED-Birne …; HeiPard G40-Lichterkette mit warmweißen Filament-Birnen … |
+| https://heipard.myshopify.com/en/products/hp-wbf-180 | EN | Floor-standing artificial birch tree …; Crown of a HeiPard LED birch light tree …; Artificial birch light tree with warm white LED drops … |
+| https://heipard.myshopify.com/en/products/hp-rsp-180 | EN | Multicolor HeiPard RGB cone light tree with a star on a snowy terrace at dusk.; … in front of a festively decorated porch at night.; … standing in a living room corner next to a tall window at night. |
+
+Zur Kontrolle danach alle 118 Seiten auf Deutsch und Englisch, von 17:50 bis 18:24. Alle 236 Seiten laden mit
+Status 200, ohne Liquid-Fehler. Auf Deutsch tragen alle 320 Feature-Bilder den Alt aus dem Blockfeld. Auf Englisch
+tragen 261 den englischen Alt. 59 tragen den deutschen, weil ihre Datei keine EN-Übersetzung hat (34 Seiten:
+BLM, BLT, CTL Welle 2, DCT, DFM, NPT, OL-Standard, OL-G40 Hero, OLA-G40, OLAS14, OLH-G40, SBLB, VIT). Sonst gibt es
+keine Abweichung.
+
+**Hinweise.**
+- **Pflegeregel:** Ändert sich ein Alt in Files (wie heute um 16:52 bei `CTL_R1_01` und `VLM_R1_01`), muss das
+  Blockfeld nachgezogen werden, DE und EN. Sonst zeigt die Seite den alten Text. Das betrifft die Asset-Instanz bei
+  jeder Neubeschriftung.
+- **21 Dateien ohne EN-Alt in Files:** nachtragen (Asset-Instanz). Danach EN am Block ergänzen.
+- **Andere Bild-Blöcke:** Steuerung, Hotspot, Schieber und Farbwechsel nutzen eigene Bausteine und sind nicht Teil
+  des Auftrags. Ihr Alt ist unverändert.
+- **Sichtbare Texte:** Überschriften und Texte von B1, B2 und R1 haben außer den acht Szenentexten keine
+  EN-Übersetzung. Auf `/en/` sind sie deutsch. Das ist ein eigener Punkt.
+
+Rückweg: `f586ffd` zurücknehmen. Das Feld `alt` kann bleiben, ohne Theme-Code wird es nicht gelesen.

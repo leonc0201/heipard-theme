@@ -64,6 +64,8 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   hp-wbf-210 gesetzt. Bericht `heipard-r1-bilder-bericht.md`.
   Am Abend R1 mit Szenentext (kein Fakt) für BAUM-PEC, BAUM-PVC, BSX, DPT, FXF, TPM, VAM, WBF, DE und EN
   (Bericht Abschnitt 9).
+  Alt-Text auf `/en/`: Blockfeld `alt` (übersetzbar) an 156 Blöcken, DE/EN aus Files, Theme `f586ffd`
+  (Bericht Abschnitt 10).
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
