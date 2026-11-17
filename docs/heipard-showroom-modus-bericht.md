@@ -15,7 +15,8 @@ Produktdaten, Preise, Medien, Metafelder, Produktstatus, Files. Uhrzeiten deutsc
   Cart-Benachrichtigung und Cart-Drawer, Preisfilter und Preissortierung, `offers` im JSON-LD und `og:price`.
 - **Neu:** In der Kaufbox bleibt die Variantenauswahl. Darunter steht ein Hinweis „Bald im Shop erhältlich“ mit dem
   Button „Bei Fragen schreiben“ zur Kontaktseite. `/cart` zeigt „Der Shop öffnet bald“ mit zwei Buttons statt des
-  Warenkorbs.
+  Warenkorbs. Seit 17.11. ohne die Sektion „Featured collection“ darunter; mit Schalter aus erscheint sie mit dem
+  Titel „Das könnte dir auch gefallen“ und Übersetzung (Abschnitt 9).
 - **Live geprüft:** Startseite, Kollektion, drei Produktseiten (Hero, Standard, Long-Tail), Suche, `/cart` und eine
   englische Produktseite, je vorher, mit Schalter an und mit Schalter aus. Mit Schalter an gibt es nirgends einen
   Preis- oder Kauf-Baustein, mit Schalter aus ist jede Seite wieder wie vorher.
@@ -100,9 +101,8 @@ B2B-Schnellbestellliste (`quick-order-list`), Geschenkkarte. Kein Newsletter- od
   „Bald im Shop erhältlich“ und der sekundäre Button „Bei Fragen schreiben“ zur Kontaktseite. Der Variantenwechsel
   funktioniert weiter (live geprüft an hp-rsp-180: URL mit `?variant=`, Box bleibt, kein Preis, keine JS-Fehler).
 - **Produktkarten:** gleiche Karte ohne Preiszeile, kein leerer Platz.
-- **`/cart`:** Überschrift „Der Shop öffnet bald“, Buttons „Zu den Produkten“ und „Bei Fragen schreiben“. Darunter
-  folgt wie bisher die Sektion „Featured collection“ der Warenkorb-Vorlage (Karten ohne Preis). Ihr Titel steht seit
-  jeher englisch in `templates/cart.json`; nicht geändert.
+- **`/cart`:** Überschrift „Der Shop öffnet bald“, Buttons „Zu den Produkten“ und „Bei Fragen schreiben“. Die
+  Sektion „Featured collection“ der Warenkorb-Vorlage entfällt im Showroom-Modus (Nachtrag 17.11., Abschnitt 9).
 
 ## 5. Live-Prüfung
 
@@ -175,3 +175,51 @@ Theme hat darauf keinen Einfluss. Geprüft um 19:34: `/products/hp-rsp-180.js` l
 Verkaufsfähig machen: Theme-Editor → Theme-Einstellungen → Showroom → Schalter aus, speichern. Das ist live geprüft,
 alle Seiten sind dann wie vor der Änderung. Den Code ganz entfernen: `64ac89a`, `37fa17a` und `058c578`
 zurücknehmen.
+
+## 9. Nachtrag 17.11.: Featured collection auf /cart
+
+Auftrag: Auf `/cart` die Sektion „Featured collection“ im Showroom-Modus ausblenden. Mit Schalter aus bleibt sie,
+dann mit deutschem Titel und Übersetzung.
+
+**Umsetzung** (Commit `4540112`, live ab 12:08):
+- `sections/featured-collection.liquid`: Die gesamte Ausgabe (Stylesheets, Skripte, Markup) steht in
+  `unless settings.showroom_mode and request.page_type == 'cart'`. Die Sektion wird nur in der Warenkorb-Vorlage
+  verwendet; die Bedingung auf `/cart` sorgt dafür, dass sie an anderer Stelle normal erscheint, falls sie dort
+  später eingesetzt wird. Shopify gibt dann nur den leeren Sektionsrahmen aus. Der erzeugt keinen Abstand, weil der
+  Sektionsabstand des Themes auf 0 steht.
+- `templates/cart.json`: Titel „Das könnte dir auch gefallen“ statt „Featured collection“. Shopify hat die Datei beim
+  Sync normalisiert (Kopfkommentar, Reihenfolge der Schlüssel); der Inhalt ist gleich.
+- **Übersetzung** über die Template-Übersetzung (`translationsRegister` an
+  `OnlineStoreThemeJsonTemplate/cart`, Prüfsumme des neuen deutschen Titels), 12:09, vorher `get-shop-info` =
+  HeiPard: Englisch „You might also like“, Spanisch „También te puede gustar“, Französisch „Vous aimerez peut-être
+  aussi“, Italienisch „Potrebbe piacerti anche“. Gesetzt in allen vier veröffentlichten Sprachen, weil die alten
+  Übersetzungen („Featured collection“, „Colección destacada“, „Collection à la une“, „Collezione in evidenza“) nach
+  der Titeländerung nicht als veraltet galten und sonst weiter angezeigt worden wären. Spanisch und Französisch
+  folgen der Anrede der übrigen Template-Texte dort (Spanisch du, Französisch vous). In Translate & Adapt stehen die
+  Texte unter Online Store, Vorlage Warenkorb.
+- `shopify theme check`: keine neue Meldung.
+
+**Live** (eine Seite alle 8 Sekunden, ausgewertet per Skript: Sektion, Titel, Produktkarten, Showroom-Hinweis,
+sichtbare Euro-Beträge, Liquid-Fehler):
+
+| Seite | gestern, Schalter an | heute, Schalter an | heute, Schalter aus |
+|---|---|---|---|
+| https://heipard.myshopify.com/cart | Hinweis, darunter „Featured collection“ mit 4 Karten | nur Hinweis | „Das könnte dir auch gefallen“, 4 Karten, 9 Euro-Beträge |
+| https://heipard.myshopify.com/en/cart | – | nur Hinweis („The shop opens soon“) | „You might also like“, 4 Karten |
+| https://heipard.myshopify.com/es/cart | – | nur Hinweis | „También te puede gustar“, 4 Karten |
+| https://heipard.myshopify.com/fr/cart | – | nur Hinweis | „Vous aimerez peut-être aussi“, 4 Karten |
+| https://heipard.myshopify.com/it/cart | – | nur Hinweis | „Potrebbe piacerti anche“, 4 Karten |
+
+- Schalter an: 12:14 bis 12:28. Keine Karte, kein Titel, kein Euro-Betrag, keine Liquid-Fehler.
+- Schalter aus: Test-Commit `5a657ef` (live 12:28:56), geprüft 12:29 bis 12:30. Die 9 Euro-Beträge auf `/cart`
+  entsprechen dem Stand mit Schalter aus vom 16.11. Zurückgenommen mit `666ac3c` (live 12:30:11, Prüfsumme von
+  `settings_data.json` wieder wie vor dem Test).
+- Endstand 12:30 bestätigt (`/cart` und `/en/cart`): Showroom an, nur der Hinweis.
+
+**Nicht angefasst:** Produktdaten, Preise, Medien, Metafelder, Produktstatus, Files.
+
+Rückweg: `4540112` zurücknehmen. Dann steht wieder „Featured collection“ als Titel da, und die vier Übersetzungen
+sind in Translate & Adapt neu zu setzen.
+
+**Ebenfalls am 17.11.:** Die englischen Alt-Texte an den 27 übrigen Feature-Blöcken sind eingetragen (Bericht
+`docs/heipard-r1-bilder-bericht.md`, Abschnitt 11).

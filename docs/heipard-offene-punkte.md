@@ -276,12 +276,14 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **Alt-Text auf Englisch** (2026-11-16) — Datei-Alt kommt in Liquid nur deutsch an. Neues Blockfeld `alt`
   (übersetzbar) an 156 Blöcken B1/B2/R1, DE und EN aus Files; Theme liest es zuerst (`f586ffd`). Bericht R1-Bilder
   Abschnitt 10.
-- [ ] **21 Dateien ohne EN-Alt in Files** — Welle-2-Hero und die ersten G40-Bilder (27 Blöcke B1/B2, 34 Seiten auf
-  `/en/` mit deutschem Alt). Asset-Instanz übersetzt, danach EN am Blockfeld `alt` ergänzen.
+- [x] **21 Dateien ohne EN-Alt in Files** (2026-11-17) — Asset-Instanz hat übersetzt (Auftrag 18, Abschnitt 11),
+  EN am Blockfeld `alt` der 27 Blöcke (14 B1, 13 B2) eingetragen; die 34 Seiten auf `/en/` live geprüft, kein
+  deutscher Alt mehr. Bericht R1-Bilder Abschnitt 11.
 - [ ] **Pflegeregel Alt-Text** — Neubeschriftung in Files immer auch im Blockfeld `alt` (DE und EN) nachziehen.
 - [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
   keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live
-  geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`.
+  geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`. Nachtrag 17.11.: „Featured collection“
+  auf `/cart` im Showroom-Modus aus, sonst mit Titel „Das könnte dir auch gefallen“ und Übersetzung (en/es/fr/it).
 - [ ] **Showroom: Shopify-Einstellungen (Leon)** — echte Preise im Backend sind über Quelltext und
   `/products/<handle>.js` auffindbar (0,00 € falls unerwünscht); `/checkout` und `/cart/add` nur über Bestand 0 ohne
   Weiterverkauf oder ohne Zahlungsanbieter zu sperren; Passwortschutz in den Shopify-Einstellungen aufheben.

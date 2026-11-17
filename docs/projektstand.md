@@ -65,11 +65,13 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   Am Abend R1 mit Szenentext (kein Fakt) für BAUM-PEC, BAUM-PVC, BSX, DPT, FXF, TPM, VAM, WBF, DE und EN
   (Bericht Abschnitt 9).
   Alt-Text auf `/en/`: Blockfeld `alt` (übersetzbar) an 156 Blöcken, DE/EN aus Files, Theme `f586ffd`
-  (Bericht Abschnitt 10).
+  (Bericht Abschnitt 10). Am 17.11. EN an den 27 übrigen Blöcken (Bericht Abschnitt 11), damit alle
+  Feature-Bilder auf `/en/` mit englischem Alt.
 - **Showroom-Modus** (2026-11-16, Auftrag `heipard-theme-auftrag-showroom-modus.md`): Theme-Schalter
   `showroom_mode` (Standard an) blendet Preise, Warenkorb und Kauf aus, Kaufbox mit Hinweis und Kontakt-Button,
   `/cart` Hinweisseite, JSON-LD ohne `offers`. Commits `058c578`, `37fa17a`, `64ac89a`. Bericht
-  `heipard-showroom-modus-bericht.md`.
+  `heipard-showroom-modus-bericht.md`. Nachtrag 17.11. (`4540112`): „Featured collection“ auf `/cart` im
+  Showroom-Modus aus, Titel deutsch mit Übersetzung.
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 

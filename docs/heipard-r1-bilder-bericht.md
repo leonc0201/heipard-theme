@@ -325,3 +325,48 @@ keine Abweichung.
   EN-Übersetzung. Auf `/en/` sind sie deutsch. Das ist ein eigener Punkt.
 
 Rückweg: `f586ffd` zurücknehmen. Das Feld `alt` kann bleiben, ohne Theme-Code wird es nicht gelesen.
+
+## 11. Nachtrag 17.11.: EN-Alt an den 27 übrigen Blöcken
+
+Auftrag: Die 21 englischen Alt-Texte aus dem Asset-Bericht (`reports/auftrag_18.md`, Abschnitt 11) in das Blockfeld
+`alt` der 27 Blöcke übernehmen, die nach Abschnitt 10 noch nur Deutsch hatten, und die 34 englischen Seiten prüfen.
+
+**Quelle geprüft.** Vorher frisch gelesen (17.11., kurz vor 12:05): Alle 21 Dateien haben in Files die englische Übersetzung,
+keine ist veraltet. Die 27 Blöcke hatten keine einzige Übersetzung. Die Prüfsumme des deutschen Blockwerts ist bei
+allen 27 gleich der Prüfsumme des deutschen Alts ihrer Datei. Die Texte kommen per Skript aus der Tabelle in
+Abschnitt 11, nicht abgetippt, und sind wortgleich mit dem Register `reports/alt_en.csv` (Englisch und Deutsch,
+keine Abweichung). Längster Text 121 Zeichen.
+
+**Eingetragen.** Vor dem Schreiben `get-shop-info`: HeiPard. 27 × `translationsRegister` (Englisch, Schlüssel `alt`,
+Prüfsumme des deutschen Blockwerts) um 12:05. Shopify hat alle 27 ohne Fehlermeldung angenommen; die Gegenlesung zeigt
+27 Übersetzungen, keine veraltet. Der deutsche Wert, Bilder, Titel und Texte der Blöcke sind unverändert.
+
+| Datei | Blöcke |
+|---|---|
+| `OLG40_B1_01` | `ol-g40-b1`, `ol-b1`, `olh-g40-b1`, `ola-g40-b1` |
+| `OLG40_B2_01` | `ol-g40-b2`, `ol-b2` |
+| `KAT-LED_B1_01` | `blt-b1`, `blm-b1`, `ols-s11-b1` |
+| je eine Datei | `blm-b2`, `blt-b2`, `ctl-b1`, `ctl-b2`, `ctl-m-b2`, `dct-b1`, `dct-b2`, `dct-sticky`, `dfm-b1`, `npt-b1`, `npt-b2`, `npt-sticky`, `olas14-b1`, `olas14-b2`, `sblb-b1`, `sblb-b2`, `vit-b1`, `vit-b2` |
+
+`ols-s11-b1` hängt an keinem Feature-Set (abgefragt über die Verweise am Block) und erscheint auf keiner Seite. Die
+Übersetzung ist trotzdem gesetzt, damit der Block vollständig ist, falls er wieder eingesetzt wird.
+
+**Live.** Die 34 Seiten aus Abschnitt 10 auf `/en/` von 12:08 bis 12:14 geladen, eine Seite alle 8 Sekunden. Alle mit
+Status 200, englisch (`lang="en"`), ohne Liquid-Fehler. Die 87 Feature-Bilder dieser Seiten tragen alle einen
+englischen Alt: 59 den neuen aus diesem Nachtrag (genau die 59, die am 16.11. noch deutsch waren), 28 den vom 16.11.
+Kein deutscher Alt mehr. Die übrigen 84 Seiten habe ich heute nicht erneut geladen; an ihnen hat sich nichts
+geändert, und am 16.11. trugen sie bereits den englischen Alt. Zusammen tragen auf Englisch damit alle 320
+Feature-Bilder (B1, B2, R1) der 118 Seiten den englischen Alt.
+
+Seiten: hp-blm-100-eu, hp-blt-050, hp-blt-100-eu-1, hp-ctl-180m, hp-ctl-210-eu-1, hp-ctl-240m, hp-ctl-400-eu-1,
+hp-dct-200, hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu, hp-npt-210, hp-ol-100, hp-ol-15-g, hp-ol-15, hp-ol-25,
+hp-ol-30, hp-ol-50, hp-ol-75, hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu, hp-ola-s14-15-eu,
+hp-ola-s14-30-eu, hp-ola-s14-50-eu, hp-olh-g40-15, hp-olh-g40-20, hp-olh-g40-25, hp-olh-g40-35, hp-olh-g40-50,
+hp-sblb-100l-ww-new, hp-sblb-60l-ww-new, hp-vit-586l-eu-1, hp-vit-864l-eu-1 (jeweils
+`https://heipard.myshopify.com/en/products/<handle>`).
+
+**Offen bleibt** aus Abschnitt 10 nur: Überschriften und Texte von B1, B2 und R1 haben außer den acht Szenentexten
+keine EN-Übersetzung. Die Pflegeregel gilt weiter: Ändert sich ein Alt in Files, das Blockfeld DE und EN nachziehen.
+
+Rückweg: Die 27 Übersetzungen löschen (`translationsRemove`, Schlüssel `alt`, Sprache `en`). Theme-Code ist nicht
+betroffen.
