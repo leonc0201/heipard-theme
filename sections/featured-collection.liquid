@@ -1,3 +1,5 @@
+{%- comment -%} Showroom-Modus: auf /cart nichts ausgeben (der Warenkorb zeigt dort den Showroom-Hinweis) {%- endcomment -%}
+{%- unless settings.showroom_mode and request.page_type == 'cart' -%}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -213,6 +215,7 @@
     {%- endif -%}
   </div>
 </div>
+{%- endunless -%}
 
 {% schema %}
 {
