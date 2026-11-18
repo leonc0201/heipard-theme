@@ -1,7 +1,7 @@
 # Bericht: Feature-Blöcke R2 und R3 (Schritt C, Teil A)
 
 Auftrag `heipard-theme-auftrag-r2r3-und-sets.md`, Teil A (Entscheidung Leon 18.11.2026).
-Stand 18.11.2026, 20:45 Uhr. **Teil A ist live und abgenommen**: Theme seit 18:46, Sets seit 18:49 Uhr, Bilder der
+Stand 18.11.2026, 20:45 Uhr, Nachzug 19.11.2026 (Abschnitt 10). **Teil A ist live und abgenommen**: Theme seit 18:46, Sets seit 18:49 Uhr, Bilder der
 Asset-Instanz (Auftrag 21) seit 19:41 bzw. 20:05 Uhr. Seitdem zeigen alle 118 aktiven Produktseiten R2 und R3.
 Abnahme am Testprodukt hp-olt-100 und Gegenprobe auf allen 118 Seiten in Abschnitt 8.
 
@@ -319,13 +319,42 @@ potted bay tree“). Dass B1, B2 und R1 auf `/en/` deutsche Überschriften haben
 - [x] Abnahme am Testprodukt hp-olt-100, Aufnahmen Desktop und Mobil live (Abschnitt 8).
 - [x] Blockfeld `alt` der 104 Blöcke, DE und EN (Abschnitt 8).
 - [x] DCT-R3 und SBLB-R2/-R3 gegen die freigegebenen Bilder geprüft, passen. ISL-R3 angepasst (Abschnitt 3).
-- [ ] Frage an Leon: R1 auch in 16:9 (Abschnitt 6)? Auf der Live-Seite sieht man es jetzt direkt: R1 ist höher als
-  R2 und R3 darunter.
-- [ ] Für Teil B: DFM, DFM 600 und SBLB haben seit Auftrag 20 ein R1-Bild. Die Kennzahl steht damit nicht mehr als
-  Paar neben R1, sondern allein zwischen R1 und R2. Ob R2 und R3 dort direkt hinter R1 rücken, klärt Teil B.
-- [ ] UCP: Die Blöcke `ucp-b1`, `ucp-b2` und `ucp-r1` haben eigene Texte, die Bilder sind aber die von UCT. Bei R1
+- [x] Frage an Leon: R1 auch in 16:9? Antwort 19.11.: jetzt keine Umstellung, Vergleichsvorschau im Bericht zu
+  Teil B (`docs/heipard-teil-b-sets-bericht.md`).
+- [x] Drei Texte gegen die Bilder in voller Auflösung korrigiert: BLT-R3, UCT-R2, OLSST38-R2 (Abschnitt 10).
+- [x] Für Teil B: DFM, DFM 600 und SBLB haben seit Auftrag 20 ein R1-Bild. Die Kennzahl steht damit nicht mehr als
+  Paar neben R1, sondern allein zwischen R1 und R2. Antwort 19.11.: bleibt so (R1, Kennzahl, R2, R3), Aufnahme
+  hp-dfm-600 im Bericht zu Teil B.
+- [ ] UCP (Teil B): Die Blöcke `ucp-b1`, `ucp-b2` und `ucp-r1` haben eigene Texte, die Bilder sind aber die von UCT. Bei R1
   passt der Text nicht zum Bild (Text „Abends ein Blickfang im Wohnzimmer“, Bild Pergola hinter einem Gartentisch).
   Gehört zur Prüfung „Bild ohne passenden Text“ in Teil B.
+
+## 10. Nachzug 19.11.: drei Textkorrekturen
+
+Auftrag `heipard-theme-auftrag-teil-b-start.md`, Abschnitt 1. Leon hat die Bilder in voller Auflösung gesichtet,
+bei drei Blöcken widersprach der Text dem Bild. Ich hatte die 104 Texte am 18.11. auf Vorschaubildern mit 480 px
+Breite gelesen, daran sind die drei Abweichungen durchgerutscht. Für die Korrektur habe ich die Bilder mit 1600 px
+geladen, die Befunde stimmen. Vor dem Schreiben `get-shop-info` = HeiPard, alte Fassung DE und EN gesichert.
+
+| Block | vorher | nachher |
+|---|---|---|
+| `blt-r3` DE | In der Glaslaterne / Aufgewickelt in einer großen Glaslaterne leuchtet … | Im Vorratsglas / Aufgewickelt in einem großen Vorratsglas leuchtet die Lichterkette an einem Sommerabend mitten auf dem Gartentisch. |
+| `blt-r3` EN | Inside a glass lantern / Coiled inside a large glass lantern, … | Inside a glass jar / Coiled inside a large glass jar, the string light glows in the middle of the garden table on a summer evening. |
+| `uct-r2` DE | Hinter der Gardine / … leuchtet der Lichtervorhang vor dem Schlafzimmerfenster durch die weiße Gardine, davor steht das Bett … | Vor der Gardine / Am Abend leuchtet der Lichtervorhang vor der weißen Gardine am Schlafzimmerfenster, im Vordergrund steht das Bett mit heller Bettwäsche. |
+| `uct-r2` EN | Behind the sheer curtain / … glows through the white sheer …, with the bed and its light bedding in front. | In front of the sheer curtain / In the evening, the light curtain glows in front of the white sheer at the bedroom window, with the bed and its light bedding in the foreground. |
+| `ols-st38-r2` DE | … über der Bank am Ende des Gartenwegs … | Die Lichterkette hängt an der Holzlaube über der Bank am Gartenweg und leuchtet in der Dämmerung zwischen den Blumen. (Überschrift bleibt) |
+| `ols-st38-r2` EN | … above the bench at the end of the garden path … | The string light hangs on the wooden arbor above the bench by the garden path and glows among the flowers at dusk. (Überschrift bleibt) |
+
+DE per `metaobjectUpdate`, EN per `translationsRegister` mit der Prüfsumme des neuen DE-Texts, alle ohne Fehler,
+danach keine EN-Übersetzung als veraltet markiert. Die Alt-Felder sind unverändert. `uct-r2` steht in den Sets
+`uct` und `ucp`, `blt-r3` im Set der BLT-Familie (auch an hp-blm-100-eu).
+
+**Live geprüft (19.11., 00:20 Uhr):** hp-blt-050, hp-blt-100-eu-1, hp-blm-100-eu, hp-uct-200-eu, hp-ucp-200 und
+hp-ols-st38-16, jeweils DE und `/en/`. Die neuen Texte stehen auf allen zwölf Seiten, die alten Wendungen
+(„Glaslaterne“, „Hinter der Gardine“, „Ende des Gartenwegs“ und die englischen Entsprechungen) auf keiner.
+Keine Liquid-Fehler.
+
+Rückweg: alte Fassung DE und EN steht in der Historie von `docs/data/r2r3-bloecke.json` (Commit `44eabfa`).
 
 ## Rückweg
 
