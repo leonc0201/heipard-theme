@@ -21,6 +21,8 @@
                  optional mit Titel davor: "Titel | Text".
                  'r1' (nur media_text): R1-Text mit Bild aus der Block-Weiche, Klasse
                  heipard-feature__row--r1, sonst wie B2.
+                 'szene' (nur media_text): Szenenbild R2/R3 aus der Block-Weiche, Klasse
+                 heipard-feature__row--szene (Bild 16:9), Alt wie R1.
     alt          Alt-Text aus dem Blockfeld alt (übersetzbar, DE und EN aus dem Alt der Datei in
                  Files). Hat Vorrang. Fehlt er: R1 nimmt den Alt der Datei, sonst die Überschrift;
                  B1 und B2 nehmen die Überschrift, sonst den Alt der Datei. Der Alt der Datei kommt
@@ -38,7 +40,7 @@
     assign img_sizes = '(min-width: 750px) 50vw, 100vw'
   endif
   assign img_alt = title | default: image.alt
-  if variant == 'r1'
+  if variant == 'r1' or variant == 'szene'
     assign img_alt = image.alt | default: title
   endif
   if alt != blank
@@ -118,7 +120,7 @@
       assign is_sticky = true
     endif
   -%}
-  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}{% if is_sticky %} heipard-feature__row--sticky{% endif %}{% if variant == 'r1' %} heipard-feature__row--r1{% endif %}">
+  <div class="heipard-feature__row{% if reverse %} heipard-feature__row--reverse{% endif %}{% if is_sticky %} heipard-feature__row--sticky{% endif %}{% if variant == 'r1' %} heipard-feature__row--r1{% endif %}{% if variant == 'szene' %} heipard-feature__row--szene{% endif %}">
     <div class="heipard-feature__media">{{ media_html }}</div>
     <div class="heipard-feature__text">
       {%- if is_sticky -%}

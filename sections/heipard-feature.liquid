@@ -29,6 +29,10 @@
     - R1 mit Bild (Bild am Block, sonst Produkt-Metafeld heipard.feature_r1) wird als
       Bild-Text-Zeile wie B2 gerendert, das Bild auf der anderen Seite als in der
       Zeile davor; ohne Bild bleibt R1 schmaler Text.
+    - Szene R2/R3 (Block-Typ szene, Variante r2/r3; Auftrag Schritt C, 18.11.2026): Bild aus
+      dem Produkt-Metafeld heipard.feature_r2 bzw. feature_r3, Bild-Text-Zeile wie R1 mit
+      Bild 16:9, Seite wechselt weiter ab. Leeres Metafeld: Block fällt still weg, die
+      Seite bleibt wie ohne den Block. Zählt nicht zum Block-Limit.
     - Blöcke ohne Inhalt oder ohne Metafeld-Daten werden übersprungen.
     - Schmale Blöcke (R1 Text, D6 Kennzahl, D2 Kelvin): folgen zwei aufeinander,
       stehen sie ab Desktop nebeneinander (heipard-feature__pair).
@@ -116,8 +120,14 @@
     endif
   -%}
   {%- for pass in (1..2) -%}
+    {%- assign sz_seen = 0 -%}
     {%- for blk in fblocks -%}
       {%- liquid
+        # Szenenblöcke zählen für die uid nicht mit: die uid der übrigen Blöcke bleibt so,
+        # wie sie ohne R2/R3 im Set wäre.
+        if blk.layout.value == 'szene'
+          assign sz_seen = sz_seen | plus: 1
+        endif
         if pass == 1 and forloop.index0 != b1_index
           continue
         endif
@@ -132,7 +142,8 @@
           assign allow_loud = true
         endif
         assign next_mt = mt_index | plus: 1
-        assign uid = section.id | append: '-' | append: forloop.index
+        assign uid_index = forloop.index | minus: sz_seen
+        assign uid = section.id | append: '-' | append: uid_index
 
         # Long-Tail zeigt ein B2 nur mit gesetztem Metafeld feature_b2.
         if dramaturgie == 'longtail' and type == 'media_text' and has_b2_meta == false
@@ -183,7 +194,8 @@
           continue
         endif
 
-        if max_blocks > 0 and count >= max_blocks
+        # Szene (R2/R3) zählt nicht zum Limit, damit Kettenplan und Icon-Grid bleiben.
+        if max_blocks > 0 and count >= max_blocks and type != 'szene'
           assign note = 'heipard.blocks.editor.limit' | t: block: blk_label, max: max_blocks
           assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
           continue
@@ -205,7 +217,7 @@
           assign is_split = true
           assign html = html | remove: '<!--fb-split-->'
         endif
-        if type == prev_type
+        if type == prev_type and type != 'szene'
           assign note = 'heipard.blocks.editor.repeat' | t: block: type
           assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
         endif
@@ -217,7 +229,9 @@
           endif
         endif
         assign prev_type = type
-        assign count = count | plus: 1
+        if type != 'szene'
+          assign count = count | plus: 1
+        endif
         if narrow_types contains type and is_split == false
           if narrow_pending == blank
             assign narrow_pending = html

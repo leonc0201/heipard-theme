@@ -21,6 +21,8 @@
     sequenz       P2 Sequenz
     farbwechsel   I4 Farbwechsel (laut; Varianten ueberblendung, rgb)
     zaesur        R2 Zäsur (zählt nicht zum Block-Limit)
+    szene         Szenenbild R2/R3 (Variante r2, r3): Bild aus heipard.feature_r2/_r3,
+                  ohne Bild kein Markup; zählt nicht zum Block-Limit
 
   Ausgabe-Protokoll für die Sektion:
     <!--fb-loud-->   der Block ist laut (zählt gegen das Limit)
@@ -29,10 +31,10 @@
   JSON-Feld { "sonst": "<typ>" }, wird dann dieser Typ versucht (z. B. Kettenplan,
   sonst Zeitband).
 
-  R1 mit Bild gibt vor dem Markup <!--fb-split--> aus: die Sektion behandelt den Block
-  dann wie eine Bild-Text-Zeile (kein schmales Paar, zählt für den Seitenwechsel).
+  R1 mit Bild und Szene geben vor dem Markup <!--fb-split--> aus: die Sektion behandelt den
+  Block dann wie eine Bild-Text-Zeile (kein schmales Paar, zählt für den Seitenwechsel).
 
-  Parameter: blk, product, index, allow_loud, uid, split_side ('left' | 'right', für R1 mit Bild)
+  Parameter: blk, product, index, allow_loud, uid, split_side ('left' | 'right', für R1 mit Bild und Szene)
 {%- endcomment -%}
 {%- liquid
   assign type = blk.layout.value | default: 'media_text'
@@ -89,6 +91,24 @@
             render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: r1_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'r1', alt: blk.alt.value
           else
             render 'heipard-fb-text', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value
+          endif
+        -%}
+      {%- when 'szene' -%}
+        {%- liquid
+          # R2/R3 Szenenbild (Asset-Codes <FAM>_R2/_R3, nicht die Zäsur R2 aus dem Vokabular):
+          # Bild nur aus dem Produkt-Metafeld heipard.feature_r2 (Variante r2) bzw. feature_r3
+          # (Variante r3). Leeres Metafeld: kein Markup, der Block fällt still weg.
+          # Mit Bild: Bild-Text-Zeile wie R1, Seite aus der Sektion (split_side), Bild 16:9.
+          assign sz_img = ''
+          case blk.variant.value
+            when 'r2'
+              assign sz_img = product.metafields.heipard.feature_r2.value
+            when 'r3'
+              assign sz_img = product.metafields.heipard.feature_r3.value
+          endcase
+          if sz_img != blank
+            echo '<!--fb-split-->'
+            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: sz_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'szene', alt: blk.alt.value
           endif
         -%}
       {%- when 'kettenplan' -%}
