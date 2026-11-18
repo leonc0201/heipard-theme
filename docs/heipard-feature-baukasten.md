@@ -64,6 +64,7 @@ trotzdem je SKU die richtigen Werte, weil sie die Metafelder des jeweiligen Prod
 | `sequenz` | P2 | Bildfolge (3 bis 4 Bilder), Unterschriften zeilenweise im Textfeld | Block |
 | `farbwechsel` | I4 (laut) | Bild, Zweites Bild, Variante | Block |
 | `zaesur` | R2 | ein Satz im Titel | Block |
+| `szene` | Szenenbild R2/R3 (Asset-Codes, nicht die Zäsur) | Variante `r2` oder `r3`, Titel, Text | Bild aus Metafeld `feature_r2` bzw. `feature_r3` |
 
 Kicker und Titel der Daten-Blöcke haben einen Standardtext aus den Sprachdateien. Trägst du im
 Block etwas ein, gilt dein Text.
@@ -148,6 +149,14 @@ stehen die Punkte einfach untereinander.
 
 Ein Satz in großer Schrift als Kapitelbruch. Der Satz steht im Titel des Blocks, der Kicker ist
 optional. Die Zäsur zählt nicht zum Block-Limit.
+
+### Szene R2 und R3 (Block-Typ `szene`)
+
+Weitere Szenenbilder der Familie (Hermes `<FAM>_R2_01`, `<FAM>_R3_01`, 16:9). Das Bild kommt nur aus dem
+Produkt-Metafeld `heipard.feature_r2` (Variante `r2`) bzw. `heipard.feature_r3` (Variante `r3`), Titel und Text
+aus dem Block. Bild-Text-Zeile wie R1, Bild 16:9 ohne Zuschnitt, Seite im Wechsel mit der Zeile davor. Ist das
+Metafeld leer, fällt der Block still weg. Die Szene zählt nicht zum Block-Limit. Im Set steht sie direkt hinter
+R1. Seit 18.11.2026, Bericht `heipard-r2r3-szene-bericht.md`.
 
 ### P2 Sequenz
 
@@ -240,7 +249,7 @@ oder Zeitband".
 - **Ein lauter Block:** Laut sind Video, Schieber, Farbwechsel und die Steuerung mit Leuchtmodi.
   Pro Set wird einer laut gezeigt, in `standard` und `longtail` keiner. Jeder weitere erscheint
   leise: das Video als Standbild, Schieber und Farbwechsel als Bild, die Steuerung ohne Modus-Buttons.
-- **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Die Zäsur zählt nicht mit.
+- **Block-Limit:** `hero` 8, `standard` 5, `longtail` 3 Blöcke. Die Zäsur und die Szene (R2/R3) zählen nicht mit.
   Ohne Dramaturgie gibt es kein Limit.
 - **Zwei gleiche Typen hintereinander** werden gezeigt, der Theme-Editor weist aber darauf hin.
 - **Schmale Blöcke paarweise:** Folgen zwei schmale Blöcke (R1 Text, D6 Kennzahl, D2 Kelvin) aufeinander,

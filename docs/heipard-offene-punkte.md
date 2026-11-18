@@ -280,6 +280,11 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   EN am Blockfeld `alt` der 27 Blöcke (14 B1, 13 B2) eingetragen; die 34 Seiten auf `/en/` live geprüft, kein
   deutscher Alt mehr. Bericht R1-Bilder Abschnitt 11.
 - [ ] **Pflegeregel Alt-Text** — Neubeschriftung in Files immer auch im Blockfeld `alt` (DE und EN) nachziehen.
+- [ ] **Schritt C Teil A: R2/R3** (seit 2026-11-18) — Block-Typ `szene` (`f06ed96`), Definitionen `feature_r2`/`feature_r3`,
+  104 Blöcke mit Szenentext DE/EN stehen. Offen: Push (hermes-lc ohne Schreibrecht am Repo), Sets erweitern (61),
+  Vergleich der 118 Seiten mit der Ist-Aufnahme, Abnahme am Testprodukt der Asset-Instanz (Auftrag 21), Blockfeld
+  `alt` nach dem Einspielen der Dateien, Frage R1 in 16:9. Bericht `heipard-r2r3-szene-bericht.md`.
+- [ ] **Schritt C Teil B: Sets für die Familien aus Auftrag 20** — wartet auf die Meldung der Asset-Instanz.
 - [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
   keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live
   geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`. Nachtrag 17.11.: „Featured collection“
