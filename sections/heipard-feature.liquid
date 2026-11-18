@@ -29,6 +29,9 @@
     - R1 mit Bild (Bild am Block, sonst Produkt-Metafeld heipard.feature_r1) wird als
       Bild-Text-Zeile wie B2 gerendert, das Bild auf der anderen Seite als in der
       Zeile davor; ohne Bild bleibt R1 schmaler Text.
+    - B1 und B2 ohne Bild und Video am Block (Auftrag Teil B, 19.11.2026): B1 ist der Block an
+      b1_index, B2 der erste media_text ohne Variante sticky. Sie zeigen dann das Bild aus dem
+      Produkt-Metafeld heipard.feature_b1 bzw. feature_b2. Ein Bild am Block hat immer Vorrang.
     - Szene R2/R3 (Block-Typ szene, Variante r2/r3; Auftrag Schritt C, 18.11.2026): Bild aus
       dem Produkt-Metafeld heipard.feature_r2 bzw. feature_r3, Bild-Text-Zeile wie R1 mit
       Bild 16:9, Seite wechselt weiter ab. Leeres Metafeld: Block fällt still weg, die
@@ -118,6 +121,7 @@
     if product.metafields.heipard.feature_b2.value != blank
       assign has_b2_meta = true
     endif
+    assign b2_slot_done = false
   -%}
   {%- for pass in (1..2) -%}
     {%- assign sz_seen = 0 -%}
@@ -154,6 +158,15 @@
           continue
         endif
 
+        # B1/B2-Slot für den Rückfall aufs Produkt-Metafeld (nur wenn der Block kein Bild hat).
+        assign slot = ''
+        if pass == 1
+          assign slot = 'b1'
+        elsif type == 'media_text' and blk.variant.value != 'sticky' and b2_slot_done == false
+          assign slot = 'b2'
+          assign b2_slot_done = true
+        endif
+
         # R1 mit Bild: Bild auf die andere Seite als in der Bild-Text-Zeile davor.
         assign split_side = 'right'
         if last_reverse
@@ -161,7 +174,7 @@
         endif
       -%}
       {%- capture out -%}
-        {%- render 'heipard-feature-dispatch', blk: blk, product: product, index: next_mt, allow_loud: allow_loud, uid: uid, split_side: split_side -%}
+        {%- render 'heipard-feature-dispatch', blk: blk, product: product, index: next_mt, allow_loud: allow_loud, uid: uid, split_side: split_side, slot: slot -%}
       {%- endcapture -%}
       {%- liquid
         assign parts = out | split: '<!--fb-note-->'

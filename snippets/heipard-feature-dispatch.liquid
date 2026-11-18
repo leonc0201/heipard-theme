@@ -34,7 +34,8 @@
   R1 mit Bild und Szene geben vor dem Markup <!--fb-split--> aus: die Sektion behandelt den
   Block dann wie eine Bild-Text-Zeile (kein schmales Paar, zählt für den Seitenwechsel).
 
-  Parameter: blk, product, index, allow_loud, uid, split_side ('left' | 'right', für R1 mit Bild und Szene)
+  Parameter: blk, product, index, allow_loud, uid, split_side ('left' | 'right', für R1 mit Bild und Szene),
+             slot ('b1' | 'b2' | leer): B1/B2 ohne Bild am Block nehmen das Bild aus feature_b1/_b2
 {%- endcomment -%}
 {%- liquid
   assign type = blk.layout.value | default: 'media_text'
@@ -54,6 +55,15 @@
         {%- liquid
           assign img = blk.image.value
           assign vid = blk.video.value
+          # B1/B2 ohne Bild und Video am Block: Bild aus dem Produkt-Metafeld feature_b1 bzw.
+          # feature_b2 (slot kommt aus der Sektion). Auftrag Teil B, 19.11.2026.
+          if img == blank and vid == blank
+            if slot == 'b1' and cur == 'fullwidth'
+              assign img = product.metafields.heipard.feature_b1.value
+            elsif slot == 'b2' and cur == 'media_text'
+              assign img = product.metafields.heipard.feature_b2.value
+            endif
+          endif
           assign has_content = false
           if img != blank or vid != blank
             assign has_content = true
