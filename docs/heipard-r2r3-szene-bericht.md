@@ -1,12 +1,12 @@
 # Bericht: Feature-Blöcke R2 und R3 (Schritt C, Teil A)
 
 Auftrag `heipard-theme-auftrag-r2r3-und-sets.md`, Teil A (Entscheidung Leon 18.11.2026).
-Stand 18.11.2026, 18:30 Uhr. **Zwischenstand:** Code, Definitionen, Blöcke und Texte stehen. Der Push auf `main`
-ist blockiert (Abschnitt 7), deshalb sind die Sets noch nicht erweitert und die Abnahme steht aus.
+Stand 18.11.2026, abends. **Teil A ist live**: Theme seit 18:46, Sets seit 18:49 Uhr. Offen ist nur die Abnahme am
+ersten Produkt mit R2/R3-Bild, das die Asset-Instanz nach Auftrag 21 nennt (Abschnitt 8).
 
 ## Kurzfassung
 
-- **Theme** (Commit `f06ed96`, lokal): neuer Block-Typ `szene` mit Variante `r2` oder `r3`. Er zeigt das Bild aus
+- **Theme** (Commit `f06ed96`, live seit 18:46:23, Prüfsummen gleich git): neuer Block-Typ `szene` mit Variante `r2` oder `r3`. Er zeigt das Bild aus
   `heipard.feature_r2` bzw. `heipard.feature_r3` als Bild-Text-Zeile wie R1, Bild 16:9, Seite im Wechsel, mobil
   untereinander. Ist das Metafeld leer, gibt der Block nichts aus. Die Seite ist dann Zeichen für Zeichen dieselbe
   wie ohne den Block, das ist lokal für fünf Set-Muster getestet.
@@ -14,9 +14,13 @@ ist blockiert (Abschnitt 7), deshalb sind die Sets noch nicht erweitert und die 
   Typ wie `feature_r1` (Datei-Verweis, nur Bilder, im Storefront lesbar).
 - **104 Blöcke** angelegt, je Familie `<code>-r2` und `<code>-r3` für die 52 Familien mit Zeilen `<FAM>-R2/-R3` in
   Notion. Überschrift und Szenentext auf Deutsch, Englisch als Übersetzung am Block.
-- **Sets:** Plan für 61 Sets steht (R2 und R3 direkt hinter R1), ausgeführt wird er erst, wenn das Theme live ist.
-- **Vorschau** mit den echten Hermes-Bildern, Desktop und Mobil (Abschnitt 6). Die Abnahme am echten Testprodukt
-  folgt, sobald der Push durch ist und die Asset-Instanz nach Auftrag 21 das erste Produkt nennt.
+- **Sets:** 61 Sets haben R2 und R3, direkt hinter R1 (18:47 bis 18:49 Uhr).
+- **Gegenprobe live:** alle 118 Seiten nach der Umstellung neu geladen. Keine Seite zeigt R2 oder R3 (kein Produkt
+  hat bisher ein R2/R3-Bild), keine Liquid-Fehler. Die Feature-Sektion ist auf 102 Seiten Zeichen für Zeichen
+  gleich. Auf 16 Seiten zeigt R1 jetzt ein Bild, weil die Asset-Instanz um 18:08 Uhr (Auftrag 20) `feature_r1` gesetzt
+  hat; sonst ist dort alles gleich (Abschnitt 5).
+- **Vorschau** mit den echten Hermes-Bildern, Desktop und Mobil (Abschnitt 6). Die Live-Aufnahme am echten
+  Testprodukt folgt, sobald die Asset-Instanz nach Auftrag 21 das erste Produkt nennt.
 
 ## 1. Metafelder
 
@@ -189,7 +193,10 @@ Superlativwörter. Per Skript geprüft, 0 Treffer. Länge 99 bis 143 Zeichen, au
 | WWF | `wwf-r2` | wbf, wwf | Im Esszimmer | Der Birken-Lichterbaum steht am Abend neben dem gedeckten Holztisch im Esszimmer und sorgt für ruhiges Licht beim Essen. | In the dining room |
 |  | `wwf-r3` |  | Auf der überdachten Terrasse | Auf der überdachten Holzterrasse steht der Lichterbaum neben Glastür und Liegestuhl und leuchtet in die Dämmerung. | On the covered terrace |
 
-## 4. Sets (Plan, noch nicht ausgeführt)
+## 4. Sets
+
+Erweitert am 18.11. von 18:47 bis 18:49 Uhr (`metaobjectUpdate`, 61 Aufrufe ohne Fehler), danach per API gelesen:
+In allen 61 Sets stehen die beiden Blöcke an der geplanten Stelle, alle übrigen Blöcke in der alten Reihenfolge.
 
 - **61 Sets** bekommen R2 und R3, und zwar **direkt hinter R1**. Ausnahme DFM, DFM 600 und SBLB: Dort steht die
   Kennzahl auf Leons Wunsch direkt hinter R1, R2 und R3 folgen dahinter.
@@ -205,16 +212,28 @@ Superlativwörter. Per Skript geprüft, 0 Treffer. Länge 99 bis 143 Zeichen, au
   ebenfalls unsichtbar, die internen IDs der Blöcke dahinter würden sich aber verschieben.
 - Stand vorher gesichert: `docs/data/r2r3-sets-vorher.json` (61 Sets, Blocklisten).
 
-## 5. Ist-Aufnahme für die Abnahme
+## 5. Gegenprobe: Produkte ohne R2/R3 zeigen wie vorher
 
-Von 17:56 bis 18:13 Uhr habe ich alle 118 aktiven Produktseiten live geladen und gespeichert, alle mit Status 200.
-Nach Push und Set-Erweiterung lade ich sie erneut. Die Feature-Sektion muss bei allen 118 Seiten unverändert sein,
-solange kein Produkt `feature_r2` oder `feature_r3` hat. Das ist die Abnahme für „ein Produkt ohne R2/R3 zeigt
-exakt wie heute“.
+Abnahme für „ein Produkt ohne R2/R3 zeigt exakt wie heute“. Alle 118 aktiven Produktseiten live geladen, einmal vor
+der Umstellung (17:56 bis 18:13 Uhr, altes Theme, alte Sets) und einmal danach (18:49 bis 19:06 Uhr, neues Theme,
+Sets mit R2/R3), alle mit Status 200. Verglichen wurde die Feature-Sektion, nur die Versionsnummern der Bilddateien
+(`?v=`) sind ausgeblendet.
+
+- **Kein Produkt hat `feature_r2` oder `feature_r3`**, keine Seite zeigt eine Szene-Zeile, keine Seite einen
+  Liquid-Fehler.
+- **94 Seiten**, die in dieser Zeit niemand geändert hat: Zeichen für Zeichen gleich.
+- **24 Seiten** hat die Asset-Instanz um 18:08 Uhr geändert (Auftrag 20: `feature_r1`, `feature_b1`, `feature_b2`
+  an BLT, BLM, CTL Welle 2, CTL (M), DCT, DFM, OL-30/-50, OLAS14, SBLB, SOLM, VIT, NPT, DGM-001, DGM-048). Davon sind
+  8 gleich, weil sie vor 18:08 schon geladen waren bzw. das neue Bild schon zeigten. Bei 16 zeigt R1 jetzt das neue
+  Bild statt nur Text (bei DFM und SBLB löst sich dadurch das Paar aus R1 und Kennzahl). Nimmt man die R1-Zeile heraus,
+  ist auch dort alles gleich.
+
+Das R1-Bild dieser 16 Seiten kommt aus Auftrag 20 und ist nicht Teil dieses Auftrags. Es zeigt aber, dass die
+Bild-Text-Zeile mit Daten aus einem Metafeld live funktioniert.
 
 ## 6. Vorschau Desktop und Mobil (offline)
 
-Weil der Push noch fehlt, ist das eine Vorschau, keine Live-Aufnahme: die gespeicherte Live-Seite von `hp-olt-100`,
+Weil noch kein Produkt ein R2- oder R3-Bild hat, ist das eine Vorschau, keine Live-Aufnahme: die gespeicherte Live-Seite von `hp-olt-100`,
 dazu R2 und R3 mit dem neuen Theme-Code gerendert, Bilder `OLT_R2_01` und `OLT_R3_01` aus dem Hermes-Eingang. Die
 Live-Aufnahme am Testprodukt der Asset-Instanz folgt.
 
@@ -228,23 +247,23 @@ Icon-Grid. Seitenverhältnis der Szenenbilder gemessen 1,778 (16:9).
 wie beauftragt in 16:9 und sind deshalb niedriger als die R1-Zeile darüber. Soll R1 ebenfalls 16:9 zeigen, ist das
 eine Zeile CSS. Das ändert aber das Aussehen aller 87 Seiten mit R1-Bild und geht nur auf Leons Wort.
 
-## 7. Push blockiert
+## 7. Push
 
-Seit 17.11. arbeitet Git auf dem Arbeits-PC mit dem Konto `hermes-lc`. Dieses Konto hat am Repo
-`leonc0201/heipard-theme` nur Leserechte (`push: false`), eine Einladung liegt nicht vor. Der Push von `f06ed96` am
-18.11. um 18:13 Uhr kam mit 403 zurück. Nötig ist eins von beiden:
-
-- Leon lädt `hermes-lc` als Collaborator mit Schreibrecht ein, ich nehme die Einladung an und pushe, oder
-- Leon pusht den lokalen Stand selbst.
+Seit 17.11. arbeitet Git auf dem Arbeits-PC mit dem Konto `hermes-lc`. Dieses Konto hatte am Repo
+`leonc0201/heipard-theme` nur Leserechte, der erste Push um 18:13 Uhr kam mit 403 zurück. Leon hat `hermes-lc` danach
+eingeladen, Schreibrecht besteht seitdem. Push `7fe5884..ec1d6ae` um 18:46:17 Uhr, der GitHub-Sync hat die vier
+Theme-Dateien um 18:46:22 und 18:46:23 übertragen, Prüfsummen gleich git.
 
 ## 8. Offen
 
-- [ ] Push, Prüfsummen, dann Sets erweitern und die 118 Seiten gegen die Ist-Aufnahme prüfen.
+- [x] Push, Prüfsummen, Sets erweitern, die 118 Seiten gegen die Ist-Aufnahme prüfen (18.11. abends).
 - [ ] Abnahme am ersten Testprodukt der Asset-Instanz (nach Auftrag 21), Aufnahmen Desktop und Mobil live.
 - [ ] Alt-Texte: Sobald die R2/R3-Dateien mit DE- und EN-Alt in Files liegen, das Blockfeld `alt` der 104 Blöcke
   füllen (DE aus Files, EN per Übersetzung). Ohne das zeigt `/en/` den deutschen Alt (Befund 16.11.).
 - [ ] DCT-R3 und SBLB-R2/-R3: Text nach Freigabe des Bilds gegenprüfen.
 - [ ] Frage an Leon: R1 auch in 16:9 (Abschnitt 6)?
+- [ ] Für Teil B: DFM, DFM 600 und SBLB haben seit Auftrag 20 ein R1-Bild. Die Kennzahl steht damit nicht mehr als
+  Paar neben R1, sondern allein zwischen R1 und R2. Ob R2 und R3 dort direkt hinter R1 rücken, klärt Teil B.
 
 ## Rückweg
 
