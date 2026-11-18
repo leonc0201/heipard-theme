@@ -280,10 +280,14 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   EN am Blockfeld `alt` der 27 Blöcke (14 B1, 13 B2) eingetragen; die 34 Seiten auf `/en/` live geprüft, kein
   deutscher Alt mehr. Bericht R1-Bilder Abschnitt 11.
 - [ ] **Pflegeregel Alt-Text** — Neubeschriftung in Files immer auch im Blockfeld `alt` (DE und EN) nachziehen.
-- [ ] **Schritt C Teil A: R2/R3** (seit 2026-11-18) — Block-Typ `szene` (`f06ed96`), Definitionen `feature_r2`/`feature_r3`,
-  104 Blöcke mit Szenentext DE/EN stehen, live seit 18.11. 18:46 (Theme) und 18:49 (61 Sets). Offen: Abnahme am
-  Testprodukt der Asset-Instanz (Auftrag 21), Blockfeld `alt` nach dem Einspielen der Dateien, Frage R1 in 16:9.
-  Bericht `heipard-r2r3-szene-bericht.md`.
+- [x] **Schritt C Teil A: R2/R3** (2026-11-18) — Block-Typ `szene` (`f06ed96`), Definitionen `feature_r2`/`feature_r3`,
+  104 Blöcke mit Szenentext DE/EN, live seit 18.11. 18:46 (Theme) und 18:49 (61 Sets, `ucp` seit 20:22). Nach
+  Auftrag 21 zeigen alle 118 Seiten R2/R3; Abnahme hp-olt-100 und Gegenprobe 118 Seiten DE/EN ohne Abweichung,
+  Blockfeld `alt` DE/EN gefüllt, ISL-R3 an das Bild angepasst. Bericht `heipard-r2r3-szene-bericht.md`.
+- [ ] **R1 in 16:9?** (Frage an Leon, seit 2026-11-18) — R1 zeigt sein 16:9-Bild im Rahmen 5:4, R2/R3 darunter in
+  16:9. Eine Zeile CSS, ändert alle Seiten mit R1-Bild.
+- [ ] **UCP: Texte zu UCT-Bildern** — hp-ucp-200 trägt die Bilder von UCT, die Blöcke `ucp-b1/-b2/-r1` haben eigene
+  Texte; R1 „Abends ein Blickfang im Wohnzimmer“ steht über dem Pergola-Bild. Für die Prüfung in Teil B.
 - [ ] **Schritt C Teil B: Sets für die Familien aus Auftrag 20** — wartet auf die Meldung der Asset-Instanz.
 - [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
   keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live

@@ -7,7 +7,10 @@
   "title": "Im hellen Schlafzimmer",
   "body": "Der Baum steht noch ungeschmückt in der Zimmerecke neben dem Bett mit weißer Leinenwäsche, im weichen Licht des Tages vom Fenster.",
   "title_en": "In a bright bedroom",
-  "body_en": "The tree stands undecorated in the corner next to the bed with white linen, in the soft daylight from the window."
+  "body_en": "The tree stands undecorated in the corner next to the bed with white linen, in the soft daylight from the window.",
+  "datei": "BAUMPEC_R2_01",
+  "alt": "Ungeschmückter künstlicher HeiPard Weihnachtsbaum mit PE-Spitzen in der Ecke eines hellen Schlafzimmers bei Tageslicht.",
+  "alt_en": "Undecorated artificial HeiPard Christmas tree with PE tips in the corner of a bright bedroom in daylight."
  },
  {
   "handle": "baum-pec-r3",
@@ -17,7 +20,10 @@
   "title": "Neben der Haustür",
   "body": "Auf seinem Holzkreuzfuß steht der Baum auf der überdachten Veranda gleich neben der Haustür, ein paar Päckchen liegen schon bereit.",
   "title_en": "By the front door",
-  "body_en": "On its wooden cross stand, the tree waits on the covered porch right next to the front door, with a few parcels already waiting."
+  "body_en": "On its wooden cross stand, the tree waits on the covered porch right next to the front door, with a few parcels already waiting.",
+  "datei": "BAUMPEC_R3_01",
+  "alt": "Ungeschmückter künstlicher HeiPard Weihnachtsbaum auf einer überdachten Veranda neben der Haustür bei Tageslicht.",
+  "alt_en": "Undecorated artificial HeiPard Christmas tree on a covered porch beside the front door in daylight."
  },
  {
   "handle": "baum-pvc-r2",
@@ -27,7 +33,10 @@
   "title": "Neben dem Esstisch",
   "body": "Im hellen Essbereich steht der Baum ungeschmückt gleich neben dem Tisch, dort, wo morgens alle zusammenkommen.",
   "title_en": "Next to the dining table",
-  "body_en": "In the bright dining area, the undecorated tree stands right next to the table, where everyone gathers in the morning."
+  "body_en": "In the bright dining area, the undecorated tree stands right next to the table, where everyone gathers in the morning.",
+  "datei": "BAUMPVC_R2_01",
+  "alt": "Ungeschmückter künstlicher HeiPard Weihnachtsbaum mit dichten PVC-Nadeln neben einem Esstisch in einem hellen Raum.",
+  "alt_en": "Undecorated artificial HeiPard Christmas tree with dense PVC needles beside a dining table in a bright room."
  },
  {
   "handle": "baum-pvc-r3",
@@ -37,7 +46,10 @@
   "title": "Im Erkerfenster",
   "body": "Im Erker des Wohnzimmers steht der Baum noch ohne Schmuck, draußen liegt Schnee auf den Zweigen, drinnen fällt weiches Wintertageslicht.",
   "title_en": "In the bay window",
-  "body_en": "The tree stands in the living room bay window, still without decorations, with snow on the branches outside and soft winter daylight inside."
+  "body_en": "The tree stands in the living room bay window, still without decorations, with snow on the branches outside and soft winter daylight inside.",
+  "datei": "BAUMPVC_R3_01",
+  "alt": "Ungeschmückter künstlicher HeiPard Weihnachtsbaum in einem Erkerfenster bei Wintertageslicht.",
+  "alt_en": "Undecorated artificial HeiPard Christmas tree in a bay window in winter daylight."
  },
  {
   "handle": "blt-r2",
@@ -47,7 +59,10 @@
   "title": "Über dem Bett",
   "body": "Die Lichterkette liegt auf dem Regal am Kopfende, über weißer Leinenwäsche, und taucht das Schlafzimmer am Abend in ruhiges Licht.",
   "title_en": "Above the bed",
-  "body_en": "The string light rests on the headboard shelf above white linen and fills the bedroom with calm light in the evening."
+  "body_en": "The string light rests on the headboard shelf above white linen and fills the bedroom with calm light in the evening.",
+  "datei": "BLT_R2_01",
+  "alt": "HeiPard Batterie-Lichterkette auf dem Kopfteil-Regal über einem Bett im Schlafzimmer am Abend.",
+  "alt_en": "HeiPard battery string light on the headboard shelf above a bed in a bedroom in the evening."
  },
  {
   "handle": "blt-r3",
@@ -57,7 +72,10 @@
   "title": "In der Glaslaterne",
   "body": "Aufgewickelt in einer großen Glaslaterne leuchtet die Lichterkette an einem Sommerabend mitten auf dem Gartentisch.",
   "title_en": "Inside a glass lantern",
-  "body_en": "Coiled inside a large glass lantern, the string light glows in the middle of the garden table on a summer evening."
+  "body_en": "Coiled inside a large glass lantern, the string light glows in the middle of the garden table on a summer evening.",
+  "datei": "BLT_R3_01",
+  "alt": "HeiPard Batterie-Lichterkette in einem großen Glasbehälter auf einem Gartentisch an einem Sommerabend.",
+  "alt_en": "HeiPard battery string light coiled inside a large glass jar on a garden table on a summer evening."
  },
  {
   "handle": "bsl-r2",
@@ -67,7 +85,10 @@
   "title": "In der Glasvase",
   "body": "Die Lichterkette liegt in einer hohen Glasvase auf dem gedeckten Tisch und setzt am Abend feine Lichtpunkte zwischen Teller und Servietten.",
   "title_en": "In a glass vase",
-  "body_en": "The string light sits in a tall glass vase on the set table, adding fine points of light between plates and napkins in the evening."
+  "body_en": "The string light sits in a tall glass vase on the set table, adding fine points of light between plates and napkins in the evening.",
+  "datei": "BSL_R2_01",
+  "alt": "HeiPard Mikro-LED-Lichterkette auf Kupferdraht in einer hohen Glasvase auf einem gedeckten Tisch am Abend.",
+  "alt_en": "HeiPard micro LED string light on copper wire inside a tall glass vase on a set dinner table in the evening."
  },
  {
   "handle": "bsl-r3",
@@ -77,7 +98,10 @@
   "title": "In der Tannengirlande",
   "body": "Eingeflochten in eine Tannengirlande liegt die Lichterkette auf der Fensterbank und leuchtet am Abend zwischen den Zweigen.",
   "title_en": "In a fir garland",
-  "body_en": "Woven into a fir garland on the windowsill, the string light glows between the branches in the evening."
+  "body_en": "Woven into a fir garland on the windowsill, the string light glows between the branches in the evening.",
+  "datei": "BSL_R3_01",
+  "alt": "HeiPard Mikro-LED-Lichterkette, in eine Tannengirlande auf einer Fensterbank eingeflochten, am Abend.",
+  "alt_en": "HeiPard micro LED string light woven into a fir garland on a windowsill in the evening."
  },
  {
   "handle": "bsm-r2",
@@ -87,7 +111,10 @@
   "title": "Im Kinderzimmerfenster",
   "body": "Der Hirsch schwebt am Abend im Fenster des Kinderzimmers, draußen fällt Schnee, auf der Fensterbank liegen Bücher und ein Holzpferd.",
   "title_en": "In the kids’ room window",
-  "body_en": "The deer floats in the kids’ room window in the evening while snow falls outside, with books and a wooden horse on the windowsill."
+  "body_en": "The deer floats in the kids’ room window in the evening while snow falls outside, with books and a wooden horse on the windowsill.",
+  "datei": "BSM_R2_01",
+  "alt": "HeiPard Hirsch-Leuchtsilhouette im Fenster eines Kinderzimmers am Abend, Schneefall draußen.",
+  "alt_en": "HeiPard deer light silhouette in a child's room window in the evening, snow falling outside."
  },
  {
   "handle": "bsm-r3",
@@ -97,7 +124,10 @@
   "title": "An Zweigen in der Vase",
   "body": "An dekorativen Zweigen in einer Vase hängen die leuchtenden Hirsche und schmücken das Sideboard im abendlichen Wohnzimmer.",
   "title_en": "On branches in a vase",
-  "body_en": "The glowing deer hang from decorative branches in a vase and dress up the sideboard in the evening living room."
+  "body_en": "The glowing deer hang from decorative branches in a vase and dress up the sideboard in the evening living room.",
+  "datei": "BSM_R3_01",
+  "alt": "Zwei HeiPard Hirsch-Leuchtsilhouetten hängen an Dekozweigen in einer Vase auf einem Sideboard am Abend.",
+  "alt_en": "Two HeiPard deer light silhouettes hanging from decorative twigs in a vase on a sideboard in the evening."
  },
  {
   "handle": "bsx-r2",
@@ -107,7 +137,10 @@
   "title": "Im Fenster zur Straße",
   "body": "Am Abend hängen leuchtende Sterne im Fenster, draußen liegt die verschneite Straße mit ihren Häusern weich im Unscharfen.",
   "title_en": "In the window to the street",
-  "body_en": "In the evening, glowing stars hang in the window, with the snowy street and its houses softly blurred outside."
+  "body_en": "In the evening, glowing stars hang in the window, with the snowy street and its houses softly blurred outside.",
+  "datei": "BSX_R2_01",
+  "alt": "Zwei HeiPard Leuchtsterne im Fenster am Abend, verschneite Straße draußen.",
+  "alt_en": "Two HeiPard light stars in a window in the evening, snowy street outside."
  },
  {
   "handle": "bsx-r3",
@@ -117,7 +150,10 @@
   "title": "Am Dekobaum auf dem Esstisch",
   "body": "Der Stern hängt an einem Ast des kleinen Dekobaums mitten auf dem gedeckten Esstisch, zwischen Kerzen und Tellern.",
   "title_en": "On a tabletop tree",
-  "body_en": "The star hangs from a branch of the small decorative tree in the middle of the set dining table, between candles and plates."
+  "body_en": "The star hangs from a branch of the small decorative tree in the middle of the set dining table, between candles and plates.",
+  "datei": "BSX_R3_01",
+  "alt": "HeiPard Leuchtstern hängt an einem Dekobaum auf einem gedeckten Esstisch am Abend.",
+  "alt_en": "HeiPard light star hanging from a decorative tree on a set dining table in the evening."
  },
  {
   "handle": "cl-r2",
@@ -127,7 +163,10 @@
   "title": "Im Zelt",
   "body": "Die Laterne hängt an der Firststange im Zelt, die Lichterkette läuft an der Naht entlang bis zum Eingang. Draußen wird es dunkel.",
   "title_en": "Inside the tent",
-  "body_en": "The lantern hangs from the ridge pole inside the tent while the string light runs along the seam to the entrance. Outside, night is falling."
+  "body_en": "The lantern hangs from the ridge pole inside the tent while the string light runs along the seam to the entrance. Outside, night is falling.",
+  "datei": "CL_R2_01",
+  "alt": "HeiPard Camping-Laterne hängt im Zelt, die Lichterkette läuft an der Zeltnaht entlang zum Eingang, bei Dämmerung.",
+  "alt_en": "HeiPard camping lantern hanging inside a tent, its string light running along the seam to the entrance, at dusk."
  },
  {
   "handle": "cl-r3",
@@ -137,7 +176,10 @@
   "title": "Auf dem Stadtbalkon",
   "body": "Die Laterne steht auf dem Holzgeländer eines Stadtbalkons, daneben läuft die Lichterkette am Geländer entlang. Über den Dächern dämmert es.",
   "title_en": "On a city balcony",
-  "body_en": "The lantern sits on the wooden railing of a city balcony, with the string light running along beside it. Dusk settles over the rooftops."
+  "body_en": "The lantern sits on the wooden railing of a city balcony, with the string light running along beside it. Dusk settles over the rooftops.",
+  "datei": "CL_R3_01",
+  "alt": "HeiPard Camping-Laterne auf einem Balkongeländer in der Stadt, die Lichterkette läuft am Geländer entlang, bei Dämmerung.",
+  "alt_en": "HeiPard camping lantern on a city balcony railing with its string light running along the railing at dusk."
  },
  {
   "handle": "csl-r2",
@@ -147,7 +189,10 @@
   "title": "Vor der Terrassentür",
   "body": "Der Lichtervorhang hängt vor der großen Terrassentür, davor steht der gedeckte Esstisch. So beginnt ein Abend mit Freunden.",
   "title_en": "In front of the patio door",
-  "body_en": "The light curtain hangs in front of the large patio door, with the set dining table before it. That is how an evening with friends begins."
+  "body_en": "The light curtain hangs in front of the large patio door, with the set dining table before it. That is how an evening with friends begins.",
+  "datei": "CSL_R2_01",
+  "alt": "HeiPard LED-Lichtervorhang vor einer Terrassentür hinter einem gedeckten Esstisch am Abend.",
+  "alt_en": "HeiPard LED curtain light across a patio door behind a set dining table in the evening."
  },
  {
   "handle": "csl-r3",
@@ -157,7 +202,10 @@
   "title": "Im Flur hinter dem Spiegel",
   "body": "An der Flurwand hängt der Lichtervorhang hinter Konsole und rundem Spiegel und empfängt dich am Abend schon an der Tür.",
   "title_en": "In the hallway behind the mirror",
-  "body_en": "The light curtain hangs on the hallway wall behind a console and a round mirror, welcoming you at the door in the evening."
+  "body_en": "The light curtain hangs on the hallway wall behind a console and a round mirror, welcoming you at the door in the evening.",
+  "datei": "CSL_R3_01",
+  "alt": "HeiPard LED-Lichtervorhang an der Flurwand hinter Konsole und rundem Spiegel am Abend.",
+  "alt_en": "HeiPard LED curtain light on a hallway wall behind a console table and round mirror in the evening."
  },
  {
   "handle": "ctl-r2",
@@ -167,7 +215,10 @@
   "title": "Im skandinavischen Wohnzimmer",
   "body": "Die Lichterkette hängt in Strängen über die Äste des Baums in der Zimmerecke. Daneben wartet das Sofa mit der Wolldecke auf den Abend.",
   "title_en": "In a Scandinavian living room",
-  "body_en": "The string light drapes in strands over the branches of the tree in the corner. Nearby, the sofa with its wool blanket waits for the evening."
+  "body_en": "The string light drapes in strands over the branches of the tree in the corner. Nearby, the sofa with its wool blanket waits for the evening.",
+  "datei": "CTL_R2_01",
+  "alt": "Weihnachtsbaum mit HeiPard Baum-Lichterkette in der Ecke eines hellen Wohnzimmers am Abend.",
+  "alt_en": "Christmas tree with the HeiPard tree string light in the corner of a bright living room in the evening."
  },
  {
   "handle": "ctl-r3",
@@ -177,7 +228,10 @@
   "title": "Im verschneiten Vorgarten",
   "body": "Von der Spitze bis zum Boden hängt die Lichterkette an der Tanne im Vorgarten und leuchtet in der Dämmerung über den Schnee.",
   "title_en": "In a snowy front yard",
-  "body_en": "From the top down to the ground, the string light drapes over the fir in the front yard and glows across the snow at dusk."
+  "body_en": "From the top down to the ground, the string light drapes over the fir in the front yard and glows across the snow at dusk.",
+  "datei": "CTL_R3_01",
+  "alt": "Tanne im verschneiten Vorgarten mit HeiPard Baum-Lichterkette, Stränge von der Spitze bis zum Boden, bei Dämmerung.",
+  "alt_en": "Fir tree in a snowy front garden with the HeiPard tree string light, strands falling from the top to the ground at dusk."
  },
  {
   "handle": "ctl-m-r2",
@@ -187,7 +241,10 @@
   "title": "Neben dem Kamin",
   "body": "Der geschmückte Weihnachtsbaum mit der Lichterkette steht neben dem Kamin, und im Wohnzimmer beginnt ein ruhiger Abend am Feuer.",
   "title_en": "Next to the fireplace",
-  "body_en": "The decorated Christmas tree with the string light stands next to the fireplace as a quiet evening by the fire begins in the living room."
+  "body_en": "The decorated Christmas tree with the string light stands next to the fireplace as a quiet evening by the fire begins in the living room.",
+  "datei": "CTLM_R2_01",
+  "alt": "Weihnachtsbaum mit bunter HeiPard Baum-Lichterkette neben dem Kamin im Wohnzimmer am Abend.",
+  "alt_en": "Christmas tree with the multicolor HeiPard tree string light beside the fireplace in a living room in the evening."
  },
  {
   "handle": "ctl-m-r3",
@@ -197,7 +254,10 @@
   "title": "Auf der Veranda",
   "body": "Die Tanne steht mit der Lichterkette auf der verschneiten Veranda neben der Haustür und begrüßt in der Dämmerung jeden Gast.",
   "title_en": "On the porch",
-  "body_en": "The fir with the string light stands on the snowy porch by the front door, greeting every guest at dusk."
+  "body_en": "The fir with the string light stands on the snowy porch by the front door, greeting every guest at dusk.",
+  "datei": "CTLM_R3_01",
+  "alt": "Tanne im Kübel mit bunter HeiPard Baum-Lichterkette auf der Veranda neben der Haustür bei Dämmerung.",
+  "alt_en": "Potted fir with the multicolor HeiPard tree string light on the porch beside the front door at dusk."
  },
  {
   "handle": "dct-r2",
@@ -207,7 +267,10 @@
   "title": "Auf der Gartenhaus-Veranda",
   "body": "Der Lichtervorhang hängt an der Rückwand der Veranda hinter einem kleinen Tisch. In der Dämmerung wird daraus ein Platz für den Abend.",
   "title_en": "On the garden house porch",
-  "body_en": "The light curtain hangs on the back wall of the porch behind a small table. At dusk, it turns into a spot for the evening."
+  "body_en": "The light curtain hangs on the back wall of the porch behind a small table. At dusk, it turns into a spot for the evening.",
+  "datei": "DCT_R2_01",
+  "alt": "HeiPard LED-Lichtervorhang an der Rückwand einer Gartenhaus-Veranda hinter einem kleinen Tisch bei Dämmerung.",
+  "alt_en": "HeiPard LED curtain light on the back wall of a garden house porch behind a small table at dusk."
  },
  {
   "handle": "dct-r3",
@@ -217,7 +280,10 @@
   "title": "Vor dem Treppenhausfenster",
   "body": "Am Abend hängt der Lichtervorhang vor dem hohen Fenster im Treppenhaus, gleich neben der Holztreppe, die nach oben führt.",
   "title_en": "In front of the stairwell window",
-  "body_en": "In the evening, the light curtain hangs in front of the tall stairwell window, right next to the wooden stairs leading up."
+  "body_en": "In the evening, the light curtain hangs in front of the tall stairwell window, right next to the wooden stairs leading up.",
+  "datei": "DCT_R3_01",
+  "alt": "HeiPard LED-Lichtervorhang vor einem hohen Treppenhausfenster am Abend.",
+  "alt_en": "HeiPard LED curtain light across a tall staircase window in the evening."
  },
  {
   "handle": "dfm-r2",
@@ -227,7 +293,10 @@
   "title": "Am Gartenbogen",
   "body": "Dicht um Pfosten und Balken gewickelt, zeichnet die Lichterkette den Bogen im Garten nach und leuchtet in die Dämmerung.",
   "title_en": "On the garden arch",
-  "body_en": "Wrapped tightly around the posts and beam, the string light traces the arch in the garden and glows into the dusk."
+  "body_en": "Wrapped tightly around the posts and beam, the string light traces the arch in the garden and glows into the dusk.",
+  "datei": "DFM_R2_01",
+  "alt": "HeiPard Cluster-Lichterkette dicht um Pfosten und Balken eines Holzbogens im Garten gewickelt bei Dämmerung.",
+  "alt_en": "HeiPard cluster string light wound densely around the posts and beam of a wooden garden arch at dusk."
  },
  {
   "handle": "dfm-r3",
@@ -237,7 +306,10 @@
   "title": "Am Wohnzimmerfenster",
   "body": "Als dichte Girlande umrahmt die Lichterkette das Wohnzimmerfenster am Abend, draußen liegt der verschneite Garten.",
   "title_en": "Around the living room window",
-  "body_en": "As a dense garland, the string light frames the living room window in the evening, with the snowy garden outside."
+  "body_en": "As a dense garland, the string light frames the living room window in the evening, with the snowy garden outside.",
+  "datei": "DFM_R3_01",
+  "alt": "HeiPard Cluster-Lichterkette als dichte Girlande um einen Fensterrahmen im Wohnzimmer am Abend.",
+  "alt_en": "HeiPard cluster string light as a dense garland around a window frame in a living room in the evening."
  },
  {
   "handle": "dgm-r2",
@@ -247,7 +319,10 @@
   "title": "Im Terrakotta-Kübel",
   "body": "Die Sterne stecken auf ihren Erdspießen in einem großen Terrakotta-Kübel und leuchten in der Dämmerung auf der Terrasse.",
   "title_en": "In a terracotta planter",
-  "body_en": "The stars sit on their ground stakes in a large terracotta planter and glow on the terrace at dusk."
+  "body_en": "The stars sit on their ground stakes in a large terracotta planter and glow on the terrace at dusk.",
+  "datei": "DGM_R2_01",
+  "alt": "Warmweiße HeiPard LED-Sterne auf Erdspießen in einem großen Terrakotta-Kübel auf einer Terrasse bei Dämmerung.",
+  "alt_en": "Warm white HeiPard LED stars on ground stakes in a large terracotta planter on a terrace at dusk."
  },
  {
   "handle": "dgm-r3",
@@ -257,7 +332,10 @@
   "title": "Am Rasenrand",
   "body": "Entlang des verschneiten Rasenrands am Gartenzaun stecken die Sterne im Boden und leuchten in die Dämmerung.",
   "title_en": "Along the lawn edge",
-  "body_en": "Lined up along the snowy lawn edge by the garden fence, the stars glow into the dusk."
+  "body_en": "Lined up along the snowy lawn edge by the garden fence, the stars glow into the dusk.",
+  "datei": "DGM_R3_01",
+  "alt": "Fünf warmweiße HeiPard LED-Sterne auf Erdspießen entlang eines verschneiten Rasenrands am Gartenzaun bei Dämmerung.",
+  "alt_en": "Five warm white HeiPard LED stars on ground stakes along a snowy lawn edge by a garden fence at dusk."
  },
  {
   "handle": "dgm-w1-r2",
@@ -267,7 +345,10 @@
   "title": "An der Eingangstreppe",
   "body": "Die Lichtspiralen stehen in einer Reihe im verschneiten Beet neben der Eingangstreppe und zeigen in der Dämmerung den Weg zur Tür.",
   "title_en": "By the front steps",
-  "body_en": "The light spirals stand in a row in the snowy bed beside the front steps, showing the way to the door at dusk."
+  "body_en": "The light spirals stand in a row in the snowy bed beside the front steps, showing the way to the door at dusk.",
+  "datei": "DGM002_R2_01",
+  "alt": "Drei HeiPard LED-Spiralstecker mit bunten Mikro-LEDs im verschneiten Beet neben einer Eingangstreppe bei Dämmerung.",
+  "alt_en": "Three HeiPard LED spiral stakes with multicolor micro LEDs in a snowy flower bed beside entrance steps at dusk."
  },
  {
   "handle": "dgm-w1-r3",
@@ -277,7 +358,10 @@
   "title": "Im Pflanzkasten auf dem Balkon",
   "body": "Im hölzernen Pflanzkasten leuchten die Spiralen auf dem Balkon, dahinter verschwimmt die Stadt in der Dämmerung.",
   "title_en": "In a balcony planter",
-  "body_en": "The spirals glow in a wooden planter on the balcony while the city blurs behind them at dusk."
+  "body_en": "The spirals glow in a wooden planter on the balcony while the city blurs behind them at dusk.",
+  "datei": "DGM002_R3_01",
+  "alt": "Drei HeiPard LED-Spiralstecker in einem Holz-Pflanzkasten auf einem Balkon bei Dämmerung.",
+  "alt_en": "Three HeiPard LED spiral stakes in a wooden planter box on a balcony at dusk."
  },
  {
   "handle": "dgm-w1-048-r2",
@@ -287,7 +371,10 @@
   "title": "Auf der Fensterbank",
   "body": "Gestapelt stehen die leuchtenden Geschenkboxen auf der Fensterbank im Abendlicht, draußen liegt der verschneite Garten.",
   "title_en": "On the windowsill",
-  "body_en": "Stacked on the windowsill, the glowing gift boxes catch the evening light, with the snowy garden outside."
+  "body_en": "Stacked on the windowsill, the glowing gift boxes catch the evening light, with the snowy garden outside.",
+  "datei": "DGM048_R2_01",
+  "alt": "Zwei leuchtende HeiPard LED-Geschenkboxen auf einer Fensterbank am Abend, verschneiter Garten draußen.",
+  "alt_en": "Two glowing HeiPard LED gift boxes on a windowsill in the evening, snowy garden outside."
  },
  {
   "handle": "dgm-w1-048-r3",
@@ -297,7 +384,10 @@
   "title": "Auf dem Sideboard",
   "body": "Neben ein paar Tannenzweigen in der Vase stehen die Geschenkboxen gestapelt auf dem Sideboard und leuchten in den Abend.",
   "title_en": "On the sideboard",
-  "body_en": "Stacked next to a few fir branches in a vase on the sideboard, the gift boxes glow into the evening."
+  "body_en": "Stacked next to a few fir branches in a vase on the sideboard, the gift boxes glow into the evening.",
+  "datei": "DGM048_R3_01",
+  "alt": "Zwei leuchtende HeiPard LED-Geschenkboxen auf einem Sideboard neben Tannenzweigen am Abend.",
+  "alt_en": "Two glowing HeiPard LED gift boxes on a sideboard beside fir branches in the evening."
  },
  {
   "handle": "dlm-r2",
@@ -307,7 +397,10 @@
   "title": "Auf dem Kaminsims",
   "body": "Zwischen Kürbissen und trockenem Laub liegt die Lichterkette auf dem Kaminsims und bringt Halloween ins Wohnzimmer.",
   "title_en": "On the mantel",
-  "body_en": "Between pumpkins and dry leaves, the string light lies along the mantel and brings Halloween into the living room."
+  "body_en": "Between pumpkins and dry leaves, the string light lies along the mantel and brings Halloween into the living room.",
+  "datei": "DLM_R2_01",
+  "alt": "HeiPard Halloween-Lichterkette in Orange und Lila auf einem Kaminsims mit Kürbissen am Abend.",
+  "alt_en": "HeiPard Halloween string light in orange and purple on a fireplace mantel with pumpkins in the evening."
  },
  {
   "handle": "dlm-r3",
@@ -317,7 +410,10 @@
   "title": "Im Baum vor dem Haus",
   "body": "Um die kahlen Äste des kleinen Baums im Vorgarten gewickelt, leuchtet die Lichterkette in der Halloween-Nacht über dem Laub.",
   "title_en": "In the tree out front",
-  "body_en": "Wrapped around the bare branches of the small tree in the front yard, the string light glows above the leaves on Halloween night."
+  "body_en": "Wrapped around the bare branches of the small tree in the front yard, the string light glows above the leaves on Halloween night.",
+  "datei": "DLM_R3_01",
+  "alt": "HeiPard Halloween-Lichterkette um die kahlen Äste eines kleinen Baums im Vorgarten bei Nacht.",
+  "alt_en": "HeiPard Halloween string light around the bare branches of a small front garden tree at night."
  },
  {
   "handle": "dnm-r2",
@@ -327,7 +423,10 @@
   "title": "Über der Konifere",
   "body": "Das Lichternetz liegt über der runden Konifere im Kübel neben der Haustür und leuchtet in der Dämmerung am Eingang.",
   "title_en": "Over the conifer",
-  "body_en": "The net light rests over the round potted conifer next to the front door and glows by the entrance at dusk."
+  "body_en": "The net light rests over the round potted conifer next to the front door and glows by the entrance at dusk.",
+  "datei": "DNM_R2_01",
+  "alt": "HeiPard LED-Lichternetz über einer Kugelkonifere im Kübel neben der Haustür bei Dämmerung.",
+  "alt_en": "HeiPard LED net light over a rounded conifer in a pot beside the front door at dusk."
  },
  {
   "handle": "dnm-r3",
@@ -337,7 +436,10 @@
   "title": "Am Balkongeländer",
   "body": "Über das Geländer drapiert, leuchtet das Lichternetz in der Dämmerung bis hinunter auf die Straße vor dem Haus.",
   "title_en": "On the balcony railing",
-  "body_en": "Draped over the railing, the net light glows at dusk all the way down to the street in front of the house."
+  "body_en": "Draped over the railing, the net light glows at dusk all the way down to the street in front of the house.",
+  "datei": "DNM_R3_01",
+  "alt": "HeiPard LED-Lichternetz über einem Balkongeländer, von der Straße aus gesehen, bei Dämmerung.",
+  "alt_en": "HeiPard LED net light draped over a balcony railing seen from the street at dusk."
  },
  {
   "handle": "dpm-r2",
@@ -347,7 +449,10 @@
   "title": "Am Gartenzaun",
   "body": "Die Lichterkette läuft am Holzzaun entlang und um das Gartentor herum. In der Dämmerung zeigt sie den Weg hinein.",
   "title_en": "Along the garden fence",
-  "body_en": "The string light runs along the wooden fence and around the garden gate. At dusk, it shows the way in."
+  "body_en": "The string light runs along the wooden fence and around the garden gate. At dusk, it shows the way in.",
+  "datei": "DPM_R2_01",
+  "alt": "Lange HeiPard LED-Lichterkette auf dunkelgrünem Kabel entlang eines Gartenzauns und um ein Gartentor bei Dämmerung.",
+  "alt_en": "Long HeiPard LED string light on dark green cable along a garden fence and around a garden gate at dusk."
  },
  {
   "handle": "dpm-r3",
@@ -357,7 +462,10 @@
   "title": "Um die Pergola",
   "body": "In dichten Spiralen windet sich die Lichterkette um Pfosten und Balken der Holzpergola und leuchtet in die Dämmerung.",
   "title_en": "Around the pergola",
-  "body_en": "In tight spirals, the string light winds around the posts and beam of the wooden pergola and glows into the dusk."
+  "body_en": "In tight spirals, the string light winds around the posts and beam of the wooden pergola and glows into the dusk.",
+  "datei": "DPM_R3_01",
+  "alt": "Lange HeiPard LED-Lichterkette in dichten Spiralen um Pfosten und Balken einer Pergola bei Dämmerung.",
+  "alt_en": "Long HeiPard LED string light in dense spirals around the posts and beam of a pergola at dusk."
  },
  {
   "handle": "dpt-r2",
@@ -367,7 +475,10 @@
   "title": "Im großen Gartenbaum",
   "body": "Um Stamm und Äste des kahlen Gartenbaums gewickelt, zeichnet die Lichterkette in der Dämmerung seine Form nach.",
   "title_en": "In a large garden tree",
-  "body_en": "Wrapped around the trunk and branches of the bare garden tree, the string light traces its shape at dusk."
+  "body_en": "Wrapped around the trunk and branches of the bare garden tree, the string light traces its shape at dusk.",
+  "datei": "DPT_R2_01",
+  "alt": "Lange HeiPard LED-Lichterkette auf transparentem Kabel um Stamm und Äste eines großen Gartenbaums bei Dämmerung.",
+  "alt_en": "Long HeiPard LED string light on clear cable around the trunk and branches of a large garden tree at dusk."
  },
  {
   "handle": "dpt-r3",
@@ -377,7 +488,10 @@
   "title": "An der Balkonfront",
   "body": "In Bögen läuft die Lichterkette an der Balkonfront eines Stadthauses entlang, gut zu sehen von der Straße in der Dämmerung.",
   "title_en": "Across the balcony front",
-  "body_en": "In swags, the string light runs along the balcony front of a townhouse, easy to see from the street at dusk."
+  "body_en": "In swags, the string light runs along the balcony front of a townhouse, easy to see from the street at dusk.",
+  "datei": "DPT_R3_01",
+  "alt": "Lange HeiPard LED-Lichterkette in vielen Bögen entlang einer Balkonfront, von der Straße aus gesehen, bei Dämmerung.",
+  "alt_en": "Long HeiPard LED string light in many swags along a balcony front seen from the street at dusk."
  },
  {
   "handle": "fsf-r2",
@@ -387,7 +501,10 @@
   "title": "Neben dem Weihnachtsbaum",
   "body": "Der Schneemann leuchtet von innen und steht am Abend neben dem Weihnachtsbaum in der Wohnzimmerecke, gleich beim Sofa.",
   "title_en": "Next to the Christmas tree",
-  "body_en": "Lit from within, the snowman stands next to the Christmas tree in the corner of the living room in the evening, right by the sofa."
+  "body_en": "Lit from within, the snowman stands next to the Christmas tree in the corner of the living room in the evening, right by the sofa.",
+  "datei": "FSF_R2_01",
+  "alt": "HeiPard LED-Schneemann neben dem Weihnachtsbaum in der Wohnzimmerecke am Abend, von innen beleuchtet.",
+  "alt_en": "HeiPard LED snowman beside the Christmas tree in a living room corner in the evening, lit from inside."
  },
  {
   "handle": "fsf-r3",
@@ -397,7 +514,10 @@
   "title": "Im verschneiten Garten",
   "body": "Mit Zylinder und Schal steht der Schneemann in der Dämmerung im Schnee, hinten lehnt ein Schlitten am Gartenhaus.",
   "title_en": "In the snowy garden",
-  "body_en": "Wearing a top hat and scarf, the snowman stands in the snow at dusk while a sled leans against the garden shed behind him."
+  "body_en": "Wearing a top hat and scarf, the snowman stands in the snow at dusk while a sled leans against the garden shed behind him.",
+  "datei": "FSF_R3_01",
+  "alt": "HeiPard LED-Schneemann im verschneiten Garten neben einem Gartenhaus mit Schlitten bei Dämmerung.",
+  "alt_en": "HeiPard LED snowman in a snowy garden beside a garden shed with a sled at dusk."
  },
  {
   "handle": "fxf-r2",
@@ -407,7 +527,10 @@
   "title": "Am Weg zur Haustür",
   "body": "Rentier und Schlitten stehen auf dem verschneiten Rasen neben dem Weg zur Haustür und leuchten in der Dämmerung.",
   "title_en": "Along the path to the door",
-  "body_en": "The reindeer and sleigh stand on the snowy lawn beside the path to the front door, glowing at dusk."
+  "body_en": "The reindeer and sleigh stand on the snowy lawn beside the path to the front door, glowing at dusk.",
+  "datei": "FXF_R2_01",
+  "alt": "HeiPard LED-Rentier mit Schlitten auf verschneitem Rasen neben dem Weg zur Haustür bei Dämmerung.",
+  "alt_en": "HeiPard LED reindeer with sleigh on a snowy lawn beside the path to the front door at dusk."
  },
  {
   "handle": "fxf-r3",
@@ -417,7 +540,10 @@
   "title": "Vor den großen Fenstern",
   "body": "Auf der Holzterrasse vor den großen Fenstern eines modernen Hauses leuchten Rentier und Schlitten in die Dämmerung.",
   "title_en": "In front of the big windows",
-  "body_en": "On the wooden terrace in front of the large windows of a modern house, the reindeer and sleigh glow into the dusk."
+  "body_en": "On the wooden terrace in front of the large windows of a modern house, the reindeer and sleigh glow into the dusk.",
+  "datei": "FXF_R3_01",
+  "alt": "HeiPard LED-Rentier mit Schlitten auf einer Holzterrasse vor großen Fenstern bei Dämmerung.",
+  "alt_en": "HeiPard LED reindeer with sleigh on a wooden terrace in front of large windows at dusk."
  },
  {
   "handle": "isl-r2",
@@ -427,17 +553,23 @@
   "title": "An der Pergola",
   "body": "Die Lichterkette hängt an der Vorderkante des Pergola-Dachs und lässt ihr Licht in der Dämmerung über den Tisch auf der Terrasse fallen.",
   "title_en": "On the pergola",
-  "body_en": "The string light hangs from the front edge of the pergola roof and lets its light fall across the terrace table at dusk."
+  "body_en": "The string light hangs from the front edge of the pergola roof and lets its light fall across the terrace table at dusk.",
+  "datei": "ISL_R2_01",
+  "alt": "HeiPard Eisregen-Lichterkette entlang der Vorderkante eines Pergola-Dachs über einer Terrasse bei Dämmerung.",
+  "alt_en": "HeiPard icicle string light along the front edge of a pergola roof above a terrace at dusk."
  },
  {
   "handle": "isl-r3",
   "id": "gid://shopify/Metaobject/500366246221",
   "familie": "ISL",
   "slot": "r3",
-  "title": "Über dem Garagentor",
-  "body": "Entlang der Oberkante des Garagentors hängt die Lichterkette, während in der Dämmerung leichter Schnee auf die Einfahrt fällt.",
-  "title_en": "Above the garage door",
-  "body_en": "The string light hangs along the top edge of the garage door while light snow falls on the driveway at dusk."
+  "title": "An der Dachkante",
+  "body": "Entlang der Dachkante des Holzhauses hängt die Lichterkette und leuchtet in der Dämmerung über den verschneiten Garten.",
+  "title_en": "Along the roof edge",
+  "body_en": "The string light hangs along the roof edge of the wooden house and glows over the snowy garden at dusk.",
+  "datei": "ISL_R3_01",
+  "alt": "HeiPard Eisregen-Lichterkette entlang der Dachkante eines Holzhauses bei leichtem Schnee und Dämmerung.",
+  "alt_en": "HeiPard icicle string light along the eaves of a wooden house in light snow at dusk."
  },
  {
   "handle": "npt-r2",
@@ -447,7 +579,10 @@
   "title": "Über der Hecke",
   "body": "Das Lichternetz liegt über der breiten Hecke neben dem Weg zur Haustür und begleitet dich in der Dämmerung bis zum Eingang.",
   "title_en": "Over the hedge",
-  "body_en": "The net light rests over the wide hedge beside the path to the front door and walks you to the entrance at dusk."
+  "body_en": "The net light rests over the wide hedge beside the path to the front door and walks you to the entrance at dusk.",
+  "datei": "NPT_R2_01",
+  "alt": "HeiPard LED-Lichternetz über einer breiten Hecke neben dem Weg zur Haustür bei Dämmerung.",
+  "alt_en": "HeiPard LED net light over a wide hedge beside the path to the front door at dusk."
  },
  {
   "handle": "npt-r3",
@@ -457,7 +592,10 @@
   "title": "An der Ziegelwand",
   "body": "Flach an der Ziegelwand hinter der Terrassenbank angebracht, wird das Lichternetz in der Dämmerung zur leuchtenden Rückwand.",
   "title_en": "On the brick wall",
-  "body_en": "Mounted flat on the brick wall behind the terrace bench, the net light becomes a glowing backdrop at dusk."
+  "body_en": "Mounted flat on the brick wall behind the terrace bench, the net light becomes a glowing backdrop at dusk.",
+  "datei": "NPT_R3_01",
+  "alt": "HeiPard LED-Lichternetz flach an einer Ziegelwand hinter einer Terrassenbank bei Dämmerung.",
+  "alt_en": "HeiPard LED net light flat on a brick wall behind a terrace bench at dusk."
  },
  {
   "handle": "ola-g40-r2",
@@ -467,7 +605,10 @@
   "title": "Am Gartenhaus",
   "body": "Aus der Ferne gesehen läuft die Lichterkette an der Dachkante des Gartenhauses entlang und rahmt in der Dämmerung die kleine Terrasse darunter.",
   "title_en": "On the garden house",
-  "body_en": "Seen from a distance, the string light runs along the eaves of the garden house, framing the small terrace below at dusk."
+  "body_en": "Seen from a distance, the string light runs along the eaves of the garden house, framing the small terrace below at dusk.",
+  "datei": "OLAG40_R2_01",
+  "alt": "HeiPard G40-Lichterkette entlang der Dachkante eines Gartenhauses über einer kleinen Terrasse bei Dämmerung, aus der Ferne.",
+  "alt_en": "HeiPard G40 string light along the eaves of a garden house above a small terrace at dusk, seen from a distance."
  },
  {
   "handle": "ola-g40-r3",
@@ -477,7 +618,10 @@
   "title": "Über dem Kieshof",
   "body": "Im Zickzack ist die Lichterkette über den schmalen Kieshof gespannt, unter ihr stehen eine Bank und Pflanzkübel in der Dämmerung.",
   "title_en": "Over the gravel courtyard",
-  "body_en": "Strung in a zigzag over the narrow gravel courtyard, the string light hangs above a bench and planters at dusk."
+  "body_en": "Strung in a zigzag over the narrow gravel courtyard, the string light hangs above a bench and planters at dusk.",
+  "datei": "OLAG40_R3_01",
+  "alt": "HeiPard G40-Lichterkette im Zickzack über einem schmalen Kieshof mit Bank und Pflanzkübeln bei Dämmerung.",
+  "alt_en": "HeiPard G40 string light in a zigzag above a narrow gravel courtyard with a bench and planters at dusk."
  },
  {
   "handle": "olas14-r2",
@@ -487,7 +631,10 @@
   "title": "Über dem Bistrotisch",
   "body": "Hoch über dem Bistrotisch im schmalen gepflasterten Hof ist die Lichterkette im Zickzack gespannt und leuchtet in die Dämmerung.",
   "title_en": "Above the bistro table",
-  "body_en": "Strung in a zigzag high above the bistro table in a narrow paved courtyard, the string light glows into the dusk."
+  "body_en": "Strung in a zigzag high above the bistro table in a narrow paved courtyard, the string light glows into the dusk.",
+  "datei": "OLAS14_R2_01",
+  "alt": "HeiPard S14-Lichterkette im Zickzack über einem schmalen Hof mit Bistrotisch bei Dämmerung.",
+  "alt_en": "HeiPard S14 string light in a zigzag above a narrow courtyard with a bistro table at dusk."
  },
  {
   "handle": "olas14-r3",
@@ -497,7 +644,10 @@
   "title": "Zur blauen Stunde",
   "body": "Über die Wiese hinweg sieht man die Lichterkette an der Dachkante des Gartenhauses, darunter eine Bank auf der kleinen Terrasse.",
   "title_en": "At blue hour",
-  "body_en": "Across the meadow, you can see the string light along the eaves of the garden house, with a bench on the small terrace below."
+  "body_en": "Across the meadow, you can see the string light along the eaves of the garden house, with a bench on the small terrace below.",
+  "datei": "OLAS14_R3_01",
+  "alt": "HeiPard S14-Lichterkette entlang der Dachkante eines Gartenhauses über einem kleinen Deck bei Dämmerung.",
+  "alt_en": "HeiPard S14 string light along the eaves of a garden house above a small deck at dusk."
  },
  {
   "handle": "olg-r2",
@@ -507,7 +657,10 @@
   "title": "Um die Tanne im Vorgarten",
   "body": "In lockeren Spiralen windet sich die Lichterkette um Stamm und untere Äste der Tanne im Vorgarten und leuchtet in die Dämmerung.",
   "title_en": "Around the fir out front",
-  "body_en": "In loose spirals, the string light winds around the trunk and lower branches of the fir in the front yard and glows into the dusk."
+  "body_en": "In loose spirals, the string light winds around the trunk and lower branches of the fir in the front yard and glows into the dusk.",
+  "datei": "OLG_R2_01",
+  "alt": "HeiPard LED-Lichterkette auf dunkelgrünem Kabel in Spiralen um Stamm und Äste einer Tanne im Vorgarten bei Dämmerung.",
+  "alt_en": "HeiPard LED string light on dark green cable in spirals around the trunk and branches of a fir in a front garden at dusk."
  },
  {
   "handle": "olg-r3",
@@ -517,7 +670,10 @@
   "title": "An der Steinmauer",
   "body": "Die Lichterkette liegt auf der niedrigen Steinmauer und schlingt sich um den Torpfosten. So findet jeder in der Dämmerung den Eingang.",
   "title_en": "Along the stone wall",
-  "body_en": "The string light lies along the low stone wall and wraps around the gate post, so everyone finds the entrance at dusk."
+  "body_en": "The string light lies along the low stone wall and wraps around the gate post, so everyone finds the entrance at dusk.",
+  "datei": "OLG_R3_01",
+  "alt": "HeiPard LED-Lichterkette entlang einer niedrigen Gartenmauer und um einen Torpfosten bei Dämmerung.",
+  "alt_en": "HeiPard LED string light along a low garden wall and around a gate post at dusk."
  },
  {
   "handle": "olh-g40-r2",
@@ -527,7 +683,10 @@
   "title": "Über der Hängematte",
   "body": "In weiten Bögen ist die Lichterkette über den kleinen Garten gespannt, darunter hängt die Hängematte für den Abend.",
   "title_en": "Above the hammock",
-  "body_en": "Strung in wide swags over the small garden, the string light hangs above the hammock, ready for the evening."
+  "body_en": "Strung in wide swags over the small garden, the string light hangs above the hammock, ready for the evening.",
+  "datei": "OLHG40_R2_01",
+  "alt": "HeiPard G40-Lichterkette in drei Bögen über einem kleinen Garten mit Hängematte bei Dämmerung.",
+  "alt_en": "HeiPard G40 string light in three swags above a small backyard with a hammock at dusk."
  },
  {
   "handle": "olh-g40-r3",
@@ -537,7 +696,10 @@
   "title": "Am Carport",
   "body": "In der Dämmerung läuft die Lichterkette am First des offenen Holzcarports entlang und leuchtet über die Kieseinfahrt.",
   "title_en": "Along the carport",
-  "body_en": "At dusk, the string light runs along the ridge of the open wooden carport and glows above the gravel driveway."
+  "body_en": "At dusk, the string light runs along the ridge of the open wooden carport and glows above the gravel driveway.",
+  "datei": "OLHG40_R3_01",
+  "alt": "HeiPard G40-Lichterkette entlang eines offenen Carport-Dachs über einer Kieseinfahrt bei Dämmerung.",
+  "alt_en": "HeiPard G40 string light along an open carport roof above a gravel drive at dusk."
  },
  {
   "handle": "ol-s11-r2",
@@ -547,7 +709,10 @@
   "title": "An der Pergola über der Tafel",
   "body": "Die Lichterkette hängt in gerader Linie an der Vorderkante der Holzpergola, darunter steht die lange Gartentafel in der Dämmerung.",
   "title_en": "Along the pergola above the table",
-  "body_en": "The string light hangs in a straight line along the front edge of the wooden pergola, above the long garden table at dusk."
+  "body_en": "The string light hangs in a straight line along the front edge of the wooden pergola, above the long garden table at dusk.",
+  "datei": "OLS11_R2_01",
+  "alt": "HeiPard S11-Lichterkette entlang der Vorderkante einer Pergola über einem langen Gartentisch bei Dämmerung.",
+  "alt_en": "HeiPard S11 string light along the front edge of a pergola above a long garden table at dusk."
  },
  {
   "handle": "ol-s11-r3",
@@ -557,7 +722,10 @@
   "title": "Über der Kies-Sitzecke",
   "body": "In Bögen hängt die Lichterkette über der Sitzecke aus Kies, darunter laden Liegestühle in der Dämmerung zum Sitzenbleiben ein.",
   "title_en": "Above the gravel seating area",
-  "body_en": "In swags, the string light hangs above the gravel seating area, where lounge chairs invite you to stay a while at dusk."
+  "body_en": "In swags, the string light hangs above the gravel seating area, where lounge chairs invite you to stay a while at dusk.",
+  "datei": "OLS11_R3_01",
+  "alt": "HeiPard S11-Lichterkette in zwei Bögen über einer Kies-Sitzecke mit zwei Liegestühlen bei Dämmerung.",
+  "alt_en": "HeiPard S11 string light in two swags above a gravel seating corner with two lounge chairs at dusk."
  },
  {
   "handle": "ols-a60-r2",
@@ -567,7 +735,10 @@
   "title": "Am Holzdeck",
   "body": "Aus der Ferne werden die Birnen zu kleinen Lichtpunkten: Die Lichterkette läuft in der Dämmerung rund um das Holzdeck auf der Wiese.",
   "title_en": "Around the wooden deck",
-  "body_en": "From a distance, the bulbs turn into small points of light as the string light runs around the wooden deck on the lawn at dusk."
+  "body_en": "From a distance, the bulbs turn into small points of light as the string light runs around the wooden deck on the lawn at dusk.",
+  "datei": "OLSA60_R2_01",
+  "alt": "HeiPard Solar-Lichterkette mit A60-Birnen an Jutekordel entlang eines Holzdecks bei Dämmerung.",
+  "alt_en": "HeiPard solar string light with A60 bulbs on jute cord along a wooden deck at dusk."
  },
  {
   "handle": "ols-a60-r3",
@@ -577,7 +748,10 @@
   "title": "Zwischen den Obstbäumen",
   "body": "Zwischen den Obstbäumen hängt die Lichterkette über dem Picknicktisch im Garten und leuchtet in die Dämmerung.",
   "title_en": "Between the fruit trees",
-  "body_en": "Hung between the fruit trees, the string light glows above the picnic table in the garden at dusk."
+  "body_en": "Hung between the fruit trees, the string light glows above the picnic table in the garden at dusk.",
+  "datei": "OLSA60_R3_01",
+  "alt": "HeiPard Solar-Lichterkette mit A60-Birnen zwischen zwei Obstbäumen über einem Picknicktisch bei Dämmerung.",
+  "alt_en": "HeiPard solar string light with A60 bulbs between two fruit trees above a picnic table at dusk."
  },
  {
   "handle": "ols-g40-r2",
@@ -587,7 +761,10 @@
   "title": "Am Gartenschuppen",
   "body": "In einem sanften Bogen hängt die Lichterkette an der Vorderseite des Gartenschuppens und leuchtet in der Dämmerung über die Beete.",
   "title_en": "On the garden shed",
-  "body_en": "In a gentle swag, the string light hangs across the front of the garden shed and glows over the flower beds at dusk."
+  "body_en": "In a gentle swag, the string light hangs across the front of the garden shed and glows over the flower beds at dusk.",
+  "datei": "OLSG40_R2_01",
+  "alt": "HeiPard Solar-G40-Lichterkette entlang der Vorderseite eines Gartenschuppens bei Dämmerung.",
+  "alt_en": "HeiPard solar G40 string light along the front of a garden shed at dusk."
  },
  {
   "handle": "ols-g40-r3",
@@ -597,7 +774,10 @@
   "title": "Über der Feuerstelle",
   "body": "In Bögen spannt sich die Lichterkette über die Feuerstelle mit den Holzbänken. Hier beginnt der Abend draußen.",
   "title_en": "Above the fire pit",
-  "body_en": "In swags, the string light stretches above the fire pit and its wooden benches. This is where the evening outside begins."
+  "body_en": "In swags, the string light stretches above the fire pit and its wooden benches. This is where the evening outside begins.",
+  "datei": "OLSG40_R3_01",
+  "alt": "HeiPard Solar-G40-Lichterkette in zwei Bögen über einer Feuerstelle mit Holzbänken bei Dämmerung.",
+  "alt_en": "HeiPard solar G40 string light in two swags above a fire pit with log benches at dusk."
  },
  {
   "handle": "ols-s11-r2",
@@ -607,7 +787,10 @@
   "title": "Am Balkon des Holzhauses",
   "body": "Die Lichterkette läuft am Balkongeländer des Holzhauses entlang und setzt in der Dämmerung Lichtpunkte über die Sitzecke darunter.",
   "title_en": "On the wooden house balcony",
-  "body_en": "The string light runs along the balcony railing of the wooden house, setting points of light above the seating area below at dusk."
+  "body_en": "The string light runs along the balcony railing of the wooden house, setting points of light above the seating area below at dusk.",
+  "datei": "OLSS11_R2_01",
+  "alt": "HeiPard Solar-S11-Lichterkette entlang des Balkongeländers eines Holzhauses bei Dämmerung.",
+  "alt_en": "HeiPard solar S11 string light along the balcony railing of a wooden house at dusk."
  },
  {
   "handle": "ols-s11-r3",
@@ -617,7 +800,10 @@
   "title": "Über den Hochbeeten",
   "body": "In einem langen Bogen hängt die Lichterkette über den Hochbeeten im Gemüsegarten und leuchtet in die Dämmerung.",
   "title_en": "Above the raised beds",
-  "body_en": "In one long swag, the string light hangs above the raised beds in the vegetable garden and glows into the dusk."
+  "body_en": "In one long swag, the string light hangs above the raised beds in the vegetable garden and glows into the dusk.",
+  "datei": "OLSS11_R3_01",
+  "alt": "HeiPard Solar-S11-Lichterkette in einem langen Bogen über Hochbeeten im Gemüsegarten bei Dämmerung.",
+  "alt_en": "HeiPard solar S11 string light in one long swag above raised beds in a vegetable garden at dusk."
  },
  {
   "handle": "ols-s17-r2",
@@ -627,7 +813,10 @@
   "title": "Am Gartenpavillon",
   "body": "Die Lichterkette hängt am Dach des Gartenpavillons, aus der Ferne werden die Birnen in der Dämmerung zu kleinen Lichtpunkten.",
   "title_en": "On the garden pavilion",
-  "body_en": "The string light hangs along the roof of the garden pavilion, its bulbs turning into small points of light in the distance at dusk."
+  "body_en": "The string light hangs along the roof of the garden pavilion, its bulbs turning into small points of light in the distance at dusk.",
+  "datei": "OLSS17_R2_01",
+  "alt": "HeiPard Solar-Lichterkette mit Edison-Birnen an Jutekordel entlang eines Gartenpavillons bei Dämmerung.",
+  "alt_en": "HeiPard solar string light with Edison bulbs on jute cord along a garden pavilion at dusk."
  },
  {
   "handle": "ols-s17-r3",
@@ -637,7 +826,10 @@
   "title": "Über dem Bootssteg",
   "body": "In Bögen hängt die Lichterkette über dem Bootssteg und spiegelt sich in der Dämmerung im stillen Wasser des Sees.",
   "title_en": "Above the boat dock",
-  "body_en": "Hung in swags above the boat dock, the string light is reflected in the still water of the lake at dusk."
+  "body_en": "Hung in swags above the boat dock, the string light is reflected in the still water of the lake at dusk.",
+  "datei": "OLSS17_R3_01",
+  "alt": "HeiPard Solar-Lichterkette mit Edison-Birnen in zwei Bögen über einem Bootssteg bei Dämmerung.",
+  "alt_en": "HeiPard solar string light with Edison bulbs in two swags above a boat dock at dusk."
  },
  {
   "handle": "ols-st38-r2",
@@ -647,7 +839,10 @@
   "title": "Über der Bank am Gartenweg",
   "body": "Die Lichterkette hängt an der Holzlaube über der Bank am Ende des Gartenwegs und leuchtet in der Dämmerung zwischen den Blumen.",
   "title_en": "Above the bench by the garden path",
-  "body_en": "The string light hangs on the wooden arbor above the bench at the end of the garden path and glows among the flowers at dusk."
+  "body_en": "The string light hangs on the wooden arbor above the bench at the end of the garden path and glows among the flowers at dusk.",
+  "datei": "OLSST38_R2_01",
+  "alt": "HeiPard Solar-ST38-Lichterkette an einer Holzlaube über einer Bank an einem Gartenweg bei Dämmerung.",
+  "alt_en": "HeiPard solar ST38 string light on a wooden garden arbor above a bench beside a garden path at dusk."
  },
  {
   "handle": "ols-st38-r3",
@@ -657,7 +852,10 @@
   "title": "An der Berghütte",
   "body": "Von der Berghütte aus läuft die Lichterkette über die Wiese, während die Berge dahinter in der Dämmerung verschwinden.",
   "title_en": "At the mountain hut",
-  "body_en": "The string light runs from the mountain hut across the meadow as the mountains behind it fade into the dusk."
+  "body_en": "The string light runs from the mountain hut across the meadow as the mountains behind it fade into the dusk.",
+  "datei": "OLSST38_R3_01",
+  "alt": "HeiPard Solar-ST38-Lichterkette von einer Berghütte aus über die Wiese gespannt bei Dämmerung.",
+  "alt_en": "HeiPard solar ST38 string light stretched from a mountain cabin across the meadow at dusk."
  },
  {
   "handle": "ol-st38-r2",
@@ -667,7 +865,10 @@
   "title": "Auf der Veranda mit Schaukel",
   "body": "In Bögen hängt die Lichterkette an der überdachten Veranda, darunter wartet die Hollywoodschaukel auf den Abend.",
   "title_en": "On the porch with the swing",
-  "body_en": "In swags, the string light hangs along the covered porch, with the porch swing waiting below for the evening."
+  "body_en": "In swags, the string light hangs along the covered porch, with the porch swing waiting below for the evening.",
+  "datei": "OLST38_R2_01",
+  "alt": "HeiPard ST38-Lichterkette in Bögen entlang einer überdachten Veranda mit Hollywoodschaukel bei Dämmerung.",
+  "alt_en": "HeiPard ST38 string light in swags along a covered veranda with a porch swing at dusk."
  },
  {
   "handle": "ol-st38-r3",
@@ -677,7 +878,10 @@
   "title": "Im Stadtgarten",
   "body": "Am Ende des schmalen Stadtgartens hängt die Lichterkette über Hochbeeten und einem kleinen Tisch und leuchtet in die Dämmerung.",
   "title_en": "In a city garden",
-  "body_en": "At the end of the narrow city garden, the string light hangs above raised beds and a small table, glowing into the dusk."
+  "body_en": "At the end of the narrow city garden, the string light hangs above raised beds and a small table, glowing into the dusk.",
+  "datei": "OLST38_R3_01",
+  "alt": "HeiPard ST38-Lichterkette über einem schmalen Stadtgarten mit Hochbeeten und kleinem Tisch bei Dämmerung.",
+  "alt_en": "HeiPard ST38 string light above a narrow city garden with raised beds and a small table at dusk."
  },
  {
   "handle": "olt-r2",
@@ -687,7 +891,10 @@
   "title": "Am weißen Balkongeländer",
   "body": "In Bögen läuft die Lichterkette am weißen Balkongeländer entlang, dahinter gehen in der Dämmerung die Lichter der Stadt an.",
   "title_en": "On the white balcony railing",
-  "body_en": "In swags, the string light runs along the white balcony railing while the city lights come on behind it at dusk."
+  "body_en": "In swags, the string light runs along the white balcony railing while the city lights come on behind it at dusk.",
+  "datei": "OLT_R2_01",
+  "alt": "HeiPard LED-Lichterkette auf transparentem Kabel in Bögen entlang eines weißen Balkongeländers bei Dämmerung.",
+  "alt_en": "HeiPard LED string light on clear cable in swags along a white balcony railing at dusk."
  },
  {
   "handle": "olt-r3",
@@ -697,7 +904,10 @@
   "title": "Im Lorbeerbäumchen",
   "body": "In die Äste des Lorbeerbäumchens neben der Haustür gewunden, begrüßt die Lichterkette in der Dämmerung jeden, der nach Hause kommt.",
   "title_en": "In the potted bay tree",
-  "body_en": "Wound into the branches of the potted bay tree by the front door, the string light greets everyone coming home at dusk."
+  "body_en": "Wound into the branches of the potted bay tree by the front door, the string light greets everyone coming home at dusk.",
+  "datei": "OLT_R3_01",
+  "alt": "HeiPard LED-Lichterkette auf transparentem Kabel in einem Lorbeerbäumchen im Kübel neben der Haustür bei Dämmerung.",
+  "alt_en": "HeiPard LED string light on clear cable in a small bay tree in a planter beside the front door at dusk."
  },
  {
   "handle": "rct-r2",
@@ -707,7 +917,10 @@
   "title": "Hinter dem Partytisch",
   "body": "Der Lichtervorhang wird zum leuchtenden Hintergrund für den Partytisch mit Gläsern und Gebäck. Die Nacht kann kommen.",
   "title_en": "Behind the party table",
-  "body_en": "The light curtain becomes a glowing backdrop for the party table with glasses and pastries. Let the night begin."
+  "body_en": "The light curtain becomes a glowing backdrop for the party table with glasses and pastries. Let the night begin.",
+  "datei": "RCT_R2_01",
+  "alt": "HeiPard RGB-Lichtervorhang als Hintergrund hinter einem Partytisch mit Gläsern und Kuchen bei Nacht.",
+  "alt_en": "HeiPard RGB curtain light as a backdrop behind a party table with glasses and a cake at night."
  },
  {
   "handle": "rct-r3",
@@ -717,7 +930,10 @@
   "title": "Im Jugendzimmer",
   "body": "Nachts hängt der Lichtervorhang im Fenster des Jugendzimmers hinter dem Schreibtisch und füllt das Zimmer mit Licht.",
   "title_en": "In a teen’s room",
-  "body_en": "At night, the light curtain hangs in the window of a teen’s room behind the desk and fills the room with light."
+  "body_en": "At night, the light curtain hangs in the window of a teen’s room behind the desk and fills the room with light.",
+  "datei": "RCT_R3_01",
+  "alt": "HeiPard RGB-Lichtervorhang im Fenster eines Jugendzimmers hinter einem Schreibtisch bei Nacht.",
+  "alt_en": "HeiPard RGB curtain light in a teenager's room window behind a desk at night."
  },
  {
   "handle": "rfm-r2",
@@ -727,7 +943,10 @@
   "title": "Im Weihnachtsbaum",
   "body": "Dicht in die Äste gelegt, leuchtet die Lichterkette im Weihnachtsbaum, während das Wohnzimmer um sie herum schon dunkel ist.",
   "title_en": "In the Christmas tree",
-  "body_en": "Laid densely into the branches, the string light glows in the Christmas tree while the living room around it is already dark."
+  "body_en": "Laid densely into the branches, the string light glows in the Christmas tree while the living room around it is already dark.",
+  "datei": "RFM_R2_01",
+  "alt": "Bunte HeiPard Cluster-Lichterkette dicht in einem Weihnachtsbaum im dunklen Wohnzimmer bei Nacht.",
+  "alt_en": "Multicolor HeiPard cluster string light densely laid into a Christmas tree in a dark living room at night."
  },
  {
   "handle": "rfm-r3",
@@ -737,7 +956,10 @@
   "title": "Am Gartentor",
   "body": "Als dicke Girlande läuft die Lichterkette am Gartenzaun entlang und um das Tor herum und leuchtet in die Nacht.",
   "title_en": "At the garden gate",
-  "body_en": "As a thick garland, the string light runs along the garden fence and around the gate, glowing into the night."
+  "body_en": "As a thick garland, the string light runs along the garden fence and around the gate, glowing into the night.",
+  "datei": "RFM_R3_01",
+  "alt": "Bunte HeiPard Cluster-Lichterkette als dicke Girlande entlang eines Gartenzauns und um ein Tor bei Nacht.",
+  "alt_en": "Multicolor HeiPard cluster string light as a thick garland along a garden fence and around a gate at night."
  },
  {
   "handle": "rgb-r2",
@@ -747,7 +969,10 @@
   "title": "Im kleinen Vorgartenbaum",
   "body": "Um Stamm und Äste des kleinen Baums im Vorgarten gewickelt, leuchtet die Lichterkette in der Nacht, das Haus liegt unscharf dahinter.",
   "title_en": "In the small front yard tree",
-  "body_en": "Wrapped around the trunk and branches of the small tree in the front yard, the string light glows at night, with the house softly blurred behind it."
+  "body_en": "Wrapped around the trunk and branches of the small tree in the front yard, the string light glows at night, with the house softly blurred behind it.",
+  "datei": "RGB_R2_01",
+  "alt": "Bunte HeiPard Smart-Lichterkette um Stamm und Äste eines kleinen Baums im Vorgarten bei Nacht.",
+  "alt_en": "Multicolor HeiPard smart string light around the trunk and branches of a small front garden tree at night."
  },
  {
   "handle": "rgb-r3",
@@ -757,7 +982,10 @@
   "title": "Am Pergola-Balken",
   "body": "Die Lichterkette läuft am Holzbalken der Pergola entlang und leuchtet in der Nacht über dem gedeckten Terrassentisch.",
   "title_en": "Along the pergola beam",
-  "body_en": "The string light runs along the wooden pergola beam and glows above the set terrace table at night."
+  "body_en": "The string light runs along the wooden pergola beam and glows above the set terrace table at night.",
+  "datei": "RGB_R3_01",
+  "alt": "Bunte HeiPard Smart-Lichterkette entlang eines Pergola-Balkens über einem Terrassentisch bei Nacht.",
+  "alt_en": "Multicolor HeiPard smart string light along a pergola beam above a terrace table at night."
  },
  {
   "handle": "rit-r2",
@@ -767,7 +995,10 @@
   "title": "Über der Haustür",
   "body": "An der Dachkante über der Haustür hängt die Lichterkette und leuchtet in der Nacht, während leichter Schnee fällt.",
   "title_en": "Above the front door",
-  "body_en": "The string light hangs along the eaves above the front door and glows at night as light snow falls."
+  "body_en": "The string light hangs along the eaves above the front door and glows at night as light snow falls.",
+  "datei": "RIT_R2_01",
+  "alt": "Bunte HeiPard Smart-Eisregen-Lichterkette entlang der Dachkante über der Haustür bei Nacht und leichtem Schnee.",
+  "alt_en": "Multicolor HeiPard smart icicle string light along the eaves above the front door at night in light snow."
  },
  {
   "handle": "rit-r3",
@@ -777,7 +1008,10 @@
   "title": "Am Pergola-Dach",
   "body": "Die Stränge hängen von der Vorderkante des Pergola-Dachs und leuchten in die Nacht über dem Garten.",
   "title_en": "On the pergola roof",
-  "body_en": "The strands hang from the front edge of the pergola roof and glow into the night above the garden."
+  "body_en": "The strands hang from the front edge of the pergola roof and glow into the night above the garden.",
+  "datei": "RIT_R3_01",
+  "alt": "Bunte HeiPard Smart-Eisregen-Lichterkette entlang der Vorderkante eines Pergola-Dachs bei Nacht.",
+  "alt_en": "Multicolor HeiPard smart icicle string light along the front edge of a pergola roof at night."
  },
  {
   "handle": "rmp-r2",
@@ -787,7 +1021,10 @@
   "title": "Am Ende des verschneiten Wegs",
   "body": "Der Lichterturm mit dem Stern steht neben dem Gartentor am Ende des verschneiten Wegs und leuchtet zur blauen Stunde.",
   "title_en": "At the end of the snowy path",
-  "body_en": "The light tower with its star stands next to the garden gate at the end of the snowy path, glowing at blue hour."
+  "body_en": "The light tower with its star stands next to the garden gate at the end of the snowy path, glowing at blue hour.",
+  "datei": "RMP_R2_01",
+  "alt": "HeiPard Lichterturm neben dem Gartentor am Ende eines verschneiten Wegs bei Dämmerung.",
+  "alt_en": "HeiPard light tower beside the garden gate at the end of a snowy path at dusk."
  },
  {
   "handle": "rmp-r3",
@@ -797,7 +1034,10 @@
   "title": "Im hellen Flur",
   "body": "In der Ecke des Flurs neben der Treppe steht der Lichterturm und empfängt dich am Abend schon beim Hereinkommen.",
   "title_en": "In a bright hallway",
-  "body_en": "The light tower stands in the corner of the hallway next to the stairs, welcoming you as you walk in on an evening."
+  "body_en": "The light tower stands in the corner of the hallway next to the stairs, welcoming you as you walk in on an evening.",
+  "datei": "RMP_R3_01",
+  "alt": "HeiPard Lichterturm in der Ecke eines hellen Flurs neben der Treppe am Abend.",
+  "alt_en": "HeiPard light tower in the corner of a bright hallway beside the staircase in the evening."
  },
  {
   "handle": "rnm-r2",
@@ -807,7 +1047,10 @@
   "title": "Am Gartenhaus",
   "body": "Flach an der dunklen Holzwand des Gartenhauses neben der Tür angebracht, leuchtet das Lichternetz in die Nacht.",
   "title_en": "On the garden house",
-  "body_en": "Mounted flat on the dark wooden wall of the garden house next to the door, the net light glows into the night."
+  "body_en": "Mounted flat on the dark wooden wall of the garden house next to the door, the net light glows into the night.",
+  "datei": "RNM_R2_01",
+  "alt": "Buntes HeiPard Smart-Lichternetz flach an der Holzwand eines Gartenhauses neben der Tür bei Nacht.",
+  "alt_en": "Multicolor HeiPard smart net light flat on the wooden wall of a garden house beside its door at night."
  },
  {
   "handle": "rnm-r3",
@@ -817,7 +1060,10 @@
   "title": "Über der Konifere",
   "body": "Das Lichternetz liegt über der runden Konifere im Kübel auf der Terrasse und leuchtet in der Nacht über die Steinplatten.",
   "title_en": "Over the conifer",
-  "body_en": "The net light rests over the round potted conifer on the terrace and glows across the stone pavers at night."
+  "body_en": "The net light rests over the round potted conifer on the terrace and glows across the stone pavers at night.",
+  "datei": "RNM_R3_01",
+  "alt": "Buntes HeiPard Smart-Lichternetz über einer Kugelkonifere im Kübel auf einer Terrasse bei Nacht.",
+  "alt_en": "Multicolor HeiPard smart net light over a rounded conifer in a pot on a terrace at night."
  },
  {
   "handle": "rpm-r2",
@@ -827,7 +1073,10 @@
   "title": "Im kahlen Baum",
   "body": "Um Stamm und Äste des kahlen Baums gewickelt, leuchtet die Lichterkette in der Nacht und zeichnet jeden Ast nach.",
   "title_en": "In a bare tree",
-  "body_en": "Wrapped around the trunk and branches of the bare tree, the string light glows at night and traces every branch."
+  "body_en": "Wrapped around the trunk and branches of the bare tree, the string light glows at night and traces every branch.",
+  "datei": "RPM_R2_01",
+  "alt": "HeiPard Smart-Lichterkette mit Farbverläufen um Stamm und Äste eines kahlen Gartenbaums bei Nacht.",
+  "alt_en": "HeiPard smart string light with color gradients around the trunk and branches of a bare garden tree at night."
  },
  {
   "handle": "rpm-r3",
@@ -837,7 +1086,10 @@
   "title": "Am Gartenzaun",
   "body": "Die Lichterkette läuft nachts am Gartenzaun entlang und um das Tor herum, dahinter liegt der dunkle Garten.",
   "title_en": "Along the garden fence",
-  "body_en": "At night, the string light runs along the garden fence and around the gate, with the dark garden behind it."
+  "body_en": "At night, the string light runs along the garden fence and around the gate, with the dark garden behind it.",
+  "datei": "RPM_R3_01",
+  "alt": "HeiPard Smart-Lichterkette mit Farbverläufen entlang eines Gartenzauns und um ein Tor bei Nacht.",
+  "alt_en": "HeiPard smart string light with color gradients along a garden fence and around a gate at night."
  },
  {
   "handle": "rsp-r2",
@@ -847,7 +1099,10 @@
   "title": "Auf der verschneiten Veranda",
   "body": "Neben der Haustür steht der Lichterbaum mit seiner Sternspitze auf der verschneiten Veranda und leuchtet in die Nacht.",
   "title_en": "On the snowy porch",
-  "body_en": "Next to the front door, the light tree with its star topper stands on the snowy porch and glows into the night."
+  "body_en": "Next to the front door, the light tree with its star topper stands on the snowy porch and glows into the night.",
+  "datei": "RSP_R2_01",
+  "alt": "HeiPard RGB-Lichterkegel neben der Haustür auf einer verschneiten Veranda bei Nacht.",
+  "alt_en": "HeiPard RGB cone light tree beside the front door on a snowy porch at night."
  },
  {
   "handle": "rsp-r3",
@@ -857,7 +1112,10 @@
   "title": "Neben der Treppe",
   "body": "Im hellen Flur steht der Lichterbaum neben der Holztreppe und bringt am Abend Licht in den Eingang.",
   "title_en": "Next to the stairs",
-  "body_en": "In the bright hallway, the light tree stands next to the wooden stairs and brings light to the entrance in the evening."
+  "body_en": "In the bright hallway, the light tree stands next to the wooden stairs and brings light to the entrance in the evening.",
+  "datei": "RSP_R3_01",
+  "alt": "HeiPard RGB-Lichterkegel in einem hellen Flur neben der Treppe am Abend.",
+  "alt_en": "HeiPard RGB cone light tree in a bright hallway beside the staircase in the evening."
  },
  {
   "handle": "rtm-r2",
@@ -867,7 +1125,10 @@
   "title": "In der Wohnzimmerecke",
   "body": "Der Weihnachtsbaum mit dem Lichtermantel steht in der Ecke des Wohnzimmers neben dem Sofa und dem Kamin.",
   "title_en": "In the living room corner",
-  "body_en": "The Christmas tree with its light drape stands in the corner of the living room next to the sofa and the fireplace."
+  "body_en": "The Christmas tree with its light drape stands in the corner of the living room next to the sofa and the fireplace.",
+  "datei": "RTM_R2_01",
+  "alt": "Weihnachtsbaum mit HeiPard RGB-Baummantel in der Wohnzimmerecke neben dem Sofa am Abend.",
+  "alt_en": "Christmas tree with the HeiPard RGB tree curtain in a living room corner beside the sofa in the evening."
  },
  {
   "handle": "rtm-r3",
@@ -877,7 +1138,10 @@
   "title": "Im Vorgarten bei Nacht",
   "body": "Über die Äste der Tanne im verschneiten Vorgarten hängen die Stränge des Lichtermantels und leuchten in die Nacht.",
   "title_en": "In the front yard at night",
-  "body_en": "The strands of the light drape hang over the branches of the fir in the snowy front yard and glow into the night."
+  "body_en": "The strands of the light drape hang over the branches of the fir in the snowy front yard and glow into the night.",
+  "datei": "RTM_R3_01",
+  "alt": "Tanne im verschneiten Vorgarten mit HeiPard RGB-Baummantel bei Nacht.",
+  "alt_en": "Fir tree in a snowy front garden with the HeiPard RGB tree curtain at night."
  },
  {
   "handle": "sblb-r2",
@@ -887,7 +1151,10 @@
   "title": "Auf dem Balkon",
   "body": "Die Lichterkette mit den Kristallkugeln liegt auf dem Holzgeländer des Balkons und leuchtet in der Dämmerung über den Dächern.",
   "title_en": "On the balcony",
-  "body_en": "The string light with its crystal balls rests on the wooden balcony railing and glows above the rooftops at dusk."
+  "body_en": "The string light with its crystal balls rests on the wooden balcony railing and glows above the rooftops at dusk.",
+  "datei": "SBLB_R2_01",
+  "alt": "HeiPard Solar-Lichterkette mit Kristallkugeln entlang eines Holz-Balkongeländers bei Dämmerung.",
+  "alt_en": "HeiPard solar string light with crystal globes along a wooden balcony railing at dusk."
  },
  {
   "handle": "sblb-r3",
@@ -897,7 +1164,10 @@
   "title": "In der Hecke am Gartenweg",
   "body": "In die Hecke entlang des Gartenwegs gelegt, setzen die Kristallkugeln in der Dämmerung Lichtpunkte ins Grün.",
   "title_en": "In the hedge by the path",
-  "body_en": "Tucked into the hedge along the garden path, the crystal balls add points of light to the greenery at dusk."
+  "body_en": "Tucked into the hedge along the garden path, the crystal balls add points of light to the greenery at dusk.",
+  "datei": "SBLB_R3_01",
+  "alt": "HeiPard Solar-Lichterkette mit Kristallkugeln in einer Hecke an einem Gartenweg bei Dämmerung.",
+  "alt_en": "HeiPard solar string light with crystal globes in a hedge along a garden path at dusk."
  },
  {
   "handle": "scwl-r2",
@@ -907,7 +1177,10 @@
   "title": "Am Zaun beim Lavendel",
   "body": "Die feine Lichterkette ist am niedrigen Gartenzaun befestigt und leuchtet in der Dämmerung über dem Lavendel.",
   "title_en": "On the fence by the lavender",
-  "body_en": "The fine string light is attached to the low garden fence and glows above the lavender at dusk."
+  "body_en": "The fine string light is attached to the low garden fence and glows above the lavender at dusk.",
+  "datei": "SCWL_R2_01",
+  "alt": "HeiPard Solar-Mikro-LED-Lichterkette auf Kupferdraht an einem niedrigen Gartenzaun neben Lavendel bei Dämmerung.",
+  "alt_en": "HeiPard solar micro LED string light on copper wire along a low garden fence beside lavender at dusk."
  },
  {
   "handle": "scwl-r3",
@@ -917,7 +1190,10 @@
   "title": "Über den Kräutertöpfen",
   "body": "Über die Terrakotta-Töpfe mit Kräutern drapiert, leuchtet die Lichterkette in der Dämmerung auf dem Balkon.",
   "title_en": "Over the herb pots",
-  "body_en": "Draped over the terracotta herb pots, the string light glows on the balcony at dusk."
+  "body_en": "Draped over the terracotta herb pots, the string light glows on the balcony at dusk.",
+  "datei": "SCWL_R3_01",
+  "alt": "HeiPard Solar-Mikro-LED-Lichterkette über zwei Terrakotta-Kräutertöpfen auf einem Balkon bei Dämmerung.",
+  "alt_en": "HeiPard solar micro LED string light over two terracotta herb planters on a balcony at dusk."
  },
  {
   "handle": "solm-r2",
@@ -927,7 +1203,10 @@
   "title": "Im Obstbaum",
   "body": "Die Lichterkette ist in die Äste eines kleinen Obstbaums gewickelt und setzt in der Dämmerung feine Lichtpunkte in den Garten.",
   "title_en": "In the fruit tree",
-  "body_en": "The string light is wrapped into the branches of a small fruit tree, adding fine points of light to the garden at dusk."
+  "body_en": "The string light is wrapped into the branches of a small fruit tree, adding fine points of light to the garden at dusk.",
+  "datei": "SOLM_R2_01",
+  "alt": "HeiPard Solar-Lichterkette in einem kleinen Obstbaum im Garten bei Dämmerung, Solarpanel im Gras.",
+  "alt_en": "HeiPard solar string light in a small fruit tree in a garden at dusk, solar panel in the grass."
  },
  {
   "handle": "solm-r3",
@@ -937,7 +1216,10 @@
   "title": "Am Balkon mit Blumenkästen",
   "body": "Am Holzgeländer mit den Blumenkästen entlang drapiert, leuchtet die Lichterkette in der Dämmerung auf dem Balkon.",
   "title_en": "On the balcony with flower boxes",
-  "body_en": "Draped along the wooden railing with its flower boxes, the string light glows on the balcony at dusk."
+  "body_en": "Draped along the wooden railing with its flower boxes, the string light glows on the balcony at dusk.",
+  "datei": "SOLM_R3_01",
+  "alt": "HeiPard Solar-Lichterkette entlang eines Balkongeländers mit Pflanzkästen bei Dämmerung.",
+  "alt_en": "HeiPard solar string light along a balcony railing with planters at dusk."
  },
  {
   "handle": "u20-r2",
@@ -947,7 +1229,10 @@
   "title": "Entlang von Balken und Pfosten",
   "body": "Der Lichtschlauch zieht in der Dämmerung eine durchgehende Lichtlinie an Balken und Pfosten der Pergola entlang.",
   "title_en": "Along beam and post",
-  "body_en": "At dusk, the light hose draws one continuous line of light along the beam and post of the pergola."
+  "body_en": "At dusk, the light hose draws one continuous line of light along the beam and post of the pergola.",
+  "datei": "U20_R2_01",
+  "alt": "HeiPard LED-Lichtschlauch als durchgehende Lichtlinie entlang eines Pergola-Balkens und Pfostens bei Dämmerung.",
+  "alt_en": "HeiPard LED rope light as one continuous line along a pergola beam and post at dusk."
  },
  {
   "handle": "u20-r3",
@@ -957,7 +1242,10 @@
   "title": "Am Gartenteich",
   "body": "Der Lichtschlauch folgt dem Ufer des Gartenteichs bis zur kleinen Holzbrücke, im Wasser spiegelt sich die Linie in der Dämmerung.",
   "title_en": "By the garden pond",
-  "body_en": "The light hose follows the edge of the garden pond up to the small wooden bridge, its line reflected in the water at dusk."
+  "body_en": "The light hose follows the edge of the garden pond up to the small wooden bridge, its line reflected in the water at dusk.",
+  "datei": "U20_R3_01",
+  "alt": "HeiPard LED-Lichtschlauch entlang eines Gartenteichs und an einer kleinen Holzbrücke bei Dämmerung, Spiegelung im Wasser.",
+  "alt_en": "HeiPard LED rope light along a garden pond and a small wooden footbridge at dusk, reflected in the water."
  },
  {
   "handle": "uct-r2",
@@ -967,7 +1255,10 @@
   "title": "Hinter der Gardine",
   "body": "Am Abend leuchtet der Lichtervorhang vor dem Schlafzimmerfenster durch die weiße Gardine, davor steht das Bett mit heller Bettwäsche.",
   "title_en": "Behind the sheer curtain",
-  "body_en": "In the evening, the light curtain glows through the white sheer at the bedroom window, with the bed and its light bedding in front."
+  "body_en": "In the evening, the light curtain glows through the white sheer at the bedroom window, with the bed and its light bedding in front.",
+  "datei": "UCT_R2_01",
+  "alt": "HeiPard LED-Lichtervorhang vor einer weißen Gardine neben einem Bett im Schlafzimmer am Abend.",
+  "alt_en": "HeiPard LED curtain light in front of a sheer white curtain beside a bed in a bedroom in the evening."
  },
  {
   "handle": "uct-r3",
@@ -977,7 +1268,10 @@
   "title": "Als Lichtwand im Pavillon",
   "body": "Am Gartenpavillon wird der Lichtervorhang zur Lichtwand hinter den Liegestühlen und leuchtet in die Dämmerung.",
   "title_en": "A wall of light at the pavilion",
-  "body_en": "At the garden pavilion, the light curtain becomes a wall of light behind the lounge chairs and glows into the dusk."
+  "body_en": "At the garden pavilion, the light curtain becomes a wall of light behind the lounge chairs and glows into the dusk.",
+  "datei": "UCT_R3_01",
+  "alt": "HeiPard LED-Lichtervorhang als Lichtwand an einem Gartenpavillon hinter zwei Liegestühlen bei Dämmerung.",
+  "alt_en": "HeiPard LED curtain light as a wall of light on a garden pavilion behind two lounge chairs at dusk."
  },
  {
   "handle": "vit-r2",
@@ -987,7 +1281,10 @@
   "title": "Über dem Terrassentisch",
   "body": "Die Lichterkette hängt an der Vorderkante des hölzernen Pergola-Dachs und leuchtet in der Dämmerung über dem gedeckten Tisch.",
   "title_en": "Above the terrace table",
-  "body_en": "The string light hangs from the front edge of the wooden pergola roof and glows above the set table at dusk."
+  "body_en": "The string light hangs from the front edge of the wooden pergola roof and glows above the set table at dusk.",
+  "datei": "VIT_R2_01",
+  "alt": "HeiPard Eisregen-Lichterkette entlang der Vorderkante eines Pergola-Dachs über einem Terrassentisch bei Dämmerung.",
+  "alt_en": "HeiPard icicle string light along the front edge of a pergola roof above a terrace table at dusk."
  },
  {
   "handle": "vit-r3",
@@ -997,7 +1294,10 @@
   "title": "Am Gartenzaun im Schnee",
   "body": "Entlang der Oberkante des Holzzauns hängt die Lichterkette neben dem verschneiten Weg und leuchtet in die Dämmerung.",
   "title_en": "On the fence in the snow",
-  "body_en": "Hung along the top of the wooden fence beside the snowy path, the string light glows into the dusk."
+  "body_en": "Hung along the top of the wooden fence beside the snowy path, the string light glows into the dusk.",
+  "datei": "VIT_R3_01",
+  "alt": "HeiPard Eisregen-Lichterkette entlang der Oberkante eines Gartenzauns neben einem verschneiten Weg bei Dämmerung.",
+  "alt_en": "HeiPard icicle string light along the top of a garden fence beside a snowy path at dusk."
  },
  {
   "handle": "vlm-r2",
@@ -1007,7 +1307,10 @@
   "title": "Am Verandageländer",
   "body": "In Bögen läuft die Lichterkette am hölzernen Verandageländer entlang und leuchtet in der Dämmerung über den Garten.",
   "title_en": "On the porch railing",
-  "body_en": "In swags, the string light runs along the wooden porch railing and glows over the garden at dusk."
+  "body_en": "In swags, the string light runs along the wooden porch railing and glows over the garden at dusk.",
+  "datei": "VLM_R2_01",
+  "alt": "HeiPard LED-Lichterkette auf dunkelgrünem Kabel in Bögen entlang eines Verandageländers bei Dämmerung.",
+  "alt_en": "HeiPard LED string light on dark green cable in swags along a porch railing at dusk."
  },
  {
   "handle": "vlm-r3",
@@ -1017,7 +1320,10 @@
   "title": "Auf der Gartenmauer",
   "body": "In eine Tannengirlande gewunden, liegt die Lichterkette auf der Steinmauer neben den frostigen Stufen und leuchtet in die Dämmerung.",
   "title_en": "On the garden wall",
-  "body_en": "Wound into a fir garland, the string light rests on the stone wall beside the frosty steps and glows into the dusk."
+  "body_en": "Wound into a fir garland, the string light rests on the stone wall beside the frosty steps and glows into the dusk.",
+  "datei": "VLM_R3_01",
+  "alt": "HeiPard LED-Lichterkette in einer Tannengirlande auf einer Gartenmauer neben Stufen bei Dämmerung.",
+  "alt_en": "HeiPard LED string light in a fir garland on a garden wall beside steps at dusk."
  },
  {
   "handle": "wwf-r2",
@@ -1027,7 +1333,10 @@
   "title": "Im Esszimmer",
   "body": "Der Birken-Lichterbaum steht am Abend neben dem gedeckten Holztisch im Esszimmer und sorgt für ruhiges Licht beim Essen.",
   "title_en": "In the dining room",
-  "body_en": "In the evening, the birch light tree stands next to the set wooden table in the dining room, adding calm light to dinner."
+  "body_en": "In the evening, the birch light tree stands next to the set wooden table in the dining room, adding calm light to dinner.",
+  "datei": "WWF_R2_01",
+  "alt": "HeiPard Birken-Lichterbaum neben dem Fenster im Esszimmer neben einem gedeckten Tisch am Abend.",
+  "alt_en": "HeiPard birch light tree beside the window in a dining room next to a set table in the evening."
  },
  {
   "handle": "wwf-r3",
@@ -1037,6 +1346,9 @@
   "title": "Auf der überdachten Terrasse",
   "body": "Auf der überdachten Holzterrasse steht der Lichterbaum neben Glastür und Liegestuhl und leuchtet in die Dämmerung.",
   "title_en": "On the covered terrace",
-  "body_en": "On the covered wooden terrace, the light tree stands next to the glass door and a lounge chair and glows into the dusk."
+  "body_en": "On the covered wooden terrace, the light tree stands next to the glass door and a lounge chair and glows into the dusk.",
+  "datei": "WWF_R3_01",
+  "alt": "HeiPard Birken-Lichterbaum auf einer überdachten Terrasse neben Glastür und Liegestuhl bei Dämmerung.",
+  "alt_en": "HeiPard birch light tree on a covered terrace beside a glass door and a lounge chair at dusk."
  }
 ]

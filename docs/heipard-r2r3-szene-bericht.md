@@ -1,8 +1,9 @@
 # Bericht: Feature-Blöcke R2 und R3 (Schritt C, Teil A)
 
 Auftrag `heipard-theme-auftrag-r2r3-und-sets.md`, Teil A (Entscheidung Leon 18.11.2026).
-Stand 18.11.2026, abends. **Teil A ist live**: Theme seit 18:46, Sets seit 18:49 Uhr. Offen ist nur die Abnahme am
-ersten Produkt mit R2/R3-Bild, das die Asset-Instanz nach Auftrag 21 nennt (Abschnitt 8).
+Stand 18.11.2026, 20:45 Uhr. **Teil A ist live und abgenommen**: Theme seit 18:46, Sets seit 18:49 Uhr, Bilder der
+Asset-Instanz (Auftrag 21) seit 19:41 bzw. 20:05 Uhr. Seitdem zeigen alle 118 aktiven Produktseiten R2 und R3.
+Abnahme am Testprodukt hp-olt-100 und Gegenprobe auf allen 118 Seiten in Abschnitt 8.
 
 ## Kurzfassung
 
@@ -14,13 +15,16 @@ ersten Produkt mit R2/R3-Bild, das die Asset-Instanz nach Auftrag 21 nennt (Absc
   Typ wie `feature_r1` (Datei-Verweis, nur Bilder, im Storefront lesbar).
 - **104 Blöcke** angelegt, je Familie `<code>-r2` und `<code>-r3` für die 52 Familien mit Zeilen `<FAM>-R2/-R3` in
   Notion. Überschrift und Szenentext auf Deutsch, Englisch als Übersetzung am Block.
-- **Sets:** 61 Sets haben R2 und R3, direkt hinter R1 (18:47 bis 18:49 Uhr).
+- **Sets:** 61 Sets haben R2 und R3, direkt hinter R1 (18:47 bis 18:49 Uhr), dazu seit 20:22 Uhr `ucp` (62).
 - **Gegenprobe live:** alle 118 Seiten nach der Umstellung neu geladen. Keine Seite zeigt R2 oder R3 (kein Produkt
   hat bisher ein R2/R3-Bild), keine Liquid-Fehler. Die Feature-Sektion ist auf 102 Seiten Zeichen für Zeichen
   gleich. Auf 16 Seiten zeigt R1 jetzt ein Bild, weil die Asset-Instanz um 18:08 Uhr (Auftrag 20) `feature_r1` gesetzt
   hat; sonst ist dort alles gleich (Abschnitt 5).
-- **Vorschau** mit den echten Hermes-Bildern, Desktop und Mobil (Abschnitt 6). Die Live-Aufnahme am echten
-  Testprodukt folgt, sobald die Asset-Instanz nach Auftrag 21 das erste Produkt nennt.
+- **Vorschau** mit den echten Hermes-Bildern, Desktop und Mobil (Abschnitt 6).
+- **Nach Auftrag 21 (Abschnitt 8):** Abnahme live am Testprodukt hp-olt-100, Aufnahmen Desktop und Mobil. Blockfeld
+  `alt` an allen 104 Blöcken gefüllt (DE und EN). Text ISL-R3 an das Bild angepasst. Set `ucp` um R2/R3 ergänzt.
+  Gegenprobe: 118 Seiten DE und 118 Seiten EN, je zwei Szene-Zeilen, 0 Abweichungen. Ohne die beiden Zeilen ist jede
+  Feature-Sektion Zeichen für Zeichen wie um 18:49 Uhr.
 
 ## 1. Metafelder
 
@@ -54,7 +58,7 @@ Geändert: `snippets/heipard-feature-dispatch.liquid`, `snippets/heipard-feature
 - **Limit:** R2 und R3 zählen nicht zum Block-Limit, wie die Zäsur. Sonst würden in Standard-Sets (Limit 5) der
   Kettenplan und das Icon-Grid wegfallen, sobald R2 und R3 erscheinen.
 - **Alt-Text:** wie R1. Zuerst das Blockfeld `alt`, sonst der Alt der Datei, sonst die Überschrift. Das Blockfeld
-  ist bei den 104 Blöcken noch leer, weil die Dateien noch nicht in Files liegen (Abschnitt 8).
+  ist seit 18.11. abends an allen 104 Blöcken gefüllt, DE und EN (Abschnitt 8).
 - **Prüfung:** LiquidJS-Test `t15_szene` (Reihenfolge, Seiten, Limit, Leerverhalten, Alt), dazu die bestehenden
   Tests der Feature-Sektion, alle grün. Theme Check: 15 Meldungen wie vorher, keine neue.
 
@@ -77,14 +81,18 @@ Beschreibung, folgt der Text dem Bild:
 | DFM-R2 | Rosenbogen | Holzbogen ohne Rosen | „Am Gartenbogen“ |
 | OLSST38-R2 | Rosenbogen über einer Bank | Holzlaube über einer Bank | „… an der Holzlaube …“ |
 | U20-R3 | Holzsteg | kleine Holzbrücke | „… bis zur kleinen Holzbrücke …“ |
+| ISL-R3 | Garagentor | Dachkante eines Holzhauses, verschneiter Garten (Notion-Hinweis 18.11.) | „An der Dachkante“ (Nachtrag 18.11. abends) |
 
 **Regeln:** Szenentext, kein Fakt. Keine Zahlen, auch keine Stückzahlen aus den Beschreibungen („vier Sterne“,
 „zwei Hirsche“). Keine Lichtfarbe, weil Familien wie CSL warm- und kaltweiße Varianten haben. Keine Stromquelle,
 keine Funktion (Timer, Fernbedienung, Dimmen), keine Gedankenstriche, keine Garantie-, Herkunfts- oder
 Superlativwörter. Per Skript geprüft, 0 Treffer. Länge 99 bis 143 Zeichen, auf dem Desktop zwei bis drei Zeilen.
 
-**Bilder noch nicht freigegeben:** DCT-R3 (Notion „In Arbeit“, im Eingang die Fassung `DCT_R3_01_2`) und SBLB-R2/-R3
-(„Generiert“). Die Texte passen zu den Fassungen im Eingang. Ändert sich das Bild, ziehe ich den Text nach.
+**Gegen die freigegebenen Bilder geprüft (18.11. abends):** Nach Auftrag 21 habe ich alle 104 Bilder aus Files
+(dieselben Dateien, die live an den Produkten hängen) auf Kontaktbögen neben die Texte gelegt. 103 passen, auch
+DCT-R3 und SBLB-R2/-R3 in der freigegebenen zweiten Fassung. ISL-R3 zeigt statt des Garagentors die Dachkante eines
+Holzhauses. Der Text ist deshalb geändert, DE und EN (Zeile oben, Übersetzung mit neuer Prüfsumme angenommen). Wo
+das Bild eine Anzahl zeigt (DGM-R2/-R3 Sterne, BSX-R2 zwei Sterne, BSM-R3 zwei Hirsche), nennt der Text keine Zahl.
 
 | Familie | Block | Sets | Überschrift DE | Text DE | Überschrift EN |
 |---|---|---|---|---|---|
@@ -131,7 +139,7 @@ Superlativwörter. Per Skript geprüft, 0 Treffer. Länge 99 bis 143 Zeichen, au
 | FXF | `fxf-r2` | fxf | Am Weg zur Haustür | Rentier und Schlitten stehen auf dem verschneiten Rasen neben dem Weg zur Haustür und leuchten in der Dämmerung. | Along the path to the door |
 |  | `fxf-r3` |  | Vor den großen Fenstern | Auf der Holzterrasse vor den großen Fenstern eines modernen Hauses leuchten Rentier und Schlitten in die Dämmerung. | In front of the big windows |
 | ISL | `isl-r2` | isl | An der Pergola | Die Lichterkette hängt an der Vorderkante des Pergola-Dachs und lässt ihr Licht in der Dämmerung über den Tisch auf der Terrasse fallen. | On the pergola |
-|  | `isl-r3` |  | Über dem Garagentor | Entlang der Oberkante des Garagentors hängt die Lichterkette, während in der Dämmerung leichter Schnee auf die Einfahrt fällt. | Above the garage door |
+|  | `isl-r3` |  | An der Dachkante | Entlang der Dachkante des Holzhauses hängt die Lichterkette und leuchtet in der Dämmerung über den verschneiten Garten. | Along the roof edge |
 | NPT | `npt-r2` | npt | Über der Hecke | Das Lichternetz liegt über der breiten Hecke neben dem Weg zur Haustür und begleitet dich in der Dämmerung bis zum Eingang. | Over the hedge |
 |  | `npt-r3` |  | An der Ziegelwand | Flach an der Ziegelwand hinter der Terrassenbank angebracht, wird das Lichternetz in der Dämmerung zur leuchtenden Rückwand. | On the brick wall |
 | OLAG40 | `ola-g40-r2` | ol, ol-g40, ola-g40 | Am Gartenhaus | Aus der Ferne gesehen läuft die Lichterkette an der Dachkante des Gartenhauses entlang und rahmt in der Dämmerung die kleine Terrasse darunter. | On the garden house |
@@ -184,7 +192,7 @@ Superlativwörter. Per Skript geprüft, 0 Treffer. Länge 99 bis 143 Zeichen, au
 |  | `solm-r3` |  | Am Balkon mit Blumenkästen | Am Holzgeländer mit den Blumenkästen entlang drapiert, leuchtet die Lichterkette in der Dämmerung auf dem Balkon. | On the balcony with flower boxes |
 | U20 | `u20-r2` | u20 | Entlang von Balken und Pfosten | Der Lichtschlauch zieht in der Dämmerung eine durchgehende Lichtlinie an Balken und Pfosten der Pergola entlang. | Along beam and post |
 |  | `u20-r3` |  | Am Gartenteich | Der Lichtschlauch folgt dem Ufer des Gartenteichs bis zur kleinen Holzbrücke, im Wasser spiegelt sich die Linie in der Dämmerung. | By the garden pond |
-| UCT | `uct-r2` | uct | Hinter der Gardine | Am Abend leuchtet der Lichtervorhang vor dem Schlafzimmerfenster durch die weiße Gardine, davor steht das Bett mit heller Bettwäsche. | Behind the sheer curtain |
+| UCT | `uct-r2` | uct, ucp | Hinter der Gardine | Am Abend leuchtet der Lichtervorhang vor dem Schlafzimmerfenster durch die weiße Gardine, davor steht das Bett mit heller Bettwäsche. | Behind the sheer curtain |
 |  | `uct-r3` |  | Als Lichtwand im Pavillon | Am Gartenpavillon wird der Lichtervorhang zur Lichtwand hinter den Liegestühlen und leuchtet in die Dämmerung. | A wall of light at the pavilion |
 | VIT | `vit-r2` | vit-586l, vit-864l | Über dem Terrassentisch | Die Lichterkette hängt an der Vorderkante des hölzernen Pergola-Dachs und leuchtet in der Dämmerung über dem gedeckten Tisch. | Above the terrace table |
 |  | `vit-r3` |  | Am Gartenzaun im Schnee | Entlang der Oberkante des Holzzauns hängt die Lichterkette neben dem verschneiten Weg und leuchtet in die Dämmerung. | On the fence in the snow |
@@ -207,7 +215,10 @@ In allen 61 Sets stehen die beiden Blöcke an der geplanten Stelle, alle übrige
   (OLAG40, R1 dort ist schon `OLAG40_R1_01`), `tpm` (CTL, R1 dort ist `CTL_R1_01`), `vam` (VLM, R1 `VLM_R1_01`),
   `wbf` (WWF, R1 `WWF_R1_01`), `dfm-600` (DFM), `vit-586l` (VIT). Ob diese Produkte das Bild bekommen, entscheidet
   allein das Metafeld. Der Text beschreibt das Bild, er passt also, sobald das Bild da ist.
-- **Ohne R2/R3:** `stt`, `ucp` und die drei Vorlagen, dafür gibt es keine Notion-Zeilen.
+- **Ohne R2/R3:** `stt` und die drei Vorlagen, dafür gibt es keine Notion-Zeilen.
+- **Nachtrag `ucp` (18.11., 20:22 Uhr):** hp-ucp-200 trägt laut Auftrag 21 die UCT-Bilder (wie schon B1, B2 und R1).
+  Das Set `ucp` hat deshalb `uct-r2` und `uct-r3` bekommen, direkt hinter `ucp-r1`. Damit sind es 62 Sets. Stand
+  vorher ebenfalls in `docs/data/r2r3-sets-vorher.json`.
 - **Reihenfolge der Arbeit:** erst das Theme live, dann die Sets. Mit dem alten Theme blieben die neuen Blöcke zwar
   ebenfalls unsichtbar, die internen IDs der Blöcke dahinter würden sich aber verschieben.
 - Stand vorher gesichert: `docs/data/r2r3-sets-vorher.json` (61 Sets, Blocklisten).
@@ -235,7 +246,7 @@ Bild-Text-Zeile mit Daten aus einem Metafeld live funktioniert.
 
 Weil noch kein Produkt ein R2- oder R3-Bild hat, ist das eine Vorschau, keine Live-Aufnahme: die gespeicherte Live-Seite von `hp-olt-100`,
 dazu R2 und R3 mit dem neuen Theme-Code gerendert, Bilder `OLT_R2_01` und `OLT_R3_01` aus dem Hermes-Eingang. Die
-Live-Aufnahme am Testprodukt der Asset-Instanz folgt.
+Live-Aufnahme am Testprodukt steht in Abschnitt 8, sie stimmt mit der Vorschau überein.
 
 Blockfolge in der Vorschau: B1, B2 (Bild links), R1 (Bild rechts), R2 (Bild links), R3 (Bild rechts), Kettenplan,
 Icon-Grid. Seitenverhältnis der Szenenbilder gemessen 1,778 (16:9).
@@ -254,21 +265,76 @@ Seit 17.11. arbeitet Git auf dem Arbeits-PC mit dem Konto `hermes-lc`. Dieses Ko
 eingeladen, Schreibrecht besteht seitdem. Push `7fe5884..ec1d6ae` um 18:46:17 Uhr, der GitHub-Sync hat die vier
 Theme-Dateien um 18:46:22 und 18:46:23 übertragen, Prüfsummen gleich git.
 
-## 8. Offen
+## 8. Abnahme live nach Auftrag 21 (18.11. abends)
+
+Die Asset-Instanz hat `feature_r2` und `feature_r3` an allen 118 aktiven Produkten gesetzt: Testprodukt hp-olt-100
+gegen 19:41 Uhr, alle übrigen gegen 20:05 Uhr (Bericht `Heipard Assets/reports/auftrag_21.md`). Vor jedem
+Schreibzugriff unten `get-shop-info` = HeiPard.
+
+**Zuordnung geprüft.** Für alle 118 Produkte per API gelesen, welches Set sie nutzen und welche Datei in
+`feature_r2`/`feature_r3` steht. Die Bildfamilie passt überall zur Blockfamilie im Set (auch BLM, CTL Welle 2, TPM,
+OL-Standard, OL-G40, VAM, WBF, DFM 600, VIT 586L). Einzige Lücke war `ucp`: hp-ucp-200 trägt die UCT-Bilder, das Set
+hatte keine R2/R3-Blöcke. Ergänzt um 20:22 Uhr (Abschnitt 4).
+
+**Blockfeld `alt`, 104 Blöcke** (20:17 bis 20:21 Uhr): DE und EN aus Abschnitt 3 des Asset-Berichts, vorher
+abgeglichen mit dem Register `alt_en.csv` (Text DE, Text EN und Prüfsumme des DE-Texts, 0 Abweichungen). DE per
+`metaobjectUpdate`, EN per `translationsRegister`, alle 208 Schreibvorgänge ohne Fehler. Damit gilt die Pflegeregel
+auch hier: Ändert die Asset-Instanz einen Alt in Files, ziehe ich das Blockfeld nach.
+
+**Text ISL-R3** an das freigegebene Bild angepasst (20:16 Uhr, Abschnitt 3).
+
+**Testprodukt hp-olt-100, live** (Desktop 1400 px, Mobil 390 px, dazu `/en/`):
+
+| Zeile | Überschrift | Bild | Seite | Format |
+|---|---|---|---|---|
+| B1 | Am Baum, am Fenster oder im Garten | `OLT_B1_01` | volle Breite | |
+| B2 | Für den Balken wie für den ganzen Baum | `OLT_B2_01` | links | 5:4 |
+| R1 | Ein ruhiger Schein für lange Abende | `OLT_R1_01` | rechts | 5:4 |
+| R2 | Am weißen Balkongeländer | `OLT_R2_01` | links | 16:9 (gemessen 1,778) |
+| R3 | Im Lorbeerbäumchen | `OLT_R3_01` | rechts | 16:9 (gemessen 1,778) |
+
+Danach Kettenplan und Icon-Grid wie vorher. Mobil stehen alle Bilder über dem Text. Alt von R2/R3 auf Deutsch aus
+dem Blockfeld, auf `/en/` englisch, die Überschriften auf `/en/` englisch („On the white balcony railing“, „In the
+potted bay tree“). Dass B1, B2 und R1 auf `/en/` deutsche Überschriften haben, ist der bekannte offene Punkt
+„Blocktexte ohne EN“ und nicht Teil dieses Auftrags.
+
+- Desktop: `docs/screenshots/2026-11-18-r2r3-abnahme/hp-olt-100_desktop.jpg`
+- Mobil: `docs/screenshots/2026-11-18-r2r3-abnahme/hp-olt-100_mobil.jpg` (Kopfzeile für die Aufnahme festgestellt,
+  sonst schiebt sie sich in die lange Aufnahme)
+
+**Gegenprobe, alle 118 Seiten** (20:25 bis 20:42 Uhr, DE und EN getrennt geladen, alle mit Status 200):
+
+- Jede Seite zeigt genau zwei Szene-Zeilen, R3 direkt hinter R2. R2 steht auf 114 Seiten direkt hinter R1, auf 4
+  Seiten hinter der Kennzahl (hp-dfm-600, hp-dfm-750-eu, beide SBLB). hp-dfm-400-eu-2 nutzt das DFM-Set, zeigt aber
+  schon vorher keine Kennzahl (Produktdaten fehlen), dort folgt R2 deshalb direkt auf R1.
+- Bildseite überall im Wechsel: R2 links, R3 rechts, R1 davor rechts.
+- Bild jeder Szene-Zeile aus der richtigen Familie, Alt gleich Blockfeld (DE bzw. EN), Überschrift gleich Block
+  (DE bzw. EN). 0 Abweichungen, keine Liquid-Fehler.
+- Nimmt man die beiden Szene-Zeilen heraus, ist die Feature-Sektion auf allen 118 Seiten Zeichen für Zeichen gleich
+  der Aufnahme von 18:49 bis 19:06 Uhr. Die Szene-Zeilen verschieben also nichts, auch keine internen IDs.
+
+## 9. Offen
 
 - [x] Push, Prüfsummen, Sets erweitern, die 118 Seiten gegen die Ist-Aufnahme prüfen (18.11. abends).
-- [ ] Abnahme am ersten Testprodukt der Asset-Instanz (nach Auftrag 21), Aufnahmen Desktop und Mobil live.
-- [ ] Alt-Texte: Sobald die R2/R3-Dateien mit DE- und EN-Alt in Files liegen, das Blockfeld `alt` der 104 Blöcke
-  füllen (DE aus Files, EN per Übersetzung). Ohne das zeigt `/en/` den deutschen Alt (Befund 16.11.).
-- [ ] DCT-R3 und SBLB-R2/-R3: Text nach Freigabe des Bilds gegenprüfen.
-- [ ] Frage an Leon: R1 auch in 16:9 (Abschnitt 6)?
+- [x] Abnahme am Testprodukt hp-olt-100, Aufnahmen Desktop und Mobil live (Abschnitt 8).
+- [x] Blockfeld `alt` der 104 Blöcke, DE und EN (Abschnitt 8).
+- [x] DCT-R3 und SBLB-R2/-R3 gegen die freigegebenen Bilder geprüft, passen. ISL-R3 angepasst (Abschnitt 3).
+- [ ] Frage an Leon: R1 auch in 16:9 (Abschnitt 6)? Auf der Live-Seite sieht man es jetzt direkt: R1 ist höher als
+  R2 und R3 darunter.
 - [ ] Für Teil B: DFM, DFM 600 und SBLB haben seit Auftrag 20 ein R1-Bild. Die Kennzahl steht damit nicht mehr als
   Paar neben R1, sondern allein zwischen R1 und R2. Ob R2 und R3 dort direkt hinter R1 rücken, klärt Teil B.
+- [ ] UCP: Die Blöcke `ucp-b1`, `ucp-b2` und `ucp-r1` haben eigene Texte, die Bilder sind aber die von UCT. Bei R1
+  passt der Text nicht zum Bild (Text „Abends ein Blickfang im Wohnzimmer“, Bild Pergola hinter einem Gartentisch).
+  Gehört zur Prüfung „Bild ohne passenden Text“ in Teil B.
 
 ## Rückweg
 
 - Theme: Commit `f06ed96` zurücknehmen.
-- Sets (nach der Erweiterung): Blocklisten aus `docs/data/r2r3-sets-vorher.json` zurückschreiben.
+- Sets (nach der Erweiterung): Blocklisten aus `docs/data/r2r3-sets-vorher.json` zurückschreiben (62 Sets mit
+  `ucp`).
+- Nur die Anzeige abschalten, ohne etwas zu löschen: die Asset-Instanz leert `feature_r2`/`feature_r3`, dann fallen
+  R2 und R3 still weg (Leerverhalten, Abschnitt 2).
+- Text ISL-R3: alte Fassung in `docs/data/r2r3-bloecke.json`-Historie (Commit `5b76cc5`).
 - Blöcke: die 104 Metaobjekte aus `docs/data/r2r3-bloecke.json` löschen.
 - Definitionen: `feature_r2` und `feature_r3` löschen (nur solange leer), in der Feature-Block-Definition `szene`,
   `r2` und `r3` aus den Auswahllisten nehmen.

@@ -873,5 +873,19 @@
    "gid://shopify/Metaobject/412201451853",
    "gid://shopify/Metaobject/412201484621"
   ]
+ },
+ "ucp": {
+  "id": "gid://shopify/Metaobject/481782333773",
+  "blocks": [
+   "gid://shopify/Metaobject/481778893133",
+   "gid://shopify/Metaobject/481778925901",
+   "gid://shopify/Metaobject/481778958669",
+   "gid://shopify/Metaobject/412195946829",
+   "gid://shopify/Metaobject/412196012365",
+   "gid://shopify/Metaobject/412196045133",
+   "gid://shopify/Metaobject/412201419085",
+   "gid://shopify/Metaobject/412201451853",
+   "gid://shopify/Metaobject/412201484621"
+  ]
  }
 }
