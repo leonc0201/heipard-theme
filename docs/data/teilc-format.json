@@ -1,0 +1,5205 @@
+{
+ "stand": "Aufnahme 19.11.2026, 10:39 bis 10:57 Uhr (nach Abschnitt 6, vor der Umstellung)",
+ "quelle": "Breite und Höhe aus dem Bild-Tag des Shops (Datei auf 1400 px skaliert)",
+ "zeilen_je_typ": {
+  "B2": 118,
+  "R1": 118,
+  "Szene": 236,
+  "Zusatz": 2
+ },
+ "bilder": {
+  "BAUMPEC_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pec-150g"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "BAUMPEC_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pec-150g"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "BAUMPEC_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pec-150g"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BAUMPEC_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pec-150g"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BAUMPVC_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pvc-150g"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "BAUMPVC_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pvc-150g"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "BAUMPVC_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pvc-150g"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BAUMPVC_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "pvc-150g"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BLT_B2_03": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-blm-100-eu",
+    "hp-blt-050",
+    "hp-blt-100-eu-1"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "BLT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-blm-100-eu",
+    "hp-blt-050",
+    "hp-blt-100-eu-1"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "BLT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-blm-100-eu",
+    "hp-blt-050",
+    "hp-blt-100-eu-1"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BLT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-blm-100-eu",
+    "hp-blt-050",
+    "hp-blt-100-eu-1"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BSL_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsl-100-1p",
+    "hp-bsl-100-2p",
+    "hp-bsl-50-1p",
+    "hp-bsl-50-2p"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "BSL_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsl-100-1p",
+    "hp-bsl-100-2p",
+    "hp-bsl-50-1p",
+    "hp-bsl-50-2p"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "BSL_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsl-100-1p",
+    "hp-bsl-100-2p",
+    "hp-bsl-50-1p",
+    "hp-bsl-50-2p"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BSL_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsl-100-1p",
+    "hp-bsl-100-2p",
+    "hp-bsl-50-1p",
+    "hp-bsl-50-2p"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BSM_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsm-002"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "BSM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsm-002"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "BSM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsm-002"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BSM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsm-002"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BSX_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsx-002"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "BSX_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsx-002"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "BSX_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsx-002"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "BSX_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-bsx-002"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CL_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-cl-1-eu",
+    "hp-cl-2-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "CL_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-cl-1-eu",
+    "hp-cl-2-eu"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "CL_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-cl-1-eu",
+    "hp-cl-2-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CL_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-cl-1-eu",
+    "hp-cl-2-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CSL_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-csl-200-c",
+    "hp-csl-200-w",
+    "hp-csl-300-c",
+    "hp-csl-300-w"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "CSL_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-csl-200-c",
+    "hp-csl-200-w",
+    "hp-csl-300-c",
+    "hp-csl-300-w"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "CSL_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-csl-200-c",
+    "hp-csl-200-w",
+    "hp-csl-300-c",
+    "hp-csl-300-w"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CSL_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-csl-200-c",
+    "hp-csl-200-w",
+    "hp-csl-300-c",
+    "hp-csl-300-w"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CTLM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180m",
+    "hp-ctl-240m"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "CTLM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180m",
+    "hp-ctl-240m"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "CTLM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180m",
+    "hp-ctl-240m"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CTLM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180m",
+    "hp-ctl-240m"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CTL_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-210-eu-1",
+    "hp-ctl-400-eu-1"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "CTL_B2_03": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180",
+    "hp-ctl-240",
+    "hp-ctl-300-eu",
+    "hp-ctl-360-eu",
+    "hp-tpm-400-eu-1"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "CTL_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180",
+    "hp-ctl-210-eu-1",
+    "hp-ctl-240",
+    "hp-ctl-300-eu",
+    "hp-ctl-360-eu",
+    "hp-ctl-400-eu-1",
+    "hp-tpm-400-eu-1"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "CTL_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180",
+    "hp-ctl-210-eu-1",
+    "hp-ctl-240",
+    "hp-ctl-300-eu",
+    "hp-ctl-360-eu",
+    "hp-ctl-400-eu-1",
+    "hp-tpm-400-eu-1"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "CTL_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ctl-180",
+    "hp-ctl-210-eu-1",
+    "hp-ctl-240",
+    "hp-ctl-300-eu",
+    "hp-ctl-360-eu",
+    "hp-ctl-400-eu-1",
+    "hp-tpm-400-eu-1"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DCT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DCT_B2_17": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "zeilen": [
+    "Zusatz"
+   ]
+  },
+  "DCT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DCT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DCT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DFM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dfm-400-eu-2",
+    "hp-dfm-600",
+    "hp-dfm-750-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DFM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dfm-400-eu-2",
+    "hp-dfm-600",
+    "hp-dfm-750-eu"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DFM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dfm-400-eu-2",
+    "hp-dfm-600",
+    "hp-dfm-750-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DFM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dfm-400-eu-2",
+    "hp-dfm-600",
+    "hp-dfm-750-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DGM002_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-002"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DGM002_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-002"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DGM002_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-002"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DGM002_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-002"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DGM048_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-048"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DGM048_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-048"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DGM048_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-048"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DGM048_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-048"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DGM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-001"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DGM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-001"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DGM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-001"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DGM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dgm-001"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DLM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dlm-100h"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DLM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dlm-100h"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DLM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dlm-100h"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DLM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dlm-100h"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DNM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dnm-208"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DNM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dnm-208"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DNM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dnm-208"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DNM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dnm-208"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DPM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpm-300"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DPM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpm-300"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DPM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpm-300"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DPM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpm-300"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DPT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpt-300"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "DPT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpt-300"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "DPT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpt-300"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "DPT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-dpt-300"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "FSF_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fsf-120"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "FSF_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fsf-120"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "FSF_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fsf-120"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "FSF_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fsf-120"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "FXF_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fxf-001"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "FXF_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fxf-001"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "FXF_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fxf-001"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "FXF_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-fxf-001"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "ISL_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-isl-264",
+    "hp-isl-360-eu",
+    "hp-isl-486"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "ISL_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-isl-264",
+    "hp-isl-360-eu",
+    "hp-isl-486"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "ISL_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-isl-264",
+    "hp-isl-360-eu",
+    "hp-isl-486"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "ISL_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-isl-264",
+    "hp-isl-360-eu",
+    "hp-isl-486"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "NPT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "NPT_B2_08": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "zeilen": [
+    "Zusatz"
+   ]
+  },
+  "NPT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "NPT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "NPT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLAG40_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ola-g40-15-eu",
+    "hp-ola-g40-27-eu",
+    "hp-ola-g40-42-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLAG40_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-100",
+    "hp-ol-15",
+    "hp-ol-15-g",
+    "hp-ol-25",
+    "hp-ol-30",
+    "hp-ol-50",
+    "hp-ol-75",
+    "hp-ola-g40-15-eu",
+    "hp-ola-g40-27-eu",
+    "hp-ola-g40-42-eu",
+    "hp-olh-g40-15",
+    "hp-olh-g40-20",
+    "hp-olh-g40-25",
+    "hp-olh-g40-35",
+    "hp-olh-g40-50"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLAG40_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-100",
+    "hp-ol-15",
+    "hp-ol-15-g",
+    "hp-ol-25",
+    "hp-ol-30",
+    "hp-ol-50",
+    "hp-ol-75",
+    "hp-ola-g40-15-eu",
+    "hp-ola-g40-27-eu",
+    "hp-ola-g40-42-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLAG40_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-100",
+    "hp-ol-15",
+    "hp-ol-15-g",
+    "hp-ol-25",
+    "hp-ol-30",
+    "hp-ol-50",
+    "hp-ol-75",
+    "hp-ola-g40-15-eu",
+    "hp-ola-g40-27-eu",
+    "hp-ola-g40-42-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLAS14_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ola-s14-15-eu",
+    "hp-ola-s14-30-eu",
+    "hp-ola-s14-50-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLAS14_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ola-s14-15-eu",
+    "hp-ola-s14-30-eu",
+    "hp-ola-s14-50-eu"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLAS14_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ola-s14-15-eu",
+    "hp-ola-s14-30-eu",
+    "hp-ola-s14-50-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLAS14_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ola-s14-15-eu",
+    "hp-ola-s14-30-eu",
+    "hp-ola-s14-50-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLG40_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-100",
+    "hp-ol-15",
+    "hp-ol-15-g",
+    "hp-ol-25",
+    "hp-ol-30",
+    "hp-ol-50",
+    "hp-ol-75"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLG_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olg-100",
+    "hp-olg-200",
+    "hp-olg-200m",
+    "hp-olg-200w",
+    "hp-olg-300-eu",
+    "hp-olg-400",
+    "hp-olg-600",
+    "hp-olg-800"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLG_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olg-100",
+    "hp-olg-200",
+    "hp-olg-200m",
+    "hp-olg-200w",
+    "hp-olg-300-eu",
+    "hp-olg-400",
+    "hp-olg-600",
+    "hp-olg-800"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLG_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olg-100",
+    "hp-olg-200",
+    "hp-olg-200m",
+    "hp-olg-200w",
+    "hp-olg-300-eu",
+    "hp-olg-400",
+    "hp-olg-600",
+    "hp-olg-800"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLG_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olg-100",
+    "hp-olg-200",
+    "hp-olg-200m",
+    "hp-olg-200w",
+    "hp-olg-300-eu",
+    "hp-olg-400",
+    "hp-olg-600",
+    "hp-olg-800"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLHG40_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olh-g40-15",
+    "hp-olh-g40-20",
+    "hp-olh-g40-25",
+    "hp-olh-g40-35",
+    "hp-olh-g40-50"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLHG40_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olh-g40-15",
+    "hp-olh-g40-20",
+    "hp-olh-g40-25",
+    "hp-olh-g40-35",
+    "hp-olh-g40-50"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLHG40_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olh-g40-15",
+    "hp-olh-g40-20",
+    "hp-olh-g40-25",
+    "hp-olh-g40-35",
+    "hp-olh-g40-50"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLS11_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-s11-15",
+    "hp-ol-s11-25",
+    "hp-ol-s11-30",
+    "hp-ol-s11-50"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLS11_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-s11-15",
+    "hp-ol-s11-25",
+    "hp-ol-s11-30",
+    "hp-ol-s11-50"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLS11_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-s11-15",
+    "hp-ol-s11-25",
+    "hp-ol-s11-30",
+    "hp-ol-s11-50"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLS11_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-s11-15",
+    "hp-ol-s11-25",
+    "hp-ol-s11-30",
+    "hp-ol-s11-50"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSA60_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-a60-16-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLSA60_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-a60-16-eu"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLSA60_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-a60-16-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSA60_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-a60-16-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSG40_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-g40-16",
+    "hp-ols-g40-25",
+    "hp-ols-g40-35"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLSG40_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-g40-16",
+    "hp-ols-g40-25",
+    "hp-ols-g40-35"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLSG40_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-g40-16",
+    "hp-ols-g40-25",
+    "hp-ols-g40-35"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSG40_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-g40-16",
+    "hp-ols-g40-25",
+    "hp-ols-g40-35"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSS11_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s11-16"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLSS11_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s11-16"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLSS11_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s11-16"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSS11_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s11-16"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSS17_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s17-16",
+    "hp-ols-s17-16-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLSS17_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s17-16",
+    "hp-ols-s17-16-eu"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLSS17_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s17-16",
+    "hp-ols-s17-16-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSS17_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-s17-16",
+    "hp-ols-s17-16-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSST38_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-st38-16"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLSST38_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-st38-16"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLSST38_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-st38-16"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLSST38_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ols-st38-16"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLST38_B2_04": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-st38-15",
+    "hp-ol-st38-25",
+    "hp-ol-st38-30",
+    "hp-ol-st38-50"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLST38_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-st38-15",
+    "hp-ol-st38-25",
+    "hp-ol-st38-30",
+    "hp-ol-st38-50"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLST38_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-st38-15",
+    "hp-ol-st38-25",
+    "hp-ol-st38-30",
+    "hp-ol-st38-50"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLST38_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ol-st38-15",
+    "hp-ol-st38-25",
+    "hp-ol-st38-30",
+    "hp-ol-st38-50"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olt-100",
+    "hp-olt-150",
+    "hp-olt-200",
+    "hp-olt-300-eu",
+    "hp-olt-400",
+    "hp-olt-600",
+    "hp-olt-800"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "OLT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olt-100",
+    "hp-olt-150",
+    "hp-olt-200",
+    "hp-olt-300-eu",
+    "hp-olt-400",
+    "hp-olt-600",
+    "hp-olt-800"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "OLT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olt-100",
+    "hp-olt-150",
+    "hp-olt-200",
+    "hp-olt-300-eu",
+    "hp-olt-400",
+    "hp-olt-600",
+    "hp-olt-800"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "OLT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-olt-100",
+    "hp-olt-150",
+    "hp-olt-200",
+    "hp-olt-300-eu",
+    "hp-olt-400",
+    "hp-olt-600",
+    "hp-olt-800"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RCT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rct-400"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RCT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rct-400"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RCT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rct-400"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RCT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rct-400"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RFM_B2_03": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rfm-600"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RFM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rfm-600"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RFM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rfm-600"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RFM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rfm-600"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RGB_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rgb-200a",
+    "hp-rgb-300a",
+    "hp-rgb-500a"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RGB_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rgb-200a",
+    "hp-rgb-300a",
+    "hp-rgb-500a"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RGB_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rgb-200a",
+    "hp-rgb-300a",
+    "hp-rgb-500a"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RGB_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rgb-200a",
+    "hp-rgb-300a",
+    "hp-rgb-500a"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RIT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rit-280"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RIT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rit-280"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RIT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rit-280"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RIT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rit-280"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RMP_B2_02": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rmp-180"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RMP_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rmp-180"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RMP_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rmp-180"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RMP_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rmp-180"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RNM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rnm-200"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RNM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rnm-200"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RNM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rnm-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RNM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rnm-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RPM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rpm-200"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RPM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rpm-200"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RPM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rpm-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RPM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rpm-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RSP_B2_04": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rsp-180"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RSP_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rsp-180"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RSP_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rsp-180"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RSP_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rsp-180"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RTM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rtm-400"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "RTM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rtm-400"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "RTM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rtm-400"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "RTM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-rtm-400"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "SBLB_B2_03": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-sblb-100l-ww-new",
+    "hp-sblb-60l-ww-new"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "SBLB_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-sblb-100l-ww-new",
+    "hp-sblb-60l-ww-new"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "SBLB_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-sblb-100l-ww-new",
+    "hp-sblb-60l-ww-new"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "SBLB_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-sblb-100l-ww-new",
+    "hp-sblb-60l-ww-new"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "SCWL_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-scwl-10m2p-mc",
+    "hp-scwl-15m2p-mc"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "SCWL_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-scwl-10m2p-mc",
+    "hp-scwl-15m2p-mc"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "SCWL_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-scwl-10m2p-mc",
+    "hp-scwl-15m2p-mc"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "SCWL_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-scwl-10m2p-mc",
+    "hp-scwl-15m2p-mc"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "SOLM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-solm-12m-ww"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "SOLM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-solm-12m-ww"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "SOLM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-solm-12m-ww"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "SOLM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-solm-12m-ww"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "U20_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-u20-200"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "U20_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-u20-200"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "U20_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-u20-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "U20_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-u20-200"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "UCT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ucp-200",
+    "hp-uct-200-eu"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "UCT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ucp-200",
+    "hp-uct-200-eu"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "UCT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ucp-200",
+    "hp-uct-200-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "UCT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-ucp-200",
+    "hp-uct-200-eu"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "VIT_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vit-586l-eu-1",
+    "hp-vit-864l-eu-1"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "VIT_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vit-586l-eu-1",
+    "hp-vit-864l-eu-1"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "VIT_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vit-586l-eu-1",
+    "hp-vit-864l-eu-1"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "VIT_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vit-586l-eu-1",
+    "hp-vit-864l-eu-1"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "VLM_B2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vam-400l-eu-1",
+    "hp-vlm-100l"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "VLM_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vam-400l-eu-1",
+    "hp-vlm-100l"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "VLM_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vam-400l-eu-1",
+    "hp-vlm-100l"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "VLM_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-vam-400l-eu-1",
+    "hp-vlm-100l"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "WWF_B2_04": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-wbf-180",
+    "hp-wbf-210",
+    "hp-wwf-180"
+   ],
+   "zeilen": [
+    "B2"
+   ]
+  },
+  "WWF_R1_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-wbf-180",
+    "hp-wbf-210",
+    "hp-wwf-180"
+   ],
+   "zeilen": [
+    "R1"
+   ]
+  },
+  "WWF_R2_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-wbf-180",
+    "hp-wbf-210",
+    "hp-wwf-180"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  },
+  "WWF_R3_01": {
+   "w": 1400,
+   "h": 788,
+   "verhaeltnis": 1.777,
+   "seiten": [
+    "hp-wbf-180",
+    "hp-wbf-210",
+    "hp-wwf-180"
+   ],
+   "zeilen": [
+    "Szene"
+   ]
+  }
+ },
+ "nicht_16_9": {},
+ "seiten": {
+  "hp-blm-100-eu": [
+   [
+    "B2",
+    "BLT_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "BLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-blt-050": [
+   [
+    "B2",
+    "BLT_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "BLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-blt-100-eu-1": [
+   [
+    "B2",
+    "BLT_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "BLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-bsl-100-1p": [
+   [
+    "B2",
+    "BSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "BSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-bsl-100-2p": [
+   [
+    "B2",
+    "BSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "BSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-bsl-50-1p": [
+   [
+    "B2",
+    "BSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "BSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-bsl-50-2p": [
+   [
+    "B2",
+    "BSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "BSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-bsm-002": [
+   [
+    "B2",
+    "BSM_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "BSM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-bsx-002": [
+   [
+    "B2",
+    "BSX_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "BSX_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSX_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BSX_R3_01",
+    1.777
+   ]
+  ],
+  "hp-cl-1-eu": [
+   [
+    "B2",
+    "CL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-cl-2-eu": [
+   [
+    "B2",
+    "CL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-csl-200-c": [
+   [
+    "B2",
+    "CSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-csl-200-w": [
+   [
+    "B2",
+    "CSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-csl-300-c": [
+   [
+    "B2",
+    "CSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-csl-300-w": [
+   [
+    "B2",
+    "CSL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CSL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CSL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-180": [
+   [
+    "B2",
+    "CTL_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-180m": [
+   [
+    "B2",
+    "CTLM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CTLM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTLM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTLM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-210-eu-1": [
+   [
+    "B2",
+    "CTL_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-240": [
+   [
+    "B2",
+    "CTL_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-240m": [
+   [
+    "B2",
+    "CTLM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "CTLM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTLM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTLM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-300-eu": [
+   [
+    "B2",
+    "CTL_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-360-eu": [
+   [
+    "B2",
+    "CTL_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ctl-400-eu-1": [
+   [
+    "B2",
+    "CTL_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dct-200": [
+   [
+    "B2",
+    "DCT_B2_01",
+    1.777
+   ],
+   [
+    "Zusatz",
+    "DCT_B2_17",
+    1.777
+   ],
+   [
+    "R1",
+    "DCT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DCT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DCT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dfm-400-eu-2": [
+   [
+    "B2",
+    "DFM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DFM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DFM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DFM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dfm-600": [
+   [
+    "B2",
+    "DFM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DFM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DFM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DFM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dfm-750-eu": [
+   [
+    "B2",
+    "DFM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DFM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DFM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DFM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dgm-001": [
+   [
+    "B2",
+    "DGM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DGM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DGM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DGM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dgm-002": [
+   [
+    "B2",
+    "DGM002_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DGM002_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DGM002_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DGM002_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dgm-048": [
+   [
+    "B2",
+    "DGM048_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DGM048_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DGM048_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DGM048_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dlm-100h": [
+   [
+    "B2",
+    "DLM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DLM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DLM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DLM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dnm-208": [
+   [
+    "B2",
+    "DNM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DNM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DNM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DNM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dpm-300": [
+   [
+    "B2",
+    "DPM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DPM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DPM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DPM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-dpt-300": [
+   [
+    "B2",
+    "DPT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "DPT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DPT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "DPT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-fsf-120": [
+   [
+    "B2",
+    "FSF_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "FSF_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "FSF_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "FSF_R3_01",
+    1.777
+   ]
+  ],
+  "hp-fxf-001": [
+   [
+    "B2",
+    "FXF_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "FXF_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "FXF_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "FXF_R3_01",
+    1.777
+   ]
+  ],
+  "hp-isl-264": [
+   [
+    "B2",
+    "ISL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "ISL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "ISL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "ISL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-isl-360-eu": [
+   [
+    "B2",
+    "ISL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "ISL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "ISL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "ISL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-isl-486": [
+   [
+    "B2",
+    "ISL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "ISL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "ISL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "ISL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-npt-210": [
+   [
+    "B2",
+    "NPT_B2_01",
+    1.777
+   ],
+   [
+    "Zusatz",
+    "NPT_B2_08",
+    1.777
+   ],
+   [
+    "R1",
+    "NPT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "NPT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "NPT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-100": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-15": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-15-g": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-25": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-30": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-50": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-75": [
+   [
+    "B2",
+    "OLG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-s11-15": [
+   [
+    "B2",
+    "OLS11_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "OLS11_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-s11-25": [
+   [
+    "B2",
+    "OLS11_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "OLS11_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-s11-30": [
+   [
+    "B2",
+    "OLS11_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "OLS11_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-s11-50": [
+   [
+    "B2",
+    "OLS11_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "OLS11_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLS11_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-st38-15": [
+   [
+    "B2",
+    "OLST38_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "OLST38_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-st38-25": [
+   [
+    "B2",
+    "OLST38_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "OLST38_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-st38-30": [
+   [
+    "B2",
+    "OLST38_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "OLST38_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ol-st38-50": [
+   [
+    "B2",
+    "OLST38_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "OLST38_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLST38_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ola-g40-15-eu": [
+   [
+    "B2",
+    "OLAG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ola-g40-27-eu": [
+   [
+    "B2",
+    "OLAG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ola-g40-42-eu": [
+   [
+    "B2",
+    "OLAG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ola-s14-15-eu": [
+   [
+    "B2",
+    "OLAS14_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAS14_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAS14_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAS14_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ola-s14-30-eu": [
+   [
+    "B2",
+    "OLAS14_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAS14_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAS14_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAS14_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ola-s14-50-eu": [
+   [
+    "B2",
+    "OLAS14_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAS14_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAS14_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLAS14_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-100": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-200": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-200m": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-200w": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-300-eu": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-400": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-600": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olg-800": [
+   [
+    "B2",
+    "OLG_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLG_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLG_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olh-g40-15": [
+   [
+    "B2",
+    "OLHG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olh-g40-20": [
+   [
+    "B2",
+    "OLHG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olh-g40-25": [
+   [
+    "B2",
+    "OLHG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olh-g40-35": [
+   [
+    "B2",
+    "OLHG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olh-g40-50": [
+   [
+    "B2",
+    "OLHG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLAG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLHG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-a60-16-eu": [
+   [
+    "B2",
+    "OLSA60_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSA60_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSA60_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSA60_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-g40-16": [
+   [
+    "B2",
+    "OLSG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-g40-25": [
+   [
+    "B2",
+    "OLSG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-g40-35": [
+   [
+    "B2",
+    "OLSG40_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSG40_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSG40_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSG40_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-s11-16": [
+   [
+    "B2",
+    "OLSS11_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSS11_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSS11_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSS11_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-s17-16": [
+   [
+    "B2",
+    "OLSS17_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSS17_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSS17_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSS17_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-s17-16-eu": [
+   [
+    "B2",
+    "OLSS17_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSS17_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSS17_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSS17_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ols-st38-16": [
+   [
+    "B2",
+    "OLSST38_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLSST38_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSST38_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLSST38_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-100": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-150": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-200": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-300-eu": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-400": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-600": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-olt-800": [
+   [
+    "B2",
+    "OLT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "OLT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "OLT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rct-400": [
+   [
+    "B2",
+    "RCT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RCT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RCT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RCT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rfm-600": [
+   [
+    "B2",
+    "RFM_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "RFM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RFM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RFM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rgb-200a": [
+   [
+    "B2",
+    "RGB_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RGB_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RGB_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RGB_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rgb-300a": [
+   [
+    "B2",
+    "RGB_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RGB_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RGB_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RGB_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rgb-500a": [
+   [
+    "B2",
+    "RGB_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RGB_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RGB_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RGB_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rit-280": [
+   [
+    "B2",
+    "RIT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RIT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RIT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RIT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rmp-180": [
+   [
+    "B2",
+    "RMP_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "RMP_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RMP_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RMP_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rnm-200": [
+   [
+    "B2",
+    "RNM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RNM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RNM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RNM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rpm-200": [
+   [
+    "B2",
+    "RPM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RPM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RPM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RPM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rsp-180": [
+   [
+    "B2",
+    "RSP_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "RSP_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RSP_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RSP_R3_01",
+    1.777
+   ]
+  ],
+  "hp-rtm-400": [
+   [
+    "B2",
+    "RTM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "RTM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RTM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "RTM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-sblb-100l-ww-new": [
+   [
+    "B2",
+    "SBLB_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "SBLB_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SBLB_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SBLB_R3_01",
+    1.777
+   ]
+  ],
+  "hp-sblb-60l-ww-new": [
+   [
+    "B2",
+    "SBLB_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "SBLB_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SBLB_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SBLB_R3_01",
+    1.777
+   ]
+  ],
+  "hp-scwl-10m2p-mc": [
+   [
+    "B2",
+    "SCWL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "SCWL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SCWL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SCWL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-scwl-15m2p-mc": [
+   [
+    "B2",
+    "SCWL_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "SCWL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SCWL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SCWL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-solm-12m-ww": [
+   [
+    "B2",
+    "SOLM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "SOLM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SOLM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "SOLM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-tpm-400-eu-1": [
+   [
+    "B2",
+    "CTL_B2_03",
+    1.777
+   ],
+   [
+    "R1",
+    "CTL_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "CTL_R3_01",
+    1.777
+   ]
+  ],
+  "hp-u20-200": [
+   [
+    "B2",
+    "U20_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "U20_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "U20_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "U20_R3_01",
+    1.777
+   ]
+  ],
+  "hp-ucp-200": [
+   [
+    "B2",
+    "UCT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "UCT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "UCT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "UCT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-uct-200-eu": [
+   [
+    "B2",
+    "UCT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "UCT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "UCT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "UCT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-vam-400l-eu-1": [
+   [
+    "B2",
+    "VLM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "VLM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VLM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VLM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-vit-586l-eu-1": [
+   [
+    "B2",
+    "VIT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "VIT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VIT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VIT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-vit-864l-eu-1": [
+   [
+    "B2",
+    "VIT_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "VIT_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VIT_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VIT_R3_01",
+    1.777
+   ]
+  ],
+  "hp-vlm-100l": [
+   [
+    "B2",
+    "VLM_B2_01",
+    1.777
+   ],
+   [
+    "R1",
+    "VLM_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VLM_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "VLM_R3_01",
+    1.777
+   ]
+  ],
+  "hp-wbf-180": [
+   [
+    "B2",
+    "WWF_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "WWF_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "WWF_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "WWF_R3_01",
+    1.777
+   ]
+  ],
+  "hp-wbf-210": [
+   [
+    "B2",
+    "WWF_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "WWF_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "WWF_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "WWF_R3_01",
+    1.777
+   ]
+  ],
+  "hp-wwf-180": [
+   [
+    "B2",
+    "WWF_B2_04",
+    1.777
+   ],
+   [
+    "R1",
+    "WWF_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "WWF_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "WWF_R3_01",
+    1.777
+   ]
+  ],
+  "pec-150g": [
+   [
+    "B2",
+    "BAUMPEC_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "BAUMPEC_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BAUMPEC_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BAUMPEC_R3_01",
+    1.777
+   ]
+  ],
+  "pvc-150g": [
+   [
+    "B2",
+    "BAUMPVC_B2_02",
+    1.777
+   ],
+   [
+    "R1",
+    "BAUMPVC_R1_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BAUMPVC_R2_01",
+    1.777
+   ],
+   [
+    "Szene",
+    "BAUMPVC_R3_01",
+    1.777
+   ]
+  ]
+ }
+}

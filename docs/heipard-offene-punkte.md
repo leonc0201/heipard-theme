@@ -284,22 +284,35 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   104 Blöcke mit Szenentext DE/EN, live seit 18.11. 18:46 (Theme) und 18:49 (61 Sets, `ucp` seit 20:22). Nach
   Auftrag 21 zeigen alle 118 Seiten R2/R3; Abnahme hp-olt-100 und Gegenprobe 118 Seiten DE/EN ohne Abweichung,
   Blockfeld `alt` DE/EN gefüllt, ISL-R3 an das Bild angepasst. Bericht `heipard-r2r3-szene-bericht.md`.
-- [ ] **R1 in 16:9?** (Frage an Leon, seit 2026-11-18) — R1 zeigt sein 16:9-Bild im Rahmen 5:4, R2/R3 darunter in
-  16:9. Eine Zeile CSS, ändert alle Seiten mit R1-Bild. 19.11.: jetzt keine Umstellung, Vergleichsvorschau
-  hp-olt-100 (Fassung 1/2) im Bericht Teil B, Abschnitt 6; Leon entscheidet.
+- [x] **R1 in 16:9** (2026-11-19, Leon: Fassung 2) — B2, R1, R2/R3 und Zusatzzeile in 16:9, Sticky bleibt 5:4.
+  Vorher alle 211 Bilder dieser Zeilen auf 118 Seiten geprüft, alle 16:9. CSS `e867f9e`, live seit 10:58:50.
+  Bericht Teil C, Abschnitt 7.
 - [x] **UCP: Texte zu UCT-Bildern** (2026-11-19) — `ucp-b2` und `ucp-r1` an die UCT-Bilder angepasst, DE und EN;
   `ucp-b1` passt. Bericht Teil B, Abschnitt 3.3.
 - [x] **Schritt C Teil B: B1/B2/R1 aus den Metafeldern** (2026-11-19) — Theme `58bf601` (B1/B2 ohne Blockbild nehmen
   `feature_b1`/`feature_b2`), 9 neue B2-Blöcke, `solm-b2` und `ol-s11-b2` zurück im Set, Alt-Felder, UCP. Alle 118
   Seiten zeigen B1, B2 und R1. Bericht `heipard-teil-b-sets-bericht.md`.
-- [ ] **Slot zeigt anderes Bild (10 Familien, 18 Blöcke)** — Kategoriebilder und Shenzhen-Ausschnitte an Welle-2-Blöcken,
-  neues Bild liegt im Metafeld. Leon entscheidet (a) weiterer Block oder (b) ersetzen anhand der DCT-Vorschau
-  (Bericht Teil B, Abschnitte 4 und 5). Bei (a) greift auf hp-dct-200 das Block-Limit.
-- [ ] **Text gegen Bild: 13 Widersprüche, 13 Hinweise** (Gegenprobe 19.11.) — vor allem R1-Texte aus der Zeit vor
-  den R1-Bildern; `rmp-r1` ist ein Faktenfehler (G40-Satz am Lichterturm). Vorschläge im Bericht Teil B,
-  Abschnitt 9, warten auf Leon.
-- [ ] **hp-dgm-048: Alt von R1** — geteilter Block `dgm-w1-r1` trägt den Spiralen-Alt, R1 zeigt Geschenkboxen.
-  Vorschlag eigener Block `dgm-w1-048-r1` (Bericht Teil B, Abschnitt 10), wartet auf Leon.
+- [x] **Slot zeigt anderes Bild (10 Familien, 18 Blöcke)** (2026-11-19) — nach Leons Regeln je Block entschieden:
+  14 ersetzt, Zusatzzeilen auf hp-dct-200 und hp-npt-210, `ctl-m-b1` eigener Block, Theme `8c8f647`. Bericht Teil C,
+  Abschnitt 6.
+- [x] **Text gegen Bild: 13 Widersprüche, 13 Hinweise** (2026-11-19) — `rmp-r1` ohne G40-Satz, 11 Widersprüche und
+  alle 8 Hinweise umgeschrieben (DE und EN), `blm-b2` mit neuem Bild in Abschnitt 6; `OLSA60_R1` bleibt [prüfen].
+  Bericht Teil C, Abschnitte 1 bis 3.
+- [x] **hp-dgm-048: Alt von R1** (2026-11-19) — eigener Block `dgm-w1-048-r1` mit Kicker „Leuchtet von innen“ und
+  Alt von `DGM048_R1_01`. Bericht Teil C, Abschnitt 4.
+- [x] **Teil C: Entscheidungen zu Teil B** (2026-11-19) — `rmp-r1` ohne G40-Satz (Lichtfarbe aus den Metafeldern),
+  11 Widersprüche und alle 8 Hinweise umgeschrieben, `ol-s11-b2` mit Längen, eigener R1-Block `dgm-w1-048-r1`, 14
+  Welle-2-Blöcke nach Leons Regeln (Zusatzzeilen DCT und NPT, Theme `8c8f647`), Bild-Text-Zeilen in 16:9 (`e867f9e`). Alles DE und EN.
+  Bericht `heipard-teil-c-bericht.md`.
+- [ ] **Bild doppelt auf der Seite (bildgleiche Dateien)** — B2 und Schieber zeigen dasselbe Bild: hp-dct-200
+  (`DCT_B2_01` = `DCT_I1_01_an`, B2 bleibt nach Leons DCT-Vorgabe), hp-vit-586l-eu-1 und -864l-eu-1 (`VIT_B2_01` =
+  `VIT_I1_02_an`, Regel 4); B2 und Steuerung dieselbe Datei auf hp-ola-s14-15/-30/-50-eu (`OLAS14_B2_01`, Regel 4).
+  Vorschlag im Bericht Teil C, Abschnitt 10; wartet auf Leon.
+- [ ] **[prüfen] Bild gegen Produktdaten** — `SOLM_R1_01` zeigt einen Erdspieß, der Lieferumfang von hp-solm-12m-ww nennt
+  nur die Wandhalterung; `OLSA60_R1_01` zeigt mehr Birnen als die 16 einer Kette; Lieferumfang von hp-dgm-048
+  („1 × LED-Gartenstecker“) passt nicht zum Produkt (Geschenkboxen). Bericht Teil C, Abschnitt 2 bis 5.
+- [ ] **EN-Alt in Files fehlt** für `CTL_B2_02`, `DFM_B1_01`, `SBLB_B1_01` (seit Teil C sichtbar) — Blockfeld trägt
+  eine eigene Übersetzung; die Asset-Instanz setzt den Files-Alt erst mit Leons Freigabe, danach Blockfeld nachziehen.
 - [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
   keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live
   geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`. Nachtrag 17.11.: „Featured collection“

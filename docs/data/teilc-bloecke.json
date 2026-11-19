@@ -1,0 +1,1118 @@
+{
+ "stand": "19.11.2026, Shop-Lesung vor dem Schreiben (~10:15); geschrieben 10:27 bis 10:39",
+ "abschnitt1": {
+  "handle": "rmp-r1",
+  "id": "481779515725",
+  "vorher": {
+   "body": "Im Dunkeln soll das Licht einladen und nicht blenden. Die G40-Birnen leuchten warmweiß mit 2700 Kelvin."
+  },
+  "nachher": {
+   "kicker": "Warmes Licht",
+   "title": "Gemütlich statt grell",
+   "body": "Im Dunkeln soll das Licht einladen und nicht blenden. Der Lichterturm leuchtet warmweiß mit 2700 Kelvin."
+  },
+  "en": {
+   "kicker": "Warm light",
+   "title": "Cozy, not harsh",
+   "body": "In the dark, the light should feel inviting, not glaring. The light tower glows warm white at 2700 Kelvin."
+  },
+  "quelle": "hp-rmp-180: heipard.lichtfarbe = Warmweiß, heipard.farbtemperatur_kelvin = 2700"
+ },
+ "abschnitt2_3_5": [
+  {
+   "abschnitt": 2,
+   "handle": "uct-r1",
+   "id": "481779056973",
+   "bild": "UCT_R1_01",
+   "seiten": [
+    "hp-uct-200-eu"
+   ],
+   "vorher": {
+    "kicker": "Am Fenster",
+    "title": "Eine leere Scheibe wird zum Blickfang",
+    "body": "Abends fallen die Lichtstränge vor dem Fenster senkrecht nach unten. Der Vorhang misst 3 x 2 m mit 200 LEDs.",
+    "label": "UCT · R1 Fenster"
+   },
+   "nachher": {
+    "kicker": "In der Pergola",
+    "title": "Abends ein Blickfang im Garten",
+    "body": "In der offenen Seite der Pergola fallen die Lichtstränge senkrecht nach unten. Der Vorhang misst 3 x 2 m mit 200 LEDs.",
+    "label": "UCT · R1 Pergola"
+   },
+   "en": {
+    "kicker": "In the pergola",
+    "title": "An evening eye-catcher in the garden",
+    "body": "In the open side of the pergola, the light strands fall straight down. The curtain measures 3 x 2 m with 200 LEDs."
+   },
+   "grund": "Bild zeigt die Lichtwand in einer Pergola hinter dem Gartentisch, kein Fenster; Text wie ucp-r1 (gleiches Bild)."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "bsm-r1",
+   "id": "481776861517",
+   "bild": "BSM_R1_01",
+   "seiten": [
+    "hp-bsm-002"
+   ],
+   "vorher": {
+    "kicker": "Im Doppelpack",
+    "title": "Zwei Figuren für zwei Plätze",
+    "body": "Ein Hirsch hängt im Fenster, der andere an der Tür. Die Deko kommt als 2er-Set."
+   },
+   "nachher": {
+    "body": "Ein Hirsch hängt im Flur über dem Sideboard, der zweite findet einen eigenen Platz. Die Deko kommt als 2er-Set."
+   },
+   "en": {
+    "kicker": "Two in a pack",
+    "title": "Two figures for two spots",
+    "body": "One deer hangs in the hallway above the sideboard, and the second one finds a spot of its own. The decoration comes as a set of 2."
+   },
+   "grund": "Bild: ein Hirsch an der Flurwand über dem Sideboard. „der zweite“ laut Lieferumfang hp-bsm-002 „1 × LED-Hängedeko Hirsch, 2er-Set“."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "npt-r1",
+   "id": "439969546573",
+   "bild": "NPT_R1_01",
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "vorher": {
+    "kicker": "Helligkeit und Modi",
+    "title": "Mal gedämpft zum Film, mal hell für Besuch",
+    "body": "Abends vor dem Fernseher reicht oft ein schwaches Glimmen an der Wand. Du dimmst das Netz in vier Stufen und wählst zwischen 8 Leuchtmodi.",
+    "alt": null
+   },
+   "nachher": {
+    "title": "Mal gedämpft, mal hell für Besuch",
+    "body": "Spät am Abend reicht an der Gartenmauer oft ein schwaches Glimmen. Du dimmst das Netz in vier Stufen und wählst zwischen 8 Leuchtmodi.",
+    "alt": "HeiPard LED-Lichternetz über einer niedrigen Gartenmauer neben einem Gartentor bei Dämmerung, warmweiß."
+   },
+   "en": {
+    "kicker": "Brightness and modes",
+    "title": "Sometimes soft, sometimes bright for guests",
+    "body": "Late in the evening, a soft glow on the garden wall is often all you need. You can dim the net light in four levels and choose from 8 light modes.",
+    "alt": "HeiPard LED net light draped over a low garden wall beside a garden gate at dusk, warm white."
+   },
+   "grund": "Bild: Netz über einer Natursteinmauer im Garten, kein Fernseher."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "dpm-r1",
+   "id": "481777156429",
+   "bild": "DPM_R1_01",
+   "seiten": [
+    "hp-dpm-300"
+   ],
+   "vorher": {
+    "kicker": "Helligkeit und Modi",
+    "title": "Festlich hell oder ganz sanft",
+    "body": "Zur Feier darf es strahlen, beim Fernsehen reicht ein Glimmen. Du dimmst in vier Stufen und wählst zwischen 8 Leuchtmodi."
+   },
+   "nachher": {
+    "body": "Zur Feier darf es strahlen, spät am Abend reicht ein Glimmen im Vorgarten. Du dimmst in vier Stufen und wählst zwischen 8 Leuchtmodi."
+   },
+   "en": {
+    "kicker": "Brightness and modes",
+    "title": "Festive and bright or soft and gentle",
+    "body": "For a celebration it can shine bright, and late in the evening a soft glow in the front yard is enough. You can dim it in four levels and choose from 8 light modes."
+   },
+   "grund": "Bild: Baum im Vorgarten vor dem Haus, kein Fernsehen."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "rct-r1",
+   "id": "481777647949",
+   "bild": "RCT_R1_01",
+   "seiten": [
+    "hp-rct-400"
+   ],
+   "vorher": {
+    "kicker": "Gegen Spritzwasser",
+    "title": "Auch am Balkonfenster gut aufgehoben",
+    "body": "An einer feuchten Scheibe bekommt der Vorhang auch mal Wasser ab. Nach IP44 ist er gegen Spritzwasser geschützt."
+   },
+   "nachher": {
+    "title": "Hinter dem Sofa wie am Balkonfenster",
+    "body": "Hinter dem Sofa wird der Vorhang zur bunten Lichtwand. Am Balkonfenster bekommt er auch mal Wasser ab, nach IP44 ist er gegen Spritzwasser geschützt."
+   },
+   "en": {
+    "kicker": "Splash-proof",
+    "title": "Behind the sofa or at the balcony window",
+    "body": "Behind the sofa, the curtain becomes a colorful wall of light. At the balcony window it may get a little wet, and it is protected against splashing water to IP44."
+   },
+   "grund": "Bild: bunter Vorhang an der Wohnzimmerwand hinter dem Sofa; Balkonfenster bleibt als genannte Möglichkeit, IP44 bleibt."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "rfm-r1",
+   "id": "481777779021",
+   "bild": "RFM_R1_01",
+   "seiten": [
+    "hp-rfm-600"
+   ],
+   "vorher": {
+    "kicker": "Gegen Spritzwasser",
+    "title": "Bleibt hängen, wenn es nieselt",
+    "body": "Am Balkon bekommt die Kette auch mal Regen ab. Nach IP44 ist sie gegen Spritzwasser geschützt."
+   },
+   "nachher": {
+    "title": "Drinnen am Geländer, draußen am Balkon",
+    "body": "Im Treppenhaus schmückt die Kette das Geländer. Am Balkon bekommt sie auch mal Regen ab, nach IP44 ist sie gegen Spritzwasser geschützt."
+   },
+   "en": {
+    "kicker": "Splash-proof",
+    "title": "On the banister inside, on the balcony outside",
+    "body": "In the stairwell, the string light decorates the banister. On the balcony it may catch some rain, and it is protected against splashing water to IP44."
+   },
+   "grund": "Bild: Kette am Geländer einer Innentreppe; Balkon bleibt als Möglichkeit (Einsatzbereich Innen & Außen), IP44 bleibt."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "vit-r1",
+   "id": "439969743181",
+   "bild": "VIT_R1_01",
+   "seiten": [
+    "hp-vit-586l-eu-1",
+    "hp-vit-864l-eu-1"
+   ],
+   "vorher": {
+    "kicker": "Bequem bedienen",
+    "title": "Du musst nicht aufs Dach, um etwas zu ändern",
+    "body": "Wenn die Kette an der Dachkante hängt, kommst du schlecht an sie heran. Leuchtmodus und Helligkeit stellst du deshalb mit der mitgelieferten Fernbedienung ein.",
+    "alt": null
+   },
+   "nachher": {
+    "body": "Hängt die Kette am Balkongeländer oder an der Dachkante, kommst du schlecht an sie heran. Leuchtmodus und Helligkeit stellst du deshalb mit der mitgelieferten Fernbedienung ein.",
+    "alt": "HeiPard Eisregen-Lichterkette am Geländer eines Balkons, von der Straße aus gesehen, bei Dämmerung."
+   },
+   "en": {
+    "kicker": "Easy to control",
+    "title": "No need to climb onto the roof to change things",
+    "body": "When the string light hangs on the balcony railing or along the roof edge, it is hard to reach. That is why you set the light mode and brightness with the included remote control.",
+    "alt": "HeiPard icicle string light on a balcony railing seen from the street at dusk."
+   },
+   "grund": "Bild: Eisregen am Balkongeländer; Dachkante bleibt als Möglichkeit."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "solm-r1",
+   "id": "481778565453",
+   "bild": "SOLM_R1_01",
+   "seiten": [
+    "hp-solm-12m-ww"
+   ],
+   "vorher": {
+    "kicker": "Zum Befestigen",
+    "title": "Fest montiert an Wand oder Zaun",
+    "body": "Damit das Panel richtig steht, braucht es einen festen Platz. Eine Wandhalterung liegt bei.",
+    "alt": null
+   },
+   "nachher": {
+    "title": "Ein fester Platz für das Panel",
+    "alt": "Warmweiße HeiPard Solar-Lichterkette entlang der Kante eines Hochbeets im Gemüsegarten bei Dämmerung."
+   },
+   "en": {
+    "kicker": "For mounting",
+    "title": "A fixed spot for the panel",
+    "body": "For the panel to sit right, it needs a fixed spot. A wall bracket is included.",
+    "alt": "Warm white HeiPard solar string light along the edge of a raised bed in a kitchen garden at dusk."
+   },
+   "grund": "Bild: Panel auf einem Erdspieß am Hochbeet, keine Wand, kein Zaun. Text (Wandhalterung) bleibt."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "ol-st38-r1",
+   "id": "481775714637",
+   "bild": "OLST38_R1_01",
+   "seiten": [
+    "hp-ol-st38-15",
+    "hp-ol-st38-25",
+    "hp-ol-st38-30",
+    "hp-ol-st38-50"
+   ],
+   "vorher": {
+    "kicker": "Warmes Licht",
+    "title": "Ein Schein, der nicht blendet",
+    "body": "Am Tisch soll das Licht einladen statt zu stören. Je nach Modell leuchten die Birnen mit 2200 oder 2700 Kelvin."
+   },
+   "nachher": {
+    "body": "Im Hof soll das Licht einladen statt zu stören. Je nach Modell leuchten die Birnen mit 2200 oder 2700 Kelvin."
+   },
+   "en": {
+    "kicker": "Warm light",
+    "title": "A glow that doesn’t dazzle",
+    "body": "In the courtyard, the light should feel inviting, not intrusive. Depending on the model, the bulbs glow at 2200 or 2700 Kelvin."
+   },
+   "grund": "Bild: gepflasterter Innenhof mit Fahrrad, kein Tisch."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "olt-r1",
+   "id": "481775026509",
+   "bild": "OLT_R1_01",
+   "seiten": [
+    "hp-olt-100",
+    "hp-olt-150",
+    "hp-olt-200",
+    "hp-olt-300-eu",
+    "hp-olt-400",
+    "hp-olt-600",
+    "hp-olt-800"
+   ],
+   "vorher": {
+    "kicker": "Warmweißes Licht",
+    "title": "Ein ruhiger Schein für lange Abende",
+    "body": "Im Winter beginnt der Abend früh und soll gemütlich sein. Jede Länge leuchtet warmweiß, den Strom liefert ein Netzteil."
+   },
+   "nachher": {
+    "body": "An der Gartentreppe soll es abends gemütlich sein. Jede Länge leuchtet warmweiß, den Strom liefert ein Netzteil."
+   },
+   "en": {
+    "kicker": "Warm white light",
+    "title": "A calm glow for long evenings",
+    "body": "By the garden steps, evenings should feel cozy. Every length glows warm white, and a power adapter supplies the power."
+   },
+   "grund": "Bild: Gartentreppe im Sommer mit blühenden Stauden, kein Winter."
+  },
+  {
+   "abschnitt": 2,
+   "handle": "rgb-b2",
+   "id": "481776075085",
+   "bild": "RGB_B2_01",
+   "seiten": [
+    "hp-rgb-200a",
+    "hp-rgb-300a",
+    "hp-rgb-500a"
+   ],
+   "vorher": {
+    "kicker": "Drei Längen",
+    "title": "Lichtpunkte dicht an dicht",
+    "body": "Damit die Farben wie ein Band wirken, sitzen die LEDs eng beieinander. Der Abstand beträgt 10 cm, je nach Länge leuchten 200, 300 oder 500 LEDs."
+   },
+   "nachher": {
+    "title": "Bunte Punkte am Handlauf",
+    "body": "Um den Handlauf gewickelt, setzen die LEDs bunte Punkte im Abstand von 10 cm. Je nach Länge leuchten 200, 300 oder 500 LEDs."
+   },
+   "en": {
+    "kicker": "Three lengths",
+    "title": "Colorful dots on the handrail",
+    "body": "Wrapped around the handrail, the LEDs set colorful dots 10 cm apart. Depending on the length, 200, 300 or 500 LEDs light up."
+   },
+   "grund": "Bild: um den Handlauf gewickelte Kette, LEDs deutlich einzeln, kein Band."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "ola-g40-r1",
+   "id": "481775911245",
+   "bild": "OLAG40_R1_01",
+   "seiten": [
+    "hp-ola-g40-15-eu",
+    "hp-ola-g40-27-eu",
+    "hp-ola-g40-42-eu"
+   ],
+   "vorher": {
+    "kicker": "Licht nach Wunsch",
+    "title": "Hell beim Essen, sanft am Feuer",
+    "body": "Später am Abend reicht oft ein schwaches Glimmen. Du dimmst in vier Stufen von 25 bis 100 Prozent und wählst zwischen 3 Leuchtmodi."
+   },
+   "nachher": {
+    "title": "Hell beim Essen, sanft danach"
+   },
+   "en": {
+    "kicker": "Light the way you like",
+    "title": "Bright for dinner, soft afterward",
+    "body": "Later in the evening, a soft glow is often enough. You can dim it in four levels from 25 to 100 percent and choose from 3 light modes."
+   },
+   "grund": "Kein Feuer im Bild (Gartentisch mit zwei Stühlen)."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "scwl-b2",
+   "id": "481776763213",
+   "bild": "SCWL_B2_01",
+   "seiten": [
+    "hp-scwl-10m2p-mc",
+    "hp-scwl-15m2p-mc"
+   ],
+   "vorher": {
+    "kicker": "Im Doppelpack",
+    "title": "Zwei Plätze auf einmal schmücken",
+    "body": "Am Terrassenpfosten und am Strauch soll es gleichzeitig leuchten. Die Kette kommt als 2er-Set."
+   },
+   "nachher": {
+    "body": "Am Terrassenpfosten und an einem zweiten Platz soll es gleichzeitig leuchten. Die Kette kommt als 2er-Set."
+   },
+   "en": {
+    "kicker": "Two in a pack",
+    "title": "Decorate two spots at once",
+    "body": "The terrace post and a second spot should light up at the same time. The string light comes as a set of 2."
+   },
+   "grund": "Im Bild nur der Pfosten, kein Strauch."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "scwl-r1",
+   "id": "481776795981",
+   "bild": "SCWL_R1_01",
+   "seiten": [
+    "hp-scwl-10m2p-mc",
+    "hp-scwl-15m2p-mc"
+   ],
+   "vorher": {
+    "kicker": "Dicht gesetzt",
+    "title": "Viele feine Lichter am Draht",
+    "body": "Am Strauch verteilt sich das Licht auf zahlreiche kleine Punkte. Die LEDs sitzen im Abstand von 10 cm."
+   },
+   "nachher": {
+    "body": "In den Zweigen verteilt sich das Licht auf zahlreiche kleine Punkte. Die LEDs sitzen im Abstand von 10 cm."
+   },
+   "en": {
+    "kicker": "Closely spaced",
+    "title": "Lots of fine lights on the wire",
+    "body": "Among the branches, the light spreads into countless small dots. The LEDs are spaced 10 cm apart."
+   },
+   "grund": "Im Bild ein Olivenbäumchen im Kübel, kein Strauch."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "uct-b1",
+   "id": "481778991437",
+   "bild": "UCT_B1_01",
+   "seiten": [
+    "hp-uct-200-eu"
+   ],
+   "vorher": {
+    "kicker": "Drinnen und draußen",
+    "title": "Er darf auch vor die Tür",
+    "body": "Unter dem Vordach bekommt der Vorhang Regen von der Seite ab. Nach IP44 ist er gegen Spritzwasser geschützt."
+   },
+   "nachher": {
+    "body": "Auf dem überdachten Balkon leuchtet der Vorhang an der Wand, auch wenn mal Regen hereinweht. Nach IP44 ist er gegen Spritzwasser geschützt."
+   },
+   "en": {
+    "kicker": "Indoors and outdoors",
+    "title": "It can go outside too",
+    "body": "On the covered balcony, the curtain glows on the wall, even when a little rain blows in. It is protected against splashing water to IP44."
+   },
+   "grund": "Bild: überdachter Balkon ohne Regen, kein Vordach."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "wwf-b1",
+   "id": "481779646797",
+   "bild": "WWF_B1_01",
+   "seiten": [
+    "hp-wwf-180"
+   ],
+   "vorher": {
+    "kicker": "Drinnen und draußen",
+    "title": "Im Wohnzimmer wie auf der Terrasse",
+    "body": "Neben dem Kamin oder am Hauseingang bringt die Birke abends Licht. Nach IP44 ist sie gegen Spritzwasser geschützt.",
+    "label": "WWF · B1 Kamin und Hauseingang"
+   },
+   "nachher": {
+    "body": "Neben dem Sofa bringt die Birke abends Licht, und auch am Hauseingang darf sie stehen. Nach IP44 ist sie gegen Spritzwasser geschützt.",
+    "label": "WWF · B1 Wohnzimmer"
+   },
+   "en": {
+    "kicker": "Indoors and outdoors",
+    "title": "In the living room or on the terrace",
+    "body": "Next to the sofa, the birch brings light in the evening, and it can stand by the front door too. It is protected against splashing water to IP44."
+   },
+   "grund": "Bild: Sofa und Regal, kein Kamin; Hauseingang bleibt als ausdrücklich genannte Möglichkeit (Einsatzbereich Innen & Außen)."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "dgm-w1-b1",
+   "id": "481779286349",
+   "bild": "DGM002_B1_01",
+   "seiten": [
+    "hp-dgm-002"
+   ],
+   "vorher": {
+    "kicker": "Im Winter",
+    "title": "Ein heller Weg durch den Schnee",
+    "body": "Am Abend stehen die Stecker links und rechts vom Weg und führen bis zur Haustür. Sie sind für den Einsatz im Freien gedacht."
+   },
+   "nachher": {
+    "body": "Am Abend stehen die Stecker im Schnee am Weg zur Haustür. Sie sind für den Einsatz im Freien gedacht."
+   },
+   "en": {
+    "kicker": "In winter",
+    "title": "A bright path through the snow",
+    "body": "In the evening, the stakes stand in the snow along the path to the front door. They are made for outdoor use."
+   },
+   "grund": "Im Bild drei Stecker nebeneinander auf einer Seite des Wegs."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "ol-b1",
+   "id": "481775059277",
+   "bild": "OLG40_B1_01",
+   "seiten": [
+    "hp-ol-100",
+    "hp-ol-15",
+    "hp-ol-15-g",
+    "hp-ol-25",
+    "hp-ol-75"
+   ],
+   "vorher": {
+    "kicker": "Für Feste",
+    "title": "Licht über dem Tisch, wenn es dunkel wird",
+    "body": "Wenn Freunde bis in die Nacht bleiben, hängt die Kette über Tafel und Bänken. Je nach Länge trägt sie 15 bis 100 Birnen."
+   },
+   "nachher": {
+    "title": "Licht im Garten, wenn es dunkel wird",
+    "body": "Wenn Freunde bis in die Nacht bleiben, leuchtet die Kette über dem Garten hinter Tisch und Bank. Je nach Länge trägt sie 15 bis 100 Birnen."
+   },
+   "en": {
+    "kicker": "For celebrations",
+    "title": "Light in the garden when it gets dark",
+    "body": "When friends stay late into the night, the string light glows above the garden behind the table and bench. Depending on the length, it carries 15 to 100 bulbs."
+   },
+   "grund": "Die Kette hängt im Bild hinter dem Tisch über dem Garten, nicht über Tafel und Bänken."
+  },
+  {
+   "abschnitt": 3,
+   "handle": "ola-g40-b1",
+   "id": "481775845709",
+   "bild": "OLG40_B1_01",
+   "seiten": [
+    "hp-ola-g40-15-eu",
+    "hp-ola-g40-27-eu",
+    "hp-ola-g40-42-eu"
+   ],
+   "vorher": {
+    "kicker": "Für draußen",
+    "title": "Gemacht für Abende im Garten",
+    "body": "Über der Terrasse hängen die runden Birnen auch, wenn es nieselt. Nach IP44 ist die Kette gegen Spritzwasser geschützt."
+   },
+   "nachher": {
+    "body": "Über dem Garten hängen die runden Birnen auch, wenn es nieselt. Nach IP44 ist die Kette gegen Spritzwasser geschützt."
+   },
+   "en": {
+    "kicker": "For outdoors",
+    "title": "Made for evenings in the garden",
+    "body": "Above the garden, the round bulbs keep hanging even when it drizzles. The string light is protected against splashing water to IP44."
+   },
+   "grund": "Die Kette hängt im Bild über dem Garten hinter der Terrasse."
+  },
+  {
+   "abschnitt": 5,
+   "handle": "ol-s11-b2",
+   "id": "481775583565",
+   "bild": "OLS11_B2_02",
+   "seiten": [
+    "hp-ol-s11-15",
+    "hp-ol-s11-25",
+    "hp-ol-s11-30",
+    "hp-ol-s11-50"
+   ],
+   "vorher": {
+    "kicker": null,
+    "title": "Ganz nah an der Birne",
+    "body": "Aus der Nähe leuchtet die bernsteinfarbene Birne am schwarzen Kabel, dahinter schimmern die nächsten Birnen vor der Pergola in der Dämmerung.",
+    "label": "OL-S11 · B2 Szene (Szenentext, kein Fakt)"
+   },
+   "nachher": {
+    "kicker": "Vier Längen",
+    "body": "Aus der Nähe leuchtet die bernsteinfarbene Birne am schwarzen Kabel, dahinter schimmern die nächsten Birnen vor der Pergola in der Dämmerung. Die Kette gibt es von 10 m mit 15 Birnen bis 30 m mit 50 Birnen.",
+    "label": "OL-S11 · B2 Szene und Längen"
+   },
+   "en": {
+    "kicker": "Four lengths",
+    "title": "Up close to the bulb",
+    "body": "Up close, the amber bulb glows on its black cable, while the next bulbs shimmer behind it against the pergola at dusk. The string light comes in lengths from 10 m with 15 bulbs to 30 m with 50 bulbs."
+   },
+   "grund": "Produktdaten: hp-ol-s11-15 beleuchtet 10 m/15 Birnen, -25 15 m/25, -30 beleuchtet 20 m/30, -50 30 m/50. „Die Kette gibt es …“ statt „Es gibt sie …“, weil „sie“ direkt hinter „Birnen“ auf die Birnen zeigen würde."
+  }
+ ],
+ "abschnitt4": {
+  "neu": {
+   "handle": "dgm-w1-048-r1",
+   "layout": "text",
+   "kicker": "Leuchtet von innen",
+   "title": "Gut zu sehen, auch im Dunkeln",
+   "body": "Am Abend soll die Deko auffallen. Je nach Produkt leuchten 48 oder 70 LEDs.",
+   "label": "DGM-048 · R1 LED-Anzahl",
+   "alt": "Zwei leuchtende HeiPard LED-Geschenkboxen neben der Haustür im Flur, daneben eine Holzbank mit Decke.",
+   "id": "500998570317"
+  },
+  "en": {
+   "kicker": "Glows from within",
+   "title": "Easy to see, even in the dark",
+   "body": "In the evening, the decoration should stand out. Depending on the product, 48 or 70 LEDs light up.",
+   "alt": "Two glowing HeiPard LED gift boxes beside the front door in a hallway, next to a wooden bench with a blanket."
+  },
+  "ersetzt": "dgm-w1-r1 (481779319117) im Set dgm-w1-048"
+ },
+ "abschnitt6": [
+  {
+   "handle": "dct-b1",
+   "id": "439969284429",
+   "regel": "6 (DCT-Muster)",
+   "entscheidung": "ersetzt",
+   "grund": "Altes und neues Bild zeigen beide den Vorhang an der Pergola; Text aus Vorschau (b). Der Regen bleibt über den Sticky-Block (DCT_B2_08).",
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "bild_vorher": "DCT_B1_01",
+   "bild_nachher": "DCT_B1_02",
+   "vorher": {
+    "kicker": "Draußen nutzbar",
+    "title": "Er darf auch draußen hängen",
+    "body": "Unter der Pergola leuchtet der Vorhang weiter, auch wenn der Regen von der Seite hereinweht. Nach IP44 ist er gegen Spritzwasser aus allen Richtungen geschützt.",
+    "label": "DCT · B1 Pergola im Regen",
+    "alt": "LED-Lichtervorhang von HeiPard, Pergola im Regen mit Laternen und Bäumchen im Garten, kaltweißes Licht"
+   },
+   "nachher": {
+    "body": "Unter der Pergola leuchtet der Vorhang über der Terrasse. Nach IP44 ist er gegen Spritzwasser aus allen Richtungen geschützt.",
+    "label": "DCT · B1 Pergola",
+    "alt": "HeiPard LED-Lichtervorhang als Lichtwand an einer Pergola über einer Gartenterrasse bei Dämmerung, warmweiß."
+   },
+   "en": {
+    "kicker": "Outdoor ready",
+    "title": "It can hang outside too",
+    "body": "Under the pergola, the curtain glows above the terrace. It is protected against splashing water from all directions to IP44.",
+    "alt": "HeiPard LED curtain light as a wall of light on a pergola above a garden terrace at dusk, warm white."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66000598335821"
+  },
+  {
+   "handle": "npt-b1",
+   "id": "439969481037",
+   "regel": "6 (B1)",
+   "entscheidung": "ersetzt, keine Zusatzzeile",
+   "grund": "Zeigen Verschiedenes (Busch gegen gekoppelte Netze an der Gartenhauswand). Das neue Bild ist besser und wird Banner; der Busch bleibt über den Sticky-Block (NPT_B2_06, gleiche Szene), deshalb keine Zusatzzeile.",
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "bild_vorher": "NPT_B1_01",
+   "bild_nachher": "NPT_B1_03",
+   "vorher": {
+    "kicker": "Busch und Hecke",
+    "title": "Kein Wickeln um jeden Zweig",
+    "body": "Im Vorgarten legst du das Netz einfach über den Busch und ziehst es zurecht. Auf 3 x 2 m verteilen sich rund 200 Lichtpunkte.",
+    "label": "NPT · B1 Busch im Vorgarten",
+    "alt": "LED-Lichternetz von HeiPard, über einem Busch im Garten vor einem Haus, warmweißes Licht"
+   },
+   "nachher": {
+    "kicker": "Koppelbar",
+    "title": "Eine ganze Wand voller Licht",
+    "body": "An der Wand des Gartenhauses hängen zwei gekoppelte Netze nebeneinander und ergeben ein durchgehendes Lichtraster. Jedes misst 3 x 2 m mit rund 200 Lichtpunkten.",
+    "label": "NPT · B1 Gartenhaus, gekoppelt",
+    "alt": "Zwei gekoppelte HeiPard LED-Lichternetze als durchgehendes Lichtraster an der Wand eines Gartenhauses bei Dämmerung."
+   },
+   "en": {
+    "kicker": "Connectable",
+    "title": "A whole wall full of light",
+    "body": "On the garden house wall, two connected net lights hang side by side to form one continuous grid of light. Each one measures 3 x 2 m with around 200 points of light.",
+    "alt": "Two connected HeiPard LED net lights as one continuous grid of light on the wall of a garden house at dusk."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66000598368589"
+  },
+  {
+   "handle": "olas14-b1",
+   "id": "439969907021",
+   "regel": "6 (B1)",
+   "entscheidung": "ersetzt, keine Zusatzzeile",
+   "grund": "Zeigen Verschiedenes (Garten zwischen zwei Häusern gegen Tafel auf der Terrasse). Das neue Bild ist besser und wird Banner; die alte Szene bleibt über B2 und Steuerung (OLAS14_B2_01, derselbe Garten).",
+   "seiten": [
+    "hp-ola-s14-15-eu",
+    "hp-ola-s14-30-eu",
+    "hp-ola-s14-50-eu"
+   ],
+   "bild_vorher": "OLAS14_B1_01",
+   "bild_nachher": "OLAS14_B1_02",
+   "vorher": {
+    "kicker": "Für die Terrasse",
+    "title": "Lang genug, um den ganzen Garten zu überspannen",
+    "body": "Zwischen zwei Häusern gespannt, hängen die Birnen über Terrasse, Rasen und Pool. Die Kette gibt es mit 10, 20 oder 30 m Gesamtlänge.",
+    "label": "OLAS14 · B1 Terrasse und Pool",
+    "alt": "Außenlichterkette von HeiPard über Terrasse, Garten und Pool zwischen zwei Häusern, warmweißes Licht"
+   },
+   "nachher": {
+    "title": "Lang genug für die ganze Tafel",
+    "body": "Zwischen Hauswand und Pfosten gespannt, hängen die Birnen in Bögen über dem langen Holztisch. Die Kette gibt es mit 10, 20 oder 30 m Gesamtlänge.",
+    "label": "OLAS14 · B1 Tafel auf der Terrasse",
+    "alt": "HeiPard S14-Lichterkette in zwei Bögen über einem langen Holztisch auf einer Gartenterrasse bei Dämmerung."
+   },
+   "en": {
+    "kicker": "For the terrace",
+    "title": "Long enough for the whole table",
+    "body": "Stretched between the house wall and posts, the bulbs hang in swags above the long wooden table. The string light comes in 10, 20 or 30 m total length.",
+    "alt": "HeiPard S14 string light in two swags above a long wooden table on a garden terrace at dusk."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66000598434125"
+  },
+  {
+   "handle": "vit-b1",
+   "id": "439969677645",
+   "regel": "6 (B1)",
+   "entscheidung": "ersetzt, keine Zusatzzeile",
+   "grund": "Zeigen Verschiedenes (Gartenparty an der Pergola gegen Dachkante). Das neue Bild zeigt das Produkt deutlich und wird Banner; die Pergola über dem gedeckten Tisch zeigt schon R2 (VIT_R2_01).",
+   "seiten": [
+    "hp-vit-586l-eu-1",
+    "hp-vit-864l-eu-1"
+   ],
+   "bild_vorher": "VIT_B1_01",
+   "bild_nachher": "VIT_B1_02",
+   "vorher": {
+    "kicker": "Draußen feiern",
+    "title": "Gemacht für Abende im Freien",
+    "body": "Bei der Gartenparty hängen die Stränge von der Pergola über den Hortensien. Nach IP44 ist die Kette gegen Spritzwasser aus allen Richtungen geschützt.",
+    "label": "VIT · B1 Gartenparty",
+    "alt": "LED-Eisregen-Lichterkette von HeiPard, Gartenparty an der Pergola mit Hortensien, mehrfarbiges Licht"
+   },
+   "nachher": {
+    "kicker": "Für draußen",
+    "body": "Entlang der Dachkante zieht sich das Licht über die ganze Hausfront. Nach IP44 ist die Kette gegen Spritzwasser aus allen Richtungen geschützt.",
+    "label": "VIT · B1 Dachkante",
+    "alt": "HeiPard Eisregen-Lichterkette entlang der ganzen Dachkante eines Einfamilienhauses bei Dämmerung, warmweiß."
+   },
+   "en": {
+    "kicker": "For outdoors",
+    "title": "Made for evenings outdoors",
+    "body": "Along the roof edge, the light runs across the whole front of the house. The string light is protected against splashing water from all directions to IP44.",
+    "alt": "HeiPard icicle string light along the whole roof edge of a family house at dusk, warm white."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66000598466893"
+  },
+  {
+   "handle": "blt-b1",
+   "id": "439972266317",
+   "regel": "2 (Kategoriebild)",
+   "entscheidung": "ersetzt",
+   "grund": "Das Kategoriebild KAT-LED_B1_01 zeigt nicht dieses Produkt.",
+   "seiten": [
+    "hp-blt-050",
+    "hp-blt-100-eu-1"
+   ],
+   "bild_vorher": "KAT-LED_B1_01",
+   "bild_nachher": "BLT_B1_01",
+   "vorher": {
+    "kicker": "Ohne Steckdose",
+    "title": "Licht genau dort, wo kein Kabel hinreicht",
+    "body": "Über dem Gartentisch ist selten eine Steckdose in Reichweite. Die Kette läuft mit Batterien bei 4,5 V und hängt deshalb, wo es dir gefällt.",
+    "label": "BLT · B1 Gartentisch",
+    "alt": "LED-Lichterkette von HeiPard, über einem Gartentisch mit Stühlen und Bechern in der Abenddämmerung, warmweißes Licht"
+   },
+   "nachher": {
+    "body": "Am Balkongeländer ist selten eine Steckdose in Reichweite. Die Kette läuft mit Batterien bei 4,5 V und hängt deshalb, wo es dir gefällt.",
+    "label": "BLT · B1 Balkon",
+    "alt": "Batteriebetriebene LED-Lichterkette von HeiPard, am Balkongeländer über der Stadt am Abend, warmweißes Licht"
+   },
+   "en": {
+    "kicker": "No outlet needed",
+    "title": "Light right where no cable reaches",
+    "body": "On a balcony railing, an outlet is rarely within reach. The string light runs on batteries at 4.5 V, so you can hang it wherever you like.",
+    "alt": "Warm white battery-powered HeiPard LED string light on a balcony railing above the city in the evening."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66046253203789"
+  },
+  {
+   "handle": "blm-b1",
+   "id": "439972397389",
+   "regel": "2 (Kategoriebild)",
+   "entscheidung": "ersetzt",
+   "grund": "Das Kategoriebild KAT-LED_B1_01 zeigt nicht dieses Produkt (Kugelbirnen-Kette).",
+   "seiten": [
+    "hp-blm-100-eu"
+   ],
+   "bild_vorher": "KAT-LED_B1_01",
+   "bild_nachher": "BLT_B1_01",
+   "vorher": {
+    "kicker": "Ohne Steckdose",
+    "title": "Frei aufhängen, ganz ohne Kabelsuche",
+    "body": "Über dem Gartentisch ist die nächste Steckdose meist zu weit weg. Die Kette läuft mit Batterien und ist nach IP44 auch draußen gegen Spritzwasser geschützt.",
+    "label": "BLM · B1 Gartentisch",
+    "alt": "LED-Lichterkette von HeiPard, über einem Gartentisch mit Stühlen und Bechern in der Abenddämmerung, warmweißes Licht"
+   },
+   "nachher": {
+    "body": "Am Balkongeländer ist die nächste Steckdose meist zu weit weg. Die Kette läuft mit Batterien und ist nach IP44 auch draußen gegen Spritzwasser geschützt.",
+    "label": "BLM · B1 Balkon",
+    "alt": "Batteriebetriebene LED-Lichterkette von HeiPard, am Balkongeländer über der Stadt am Abend, warmweißes Licht"
+   },
+   "en": {
+    "kicker": "No outlet needed",
+    "title": "Hang it freely, no cable hunting",
+    "body": "On a balcony railing, the nearest outlet is usually too far away. The string light runs on batteries and is protected against splashing water to IP44, outdoors too.",
+    "alt": "Warm white battery-powered HeiPard LED string light on a balcony railing above the city in the evening."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66046253203789"
+  },
+  {
+   "handle": "blt-b2",
+   "id": "439972299085",
+   "regel": "3 (Bild steht im Schieber)",
+   "entscheidung": "ersetzt",
+   "grund": "BLT_B2_01 bleibt im Schieber (blt-schieber) auf der Seite, die Seite gewinnt ein Motiv.",
+   "seiten": [
+    "hp-blt-050",
+    "hp-blt-100-eu-1"
+   ],
+   "bild_vorher": "BLT_B2_01",
+   "bild_nachher": "BLT_B2_03",
+   "vorher": {
+    "kicker": "Vier Längen",
+    "title": "Die passende Länge für jeden Platz",
+    "body": "Für den Tisch reichen 5 m, für die Pergola über der Gartenparty eher 20 m. Die Kette gibt es in 5, 10, 15 und 20 m mit 50 bis 200 LEDs.",
+    "label": "BLT · B2 Gartenparty",
+    "alt": "Batteriebetriebene LED-Lichterkette von HeiPard, Gartenparty unter einer Pergola, warmweißes Licht"
+   },
+   "nachher": {
+    "body": "Für die Vase auf dem Regal reichen 5 m, für die Pergola über der Gartenparty eher 20 m. Die Kette gibt es in 5, 10, 15 und 20 m mit 50 bis 200 LEDs.",
+    "label": "BLT · B2 Vase",
+    "alt": "Nahaufnahme der warmweißen HeiPard Batterie-Lichterkette um eine Glasvase mit Trockengräsern auf einem Holzregal."
+   },
+   "en": {
+    "kicker": "Four lengths",
+    "title": "The right length for every spot",
+    "body": "For the vase on the shelf, 5 m is enough, while the pergola over a garden party needs more like 20 m. The string light comes in 5, 10, 15 and 20 m with 50 to 200 LEDs.",
+    "alt": "Close-up of the warm white HeiPard battery string light around a glass vase with dried grasses on a wooden shelf."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/65986411888973"
+  },
+  {
+   "handle": "blm-b2",
+   "id": "439972430157",
+   "regel": "3 (Bild steht im Schieber)",
+   "entscheidung": "ersetzt",
+   "grund": "BLM_B2_01 (Kinder) bleibt im Schieber (blm-schieber) auf der Seite. Damit ist auch der Widerspruch „Teppich“ aus Abschnitt 2 erledigt.",
+   "seiten": [
+    "hp-blm-100-eu"
+   ],
+   "bild_vorher": "BLM_B2_01",
+   "bild_nachher": "BLT_B2_03",
+   "vorher": {
+    "kicker": "Zwei Längen",
+    "title": "Für drinnen und draußen in passender Länge",
+    "body": "Die Kinder legen die Kette auf dem Teppich aus, bevor sie ihren Platz findet. Es gibt sie mit 100 LEDs auf 10 m oder mit 150 LEDs auf 15 m.",
+    "label": "BLM · B2 Kinder",
+    "alt": "Batteriebetriebene LED-Lichterkette von HeiPard, drei Kinder mit der Lichterkette auf dem Boden, warmweißes Licht"
+   },
+   "nachher": {
+    "body": "In der Glasvase auf dem Regal wird die Kette zum kleinen Lichtobjekt. Es gibt sie mit 100 LEDs auf 10 m oder mit 150 LEDs auf 15 m.",
+    "label": "BLM · B2 Vase",
+    "alt": "Nahaufnahme der warmweißen HeiPard Batterie-Lichterkette um eine Glasvase mit Trockengräsern auf einem Holzregal."
+   },
+   "en": {
+    "kicker": "Two lengths",
+    "title": "The right length for indoors and outdoors",
+    "body": "In the glass vase on the shelf, the string light becomes a small light feature. It comes with 100 LEDs on 10 m or 150 LEDs on 15 m.",
+    "alt": "Close-up of the warm white HeiPard battery string light around a glass vase with dried grasses on a wooden shelf."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/65986411856205"
+  },
+  {
+   "handle": "ctl-b1",
+   "id": "439972168013",
+   "regel": "2 (Kategoriebild)",
+   "entscheidung": "ersetzt; ctl-m bekommt eigenen Block ctl-m-b1",
+   "grund": "Das Kategoriebild KAT-CTL_B1_01 zeigt eine gewickelte Kette, keinen Baummantel. Der Text passt zu CTL_B1_01 und CTLM_B1_01, der Alt nicht: deshalb für CTLM ein eigener Block mit gleichem Text.",
+   "seiten": [
+    "hp-ctl-210-eu-1",
+    "hp-ctl-400-eu-1"
+   ],
+   "bild_vorher": "KAT-CTL_B1_01",
+   "bild_nachher": "CTL_B1_01",
+   "vorher": {
+    "kicker": "Für den Weihnachtsbaum",
+    "title": "Der Baum leuchtet von oben bis unten",
+    "body": "Im dunklen Wohnzimmer neben dem Sessel ist die Tanne abends der Blickfang. Je nach Modell sitzen 180 bis 400 LEDs auf den Strängen.",
+    "label": "CTL · B1 Tanne im Wohnzimmer",
+    "alt": "LED-Weihnachtsbaumbeleuchtung von HeiPard, an einer Tanne im dunklen Wohnzimmer neben einem Sessel, warmweißes Licht"
+   },
+   "nachher": {
+    "body": "Am Abend fallen die Stränge von der Spitze über die ganze Tanne und machen sie zum Blickfang. Je nach Modell sitzen 180 bis 400 LEDs auf den Strängen.",
+    "label": "CTL · B1 Stränge von der Spitze",
+    "alt": "Weihnachtsbaum im Wohnzimmer am Abend mit dem warmweißen HeiPard LED-Baummantel, dessen Stränge von der Spitze herabfallen."
+   },
+   "en": {
+    "kicker": "For the Christmas tree",
+    "title": "The tree glows from top to bottom",
+    "body": "In the evening, the strands fall from the top over the whole fir tree and make it the eye-catcher. Depending on the model, 180 to 400 LEDs sit on the strands.",
+    "alt": "Christmas tree in a living room at night lit by the warm white HeiPard LED tree curtain with strands falling from the top."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66045477683533"
+  },
+  {
+   "handle": "ctl-b2",
+   "id": "439972200781",
+   "regel": "5 (CTL-EU)",
+   "entscheidung": "ersetzt, Text bleibt",
+   "grund": "Ring und Stränge sind im alten Bild nicht zu erkennen; im neuen Bild sitzt der Ring sichtbar auf der Spitze, der Text passt unverändert.",
+   "seiten": [
+    "hp-ctl-210-eu-1",
+    "hp-ctl-400-eu-1"
+   ],
+   "bild_vorher": "CTL_B2_01",
+   "bild_nachher": "CTL_B2_02",
+   "vorher": {
+    "kicker": "Mit Ring",
+    "title": "Gleichmäßig verteilt, ohne langes Wickeln",
+    "body": "Beim Schmücken legst du den Ring auf die Baumspitze und lässt die Stränge über die Äste fallen. Je nach Modell hängen daran 210 oder 400 LEDs.",
+    "label": "CTL (WW/MC) · B2 Ring",
+    "alt": "LED-Baummantel mit Ring von HeiPard, Weihnachtsbaum mit Geschenken neben einem roten Sessel, warmweißes Licht"
+   },
+   "nachher": {
+    "alt": "LED-Baummantel mit Ring von HeiPard, an einer kleinen Tanne vor einer Holzwand, warmweißes Licht"
+   },
+   "en": {
+    "alt": "Warm white HeiPard LED tree curtain with ring on a small fir tree in front of a wooden wall."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/65986411921741"
+  },
+  {
+   "handle": "ctl-m-b2",
+   "id": "449481081165",
+   "regel": "3 (Bild steht in der Steuerung)",
+   "entscheidung": "ersetzt",
+   "grund": "CTL_I4_01_mc bleibt in der Steuerung (ctl-m-steuerung) auf der Seite, die Seite gewinnt ein Motiv.",
+   "seiten": [
+    "hp-ctl-180m",
+    "hp-ctl-240m"
+   ],
+   "bild_vorher": "CTL_I4_01_mc",
+   "bild_nachher": "CTLM_B2_01",
+   "vorher": {
+    "kicker": "Innen und außen",
+    "title": "Leuchtet am Sessel und vor der Haustür",
+    "body": "Steht die Tanne draußen, bekommt sie Regen und Schnee ab. Nach IP44 ist die Kette gegen Spritzwasser geschützt, und dank 3 m Zuleitung darf die Steckdose ein Stück entfernt sein.",
+    "label": "CTL (M) · B2 Innen und außen",
+    "alt": "LED-Baummantel mit Ring von HeiPard, Weihnachtsbaum mit Geschenken neben einem roten Sessel, mehrfarbiges Licht"
+   },
+   "nachher": {
+    "title": "Ring auf die Spitze, Stränge über die Zweige",
+    "body": "Der Ring sitzt auf der Baumspitze, von dort fallen die bunten Stränge über die Zweige. Steht die Tanne draußen, ist die Kette nach IP44 gegen Spritzwasser geschützt, und dank 3 m Zuleitung darf die Steckdose ein Stück entfernt sein.",
+    "label": "CTL (M) · B2 Ring",
+    "alt": "Nahaufnahme des Rings an der Baumspitze mit den bunten Lichtsträngen der HeiPard Baum-Lichterkette."
+   },
+   "en": {
+    "kicker": "Indoors and outdoors",
+    "title": "Ring on top, strands over the branches",
+    "body": "The ring sits on top of the tree, and the colorful strands fall from there over the branches. If the fir tree stands outside, the string light is protected against splashing water to IP44, and with a 3 m lead cable the outlet can be a little farther away.",
+    "alt": "Close-up of the ring at the top of the tree with the multicolor light strands of the HeiPard tree string light."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66066021548365"
+  },
+  {
+   "handle": "dfm-b1",
+   "id": "439972495693",
+   "regel": "2 (Kategoriebild)",
+   "entscheidung": "ersetzt",
+   "grund": "Das Kategoriebild KAT-CLUSTER_B1_01 zeigt nicht dieses Produkt.",
+   "seiten": [
+    "hp-dfm-400-eu-2",
+    "hp-dfm-600",
+    "hp-dfm-750-eu"
+   ],
+   "bild_vorher": "KAT-CLUSTER_B1_01",
+   "bild_nachher": "DFM_B1_01",
+   "vorher": {
+    "kicker": "Dicht gesetzt",
+    "title": "Ein Baum, der von innen leuchtet",
+    "body": "Um Stamm und Äste gewickelt, zeichnet die Kette jede Form des Gartenbaums nach. Je nach Länge sitzen 400 bis 1500 LEDs dicht an dicht.",
+    "label": "DFM · B1 Gartenbaum",
+    "alt": "LED-Cluster-Lichterkette von HeiPard, um Stamm und Äste eines Gartenbaums gewickelt, Garten bei Nacht, warmweißes Licht"
+   },
+   "nachher": {
+    "body": "Um den Weihnachtsbaum im Wohnzimmer gewickelt, leuchtet die Kette zwischen den Zweigen. Je nach Länge sitzen 400 bis 1500 LEDs dicht an dicht.",
+    "label": "DFM · B1 Weihnachtsbaum",
+    "alt": "LED-Cluster-Lichterkette von HeiPard, um einen Weihnachtsbaum im Wohnzimmer gewickelt, warmweißes Licht"
+   },
+   "en": {
+    "kicker": "Densely set",
+    "title": "A tree that glows from within",
+    "body": "Wrapped around the Christmas tree in the living room, the string light glows between the branches. Depending on the length, 400 to 1500 LEDs sit close together.",
+    "alt": "Warm white HeiPard LED cluster string light wrapped around a Christmas tree in a living room."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66045477617997"
+  },
+  {
+   "handle": "sblb-b1",
+   "id": "439972626765",
+   "regel": "2 (Kategoriebild)",
+   "entscheidung": "ersetzt, Text bleibt",
+   "grund": "Das Kategoriebild KAT-SOLAR_B1_01 zeigt nicht dieses Produkt. Im neuen Bild steht das Panel im Beet, der Text passt unverändert.",
+   "seiten": [
+    "hp-sblb-60l-ww-new",
+    "hp-sblb-100l-ww-new"
+   ],
+   "bild_vorher": "KAT-SOLAR_B1_01",
+   "bild_nachher": "SBLB_B1_01",
+   "vorher": {
+    "kicker": "Solar, ohne Steckdose",
+    "title": "Abends geht das Licht von allein an",
+    "body": "Das Panel lädt tagsüber im Beet, bei Dämmerung schaltet die Kette ein und leuchtet bis zu 12 Stunden. Eine Steckdose brauchst du dafür nicht.",
+    "label": "SBLB · B1 Gartenzaun",
+    "alt": "LED-Solarlichterkette von HeiPard, am Holzzaun über Lavendel, mit Solarpanel und Laternen am Kiesweg, warmweißes Licht"
+   },
+   "nachher": {
+    "label": "SBLB · B1 Kiesweg",
+    "alt": "LED-Solarlichterkette mit Kugeln von HeiPard, über einem Kiesweg im Garten mit Solarpanel, warmweißes Licht"
+   },
+   "en": {
+    "alt": "Warm white HeiPard LED solar string light with globes above a gravel path in the garden with a solar panel."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66045477945677"
+  },
+  {
+   "handle": "sblb-b2",
+   "id": "439972692301",
+   "regel": "1 und 3 (Bild steht im Schieber)",
+   "entscheidung": "ersetzt, keine Zusatzzeile",
+   "grund": "SBLB_B2_01 ist bildgleich mit dem Schieber-Bild SBLB_I1_01_an (Pixelvergleich 0,0): Das Bild stand schon zweimal auf der Seite und bleibt über den Schieber erhalten. Deshalb Regel 3 statt einer Zusatzzeile.",
+   "seiten": [
+    "hp-sblb-60l-ww-new",
+    "hp-sblb-100l-ww-new"
+   ],
+   "bild_vorher": "SBLB_B2_01",
+   "bild_nachher": "SBLB_B2_03",
+   "vorher": {
+    "kicker": "Für den Sitzplatz",
+    "title": "Elf Meter reichen über die ganze Terrasse",
+    "body": "60 Kristallkugeln auf 11 m oder 100 auf 17 m, die Kugeln streuen das Licht weich über Tisch und Stühle.",
+    "label": "SBLB · B2 Terrasse",
+    "alt": "LED-Solarlichterkette mit Kugeln von HeiPard, über einer Terrasse mit Gartenmöbeln, warmweißes Licht"
+   },
+   "nachher": {
+    "kicker": "Kristallkugeln",
+    "title": "Weiches Licht aus jeder Kugel",
+    "body": "Aus der Nähe streut jede Kristallkugel ihr Licht weich über die Hecke. Es gibt 60 Kugeln auf 11 m oder 100 auf 17 m.",
+    "label": "SBLB · B2 Kugeln",
+    "alt": "Nahaufnahme von drei Kristallkugeln der HeiPard Solar-Lichterkette über einer Gartenhecke bei Dämmerung."
+   },
+   "en": {
+    "kicker": "Crystal globes",
+    "title": "Soft light from every globe",
+    "body": "Up close, each crystal globe spreads its light softly over the hedge. It comes with 60 globes on 11 m or 100 on 17 m.",
+    "alt": "Close-up of three crystal globes of the HeiPard solar string light above a garden hedge at dusk."
+   },
+   "bild_vorher_gid": "gid://shopify/MediaImage/66045478175053"
+  }
+ ],
+ "abschnitt6_neu": [
+  {
+   "handle": "dct-b2-zusatz",
+   "id": "501001290061",
+   "layout": "szene",
+   "datei": "DCT_B2_17",
+   "seiten": [
+    "hp-dct-200"
+   ],
+   "de": {
+    "title": "Stränge aus der Nähe",
+    "body": "Aus der Nähe hängen die Lichtstränge auf ihrem transparenten Kabel vor der dunklen Holzwand und leuchten in den Abend. Dank 3 m Zuleitung darf die Steckdose ein Stück entfernt sein.",
+    "label": "DCT · Zusatzzeile Stränge (nach B2)",
+    "alt": "Nahaufnahme der senkrechten Stränge des HeiPard LED-Lichtervorhangs auf transparentem Kabel vor einer dunklen Holzwand."
+   },
+   "en": {
+    "title": "The strands up close",
+    "body": "Up close, the light strands hang on their clear cable in front of the dark wooden wall and glow into the evening. With a 3 m lead cable, the outlet can be a little farther away.",
+    "alt": "Close-up of the vertical strands of the HeiPard LED curtain light on a clear cable in front of a dark wooden wall."
+   },
+   "fakt": "hp-dct-200: heipard.zuleitung_m = 3.0"
+  },
+  {
+   "handle": "npt-b2-zusatz",
+   "id": "501001322829",
+   "layout": "szene",
+   "datei": "NPT_B2_08",
+   "seiten": [
+    "hp-npt-210"
+   ],
+   "de": {
+    "title": "Kein Wickeln um jeden Zweig",
+    "body": "Aus der Nähe liegt das Netz locker über dem immergrünen Strauch, die Lichtpunkte sitzen an den Knoten der Maschen. Du legst es einfach über Hecke oder Busch und ziehst es zurecht.",
+    "label": "NPT · Zusatzzeile Masche (nach B2)",
+    "alt": "Nahaufnahme der Rautenmasche des HeiPard LED-Lichternetzes auf transparentem Kabel über einem immergrünen Strauch."
+   },
+   "en": {
+    "title": "No wrapping around every branch",
+    "body": "Up close, the net lies loosely over the evergreen shrub, with the points of light sitting at the knots of the mesh. Simply lay it over a hedge or bush and pull it into shape.",
+    "alt": "Close-up of the diamond mesh of the HeiPard LED net light on a clear cable over an evergreen shrub."
+   },
+   "fakt": "kein neuer Fakt; Überschrift und letzter Satz aus dem alten Text von npt-b1 (Busch), der mit dem neuen Banner wegfällt"
+  },
+  {
+   "handle": "ctl-m-b1",
+   "id": "501001355597",
+   "layout": "fullwidth",
+   "datei": "CTLM_B1_01",
+   "seiten": [
+    "hp-ctl-180m",
+    "hp-ctl-240m"
+   ],
+   "de": {
+    "media_type": "image",
+    "overlay_theme": "light",
+    "kicker": "Für den Weihnachtsbaum",
+    "title": "Der Baum leuchtet von oben bis unten",
+    "body": "Am Abend fallen die Stränge von der Spitze über die ganze Tanne und machen sie zum Blickfang. Je nach Modell sitzen 180 bis 400 LEDs auf den Strängen.",
+    "label": "CTL (M) · B1 Stränge von der Spitze",
+    "alt": "Bunte HeiPard Baum-Lichterkette mit Ring, deren Stränge über eine Tanne im Vorgarten fallen, bei Dämmerung."
+   },
+   "en": {
+    "kicker": "For the Christmas tree",
+    "title": "The tree glows from top to bottom",
+    "body": "In the evening, the strands fall from the top over the whole fir tree and make it the eye-catcher. Depending on the model, 180 to 400 LEDs sit on the strands.",
+    "alt": "Multicolor HeiPard tree string light with ring, its strands falling over a fir tree in a front garden at dusk."
+   },
+   "fakt": "Text wie ctl-b1, Bild aus feature_b1 (CTLM_B1_01)"
+  }
+ ],
+ "abschnitt6_unveraendert": [
+  [
+   "dct-b2",
+   "6 (DCT-Muster)",
+   "bleibt, DCT_B2_17 als Zusatzzeile dahinter",
+   "Das alte Bild zeigt das ganze Wohnzimmerfenster mit den Größenangaben, das neue die Stränge aus der Nähe (deine Entscheidung). Hinweis: DCT_B2_01 ist bildgleich mit dem Schieber-Bild DCT_I1_01_an."
+  ],
+  [
+   "npt-b2",
+   "6",
+   "bleibt, NPT_B2_08 als Zusatzzeile dahinter",
+   "Das alte Bild zeigt das bunte Netz am Wohnzimmerfenster, das neue die Masche über einem Strauch aus der Nähe (drinnen gegen draußen, Übersicht gegen Detail)."
+  ],
+  [
+   "olas14-b2",
+   "4",
+   "nichts",
+   "OLAS14_B2_02 steht schon im Sticky-Block."
+  ],
+  [
+   "vit-b2",
+   "4",
+   "nichts",
+   "VIT_B2_06 steht schon im Sticky-Block. Hinweis: VIT_B2_01 ist bildgleich mit dem Schieber-Bild VIT_I1_02_an."
+  ]
+ ],
+ "alt_abgleich_a23": [
+  {
+   "handle": "dfm-b2",
+   "id": "439972528461",
+   "datei": "DFM_B2_01"
+  },
+  {
+   "handle": "dgm-b2",
+   "id": "500591886669",
+   "datei": "DGM_B2_01"
+  }
+ ],
+ "alt_en_eigen": {
+  "CTL_B2_02": [
+   "LED-Baummantel mit Ring von HeiPard, an einer kleinen Tanne vor einer Holzwand, warmweißes Licht",
+   "Warm white HeiPard LED tree curtain with ring on a small fir tree in front of a wooden wall."
+  ],
+  "DFM_B1_01": [
+   "LED-Cluster-Lichterkette von HeiPard, um einen Weihnachtsbaum im Wohnzimmer gewickelt, warmweißes Licht",
+   "Warm white HeiPard LED cluster string light wrapped around a Christmas tree in a living room."
+  ],
+  "SBLB_B1_01": [
+   "LED-Solarlichterkette mit Kugeln von HeiPard, über einem Kiesweg im Garten mit Solarpanel, warmweißes Licht",
+   "Warm white HeiPard LED solar string light with globes above a gravel path in the garden with a solar panel."
+  ]
+ }
+}
