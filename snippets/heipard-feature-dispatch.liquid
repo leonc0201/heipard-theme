@@ -22,7 +22,9 @@
     farbwechsel   I4 Farbwechsel (laut; Varianten ueberblendung, rgb)
     zaesur        R2 Zäsur (zählt nicht zum Block-Limit)
     szene         Szenenbild R2/R3 (Variante r2, r3): Bild aus heipard.feature_r2/_r3,
-                  ohne Bild kein Markup; zählt nicht zum Block-Limit
+                  ohne Bild kein Markup; zählt nicht zum Block-Limit.
+                  Ohne Variante r2/r3: Zusatzzeile (Auftrag Teil C, 19.11.2026), Bild am Block,
+                  eigene Überschrift und Text; zählt ebenfalls nicht zum Block-Limit
 
   Ausgabe-Protokoll für die Sektion:
     <!--fb-loud-->   der Block ist laut (zählt gegen das Limit)
@@ -109,16 +111,22 @@
           # Bild nur aus dem Produkt-Metafeld heipard.feature_r2 (Variante r2) bzw. feature_r3
           # (Variante r3). Leeres Metafeld: kein Markup, der Block fällt still weg.
           # Mit Bild: Bild-Text-Zeile wie R1, Seite aus der Sektion (split_side), Bild 16:9.
+          # Ohne Variante r2/r3 ist der Block eine Zusatzzeile (Auftrag Teil C, 19.11.2026): Bild
+          # am Block, Bild-Text-Zeile wie B2 (Klasse heipard-feature__row--zusatz). Ohne Bild kein Markup.
           assign sz_img = ''
+          assign sz_variant = 'szene'
           case blk.variant.value
             when 'r2'
               assign sz_img = product.metafields.heipard.feature_r2.value
             when 'r3'
               assign sz_img = product.metafields.heipard.feature_r3.value
+            else
+              assign sz_img = blk.image.value
+              assign sz_variant = 'zusatz'
           endcase
           if sz_img != blank
             echo '<!--fb-split-->'
-            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: sz_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'szene', alt: blk.alt.value
+            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: sz_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: sz_variant, alt: blk.alt.value
           endif
         -%}
       {%- when 'kettenplan' -%}

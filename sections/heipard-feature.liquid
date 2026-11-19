@@ -36,6 +36,10 @@
       dem Produkt-Metafeld heipard.feature_r2 bzw. feature_r3, Bild-Text-Zeile wie R1 mit
       Bild 16:9, Seite wechselt weiter ab. Leeres Metafeld: Block fällt still weg, die
       Seite bleibt wie ohne den Block. Zählt nicht zum Block-Limit.
+    - Zusatzzeile (Block-Typ szene ohne Variante r2/r3; Auftrag Teil C, 19.11.2026): Bild am
+      Block, eigene Überschrift und Text, steht im Set direkt hinter dem Block, zu dem sie gehört.
+      Zählt wie R2/R3 nicht zum Block-Limit, höchstens zwei je Seite (weitere fallen mit Hinweis
+      im Editor weg).
     - Blöcke ohne Inhalt oder ohne Metafeld-Daten werden übersprungen.
     - Schmale Blöcke (R1 Text, D6 Kennzahl, D2 Kelvin): folgen zwei aufeinander,
       stehen sie ab Desktop nebeneinander (heipard-feature__pair).
@@ -122,6 +126,7 @@
       assign has_b2_meta = true
     endif
     assign b2_slot_done = false
+    assign zs_count = 0
   -%}
   {%- for pass in (1..2) -%}
     {%- assign sz_seen = 0 -%}
@@ -207,7 +212,17 @@
           continue
         endif
 
-        # Szene (R2/R3) zählt nicht zum Limit, damit Kettenplan und Icon-Grid bleiben.
+        # Zusatzzeilen (szene ohne r2/r3): höchstens zwei je Seite.
+        if type == 'szene' and html contains 'heipard-feature__row--zusatz'
+          assign zs_count = zs_count | plus: 1
+          if zs_count > 2
+            assign note = 'heipard.blocks.editor.limit' | t: block: blk_label, max: 2
+            assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
+            continue
+          endif
+        endif
+
+        # Szene (R2/R3, Zusatzzeile) zählt nicht zum Limit, damit Kettenplan und Icon-Grid bleiben.
         if max_blocks > 0 and count >= max_blocks and type != 'szene'
           assign note = 'heipard.blocks.editor.limit' | t: block: blk_label, max: max_blocks
           assign notes_html = notes_html | append: '<li>' | append: note | append: '</li>'
