@@ -1,7 +1,7 @@
 # Bericht: Teil B, B1/B2/R1 aus den Metafeldern
 
 Auftrag `heipard-theme-auftrag-teil-b-start.md` (Stand 19.11.2026, 00:30), Abschnitte 2 und 3. Stand dieses Berichts
-19.11.2026, 01:25 Uhr. Vor jedem Schreibzugriff `get-shop-info` = HeiPard. Nicht angefasst: Preise, Status, Bestand,
+19.11.2026, 01:20 Uhr. Vor jedem Schreibzugriff `get-shop-info` = HeiPard. Nicht angefasst: Preise, Status, Bestand,
 Produktmedien, Files, Metafelder der Produkte, Showroom-Logik. Die drei Textkorrekturen aus Abschnitt 1 stehen im
 R2/R3-Bericht, Abschnitt 10.
 
