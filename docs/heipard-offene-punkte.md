@@ -304,15 +304,22 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   11 Widersprüche und alle 8 Hinweise umgeschrieben, `ol-s11-b2` mit Längen, eigener R1-Block `dgm-w1-048-r1`, 14
   Welle-2-Blöcke nach Leons Regeln (Zusatzzeilen DCT und NPT, Theme `8c8f647`), Bild-Text-Zeilen in 16:9 (`e867f9e`). Alles DE und EN.
   Bericht `heipard-teil-c-bericht.md`.
-- [ ] **Bild doppelt auf der Seite (bildgleiche Dateien)** — B2 und Schieber zeigen dasselbe Bild: hp-dct-200
-  (`DCT_B2_01` = `DCT_I1_01_an`, B2 bleibt nach Leons DCT-Vorgabe), hp-vit-586l-eu-1 und -864l-eu-1 (`VIT_B2_01` =
-  `VIT_I1_02_an`, Regel 4); B2 und Steuerung dieselbe Datei auf hp-ola-s14-15/-30/-50-eu (`OLAS14_B2_01`, Regel 4).
-  Vorschlag im Bericht Teil C, Abschnitt 10; wartet auf Leon.
-- [ ] **[prüfen] Bild gegen Produktdaten** — `SOLM_R1_01` zeigt einen Erdspieß, der Lieferumfang von hp-solm-12m-ww nennt
-  nur die Wandhalterung; `OLSA60_R1_01` zeigt mehr Birnen als die 16 einer Kette; Lieferumfang von hp-dgm-048
-  („1 × LED-Gartenstecker“) passt nicht zum Produkt (Geschenkboxen). Bericht Teil C, Abschnitt 2 bis 5.
-- [ ] **EN-Alt in Files fehlt** für `CTL_B2_02`, `DFM_B1_01`, `SBLB_B1_01` (seit Teil C sichtbar) — Blockfeld trägt
-  eine eigene Übersetzung; die Asset-Instanz setzt den Files-Alt erst mit Leons Freigabe, danach Blockfeld nachziehen.
+- [x] **hp-dct-200: B2 doppelt** (2026-11-19, Teil D) — Bild am Block `dct-b2` entfernt, B2 zeigt `DCT_B2_17`, Text
+  nach Vorschau (b) DE und EN, Zusatzzeile `dct-b2-zusatz` entfernt und gelöscht. Bericht Teil D, Abschnitt 1.
+- [ ] **Bild doppelt auf der Seite (bildgleiche Dateien)** — hp-vit-586l-eu-1 (`VIT_B2_01` = `VIT_I1_02_an`) und
+  B2 und Steuerung dieselbe Datei auf hp-ola-s14-15/-30/-50-eu (`OLAS14_B2_01`). Bleibt bis zum eigenen Auftrag mit
+  einem dritten Motiv als neues `feature_b2` (Auftrag Teil D, Abschnitt 4).
+- [ ] **[prüfen] Bild gegen Produktdaten** — `OLSA60_R1_01` zeigt mehr Birnen als die 16 einer Kette (Teil C).
+  Solarpanel: 14 von 18 B1/B2/R1-Bildern der Familien SOLM, SCWL, OLS-A60, OLS-G40, OLS-S17, OLS-ST38 zeigen einen
+  Erdspieß, dazu alle R2/R3; der Lieferumfang nennt ihn nicht. Die Amazon-Quelle nennt bei fünf Familien
+  „Erdungsstecker“, das Skript hat es nicht übernommen. Liste und Belege im Bericht Teil D, Abschnitt 5; Leon klärt.
+- [ ] **Lieferumfang hp-dgm-048** („1 × LED-Gartenstecker“, Produkt sind zwei Geschenkboxen) — Leon klärt. Korrektur
+  am Produkt-Metafeld und im Blatt der Asset-Instanz (Zeile 832, `PRODUKTTYP["DGM"]`). Herkunft im Bericht Teil D,
+  Abschnitt 6.
+- [x] **EN-Alt in Files für `CTL_B2_02`, `DFM_B1_01`, `SBLB_B1_01`** (2026-11-19, Teil D) — von der Asset-Instanz
+  gesetzt (Auftrag 24), Blockfeld `sblb-b1` nachgezogen, `ctl-b2` und `dfm-b1` waren schon wortgleich.
+- [x] **Deutscher Alt auf `/en/` bei neun R1-Blöcken** (2026-11-19, Teil D) — Feld `alt` DE und EN aus dem Register,
+  17 Seiten geprüft. Bericht Teil D, Abschnitt 2.
 - [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
   keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live
   geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`. Nachtrag 17.11.: „Featured collection“

@@ -1,0 +1,57 @@
+{
+ "stand": "2026-11-19, vor Teil D (gelesen ca. 14:00 Uhr)",
+ "hinweis": "Vorher-Stand aller Objekte, die Teil D schreibt. Rückweg siehe docs/heipard-teil-d-bericht.md.",
+ "dct-b2": {
+  "id": "gid://shopify/Metaobject/439969317197",
+  "fields": {
+   "image": "gid://shopify/MediaImage/65986411954509",
+   "kicker": "Zwei Größen",
+   "title": "Deckt ein ganzes Fenster ab",
+   "body": "Vor dem Wohnzimmerfenster fallen die Lichtstränge bis hinunter zur Fensterbank. Den Vorhang gibt es 3 m breit und 2 m hoch mit 200 LEDs oder 3 m hoch mit 300 LEDs.",
+   "label": "DCT · B2 Wohnzimmerfenster",
+   "alt": "LED-Lichtervorhang von HeiPard, Wohnzimmerfenster mit Pflanzen und Beistelltisch, warmweißes Licht"
+  },
+  "en": {
+   "alt": "Warm white HeiPard LED curtain light in a living room window with plants and a side table."
+  }
+ },
+ "dct-b2-zusatz": {
+  "id": "gid://shopify/Metaobject/501001290061",
+  "fields": {
+   "layout": "szene",
+   "image": "gid://shopify/MediaImage/66856204206413",
+   "kicker": null,
+   "title": "Stränge aus der Nähe",
+   "body": "Aus der Nähe hängen die Lichtstränge auf ihrem transparenten Kabel vor der dunklen Holzwand und leuchten in den Abend. Dank 3 m Zuleitung darf die Steckdose ein Stück entfernt sein.",
+   "label": "DCT · Zusatzzeile Stränge (nach B2)",
+   "alt": "Nahaufnahme der senkrechten Stränge des HeiPard LED-Lichtervorhangs auf transparentem Kabel vor einer dunklen Holzwand."
+  },
+  "en": {
+   "title": "The strands up close",
+   "body": "Up close, the light strands hang on their clear cable in front of the dark wooden wall and glow into the evening. With a 3 m lead cable, the outlet can be a little farther away.",
+   "alt": "Close-up of the vertical strands of the HeiPard LED curtain light on a clear cable in front of a dark wooden wall."
+  }
+ },
+ "set-dct": {
+  "id": "gid://shopify/Metaobject/439974560077",
+  "blocks": ["gid://shopify/Metaobject/439969284429", "gid://shopify/Metaobject/439969317197", "gid://shopify/Metaobject/501001290061", "gid://shopify/Metaobject/439969382733", "gid://shopify/Metaobject/500365066573", "gid://shopify/Metaobject/500365099341", "gid://shopify/Metaobject/439969415501", "gid://shopify/Metaobject/412195914061", "gid://shopify/Metaobject/445823549773", "gid://shopify/Metaobject/439969448269", "gid://shopify/Metaobject/412195979597", "gid://shopify/Metaobject/412196045133", "gid://shopify/Metaobject/412201419085", "gid://shopify/Metaobject/412201451853", "gid://shopify/Metaobject/412201484621"]
+ },
+ "r1-bloecke": {
+  "hinweis": "Alle neun: layout text, kein Bild am Block, Feld alt leer, keine EN-Übersetzung.",
+  "blt-r1": "gid://shopify/Metaobject/439972364621",
+  "blm-r1": "gid://shopify/Metaobject/439972462925",
+  "ctl-r1": "gid://shopify/Metaobject/439972233549",
+  "ctl-m-r1": "gid://shopify/Metaobject/449481113933",
+  "dct-r1": "gid://shopify/Metaobject/439969382733",
+  "dfm-r1": "gid://shopify/Metaobject/439972561229",
+  "dgm-r1": "gid://shopify/Metaobject/439972823373",
+  "olas14-r1": "gid://shopify/Metaobject/439970005325",
+  "sblb-r1": "gid://shopify/Metaobject/439972725069"
+ },
+ "en-alt-abschnitt-3": {
+  "hinweis": "EN-Alt der Blockfelder vor Teil D; ctl-b2 und dfm-b1 waren schon wortgleich mit Files (nicht geschrieben).",
+  "ctl-b2": {"id": "gid://shopify/Metaobject/439972200781", "en_alt": "Warm white HeiPard LED tree curtain with ring on a small fir tree in front of a wooden wall."},
+  "dfm-b1": {"id": "gid://shopify/Metaobject/439972495693", "en_alt": "Warm white HeiPard LED cluster string light wrapped around a Christmas tree in a living room."},
+  "sblb-b1": {"id": "gid://shopify/Metaobject/439972626765", "en_alt": "Warm white HeiPard LED solar string light with globes above a gravel path in the garden with a solar panel."}
+ }
+}
