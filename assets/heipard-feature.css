@@ -66,8 +66,10 @@
     0 8px 24px -8px color-mix(in oklch, var(--glow) 25%, transparent);
 }
 
-/* Szene R2/R3: Hermes-Master ist 16:9, das Bild wird nicht auf 5:4 beschnitten. */
-.heipard-feature__row--szene .heipard-feature__media { aspect-ratio: 16 / 9; }
+/* Bild-Text-Zeilen (B2, R1 mit Bild, Szene R2/R3, Zusatzzeile) in 16:9 wie die Hermes-Master, das Bild wird
+   nicht beschnitten (Fassung 2, Auftrag Teil C, 19.11.2026; vorher geprüft: alle Bilder dieser Zeilen sind
+   16:9-Dateien). Sticky behält 5:4. */
+.heipard-feature__row:not(.heipard-feature__row--sticky) .heipard-feature__media { aspect-ratio: 16 / 9; }
 
 /* Gemeinsames Medien-Element (Bild ODER Video) */
 .heipard-feature__media-el {
