@@ -285,10 +285,21 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   Auftrag 21 zeigen alle 118 Seiten R2/R3; Abnahme hp-olt-100 und Gegenprobe 118 Seiten DE/EN ohne Abweichung,
   Blockfeld `alt` DE/EN gefüllt, ISL-R3 an das Bild angepasst. Bericht `heipard-r2r3-szene-bericht.md`.
 - [ ] **R1 in 16:9?** (Frage an Leon, seit 2026-11-18) — R1 zeigt sein 16:9-Bild im Rahmen 5:4, R2/R3 darunter in
-  16:9. Eine Zeile CSS, ändert alle Seiten mit R1-Bild.
-- [ ] **UCP: Texte zu UCT-Bildern** — hp-ucp-200 trägt die Bilder von UCT, die Blöcke `ucp-b1/-b2/-r1` haben eigene
-  Texte; R1 „Abends ein Blickfang im Wohnzimmer“ steht über dem Pergola-Bild. Für die Prüfung in Teil B.
-- [ ] **Schritt C Teil B: Sets für die Familien aus Auftrag 20** — wartet auf die Meldung der Asset-Instanz.
+  16:9. Eine Zeile CSS, ändert alle Seiten mit R1-Bild. 19.11.: jetzt keine Umstellung, Vergleichsvorschau
+  hp-olt-100 (Fassung 1/2) im Bericht Teil B, Abschnitt 6; Leon entscheidet.
+- [x] **UCP: Texte zu UCT-Bildern** (2026-11-19) — `ucp-b2` und `ucp-r1` an die UCT-Bilder angepasst, DE und EN;
+  `ucp-b1` passt. Bericht Teil B, Abschnitt 3.3.
+- [x] **Schritt C Teil B: B1/B2/R1 aus den Metafeldern** (2026-11-19) — Theme `58bf601` (B1/B2 ohne Blockbild nehmen
+  `feature_b1`/`feature_b2`), 9 neue B2-Blöcke, `solm-b2` und `ol-s11-b2` zurück im Set, Alt-Felder, UCP. Alle 118
+  Seiten zeigen B1, B2 und R1. Bericht `heipard-teil-b-sets-bericht.md`.
+- [ ] **Slot zeigt anderes Bild (10 Familien, 18 Blöcke)** — Kategoriebilder und Shenzhen-Ausschnitte an Welle-2-Blöcken,
+  neues Bild liegt im Metafeld. Leon entscheidet (a) weiterer Block oder (b) ersetzen anhand der DCT-Vorschau
+  (Bericht Teil B, Abschnitte 4 und 5). Bei (a) greift auf hp-dct-200 das Block-Limit.
+- [ ] **Text gegen Bild: 13 Widersprüche, 13 Hinweise** (Gegenprobe 19.11.) — vor allem R1-Texte aus der Zeit vor
+  den R1-Bildern; `rmp-r1` ist ein Faktenfehler (G40-Satz am Lichterturm). Vorschläge im Bericht Teil B,
+  Abschnitt 9, warten auf Leon.
+- [ ] **hp-dgm-048: Alt von R1** — geteilter Block `dgm-w1-r1` trägt den Spiralen-Alt, R1 zeigt Geschenkboxen.
+  Vorschlag eigener Block `dgm-w1-048-r1` (Bericht Teil B, Abschnitt 10), wartet auf Leon.
 - [x] **Showroom-Modus** (2026-11-16) — Theme-Schalter `showroom_mode` (Standard an): keine Preise, kein Warenkorb,
   keine Kauf-Buttons, JSON-LD ohne `offers`, Kaufbox mit Hinweis und Kontakt-Button, `/cart` als Hinweisseite. Live
   geprüft, auch mit Schalter aus. Bericht `heipard-showroom-modus-bericht.md`. Nachtrag 17.11.: „Featured collection“
@@ -298,8 +309,8 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   Weiterverkauf oder ohne Zahlungsanbieter zu sperren; Passwortschutz in den Shopify-Einstellungen aufheben.
 - [ ] **Blocktexte ohne EN** — Überschriften und Texte von B1/B2/R1 sind außer den acht Szenentexten nicht übersetzt;
   auf `/en/` deutsch.
-- [ ] **Welle-2-Hero ohne R1-Bild** — BLM, BLT, CTL Welle 2, DCT, DFM, NPT, SBLB zeigen R1 weiter als Text; kein
-  R1-Bild geliefert. OLAS14, VIT, SOLM, STT, hp-dgm-001 und hp-dgm-048 laut Auftrag ohne R1.
+- [x] **Welle-2-Hero ohne R1-Bild** — seit Auftrag 20 (18.11.) haben alle Familien ein R1-Bild über `feature_r1`;
+  Gegenprobe 19.11.: R1 mit Bild auf allen 118 Seiten.
 - [x] **Icon-Grid-Reihenfolge** (2026-11-10) — Leon: Unterscheidungsmerkmale zuerst. Jetzt Timer, Dimmbar,
   Koppelbar, Leuchtmodi, Fernbedienung, Lichtpunkte, Schutzart, Lichtfarbe, Stromquelle (Commit `dbe55bd`, Bericht
   Abschnitt 8). Unter drei Kacheln weiter CL, DPT, hp-ol-15-g, VAM (Liste 2).

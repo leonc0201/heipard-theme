@@ -1,0 +1,281 @@
+{
+ "stand": "2026-11-19",
+ "auftrag": "heipard-theme-auftrag-teil-b-start.md",
+ "neu": [
+  {
+   "set": "rmp",
+   "handle": "rmp-b2",
+   "familie": "RMP",
+   "datei": "RMP_B2_02",
+   "title": "Der Stern an der Spitze",
+   "body": "Oben auf dem Lichterturm leuchtet der Stern vor dem blauen Abendhimmel, darunter fächern sich die Lichtstränge nach unten auf.",
+   "title_en": "The star on top",
+   "body_en": "At the top of the light tower, the star glows against the blue evening sky, while the light strands fan out below it.",
+   "alt": "Nahaufnahme der Spitze des HeiPard Lichterturms mit LED-Stern und warmweißen Lichtsträngen bei Dämmerung.",
+   "alt_en": "Close-up of the top of the HeiPard light tower with its LED star and warm white light strands at dusk.",
+   "label": "RMP · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591657293"
+  },
+  {
+   "set": "baum-pec",
+   "handle": "baum-pec-b2",
+   "familie": "BAUMPEC",
+   "datei": "BAUMPEC_B2_02",
+   "title": "Ganz nah an den Zweigen",
+   "body": "Aus der Nähe zeigt der ungeschmückte Baum seine dichten Zweige mit den hellgrünen Spitzen, dahinter liegt das Wohnzimmer im hellen Tageslicht.",
+   "title_en": "Up close to the branches",
+   "body_en": "Up close, the undecorated tree shows its full branches with their light green tips, with the living room behind it in bright daylight.",
+   "alt": "Nahaufnahme der Zweige des künstlichen HeiPard Weihnachtsbaums mit weichen PE-Spitzen, ungeschmückt bei Tageslicht.",
+   "alt_en": "Close-up of the branches of the artificial HeiPard Christmas tree with soft PE tips, undecorated in daylight.",
+   "label": "BAUMPEC · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591690061"
+  },
+  {
+   "set": "baum-pvc",
+   "handle": "baum-pvc-b2",
+   "familie": "BAUMPVC",
+   "datei": "BAUMPVC_B2_02",
+   "title": "Auf dem Holzkreuz",
+   "body": "Am Fuß des Baums sieht man die unteren Zweige und den Ständer aus hellem Holz, dahinter liegt das Wohnzimmer im warmen Tageslicht.",
+   "title_en": "On the wooden cross stand",
+   "body_en": "At the foot of the tree, you can see the lower branches and the light wooden stand, with the living room behind it in warm daylight.",
+   "alt": "Nahaufnahme von Holzkreuzständer und unteren Zweigen des künstlichen HeiPard Weihnachtsbaums mit PVC-Nadeln.",
+   "alt_en": "Close-up of the wooden cross stand and lower branches of the artificial HeiPard Christmas tree with PVC needles.",
+   "label": "BAUMPVC · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591722829"
+  },
+  {
+   "set": "bsm",
+   "handle": "bsm-b2",
+   "familie": "BSM",
+   "datei": "BSM_B2_02",
+   "title": "Der Hirsch im Fenster",
+   "body": "Vor der Fensterscheibe hängt der leuchtende Hirsch, draußen liegt der verschneite Garten im blauen Licht der Dämmerung.",
+   "title_en": "The deer in the window",
+   "body_en": "The glowing deer hangs in front of the windowpane, with the snowy garden outside in the blue light of dusk.",
+   "alt": "Nahaufnahme der HeiPard Hirsch-Leuchtsilhouette mit warmweißen Mikro-LEDs vor einem Fenster am Abend.",
+   "alt_en": "Close-up of the HeiPard deer light silhouette with warm white micro LEDs in front of a window in the evening.",
+   "label": "BSM · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591755597"
+  },
+  {
+   "set": "bsx",
+   "handle": "bsx-b2",
+   "familie": "BSX",
+   "datei": "BSX_B2_02",
+   "title": "Doppelte Kontur",
+   "body": "Vor dem dunklen Fenster hängt der Stern mit seiner doppelten Lichtkontur, draußen schimmern unscharf die Lichter der Stadt.",
+   "title_en": "A double outline",
+   "body_en": "The star with its double outline of light hangs in front of the dark window, with the city lights softly blurred outside.",
+   "alt": "Nahaufnahme des HeiPard Leuchtsterns mit doppelter Kontur aus warmweißen Mikro-LEDs vor einem dunklen Fenster.",
+   "alt_en": "Close-up of the HeiPard light star with a double outline of warm white micro LEDs in front of a dark window.",
+   "label": "BSX · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591788365"
+  },
+  {
+   "set": "fsf",
+   "handle": "fsf-b2",
+   "familie": "FSF",
+   "datei": "FSF_B2_02",
+   "title": "Im Schneegestöber",
+   "body": "Mit Zylinder und rot-weiß gestreiftem Schal leuchtet der Schneemann von innen, während um ihn herum in der Dämmerung der Schnee fällt.",
+   "title_en": "In the falling snow",
+   "body_en": "Wearing a top hat and a red and white striped scarf, the snowman glows from inside as snow falls around it at dusk.",
+   "alt": "Nahaufnahme des HeiPard LED-Schneemanns mit Zylinder und Schal, von innen warmweiß beleuchtet, bei Dämmerung.",
+   "alt_en": "Close-up of the HeiPard LED snowman with top hat and scarf, lit warm white from inside, at dusk.",
+   "label": "FSF · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591821133"
+  },
+  {
+   "set": "fxf",
+   "handle": "fxf-b2",
+   "familie": "FXF",
+   "datei": "FXF_B2_02",
+   "title": "Kopf und Geweih",
+   "body": "Aus der Nähe zeichnet der Lichtschlauch Kopf und Geweih des Rentiers nach, hinter ihm leuchtet der Schlitten im Schnee.",
+   "title_en": "Head and antlers",
+   "body_en": "Up close, the rope light traces the reindeer's head and antlers, with the sleigh glowing in the snow behind it.",
+   "alt": "Nahaufnahme von Kopf und Geweih des HeiPard LED-Rentiers aus warmweißem Lichtschlauch bei Dämmerung.",
+   "alt_en": "Close-up of the head and antlers of the HeiPard LED reindeer made of warm white rope light at dusk.",
+   "label": "FXF · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591853901"
+  },
+  {
+   "set": "dgm",
+   "handle": "dgm-b2",
+   "familie": "DGM",
+   "datei": "DGM_B2_01",
+   "title": "Ein Stern im Beet",
+   "body": "Auf seinem Erdspieß steht der Stern zwischen den Pflanzen im Beet, dahinter leuchten in der Dämmerung weitere Sterne.",
+   "title_en": "A star in the flower bed",
+   "body_en": "On its ground stake, the star stands among the plants in the bed, with more stars glowing behind it at dusk.",
+   "alt": "LED-Gartenstecker in Sternform von HeiPard, im Gartenbeet in der Abenddämmerung, warmweißes Licht",
+   "alt_en": "HeiPard star-shaped LED garden stake in a garden bed at dusk, warm white light",
+   "label": "DGM · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591886669"
+  },
+  {
+   "set": "dgm-w1-048",
+   "handle": "dgm-w1-048-b2",
+   "familie": "DGM048",
+   "datei": "DGM048_B2_01",
+   "title": "Mit karierter Schleife",
+   "body": "Aus der Nähe sieht man die rot-weiß karierte Schleife der kleineren Geschenkbox, darunter schimmert das Licht warm durch die helle Hülle.",
+   "title_en": "With a gingham bow",
+   "body_en": "Up close, you can see the red and white gingham bow on the smaller gift box, with the light glowing warmly through its pale cover.",
+   "alt": "Nahaufnahme der Schleife und des leuchtenden Stoffs der kleineren HeiPard LED-Geschenkbox.",
+   "alt_en": "Close-up of the bow and the glowing fabric of the smaller HeiPard LED gift box.",
+   "label": "DGM048 · B2 Szene (Szenentext, kein Fakt)",
+   "id": "500591919437"
+  }
+ ],
+ "bestehend": [
+  {
+   "id": "439972528461",
+   "handle": "dfm-b2",
+   "datei": "DFM_B2_01",
+   "alt": "LED-Cluster-Lichterkette von HeiPard, als Girlande über dem Kaminsims mit brennendem Feuer, warmweißes Licht",
+   "alt_en": "HeiPard LED cluster string light as a garland over the mantelpiece with a burning fire, warm white light",
+   "de": {},
+   "en": {},
+   "grund": "Slot leer, Bild aus feature_b2; Text passt zum Bild (warmes Licht am Kamin)",
+   "alt_vorher": null
+  },
+  {
+   "id": "485836226893",
+   "handle": "dgm-w1-048-b1",
+   "datei": "DGM048_B1_01",
+   "alt": "Zwei von innen leuchtende HeiPard Geschenkboxen mit rot-weißer Schleife neben einem Weihnachtsbaum im Wohnzimmer.",
+   "alt_en": "Two HeiPard gift boxes glowing from inside with red and white bows beside a Christmas tree in the living room.",
+   "de": {},
+   "en": {},
+   "grund": "Slot leer, Bild aus feature_b1; Text (Timer) widerspricht dem Bild nicht",
+   "alt_vorher": null
+  },
+  {
+   "id": "481778237773",
+   "handle": "solm-b1",
+   "datei": "SOLM_B1_01",
+   "alt": "Warmweiße HeiPard Solar-Lichterkette in einer niedrigen Hecke an einem Kiesweg bei Dämmerung, Solarpanel im Beet.",
+   "alt_en": "Warm white HeiPard solar string light in a low hedge along a gravel path at dusk, solar panel in the flower bed.",
+   "de": {
+    "body": "Das Panel sammelt untertags Sonnenlicht, abends schmückt die Kette die Hecke. Sie leuchtet bis zu 10 Stunden."
+   },
+   "en": {
+    "kicker": "Solar powered",
+    "title": "Soak up the sun, enjoy the light",
+    "body": "The panel collects sunlight during the day, and in the evening the string light decorates the hedge. It glows for up to 10 hours."
+   },
+   "grund": "Slot leer, Bild aus feature_b1 zeigt eine Hecke am Kiesweg; „abends hängt die Kette am Zaun“ widerspricht dem Bild",
+   "alt_vorher": null,
+   "body_vorher": "Das Panel sammelt untertags Sonnenlicht, abends hängt die Kette am Zaun. Sie leuchtet bis zu 10 Stunden."
+  },
+  {
+   "id": "481778270541",
+   "handle": "solm-b2",
+   "datei": "SOLM_B2_01",
+   "alt": "Warmweiße HeiPard Solar-Lichterkette um Pfosten und Handlauf eines niedrigen Gartenzauns bei Dämmerung.",
+   "alt_en": "Warm white HeiPard solar string light around the posts and top rail of a low garden fence at dusk.",
+   "de": {},
+   "en": {},
+   "grund": "Block aus Welle 1 „für später“, Text (Gartenzaun) passt zum Bild, zurück ins Set",
+   "alt_vorher": null
+  }
+ ],
+ "ucp": [
+  {
+   "id": "481778925901",
+   "handle": "ucp-b2",
+   "vorher": {
+    "kicker": "Helligkeit und Modi",
+    "title": "Gedämpft zum Film, festlich für Gäste",
+    "body": "Nicht jeder Abend braucht volles Licht am Fenster. Du dimmst in vier Stufen von 25 bis 100 Prozent und wählst zwischen 8 Leuchtmodi.",
+    "label": "UCP · B2 Modi und Helligkeit"
+   },
+   "nachher": {
+    "kicker": "Helligkeit und Modi",
+    "title": "Gedämpft zum Film, festlich für Gäste",
+    "body": "Nicht jeder Abend braucht volles Licht. Du dimmst in vier Stufen von 25 bis 100 Prozent und wählst zwischen 8 Leuchtmodi.",
+    "label": "UCP · B2 Modi und Helligkeit"
+   },
+   "en": {
+    "kicker": "Brightness and modes",
+    "title": "Dimmed for movie night, festive for guests",
+    "body": "Not every evening needs full brightness. You can dim in four steps from 25 to 100 percent and choose from 8 lighting modes."
+   },
+   "grund": "Bild UCT_B2_01: Stränge vor einer Holzwand, kein Fenster"
+  },
+  {
+   "id": "481778958669",
+   "handle": "ucp-r1",
+   "vorher": {
+    "kicker": "Am Fenster",
+    "title": "Abends ein Blickfang im Wohnzimmer",
+    "body": "Vor dem Fenster fallen die Lichtstränge senkrecht nach unten. Der Vorhang misst 3 x 2 m mit 200 LEDs.",
+    "label": "UCP · R1 Fenster"
+   },
+   "nachher": {
+    "kicker": "In der Pergola",
+    "title": "Abends ein Blickfang im Garten",
+    "body": "In der offenen Seite der Pergola fallen die Lichtstränge senkrecht nach unten. Der Vorhang misst 3 x 2 m mit 200 LEDs.",
+    "label": "UCP · R1 Pergola"
+   },
+   "en": {
+    "kicker": "In the pergola",
+    "title": "An evening eye-catcher in the garden",
+    "body": "In the open side of the pergola, the light strands fall straight down. The curtain measures 3 x 2 m with 200 LEDs."
+   },
+   "grund": "Bild UCT_R1_01: Lichtwand in einer Holzpergola hinter einem gedeckten Gartentisch"
+  }
+ ],
+ "sets": {},
+ "hinweis": "neu: angelegt 19.11. ~00:35, ohne EN vorher; bestehend: alt war leer (alt_vorher null), EN vorher leer; ucp: vorher = DE-Stand vor 00:37, EN vorher leer",
+ "ol_s11": {
+  "block": "481775583565",
+  "vorher": {
+   "kicker": "Vier Längen",
+   "title": "Vom Balkon bis zum Festplatz",
+   "body": "Am Geländer reicht eine kurze Kette, über eine Wiese spannst du eine lange. Es gibt sie von 10 m mit 15 Birnen bis 30 m mit 50 Birnen.",
+   "label": "OL-S11 · B2 Längen",
+   "alt": null
+  },
+  "nachher": {
+   "kicker": "",
+   "title": "Ganz nah an der Birne",
+   "body": "Aus der Nähe leuchtet die bernsteinfarbene Birne am schwarzen Kabel, dahinter schimmern die nächsten Birnen vor der Pergola in der Dämmerung.",
+   "label": "OL-S11 · B2 Szene (Szenentext, kein Fakt)",
+   "alt": "Nahaufnahme einer bernsteinfarbenen S11-Birne der HeiPard Lichterkette am schwarzen Kabel, weitere Birnen unscharf dahinter."
+  },
+  "en": {
+   "title": "Up close to the bulb",
+   "body": "Up close, the amber bulb glows on its black cable, while the next bulbs shimmer behind it against the pergola at dusk.",
+   "alt": "Close-up of an amber S11 bulb of the HeiPard string light on its black cable, more bulbs blurred behind it."
+  },
+  "set": "481780990285",
+  "set_vorher": [
+   "481775550797",
+   "481775616333",
+   "500366606669",
+   "500366639437",
+   "412195946829",
+   "412196012365",
+   "412196045133",
+   "412201419085",
+   "412201451853",
+   "412201484621"
+  ],
+  "set_nachher": [
+   "481775550797",
+   "481775583565",
+   "481775616333",
+   "500366606669",
+   "500366639437",
+   "412195946829",
+   "412196012365",
+   "412196045133",
+   "412201419085",
+   "412201451853",
+   "412201484621"
+  ]
+ }
+}

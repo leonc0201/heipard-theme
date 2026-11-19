@@ -1,0 +1,298 @@
+{
+ "vorher": {
+  "rmp": {
+   "id": "481782595917",
+   "blocks": [
+    "gid://shopify/Metaobject/481779482957",
+    "gid://shopify/Metaobject/481779515725",
+    "gid://shopify/Metaobject/500367622477",
+    "gid://shopify/Metaobject/500367655245",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "baum-pec": {
+   "id": "481782759757",
+   "blocks": [
+    "gid://shopify/Metaobject/481779712333",
+    "gid://shopify/Metaobject/496901718349",
+    "gid://shopify/Metaobject/500364116301",
+    "gid://shopify/Metaobject/500364149069",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "baum-pvc": {
+   "id": "481782792525",
+   "blocks": [
+    "gid://shopify/Metaobject/481779745101",
+    "gid://shopify/Metaobject/496901751117",
+    "gid://shopify/Metaobject/500364181837",
+    "gid://shopify/Metaobject/500364214605",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "bsm": {
+   "id": "481781285197",
+   "blocks": [
+    "gid://shopify/Metaobject/481776828749",
+    "gid://shopify/Metaobject/481776861517",
+    "gid://shopify/Metaobject/500364378445",
+    "gid://shopify/Metaobject/500364411213",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "bsx": {
+   "id": "481782464845",
+   "blocks": [
+    "gid://shopify/Metaobject/481779253581",
+    "gid://shopify/Metaobject/496901783885",
+    "gid://shopify/Metaobject/500364443981",
+    "gid://shopify/Metaobject/500364476749",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "fsf": {
+   "id": "481782530381",
+   "blocks": [
+    "gid://shopify/Metaobject/481779351885",
+    "gid://shopify/Metaobject/481779417421",
+    "gid://shopify/Metaobject/500366049613",
+    "gid://shopify/Metaobject/500366082381",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "fxf": {
+   "id": "481782563149",
+   "blocks": [
+    "gid://shopify/Metaobject/481779450189",
+    "gid://shopify/Metaobject/496901849421",
+    "gid://shopify/Metaobject/500366147917",
+    "gid://shopify/Metaobject/500366180685",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "dgm": {
+   "id": "439974920525",
+   "blocks": [
+    "gid://shopify/Metaobject/439972790605",
+    "gid://shopify/Metaobject/439972823373",
+    "gid://shopify/Metaobject/500365197645",
+    "gid://shopify/Metaobject/500365230413",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "dgm-w1-048": {
+   "id": "485836259661",
+   "blocks": [
+    "gid://shopify/Metaobject/485836226893",
+    "gid://shopify/Metaobject/481779319117",
+    "gid://shopify/Metaobject/500365328717",
+    "gid://shopify/Metaobject/500365361485",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "solm": {
+   "id": "481782202701",
+   "blocks": [
+    "gid://shopify/Metaobject/481778237773",
+    "gid://shopify/Metaobject/481778565453",
+    "gid://shopify/Metaobject/500368638285",
+    "gid://shopify/Metaobject/500368671053",
+    "gid://shopify/Metaobject/412195946829",
+    "gid://shopify/Metaobject/412196012365",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  }
+ },
+ "nachher": {
+  "rmp": {
+   "id": "481782595917",
+   "blocks": [
+    "gid://shopify/Metaobject/481779482957",
+    "gid://shopify/Metaobject/500591657293",
+    "gid://shopify/Metaobject/481779515725",
+    "gid://shopify/Metaobject/500367622477",
+    "gid://shopify/Metaobject/500367655245",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "baum-pec": {
+   "id": "481782759757",
+   "blocks": [
+    "gid://shopify/Metaobject/481779712333",
+    "gid://shopify/Metaobject/500591690061",
+    "gid://shopify/Metaobject/496901718349",
+    "gid://shopify/Metaobject/500364116301",
+    "gid://shopify/Metaobject/500364149069",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "baum-pvc": {
+   "id": "481782792525",
+   "blocks": [
+    "gid://shopify/Metaobject/481779745101",
+    "gid://shopify/Metaobject/500591722829",
+    "gid://shopify/Metaobject/496901751117",
+    "gid://shopify/Metaobject/500364181837",
+    "gid://shopify/Metaobject/500364214605",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "bsm": {
+   "id": "481781285197",
+   "blocks": [
+    "gid://shopify/Metaobject/481776828749",
+    "gid://shopify/Metaobject/500591755597",
+    "gid://shopify/Metaobject/481776861517",
+    "gid://shopify/Metaobject/500364378445",
+    "gid://shopify/Metaobject/500364411213",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "bsx": {
+   "id": "481782464845",
+   "blocks": [
+    "gid://shopify/Metaobject/481779253581",
+    "gid://shopify/Metaobject/500591788365",
+    "gid://shopify/Metaobject/496901783885",
+    "gid://shopify/Metaobject/500364443981",
+    "gid://shopify/Metaobject/500364476749",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "fsf": {
+   "id": "481782530381",
+   "blocks": [
+    "gid://shopify/Metaobject/481779351885",
+    "gid://shopify/Metaobject/500591821133",
+    "gid://shopify/Metaobject/481779417421",
+    "gid://shopify/Metaobject/500366049613",
+    "gid://shopify/Metaobject/500366082381",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "fxf": {
+   "id": "481782563149",
+   "blocks": [
+    "gid://shopify/Metaobject/481779450189",
+    "gid://shopify/Metaobject/500591853901",
+    "gid://shopify/Metaobject/496901849421",
+    "gid://shopify/Metaobject/500366147917",
+    "gid://shopify/Metaobject/500366180685",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "dgm": {
+   "id": "439974920525",
+   "blocks": [
+    "gid://shopify/Metaobject/439972790605",
+    "gid://shopify/Metaobject/500591886669",
+    "gid://shopify/Metaobject/439972823373",
+    "gid://shopify/Metaobject/500365197645",
+    "gid://shopify/Metaobject/500365230413",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "dgm-w1-048": {
+   "id": "485836259661",
+   "blocks": [
+    "gid://shopify/Metaobject/485836226893",
+    "gid://shopify/Metaobject/500591919437",
+    "gid://shopify/Metaobject/481779319117",
+    "gid://shopify/Metaobject/500365328717",
+    "gid://shopify/Metaobject/500365361485",
+    "gid://shopify/Metaobject/412201517389",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  },
+  "solm": {
+   "id": "481782202701",
+   "blocks": [
+    "gid://shopify/Metaobject/481778237773",
+    "gid://shopify/Metaobject/481778270541",
+    "gid://shopify/Metaobject/481778565453",
+    "gid://shopify/Metaobject/500368638285",
+    "gid://shopify/Metaobject/500368671053",
+    "gid://shopify/Metaobject/412195946829",
+    "gid://shopify/Metaobject/412196012365",
+    "gid://shopify/Metaobject/412196045133",
+    "gid://shopify/Metaobject/412201419085",
+    "gid://shopify/Metaobject/412201451853",
+    "gid://shopify/Metaobject/412201484621"
+   ]
+  }
+ }
+}
