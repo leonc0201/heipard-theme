@@ -11,7 +11,7 @@ Bestand, Produktmedien, Files, Produkt-Metafelder, Showroom-Logik, Theme. Vor je
   `dct-b2-zusatz` ist gelöscht. Live seit 13:28 Uhr. Auf der Seite steht kein Bild mehr doppelt.
 - **Abschnitt 2:** Die neun älteren R1-Blöcke haben das Feld `alt` jetzt, DE und EN aus dem Register. Auf allen 17
   Seiten unter `/en/` steht der englische Alt. Deutsch hat sich auf keiner dieser Seiten etwas geändert.
-- **Abschnitt 3:** Die Asset-Instanz hat die EN-Alts um 13:26 Uhr in Files eingetragen (Auftrag 24, Teil A).
+- **Abschnitt 3:** Die Asset-Instanz hat die EN-Alts um 13:27 Uhr in Files eingetragen (Auftrag 24, Teil A).
   `ctl-b2` und `dfm-b1` waren schon wortgleich mit Files, dort war nichts zu tun. Bei `sblb-b1` habe ich das Blockfeld nachgezogen.
 - **Abschnitt 5:** Auf 15 von 18 Bildern ist ein Panel zu sehen. 13 davon stehen auf einem Erdspieß im Boden, im
   Kübel oder auf dem Deck. Eins hängt am Geländer, der Erdspieß baumelt sichtbar darunter. Eins sitzt mit Halterung am
@@ -78,7 +78,7 @@ Live (13:30 bis 13:34 Uhr):
 
 ## 3. EN-Alt für `CTL_B2_02`, `DFM_B1_01`, `SBLB_B1_01`
 
-Die Asset-Instanz hat die EN-Alts mit Auftrag 24, Teil A um 13:26 Uhr in Files eingetragen. Ihr Register
+Die Asset-Instanz hat die EN-Alts mit Auftrag 24, Teil A um 13:27:01 Uhr in Files eingetragen (Gegenlesung 13:27:06 Uhr). Ihr Register
 `reports/alt_en.csv` hat drei Zeilen mehr.
 
 | Block | Datei | EN-Alt am Block vorher | nachher |
