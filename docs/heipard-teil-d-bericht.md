@@ -152,6 +152,14 @@ klärt ihr. Ich habe nichts geändert. Zum Vergleich: SBLB („1 × Erdspieß“
 OLS-S11 („1 × Erdspieß“, „1 × Wandhalterung“) nennen den Erdspieß ausdrücklich. Bei `OLSS17_R1_01` zeigt das Bild eine
 Halterung am Pfosten. Eine Wandhalterung steht im Lieferumfang von OLS-S17 ebenfalls nicht.
 
+**Nachtrag (Asset-Auftrag 24, Teil B, nur gelesen):**
+- Die Asset-Instanz hat die Listing-Texte und -Bilder dazu geprüft. Bei SOLM steht im Text ausdrücklich: „Das Set
+  inkludiert Erdspieße und Wandhalterungen für eine flexible und einfache Montage in wenigen Minuten.“
+- Sie wertet „Erdungsstecker“ deshalb als Erdspieß. Nach ihrem Befund fehlt er in `heipard.lieferumfang` bei SCWL,
+  SOLM, OLS-A60, OLS-G40-16 und OLS-S17-16.
+- Offen [TBD] bleiben bei ihr OLS-G40-25/-35 („Zubehörset“), OLS-S17-16-EU, OLS-ST38 und der Wandarm bei OLS-A60.
+- Bericht `Heipard Assets/reports/auftrag_24.md`, Abschnitt 2. Geändert ist nichts, du entscheidest.
+
 ## 6. Herkunft des Felds `lieferumfang`
 
 - **Quelle der Werte:** Amazon-Kategorie-Angebotsbericht vom 10.02.2026. Verwendet wurden die Spalte „Enthaltene
@@ -182,7 +190,8 @@ Halterung am Pfosten. Eine Wandhalterung steht im Lieferumfang von OLS-S17 ebenf
 ## 7. Offen
 
 1. **Solar, Abschnitt 5:** „Erdungsstecker“ in der Amazon-Quelle (SOLM, SCWL, OLS-A60, OLS-G40-16, OLS-S17) und
-   „Zubehörset“ (OLS-G40-25/-35). Klärt ihr, das ist keine Entscheidung für mich. Wird der Lieferumfang um den
+   „Zubehörset“ (OLS-G40-25/-35). Laut Asset-Auftrag 24 meint „Erdungsstecker“ den Erdspieß (Nachtrag in
+   Abschnitt 5.2). Die Entscheidung liegt bei dir, nicht bei mir. Wird der Lieferumfang um den
    Erdspieß ergänzt, passen die Bilder. Bleibt er, zeigen 14 der 18 Bilder hier (und die R2/R3-Bilder) einen Erdspieß,
    den der Lieferumfang nicht nennt. Dazu kommt `OLSS17_R1_01` mit einer Halterung, die bei OLS-S17 ebenfalls fehlt.
 2. **hp-dgm-048 Lieferumfang:** Leon klärt, Korrektur an den zwei Stellen aus Abschnitt 6.
