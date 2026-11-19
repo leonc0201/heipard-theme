@@ -225,10 +225,12 @@ Neu geladen nach der Umstellung: alle 118 Seiten DE und EN (10:59 bis 11:17 Uhr)
 - **SCWL:** bleibt, wie es ist. Das warmweiße Familienbild gilt für beide Varianten, nichts geändert (nur die beiden
   Texte aus Abschnitt 3: „an einem zweiten Platz“, „In den Zweigen“).
 - **Fernbedienungsbilder:** „6639 H“ auf `CTL_P1_05`, `DCT_P1_04`, `NPT_P1_06` und `DFM_P1_01` ist richtig und kein
-  Befund mehr. „Fuash“ auf `OLG40_P1_01` prüft die Asset-Instanz.
+  Befund mehr. „Fuash“ auf `OLG40_P1_01` bleibt [TBD]: Laut Asset-Instanz (Auftrag 23) gibt es kein Originalfoto, das Bild ist ein
+  Ausschnitt aus dem Listing-Bild, dort steht ebenfalls „Fuash“; Platzhalter bis `OLG40_P1_02`.
 - **Parallelbetrieb:** Die Asset-Instanz hat mit Auftrag 23 den EN-Alt in Files für `DFM_B2_01`, `DGM_B2_01` und
-  `BLT_B1_01` gesetzt; die Blockfelder sind angeglichen (Abschnitt 6). Ihre Galerie-Arbeit (hp-ol-30/50, R2/R3 als
-  Galeriebilder) betrifft die Feature-Sektion nicht; meine Prüfungen lesen nur die Feature-Sektion.
+  `BLT_B1_01` gesetzt; die Blockfelder sind angeglichen (Abschnitt 6). Ihre Galerie-Arbeit (209 R2/R3-Bilder als Galeriebilder
+  an 106 Produkten, `HP-OL-30_GAL_02` und `HP-OL-50_GAL_02` gelöst; Bericht `Heipard Assets/reports/auftrag_23.md`)
+  betrifft die Feature-Sektion nicht; meine Prüfungen lesen nur die Feature-Sektion.
 
 ## 10. Offen, Entscheidung bei Leon
 
