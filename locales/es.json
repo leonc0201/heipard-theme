@@ -873,6 +873,12 @@
         "hue": "Tono",
         "note": "Representación simplificada"
       }
+    },
+    "showroom": {
+      "text": "Próximamente disponible en la tienda",
+      "button": "Escribe si tienes preguntas",
+      "cart_title": "La tienda abrirá pronto",
+      "cart_products": "A los productos"
     }
   }
 }
