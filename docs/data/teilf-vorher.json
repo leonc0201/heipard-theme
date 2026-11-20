@@ -1,0 +1,66 @@
+{
+ "stand": "2026-11-20, vor Teil F (Shop gelesen bis ca. 19:30 Uhr deutscher Zeit)",
+ "hinweis": "Vorher-Stand aller Objekte, die Teil F schreibt. Rückweg siehe docs/heipard-teil-f-bericht.md.",
+ "fragen": {
+  "hinweis": "Metaobjekte Typ product_question. Keine EN-Übersetzung vorhanden (frage und antwort). Keine der 191 Fragen hat laut Stichprobe eine EN-Übersetzung.",
+  "scwl-frage-4": {
+   "id": "gid://shopify/Metaobject/481767686477",
+   "an": ["hp-scwl-10m2p-mc", "hp-scwl-15m2p-mc"],
+   "frage": "Was ist im Lieferumfang?",
+   "antwort": "Im Paket sind 1 × Solar-Lichterkette mit Kupferdraht, 2er-Set, 1 × Bedienungsanleitung und 1 × Wandhalterung.",
+   "en": null
+  },
+  "solm-frage-4": {
+   "id": "gid://shopify/Metaobject/481770013005",
+   "an": ["hp-solm-12m-ww"],
+   "frage": "Was ist im Lieferumfang?",
+   "antwort": "Im Paket sind 1 × Solar-Lichterkette, 1 × Bedienungsanleitung und 1 × Wandhalterung.",
+   "en": null
+  }
+ },
+ "lieferumfang_en": {
+  "hinweis": "Produkt-Metafeld heipard.lieferumfang, nur die EN-Übersetzung (key value). DE bleibt unverändert.",
+  "hp-scwl-10m2p-mc": {"metafield": "gid://shopify/Metafield/64937495986509", "en": "1 × Solar string light with copper wire, set of 2\n1 × Ground spike\n1 × Wall mount\n1 × User manual", "en_stand": "2026-11-20T01:11:37Z"},
+  "hp-scwl-15m2p-mc": {"metafield": "gid://shopify/Metafield/64937496019277", "en": "1 × Solar string light with copper wire, set of 2\n1 × Ground spike\n1 × Wall mount\n1 × User manual", "en_stand": "2026-11-20T01:11:37Z"},
+  "hp-solm-12m-ww": {"metafield": "gid://shopify/Metafield/64937496838477", "en": "1 × Solar string lights\n1 × Ground spike\n1 × Wall mount\n1 × User manual", "en_stand": "2026-11-20T01:11:37Z"},
+  "hp-ols-a60-16-eu": {"metafield": "gid://shopify/Metafield/64937496445261", "en": "1 × Solar string light with A60 bulbs\n1 × Ground spike\n1 × Remote control\n1 × Solar panel\n1 × User manual", "en_stand": "2026-11-20T01:11:37Z"},
+  "hp-ols-g40-16": {"metafield": "gid://shopify/Metafield/64937495593293", "en": "1 × Solar string light with G40 bulbs\n1 × Ground spike\n1 × Remote control\n1 × Solar panel\n1 × User manual", "en_stand": "2026-11-20T01:11:37Z"},
+  "hp-ols-s17-16": {"metafield": "gid://shopify/Metafield/64937495920973", "en": "1 × Solar string light with S17 bulbs\n1 × Ground spike\n1 × Remote control\n1 × Solar panel\n1 × User manual", "en_stand": "2026-11-20T01:11:37Z"},
+  "hp-sblb-60l-ww-new": {"metafield": "gid://shopify/Metafield/64306783158605", "en": "1 × 11 m LED solar string light with 60 LEDs\n1 × Ground spike\n1 × Solar panel\n1 × Ground spike connector\n1 × User manual", "en_stand": "2026-10-27T09:32:07Z"},
+  "hp-ols-s11-16": {"metafield": "gid://shopify/Metafield/64937496478029", "en": "1 × Solar string light with S11 bulbs\n1 × Ground spike\n1 × Remote control\n1 × Solar panel\n1 × USB charging cable\n1 × Wall mount\n1 × User manual", "en_stand": "2026-11-05T23:35:52Z"},
+  "hp-ols-s11-16_variante_HP-OLS-S11-16": {"metafield": "gid://shopify/Metafield/64937496510797", "variant": "gid://shopify/ProductVariant/54933443051853 (10 m)", "en": "1 × Solar string light with S11 bulbs\n1 × Ground spike\n1 × Remote control\n1 × Solar panel\n1 × USB charging cable\n1 × Wall mount\n1 × Spare bulb\n1 × User manual", "en_stand": "2026-11-05T23:35:48Z", "hinweis": "Variantenmetafeld, auf der Seite vor dem Produktfeld"},
+  "vergleich_hp-sblb-100l-ww-new": {"metafield": "gid://shopify/Metafield/64306783191373", "en": "1 × 17 m LED solar string light with 100 LEDs\n1 × Ground stake\n1 × Solar panel\n1 × Ground stake connector\n1 × User manual", "hinweis": "nur gelesen, bleibt"}
+ },
+ "pflege_kat-motif": {
+  "id": "gid://shopify/Metaobject/440509464909",
+  "hinweis": "heipard_pflege, Feld text, nur EN geändert. Gezeigt auf den 10 Produkten mit Tag kat-motif.",
+  "en": "Push light figures with a ground spike into loose soil or lawn; in hard ground, pre-pierce a hole with a stick first so the spike doesn't break. Free-standing figures need a level, firm surface. Lay the lead cable so nobody trips over it, ideally along the edge of a flower bed.\nClean with a damp cloth after unplugging or switching off. After the season, store the figures dry and frost-free, ideally in the original packaging.\nWhether the figure can stand outdoors is listed in the Technical details under Protection rating.",
+  "en_stand": "2026-10-27T11:40:32Z"
+ },
+ "dfm": {
+  "dfm-b2": {
+   "id": "gid://shopify/Metaobject/439972528461",
+   "stand": "2026-11-18T23:39:08Z",
+   "layout": "media_text", "media_type": "image", "media_side": "auto", "image": null,
+   "kicker": "Drei Lichtfarben",
+   "title": "Warm, klar oder bunt, je nach Anlass",
+   "body": "Zu Weihnachten passt warmes Licht, zur Party darf es bunt sein. Die Kette gibt es in Warmweiß, Kaltweiß und Multicolor, nach IP44 auch für draußen.",
+   "label": "DFM · B2 Lichtfarben",
+   "alt": "LED-Cluster-Lichterkette von HeiPard, als Girlande über dem Kaminsims mit brennendem Feuer, warmweißes Licht",
+   "en": {"alt": "Warm white HeiPard LED cluster string light as a garland above a mantelpiece with a burning fire."}
+  },
+  "set_dfm": {
+   "id": "gid://shopify/Metaobject/439974854989",
+   "an": ["hp-dfm-400-eu-2", "hp-dfm-750-eu"],
+   "blocks": ["gid://shopify/Metaobject/439972495693", "gid://shopify/Metaobject/439972528461", "gid://shopify/Metaobject/439972561229", "gid://shopify/Metaobject/439972593997", "gid://shopify/Metaobject/500365132109", "gid://shopify/Metaobject/500365164877", "gid://shopify/Metaobject/445823254861", "gid://shopify/Metaobject/412195914061", "gid://shopify/Metaobject/412195979597", "gid://shopify/Metaobject/412196012365", "gid://shopify/Metaobject/412196045133", "gid://shopify/Metaobject/412201419085", "gid://shopify/Metaobject/412201451853", "gid://shopify/Metaobject/412201484621"]
+  },
+  "set_dfm-600": {
+   "id": "gid://shopify/Metaobject/451689120077",
+   "an": ["hp-dfm-600"],
+   "stand": "2026-11-18T17:47:10Z",
+   "blocks": ["gid://shopify/Metaobject/439972495693", "gid://shopify/Metaobject/439972528461", "gid://shopify/Metaobject/439972561229", "gid://shopify/Metaobject/439972593997", "gid://shopify/Metaobject/500365132109", "gid://shopify/Metaobject/500365164877", "gid://shopify/Metaobject/445823254861", "gid://shopify/Metaobject/412195914061", "gid://shopify/Metaobject/445823451469", "gid://shopify/Metaobject/412195979597", "gid://shopify/Metaobject/412196012365", "gid://shopify/Metaobject/412196045133", "gid://shopify/Metaobject/412201419085", "gid://shopify/Metaobject/412201451853", "gid://shopify/Metaobject/412201484621"]
+  },
+  "ip_schutzart": {"hp-dfm-600": "IP44", "hp-dfm-750-eu": "IP44", "hp-dfm-400-eu-2": "IP44"},
+  "en_kaltweiss_variantenauswahl": "Cool white (Optionswert-Übersetzung an hp-dfm-400-eu-2)"
+ }
+}

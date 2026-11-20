@@ -311,16 +311,23 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   einem dritten Motiv als neues `feature_b2` (Auftrag Teil D, Abschnitt 4).
 - [ ] **[prüfen] Bild gegen Produktdaten** — `OLSA60_R1_01` zeigt mehr Birnen als die 16 einer Kette (Teil C).
 - [x] **Erdspieß im Lieferumfang** (2026-11-20, Teil E) — Leons Entscheidung: „Erdungsstecker“ ist der Erdspieß.
-  Nach der Übergabe der Asset-Instanz (Auftrag 25) steht „1 × Erdspieß“ / „1 × Ground spike“ bei hp-scwl-10m2p-mc,
+  Nach der Übergabe der Asset-Instanz (Auftrag 25) steht „1 × Erdspieß“ / „1 × Ground stake“ (bis Teil F „Ground spike“) bei hp-scwl-10m2p-mc,
   hp-scwl-15m2p-mc, hp-solm-12m-ww, hp-ols-a60-16-eu, hp-ols-g40-16 und hp-ols-s17-16, DE und EN, live geprüft.
   Bericht Teil E, Abschnitt 1. Weiter [TBD]: OLS-G40-25, -35, OLS-S17-16-EU, OLS-ST38, Wandarm OLS-A60, Menge bei
   den SCWL-2er-Sets.
-- [ ] **Fragen nennen den alten Lieferumfang** — `scwl-frage-4` (beide SCWL) und `solm-frage-4` zählen den
-  Paketinhalt ohne Erdspieß auf („Im Paket sind … und 1 × Wandhalterung.“), ohne EN. Leon entscheidet (Teil E, 1.4).
+- [x] **Fragen nennen den alten Lieferumfang** (2026-11-20, Teil F) — `scwl-frage-4` und `solm-frage-4` an das Feld
+  angeglichen, DE und EN („What's in the box?“). Bericht Teil F, Abschnitt 1.
+- [ ] **Fragen und Lieferumfang auseinander** — elf Antworten nennen den Packungsinhalt in anderer Reihenfolge als
+  `heipard.lieferumfang`, alle übrigen Fragen sind ohne EN. Vorschlag Platzhalter `{lieferumfang}` im Snippet
+  `heipard-fb-fragen.liquid` (Bericht Teil F, 1.2 und 1.3). Leon entscheidet.
+- [x] **„Ground stake“ statt „Ground spike“** (2026-11-20, Teil F) — acht Produktfelder, das Variantenfeld
+  HP-OLS-S11-16 und der Pflegetext `kat-motif`, nur EN. Auf `/en/` kein „spike“ mehr. Bericht Teil F, Abschnitt 2.
 - [ ] **Lieferumfang hp-dgm-048** — falscher Wert „1 × LED-Gartenstecker“ am 2026-11-20 entfernt (Teil E,
-  Abschnitt 2), der Block entfällt sauber. Leon nennt den echten Lieferumfang. Herkunft im Bericht Teil D, Abschnitt 6.
-- [ ] **`dfm-b2` nennt Kaltweiß auf hp-dfm-600 und hp-dfm-750-eu** — Kicker „Drei Lichtfarben“, Text „… in Warmweiß,
-  Kaltweiß und Multicolor …“, beide Produkte gibt es nur warmweiß und bunt. Ohne EN. Teil E, Abschnitt 3.2.
+  Abschnitt 2), der Block entfällt sauber. Die Asset-Instanz sucht im Material der ersten Lieferung, sonst geht die
+  Frage an Tyler (Teil F, Abschnitt 6). Herkunft im Bericht Teil D, Abschnitt 6.
+- [ ] **`dfm-b2` nennt Kaltweiß auf hp-dfm-750-eu** — hp-dfm-600 zeigt seit 2026-11-20 den neuen Block `dfm-b2-zwei`
+  („Zwei Lichtfarben“, DE und EN). hp-dfm-750-eu teilt das Set `dfm` mit hp-dfm-400-eu-2. Zum Umhängen müsste
+  `feature_set` geändert werden (neues Set `dfm-750`), wartet auf Leons Wort. Bericht Teil F, Abschnitt 3.3.
 - [ ] **Lichtfarbe der Feature-Bilder** — 32 Blöcke mit „warmweiß“ im Alt bei 41 Varianten anderer Lichtfarbe;
   Weg für die vier Testprodukte (eigene Sets, 9 Blöcke) und Technik für variantenabhängige Bilder im Bericht Teil E,
   Abschnitt 3.
