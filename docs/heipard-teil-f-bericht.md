@@ -23,7 +23,8 @@ Stand 20.11.2026. Auftrag vom 20.11.2026, 19:30. Bezug: Bericht Teil E. Vorher-S
   - **hp-dfm-750-eu noch nicht:** Es teilt sein Set mit hp-dfm-400-eu-2, das den alten Block behalten soll. Für die
     Trennung müsste ich das Metafeld `feature_set` am Produkt umsetzen. Das gehört zu den gesperrten Metafeldern
     `feature_*`, deshalb warte ich auf Leons Wort (Abschnitt 3.3).
-- **Abschnitt 5:** Vorher-Stand der drei Seiten aufgenommen. Der Nachtrag folgt, sobald die Asset-Instanz meldet.
+- **Abschnitt 5:** Vorher-Stand der drei Seiten aufgenommen. An hp-rit-280 und hp-rnm-200 schreibt die Asset-Instanz
+  nichts, weil die Lieferung kein sauberes Produktfoto enthält. Der Nachtrag folgt, sobald hp-ucp-200 gemeldet ist.
 
 ## 1. Fragen zum Lieferumfang bei SCWL und SOLM
 
@@ -246,7 +247,12 @@ Vorher-Stand aufgenommen am 20.11.: Shop-Abfrage gegen 19:33 Uhr, Seiten DE und 
 - **Variantenwechsel:** Alle drei Produkte haben nur eine Variante, ohne Auswahl. Einen Variantenwechsel gibt es auf
   diesen Seiten nicht. Das Metafeld `galerie_medien` an der Variante listet bei rit und rnm GAL_01 bis GAL_04, ohne
   POS1.
-- Die Prüfung nach der Meldung der Asset-Instanz folgt als Nachtrag.
+- **Vorabmeldung der Asset-Instanz (20.11., nach 19:55 Uhr):**
+  - Für hp-rit-280 und hp-rnm-200 enthält die Lieferung kein sauberes Produktfoto. Alle Hauptbilder zeigen einen
+    App-Screenshot oder Text. Deshalb wird dort nichts geschrieben, Position 1 bleibt `RIT_POS1_01` bzw.
+    `RNM_POS1_01`.
+  - Für hp-ucp-200 gibt es einen Kandidaten. Sie meldet sich, wenn sie geschrieben hat.
+- Die Prüfung der drei Seiten folgt als Nachtrag, sobald hp-ucp-200 gemeldet ist.
 
 ## Schreibvorgänge
 
@@ -268,7 +274,8 @@ Vorher-Stand aufgenommen am 20.11.: Shop-Abfrage gegen 19:33 Uhr, Seiten DE und 
 
 - `98b221e` Doku: Teil F, Fragen Lieferumfang, Ground stake, dfm-b2-zwei (Bericht, `docs/data/teilf-vorher.json`,
   offene Punkte)
-- dazu ein zweiter Commit „Doku: Teil F, Commit-Liste“ mit dieser Liste
+- `3f67d07` Doku: Teil F, Commit-Liste
+- dazu ein Commit „Doku: Teil F, Vorabmeldung Abschnitt 5“ (Meldung der Asset-Instanz zu rit, rnm und ucp)
 
 Theme-Code unverändert, kein Theme-Commit in Teil F.
 
@@ -284,6 +291,7 @@ Theme-Code unverändert, kein Theme-Commit in Teil F.
    - Alle übrigen Fragen sind auf `/en/` deutsch: vor Teil F 390 Fragen auf den 118 Seiten, keine englisch.
    - Mit dem Platzhalter aus 1.3 wäre beides auf einmal gelöst.
 4. **Für Leon, nur Hinweis:** „earth stake“ in zwei englischen Beschreibungen (SBLB), Kleinschreibung im Feld von hp-dgm-002.
-5. **Für die Asset-Instanz:** Ihre Liste und ihr Glossar sollten auch das Variantenfeld HP-OLS-S11-16 und den Pflegetext
-   `kat-motif` kennen (Abschnitt 2.2).
-6. **Abschnitt 5:** Nachtrag nach der Meldung der Asset-Instanz.
+5. **Asset-Instanz:** Sie hat bestätigt, dass ihre Liste (`reports/_work/a26_lieferumfang_en.json`, zehn Felder mit
+   dem Variantenfeld HP-OLS-S11-16) mit dem Shop übereinstimmt. Ihr Skript schreibt nicht in den Shop, sondern übergibt
+   nur. Den Pflegetext `kat-motif` und „earth stake“ führt sie in ihrem Bericht.
+6. **Abschnitt 5:** Nachtrag nach der Meldung der Asset-Instanz zu hp-ucp-200. An rit und rnm schreibt sie nichts.
