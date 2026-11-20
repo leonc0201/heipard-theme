@@ -24,7 +24,8 @@ Stand 20.11.2026. Auftrag vom 20.11.2026, 19:30. Bezug: Bericht Teil E. Vorher-S
     Trennung müsste ich das Metafeld `feature_set` am Produkt umsetzen. Das gehört zu den gesperrten Metafeldern
     `feature_*`, deshalb warte ich auf Leons Wort (Abschnitt 3.3).
 - **Abschnitt 5:** Vorher-Stand der drei Seiten aufgenommen. An hp-rit-280 und hp-rnm-200 schreibt die Asset-Instanz
-  nichts, weil die Lieferung kein sauberes Produktfoto enthält. Der Nachtrag folgt, sobald hp-ucp-200 gemeldet ist.
+  nichts, weil die Lieferung kein sauberes Produktfoto enthält. Nachtrag 5.1: hp-ucp-200 hat seit 20:16 Uhr sechs
+  Medien, Galerie DE und EN, Desktop und mobil in Ordnung. rit und rnm sind unverändert.
 
 ## 1. Fragen zum Lieferumfang bei SCWL und SOLM
 
@@ -252,7 +253,36 @@ Vorher-Stand aufgenommen am 20.11.: Shop-Abfrage gegen 19:33 Uhr, Seiten DE und 
     App-Screenshot oder Text. Deshalb wird dort nichts geschrieben, Position 1 bleibt `RIT_POS1_01` bzw.
     `RNM_POS1_01`.
   - Für hp-ucp-200 gibt es einen Kandidaten. Sie meldet sich, wenn sie geschrieben hat.
-- Die Prüfung der drei Seiten folgt als Nachtrag, sobald hp-ucp-200 gemeldet ist.
+
+### 5.1 Nachtrag: Prüfung nach der Meldung (20.11., 20:18 bis 20:20 Uhr)
+
+Meldung der Asset-Instanz (Auftrag 26, Stufe B):
+- hp-ucp-200 hat seit 20:16 Uhr sechs Medien. Position 1 ist `HP-UCP-200_GAL_01`, das Hauptbild aus der Lieferung vom
+  19.11.
+- `HP-UCP-200_GAL_02` bis `_06` sind die Ausschnitte aus UCT B1, B2, R1, R2 und R3.
+- `galerie_medien` an der Variante HP-UCP-200 ist neu und nennt GAL_02 bis GAL_06.
+- An allen sechs Dateien steht ein EN-Alt.
+- hp-rit-280 und hp-rnm-200 sind unverändert.
+
+Gelesen im Shop: Alles stimmt mit der Meldung überein. Bei rit und rnm sind Medien und `galerie_medien` gleich, der
+letzte Stand ist vom 19.11.
+
+| Seite | Desktop | mobil | Befund |
+|---|---|---|---|
+| hp-ucp-200 DE und EN | Hauptbild `GAL_01`, daneben sechs Vorschaubilder `GAL_01` bis `_06` in dieser Reihenfolge, Zähler „1 / von 6“ bzw. „1 / of 6“ | Wischleiste mit allen sechs in derselben Reihenfolge, darunter die Vorschaubilder, `GAL_01` aktiv | in Ordnung. Auf `/en/` englische Alts, auf DE deutsche |
+| hp-rit-280 DE und EN | wie vorher: `RIT_POS1_01`, dann `GAL_01` bis `_04` | wie vorher | unverändert |
+| hp-rnm-200 DE und EN | wie vorher: `RNM_POS1_01`, dann `GAL_01` bis `_04` | wie vorher | unverändert |
+
+- **Variantenwechsel:** Alle drei haben nur eine Variante, eine Auswahl gibt es nicht. `galerie_medien` filtert also
+  nichts aus. Bei hp-ucp-200 sind alle sechs Bilder sichtbar, Position 1 steht wie vorgesehen nicht in der Liste und
+  bleibt trotzdem sichtbar.
+- **Aufnahmen:** sichtbarer Bereich je Seite und Gerät, Cookie-Banner abgelehnt. Die Galerie ist vollständig zu sehen,
+  ohne Überlagerung.
+- An den Medien habe ich nichts geändert.
+- **Nur zur Kenntnis, nicht geändert:**
+  - Der deutsche Titel von hp-ucp-200 lautet „HeiPard USB Vorhang Licht 200 warm white“, mit englischem Schluss.
+  - Auf `/en/` heißt die Datenkachel „Light colour“ (britisch, `locales/en.default.json`, fünf Stellen). Die
+    Variantenauswahl anderer Produkte schreibt „Light color“, ebenso Leons Texte („colors“).
 
 ## Schreibvorgänge
 
@@ -275,7 +305,8 @@ Vorher-Stand aufgenommen am 20.11.: Shop-Abfrage gegen 19:33 Uhr, Seiten DE und 
 - `98b221e` Doku: Teil F, Fragen Lieferumfang, Ground stake, dfm-b2-zwei (Bericht, `docs/data/teilf-vorher.json`,
   offene Punkte)
 - `3f67d07` Doku: Teil F, Commit-Liste
-- dazu ein Commit „Doku: Teil F, Vorabmeldung Abschnitt 5“ (Meldung der Asset-Instanz zu rit, rnm und ucp)
+- `e04a6a5` Doku: Teil F, Vorabmeldung Abschnitt 5
+- dazu ein Commit „Doku: Teil F, Nachtrag Abschnitt 5“ mit 5.1
 
 Theme-Code unverändert, kein Theme-Commit in Teil F.
 
@@ -294,4 +325,6 @@ Theme-Code unverändert, kein Theme-Commit in Teil F.
 5. **Asset-Instanz:** Sie hat bestätigt, dass ihre Liste (`reports/_work/a26_lieferumfang_en.json`, zehn Felder mit
    dem Variantenfeld HP-OLS-S11-16) mit dem Shop übereinstimmt. Ihr Skript schreibt nicht in den Shop, sondern übergibt
    nur. Den Pflegetext `kat-motif` und „earth stake“ führt sie in ihrem Bericht.
-6. **Abschnitt 5:** Nachtrag nach der Meldung der Asset-Instanz zu hp-ucp-200. An rit und rnm schreibt sie nichts.
+6. **Für Leon, nur Hinweis (Abschnitt 5.1):**
+   - Der deutsche Titel von hp-ucp-200 endet auf „warm white“.
+   - Auf `/en/` steht „Light colour“ neben „Light color“.
