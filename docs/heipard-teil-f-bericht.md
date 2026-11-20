@@ -266,9 +266,9 @@ Vorher-Stand aufgenommen am 20.11.: Shop-Abfrage gegen 19:33 Uhr, Seiten DE und 
 
 ## Commits
 
-- Commit „Doku: Teil F, Fragen Lieferumfang, Ground stake, dfm-b2-zwei“ (Bericht, `docs/data/teilf-vorher.json`,
+- `98b221e` Doku: Teil F, Fragen Lieferumfang, Ground stake, dfm-b2-zwei (Bericht, `docs/data/teilf-vorher.json`,
   offene Punkte)
-- dazu ein zweiter Commit „Doku: Teil F, Commit-Liste“ mit dem Hash des ersten
+- dazu ein zweiter Commit „Doku: Teil F, Commit-Liste“ mit dieser Liste
 
 Theme-Code unverändert, kein Theme-Commit in Teil F.
 
