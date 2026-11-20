@@ -262,7 +262,11 @@ gemeldet.
 
 ## Commits
 
-- (folgt beim Commit)
+- `58ccade` Doku: Teil E, Lieferumfang Erdspieß, dgm-048 leer, Lichtfarbe-Bestandsaufnahme (Bericht,
+  `docs/data/teile-vorher.json`, offene Punkte)
+- Commit-Liste nachgetragen in einem zweiten Commit (siehe `git log`, „Doku: Teil E, Commit-Liste“)
+
+Theme-Code unverändert, kein Theme-Commit in Teil E.
 
 ## Offen
 
