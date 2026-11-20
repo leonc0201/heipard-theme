@@ -1,0 +1,27 @@
+{
+ "stand": "2026-11-20, vor Teil E (Shop gelesen bis ca. 02:05 Uhr, Live-Seiten DE/EN abgerufen 01:57 bis 02:04 Uhr)",
+ "hinweis": "Vorher-Stand aller Metafelder, die Teil E schreibt oder löscht. Rückweg siehe docs/heipard-teil-e-bericht.md.",
+ "lieferumfang": {
+  "hinweis": "Produkt-Metafeld heipard.lieferumfang (multi_line_text_field). An keiner Variante dieser Produkte gibt es ein Variantenmetafeld lieferumfang. Alle DE-Werte zuletzt geändert 2026-11-03 11:03 UTC, EN-Übersetzungen 2026-11-05 23:35 UTC (nicht veraltet).",
+  "hp-scwl-10m2p-mc": {"product": "gid://shopify/Product/10812091531597", "metafield": "gid://shopify/Metafield/64937495986509", "de": "1 × Solar-Lichterkette mit Kupferdraht, 2er-Set\n1 × Wandhalterung\n1 × Bedienungsanleitung", "en": "1 × Solar string light with copper wire, set of 2\n1 × Wall mount\n1 × User manual"},
+  "hp-scwl-15m2p-mc": {"product": "gid://shopify/Product/10812091564365", "metafield": "gid://shopify/Metafield/64937496019277", "de": "1 × Solar-Lichterkette mit Kupferdraht, 2er-Set\n1 × Wandhalterung\n1 × Bedienungsanleitung", "en": "1 × Solar string light with copper wire, set of 2\n1 × Wall mount\n1 × User manual"},
+  "hp-solm-12m-ww": {"product": "gid://shopify/Product/10812091629901", "metafield": "gid://shopify/Metafield/64937496838477", "de": "1 × Solar-Lichterkette\n1 × Wandhalterung\n1 × Bedienungsanleitung", "en": "1 × Solar string lights\n1 × Wall mount\n1 × User manual"},
+  "hp-ols-a60-16-eu": {"product": "gid://shopify/Product/10812089336141", "metafield": "gid://shopify/Metafield/64937496445261", "de": "1 × Solar-Lichterkette mit A60-Glühbirnen\n1 × Fernbedienung\n1 × Solarpanel\n1 × Bedienungsanleitung", "en": "1 × Solar string light with A60 bulbs\n1 × Remote control\n1 × Solar panel\n1 × User manual"},
+  "hp-ols-g40-16": {"product": "gid://shopify/Product/10812089663821", "metafield": "gid://shopify/Metafield/64937495593293", "de": "1 × Solar-Lichterkette mit G40-Glühbirnen\n1 × Fernbedienung\n1 × Solarpanel\n1 × Bedienungsanleitung", "en": "1 × Solar string light with G40 bulbs\n1 × Remote control\n1 × Solar panel\n1 × User manual"},
+  "hp-ols-s17-16": {"product": "gid://shopify/Product/10812089762125", "metafield": "gid://shopify/Metafield/64937495920973", "de": "1 × Solar-Lichterkette mit S17-Glühbirnen\n1 × Fernbedienung\n1 × Solarpanel\n1 × Bedienungsanleitung", "en": "1 × Solar string light with S17 bulbs\n1 × Remote control\n1 × Solar panel\n1 × User manual"}
+ },
+ "unveraendert-tbd": {
+  "hp-ols-g40-25": "1 × Solar-Lichterkette mit G40-Glühbirnen\n2 × Ersatzbirnen\n1 × Fernbedienung\n1 × Solarpanel\n1 × USB-Ladekabel\n1 × Bedienungsanleitung",
+  "hp-ols-g40-35": "1 × Solar-Lichterkette mit G40-Glühbirnen\n2 × Ersatzbirnen\n1 × Fernbedienung\n1 × Solarpanel\n1 × USB-Ladekabel\n1 × Bedienungsanleitung",
+  "hp-ols-s17-16-eu": "1 × Solar-Lichterkette mit S17-Glühbirnen\n1 × Fernbedienung\n1 × Solarpanel\n1 × Bedienungsanleitung",
+  "hp-ols-st38": "nicht gelesen, bleibt unverändert"
+ },
+ "hp-dgm-048": {
+  "product": "gid://shopify/Product/10929060872525",
+  "variant": "gid://shopify/ProductVariant/54933448196429 (ohne Variantenmetafeld lieferumfang)",
+  "metafield": "gid://shopify/Metafield/64937495888205",
+  "de": "1 × LED-Gartenstecker",
+  "en": "1 × LED garden stake",
+  "live_vorher": "DE und EN je ein Block heipard-fb--lieferumfang mit einer Zeile"
+ }
+}

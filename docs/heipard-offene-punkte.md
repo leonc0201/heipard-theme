@@ -310,12 +310,20 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   B2 und Steuerung dieselbe Datei auf hp-ola-s14-15/-30/-50-eu (`OLAS14_B2_01`). Bleibt bis zum eigenen Auftrag mit
   einem dritten Motiv als neues `feature_b2` (Auftrag Teil D, Abschnitt 4).
 - [ ] **[prüfen] Bild gegen Produktdaten** — `OLSA60_R1_01` zeigt mehr Birnen als die 16 einer Kette (Teil C).
-  Solarpanel: 14 von 18 B1/B2/R1-Bildern der Familien SOLM, SCWL, OLS-A60, OLS-G40, OLS-S17, OLS-ST38 zeigen einen
-  Erdspieß, dazu alle R2/R3; der Lieferumfang nennt ihn nicht. Die Amazon-Quelle nennt bei fünf Familien
-  „Erdungsstecker“, das Skript hat es nicht übernommen. Liste und Belege im Bericht Teil D, Abschnitt 5; Leon klärt.
-- [ ] **Lieferumfang hp-dgm-048** („1 × LED-Gartenstecker“, Produkt sind zwei Geschenkboxen) — Leon klärt. Korrektur
-  am Produkt-Metafeld und im Blatt der Asset-Instanz (Zeile 832, `PRODUKTTYP["DGM"]`). Herkunft im Bericht Teil D,
-  Abschnitt 6.
+- [x] **Erdspieß im Lieferumfang** (2026-11-20, Teil E) — Leons Entscheidung: „Erdungsstecker“ ist der Erdspieß.
+  Nach der Übergabe der Asset-Instanz (Auftrag 25) steht „1 × Erdspieß“ / „1 × Ground spike“ bei hp-scwl-10m2p-mc,
+  hp-scwl-15m2p-mc, hp-solm-12m-ww, hp-ols-a60-16-eu, hp-ols-g40-16 und hp-ols-s17-16, DE und EN, live geprüft.
+  Bericht Teil E, Abschnitt 1. Weiter [TBD]: OLS-G40-25, -35, OLS-S17-16-EU, OLS-ST38, Wandarm OLS-A60, Menge bei
+  den SCWL-2er-Sets.
+- [ ] **Fragen nennen den alten Lieferumfang** — `scwl-frage-4` (beide SCWL) und `solm-frage-4` zählen den
+  Paketinhalt ohne Erdspieß auf („Im Paket sind … und 1 × Wandhalterung.“), ohne EN. Leon entscheidet (Teil E, 1.4).
+- [ ] **Lieferumfang hp-dgm-048** — falscher Wert „1 × LED-Gartenstecker“ am 2026-11-20 entfernt (Teil E,
+  Abschnitt 2), der Block entfällt sauber. Leon nennt den echten Lieferumfang. Herkunft im Bericht Teil D, Abschnitt 6.
+- [ ] **`dfm-b2` nennt Kaltweiß auf hp-dfm-600 und hp-dfm-750-eu** — Kicker „Drei Lichtfarben“, Text „… in Warmweiß,
+  Kaltweiß und Multicolor …“, beide Produkte gibt es nur warmweiß und bunt. Ohne EN. Teil E, Abschnitt 3.2.
+- [ ] **Lichtfarbe der Feature-Bilder** — 32 Blöcke mit „warmweiß“ im Alt bei 41 Varianten anderer Lichtfarbe;
+  Weg für die vier Testprodukte (eigene Sets, 9 Blöcke) und Technik für variantenabhängige Bilder im Bericht Teil E,
+  Abschnitt 3.
 - [x] **EN-Alt in Files für `CTL_B2_02`, `DFM_B1_01`, `SBLB_B1_01`** (2026-11-19, Teil D) — von der Asset-Instanz
   gesetzt (Auftrag 24), Blockfeld `sblb-b1` nachgezogen, `ctl-b2` und `dfm-b1` waren schon wortgleich.
 - [x] **Deutscher Alt auf `/en/` bei neun R1-Blöcken** (2026-11-19, Teil D) — Feld `alt` DE und EN aus dem Register,
