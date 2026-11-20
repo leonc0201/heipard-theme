@@ -262,9 +262,13 @@ gemeldet.
 
 ## Commits
 
-- `58ccade` Doku: Teil E, Lieferumfang Erdspieß, dgm-048 leer, Lichtfarbe-Bestandsaufnahme (Bericht,
+- `d97f2a7` Doku: Teil E, Lieferumfang Erdspieß, dgm-048 leer, Lichtfarbe-Bestandsaufnahme (Bericht,
   `docs/data/teile-vorher.json`, offene Punkte)
-- Commit-Liste nachgetragen in einem zweiten Commit (siehe `git log`, „Doku: Teil E, Commit-Liste“)
+- `ce1836c` Doku: Teil E, Commit-Liste
+- dazu ein dritter Commit „Doku: Teil E, Commit-Hashes nach Rebase“ mit dieser Liste
+
+Lokal hießen die ersten beiden `58ccade` und `e79e67a`. Vor dem Push habe ich sie auf zwei Commits von
+`shopify[bot]` gesetzt (`5ad80ba`, `c092a58`, 19.11., 20:34 Uhr, nur `locales/es.json`, `fr.json`, `it.json`).
 
 Theme-Code unverändert, kein Theme-Commit in Teil E.
 
