@@ -20,7 +20,18 @@
         "button_primary_link": "shopify://collections/all",
         "button_secondary_label": "Bestseller ansehen",
         "button_secondary_link": "#bestseller",
-        "min_height": 600
+        "min_height": 600,
+        "switch_mode": "clip_intro",
+        "image": "shopify://shop_images/HOME-03_Bento_gross_Party_Terrasse.webp",
+        "image_day": "shopify://shop_images/HOME_HERO_TAG.jpg",
+        "clip_on_schnell": "shopify://files/videos/HOME_HERO_LICHTAN_SCHNELL_MOBIL.mp4",
+        "clip_off_schnell": "shopify://files/videos/HOME_HERO_LICHTAUS_SCHNELL_MOBIL.mp4",
+        "clip_on_schnell_m": "shopify://files/videos/HOME_HERO_LICHTAN_SCHNELL_MOBIL.mp4",
+        "clip_off_schnell_m": "shopify://files/videos/HOME_HERO_LICHTAUS_SCHNELL_MOBIL.mp4",
+        "tempo": "schnell",
+        "tag_modus": "hinweis",
+        "day_scrim": 35,
+        "mobile_position": 50
       }
     },
     "heipard_season": {
@@ -85,7 +96,7 @@
             "kicker": "Stimmung für draußen",
             "title": "Party & Terrasse",
             "link": "",
-            "image": "shopify://shop_images/HOME-03_Bento_gross_Party_Terrasse.webp"
+            "image": "shopify://shop_images/OLS11_R2_01.webp"
           }
         },
         "t2": {
