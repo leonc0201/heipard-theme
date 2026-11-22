@@ -302,7 +302,9 @@
       },
       "fragen": {
         "kicker": "Fragen",
-        "title": "Häufige Fragen zum Produkt"
+        "title": "Häufige Fragen zum Produkt",
+        "liste_zwei_html": "{{ anfang }} und {{ ende }}",
+        "liste_mehr_html": "{{ anfang }} und {{ ende }}"
       },
       "sequenz": {
         "kicker": "Schritt für Schritt",

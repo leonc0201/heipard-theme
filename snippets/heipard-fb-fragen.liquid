@@ -6,6 +6,13 @@
   "HeiPard Produktfrage" mit den Feldern Frage und Antwort, übersetzbar).
   Familien können dieselben Einträge teilen. Höchstens 6 werden gezeigt.
 
+  Platzhalter {lieferumfang} in der Antwort: wird durch die Teile aus
+  heipard.lieferumfang ersetzt, gelesen wie im Lieferumfang-Block (erst die
+  gewählte Variante, dann das Produkt), verbunden mit Komma und „und“ bzw. „and“
+  (Sprachschlüssel heipard.blocks.fragen.liste_*). Zeilen, die der Block ohne
+  Häkchen zeigt („nicht enthalten“, „ohne …“), zählen nicht mit. Ist das Feld
+  leer, entfällt die Frage, damit kein halber Satz stehen bleibt.
+
   Parameter: product, kicker, title, body, label
 {%- endcomment -%}
 {%- liquid
@@ -15,6 +22,42 @@
   assign default_title = 'heipard.blocks.fragen.title' | t
   assign head_kicker = kicker | default: default_kicker
   assign head_title = title | default: default_title
+
+  assign box_raw = product.selected_or_first_available_variant.metafields.heipard.lieferumfang.value | default: product.metafields.heipard.lieferumfang.value
+  assign box_lines = box_raw | newline_to_br | split: '<br />'
+  assign box_count = 0
+  assign box_head = ''
+  assign box_last = ''
+  for line in box_lines
+    assign text = line | strip
+    if text == blank
+      continue
+    endif
+    assign lc = text | downcase
+    assign lc_head = lc | slice: 0, 15
+    assign lc_tail = lc | slice: -15, 15
+    assign lc_word = lc | append: ' ' | slice: 0, 5
+    if lc_head == 'nicht enthalten' or lc_tail == 'nicht enthalten' or lc_word == 'ohne '
+      continue
+    endif
+    assign box_count = box_count | plus: 1
+    if box_count == 2
+      assign box_head = box_last
+    elsif box_count > 2
+      assign box_head = box_head | append: ', ' | append: box_last
+    endif
+    assign box_last = text | escape
+  endfor
+  case box_count
+    when 0
+      assign box_text = ''
+    when 1
+      assign box_text = box_last
+    when 2
+      assign box_text = 'heipard.blocks.fragen.liste_zwei_html' | t: anfang: box_head, ende: box_last
+    else
+      assign box_text = 'heipard.blocks.fragen.liste_mehr_html' | t: anfang: box_head, ende: box_last
+  endcase
 -%}
 {%- capture entries -%}
   {%- if questions != blank -%}
@@ -25,12 +68,19 @@
         if q_text == blank or a_text == blank
           continue
         endif
+        assign a_html = a_text | escape
+        if a_html contains '{lieferumfang}'
+          if box_count == 0
+            continue
+          endif
+          assign a_html = a_html | replace: '{lieferumfang}', box_text
+        endif
         assign shown = shown | plus: 1
       -%}
       <details class="heipard-acc__item">
         <summary class="heipard-acc__summary">{{ q_text | escape }}</summary>
         <div class="heipard-acc__body">
-          <p>{{ a_text | escape | newline_to_br }}</p>
+          <p>{{ a_html | newline_to_br }}</p>
         </div>
       </details>
     {%- endfor -%}

@@ -302,7 +302,9 @@
       },
       "fragen": {
         "kicker": "Questions",
-        "title": "Frequently asked questions"
+        "title": "Frequently asked questions",
+        "liste_zwei_html": "{{ anfang }} and {{ ende }}",
+        "liste_mehr_html": "{{ anfang }}, and {{ ende }}"
       },
       "sequenz": {
         "kicker": "Step by step",
