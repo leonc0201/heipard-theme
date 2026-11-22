@@ -16,6 +16,8 @@
   Teil I, Abschnitte 7.2 und 7.3 (22.11.2026, Vorschau):
     Fassungen   Unter 750 px Breite nur die Mobil-Fassungen (ohne Mobil-Fassung kein Clip, nur der
                 Bildwechsel). Tempo normal oder schnell (data-tempo); fehlt die schnelle Fassung, gilt normal.
+    Langsam     Hängt ein laufender Clip länger als 1 s, blendet er aus (Zielbild steht darunter). Bei 2G/3G
+                (soweit gemeldet) wie im Datensparmodus kein Clip und kein Intro.
     Tag-Modus   data-tag
       aus       wie bisher
       hinweis   im Tag-Modus leuchtet der Schalter einmal je Sitzung nach etwa 2 s, darunter „Licht an?“;
@@ -39,9 +41,10 @@
   var INTRO_KEY = 'heipard-hero-intro';
   var HINT_KEY = 'heipard-hero-hinweis';
 
+  // Datensparmodus oder langsame Verbindung (2G/3G, soweit der Browser sie meldet): kein Clip.
   function saveData() {
     var c = navigator.connection;
-    return !!(c && c.saveData);
+    return !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || '')));
   }
   function blocked() {
     return reduce.matches || saveData() || !video;
@@ -119,6 +122,21 @@
       video.classList.remove('is-on');
       running = null;
       if (opts.onEnd) opts.onEnd();
+    };
+    // Hängt der laufende Clip länger als 1 s (langsame Verbindung), blendet er aus. Das Zielbild steht schon
+    // darunter, es gilt wie das Ende des Clips (Teil I, Messung unter Slow 4G).
+    var stallTimer = null;
+    video.onwaiting = function () {
+      if (my !== token || !started) return;
+      var t = video.currentTime;
+      clearTimeout(stallTimer);
+      stallTimer = setTimeout(function () {
+        if (my !== token || video.paused || video.ended || video.currentTime - t > 0.1) return;
+        video.pause();
+        video.classList.remove('is-on');
+        running = null;
+        if (opts.onEnd) opts.onEnd();
+      }, 1000);
     };
     running = { dir: dir };
     var go = function () {

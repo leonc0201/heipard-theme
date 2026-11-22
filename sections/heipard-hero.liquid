@@ -106,7 +106,8 @@
           var c = navigator.connection;
           var seen = null;
           try { seen = sessionStorage.getItem('heipard-hero-intro'); } catch (e) {}
-          var ok = !seen && !(c && c.saveData) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var slow = !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || '')));
+          var ok = !seen && !slow && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
           // Abendstimmung: Intro „Licht an“ (Fassung 3). Tag-Modus nur mit Option intro (7.3 b).
           if (ok && dark) intro = 'abend';
           else if (ok && s.getAttribute('data-tag') === 'intro') intro = 'tag';
