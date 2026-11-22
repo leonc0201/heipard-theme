@@ -15,7 +15,7 @@
 
   Teil I, Abschnitte 7.2 und 7.3 (22.11.2026, Vorschau):
     Fassungen   Unter 750 px Breite nur die Mobil-Fassungen (ohne Mobil-Fassung kein Clip, nur der
-                Bildwechsel). Tempo normal oder schnell (data-tempo); fehlt die schnelle Fassung, gilt normal.
+                Bildwechsel). Tempo normal oder schnell (data-tempo); fehlt eine, gilt die andere.
     Langsam     Hängt ein laufender Clip länger als 1 s, blendet er aus (Zielbild steht darunter). Bei 2G/3G
                 (soweit gemeldet) wie im Datensparmodus kein Clip und kein Intro.
     Tag-Modus   data-tag
@@ -63,9 +63,10 @@
     if (!video) return [];
     var base = 'clip' + (dir === 'on' ? 'On' : 'Off');
     var m = narrow.matches ? 'M' : '';
-    var list = tempo === 'schnell' ? parse(video.dataset[base + 'Schnell' + m]) : [];
-    if (!list.length) list = parse(video.dataset[base + m]);
-    return list;
+    var schnell = parse(video.dataset[base + 'Schnell' + m]);
+    var normal = parse(video.dataset[base + m]);
+    if (tempo === 'schnell') return schnell.length ? schnell : normal;
+    return normal.length ? normal : schnell;
   }
 
   // Kleinste Fassung, die den Hero (object-fit: cover) ausreichend füllt; Pixeldichte höchstens 1,5.

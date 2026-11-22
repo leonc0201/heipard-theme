@@ -68,6 +68,15 @@
     assign on_sm_json = on_sm_json | strip
     assign off_sm_json = off_sm_json | strip
   endif
+  # Clips gelten, wenn für ein Tempo beide Richtungen (an und aus) da sind (Teil J).
+  assign hero_clip_paar = false
+  if hero_clips
+    if on_json != blank and off_json != blank
+      assign hero_clip_paar = true
+    elsif on_s_json != blank and off_s_json != blank
+      assign hero_clip_paar = true
+    endif
+  endif
 -%}
 
 <section
@@ -75,7 +84,7 @@
   style="--heipard-hero-min-height: {{ section.settings.min_height }}px; --hero-pos-mobile: {{ section.settings.mobile_position }}% 50%; --hero-tag-scrim: {{ section.settings.day_scrim | divided_by: 100.0 }};"
   data-heipard-hero
   data-mode="{{ hero_mode }}"
-  data-clips="{% if hero_clips and on_json != blank and off_json != blank %}true{% else %}false{% endif %}"
+  data-clips="{% if hero_clip_paar %}true{% else %}false{% endif %}"
   data-tempo="{{ section.settings.tempo | default: 'normal' }}"
   data-tag="{{ section.settings.tag_modus | default: 'aus' }}"
   data-text-an="{{ 'heipard.hero.hinweis_an' | t | escape }}"
@@ -152,11 +161,11 @@
         alt: section.settings.image_day.alt | default: shop.name
     }}
   {%- endif -%}
-  {%- if hero_clips and on_json != blank and off_json != blank -%}
+  {%- if hero_clip_paar -%}
     <video
       class="heipard-hero__clip"
-      data-clip-on="[{{ on_json | escape }}]"
-      data-clip-off="[{{ off_json | escape }}]"
+      {% if on_json != blank %}data-clip-on="[{{ on_json | escape }}]"{% endif %}
+      {% if off_json != blank %}data-clip-off="[{{ off_json | escape }}]"{% endif %}
       {% if on_m_json != blank %}data-clip-on-m="[{{ on_m_json | escape }}]"{% endif %}
       {% if off_m_json != blank %}data-clip-off-m="[{{ off_m_json | escape }}]"{% endif %}
       {% if on_s_json != blank %}data-clip-on-schnell="[{{ on_s_json | escape }}]"{% endif %}
