@@ -29,6 +29,12 @@
                  Files). Hat Vorrang. Fehlt er: R1 nimmt den Alt der Datei, sonst die Überschrift;
                  B1 und B2 nehmen die Überschrift, sonst den Alt der Datei. Der Alt der Datei kommt
                  in Liquid nur in der Hauptsprache an (geprüft 16.11.2026), daher das Blockfeld.
+    clip_once    Video-Objekt (optional, nur mit Bild): läuft einmal je Seitenaufruf und endet auf dem Bild
+    clip_loop    Video-Objekt (optional, nur mit Bild): Schleife, erstes und letztes Bild gleich dem Bild
+                 Beide liegen stumm und ohne Bedienelemente über dem Bild, das Startbild, größtes Element
+                 und Ersatz bleibt. Abspielen steuert assets/heipard-feature.js (initClip): Laden erst nahe
+                 am Sichtfeld, Start ab halber Sichtbarkeit, höchstens ein Clip zugleich, kein Clip bei
+                 reduzierter Bewegung oder Datensparmodus. Auftrag Teil H, 22.11.2026.
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -83,6 +89,44 @@
         sizes: img_sizes,
         alt: img_alt
     }}
+    {%- if clip_once != blank or clip_loop != blank -%}
+      {%- liquid
+        # Je Clip die MP4-Fassungen als JSON (h = Höhe, w = Breite, u = Adresse); das Skript wählt
+        # nach der dargestellten Größe. Schlüssel aus den Datei-IDs: beim Variantenwechsel übernimmt
+        # heipard-variant.js das laufende Element, statt neu zu starten.
+        assign clip_key = clip_once.id | append: '-' | append: clip_loop.id
+        assign once_json = ''
+        assign loop_json = ''
+        for s in clip_once.sources
+          if s.format == 'mp4'
+            assign once_json = once_json | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
+          endif
+        endfor
+        for s in clip_loop.sources
+          if s.format == 'mp4'
+            assign loop_json = loop_json | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
+          endif
+        endfor
+        assign once_json = once_json | remove_first: ','
+        assign loop_json = loop_json | remove_first: ','
+      -%}
+      {%- if once_json != blank or loop_json != blank -%}
+        <video
+          class="heipard-feature__media-el heipard-clip"
+          data-heipard-clip="{{ clip_key }}"
+          {% if once_json != blank %}data-clip-once="[{{ once_json | escape }}]"{% endif %}
+          {% if loop_json != blank %}data-clip-loop="[{{ loop_json | escape }}]"{% endif %}
+          muted
+          playsinline
+          webkit-playsinline
+          disablepictureinpicture
+          disableremoteplayback
+          preload="none"
+          aria-hidden="true"
+          tabindex="-1"
+        ></video>
+      {%- endif -%}
+    {%- endif -%}
   {%- else -%}
     <span class="heipard-feature__media-el heipard-feature__fallback" aria-hidden="true"></span>
   {%- endif -%}

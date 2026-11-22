@@ -81,6 +81,19 @@
   display: block;
 }
 
+/* Clip über dem Bild (Auftrag Teil H): gleiche Fläche und gleicher Ausschnitt wie das Bild (gleiche Klasse
+   heipard-feature__media-el), unsichtbar bis zum ersten Bild des Clips, danach weiche Blende. Ohne Video,
+   bei reduzierter Bewegung oder nach dem Ende bleibt nur das Bild darunter. */
+.heipard-clip {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.heipard-clip.is-on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .heipard-clip { display: none; }
+}
+
 .heipard-feature__fallback {
   background:
     radial-gradient(120% 90% at 75% 100%, color-mix(in oklch, var(--brand) 45%, transparent) 0%, transparent 60%),

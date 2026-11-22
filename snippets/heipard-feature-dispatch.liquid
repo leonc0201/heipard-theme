@@ -74,6 +74,26 @@
             assign has_content = true
           endif
           assign m_type = blk.media_type.value | default: 'image'
+          # Clips (Auftrag Teil H, 22.11.2026): video_einmal und video_schleife enden auf dem Bild am
+          # Block. Sie gelten deshalb nur, wenn das Bild vom Block kommt (nicht feature_b1/_b2), und
+          # nur nach dem Theme-Schalter clip_mode (aus, nur Testseiten, alle Seiten).
+          assign clip_once = nil
+          assign clip_loop = nil
+          if blk.image.value != blank and m_type != 'video'
+            assign clip_ok = false
+            if settings.clip_mode == 'on'
+              assign clip_ok = true
+            elsif settings.clip_mode == 'test'
+              assign clip_pages = settings.clip_test_handles | remove: ' ' | split: ','
+              if clip_pages contains product.handle
+                assign clip_ok = true
+              endif
+            endif
+            if clip_ok
+              assign clip_once = blk.video_einmal.value
+              assign clip_loop = blk.video_schleife.value
+            endif
+          endif
           if has_content
             if m_type == 'video' and vid != blank
               if allow_loud
@@ -87,7 +107,7 @@
                 endif
               endif
             endif
-            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk.alt.value
+            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk.alt.value, clip_once: clip_once, clip_loop: clip_loop
           endif
         -%}
       {%- when 'text' -%}

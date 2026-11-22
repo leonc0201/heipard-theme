@@ -41,6 +41,33 @@
     ]
   },
   {
+    "name": "Videoclips",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Clips in Banner und Bild-Text-Zeilen der Feature-Sektion (Blockfelder video_einmal und video_schleife). Das Bild bleibt Startbild und Ersatz, der Clip läuft stumm darüber. Ein Clip am Block erscheint auf allen Produkten, die den Block nutzen."
+      },
+      {
+        "type": "select",
+        "id": "clip_mode",
+        "label": "Clips abspielen",
+        "options": [
+          { "value": "off", "label": "Aus" },
+          { "value": "test", "label": "Nur auf den Testseiten" },
+          { "value": "on", "label": "Auf allen Seiten" }
+        ],
+        "default": "test"
+      },
+      {
+        "type": "text",
+        "id": "clip_test_handles",
+        "label": "Testseiten",
+        "info": "Produkt-Handles, durch Komma getrennt. Gilt nur bei „Nur auf den Testseiten“.",
+        "default": "hp-isl-360-eu"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

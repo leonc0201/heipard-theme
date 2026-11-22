@@ -199,11 +199,197 @@
     panel.hidden = false;
   }
 
+  // Clips über dem Bild (Auftrag Teil H, 22.11.2026). Je Video zwei Phasen: "einmal" (data-clip-once,
+  // läuft je Seitenaufruf ein Mal) und "schleife" (data-clip-loop, läuft nur bei Sichtbarkeit).
+  // Das Bild darunter bleibt Startbild und Ersatz: der Clip blendet erst mit seinem ersten Bild ein
+  // und nach "einmal" wieder aus. Höchstens ein Clip spielt zugleich, der sichtbarste gewinnt.
+  // Kein Clip bei reduzierter Bewegung, Datensparmodus oder fehlgeschlagenem Autoplay.
+  var clips = [];
+  var reduceData = window.matchMedia('(prefers-reduced-data: reduce)');
+  var nearObserver = null;
+  var seenObserver = null;
+  var START = 0.5;
+
+  function clipsBlocked() {
+    var c = navigator.connection;
+    return reduceMotion.matches || reduceData.matches || !!(c && c.saveData);
+  }
+
+  function parseSources(json) {
+    try {
+      var list = JSON.parse(json || '[]');
+      return list.filter(function (s) { return s && s.u && s.h; }).sort(function (a, b) { return a.h - b.h; });
+    } catch (e) {
+      return [];
+    }
+  }
+
+  // Kleinste Fassung, die die dargestellte Fläche (Ausschnitt wie object-fit: cover) scharf füllt.
+  function pickSource(list, el) {
+    if (!list.length) return '';
+    var rect = el.getBoundingClientRect();
+    var top = list[list.length - 1];
+    var ratio = top.w && top.h ? top.w / top.h : 16 / 9;
+    var need = Math.max(rect.width / ratio, rect.height) * Math.min(window.devicePixelRatio || 1, 2);
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].h >= need * 0.9) return list[i].u;
+    }
+    return top.u;
+  }
+
+  function Clip(video) {
+    this.video = video;
+    this.once = parseSources(video.dataset.clipOnce);
+    this.loop = parseSources(video.dataset.clipLoop);
+    this.phase = this.once.length ? 'once' : (this.loop.length ? 'loop' : 'done');
+    this.armed = false;
+    this.seen = 0;
+    this.wantsPlay = false;
+    video._heipardClip = this;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.disablePictureInPicture = true;
+    var self = this;
+    video.addEventListener('playing', function () { video.classList.add('is-on'); });
+    video.addEventListener('ended', function () { self.ended(); });
+    video.addEventListener('error', function () { self.stop(); });
+  }
+
+  Clip.prototype.arm = function () {
+    if (this.armed || this.phase === 'done') return;
+    this.armed = true;
+    this.load(this.phase === 'once' ? this.once : this.loop);
+  };
+
+  Clip.prototype.load = function (list) {
+    var video = this.video;
+    video.loop = this.phase === 'loop';
+    video.preload = 'auto';
+    video.src = pickSource(list, video);
+    video.load();
+  };
+
+  Clip.prototype.play = function () {
+    if (this.phase === 'done' || !this.armed) return;
+    if (!this.video.paused) return;
+    var self = this;
+    var p = this.video.play();
+    if (p && p.catch) p.catch(function (err) {
+      // Pause durch die Steuerung ist kein Fehler; abgelehntes Autoplay (z. B. Stromsparmodus) beendet den Clip.
+      if (err && err.name === 'NotAllowedError') self.stop();
+    });
+  };
+
+  Clip.prototype.pause = function () {
+    if (!this.video.paused) this.video.pause();
+  };
+
+  Clip.prototype.ended = function () {
+    var video = this.video;
+    if (this.phase === 'once' && this.loop.length) {
+      // Letztes Bild von "einmal" = Bild = erstes Bild der Schleife: ausblenden, Schleife laden.
+      this.phase = 'loop';
+      video.classList.remove('is-on');
+      this.load(this.loop);
+      schedule();
+      return;
+    }
+    this.stop();
+  };
+
+  Clip.prototype.stop = function () {
+    var video = this.video;
+    this.phase = 'done';
+    this.pause();
+    video.classList.remove('is-on');
+    if (seenObserver) seenObserver.unobserve(video);
+    if (nearObserver) nearObserver.unobserve(video);
+    // Nach der Blende den Puffer freigeben.
+    setTimeout(function () {
+      video.removeAttribute('src');
+      video.load();
+    }, 600);
+  };
+
+  function schedule() {
+    clips = clips.filter(function (c) { return c.phase !== 'done' && c.video.isConnected; });
+    var best = null;
+    clips.forEach(function (c) {
+      if (c.phase === 'done' || !c.armed || document.hidden || clipsBlocked()) return;
+      var playing = !c.video.paused;
+      var ok = playing ? c.seen > 0 : c.seen >= START;
+      if (!ok) return;
+      // Kleiner Vorsprung für den laufenden Clip, damit zwei Clips nicht hin und her wechseln.
+      var score = c.seen + (playing ? 0.15 : 0);
+      if (!best || score > best.score) best = { clip: c, score: score };
+    });
+    clips.forEach(function (c) {
+      if (!best || c !== best.clip) c.pause();
+    });
+    if (best) best.clip.play();
+  }
+
+  function visibleShare(entry) {
+    if (!entry.isIntersecting) return 0;
+    var h = Math.min(entry.boundingClientRect.height, window.innerHeight || entry.boundingClientRect.height);
+    return h > 0 ? Math.min(1, entry.intersectionRect.height / h) : 0;
+  }
+
+  function observers() {
+    if (seenObserver || !('IntersectionObserver' in window)) return !!seenObserver;
+    nearObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && entry.target._heipardClip) entry.target._heipardClip.arm();
+      });
+      // Die Sichtbarkeit kann im selben Bild schon gemeldet sein: danach neu entscheiden.
+      schedule();
+    }, { rootMargin: '400px 0px' });
+    var steps = [];
+    for (var i = 0; i <= 20; i++) steps.push(i / 20);
+    seenObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var c = entry.target._heipardClip;
+        if (c) c.seen = visibleShare(entry);
+      });
+      schedule();
+    }, { threshold: steps });
+    document.addEventListener('visibilitychange', schedule);
+    var onBlock = function () {
+      if (!clipsBlocked()) return;
+      clips.forEach(function (c) { c.stop(); });
+    };
+    if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', onBlock);
+    if (reduceData.addEventListener) reduceData.addEventListener('change', onBlock);
+    return true;
+  }
+
+  function initClip(video) {
+    if (video._heipardClip) {
+      // Beim Variantenwechsel übernommenes Element: Zustand bleibt, nur weiterspielen lassen.
+      schedule();
+      return;
+    }
+    if (clipsBlocked() || !observers()) {
+      video.remove();
+      return;
+    }
+    var c = new Clip(video);
+    if (c.phase === 'done') {
+      video.remove();
+      return;
+    }
+    clips.push(c);
+    nearObserver.observe(video);
+    seenObserver.observe(video);
+  }
+
   function init(scope) {
     var base = scope || document;
     base.querySelectorAll('[data-heipard-ctrl]').forEach(initControl);
     base.querySelectorAll('[data-heipard-slider]').forEach(initSlider);
     base.querySelectorAll('[data-heipard-color]').forEach(initColor);
+    base.querySelectorAll('video[data-heipard-clip]').forEach(initClip);
   }
 
   window.HeipardFeature = { init: init };

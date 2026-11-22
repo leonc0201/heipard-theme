@@ -3,7 +3,8 @@
    html ist die Hauptprodukt-Sektion, bereits für die gewählte Variante gerendert.
    1. Alles mit data-heipard-vswap in dieser Sektion (Spec-Kacheln) wird daraus ersetzt.
    2. Jede HeiPard-Feature-Sektion wird über die Section Rendering API mit ?variant=ID neu geholt
-      und als Ganzes ersetzt, danach werden die interaktiven Blöcke neu initialisiert. */
+      und als Ganzes ersetzt, danach werden die interaktiven Blöcke neu initialisiert.
+      Laufende Clips (video[data-heipard-clip]) mit gleichem Schlüssel werden dabei übernommen. */
 (function () {
   if (window.HeipardVariant) return;
 
@@ -40,7 +41,21 @@
       .then(function (text) {
         var doc = new DOMParser().parseFromString(text, 'text/html');
         var next = doc.getElementById(section.id) || doc.body;
+        // Laufende Clips (Auftrag Teil H): gleiches Video im neuen Markup -> altes Element samt Zustand
+        // übernehmen, damit nichts neu startet oder flackert. Das Umhängen geschieht im selben Durchlauf,
+        // ein spielendes Video wird dabei nicht angehalten; falls doch, läuft es an derselben Stelle weiter.
+        var running = [];
+        section.querySelectorAll('video[data-heipard-clip]').forEach(function (v) {
+          if (v._heipardClip) running.push({ el: v, playing: !v.paused });
+        });
         section.innerHTML = next.innerHTML;
+        running.forEach(function (r) {
+          var key = r.el.getAttribute('data-heipard-clip');
+          var slot = section.querySelector('video[data-heipard-clip="' + key + '"]');
+          if (!slot || slot._heipardClip) return;
+          slot.replaceWith(r.el);
+          if (r.playing && r.el.paused) r.el.play().catch(function () {});
+        });
         if (section.innerHTML.indexOf('data-heipard-') !== -1) {
           if (window.HeipardFeature) window.HeipardFeature.init(section);
           else loadFeatureScript();
