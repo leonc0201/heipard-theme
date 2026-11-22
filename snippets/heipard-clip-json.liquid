@@ -1,0 +1,26 @@
+{%- comment -%}
+  Gibt die Fassungen einer Clip-Datei als kommagetrennte JSON-Einträge aus ({"h":…,"w":…,"u":"…"}),
+  für data-clip-* in heipard-feature-block.liquid (Auftrag Teil H/I, 22.11.2026).
+  Parameter:
+    f      Datei aus einem file_reference-Feld: Video (sources) oder allgemeine Datei (url)
+    mode   leer: MP4-Fassungen | 'hls': nur die m3u8-Adresse (Gerätetest, nur über ?clip_hls=1)
+  Hinweis: Liquid liefert je Video nur die höchste MP4-Fassung. Eine allgemeine Datei (MP4 in Files)
+  hat keine Maße in Liquid; sie gilt als Mobil-Fassung 1122 × 480.
+{%- endcomment -%}
+{%- liquid
+  assign out = ''
+  if f.sources != blank
+    for s in f.sources
+      if mode == 'hls'
+        if s.format == 'm3u8'
+          assign out = out | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
+        endif
+      elsif s.format == 'mp4'
+        assign out = out | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
+      endif
+    endfor
+  elsif f.url != blank and mode != 'hls'
+    assign out = ',{"h":480,"w":1122,"u":"' | append: f.url | append: '"}'
+  endif
+  echo out | remove_first: ','
+-%}

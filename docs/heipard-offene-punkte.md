@@ -336,10 +336,22 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [ ] **Begriffe im EN-Lieferumfang** — „spare bulb“ (seit Teil H an OLA-G40, OL-30/-50) neben „replacement bulb“
   (OLS, OLH, OL-S11, DFM-600M); „LED birch light tree“ (WBF-180) neben „LED light tree birch“ (WBF-210, WWF-180).
   Entscheidung bei Leon.
-- [ ] **Videoclips im Feature-Block** (Teil H, Abschnitt 1) — Blockfelder `video_einmal`/`video_schleife` und Theme-
-  Schalter „Videoclips“ (Standard: nur Testseite hp-isl-360-eu) seit 2026-11-22 live, Commit `c87d875`. Test auf
-  hp-isl-360-eu mit `ISL_B1_01_LICHTAN`/`_SCHLEIFE` nach der Übergabe der Asset-Instanz (Auftrag 28), danach Leons
-  Abnahme und Ausbau. Ein Clip am Block gilt für alle Produkte des Blocks (OLG: `olg-b1` vor dem Einbau klären).
+- [ ] **Videoclips im Feature-Block** (Teil H, Abschnitte 1 und 2) — Blockfelder `video_einmal`/`video_schleife` und
+  Theme-Schalter „Videoclips“ (Standard: nur Testseite hp-isl-360-eu) live seit 2026-11-22 (`c87d875`, Puffern
+  `99883fc`). `isl-b1` hat seit 17:10 Uhr beide ISL-Clips, sichtbar nur auf hp-isl-360-eu. Wartet auf Leons Abnahme
+  (Anfang „an, dunkel, an“), dann Ausbau; OLG: Seiten mit `olg-b1` vor dem Einbau vorlegen.
+- [ ] **Clips mobil zu schwer** (Teil H, Abschnitt 2) — Liquid liefert je Video nur die höchste MP4-Fassung (B1 720p,
+  Hero 1080p). Gedrosselt lädt 720p langsamer als der Clip läuft. Wege: HLS (`m3u8`) auf echten Geräten probieren oder
+  Mobil-Fassungen von der Asset-Instanz.
+- [ ] **Hero Tag/Abend mit Clips** (Teil H, Abschnitt 3) — Vorschau-Theme #199733903693 („zz-vorschau Teil H Hero (kann
+  weg)“), Branch `vorschau/hero-tag-abend`, drei Fassungen über `?hero_fassung=1|2|3`. Leon entscheidet Fassung,
+  Verlauf (35 % vorgeschlagen), Bento-Bild (Vorschläge `OLS11_R2_01`, `OLAG40_R1_01`, `OLG40_B1_01`), kleinere Clips.
+- [ ] **Hero-Verlauf wird nie gezeichnet** (Befund Teil H) — Dawn `div:empty { display: none }` blendet die leere
+  Verlaufsebene aus, live seit jeher. Behoben nur in der Vorschau (`d211cbb`); live nur mit Leons Ja.
+- [ ] **hp-dnm-208 Galerie** (Teil H, 0.4) — Multicolor zeigt das warmweiße `GAL_06` (Position 1, in keiner Liste);
+  beide Varianten tragen `71TIXKmc_8L` als Variantenbild, die neue Position 1 ist nirgends das erste Bild. Medien:
+  Asset-Instanz bzw. Leon.
+- [ ] **„[TBD: Saison-Überschrift]“** auf der Startseite (Saison-Kachel unter dem Hero), gesehen 2026-11-22.
 - [ ] **Layoutverschiebung auf der Produktseite mobil** — CLS 0,157 auf hp-isl-360-eu (gedrosselt, 22.11.), schon vor
   den Clips; Ursache oberhalb der Feature-Sektion, nicht untersucht.
 - [ ] **Vorschau-Theme „zz-test Teil G Platzhalter (kann weg)“** (#199725613389) — nur für den Test aus Teil G,
