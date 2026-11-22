@@ -510,9 +510,10 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting && entry.target._heipardClip) entry.target._heipardClip.arm();
       });
-      // Die Sichtbarkeit kann im selben Bild schon gemeldet sein: danach neu entscheiden.
+      // Die Sichtbarkeit kann im selben Bild schon gemeldet sein: danach neu entscheiden. Laden ab 1000 px vor dem
+      // Sichtfeld (Teil I): auch bei schnellem Scrollen liegt das erste Bild von „einmal“ rechtzeitig bereit.
       schedule();
-    }, { rootMargin: '400px 0px' });
+    }, { rootMargin: '1000px 0px' });
     var steps = [];
     for (var i = 0; i <= 20; i++) steps.push(i / 20);
     seenObserver = new IntersectionObserver(function (entries) {
