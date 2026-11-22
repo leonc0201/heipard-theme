@@ -283,14 +283,21 @@
     video.playsInline = true;
     video.disablePictureInPicture = true;
     video.addEventListener('playing', function () {
+      clearTimeout(self.stallTimer);
       if (self.kicking) return;
       if (self.phase === 'once') self.started = true;
       video.classList.add('is-on');
     });
     video.addEventListener('ended', function () { self.ended(); });
     video.addEventListener('error', function () { self.stop(); });
+    // Kurzes waiting beim Anlaufen ist normal; erst wenn „einmal“ länger als 1 s steht, zurück auf das Bild.
     video.addEventListener('waiting', function () {
-      if (self.phase === 'once' && self.started && !self.kicking) self.abortOnce();
+      if (self.phase !== 'once' || !self.started || self.kicking) return;
+      var t = video.currentTime;
+      clearTimeout(self.stallTimer);
+      self.stallTimer = setTimeout(function () {
+        if (self.phase === 'once' && !video.paused && video.currentTime - t < 0.1) self.abortOnce();
+      }, 1000);
     });
     video.addEventListener('loadeddata', function () { self.firstFrame(); });
   }
