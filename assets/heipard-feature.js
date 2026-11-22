@@ -225,13 +225,14 @@
     }
   }
 
-  // Kleinste Fassung, die die dargestellte Fläche (Ausschnitt wie object-fit: cover) scharf füllt.
+  // Kleinste Fassung, die die dargestellte Fläche (Ausschnitt wie object-fit: cover) füllt. Pixeldichte
+  // höchstens 1,5: mobil reicht damit 480p (gedrosselt lud 720p langsamer, als der Clip lief).
   function pickSource(list, el) {
     if (!list.length) return '';
     var rect = el.getBoundingClientRect();
     var top = list[list.length - 1];
     var ratio = top.w && top.h ? top.w / top.h : 16 / 9;
-    var need = Math.max(rect.width / ratio, rect.height) * Math.min(window.devicePixelRatio || 1, 2);
+    var need = Math.max(rect.width / ratio, rect.height) * Math.min(window.devicePixelRatio || 1, 1.5);
     for (var i = 0; i < list.length; i++) {
       if (list[i].h >= need * 0.9) return list[i].u;
     }
