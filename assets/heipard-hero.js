@@ -12,6 +12,17 @@
                 selbst (nach dem Laden der Seite, damit das größte Bild nicht warten muss).
   Clips werden erst beim Zeigen auf den Schalter (Maus, Fokus, Antippen) geladen. Kein Clip bei
   reduzierter Bewegung oder Datensparmodus.
+
+  Teil I, Abschnitte 7.2 und 7.3 (22.11.2026, Vorschau):
+    Fassungen   Unter 750 px Breite nur die Mobil-Fassungen (ohne Mobil-Fassung kein Clip, nur der
+                Bildwechsel). Tempo normal oder schnell (data-tempo); fehlt die schnelle Fassung, gilt normal.
+    Tag-Modus   data-tag
+      aus       wie bisher
+      hinweis   im Tag-Modus leuchtet der Schalter einmal je Sitzung nach etwa 2 s, darunter „Licht an?“;
+                beides verschwindet beim ersten Umschalten. Bei reduzierter Bewegung nur das Etikett.
+      intro     auch im Tag-Modus läuft „Licht an“ einmal je Sitzung (data-intro="tag"); danach blendet die
+                ganze Seite in die Abendstimmung, ohne die Wahl zu speichern. Am Schalter steht dann
+                „Licht aus“. Läuft der Clip nach 2,5 s nicht, bleibt die Seite im Tag-Modus.
 */
 (function () {
   var hero = document.querySelector('[data-heipard-hero]');
@@ -20,13 +31,20 @@
 
   var root = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var narrow = window.matchMedia('(max-width: 749px)');
   var mode = hero.dataset.mode;
+  var tempo = hero.dataset.tempo === 'schnell' ? 'schnell' : 'normal';
+  var tagModus = hero.dataset.tag || 'aus';
   var video = hero.querySelector('.heipard-hero__clip');
   var INTRO_KEY = 'heipard-hero-intro';
+  var HINT_KEY = 'heipard-hero-hinweis';
 
-  function blocked() {
+  function saveData() {
     var c = navigator.connection;
-    return reduce.matches || !!(c && c.saveData) || !video;
+    return !!(c && c.saveData);
+  }
+  function blocked() {
+    return reduce.matches || saveData() || !video;
   }
   var useClips = (mode === 'clip' || mode === 'clip_intro') && !!video;
 
@@ -37,7 +55,15 @@
       return [];
     }
   }
-  var lists = { on: parse(video && video.dataset.clipOn), off: parse(video && video.dataset.clipOff) };
+  // Fassungsliste für eine Richtung (on | off): Tempo und Bildschirmbreite.
+  function listFor(dir) {
+    if (!video) return [];
+    var base = 'clip' + (dir === 'on' ? 'On' : 'Off');
+    var m = narrow.matches ? 'M' : '';
+    var list = tempo === 'schnell' ? parse(video.dataset[base + 'Schnell' + m]) : [];
+    if (!list.length) list = parse(video.dataset[base + m]);
+    return list;
+  }
 
   // Kleinste Fassung, die den Hero (object-fit: cover) ausreichend füllt; Pixeldichte höchstens 1,5.
   function pick(list) {
@@ -56,13 +82,19 @@
   var token = 0;
   var running = null; // { dir }
 
-  function play(dir, target) {
+  // opts.onEnd: nach dem Ende des Clips; opts.onFail: statt des Bildwechsels, wenn der Clip nicht läuft.
+  function play(dir, target, opts) {
+    opts = opts || {};
     var my = ++token;
-    var list = lists[dir];
-    if (!useClips || blocked() || !list.length) {
+    var list = listFor(dir);
+    var fail = function () {
       if (video) { video.pause(); video.classList.remove('is-on'); }
       running = null;
-      setBild(target);
+      if (opts.onFail) opts.onFail();
+      else setBild(target);
+    };
+    if (!useClips || blocked() || !list.length) {
+      fail();
       return;
     }
     var src = pick(list);
@@ -73,10 +105,7 @@
     var started = false;
     var timer = setTimeout(function () {
       if (my !== token || started) return;
-      video.pause();
-      video.classList.remove('is-on');
-      running = null;
-      setBild(target);
+      fail();
     }, 2500);
     var onPlaying = function () {
       if (my !== token) return;
@@ -89,6 +118,7 @@
       if (my !== token) return;
       video.classList.remove('is-on');
       running = null;
+      if (opts.onEnd) opts.onEnd();
     };
     running = { dir: dir };
     var go = function () {
@@ -99,8 +129,7 @@
       if (p && p.catch) p.catch(function (err) {
         if (my !== token || started || (err && err.name === 'AbortError')) return;
         clearTimeout(timer);
-        running = null;
-        setBild(target);
+        fail();
       });
     };
     if (video.getAttribute('src') !== src) {
@@ -118,8 +147,7 @@
   // Vorladen des nächsten Clips, sobald jemand zum Schalter greift.
   function preload() {
     if (!useClips || blocked() || running) return;
-    var next = root.getAttribute('data-theme') === 'dark' ? lists.off : lists.on;
-    var src = pick(next);
+    var src = pick(listFor(root.getAttribute('data-theme') === 'dark' ? 'off' : 'on'));
     if (!src || video.getAttribute('src') === src) return;
     video.preload = 'auto';
     video.src = src;
@@ -131,25 +159,115 @@
     }, { passive: true });
   });
 
+  // --- Hinweis am Schalter (7.3) -------------------------------------------------------------
+  var hint = null;
+  function visibleToggle() {
+    var all = document.querySelectorAll('[data-heipard-theme-toggle]');
+    for (var i = 0; i < all.length; i++) if (all[i].offsetParent !== null) return all[i];
+    return null;
+  }
+  function showHint(text, glow) {
+    hideHint();
+    var btn = visibleToggle();
+    if (!btn || !text) return;
+    var label = document.createElement('span');
+    label.className = 'heipard-switch__hinweis';
+    label.setAttribute('aria-hidden', 'true');
+    label.textContent = text;
+    btn.appendChild(label);
+    btn.classList.add('heipard-switch--hinweis');
+    if (!glow) btn.classList.add('heipard-switch--ohne-leuchten');
+    requestAnimationFrame(function () { label.classList.add('is-on'); });
+    hint = { btn: btn, label: label };
+  }
+  function hideHint() {
+    if (!hint) return;
+    hint.btn.classList.remove('heipard-switch--hinweis', 'heipard-switch--ohne-leuchten');
+    if (hint.label.parentNode) hint.label.parentNode.removeChild(hint.label);
+    hint = null;
+  }
+
+  // --- Intro auch am Tag (7.3 b): Seite ohne Speichern in die Abendstimmung ---------------------
+  var selfSwitch = false;
+  var introTag = false;
+  function pageToDark() {
+    selfSwitch = true;
+    root.classList.add('theme-transitioning');
+    setTimeout(function () {
+      root.setAttribute('data-theme', 'dark');
+      var all = document.querySelectorAll('[data-heipard-theme-toggle]');
+      for (var i = 0; i < all.length; i++) all[i].setAttribute('aria-pressed', 'true');
+      showHint(hero.dataset.textAus, false);
+    }, 120);
+    setTimeout(function () { root.classList.remove('theme-transitioning'); }, 750);
+  }
+
   var last = root.getAttribute('data-theme');
   new MutationObserver(function () {
     var t = root.getAttribute('data-theme');
     if (t === last) return;
     last = t;
+    if (selfSwitch) {
+      // Vom Intro selbst gesetzt: der Hero zeigt schon das Abendbild.
+      selfSwitch = false;
+      return;
+    }
+    hideHint();
+    if (introTag && t === 'dark' && running && running.dir === 'on') {
+      // Während des Intros selbst eingeschaltet: Clip läuft weiter, kein Seitenwechsel am Ende.
+      introTag = false;
+      return;
+    }
+    introTag = false;
     play(t === 'dark' ? 'on' : 'off', bildFuer(t));
   }).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
 
-  // Fassung 3: Das Inline-Skript hat bei erstem Abendaufruf das Tagbild gesetzt (data-intro).
-  if (hero.dataset.intro === 'true') {
-    var startIntro = function () {
+  function onLoad(fn) {
+    if (document.readyState === 'complete') fn();
+    else window.addEventListener('load', fn, { once: true });
+  }
+
+  var intro = hero.dataset.intro;
+  if (intro === 'abend') {
+    // Fassung 3: Das Inline-Skript hat bei erstem Abendaufruf das Tagbild gesetzt.
+    onLoad(function () {
       try { sessionStorage.setItem(INTRO_KEY, '1'); } catch (e) {}
       if (root.getAttribute('data-theme') !== 'dark') return;
       play('on', 'abend');
-    };
-    if (document.readyState === 'complete') startIntro();
-    else window.addEventListener('load', startIntro, { once: true });
+    });
+  } else if (intro === 'tag') {
+    onLoad(function () {
+      try { sessionStorage.setItem(INTRO_KEY, '1'); } catch (e) {}
+      if (root.getAttribute('data-theme') === 'dark') return;
+      introTag = true;
+      play('on', 'abend', {
+        onEnd: function () {
+          if (!introTag) return;
+          introTag = false;
+          if (root.getAttribute('data-theme') !== 'dark') pageToDark();
+        },
+        onFail: function () {
+          introTag = false;
+          setBild('tag');
+        }
+      });
+    });
   } else if (hero.getAttribute('data-bild') !== bildFuer(last)) {
     // Schon vor dem Skript umgeschaltet: Bild nachziehen.
     setBild(bildFuer(last));
+  }
+
+  if (tagModus === 'hinweis' && root.getAttribute('data-theme') !== 'dark') {
+    var seenHint = null;
+    try { seenHint = sessionStorage.getItem(HINT_KEY); } catch (e) {}
+    if (!seenHint) {
+      onLoad(function () {
+        setTimeout(function () {
+          if (root.getAttribute('data-theme') === 'dark') return;
+          try { sessionStorage.setItem(HINT_KEY, '1'); } catch (e) {}
+          showHint(hero.dataset.textAn, !reduce.matches);
+        }, 2000);
+      });
+    }
   }
 })();

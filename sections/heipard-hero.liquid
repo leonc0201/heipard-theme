@@ -16,6 +16,10 @@
   vor dem ersten Bild aus data-theme. Abspielen: assets/heipard-hero.js. Bei reduzierter Bewegung
   oder Datensparmodus kein Clip, nur der Bildwechsel. Nur in unveröffentlichten Themes lässt sich die
   Fassung über ?hero_fassung=1|2|3 in der Adresse wählen (Vorschau für Leon).
+
+  Teil I (22.11.2026, Vorschau): Mobil-Fassungen unter 750 px, Tempo normal oder schnell (Einstellung
+  tempo, Vorschau ?hero_tempo=), Tag-Modus aus, hinweis oder intro (Einstellung tag_modus, Vorschau
+  ?hero_tag=). Ablauf siehe assets/heipard-hero.js.
 {% endcomment %}
 
 {%- liquid
@@ -30,18 +34,39 @@
   assign on_json = ''
   assign off_json = ''
   if hero_clips
-    for s in section.settings.clip_on.sources
-      if s.format == 'mp4'
-        assign on_json = on_json | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
-      endif
-    endfor
-    for s in section.settings.clip_off.sources
-      if s.format == 'mp4'
-        assign off_json = off_json | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
-      endif
-    endfor
-    assign on_json = on_json | remove_first: ','
-    assign off_json = off_json | remove_first: ','
+    # Je Clip die Fassungen als JSON: normal und schnell, groß und mobil (Teil I, Abschnitt 7.2).
+    capture on_json
+      render 'heipard-clip-json', f: section.settings.clip_on
+    endcapture
+    capture off_json
+      render 'heipard-clip-json', f: section.settings.clip_off
+    endcapture
+    capture on_m_json
+      render 'heipard-clip-json', f: section.settings.clip_on_m
+    endcapture
+    capture off_m_json
+      render 'heipard-clip-json', f: section.settings.clip_off_m
+    endcapture
+    capture on_s_json
+      render 'heipard-clip-json', f: section.settings.clip_on_schnell
+    endcapture
+    capture off_s_json
+      render 'heipard-clip-json', f: section.settings.clip_off_schnell
+    endcapture
+    capture on_sm_json
+      render 'heipard-clip-json', f: section.settings.clip_on_schnell_m
+    endcapture
+    capture off_sm_json
+      render 'heipard-clip-json', f: section.settings.clip_off_schnell_m
+    endcapture
+    assign on_json = on_json | strip
+    assign off_json = off_json | strip
+    assign on_m_json = on_m_json | strip
+    assign off_m_json = off_m_json | strip
+    assign on_s_json = on_s_json | strip
+    assign off_s_json = off_s_json | strip
+    assign on_sm_json = on_sm_json | strip
+    assign off_sm_json = off_sm_json | strip
   endif
 -%}
 
@@ -51,6 +76,10 @@
   data-heipard-hero
   data-mode="{{ hero_mode }}"
   data-clips="{% if hero_clips and on_json != blank and off_json != blank %}true{% else %}false{% endif %}"
+  data-tempo="{{ section.settings.tempo | default: 'normal' }}"
+  data-tag="{{ section.settings.tag_modus | default: 'aus' }}"
+  data-text-an="{{ 'heipard.hero.hinweis_an' | t | escape }}"
+  data-text-aus="{{ 'heipard.hero.hinweis_aus' | t | escape }}"
   data-bild="abend"
 >
   {%- if hero_mode != 'aus' -%}
@@ -58,23 +87,31 @@
       (function (s) {
         var mode = s.getAttribute('data-mode');
         try {
-          // Vorschau: Fassung über ?hero_fassung=1|2|3, nur in unveröffentlichten Themes.
-          var q = new URLSearchParams(location.search).get('hero_fassung');
+          // Vorschau, nur in unveröffentlichten Themes: ?hero_fassung=1|2|3, ?hero_tempo=normal|schnell,
+          // ?hero_tag=aus|hinweis|intro (Teil I, Abschnitte 7.2 und 7.3).
+          var q = new URLSearchParams(location.search);
           var role = window.Shopify && Shopify.theme && Shopify.theme.role;
-          if (q && role && role !== 'main') {
-            mode = { '1': 'bilder', '2': 'clip', '3': 'clip_intro' }[q] || mode;
-            s.setAttribute('data-mode', mode);
+          if (role && role !== 'main') {
+            var f = { '1': 'bilder', '2': 'clip', '3': 'clip_intro' }[q.get('hero_fassung')];
+            if (f) { mode = f; s.setAttribute('data-mode', mode); }
+            var t = q.get('hero_tempo');
+            if (t === 'normal' || t === 'schnell') s.setAttribute('data-tempo', t);
+            var g = q.get('hero_tag');
+            if (g === 'aus' || g === 'hinweis' || g === 'intro') s.setAttribute('data-tag', g);
           }
         } catch (e) {}
         var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-        var intro = false;
-        if (mode === 'clip_intro' && dark && s.getAttribute('data-clips') === 'true') {
+        var intro = '';
+        if (mode === 'clip_intro' && s.getAttribute('data-clips') === 'true') {
           var c = navigator.connection;
           var seen = null;
           try { seen = sessionStorage.getItem('heipard-hero-intro'); } catch (e) {}
-          intro = !seen && !(c && c.saveData) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          var ok = !seen && !(c && c.saveData) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          // Abendstimmung: Intro „Licht an“ (Fassung 3). Tag-Modus nur mit Option intro (7.3 b).
+          if (ok && dark) intro = 'abend';
+          else if (ok && s.getAttribute('data-tag') === 'intro') intro = 'tag';
         }
-        if (intro) s.setAttribute('data-intro', 'true');
+        if (intro) s.setAttribute('data-intro', intro);
         s.setAttribute('data-bild', intro || !dark ? 'tag' : 'abend');
       })(document.currentScript.parentNode);
     </script>
@@ -119,6 +156,12 @@
       class="heipard-hero__clip"
       data-clip-on="[{{ on_json | escape }}]"
       data-clip-off="[{{ off_json | escape }}]"
+      {% if on_m_json != blank %}data-clip-on-m="[{{ on_m_json | escape }}]"{% endif %}
+      {% if off_m_json != blank %}data-clip-off-m="[{{ off_m_json | escape }}]"{% endif %}
+      {% if on_s_json != blank %}data-clip-on-schnell="[{{ on_s_json | escape }}]"{% endif %}
+      {% if off_s_json != blank %}data-clip-off-schnell="[{{ off_s_json | escape }}]"{% endif %}
+      {% if on_sm_json != blank %}data-clip-on-schnell-m="[{{ on_sm_json | escape }}]"{% endif %}
+      {% if off_sm_json != blank %}data-clip-off-schnell-m="[{{ off_sm_json | escape }}]"{% endif %}
       muted
       playsinline
       webkit-playsinline
@@ -237,6 +280,45 @@
   pointer-events: none;
 }
 .heipard-hero__clip.is-on { opacity: 1; transition-duration: 0.15s; }
+
+/* Hinweis am Lichtschalter (Teil I, Abschnitt 7.3, Vorschau): der Schalter leuchtet zweimal auf, darunter
+   ein Etikett („Licht an?“ bzw. nach dem Intro am Tag „Licht aus“). Bei reduzierter Bewegung nur das Etikett. */
+.heipard-switch.heipard-switch--hinweis { position: relative; }
+.heipard-switch--hinweis .heipard-switch__track { animation: heipard-switch-hinweis 1.2s ease-in-out 2; }
+@keyframes heipard-switch-hinweis {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklch, var(--glow) 0%, transparent); }
+  50% {
+    box-shadow:
+      0 0 0 0.5rem color-mix(in oklch, var(--glow) 45%, transparent),
+      0 0 1.8rem 0.4rem color-mix(in oklch, var(--glow) 55%, transparent);
+  }
+}
+.heipard-switch__hinweis {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--card);
+  color: rgb(var(--color-foreground));
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 6px 18px -8px color-mix(in oklch, var(--glow) 45%, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.heipard-switch__hinweis.is-on { opacity: 1; }
+.heipard-switch--ohne-leuchten .heipard-switch__track { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .heipard-switch--hinweis .heipard-switch__track { animation: none; }
+  .heipard-switch__hinweis { transition: none; }
+}
 
 /* Zusätzlicher Verlauf im Tag-Modus: das helle Tagbild braucht mehr Abdunklung für die weiße Schrift. */
 .heipard-hero .heipard-hero__overlay--tag {
@@ -432,6 +514,59 @@
       "type": "video",
       "id": "clip_off",
       "label": "Clip Licht aus (Abend zu Tag)"
+    },
+    {
+      "type": "video",
+      "id": "clip_on_m",
+      "label": "Clip Licht an, Mobil-Fassung",
+      "info": "Unter 750 px Breite läuft ein Clip nur mit Mobil-Fassung."
+    },
+    {
+      "type": "video",
+      "id": "clip_off_m",
+      "label": "Clip Licht aus, Mobil-Fassung"
+    },
+    {
+      "type": "select",
+      "id": "tempo",
+      "label": "Tempo der Clips",
+      "options": [
+        { "value": "normal", "label": "Normal (etwa 8 s)" },
+        { "value": "schnell", "label": "Schnell (etwa 4 s)" }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "video",
+      "id": "clip_on_schnell",
+      "label": "Clip Licht an, schnell"
+    },
+    {
+      "type": "video",
+      "id": "clip_off_schnell",
+      "label": "Clip Licht aus, schnell"
+    },
+    {
+      "type": "video",
+      "id": "clip_on_schnell_m",
+      "label": "Clip Licht an, schnell, Mobil-Fassung"
+    },
+    {
+      "type": "video",
+      "id": "clip_off_schnell_m",
+      "label": "Clip Licht aus, schnell, Mobil-Fassung"
+    },
+    {
+      "type": "select",
+      "id": "tag_modus",
+      "label": "Tag-Modus",
+      "info": "Hinweis: im Tag-Modus leuchtet der Schalter einmal je Sitzung mit „Licht an?“. Intro (nur mit „Clip beim ersten Aufruf am Abend“): auch am Tag läuft „Licht an“ einmal, danach wechselt die Seite in die Abendstimmung, ohne die Wahl zu speichern.",
+      "options": [
+        { "value": "aus", "label": "Aus" },
+        { "value": "hinweis", "label": "Hinweis am Schalter" },
+        { "value": "intro", "label": "Intro auch am Tag" }
+      ],
+      "default": "aus"
     },
     {
       "type": "range",
