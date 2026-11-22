@@ -1,0 +1,107 @@
+[
+ {
+  "name": "ISL B1 Schleife",
+  "alt": {
+   "dauer": 5.04,
+   "aufloesung": "2200x940",
+   "bilder": 120,
+   "naht": 0.95,
+   "mittelJeBild": 0.12,
+   "maxJeBild": 0.47,
+   "viertel": [
+    0.12,
+    0.13,
+    0.12,
+    0.1
+   ],
+   "H": 205,
+   "lastT": 5
+  },
+  "neu": {
+   "dauer": 2.96,
+   "aufloesung": "2200x940",
+   "bilder": 70,
+   "naht": 0.67,
+   "mittelJeBild": 0.12,
+   "maxJeBild": 0.25,
+   "viertel": [
+    0.13,
+    0.13,
+    0.13,
+    0.1
+   ],
+   "H": 205,
+   "lastT": 2.92
+  }
+ },
+ {
+  "name": "DFM B2 Schleife",
+  "alt": {
+   "dauer": 5.04,
+   "aufloesung": "1920x1080",
+   "bilder": 120,
+   "naht": 0.74,
+   "mittelJeBild": 0.06,
+   "maxJeBild": 0.22,
+   "viertel": [
+    0.1,
+    0.05,
+    0.05,
+    0.04
+   ],
+   "H": 270,
+   "lastT": 5
+  },
+  "neu": {
+   "dauer": 3.21,
+   "aufloesung": "1920x1080",
+   "bilder": 76,
+   "naht": 0.35,
+   "mittelJeBild": 0.04,
+   "maxJeBild": 0.15,
+   "viertel": [
+    0.05,
+    0.05,
+    0.04,
+    0.03
+   ],
+   "H": 270,
+   "lastT": 3.17
+  }
+ },
+ {
+  "name": "DCT B2 Sticky Schleife",
+  "alt": {
+   "dauer": 5.04,
+   "aufloesung": "1920x1080",
+   "bilder": 120,
+   "naht": 1.15,
+   "mittelJeBild": 0.14,
+   "maxJeBild": 0.4,
+   "viertel": [
+    0.21,
+    0.14,
+    0.13,
+    0.09
+   ],
+   "H": 270,
+   "lastT": 5
+  },
+  "neu": {
+   "dauer": 3.46,
+   "aufloesung": "1920x1080",
+   "bilder": 82,
+   "naht": 0.93,
+   "mittelJeBild": 0.1,
+   "maxJeBild": 0.27,
+   "viertel": [
+    0.12,
+    0.11,
+    0.09,
+    0.08
+   ],
+   "H": 270,
+   "lastT": 3.42
+  }
+ }
+]

@@ -40,6 +40,17 @@ so setzen.
 | **Motif Lights**       | `motif-lights`          | `kat-motif`                  | ⛔ (leer → noch nicht im Menü) |
 | **Weihnachtsbäume**    | `weihnachtsbaeume`      | `kat-weihnachtsbaum`         | ⛔ (leer → noch nicht im Menü) |
 
+### Anlass-Kollektionen (Auftrag Teil I, 22.11.2026)
+
+| Kollektion (Titel DE / EN) | Handle | Regel: Tag ist einer von … (ODER) | Menü |
+|---|---|---|---|
+| **Weihnachten** / Christmas | `weihnachten` | `kat-christmas-tree-lights`, `kat-icicle`, `kat-curtain`, `kat-net`, `kat-cluster`, `kat-motif`, `kat-weihnachtsbaum` | ⛔ nicht im Menü, verlinkt von Saison-Block und Anlass-Kachel „Weihnachten“ der Startseite |
+
+Smart, im Onlineshop veröffentlicht, 54 Produkte (Stand 22.11.2026). Neue Produkte
+mit einem dieser Tags landen automatisch darin. Die Liste mit den Produkten, die
+nicht eindeutig zu Weihnachten passen, steht in `heipard-teil-i-bericht.md`
+(Abschnitt 8).
+
 ## Tag-Vergabe beim Import — Regeln
 
 Jedes Lichterketten-Produkt bekommt **`kat-stringlights` + genau einen**

@@ -56,7 +56,7 @@
           { "value": "test", "label": "Nur auf den Testseiten" },
           { "value": "on", "label": "Auf allen Seiten" }
         ],
-        "default": "test"
+        "default": "on"
       },
       {
         "type": "text",
