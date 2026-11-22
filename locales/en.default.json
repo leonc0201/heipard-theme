@@ -20,6 +20,10 @@
       "day": "Day",
       "night": "Evening"
     },
+    "hero": {
+      "hinweis_an": "Lights on?",
+      "hinweis_aus": "Lights off"
+    },
     "bento": {
       "discover": "Discover"
     },
