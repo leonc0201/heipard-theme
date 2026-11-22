@@ -463,8 +463,12 @@ ohne Bildmaße (Stand Juni), die Warnungen betreffen verwaiste Snippets, Variabl
       („Mains power“, Batterie und Solar prüfen). Vorher alle Metafeld-Übersetzungen auf solche Fälle durchsehen. Auf
       dein Wort.
 
-**Bei der Asset-Instanz:** Galerie-Listen für hp-ucp-200 (200W, 200M, 300W, 300M) und hp-dpt-300 (200M, 400M), bis jetzt
-nur warmweiße Bilder (1.9.2).
+**Galerie der neuen Varianten** (1.9.2, laut Asset-Instanz bekannt, nichts ändern bis zu deiner Entscheidung):
+- hp-ucp-200 (200W, 200M, 300W, 300M): Das warmweiße Bild auf Position 1 hängt an deiner Frage 3 aus Asset-Auftrag 30
+  (Ausnahme Position 1). Bei Ja schreibt die Asset-Instanz die Listen.
+- hp-dpt-300 (200M, 400M): Es gibt kein buntes DPT-Bild. Das löst erst ein Bild aus Lauf C3 oder einer EU-Lieferung
+  (Tyler, D12).
+- Nachtrag in `reports/auftrag_30.md`, Abschnitt 9 (Asset-Repo).
 
 **Bei Tyler:** Anzahl der Ersatzbirnen hp-ol-30.
 
