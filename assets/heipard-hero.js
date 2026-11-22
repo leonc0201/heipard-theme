@@ -79,6 +79,15 @@
     return top.u;
   }
 
+  // Quelle freigeben: bricht den Download ab, nachdem ein Clip nicht lief oder hing.
+  function release() {
+    if (!video || !video.getAttribute('src')) return;
+    try {
+      video.removeAttribute('src');
+      video.load();
+    } catch (e) {}
+  }
+
   function bildFuer(theme) { return theme === 'dark' ? 'abend' : 'tag'; }
   function setBild(b) { hero.setAttribute('data-bild', b); }
 
@@ -91,7 +100,7 @@
     var my = ++token;
     var list = listFor(dir);
     var fail = function () {
-      if (video) { video.pause(); video.classList.remove('is-on'); }
+      if (video) { video.pause(); video.classList.remove('is-on'); release(); }
       running = null;
       if (opts.onFail) opts.onFail();
       else setBild(target);
@@ -134,6 +143,8 @@
         if (my !== token || video.paused || video.ended || video.currentTime - t > 0.1) return;
         video.pause();
         video.classList.remove('is-on');
+        // Nach der Blende (0,4 s) die Quelle freigeben, damit der Browser nicht weiterlädt.
+        setTimeout(function () { if (my === token) release(); }, 450);
         running = null;
         if (opts.onEnd) opts.onEnd();
       }, 1000);
