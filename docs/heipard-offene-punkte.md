@@ -321,9 +321,27 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   `heipard-fb-fragen.liquid` (Commit `0ccb2c4`). Die 17 Antworten mit Packungsinhalt lesen jetzt das Feld, DE „Im
   Paket sind {lieferumfang}.“, EN „What's in the box?“ / „The box contains {lieferumfang}.“ Leeres Feld: Frage
   entfällt. Bericht Teil G, Abschnitt 2. Die übrigen Fragen sind weiter ohne EN.
-- [ ] **Groß- und Kleinschreibung im EN-Lieferumfang** — drei Schreibweisen nebeneinander („1 × remote control“,
-  „1 × Remote control“, „1 × Remote Control“), seit Teil G auch in den Antworten sichtbar. Liste im Bericht Teil G,
-  Abschnitt 3.2. Leon entscheidet über eine einheitliche Form.
+- [x] **Groß- und Kleinschreibung im EN-Lieferumfang** (2026-11-22, Teil H) — Leons Regel: klein nach dem
+  Malzeichen, außer Abkürzungen und Namen. 64 EN-Werte an Produkt und Variante angeglichen, DE unverändert, 22
+  Antworten mit Platzhalter live geprüft. Bericht Teil H, Abschnitt 0.1.
+- [x] **Britische Formen im Shop-Inhalt** (2026-11-22, Teil H) — „multicoloured“/„multi-colour“ → „multicolor“ an
+  hp-dfm-600 (Titel, SEO-Titel), hp-dfm-750-eu (Titel), hp-vit-864l-eu-1 (Meta-Beschreibung). Bericht Teil H, 0.2.
+- [x] **Lieferumfang nach geprüfter Tabelle** (2026-11-22, Teil H) — neun Produkte DE und EN (WBF-180, OLA-G40 ×3,
+  RGB-500A, UCT-200-EU, FXF-001, OL-30, OL-50). Bericht Teil H, 0.3.
+- [x] **„not included“ mit Häkchen auf `/en/`** (2026-11-22, Teil H) — BSL und HP-BLT-050, Commit `796837c`.
+- [ ] **[prüfen] Ersatzbirnen hp-ol-30** — Quellen nennen 2 und 3, Feld bleibt bei 3, Frage an Tyler. Bei 2 auch
+  Beschreibung („Drei Ersatzbirnen …“) und eine eigene Frage statt `ol-g40-frage-4` (teilt sich hp-ol-30 mit -50).
+- [ ] **Lieferumfang hp-wbf-210, hp-rgb-200a, hp-rgb-300a** — Inhalt noch in Prüfung (Teil H, 0.3); die
+  EN-Kleinschreibung aus 0.1 ist schon angewandt.
+- [ ] **Begriffe im EN-Lieferumfang** — „spare bulb“ (seit Teil H an OLA-G40, OL-30/-50) neben „replacement bulb“
+  (OLS, OLH, OL-S11, DFM-600M); „LED birch light tree“ (WBF-180) neben „LED light tree birch“ (WBF-210, WWF-180).
+  Entscheidung bei Leon.
+- [ ] **Videoclips im Feature-Block** (Teil H, Abschnitt 1) — Blockfelder `video_einmal`/`video_schleife` und Theme-
+  Schalter „Videoclips“ (Standard: nur Testseite hp-isl-360-eu) seit 2026-11-22 live, Commit `c87d875`. Test auf
+  hp-isl-360-eu mit `ISL_B1_01_LICHTAN`/`_SCHLEIFE` nach der Übergabe der Asset-Instanz (Auftrag 28), danach Leons
+  Abnahme und Ausbau. Ein Clip am Block gilt für alle Produkte des Blocks (OLG: `olg-b1` vor dem Einbau klären).
+- [ ] **Layoutverschiebung auf der Produktseite mobil** — CLS 0,157 auf hp-isl-360-eu (gedrosselt, 22.11.), schon vor
+  den Clips; Ursache oberhalb der Feature-Sektion, nicht untersucht.
 - [ ] **Vorschau-Theme „zz-test Teil G Platzhalter (kann weg)“** (#199725613389) — nur für den Test aus Teil G,
   Abschnitt 2.4. Kann gelöscht werden (Admin, Onlineshop → Themes); `themeDelete` ist für Claude gesperrt.
 - [x] **„Ground stake“ statt „Ground spike“** (2026-11-20, Teil F) — acht Produktfelder, das Variantenfeld
