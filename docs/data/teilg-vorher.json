@@ -1,0 +1,52 @@
+{
+  "_hinweis": "Teil G: Stand vor dem Schreiben, gelesen am 20.11.2026 ab 23:15 und am 22.11.2026 um 14:35 (seit 20.11. 23:15 keine Änderung an Produkten oder Fragen). Für den Rückweg.",
+  "abschnitt_1_feature_set": {
+    "produkt": "hp-dfm-750-eu",
+    "produkt_id": "gid://shopify/Product/10812086387021",
+    "metafeld": "heipard.feature_set",
+    "metafeld_id": "gid://shopify/Metafield/64299518427469",
+    "wert_vorher": "gid://shopify/Metaobject/439974854989",
+    "wert_vorher_handle": "dfm",
+    "neues_set": {
+      "id": "gid://shopify/Metaobject/503017636173",
+      "handle": "dfm-750",
+      "angelegt": "2026-11-20T22:19:50Z",
+      "abweichung_von_dfm": "Position 2: dfm-b2-zwei (gid://shopify/Metaobject/502922477901) statt dfm-b2 (gid://shopify/Metaobject/439972528461)"
+    }
+  },
+  "abschnitt_2_fragen": {
+    "_frage_de_vorher": "Was ist im Lieferumfang?",
+    "_en_vorher": "Nur scwl-frage-4 und solm-frage-4 hatten EN (seit Teil F, 20.11. 19:47:35). Alle anderen ohne EN.",
+    "ctl-w1-frage-4": {"id": "gid://shopify/Metaobject/481766211917", "antwort_de": "Im Paket sind 1 × LED-Lichterkette für den Weihnachtsbaum (Baummantel), 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "cl-frage-3": {"id": "gid://shopify/Metaobject/481767031117", "antwort_de": "Im Paket sind 1 × Campinglaterne mit aufrollbarer LED-Lichterkette, 1 × Bedienungsanleitung und 1 × USB-Ladekabel."},
+    "scwl-frage-4": {"id": "gid://shopify/Metaobject/481767686477", "antwort_de": "Im Paket sind 1 × Solar-Lichterkette mit Kupferdraht, 2er-Set, 1 × Erdspieß, 1 × Wandhalterung und 1 × Bedienungsanleitung.", "frage_en": "What's in the box?", "antwort_en": "The box contains 1 × Solar string light with copper wire, set of 2, 1 × Ground stake, 1 × Wall mount, and 1 × User manual."},
+    "wbf-frage-1": {"id": "gid://shopify/Metaobject/481767719245", "antwort_de": "Im Paket sind 1 × LED-Lichterbaum Birke und 1 × Bedienungsanleitung."},
+    "fsf-frage-1": {"id": "gid://shopify/Metaobject/481768243533", "antwort_de": "Im Paket sind 1 × LED-Motivleuchte Schneemann und 1 × Fernbedienung."},
+    "ols-st38-frage-4": {"id": "gid://shopify/Metaobject/481768636749", "antwort_de": "Im Paket sind 1 × Solar-Lichterkette mit ST38-Glühbirnen, 1 × Bedienungsanleitung, 1 × Fernbedienung und 1 × Solarpanel."},
+    "rct-frage-4": {"id": "gid://shopify/Metaobject/481768767821", "antwort_de": "Im Paket sind 1 × Smarter RGB-Lichtervorhang mit App und 1 × Fernbedienung."},
+    "rfm-frage-4": {"id": "gid://shopify/Metaobject/481768898893", "antwort_de": "Im Paket sind 1 × Smarte RGB-Cluster-Lichterkette mit App, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "rnm-frage-4": {"id": "gid://shopify/Metaobject/481769521485", "antwort_de": "Im Paket sind 1 × Smartes RGB-Lichternetz mit App, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "rsp-frage-4": {"id": "gid://shopify/Metaobject/481769750861", "antwort_de": "Im Paket sind 1 × Smarter RGB-Lichterkegel, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "rtm-frage-4": {"id": "gid://shopify/Metaobject/481769881933", "antwort_de": "Im Paket sind 1 × Smarte RGB-Lichterkette für den Weihnachtsbaum mit Ring, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "solm-frage-4": {"id": "gid://shopify/Metaobject/481770013005", "antwort_de": "Im Paket sind 1 × Solar-Lichterkette, 1 × Erdspieß, 1 × Wandhalterung und 1 × Bedienungsanleitung.", "frage_en": "What's in the box?", "antwort_en": "The box contains 1 × Solar string lights, 1 × Ground stake, 1 × Wall mount, and 1 × User manual."},
+    "stt-frage-3": {"id": "gid://shopify/Metaobject/481770111309", "antwort_de": "Im Paket sind 1 × LED-Lichterkette, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "tpm-frage-1": {"id": "gid://shopify/Metaobject/481770176845", "antwort_de": "Im Paket sind 1 × LED-Lichterkette für den Weihnachtsbaum mit Ring, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "u20-frage-3": {"id": "gid://shopify/Metaobject/481770307917", "antwort_de": "Im Paket sind 1 × LED-Lichterschlauch, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "vam-frage-2": {"id": "gid://shopify/Metaobject/481770635597", "antwort_de": "Im Paket sind 1 × LED-Lichterkette warmweiß und bunt, 1 × Bedienungsanleitung und 1 × Fernbedienung."},
+    "wwf-frage-4": {"id": "gid://shopify/Metaobject/481770930509", "antwort_de": "Im Paket sind 1 × LED-Lichterbaum Birke und 1 × Bedienungsanleitung."}
+  },
+  "abschnitt_3": {
+    "hp-sblb-60l-ww-new_body_html_en": {
+      "id": "gid://shopify/Product/10812091466061",
+      "wert": "<p>The solar panel charges in the garden during the day, and at dusk, the string lights switch on and shine for up to 12 hours, with no need for a socket. 60 crystal balls over 11 m softly scatter the light across the patio and seating area.</p><p>You can choose from 8 lighting modes, and the 2 m lead between the panel and the string allows you to place the panel where it gets the sun. An earth stake with connector is included.</p>"
+    },
+    "hp-sblb-100l-ww-new_body_html_en": {
+      "id": "gid://shopify/Product/10812091367757",
+      "wert": "<p>The solar panel charges in the flowerbed during the day, and at dusk, the string lights turn on and shine for up to 12 hours, without the need for an outlet. 100 crystal globes over 17 m also cover a larger terrace.</p><p>You can choose from 8 lighting modes, and the 2 m long lead between the panel and the string allows you to place the panel where it gets the sun. An earth stake with connector is included.</p>"
+    },
+    "hp-dgm-002_lieferumfang_en": {
+      "id": "gid://shopify/Metafield/64937495855437",
+      "wert": "1 × LED garden stake\n1 × remote control"
+    }
+  }
+}

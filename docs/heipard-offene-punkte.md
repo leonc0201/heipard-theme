@@ -317,17 +317,23 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
   den SCWL-2er-Sets.
 - [x] **Fragen nennen den alten Lieferumfang** (2026-11-20, Teil F) — `scwl-frage-4` und `solm-frage-4` an das Feld
   angeglichen, DE und EN („What's in the box?“). Bericht Teil F, Abschnitt 1.
-- [ ] **Fragen und Lieferumfang auseinander** — elf Antworten nennen den Packungsinhalt in anderer Reihenfolge als
-  `heipard.lieferumfang`, alle übrigen Fragen sind ohne EN. Vorschlag Platzhalter `{lieferumfang}` im Snippet
-  `heipard-fb-fragen.liquid` (Bericht Teil F, 1.2 und 1.3). Leon entscheidet.
+- [x] **Fragen und Lieferumfang auseinander** (2026-11-22, Teil G) — Platzhalter `{lieferumfang}` in
+  `heipard-fb-fragen.liquid` (Commit `0ccb2c4`). Die 17 Antworten mit Packungsinhalt lesen jetzt das Feld, DE „Im
+  Paket sind {lieferumfang}.“, EN „What's in the box?“ / „The box contains {lieferumfang}.“ Leeres Feld: Frage
+  entfällt. Bericht Teil G, Abschnitt 2. Die übrigen Fragen sind weiter ohne EN.
+- [ ] **Groß- und Kleinschreibung im EN-Lieferumfang** — drei Schreibweisen nebeneinander („1 × remote control“,
+  „1 × Remote control“, „1 × Remote Control“), seit Teil G auch in den Antworten sichtbar. Liste im Bericht Teil G,
+  Abschnitt 3.2. Leon entscheidet über eine einheitliche Form.
+- [ ] **Vorschau-Theme „zz-test Teil G Platzhalter (kann weg)“** (#199725613389) — nur für den Test aus Teil G,
+  Abschnitt 2.4. Kann gelöscht werden (Admin, Onlineshop → Themes); `themeDelete` ist für Claude gesperrt.
 - [x] **„Ground stake“ statt „Ground spike“** (2026-11-20, Teil F) — acht Produktfelder, das Variantenfeld
   HP-OLS-S11-16 und der Pflegetext `kat-motif`, nur EN. Auf `/en/` kein „spike“ mehr. Bericht Teil F, Abschnitt 2.
 - [ ] **Lieferumfang hp-dgm-048** — falscher Wert „1 × LED-Gartenstecker“ am 2026-11-20 entfernt (Teil E,
   Abschnitt 2), der Block entfällt sauber. Die Asset-Instanz sucht im Material der ersten Lieferung, sonst geht die
   Frage an Tyler (Teil F, Abschnitt 6). Herkunft im Bericht Teil D, Abschnitt 6.
-- [ ] **`dfm-b2` nennt Kaltweiß auf hp-dfm-750-eu** — hp-dfm-600 zeigt seit 2026-11-20 den neuen Block `dfm-b2-zwei`
-  („Zwei Lichtfarben“, DE und EN). hp-dfm-750-eu teilt das Set `dfm` mit hp-dfm-400-eu-2. Zum Umhängen müsste
-  `feature_set` geändert werden (neues Set `dfm-750`), wartet auf Leons Wort. Bericht Teil F, Abschnitt 3.3.
+- [x] **`dfm-b2` nennt Kaltweiß auf hp-dfm-750-eu** (2026-11-22, Teil G) — eigenes Set `dfm-750` (Kopie von `dfm`
+  mit `dfm-b2-zwei` an Position 2), `feature_set` an hp-dfm-750-eu umgestellt (von Leon freigegeben). Live DE und EN
+  geprüft, nur der Lichtfarben-Block hat sich geändert. Bericht Teil G, Abschnitt 1.
 - [ ] **Lichtfarbe der Feature-Bilder** — 32 Blöcke mit „warmweiß“ im Alt bei 41 Varianten anderer Lichtfarbe;
   Weg für die vier Testprodukte (eigene Sets, 9 Blöcke) und Technik für variantenabhängige Bilder im Bericht Teil E,
   Abschnitt 3.
