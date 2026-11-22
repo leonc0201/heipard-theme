@@ -313,9 +313,9 @@ Läufen:
 
 ### Aufnahmen für dich
 
-- `docs/data/teilh-clip-desktop.webm` und `docs/data/teilh-clip-desktop.png` (Kontaktbogen): Desktop, Tag-Modus,
+- `teilh-clip-desktop.webm` (OneDrive, `Dokumente/C&L/Heipard/Webseite/Theme-Aufnahmen/Teil H/`) und `docs/data/teilh-clip-desktop.png` (Kontaktbogen): Desktop, Tag-Modus,
   15 s.
-- `docs/data/teilh-clip-mobil.webm` und `docs/data/teilh-clip-mobil.png`: mobil, Abendstimmung, 14 s.
+- `teilh-clip-mobil.webm` (OneDrive, wie oben) und `docs/data/teilh-clip-mobil.png`: mobil, Abendstimmung, 14 s.
 
 Beide zeigen den Banner von „Bild“ über „Licht an“ bis in die Schleife.
 
@@ -422,10 +422,10 @@ Geändert habe ich an der Kachel nichts.
 
 ### Aufnahmen für dich
 
-- `docs/data/teilh-hero-f1.webm`, `-f2.webm`, `-f3.webm`: Desktop, je mit Kontaktbogen (`.png`).
+- `teilh-hero-f1.webm`, `-f2.webm`, `-f3.webm` (OneDrive, `Dokumente/C&L/Heipard/Webseite/Theme-Aufnahmen/Teil H/`): Desktop, je mit Kontaktbogen (`docs/data/teilh-hero-f*.png`).
   - Fassung 1 und 2: Tag laden, umschalten, zurückschalten.
   - Fassung 3: Abend laden (Intro), dann umschalten.
-- `docs/data/teilh-hero-f2-mobil.webm`: mobil, Fassung 2.
+- `teilh-hero-f2-mobil.webm` (OneDrive, wie oben): mobil, Fassung 2.
 
 ### Nebenbei gesehen
 
