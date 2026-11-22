@@ -333,7 +333,7 @@
       self.firstFrame();
     };
     var p = v.play();
-    if (p && p.then) p.then(halt, function () { self.kicking = false; });
+    if (p && p.then) p.then(halt, function () { self.kicking = false; schedule(); });
     else halt();
   };
 
@@ -381,10 +381,13 @@
     } catch (e) {
       show();
     }
+    // Kein Bild gemeldet (z. B. HLS ohne seeked): nicht abdecken, aber neu entscheiden, damit „einmal“ bei
+    // halber Sichtbarkeit entfällt und die Schleife übernimmt.
     setTimeout(function () {
       if (done) return;
       done = true;
       self.priming = false;
+      schedule();
     }, 1500);
   };
 
