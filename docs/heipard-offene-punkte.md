@@ -331,29 +331,40 @@ Bericht: `heipard-feature-sets-welle2-bericht.md`. Sets, Blöcke, Fragen und Fam
 - [x] **„not included“ mit Häkchen auf `/en/`** (2026-11-22, Teil H) — BSL und HP-BLT-050, Commit `796837c`.
 - [ ] **[prüfen] Ersatzbirnen hp-ol-30** — Quellen nennen 2 und 3, Feld bleibt bei 3, Frage an Tyler. Bei 2 auch
   Beschreibung („Drei Ersatzbirnen …“) und eine eigene Frage statt `ol-g40-frage-4` (teilt sich hp-ol-30 mit -50).
-- [ ] **Lieferumfang hp-wbf-210, hp-rgb-200a, hp-rgb-300a** — Inhalt noch in Prüfung (Teil H, 0.3); die
-  EN-Kleinschreibung aus 0.1 ist schon angewandt.
-- [ ] **Begriffe im EN-Lieferumfang** — „spare bulb“ (seit Teil H an OLA-G40, OL-30/-50) neben „replacement bulb“
-  (OLS, OLH, OL-S11, DFM-600M); „LED birch light tree“ (WBF-180) neben „LED light tree birch“ (WBF-210, WWF-180).
-  Entscheidung bei Leon.
-- [ ] **Videoclips im Feature-Block** (Teil H, Abschnitte 1 und 2) — Blockfelder `video_einmal`/`video_schleife` und
-  Theme-Schalter „Videoclips“ (Standard: nur Testseite hp-isl-360-eu) live seit 2026-11-22 (`c87d875`, Puffern
-  `99883fc`). `isl-b1` hat seit 17:10 Uhr beide ISL-Clips, sichtbar nur auf hp-isl-360-eu. Wartet auf Leons Abnahme
-  (Anfang „an, dunkel, an“), dann Ausbau; OLG: Seiten mit `olg-b1` vor dem Einbau vorlegen.
-- [ ] **Clips mobil zu schwer** (Teil H, Abschnitt 2) — Liquid liefert je Video nur die höchste MP4-Fassung (B1 720p,
-  Hero 1080p). Gedrosselt lädt 720p langsamer als der Clip läuft. Wege: HLS (`m3u8`) auf echten Geräten probieren oder
-  Mobil-Fassungen von der Asset-Instanz.
-- [ ] **Hero Tag/Abend mit Clips** (Teil H, Abschnitt 3) — Vorschau-Theme #199733903693 („zz-vorschau Teil H Hero (kann
-  weg)“), Branch `vorschau/hero-tag-abend`, drei Fassungen über `?hero_fassung=1|2|3`. Leon entscheidet Fassung,
-  Verlauf (35 % vorgeschlagen), Bento-Bild (Vorschläge `OLS11_R2_01`, `OLAG40_R1_01`, `OLG40_B1_01`), kleinere Clips.
-- [ ] **Hero-Verlauf wird nie gezeichnet** (Befund Teil H) — Dawn `div:empty { display: none }` blendet die leere
-  Verlaufsebene aus, live seit jeher. Behoben nur in der Vorschau (`d211cbb`); live nur mit Leons Ja.
-- [ ] **hp-dnm-208 Galerie** (Teil H, 0.4) — Multicolor zeigt das warmweiße `GAL_06` (Position 1, in keiner Liste);
-  beide Varianten tragen `71TIXKmc_8L` als Variantenbild, die neue Position 1 ist nirgends das erste Bild. Medien:
-  Asset-Instanz bzw. Leon.
-- [ ] **„[TBD: Saison-Überschrift]“** auf der Startseite (Saison-Kachel unter dem Hero), gesehen 2026-11-22.
-- [ ] **Layoutverschiebung auf der Produktseite mobil** — CLS 0,157 auf hp-isl-360-eu (gedrosselt, 22.11.), schon vor
-  den Clips; Ursache oberhalb der Feature-Sektion, nicht untersucht.
+- [x] **Lieferumfang hp-wbf-210, hp-rgb-200a, hp-rgb-300a** (2026-11-22, Teil I) — rgb-200a/300a nach Tabelle DE und
+  EN (Fernbedienung, Netzteil statt USB-Ladekabel), wbf-210 „LED birch light tree“. Bericht Teil I, Abschnitt 1.
+- [x] **Begriffe im EN-Lieferumfang** (2026-11-22, Teil I) — Leon: „replacement bulb“ und „LED birch light tree“,
+  überall angeglichen. Rest: SEO-Titel EN hp-vit-864l-eu-1 „multicolored“ (nicht in der Liste, Frage an Leon).
+- [x] **Videoclips im Feature-Block** (2026-11-22, Teil I) — Start „dunkel, an“ seit 18:54, „Auf allen Seiten“ seit
+  19:21 (`ef79b4a`): isl-b1, dpm-b1, ctl-b1, dct-b1, dct-sticky, olg-b1, dfm-b2, dfm-b2-zwei, 16 Seiten. Ohne Clip:
+  hp-olg-200m, hp-olg-200w. Blöcke ohne eigenes Bild nur mit passendem Standbild (Einstellung „Clips auf
+  Produktbildern“). Bericht Teil I, Abschnitte 3 und 6.
+- [x] **Clips mobil zu schwer** (2026-11-22, Teil I) — Mobil-Fassungen der Asset-Instanz als allgemeine Datei an allen
+  Blöcken (0,07 bis 0,47 MB). HLS-Probe auf echten Geräten liegt bei Leon (`?clip_hls=1`, drei Fragen im Bericht Teil I,
+  Abschnitt 4).
+- [ ] **Hero Tag/Abend mit Clips** (Teil I, Abschnitt 7) — Leon: Fassung 3, Verlauf 35 %, Bento-Kachel `OLS11_R2_01`.
+  Vorschau #199733903693 mit Tempo (`&hero_tempo=schnell`) und Tag-Modus (`&hero_tag=hinweis|intro`), gemessen. Leon
+  entscheidet Tempo und Tag-Modus; dann Einbau auf `main` mit Standard „aus“, live nur mit Leons Go.
+- [ ] **Hero-Clips am Desktop zu schwer** (Teil I, 7.2) — Liquid liefert nur 1080p: normal 6,5 MB, schnell 2,6 MB;
+  unter Slow 4G hängt der Clip am Desktop (blendet nach 1 s ins Abendbild). 720p-Fassungen von der Asset-Instanz würden
+  helfen. Ebenso die Sticky-Schleife DCT (1080p, 2,2 MB, füllt nur die halbe Breite).
+- [ ] **Endlos-Schleifen ohne Pause** (Befund Teil I) — Schleifen (ISL, DFM, DCT) laufen ohne Ende und ohne
+  Pause-Knopf. WCAG 2.2.2 (Stufe A) verlangt für automatisch startende Bewegung über 5 s eine Möglichkeit zum Anhalten.
+  Vorschlag: nach drei Runden auf dem Standbild stehen bleiben, oder ein kleiner Pause-Knopf. Entscheidung Leon.
+- [x] **Hero-Verlauf wird nie gezeichnet** (2026-11-22, Teil I) — live behoben, `a6bec9a`. Bericht Teil I, 7.1.
+- [x] **hp-dnm-208 Galerie** (2026-11-22, Teil I) — nach den Änderungen der Asset-Instanz (18:27): Position 1 `GAL_06`
+  (warmweiß, mit Alt), Variante Warmweiß `GAL_06`, Multicolor `HP-DNM-208M_GAL_01`; Kollektionskarte in `net` und
+  `weihnachten` (Seite 4) geprüft, DE und EN. `71TIXKmc_8L` steht noch an Position 2 ohne Alt (Asset-Instanz).
+- [x] **„[TBD: Saison-Überschrift]“** (2026-11-22, Teil I) — mit dem Saison-Block Weihnachten weg. Auf der Startseite
+  steht nur noch das [TBD] der Trust-Leiste „Versand aus Deutschland“.
+- [x] **Layoutverschiebung auf der Produktseite mobil** (2026-11-22, Teil I) — Ursache: Shopifys Cookie-Banner bei etwa
+  8,2 s (mobil, Slow 4G), Desktop 0,000. Kein Fix (Shopify-Element). Bericht Teil I, Abschnitt 10.
+- [ ] **Kollektion Weihnachten** (Teil I, 8.2) — 54 Produkte; hp-dgm-002 (Spiralpfahl) und hp-olt-100
+  (Sommergarten im Titel) nicht eindeutig weihnachtlich. Ausschluss nur auf Leons Wort.
+- [ ] **ES/FR/IT-Startseite** (Befund Teil I) — Übersetzungen veraltet und teils falsch (u. a. ES „30 días de
+  devolución, sin peros“). Leon: abschalten oder neu übersetzen.
+- [ ] **EN „string light“ / „string lights“ in Produktnamen** (Hinweis der Asset-Instanz, Teil I) — wechselt z. B. bei
+  OLA-S14, OLH-G40-15/20/35, OLS-G40-25. Entscheidung Leon.
 - [ ] **Vorschau-Theme „zz-test Teil G Platzhalter (kann weg)“** (#199725613389) — nur für den Test aus Teil G,
   Abschnitt 2.4. Kann gelöscht werden (Admin, Onlineshop → Themes); `themeDelete` ist für Claude gesperrt.
 - [x] **„Ground stake“ statt „Ground spike“** (2026-11-20, Teil F) — acht Produktfelder, das Variantenfeld

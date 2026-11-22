@@ -1,0 +1,26 @@
+{
+ "_hinweis": "Teil I, Abschnitt 1: Stand vor den Schreibvorgängen am 22.11.2026 (ab 18:28 Uhr). Rückweg: EN mit translationsRegister (Digest neu lesen), DE mit metafieldsSet.",
+ "metafelder_en": {
+  "hp-ola-g40-15-eu (gid://shopify/Metafield/64937495494989)": "1 × LED string light with G40 bulbs and app\n1 × remote control\n1 × power adapter\n1 × spare bulb",
+  "hp-ola-g40-27-eu (gid://shopify/Metafield/64937495527757)": "1 × LED string light with G40 bulbs and app\n1 × remote control\n1 × power adapter\n2 × spare bulbs",
+  "hp-ola-g40-42-eu (gid://shopify/Metafield/64937495560525)": "1 × LED string light with G40 bulbs and app\n1 × remote control\n1 × power adapter\n2 × spare bulbs",
+  "hp-ol-30 (gid://shopify/Metafield/63521439285581)": "1 × LED string light with G40 bulbs\n1 × remote control\n1 × transformer\n3 × spare bulbs\n1 × user manual",
+  "hp-ol-50 (gid://shopify/Metafield/63521439416653)": "1 × LED string light with G40 bulbs\n1 × remote control\n1 × transformer\n3 × spare bulbs\n1 × user manual",
+  "hp-ols-s11-16 Variante HP-OLS-S11-16 (gid://shopify/Metafield/64937496510797)": "1 × solar string light with S11 bulbs\n1 × ground stake\n1 × remote control\n1 × solar panel\n1 × USB charging cable\n1 × wall mount\n1 × spare bulb\n1 × user manual",
+  "hp-wbf-210 (gid://shopify/Metafield/64937496084813)": "1 × LED light tree birch\n1 × user manual",
+  "hp-wwf-180 (gid://shopify/Metafield/64937497100621)": "1 × LED light tree birch\n1 × user manual",
+  "hp-vlm-100l (gid://shopify/Metafield/64937497067853)": "1 × LED string lights, warm white and multicolored\n1 × remote control\n1 × user manual",
+  "hp-rgb-200a (gid://shopify/Metafield/64937495691597)": "1 × smart RGB string lights with app\n1 × USB charging cable\n1 × user manual",
+  "hp-rgb-300a (gid://shopify/Metafield/64937495724365)": "1 × smart RGB string lights with app\n1 × USB charging cable\n1 × user manual"
+ },
+ "metafelder_de": {
+  "hp-rgb-200a (gid://shopify/Metafield/64937495691597)": "1 × Smarte RGB-Lichterkette mit App\n1 × USB-Ladekabel\n1 × Bedienungsanleitung",
+  "hp-rgb-300a (gid://shopify/Metafield/64937495724365)": "1 × Smarte RGB-Lichterkette mit App\n1 × USB-Ladekabel\n1 × Bedienungsanleitung"
+ },
+ "produkte_en": {
+  "hp-dfm-600 meta_description (gid://shopify/Product/10812086354253)": "Cluster string lights by HeiPard, 9 m with 600 or 18 m with 1200 LEDs, warm white or multicolored, for indoor and outdoor use. Dimmable, 8 modes, with remote control.",
+  "hp-dfm-750-eu meta_title (gid://shopify/Product/10812086387021)": "HeiPard Cluster String Lights 11.25 m or 22.5 m, warm white or multicolored",
+  "hp-dfm-750-eu meta_description (gid://shopify/Product/10812086387021)": "Cluster string lights by HeiPard, 11.25 m with 750 or 22.5 m with 1500 LEDs, warm white or multi-colored, for indoor and outdoor use. Dimmable in four stages.",
+  "hp-vit-864l-eu-1 body_html (gid://shopify/Product/10812092809549)": "<p>Along the roofline, on the balcony or on the pergola, the strands hang vertically downwards and look like icicles of light. The chain is 21.6 m long, with the light points spaced 15 cm apart.</p><p>You can switch between warm white and multi-color, choose from 8 lighting modes with the included remote control, and dim in four stages from 25 to 100 percent. With an IP44 rating, the chain is protected against splashing water, and power is supplied by a power supply unit.</p>"
+ }
+}
