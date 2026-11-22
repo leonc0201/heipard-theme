@@ -454,7 +454,9 @@ Die Saison-Kachel unter dem Hero zeigt live „[TBD: Saison-Überschrift]“.
 - **hp-dnm-208, Multicolor:**
   - Die bunte Variante zeigt als zweites Bild das warmweiße `GAL_06`.
   - Es steht auf Position 1 und in keiner Variantenliste, der Farbfilter lässt es deshalb bei allen Varianten stehen.
-  - Abhilfe wäre, `GAL_06` in die Liste von HP-DNM-208 aufzunehmen. Das ist eine Medienänderung für die Asset-Instanz.
+  - Abhilfe wäre, `GAL_06` in die Liste von HP-DNM-208 aufzunehmen. Die Regel vom 19.10. hält Position 1 aber neutral,
+    also in keiner Liste. Die Asset-Instanz legt dir die Ausnahme zusammen mit den Variantenbildern vor
+    (Bericht 28, Abschnitt 8.5).
   - Dazu kommt der Hinweis der Asset-Instanz: Solange beide Varianten `71TIXKmc_8L` als Variantenbild tragen, ist die
     neue Position 1 nirgends das erste Bild.
 - **hp-isl-486, kaltweiß und bunt:**
