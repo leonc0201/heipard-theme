@@ -107,7 +107,7 @@
 
   <div class="heipard-footer__bottom">
     <div class="page-width heipard-footer__bottom-inner">
-      <p class="heipard-footer__copyright">&copy; {{ 'now' | date: '%Y' }} HeiPard &mdash; eine Marke der C&amp;L Handels GmbH</p>
+      <p class="heipard-footer__copyright">&copy; {{ 'now' | date: '%Y' }} HeiPard, eine Marke der C&amp;L Handels GmbH</p>
 
       {%- liquid
         # shop.policies enthaelt das Impressum (LEGAL_NOTICE) nicht zuverlaessig.
@@ -155,17 +155,17 @@
   "name": "HeiPard Footer",
   "settings": [
     { "type": "textarea", "id": "brand_description", "label": "Marken-Beschreibung", "default": "Stimmungsvolle Beleuchtung vom Niederrhein. Für drinnen, draußen und unterwegs." },
-    { "type": "text", "id": "categories_heading", "label": "Spalte 2 – Überschrift", "default": "Kategorien" },
-    { "type": "link_list", "id": "categories_menu", "label": "Spalte 2 – Menü", "default": "main-menu" },
-    { "type": "text", "id": "service_heading", "label": "Spalte 3 – Überschrift", "default": "Service" },
-    { "type": "text", "id": "service_email_business", "label": "Kontakt – E-Mail Business", "default": "info@heipard.com" },
-    { "type": "text", "id": "service_email_support", "label": "Kontakt – E-Mail Support", "default": "service@heipard.com" },
-    { "type": "text", "id": "service_phone", "label": "Kontakt – Telefon", "default": "02154 953 65 30" },
-    { "type": "text", "id": "service_phone_link", "label": "Kontakt – Telefon (Wählnummer)", "info": "Für den tel:-Link, international mit Ländervorwahl. Leer = Anzeigenummer ohne Leerzeichen.", "default": "+4921549536530" },
-    { "type": "text", "id": "service_hours", "label": "Kontakt – Zeiten", "default": "Mo - Fr | 09:00 - 16:00 Uhr" },
-    { "type": "url", "id": "help_link", "label": "Service – Hilfe & FAQ Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
-    { "type": "url", "id": "dealer_link", "label": "Service – Händler-werden Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
-    { "type": "url", "id": "legal_notice_link", "label": "Impressum-Link (Bottom-Bar)", "info": "Pflichtangabe. Shopify liefert das Impressum nicht über shop.policies aus – hier die Richtlinie bzw. Seite auswählen." },
+    { "type": "text", "id": "categories_heading", "label": "Spalte 2: Überschrift", "default": "Kategorien" },
+    { "type": "link_list", "id": "categories_menu", "label": "Spalte 2: Menü", "default": "main-menu" },
+    { "type": "text", "id": "service_heading", "label": "Spalte 3: Überschrift", "default": "Service" },
+    { "type": "text", "id": "service_email_business", "label": "Kontakt: E-Mail Business", "default": "info@heipard.com" },
+    { "type": "text", "id": "service_email_support", "label": "Kontakt: E-Mail Support", "default": "service@heipard.com" },
+    { "type": "text", "id": "service_phone", "label": "Kontakt: Telefon", "default": "02154 953 65 30" },
+    { "type": "text", "id": "service_phone_link", "label": "Kontakt: Telefon (Wählnummer)", "info": "Für den tel:-Link, international mit Ländervorwahl. Leer = Anzeigenummer ohne Leerzeichen.", "default": "+4921549536530" },
+    { "type": "text", "id": "service_hours", "label": "Kontakt: Zeiten", "default": "Mo. bis Fr., 9 bis 16 Uhr" },
+    { "type": "url", "id": "help_link", "label": "Service: Hilfe & FAQ Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
+    { "type": "url", "id": "dealer_link", "label": "Service: Händler-werden Link", "info": "Leer = Eintrag wird ausgeblendet (statt Link ins Leere)." },
+    { "type": "url", "id": "legal_notice_link", "label": "Impressum-Link (Bottom-Bar)", "info": "Pflichtangabe. Shopify liefert das Impressum nicht über shop.policies aus, hier die Richtlinie bzw. Seite auswählen." },
     { "type": "color_scheme", "id": "color_scheme", "label": "Farbschema", "default": "scheme-1" }
   ],
   "presets": [{ "name": "HeiPard Footer" }]

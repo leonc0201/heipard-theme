@@ -41,7 +41,8 @@ Headlines: charaktervolle Serif (Auswahl via Impeccable `/typeset`, Richtung Fra
 - Herkunft NUR über faktische Trust-Signale: "Versand aus Deutschland", "Service & Support aus Deutschland", "Heimat am Niederrhein" (Über-uns-Story)
 - KEINE Garantie: HeiPard gibt keine Herstellergarantie, nur die gesetzliche Gewährleistung (2 Jahre). Keine Garantie-Zeile, keine Garantie-Badges/-Signale, kein Metafeld `garantie_jahre` im Theme
 - Preise clean, KEINE Streichpreis-/Rabatt-Optik (compare_at_price-Logik vorbereiten, aber Default ohne Badges)
-- Copyright: "© 2026 HeiPard — eine Marke der C&L Handels GmbH"
+- Copyright: "© 2026 HeiPard, eine Marke der C&L Handels GmbH"
+- Keine Gedankenstriche (– oder —) in sichtbaren Texten, auch nicht in Schema-Beschriftungen; Bindestriche in Wörtern bleiben
 
 ## Komponenten-Patterns (validiert im Mockup)
 
