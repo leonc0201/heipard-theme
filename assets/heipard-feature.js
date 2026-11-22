@@ -199,13 +199,21 @@
     panel.hidden = false;
   }
 
-  // Clips über dem Bild (Auftrag Teil H, 22.11.2026). Je Video zwei Phasen: "einmal" (data-clip-once,
-  // läuft je Seitenaufruf ein Mal) und "schleife" (data-clip-loop, läuft nur bei Sichtbarkeit).
-  // Das Bild darunter bleibt Startbild und Ersatz: der Clip blendet erst mit seinem ersten Bild ein
-  // und nach "einmal" wieder aus. Höchstens ein Clip spielt zugleich, der sichtbarste gewinnt.
-  // Kein Clip bei reduzierter Bewegung, Datensparmodus oder fehlgeschlagenem Autoplay.
+  // Clips über dem Bild (Auftrag Teil H, 22.11.2026; Clipstart und Mobil-Fassungen Teil I).
+  // Phasen: "einmal" (data-clip-once, je Seitenaufruf ein Mal) und "schleife" (data-clip-loop, nur bei Sichtbarkeit).
+  // Clipstart „dunkel, an“ (Teil I): Liegt das erste Bild von „einmal“ bereit, solange der Block weniger als halb
+  // sichtbar ist, deckt der angehaltene Clip das Bild schon ab (ist der Block teils zu sehen, mit weicher Blende).
+  // Ab halber Sichtbarkeit läuft er, sobald genug gepuffert ist (höchstens 3 s warten). Wird das erste Bild erst
+  // bereit, wenn der Block schon halb sichtbar ist, entfällt „einmal“ für diesen Aufruf: das Bild bleibt, die
+  // Schleife übernimmt. Stockt „einmal“ (waiting), blendet der Clip weich auf das Bild zurück, die Schleife folgt.
+  // Fassungen: breit die große, schmal (bis 749 px) nur die Mobil-Fassung (data-clip-*-m), ohne sie kein Clip,
+  // außer data-clip-ersatz. Gerätetest: ?clip_hls=1 nutzt die HLS-Adressen, wenn der Browser HLS abspielt.
+  // Höchstens ein Clip spielt zugleich, der sichtbarste gewinnt. Kein Clip bei reduzierter Bewegung,
+  // Datensparmodus, 3G und schlechter oder abgelehntem Autoplay.
   var clips = [];
   var reduceData = window.matchMedia('(prefers-reduced-data: reduce)');
+  var narrowQuery = window.matchMedia('(max-width: 749px)');
+  var hlsTest = /(?:^|[?&])clip_hls=1(?:&|$)/.test(window.location.search);
   var nearObserver = null;
   var seenObserver = null;
   var START = 0.5;
@@ -240,29 +248,60 @@
     return top.u;
   }
 
+  function sourcesFor(video) {
+    var d = video.dataset;
+    if (hlsTest && (d.clipOnceHls || d.clipLoopHls) && video.canPlayType('application/vnd.apple.mpegurl')) {
+      return { once: parseSources(d.clipOnceHls), loop: parseSources(d.clipLoopHls), quelle: 'hls' };
+    }
+    if (narrowQuery.matches) {
+      var om = parseSources(d.clipOnceM);
+      var lm = parseSources(d.clipLoopM);
+      if (om.length || lm.length) return { once: om, loop: lm, quelle: 'mobil' };
+      if (d.clipErsatz === 'true') return { once: parseSources(d.clipOnce), loop: parseSources(d.clipLoop), quelle: 'gross' };
+      return { once: [], loop: [], quelle: 'keine' };
+    }
+    return { once: parseSources(d.clipOnce), loop: parseSources(d.clipLoop), quelle: 'gross' };
+  }
+
   function Clip(video) {
+    var self = this;
+    var q = sourcesFor(video);
     this.video = video;
-    this.once = parseSources(video.dataset.clipOnce);
-    this.loop = parseSources(video.dataset.clipLoop);
+    this.once = q.once;
+    this.loop = q.loop;
+    video.dataset.clipQuelle = q.quelle;
     this.phase = this.once.length ? 'once' : (this.loop.length ? 'loop' : 'done');
     this.armed = false;
     this.seen = 0;
-    this.wantsPlay = false;
+    this.primed = false;
+    this.priming = false;
+    this.kicking = false;
+    this.started = false;
     video._heipardClip = this;
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
     video.disablePictureInPicture = true;
-    var self = this;
-    video.addEventListener('playing', function () { video.classList.add('is-on'); });
+    video.addEventListener('playing', function () {
+      if (self.kicking) return;
+      if (self.phase === 'once') self.started = true;
+      video.classList.add('is-on');
+    });
     video.addEventListener('ended', function () { self.ended(); });
     video.addEventListener('error', function () { self.stop(); });
+    video.addEventListener('waiting', function () {
+      if (self.phase === 'once' && self.started && !self.kicking) self.abortOnce();
+    });
+    video.addEventListener('loadeddata', function () { self.firstFrame(); });
   }
 
   Clip.prototype.arm = function () {
     if (this.armed || this.phase === 'done') return;
+    var self = this;
     this.armed = true;
     this.load(this.phase === 'once' ? this.once : this.loop);
+    // iOS lädt ohne play() oft keine Bilddaten: nach 1,5 s einmal unsichtbar anspielen und anhalten.
+    if (this.phase === 'once') setTimeout(function () { self.kick(); }, 1500);
   };
 
   Clip.prototype.load = function (list) {
@@ -275,13 +314,107 @@
     video.load();
   };
 
-  Clip.prototype.play = function () {
-    if (this.phase === 'done' || !this.armed) return;
-    if (!this.video.paused) return;
+  Clip.prototype.kick = function () {
+    var v = this.video;
     var self = this;
-    // Erst starten, wenn der Browser genug gepuffert hat (sonst stockt der Clip, z. B. auf dem Bild
-    // „Kette aus“). Bis dahin bleibt das Bild stehen. Nach 8 s trotzdem versuchen: iOS puffert
-    // ohne play() oft nicht bis zum Ende.
+    if (this.phase !== 'once' || this.primed || this.priming || this.started || v.readyState >= 2 || this.seen >= START) return;
+    this.kicking = true;
+    var halt = function () {
+      v.pause();
+      try { v.currentTime = 0; } catch (e) {}
+      self.kicking = false;
+      self.firstFrame();
+    };
+    var p = v.play();
+    if (p && p.then) p.then(halt, function () { self.kicking = false; });
+    else halt();
+  };
+
+  Clip.prototype.firstFrame = function () {
+    if (this.phase !== 'once' || this.primed || this.priming || this.started || this.kicking) return;
+    if (this.video.readyState < 2) return;
+    if (this.seen >= START) {
+      this.skipOnce();
+      return;
+    }
+    this.prime();
+  };
+
+  // Erstes Bild von „einmal“ über das Bild legen, angehalten. Erst wenn es wirklich gezeichnet ist
+  // (requestVideoFrameCallback oder seeked), sonst droht eine leere Fläche.
+  Clip.prototype.prime = function () {
+    var v = this.video;
+    var self = this;
+    var done = false;
+    this.priming = true;
+    var show = function () {
+      if (done) return;
+      done = true;
+      self.priming = false;
+      if (self.phase !== 'once' || self.started) return;
+      if (self.seen >= START) {
+        self.skipOnce();
+        return;
+      }
+      self.primed = true;
+      var instant = self.seen <= 0;
+      if (instant) v.classList.add('is-instant');
+      v.classList.add('is-on');
+      if (instant) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { v.classList.remove('is-instant'); });
+        });
+      }
+      schedule();
+    };
+    if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(show);
+    v.addEventListener('seeked', show, { once: true });
+    try {
+      v.currentTime = 0.001;
+    } catch (e) {
+      show();
+    }
+    setTimeout(function () {
+      if (done) return;
+      done = true;
+      self.priming = false;
+    }, 1500);
+  };
+
+  // „einmal“ entfällt: das Bild bleibt (ist der Clip zu sehen, weiche Blende), die Schleife übernimmt.
+  Clip.prototype.skipOnce = function () {
+    if (this.phase !== 'once') return;
+    var v = this.video;
+    var self = this;
+    var shown = v.classList.contains('is-on');
+    this.phase = this.loop.length ? 'loop' : 'once-skipped';
+    this.pause();
+    v.classList.remove('is-on');
+    if (!this.loop.length) {
+      this.stop();
+      return;
+    }
+    setTimeout(function () {
+      if (self.phase !== 'loop') return;
+      self.load(self.loop);
+      schedule();
+    }, shown ? 450 : 0);
+  };
+
+  Clip.prototype.abortOnce = function () {
+    this.skipOnce();
+  };
+
+  Clip.prototype.play = function () {
+    if (this.phase === 'done' || !this.armed || this.kicking) return;
+    if (!this.video.paused) return;
+    if (this.phase === 'once' && !this.primed) {
+      if (!this.priming) this.skipOnce();
+      return;
+    }
+    var self = this;
+    // Erst starten, wenn genug gepuffert ist; bis dahin bleibt das erste Bild („dunkel“) bzw. das Bild
+    // stehen. Nach 3 s („einmal“) bzw. 8 s (Schleife) trotzdem versuchen: iOS puffert ohne play() oft nicht.
     if (this.video.readyState < 4 && !this.patience) {
       if (!this.waiting) {
         this.waiting = true;
@@ -291,7 +424,7 @@
           schedule();
         };
         this.video.addEventListener('canplaythrough', ready, { once: true });
-        setTimeout(function () { self.patience = true; ready(); }, 8000);
+        setTimeout(function () { self.patience = true; ready(); }, this.phase === 'once' ? 3000 : 8000);
       }
       return;
     }
@@ -338,7 +471,13 @@
     var best = null;
     clips.forEach(function (c) {
       if (c.phase === 'done' || !c.armed || document.hidden || clipsBlocked()) return;
-      var playing = !c.video.paused;
+      // Halb sichtbar, aber das erste Bild von „einmal“ liegt noch nicht über dem Bild: „einmal“ entfällt.
+      if (c.phase === 'once' && !c.primed && !c.priming && !c.kicking && c.seen >= START) {
+        c.skipOnce();
+        return;
+      }
+      if (c.phase !== 'once' && c.phase !== 'loop') return;
+      var playing = !c.video.paused && !c.kicking;
       var ok = playing ? c.seen > 0 : c.seen >= START;
       if (!ok) return;
       // Kleiner Vorsprung für den laufenden Clip, damit zwei Clips nicht hin und her wechseln.
@@ -346,6 +485,7 @@
       if (!best || score > best.score) best = { clip: c, score: score };
     });
     clips.forEach(function (c) {
+      if (c.kicking) return;
       if (!best || c !== best.clip) c.pause();
     });
     if (best) best.clip.play();

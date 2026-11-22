@@ -90,6 +90,8 @@
   pointer-events: none;
 }
 .heipard-clip.is-on { opacity: 1; }
+/* Erstes Bild von „einmal“ legt sich außer Sicht ohne Blende über das Bild (Teil I). */
+.heipard-clip.is-instant { transition: none; }
 @media (prefers-reduced-motion: reduce) {
   .heipard-clip { display: none; }
 }

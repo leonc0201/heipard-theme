@@ -35,6 +35,11 @@
                  und Ersatz bleibt. Abspielen steuert assets/heipard-feature.js (initClip): Laden erst nahe
                  am Sichtfeld, Start ab halber Sichtbarkeit, höchstens ein Clip zugleich, kein Clip bei
                  reduzierter Bewegung, Datensparmodus oder langsamer Verbindung (3G und schlechter); Start erst, wenn genug gepuffert ist. Auftrag Teil H, 22.11.2026.
+                 Teil I: Liegt das erste Bild von „einmal“ bereit, bevor der Block halb sichtbar ist, deckt der
+                 angehaltene Clip das Bild schon ab („dunkel, an“); sonst entfällt „einmal“ für diesen Aufruf.
+    clip_once_m  Mobil-Fassungen (optional, Video oder MP4-Datei). Auf schmalen Bildschirmen läuft ein Clip
+    clip_loop_m  nur mit Mobil-Fassung, außer clip_ersatz ist wahr (dann die große Fassung).
+    clip_ersatz  true: auf schmalen Bildschirmen ohne Mobil-Fassung die große Fassung nutzen.
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -89,33 +94,49 @@
         sizes: img_sizes,
         alt: img_alt
     }}
-    {%- if clip_once != blank or clip_loop != blank -%}
+    {%- if clip_once != blank or clip_loop != blank or clip_once_m != blank or clip_loop_m != blank -%}
       {%- liquid
-        # Je Clip die MP4-Fassungen als JSON (h = Höhe, w = Breite, u = Adresse); das Skript wählt
-        # nach der dargestellten Größe. Schlüssel aus den Datei-IDs: beim Variantenwechsel übernimmt
-        # heipard-variant.js das laufende Element, statt neu zu starten.
-        assign clip_key = clip_once.id | append: '-' | append: clip_loop.id
-        assign once_json = ''
-        assign loop_json = ''
-        for s in clip_once.sources
-          if s.format == 'mp4'
-            assign once_json = once_json | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
-          endif
-        endfor
-        for s in clip_loop.sources
-          if s.format == 'mp4'
-            assign loop_json = loop_json | append: ',{"h":' | append: s.height | append: ',"w":' | append: s.width | append: ',"u":"' | append: s.url | append: '"}'
-          endif
-        endfor
-        assign once_json = once_json | remove_first: ','
-        assign loop_json = loop_json | remove_first: ','
+        # Je Clip die Fassungen als JSON (h = Höhe, w = Breite, u = Adresse), groß und mobil, dazu die
+        # HLS-Adresse für den Gerätetest (?clip_hls=1). Das Skript wählt nach Bildschirmbreite.
+        # Schlüssel aus den Datei-IDs: beim Variantenwechsel übernimmt heipard-variant.js das laufende
+        # Element, statt neu zu starten.
+        assign clip_key = clip_once.id | append: '-' | append: clip_loop.id | append: '-' | append: clip_once_m.id | append: '-' | append: clip_loop_m.id
+        capture once_json
+          render 'heipard-clip-json', f: clip_once
+        endcapture
+        capture loop_json
+          render 'heipard-clip-json', f: clip_loop
+        endcapture
+        capture once_m_json
+          render 'heipard-clip-json', f: clip_once_m
+        endcapture
+        capture loop_m_json
+          render 'heipard-clip-json', f: clip_loop_m
+        endcapture
+        capture once_hls
+          render 'heipard-clip-json', f: clip_once, mode: 'hls'
+        endcapture
+        capture loop_hls
+          render 'heipard-clip-json', f: clip_loop, mode: 'hls'
+        endcapture
+        assign once_json = once_json | strip
+        assign loop_json = loop_json | strip
+        assign once_m_json = once_m_json | strip
+        assign loop_m_json = loop_m_json | strip
+        assign once_hls = once_hls | strip
+        assign loop_hls = loop_hls | strip
       -%}
-      {%- if once_json != blank or loop_json != blank -%}
+      {%- if once_json != blank or loop_json != blank or once_m_json != blank or loop_m_json != blank -%}
         <video
           class="heipard-feature__media-el heipard-clip"
           data-heipard-clip="{{ clip_key }}"
           {% if once_json != blank %}data-clip-once="[{{ once_json | escape }}]"{% endif %}
           {% if loop_json != blank %}data-clip-loop="[{{ loop_json | escape }}]"{% endif %}
+          {% if once_m_json != blank %}data-clip-once-m="[{{ once_m_json | escape }}]"{% endif %}
+          {% if loop_m_json != blank %}data-clip-loop-m="[{{ loop_m_json | escape }}]"{% endif %}
+          {% if once_hls != blank %}data-clip-once-hls="[{{ once_hls | escape }}]"{% endif %}
+          {% if loop_hls != blank %}data-clip-loop-hls="[{{ loop_hls | escape }}]"{% endif %}
+          {% if clip_ersatz %}data-clip-ersatz="true"{% endif %}
           muted
           playsinline
           webkit-playsinline

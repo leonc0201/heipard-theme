@@ -77,8 +77,14 @@
           # Clips (Auftrag Teil H, 22.11.2026): video_einmal und video_schleife enden auf dem Bild am
           # Block. Sie gelten deshalb nur, wenn das Bild vom Block kommt (nicht feature_b1/_b2), und
           # nur nach dem Theme-Schalter clip_mode (aus, nur Testseiten, alle Seiten).
+          # Teil I (22.11.2026): Ausschlussliste clip_ausschluss (z. B. nur Kaltweiß/Bunt bei warmweißem
+          # Clip), Mobil-Fassungen video_einmal_mobil / video_schleife_mobil; ohne Mobil-Fassung kein Clip
+          # auf schmalen Bildschirmen, außer für die Handles in clip_mobil_ersatz (große Fassung).
           assign clip_once = nil
           assign clip_loop = nil
+          assign clip_once_m = nil
+          assign clip_loop_m = nil
+          assign clip_ersatz = false
           if blk.image.value != blank and m_type != 'video'
             assign clip_ok = false
             if settings.clip_mode == 'on'
@@ -89,9 +95,19 @@
                 assign clip_ok = true
               endif
             endif
+            assign clip_aus = settings.clip_ausschluss | remove: ' ' | split: ','
+            if clip_aus contains product.handle
+              assign clip_ok = false
+            endif
             if clip_ok
               assign clip_once = blk.video_einmal.value
               assign clip_loop = blk.video_schleife.value
+              assign clip_once_m = blk.video_einmal_mobil.value
+              assign clip_loop_m = blk.video_schleife_mobil.value
+              assign clip_ersatz_pages = settings.clip_mobil_ersatz | remove: ' ' | split: ','
+              if clip_ersatz_pages contains product.handle
+                assign clip_ersatz = true
+              endif
             endif
           endif
           if has_content
@@ -107,7 +123,7 @@
                 endif
               endif
             endif
-            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk.alt.value, clip_once: clip_once, clip_loop: clip_loop
+            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk.alt.value, clip_once: clip_once, clip_loop: clip_loop, clip_once_m: clip_once_m, clip_loop_m: clip_loop_m, clip_ersatz: clip_ersatz
           endif
         -%}
       {%- when 'text' -%}
