@@ -381,7 +381,7 @@
     } catch (e) {
       show();
     }
-    // Kein Bild gemeldet (z. B. HLS ohne seeked): nicht abdecken, aber neu entscheiden, damit „einmal“ bei
+    // Kein Bild gemeldet (z. B. HLS ohne seeked, Teil I): nicht abdecken, aber neu entscheiden, damit „einmal“ bei
     // halber Sichtbarkeit entfällt und die Schleife übernimmt.
     setTimeout(function () {
       if (done) return;
