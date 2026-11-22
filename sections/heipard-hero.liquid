@@ -265,6 +265,10 @@
     linear-gradient(160deg, var(--secondary) 0%, var(--background) 100%);
 }
 
+/* Dawn blendet leere div aus (base.css: div:empty { display: none }); die Verläufe sind leer und
+   brauchen deshalb ausdrücklich display: block (Befund Teil H, auch im Live-Hero bisher unsichtbar). */
+.heipard-hero .heipard-hero__overlay { display: block; }
+
 .heipard-hero__overlay {
   position: absolute;
   inset: 0;
