@@ -212,7 +212,8 @@
 
   function clipsBlocked() {
     var c = navigator.connection;
-    return reduceMotion.matches || reduceData.matches || !!(c && c.saveData);
+    var slow = !!(c && /(^|-)(2g|3g)$/.test(c.effectiveType || ''));
+    return reduceMotion.matches || reduceData.matches || !!(c && c.saveData) || slow;
   }
 
   function parseSources(json) {
@@ -264,6 +265,8 @@
 
   Clip.prototype.load = function (list) {
     var video = this.video;
+    this.waiting = false;
+    this.patience = false;
     video.loop = this.phase === 'loop';
     video.preload = 'auto';
     video.src = pickSource(list, video);
@@ -274,6 +277,22 @@
     if (this.phase === 'done' || !this.armed) return;
     if (!this.video.paused) return;
     var self = this;
+    // Erst starten, wenn der Browser genug gepuffert hat (sonst stockt der Clip, z. B. auf dem Bild
+    // „Kette aus“). Bis dahin bleibt das Bild stehen. Nach 8 s trotzdem versuchen: iOS puffert
+    // ohne play() oft nicht bis zum Ende.
+    if (this.video.readyState < 4 && !this.patience) {
+      if (!this.waiting) {
+        this.waiting = true;
+        var ready = function () {
+          if (!self.waiting) return;
+          self.waiting = false;
+          schedule();
+        };
+        this.video.addEventListener('canplaythrough', ready, { once: true });
+        setTimeout(function () { self.patience = true; ready(); }, 8000);
+      }
+      return;
+    }
     var p = this.video.play();
     if (p && p.catch) p.catch(function (err) {
       // Pause durch die Steuerung ist kein Fehler; abgelehntes Autoplay (z. B. Stromsparmodus) beendet den Clip.
