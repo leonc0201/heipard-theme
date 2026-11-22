@@ -210,6 +210,8 @@
   // außer data-clip-ersatz. Gerätetest: ?clip_hls=1 nutzt die HLS-Adressen, wenn der Browser HLS abspielt.
   // Höchstens ein Clip spielt zugleich, der sichtbarste gewinnt. Kein Clip bei reduzierter Bewegung,
   // Datensparmodus, 3G und schlechter oder abgelehntem Autoplay.
+  // Teil J (WCAG 2.2.2): Knopf „Animation anhalten/fortsetzen“ je Block (data-heipard-clip-knopf), angehalten bleibt
+  // der Clip für den Rest des Seitenaufrufs stehen; die Schleife endet nach drei Runden auf dem Bild.
   var clips = [];
   var reduceData = window.matchMedia('(prefers-reduced-data: reduce)');
   var narrowQuery = window.matchMedia('(max-width: 749px)');
@@ -277,6 +279,10 @@
     this.priming = false;
     this.kicking = false;
     this.started = false;
+    this.userPaused = false;
+    this.runden = 0;
+    this.lastT = 0;
+    this.knopf = null;
     video._heipardClip = this;
     video.muted = true;
     video.defaultMuted = true;
@@ -300,7 +306,59 @@
       }, 1000);
     });
     video.addEventListener('loadeddata', function () { self.firstFrame(); });
+    // Schleife: nach drei Runden auf dem Bild stehen bleiben (Teil J). Beim Sprung an den Anfang zählt eine Runde;
+    // ab der dritten läuft sie ohne loop bis zum Ende, dann folgt stop() (letztes Bild = Bild).
+    video.addEventListener('timeupdate', function () {
+      if (self.phase !== 'loop') return;
+      var t = video.currentTime;
+      if (t + 0.3 < self.lastT) {
+        self.runden++;
+        if (self.runden >= 2) video.loop = false;
+      }
+      self.lastT = t;
+    });
+    this.bindKnopf(findKnopf(video));
   }
+
+  function findKnopf(video) {
+    var box = video.parentElement;
+    return box ? box.querySelector('[data-heipard-clip-knopf]') : null;
+  }
+
+  // Pausenknopf (Teil J, WCAG 2.2.2): hält den Clip für den Rest des Seitenaufrufs an bzw. lässt ihn weiterlaufen.
+  Clip.prototype.bindKnopf = function (btn) {
+    var self = this;
+    this.knopf = btn || null;
+    if (!btn) return;
+    if (!btn.dataset.heipardBound) {
+      btn.dataset.heipardBound = '1';
+      btn.addEventListener('click', function () {
+        var c = btn._heipardClip;
+        if (c) c.toggleUser();
+      });
+    }
+    btn._heipardClip = this;
+    this.renderKnopf();
+  };
+
+  Clip.prototype.renderKnopf = function () {
+    var btn = this.knopf;
+    if (!btn) return;
+    btn.hidden = this.phase === 'done';
+    btn.classList.toggle('is-paused', this.userPaused);
+    btn.setAttribute('aria-label', this.userPaused ? btn.dataset.labelFortsetzen : btn.dataset.labelAnhalten);
+  };
+
+  Clip.prototype.toggleUser = function () {
+    this.userPaused = !this.userPaused;
+    if (this.userPaused) {
+      this.pause();
+      // Noch nicht gestartet („dunkel“ wartet über dem Bild): Bild zeigen statt des dunklen ersten Bildes.
+      if (this.phase === 'once' && !this.started) this.video.classList.remove('is-on');
+    }
+    this.renderKnopf();
+    schedule();
+  };
 
   Clip.prototype.arm = function () {
     if (this.armed || this.phase === 'done') return;
@@ -315,6 +373,8 @@
     var video = this.video;
     this.waiting = false;
     this.patience = false;
+    this.runden = 0;
+    this.lastT = 0;
     video.loop = this.phase === 'loop';
     video.preload = 'auto';
     video.src = pickSource(list, video);
@@ -359,6 +419,8 @@
       done = true;
       self.priming = false;
       if (self.phase !== 'once' || self.started) return;
+      // Vom Besucher angehalten: nicht abdecken, das Bild bleibt.
+      if (self.userPaused) return;
       if (self.seen >= START) {
         self.skipOnce();
         return;
@@ -467,6 +529,7 @@
     this.phase = 'done';
     this.pause();
     video.classList.remove('is-on');
+    this.renderKnopf();
     if (seenObserver) seenObserver.unobserve(video);
     if (nearObserver) nearObserver.unobserve(video);
     // Nach der Blende den Puffer freigeben.
@@ -481,6 +544,8 @@
     var best = null;
     clips.forEach(function (c) {
       if (c.phase === 'done' || !c.armed || document.hidden || clipsBlocked()) return;
+      // Vom Besucher angehalten (Pausenknopf): bleibt stehen, bis er fortsetzt.
+      if (c.userPaused) return;
       // Halb sichtbar, aber das erste Bild von „einmal“ liegt noch nicht über dem Bild: „einmal“ entfällt.
       if (c.phase === 'once' && !c.primed && !c.priming && !c.kicking && c.seen >= START) {
         c.skipOnce();
@@ -538,7 +603,9 @@
 
   function initClip(video) {
     if (video._heipardClip) {
-      // Beim Variantenwechsel übernommenes Element: Zustand bleibt, nur weiterspielen lassen.
+      // Beim Variantenwechsel übernommenes Element: Zustand bleibt, den Knopf im neuen Markup verbinden,
+      // dann weiterspielen lassen (oder angehalten lassen).
+      video._heipardClip.bindKnopf(findKnopf(video));
       schedule();
       return;
     }

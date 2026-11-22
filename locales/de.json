@@ -24,6 +24,10 @@
       "hinweis_an": "Licht an?",
       "hinweis_aus": "Licht aus"
     },
+    "clip": {
+      "anhalten": "Animation anhalten",
+      "fortsetzen": "Animation fortsetzen"
+    },
     "bento": {
       "discover": "Entdecken"
     },

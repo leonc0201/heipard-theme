@@ -96,6 +96,46 @@
   .heipard-clip { display: none; }
 }
 
+/* Pausenknopf für Clips (Teil J, WCAG 2.2.2): unten rechts auf dem Bild, über Verlauf und Text des Banners.
+   Farben aus den Tokens, in Tag und Abendstimmung lesbar. Sichtbar nur, solange ein Clip läuft oder laufen kann. */
+.heipard-clip-knopf {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--card) 90%, transparent);
+  color: rgb(var(--color-foreground));
+  box-shadow: 0 2px 10px -2px color-mix(in oklch, rgb(var(--color-foreground)) 30%, transparent);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.heipard-clip-knopf[hidden] { display: none; }
+.heipard-clip-knopf:hover { background: var(--card); }
+.heipard-clip-knopf:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.heipard-clip-knopf svg { width: 1.6rem; height: 1.6rem; }
+.heipard-clip-knopf__play { display: none; }
+.heipard-clip-knopf.is-paused .heipard-clip-knopf__pause { display: none; }
+.heipard-clip-knopf.is-paused .heipard-clip-knopf__play { display: block; }
+/* Mobil reicht der Banner-Text bis an den rechten Rand: Platz für den Knopf lassen. */
+@media screen and (max-width: 749px) {
+  .heipard-feature__full:has(.heipard-clip-knopf:not([hidden])) .heipard-feature__full-content { padding-right: 6.4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heipard-clip-knopf { display: none; }
+}
+
 .heipard-feature__fallback {
   background:
     radial-gradient(120% 90% at 75% 100%, color-mix(in oklch, var(--brand) 45%, transparent) 0%, transparent 60%),

@@ -24,6 +24,10 @@
       "hinweis_an": "Lights on?",
       "hinweis_aus": "Lights off"
     },
+    "clip": {
+      "anhalten": "Pause animation",
+      "fortsetzen": "Play animation"
+    },
     "bento": {
       "discover": "Discover"
     },

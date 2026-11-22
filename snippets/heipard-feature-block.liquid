@@ -40,6 +40,8 @@
     clip_once_m  Mobil-Fassungen (optional, Video oder MP4-Datei). Auf schmalen Bildschirmen läuft ein Clip
     clip_loop_m  nur mit Mobil-Fassung, außer clip_ersatz ist wahr (dann die große Fassung).
     clip_ersatz  true: auf schmalen Bildschirmen ohne Mobil-Fassung die große Fassung nutzen.
+                 Teil J: Knopf „Animation anhalten/fortsetzen“ unten rechts (WCAG 2.2.2), die Schleife endet
+                 nach drei Runden auf dem Bild.
 {% endcomment %}
 {%- liquid
   assign layout = layout | default: 'media_text'
@@ -146,6 +148,19 @@
           aria-hidden="true"
           tabindex="-1"
         ></video>
+        {%- comment -%} Pausenknopf (Teil J, WCAG 2.2.2): das Skript zeigt ihn, solange der Clip läuft oder laufen kann. {%- endcomment -%}
+        <button
+          type="button"
+          class="heipard-clip-knopf"
+          data-heipard-clip-knopf
+          data-label-anhalten="{{ 'heipard.clip.anhalten' | t | escape }}"
+          data-label-fortsetzen="{{ 'heipard.clip.fortsetzen' | t | escape }}"
+          aria-label="{{ 'heipard.clip.anhalten' | t | escape }}"
+          hidden
+        >
+          <svg class="heipard-clip-knopf__pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>
+          <svg class="heipard-clip-knopf__play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"/></svg>
+        </button>
       {%- endif -%}
     {%- endif -%}
   {%- else -%}
