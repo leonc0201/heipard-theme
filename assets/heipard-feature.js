@@ -511,7 +511,7 @@
         if (entry.isIntersecting && entry.target._heipardClip) entry.target._heipardClip.arm();
       });
       // Die Sichtbarkeit kann im selben Bild schon gemeldet sein: danach neu entscheiden. Laden ab 1000 px vor dem
-      // Sichtfeld (Teil I): auch bei schnellem Scrollen liegt das erste Bild von „einmal“ rechtzeitig bereit.
+      // Sichtfeld (Teil I, 22.11.2026): auch bei schnellem Scrollen liegt das erste Bild von „einmal“ rechtzeitig bereit.
       schedule();
     }, { rootMargin: '1000px 0px' });
     var steps = [];
