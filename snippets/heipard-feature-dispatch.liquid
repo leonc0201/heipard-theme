@@ -75,17 +75,34 @@
           endif
           assign m_type = blk.media_type.value | default: 'image'
           # Clips (Auftrag Teil H, 22.11.2026): video_einmal und video_schleife enden auf dem Bild am
-          # Block. Sie gelten deshalb nur, wenn das Bild vom Block kommt (nicht feature_b1/_b2), und
-          # nur nach dem Theme-Schalter clip_mode (aus, nur Testseiten, alle Seiten).
+          # Block. Sie gelten deshalb nur, wenn das gezeigte Bild ihr Standbild ist (Bild am Block oder
+          # Paar in clip_produktbild, siehe unten), und nur nach dem Theme-Schalter clip_mode (aus, nur
+          # Testseiten, alle Seiten).
           # Teil I (22.11.2026): Ausschlussliste clip_ausschluss (z. B. nur Kaltweiß/Bunt bei warmweißem
           # Clip), Mobil-Fassungen video_einmal_mobil / video_schleife_mobil; ohne Mobil-Fassung kein Clip
           # auf schmalen Bildschirmen, außer für die Handles in clip_mobil_ersatz (große Fassung).
+          # Bild aus feature_b1/_b2 (Block ohne eigenes Bild): Clip nur, wenn das Produktbild das Standbild
+          # des Clips ist. Die Paare Block:Standbild stehen in clip_produktbild (z. B. ctl-b1:CTL_B1_01);
+          # zeigt ein Produkt ein anderes Bild, bleibt es beim Bild.
           assign clip_once = nil
           assign clip_loop = nil
           assign clip_once_m = nil
           assign clip_loop_m = nil
           assign clip_ersatz = false
-          if blk.image.value != blank and m_type != 'video'
+          assign clip_bild_ok = false
+          if m_type != 'video' and img != blank
+            if blk.image.value != blank
+              assign clip_bild_ok = true
+            else
+              assign clip_stem = img | image_url: width: 10 | split: '?' | first | split: '/' | last | split: '.' | first
+              assign clip_pb_key = blk.system.handle | append: ':' | append: clip_stem
+              assign clip_pb = settings.clip_produktbild | remove: ' ' | split: ','
+              if clip_pb contains clip_pb_key
+                assign clip_bild_ok = true
+              endif
+            endif
+          endif
+          if clip_bild_ok
             assign clip_ok = false
             if settings.clip_mode == 'on'
               assign clip_ok = true

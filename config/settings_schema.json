@@ -63,20 +63,27 @@
         "id": "clip_test_handles",
         "label": "Testseiten",
         "info": "Produkt-Handles, durch Komma getrennt. Gilt nur bei „Nur auf den Testseiten“.",
-        "default": "hp-isl-360-eu"
+        "default": "hp-isl-360-eu, hp-dpm-300, hp-ctl-210-eu-1, hp-dct-200, hp-olg-100, hp-olg-200m, hp-dfm-400-eu-2, hp-dfm-600"
       },
       {
         "type": "text",
         "id": "clip_ausschluss",
         "label": "Ohne Clips",
-        "info": "Produkt-Handles, durch Komma getrennt, die nie einen Clip zeigen (z. B. nur Kaltweiß oder nur Bunt, wenn der Clip warmweiß ist)."
+        "info": "Produkt-Handles, durch Komma getrennt, die nie einen Clip zeigen (z. B. nur Kaltweiß oder nur Bunt, wenn der Clip warmweiß ist).",
+        "default": "hp-olg-200m, hp-olg-200w"
       },
       {
         "type": "text",
         "id": "clip_mobil_ersatz",
         "label": "Mobil ohne Mobil-Fassung",
-        "info": "Auf schmalen Bildschirmen läuft ein Clip nur mit Mobil-Fassung. Ausnahme: diese Produkt-Handles nutzen dort die große Fassung.",
-        "default": "hp-isl-360-eu"
+        "info": "Auf schmalen Bildschirmen läuft ein Clip nur mit Mobil-Fassung. Ausnahme: diese Produkt-Handles nutzen dort die große Fassung."
+      },
+      {
+        "type": "text",
+        "id": "clip_produktbild",
+        "label": "Clips auf Produktbildern",
+        "info": "Für Blöcke ohne eigenes Bild (Bild aus feature_b1/_b2): Paare Block-Handle:Standbild, durch Komma getrennt. Der Clip läuft nur, wenn das Produkt genau dieses Bild zeigt.",
+        "default": "ctl-b1:CTL_B1_01, dct-b1:DCT_B1_02, dfm-b2:DFM_B2_01, dfm-b2-zwei:DFM_B2_01"
       }
     ]
   },
