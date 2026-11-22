@@ -1,0 +1,275 @@
+{
+ "_hinweis": "Teil J, Abschnitt 1.6, 22.11.2026: EN-Lieferumfang, „string lights“ nach „1 ×“ in die Einzahl. Rückweg: vorher_en mit translationsRegister (Digest neu lesen). DE unverändert.",
+ "felder": [
+  {
+   "metafield": "gid://shopify/Metafield/64306782732621",
+   "stelle": "hp-ola-s14-15-eu",
+   "vorher_en": "1 × 10 m LED string lights\n1 × replacement bulb\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × 10 m LED string light\n1 × replacement bulb\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306782765389",
+   "stelle": "hp-ola-s14-30-eu",
+   "vorher_en": "1 × 20 m LED string lights\n2 × replacement bulbs\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × 20 m LED string light\n2 × replacement bulbs\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306782798157",
+   "stelle": "hp-ola-s14-50-eu",
+   "vorher_en": "1 × 30 m LED string lights\n2 × replacement bulbs\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × 30 m LED string light\n2 × replacement bulbs\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306782830925",
+   "stelle": "hp-ctl-180m",
+   "vorher_en": "1 × LED Christmas tree string lights with mains plug\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED Christmas tree string light with mains plug\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306782863693",
+   "stelle": "hp-ctl-240m",
+   "vorher_en": "1 × LED Christmas tree string lights with mains plug\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED Christmas tree string light with mains plug\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306782961997",
+   "stelle": "hp-blt-050",
+   "vorher_en": "1 × battery-operated LED string lights",
+   "nachher_en": "1 × battery-operated LED string light"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64383283102029",
+   "stelle": "hp-blt-050 Variante HP-BLT-050",
+   "vorher_en": "1 × battery-operated LED string lights\n3 x AA batteries not included",
+   "nachher_en": "1 × battery-operated LED string light\n3 x AA batteries not included"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306782994765",
+   "stelle": "hp-blt-100-eu-1",
+   "vorher_en": "1 × battery-operated LED string lights",
+   "nachher_en": "1 × battery-operated LED string light"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306783027533",
+   "stelle": "hp-blm-100-eu",
+   "vorher_en": "1 × battery-operated LED string lights",
+   "nachher_en": "1 × battery-operated LED string light"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482715469",
+   "stelle": "hp-bsl-100-1p",
+   "vorher_en": "1 × battery-operated LED string lights\nBatteries not included",
+   "nachher_en": "1 × battery-operated LED string light\nBatteries not included"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482748237",
+   "stelle": "hp-bsl-100-2p",
+   "vorher_en": "1 × battery-operated LED string lights\n1 × battery box\nBatteries not included",
+   "nachher_en": "1 × battery-operated LED string light\n1 × battery box\nBatteries not included"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482781005",
+   "stelle": "hp-bsl-50-1p",
+   "vorher_en": "1 × battery-operated LED string lights\n1 × battery box\nBatteries not included",
+   "nachher_en": "1 × battery-operated LED string light\n1 × battery box\nBatteries not included"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482813773",
+   "stelle": "hp-bsl-50-2p",
+   "vorher_en": "1 × battery-operated LED string lights\n1 × battery box\nBatteries not included",
+   "nachher_en": "1 × battery-operated LED string light\n1 × battery box\nBatteries not included"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64306783093069",
+   "stelle": "hp-dfm-600",
+   "vorher_en": "1 × LED cluster string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED cluster string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937470755149",
+   "stelle": "hp-olg-100",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937470787917",
+   "stelle": "hp-olg-200",
+   "vorher_en": "1 × LED string lights\n1 × remote control",
+   "nachher_en": "1 × LED string light\n1 × remote control"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937470820685",
+   "stelle": "hp-olg-200m",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482027341",
+   "stelle": "hp-olg-200w",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482060109",
+   "stelle": "hp-olg-300-eu",
+   "vorher_en": "1 × LED string lights",
+   "nachher_en": "1 × LED string light"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482092877",
+   "stelle": "hp-olg-400",
+   "vorher_en": "1 × LED string lights\n1 × remote control",
+   "nachher_en": "1 × LED string light\n1 × remote control"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482125645",
+   "stelle": "hp-olg-600",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482158413",
+   "stelle": "hp-olg-800",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482191181",
+   "stelle": "hp-olt-100",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482223949",
+   "stelle": "hp-olt-150",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482256717",
+   "stelle": "hp-olt-200",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482289485",
+   "stelle": "hp-olt-300-eu",
+   "vorher_en": "1 × LED string lights",
+   "nachher_en": "1 × LED string light"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482322253",
+   "stelle": "hp-olt-400",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482355021",
+   "stelle": "hp-olt-600",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482387789",
+   "stelle": "hp-olt-800",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937496871245",
+   "stelle": "hp-stt-050",
+   "vorher_en": "1 × LED string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482551629",
+   "stelle": "hp-olh-g40-15",
+   "vorher_en": "1 × LED string lights with G40 bulbs\n1 × replacement bulb\n1 × user manual",
+   "nachher_en": "1 × LED string light with G40 bulbs\n1 × replacement bulb\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482584397",
+   "stelle": "hp-olh-g40-20",
+   "vorher_en": "1 × LED string lights with G40 bulbs\n2 × replacement bulbs\n1 × user manual",
+   "nachher_en": "1 × LED string light with G40 bulbs\n2 × replacement bulbs\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937482649933",
+   "stelle": "hp-olh-g40-35",
+   "vorher_en": "1 × LED string lights with G40 bulbs\n2 × replacement bulbs\n1 × user manual",
+   "nachher_en": "1 × LED string light with G40 bulbs\n2 × replacement bulbs\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937483043149",
+   "stelle": "hp-ctl-180",
+   "vorher_en": "1 × LED string lights for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937483075917",
+   "stelle": "hp-ctl-240",
+   "vorher_en": "1 × LED string lights for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937483108685",
+   "stelle": "hp-ctl-300-eu",
+   "vorher_en": "1 × LED string lights for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937483141453",
+   "stelle": "hp-ctl-360-eu",
+   "vorher_en": "1 × LED string lights for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light for the Christmas tree (tree sleeve)\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937495626061",
+   "stelle": "hp-ols-g40-25",
+   "vorher_en": "1 × solar string lights with G40 bulbs\n2 × replacement bulbs\n1 × remote control\n1 × solar panel\n1 × USB charging cable\n1 × user manual",
+   "nachher_en": "1 × solar string light with G40 bulbs\n2 × replacement bulbs\n1 × remote control\n1 × solar panel\n1 × USB charging cable\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937496248653",
+   "stelle": "hp-dlm-100h",
+   "vorher_en": "1 × LED Halloween string lights\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED Halloween string light\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937496314189",
+   "stelle": "hp-dpm-300",
+   "vorher_en": "1 × LED string lights on cable reel\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light on cable reel\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937496346957",
+   "stelle": "hp-dpt-300",
+   "vorher_en": "1 × LED string lights on a cable reel",
+   "nachher_en": "1 × LED string light on a cable reel"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937496609101",
+   "stelle": "hp-rfm-600",
+   "vorher_en": "1 × smart RGB cluster string lights with app\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × smart RGB cluster string light with app\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937496838477",
+   "stelle": "hp-solm-12m-ww",
+   "vorher_en": "1 × solar string lights\n1 × ground stake\n1 × wall mount\n1 × user manual",
+   "nachher_en": "1 × solar string light\n1 × ground stake\n1 × wall mount\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937497035085",
+   "stelle": "hp-vam-400l-eu-1",
+   "vorher_en": "1 × LED string lights, warm white and multicolor\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light, warm white and multicolor\n1 × remote control\n1 × user manual"
+  },
+  {
+   "metafield": "gid://shopify/Metafield/64937497067853",
+   "stelle": "hp-vlm-100l",
+   "vorher_en": "1 × LED string lights, warm white and multicolor\n1 × remote control\n1 × user manual",
+   "nachher_en": "1 × LED string light, warm white and multicolor\n1 × remote control\n1 × user manual"
+  }
+ ]
+}

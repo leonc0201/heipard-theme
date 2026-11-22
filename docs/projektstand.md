@@ -75,6 +75,20 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
 - **PDP-Galerie** (2026-10-19): Vorschaubilder als Spalte links, Farbfilter über `heipard.galerie_medien`,
   live geprüft. Details im Abschnitt „PDP-Galerie" unten.
 
+## Pflicht vor dem Ende des Showroom-Modus
+
+- [ ] **Preise für 16 Varianten ohne Preis** (angelegt 22.11.2026 von der Asset-Instanz, Auftrag 30, Abschnitt 3). Sie stehen auf
+  0,00 € als Platzhalter, Bestand 0, nicht kaufbar. Im Showroom ist der Preis unsichtbar (geprüft Teil J, 1.9.2). Ohne
+  Showroom würde 0,00 € angezeigt. Vor dem Abschalten des Showroom-Modus jeden Preis setzen:
+  - hp-ucp-200: HP-UCP-200W (Kaltweiß / 3 x 2 m), HP-UCP-200M (Multicolor / 3 x 2 m), HP-UCP-300 (Warmweiß / 3 x 3 m),
+    HP-UCP-300W (Kaltweiß / 3 x 3 m), HP-UCP-300M (Multicolor / 3 x 3 m)
+  - hp-uct-200-eu: HP-UCC-300 (Warmweiß / Kupferdraht / 3 x 3 m), HP-UCC-300W (Kaltweiß / Kupferdraht / 3 x 3 m)
+  - hp-dpm-300: HP-DPM-400 (Warmweiß / 40 m), HP-DPM-400M (Multicolor / 40 m), HP-DPM-800 (Warmweiß / 80 m),
+    HP-DPM-800M (Multicolor / 80 m)
+  - hp-dpt-300: HP-DPT-800 (80 m / Warmweiß), HP-DPT-200 (20 m / Warmweiß), HP-DPT-200M (20 m / Multicolor),
+    HP-DPT-400M (40 m / Multicolor)
+  - hp-rmp-180: HP-RMP-250 (2,5 m)
+
 ## Nächste Schritte / offen
 
 1. **Welle 2** starten (auf Leons Go), Vorschlag Batch 1 = OLA/OLH G40-Ketten. Danach restliche Serien.
