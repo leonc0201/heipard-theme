@@ -225,8 +225,9 @@
     }
   }
 
-  // Kleinste Fassung, die die dargestellte Fläche (Ausschnitt wie object-fit: cover) füllt. Pixeldichte
-  // höchstens 1,5: mobil reicht damit 480p (gedrosselt lud 720p langsamer, als der Clip lief).
+  // Kleinste Fassung, die die dargestellte Fläche (Ausschnitt wie object-fit: cover) füllt, Pixeldichte
+  // höchstens 1,5. Hinweis: Liquid liefert je Video nur die höchste MP4-Fassung (video.sources), die
+  // Auswahl greift also erst, wenn die Liste mehrere Fassungen enthält (Befund Teil H, 22.11.2026).
   function pickSource(list, el) {
     if (!list.length) return '';
     var rect = el.getBoundingClientRect();
