@@ -37,7 +37,7 @@
         "length": "Length",
         "height": "Height",
         "power_source": "Power source",
-        "light_color": "Light colour",
+        "light_color": "Light color",
         "protection_rating": "Protection rating"
       },
       "gallery": {
@@ -135,13 +135,13 @@
         },
         "remote": "Remote control",
         "protection": "Protection rating",
-        "light_color": "Light colour",
+        "light_color": "Light color",
         "light_points": "Light points",
         "power_source": "Power source"
       },
       "editor": {
         "missing": "Block “{{ block }}” is not shown. Missing: {{ fields }}",
-        "loud": "Block “{{ block }}” is shown quietly (video as a still image, slider and colour switch as an image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
+        "loud": "Block “{{ block }}” is shown quietly (video as a still image, slider and color switch as an image, controls without light modes). One loud block is allowed per feature set, none in standard and long-tail.",
         "limit": "Block “{{ block }}” is not shown. The dramaturgy allows at most {{ max }} blocks.",
         "longtail_b2": "Block “{{ block }}” is not shown. Long-tail shows a B2 only when the metafield heipard.feature_b2 is set.",
         "no_b1": "This feature set has no full-width image. The first block should always be B1.",
@@ -171,7 +171,7 @@
         "kicker": "Technical details",
         "title": "All specs at a glance",
         "rows": {
-          "lichtfarbe": "Light colour",
+          "lichtfarbe": "Light color",
           "gesamtlaenge_m": "Total length incl. lead cable",
           "beleuchtete_laenge_m": "Lit length",
           "zuleitung_m": "Lead cable",
@@ -179,7 +179,7 @@
           "hoehe_m": "Height",
           "led_anzahl": "Light points",
           "birnenabstand_cm": "Spacing between lights",
-          "farbtemperatur_kelvin": "Colour temperature",
+          "farbtemperatur_kelvin": "Color temperature",
           "anzahl_leuchtmodi": "Light modes",
           "dimmstufen": "Dimming levels",
           "timer_dauer_h": "Timer",
@@ -227,7 +227,7 @@
         "on": "On"
       },
       "kelvin": {
-        "kicker": "Light colour",
+        "kicker": "Light color",
         "title": "How warm the light is",
         "value": "{{ value }} K",
         "candle": "Candle",
@@ -280,7 +280,7 @@
           },
           "farbtemperatur_kelvin": {
             "value": "{{ value }} K",
-            "label": "colour temperature"
+            "label": "color temperature"
           },
           "akkulaufzeit_h": {
             "value": "{{ value }} h",
@@ -312,11 +312,11 @@
         "step": "Step {{ n }}"
       },
       "farbwechsel": {
-        "kicker": "Light colour",
-        "title": "Switch the colour",
-        "choose": "Choose the light colour",
+        "kicker": "Light color",
+        "title": "Switch the color",
+        "choose": "Choose the light color",
         "warm": "Warm white",
-        "multi": "Multicolour",
+        "multi": "Multicolor",
         "hue": "Hue",
         "note": "Simplified illustration"
       }
@@ -792,7 +792,7 @@
     "order": {
       "title": "Order {{ name }}",
       "date_html": "Placed on {{ date }}",
-      "cancelled_html": "Order Cancelled on {{ date }}",
+      "cancelled_html": "Order Canceled on {{ date }}",
       "cancelled_reason": "Reason: {{ reason }}",
       "billing_address": "Billing Address",
       "payment_status": "Payment Status",
