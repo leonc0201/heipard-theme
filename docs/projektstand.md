@@ -88,6 +88,27 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   - hp-dpt-300: HP-DPT-800 (80 m / Warmweiß), HP-DPT-200 (20 m / Warmweiß), HP-DPT-200M (20 m / Multicolor),
     HP-DPT-400M (40 m / Multicolor)
   - hp-rmp-180: HP-RMP-250 (2,5 m)
+  - **Dazu die Blocktexte von hp-dpm-300 und hp-dpt-300** (Teil K 2.13): Sie nennen nur 30 und 60 m, also den Stand vor
+    den neuen Varianten. Sobald die Varianten Preise haben, die Blocktexte auf alle Längen bringen (DPM 30 bis 80 m, DPT
+    20 bis 80 m).
+- [ ] **UK-Varianten hp-dpt-300** (Leon, gemeldet von der Asset-Instanz, Auftrag 31): HP-DPT-200, HP-DPT-200M und HP-DPT-400M
+  sind UK-Fassungen und bleiben vorerst als nicht kaufbare Platzhalter. Vor dem Ende des Showroom-Modus braucht es die
+  EU-Fassung (Tyler, D12), sonst kommen die drei wieder heraus. Register: `reports/shopify_varianten.csv` im Asset-Ordner.
+
+## Pflicht vor dem Launch
+
+- [ ] **Übersetzungen Spanisch, Französisch, Italienisch** (Teil K 1.1). Die drei Sprachen sind veröffentlicht, ihre
+  Texte sind veraltet oder falsch, darunter falsche Zusagen (30 Tage Rückgabe in der Trust-Leiste, „Niederrhein“ bzw.
+  „Bas-Rhin“ in der Story, Platzhalter in AGB und Impressum). Liste für Daniel: `docs/data/teilk-uebersetzungen-es-fr-it.md`.
+  Vor dem Launch: Übersetzungsweg klären (Translate & Adapt übersetzt fehlende Werte offenbar automatisch, zuletzt
+  donnerstags gegen 21:20 Uhr), Liste abarbeiten oder die Sprachen abschalten.
+- [ ] **Rechtstexte, zwei Links** (Teil K 2.7, Richtlinien im Admin, der Connector darf sie nicht schreiben):
+  - Kontakt: Der Mail-Link zeigt „info@heipard.com“, führt aber zu `mailto:info@ozeanos.com`; dazu ein leerer Link auf
+    `info@lumo-nova.de`. Soll: `mailto:info@heipard.com`, leerer Link weg.
+  - Widerrufsbelehrung: Der Link zum Online-Widerruf zeigt „https://www.heipard.com/pages/vertrag-widerrufen“, führt aber
+    zu `https://www.lumo-nova.de/…`. Soll: `https://www.heipard.com/pages/vertrag-widerrufen` (die Seite gibt es im Shop).
+  - Der Link funktioniert erst, wenn heipard.com auf den Shop zeigt (heute WordPress-Seite). Nach dem Domainwechsel
+    testen.
 
 ## Nächste Schritte / offen
 
