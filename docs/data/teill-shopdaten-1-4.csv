@@ -1,0 +1,29 @@
+﻿Produkt;Feld;Ressource;DE vorher;DE nachher;EN vorher;EN nachher
+hp-dgm-002;stromquelle;gid://shopify/Product/10929061790029;Netz;Batterie;Plug-in;Battery
+hp-dnm-208;hoehe_m;gid://shopify/Product/10812086485325;2.0;1.8;;
+hp-olt-150;koppelbar_bis;gid://shopify/Product/10812089860429;4;3;;
+hp-rct-400;einsatzbereich;gid://shopify/Product/10812090253645;(leer);Innen & Außen;;Indoor & Outdoor
+hp-bsl-50-1p;einsatzbereich;gid://shopify/Product/10929058087245;(leer);Innen & Außen;;Indoor & Outdoor
+hp-fsf-120;material;gid://shopify/Product/10929061888333;Kunststoff;Metall;Plastic;Metal
+hp-ols-s11-16;zuleitung_m;gid://shopify/Product/10929059430733;(leer);2.5;;
+hp-bsl-100-2p;lieferumfang;gid://shopify/Product/10812085567821;1 × Batteriebetriebene LED-Lichterkette / 1 × Batteriekasten / Batterien nicht enthalten;2 × Batteriebetriebene LED-Lichterkette / 2 × Batteriekasten / Batterien nicht enthalten;1 × battery-operated LED string light / 1 × battery box / Batteries not included;2 × battery-operated LED string light / 2 × battery box / Batteries not included
+hp-bsl-50-2p;lieferumfang;gid://shopify/Product/10812085600589;1 × Batteriebetriebene LED-Lichterkette / 1 × Batteriekasten / Batterien nicht enthalten;2 × Batteriebetriebene LED-Lichterkette / 2 × Batteriekasten / Batterien nicht enthalten;1 × battery-operated LED string light / 1 × battery box / Batteries not included;2 × battery-operated LED string light / 2 × battery box / Batteries not included
+pvc-150g;lieferumfang;gid://shopify/Product/10929060446541;1 × Künstlicher Weihnachtsbaum;1 × Künstlicher Weihnachtsbaum / 1 × Holzständer / 1 × Montageanleitung;1 × artificial Christmas tree;1 × artificial Christmas tree / 1 × wooden stand / 1 × assembly instructions
+pec-150g;lieferumfang;gid://shopify/Product/10929060249933;1 × Künstlicher Weihnachtsbaum;1 × Künstlicher Weihnachtsbaum / 1 × Holzständer mit Schrauben / 1 × Montageanleitung;1 × artificial Christmas tree;1 × artificial Christmas tree / 1 × wooden stand with screws / 1 × assembly instructions
+hp-olt-300-eu;lieferumfang;gid://shopify/Product/10812090220877;1 × LED-Lichterkette;1 × LED-Lichterkette / 1 × Fernbedienung / 1 × Netzteil;1 × LED string light;1 × LED string light / 1 × remote control / 1 × power adapter
+hp-rsp-180;lieferumfang;gid://shopify/Product/10812090450253;1 × Smarter RGB-Lichterkegel / 1 × Fernbedienung / 1 × Bedienungsanleitung;1 × Smarter RGB-Lichterkegel / 1 × Fernbedienung / 1 × Erdspieß / 4 × Erdanker / 1 × Bedienungsanleitung;1 × smart RGB light cone / 1 × remote control / 1 × user manual;1 × smart RGB light cone / 1 × remote control / 1 × ground stake / 4 × ground anchor / 1 × user manual
+hp-fsf-120;lieferumfang;gid://shopify/Product/10929061888333;1 × LED-Motivleuchte Schneemann / 1 × Fernbedienung;1 × LED-Motivleuchte Schneemann / 1 × Fernbedienung / Erdspieße zur Befestigung;1 × LED snowman picture lamp / 1 × remote control;1 × LED snowman light figure / 1 × remote control / Ground stakes for anchoring
+hp-dnm-208 / HP-DNM-208M;einsatzbereich;gid://shopify/ProductVariant/54933431255373;Außen;Innen & Außen;Outdoor;Indoor & Outdoor
+hp-ols-s11-16 / HP-OLS-S11-16;beleuchtete_laenge_m;gid://shopify/ProductVariant/54933443051853;10.0;7.5;;
+hp-ols-s11-16 / HP-OLS-S11-25;beleuchtete_laenge_m;gid://shopify/ProductVariant/54933443084621;15.0;12.5;;
+hp-ols-st38-16 / HP-OLS-ST38-16;beleuchtete_laenge_m;gid://shopify/ProductVariant/54933443215693;10.0;7.5;;
+hp-ols-st38-16 / HP-OLS-ST38-25;beleuchtete_laenge_m;gid://shopify/ProductVariant/54933443248461;15.0;12.5;;
+hp-ucp-200 / HP-UCP-300;zuleitung_m;gid://shopify/ProductVariant/55469558694221;(leer);5.0;;
+hp-ucp-200 / HP-UCP-300W;zuleitung_m;gid://shopify/ProductVariant/55469558726989;(leer);5.0;;
+hp-ucp-200 / HP-UCP-300M;zuleitung_m;gid://shopify/ProductVariant/55469558759757;(leer);5.0;;
+hp-ola-g40-15-eu;beleuchtete_laenge_m (gelöscht);gid://shopify/Product/10812088516941;20.0;(gelöscht);;
+hp-scwl-15m2p-mc / HP-SCWL-15M2P-MC;farbtemperatur_kelvin (gelöscht);gid://shopify/ProductVariant/54529999831373;2200;(gelöscht);;
+hp-dnm-208;Titel;gid://shopify/Product/10812086485325;HeiPard LED-Lichternetz 2,5 x 2 m mit 208 LEDs, warmweiß oder bunt, für außen;HeiPard LED-Lichternetz 2,5 x 1,8 m mit 208 LEDs, warmweiß oder bunt, für innen und außen;HeiPard LED Light Net 2.5 x 2 m with 208 LEDs, Warm White or Multicolor, for Outdoor Use;HeiPard LED Light Net 2.5 x 1.8 m with 208 LEDs, Warm White or Multicolor
+hp-dnm-208;SEO-Titel;gid://shopify/Product/10812086485325;HeiPard LED-Lichternetz 2,5 x 2 m mit 208 LEDs;HeiPard LED-Lichternetz 2,5 x 1,8 m mit 208 LEDs;HeiPard LED Light Net 2.5 x 2 m with 208 LEDs;HeiPard LED Light Net 2.5 x 1.8 m with 208 LEDs
+hp-rct-400;Titel;gid://shopify/Product/10812090253645;HeiPard Smarter RGB-Lichtervorhang mit App, 2 x 2 m, für innen;HeiPard Smarter RGB-Lichtervorhang mit App, 2 x 2 m, für innen und außen;HeiPard Smart RGB Light Curtain with App, 2 x 2 m, for Indoor Use;HeiPard Smart RGB Light Curtain with App, 2 x 2 m, for Indoor and Outdoor Use
+hp-bsl-50-1p;Titel;gid://shopify/Product/10929058087245;HeiPard Batterie-Lichterkette 5 m mit 50 LEDs, warmweiß, für innen;HeiPard Batterie-Lichterkette 5 m mit 50 LEDs, warmweiß, für innen und außen;HeiPard Battery-Powered Fairy Lights 5 m with 50 LEDs, Warm White, for Indoor Use;HeiPard Battery-Powered Fairy Lights 5 m with 50 LEDs, Warm White
