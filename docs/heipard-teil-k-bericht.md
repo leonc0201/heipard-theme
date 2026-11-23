@@ -200,6 +200,8 @@ Liste vorher und nachher: `docs/data/teilk-seo-paare.csv`.
 
 - Kabelfarbe: Die Asset-Instanz hat alle 15 OLG/OLT-Titel an den Bildern bestätigt (OLG grün, OLT transparent). Nichts zu
   ändern.
+- *Abgelöst durch Teil L 1.3 (2026-11-23): Der Titel nennt die beleuchtete Länge, siehe `projektstand.md`,
+  Abschnitt „Titelmuster Produkte“.*
 - Länge: Gesamtlänge im Titel gilt als Regel. hp-ols-a60-16-eu: 6,5 m Kette plus 2 m Verlängerung = 8,5 m, der Titel
   stimmt. hp-ol-30 (20 m) und hp-ol-50 (30 m) stimmen ebenfalls.
 

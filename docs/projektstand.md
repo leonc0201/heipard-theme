@@ -110,6 +110,26 @@ Vor jeder Session: **`git pull --ff-only`** (Daniel arbeitet parallel).
   - Der Link funktioniert erst, wenn heipard.com auf den Shop zeigt (heute WordPress-Seite). Nach dem Domainwechsel
     testen.
 
+## Titelmuster Produkte (Stand 2026-11-23, Teil L)
+
+- **Aufbau:** HeiPard, Produktart (gleich dem Produkttyp), Bauform oder Birne, Länge, Anzahl LEDs oder Birnen, Lichtfarbe,
+  Einsatzbereich oder Merkmal. Beispiel: „HeiPard Außenlichterkette G40, 27 m mit 50 Birnen, warmweiß“. Englisch in
+  US-Schreibweise, Wörter groß („HeiPard Outdoor String Lights G40, 27 m with 50 Bulbs, Warm White“).
+- **Längen:** Titel höchstens 90 Zeichen, SEO-Titel höchstens 60 Zeichen. Kein Titel und kein SEO-Titel doppelt. Passt
+  der SEO-Titel nicht, fällt die Angabe weg, die im Paar gleich ist: zuerst die Anzahl, dann das Maß (Teil K 2.1).
+- **Länge im Titel = beleuchtete Länge** (Leons Entscheidung, Teil L 1.3, ersetzt die Regel „Gesamtlänge“ aus Teil J 2
+  und Teil K 2.4). Der Titel nennt, was leuchtet: Wer nach dem Titel sein Geländer abmisst, soll nicht weniger Licht
+  bekommen als gedacht.
+  - Zuleitung und Gesamtlänge stehen im Text und in den Technischen Details (Metafelder `zuleitung_m`,
+    `gesamtlaenge_m`, Kettenplan).
+  - Der Text nennt beide Zahlen, etwa „10 m beleuchtet, mit der 3 m langen Zuleitung 13 m“. Ist die Gesamtlänge nicht
+    belegt, nennt der Text nur beleuchtete Länge und Zuleitung.
+  - Mehrere Längen im Produkt: „7,5 m oder 12,5 m“, ab drei Längen „9 bis 25 m“.
+  - Flächen (Vorhang, Netz) und Höhen (Baum, Kegel) bleiben „3 x 2 m“ bzw. „1,8 m“.
+  - Quelle der Werte: Längenliste der Asset-Instanz (`reports/laengen_2026-11-24.csv`). Nur belegte Werte schreiben,
+    unsichere bleiben und kommen als [prüfen] in den Bericht. Stand und offene Fälle: `heipard-teil-l-bericht.md`.
+- **Theme:** Serienwähler und Kettenplan lesen zuerst `beleuchtete_laenge_m`, sonst `gesamtlaenge_m` (seit `c249933`).
+
 ## Nächste Schritte / offen
 
 1. **Welle 2** starten (auf Leons Go), Vorschlag Batch 1 = OLA/OLH G40-Ketten. Danach restliche Serien.

@@ -32,6 +32,8 @@ Bekannte Heuristik-Fallen (bewusst nicht auto-übernehmen):
   NICHT app-fähig). Nur OLA (App-Steuerung), RGB/RFM/RIT/RNM/RTM (Smart/App) sind echt smart.
 - **`beleuchtete_laenge_m`** nimmt die Titel-Länge; echte *beleuchtete* Länge kann abweichen
   (z. B. OLA G40: Titel „10M" vs. Text „beleuchtete Länge 20m"). `gesamtlaenge_m` separat.
+  *Seit Teil L 1.3 (2026-11-23) gilt umgekehrt: Der Titel nennt die belegte beleuchtete Länge, Quelle ist die
+  Längenliste der Asset-Instanz. Regel: `projektstand.md`, Abschnitt „Titelmuster Produkte“.*
 - **`farbtemperatur_kelvin`**: OL/OLA-Familie durchgängig 2200K (Bernstein), andere 2700–3000K.
 - **`spannung_v`**: 24V (Netz-Outdoor), 5V (USB-Vorhang), 2,4V (Solar) — plausibilisieren.
 
