@@ -4,9 +4,9 @@
   Varianten:
     linie    Zuleitung + Lichterkette als proportionale Linie
              (heipard.beleuchtete_laenge_m Pflicht; zuleitung_m, led_anzahl, birnenabstand_cm optional)
-             Ist heipard.gesamtlaenge_m gepflegt, gilt die Gesamtlänge als Nennmaß:
-             darunter steht eine Maßlinie "x m gesamt", die beleuchtete Länge
-             bekommt ein "ca." davor.
+             Ist heipard.gesamtlaenge_m gepflegt, steht darunter eine Maßlinie
+             "x m gesamt". Die beleuchtete Länge bekommt ein "ca." nur, wenn sie
+             mit der Zuleitung mehr als 0,25 m von der Gesamtlänge abweicht (Teil L).
              Reduzierte Form: Fehlt die beleuchtete Länge, ist aber die Gesamtlänge
              gepflegt, zeigt der Plan nur eine Linie mit "x m gesamt".
     flaeche  Flächenplan für Vorhang, Eiszapfen, Netz
@@ -129,7 +129,13 @@
           assign chain_key = 'heipard.blocks.kettenplan.chain'
           if gesamt != blank and gesamt > 0
             assign has_total = true
-            assign chain_key = 'heipard.blocks.kettenplan.chain_approx'
+            # Teil L 1.3: Die beleuchtete Länge ist belegt und steht im Titel. "ca." nur, wenn beleuchtete
+            # Länge und Zuleitung zusammen mehr als 0,25 m von der Gesamtlänge abweichen (Endstecker 0,15 m).
+            assign summe = laenge | plus: lead_share
+            assign abweichung = gesamt | minus: summe | abs
+            if abweichung > 0.25
+              assign chain_key = 'heipard.blocks.kettenplan.chain_approx'
+            endif
             capture gesamt_txt
               render 'heipard-num', value: gesamt
             endcapture
