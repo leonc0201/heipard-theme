@@ -57,6 +57,16 @@
     capture off_s_json
       render 'heipard-clip-json', f: section.settings.clip_off_schnell
     endcapture
+    # Allgemeine Datei 1600 × 900 (Adresse aus Files) ersetzt am Desktop die schnelle Video-Fassung (Teil K 1.2).
+    # Liquid kennt die Maße einer allgemeinen Datei nicht, sie gilt als 1600 × 900.
+    assign datei_on = section.settings.clip_on_schnell_datei | strip | remove: '"'
+    assign datei_off = section.settings.clip_off_schnell_datei | strip | remove: '"'
+    if datei_on != blank
+      assign on_s_json = '{"h":900,"w":1600,"u":"' | append: datei_on | append: '"}'
+    endif
+    if datei_off != blank
+      assign off_s_json = '{"h":900,"w":1600,"u":"' | append: datei_off | append: '"}'
+    endif
     capture on_sm_json
       render 'heipard-clip-json', f: section.settings.clip_on_schnell_m
     endcapture
@@ -563,6 +573,18 @@
       "type": "video",
       "id": "clip_off_schnell",
       "label": "Clip Licht aus, schnell"
+    },
+    {
+      "type": "text",
+      "id": "clip_on_schnell_datei",
+      "label": "Clip Licht an, schnell, Datei 1600 × 900",
+      "info": "Adresse einer MP4-Datei aus Inhalte > Dateien (allgemeine Datei, 1600 × 900). Gilt ab 750 px Breite statt „Clip Licht an, schnell“."
+    },
+    {
+      "type": "text",
+      "id": "clip_off_schnell_datei",
+      "label": "Clip Licht aus, schnell, Datei 1600 × 900",
+      "info": "Wie oben, für „Licht aus“."
     },
     {
       "type": "video",
