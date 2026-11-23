@@ -9,6 +9,14 @@
 {%- endcomment -%}
 {%- liquid
   assign q = '(prefers-reduced-motion: no-preference) and (scripting: enabled)'
+  # Adressen aus Files (cdn.shopify.com/.../files/NAME) über den Shop-Host laden wie die übrigen Bilder
+  # (/cdn/shop/files/NAME): keine zweite Verbindung vor dem größten Bild (LCP).
+  if m contains 'cdn.shopify.com' and m contains '/files/'
+    assign m = m | split: '/files/' | last | prepend: '/cdn/shop/files/'
+  endif
+  if d contains 'cdn.shopify.com' and d contains '/files/'
+    assign d = d | split: '/files/' | last | prepend: '/cdn/shop/files/'
+  endif
   if m != blank
     assign sep = '?'
     if m contains '?'
