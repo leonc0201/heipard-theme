@@ -240,6 +240,13 @@ Liste vorher und nachher: `docs/data/teill-texte-1-5.csv` (Beschreibung und Meta
 - Serienwähler: Stufen nach beleuchteter Länge. Wo die beleuchtete Länge noch [prüfen] ist, steht die Gesamtlänge
   (z. B. RGB-Familie 20 / 33 / 53 m, Frage 3).
 - Kein Gedankenstrich, kein seitlicher Überlauf.
+- **Gegenprobe 20:59** nach einer Meldung der Asset-Instanz: Ihr `theme_screenshot` zeigte um 20:58 im Serienwähler von
+  hp-olg-200m noch Gesamtlängen (13, 20, 23, … 83 m). Die beiden Dateien im Live-Theme haben dieselbe MD5 wie `c249933`
+  (eingespielt 20:31:18), die echte Storefront zeigt mobil, DE und EN, 10, 20, 20, 20, 40, 60, 80 m. Der Screenshot kam
+  aus einer veralteten Kopie des Werkzeugs, wie schon bei `theme_bash`. Theme-Prüfungen deshalb nur an der Storefront.
+- **Befund (Frage 12):** In der OLG-Familienleiste steht eine Karte „HeiPard Lichterkette 30 bis 100 m … grünes Kabel“
+  ohne Länge, am Ende der Leiste. Das Produkt führt seine Längen nur an den Varianten, die Familienleiste liest die
+  Produktfelder. Nicht geändert.
 
 ### Nebenbefund: fehlende EN-Übersetzungen an Optionen
 
@@ -312,3 +319,6 @@ Liste vorher und nachher: `docs/data/teill-texte-1-5.csv` (Beschreibung und Meta
 10. **ES, FR, IT:** Alles aus Teil L ist DE und EN. Die drei Sprachen sind an diesen Stellen veraltet oder leer. Das gehört
     zur Liste für Daniel (Pflicht vor dem Launch).
 11. hp-dgm-048 liegt weiter bei dir (Lichtfarbe, Lieferumfang).
+12. **Familienleiste bei Produkten mit Längen-Varianten** (OLG „30 bis 100 m“): Die Karte steht heute ohne Länge am
+    Ende. Vorschlag: Die Karte zeigt die Spanne der Varianten („30 bis 100 m“) und sortiert nach der kürzesten Länge.
+    Soll ich das bauen?
