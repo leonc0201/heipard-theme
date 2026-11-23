@@ -26,7 +26,7 @@
   assign strom = vm.stromquelle.value | default: m.stromquelle.value
   assign farbe = ''
   for opt in product.options_with_values
-    if opt.name == 'Lichtfarbe'
+    if opt.name == 'Lichtfarbe' or opt.name == 'Light color' or opt.name == 'Light Color'
       assign farbe = v.options[forloop.index0]
     endif
   endfor

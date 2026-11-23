@@ -42,7 +42,7 @@
         when 'lichtfarbe'
           assign color = ''
           for opt in product.options_with_values
-            if opt.name == 'Lichtfarbe'
+            if opt.name == 'Lichtfarbe' or opt.name == 'Light color' or opt.name == 'Light Color'
               assign color = current.options[forloop.index0]
             endif
           endfor
