@@ -1,0 +1,32 @@
+{%- comment -%}
+  Hero: Rahmen aus dem Clip als Standbild (Auftrag Teil L, Abschnitt 2, 23.11.2026).
+  Gibt die <source>-Tags vor dem bisherigen <img> aus. Sie gelten nur mit Bewegung und JavaScript
+  (media-Abfrage), sonst lädt der Browser das scharfe Standbild wie bisher. Es wird immer nur ein Bild geladen.
+
+  Parameter:
+    d   Adresse des Rahmens aus Files, groß (1600 × 900, Desktop-Clip)
+    m   Adresse des Rahmens aus Files, mobil (1276 × 720, Mobil-Clip unter 750 px); fehlt sie, gilt d
+{%- endcomment -%}
+{%- liquid
+  assign q = '(prefers-reduced-motion: no-preference) and (scripting: enabled)'
+  if m != blank
+    assign sep = '?'
+    if m contains '?'
+      assign sep = '&'
+    endif
+    assign set_m = m | append: sep | append: 'width=750 750w, ' | append: m | append: sep | append: 'width=1100 1100w, ' | append: m | append: sep | append: 'width=1276 1276w'
+  endif
+  if d != blank
+    assign sep = '?'
+    if d contains '?'
+      assign sep = '&'
+    endif
+    assign set_d = d | append: sep | append: 'width=750 750w, ' | append: d | append: sep | append: 'width=1100 1100w, ' | append: d | append: sep | append: 'width=1500 1500w, ' | append: d | append: sep | append: 'width=1600 1600w'
+  endif
+-%}
+{%- if m != blank -%}
+  <source media="(max-width: 749px) and {{ q }}" srcset="{{ set_m | escape }}" sizes="100vw" width="1276" height="720">
+{%- endif -%}
+{%- if d != blank -%}
+  <source media="{{ q }}" srcset="{{ set_d | escape }}" sizes="100vw" width="1600" height="900">
+{%- endif -%}

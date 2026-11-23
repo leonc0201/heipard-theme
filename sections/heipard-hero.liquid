@@ -91,6 +91,19 @@
       assign hero_clip_paar = true
     endif
   endif
+  # Teil L, Abschnitt 2: Standbilder aus dem ersten bzw. letzten Bild von „Licht an, schnell“, damit der
+  # Wechsel Clip/Bild keinen Schärfesprung zeigt (Tag = erstes Bild, Abend = letztes Bild; „Licht aus“
+  # beginnt und endet auf denselben Bildern, gemessen 34,5 und 32,7 dB). Nur mit Clips im Tempo schnell.
+  assign r_tag = ''
+  assign r_abend = ''
+  assign r_tag_m = ''
+  assign r_abend_m = ''
+  if hero_clip_paar and section.settings.tempo == 'schnell'
+    assign r_tag = section.settings.rahmen_tag_datei | strip | remove: '"'
+    assign r_abend = section.settings.rahmen_abend_datei | strip | remove: '"'
+    assign r_tag_m = section.settings.rahmen_tag_datei_m | strip | remove: '"'
+    assign r_abend_m = section.settings.rahmen_abend_datei_m | strip | remove: '"'
+  endif
 -%}
 
 <section
@@ -143,6 +156,7 @@
     </script>
   {%- endif -%}
   {%- if section.settings.image != blank -%}
+    {%- if r_abend != blank or r_abend_m != blank -%}<picture>{%- render 'heipard-hero-rahmen', d: r_abend, m: r_abend_m -%}{%- endif -%}
     {{
       section.settings.image
       | image_url: width: 3840
@@ -154,6 +168,7 @@
         widths: '750, 1100, 1500, 1900, 2400, 3000, 3840',
         alt: section.settings.image.alt | default: shop.name
     }}
+    {%- if r_abend != blank or r_abend_m != blank -%}</picture>{%- endif -%}
   {%- else -%}
     <img
       class="heipard-hero__image heipard-hero__image--abend"
@@ -166,6 +181,7 @@
     >
   {%- endif -%}
   {%- if hero_mode != 'aus' -%}
+    {%- if r_tag != blank or r_tag_m != blank -%}<picture>{%- render 'heipard-hero-rahmen', d: r_tag, m: r_tag_m -%}{%- endif -%}
     {{
       section.settings.image_day
       | image_url: width: 3840
@@ -176,6 +192,7 @@
         widths: '750, 1100, 1500, 1900, 2400, 2688',
         alt: section.settings.image_day.alt | default: shop.name
     }}
+    {%- if r_tag != blank or r_tag_m != blank -%}</picture>{%- endif -%}
   {%- endif -%}
   {%- if hero_clip_paar -%}
     <video
@@ -595,6 +612,30 @@
       "type": "video",
       "id": "clip_off_schnell_m",
       "label": "Clip Licht aus, schnell, Mobil-Fassung"
+    },
+    {
+      "type": "text",
+      "id": "rahmen_tag_datei",
+      "label": "Tagbild aus dem Clip, Datei 1600 × 900",
+      "info": "Adresse aus Inhalte > Dateien: erstes Bild von „Licht an, schnell“. Gilt nur mit Clips im Tempo schnell, mit Bewegung und JavaScript statt des Tagbilds, damit beim Wechsel kein Schärfesprung entsteht."
+    },
+    {
+      "type": "text",
+      "id": "rahmen_abend_datei",
+      "label": "Abendbild aus dem Clip, Datei 1600 × 900",
+      "info": "Wie oben: letztes Bild von „Licht an, schnell“, statt des Abendbilds."
+    },
+    {
+      "type": "text",
+      "id": "rahmen_tag_datei_m",
+      "label": "Tagbild aus dem Clip, mobil (720p)",
+      "info": "Erstes Bild der Mobil-Fassung von „Licht an, schnell“. Gilt unter 750 px Breite."
+    },
+    {
+      "type": "text",
+      "id": "rahmen_abend_datei_m",
+      "label": "Abendbild aus dem Clip, mobil (720p)",
+      "info": "Letztes Bild der Mobil-Fassung von „Licht an, schnell“. Gilt unter 750 px Breite."
     },
     {
       "type": "select",
