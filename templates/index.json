@@ -57,7 +57,7 @@
             "icon": "shipping",
             "title": "Versand aus Deutschland",
             "subline": "Schnell bei dir",
-            "tbd": true
+            "tbd": false
           }
         },
         "s3": {
