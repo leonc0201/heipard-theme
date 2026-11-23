@@ -93,7 +93,7 @@
               assign power_down = power_txt | downcase
               if power_down contains 'solar'
                 assign tile_icon = 'sonne'
-              elsif power_down contains 'batterie' or power_down contains 'akku'
+              elsif power_down contains 'batterie' or power_down contains 'akku' or power_down contains 'battery'
                 assign tile_icon = 'batterie'
               else
                 assign tile_icon = 'stecker'
