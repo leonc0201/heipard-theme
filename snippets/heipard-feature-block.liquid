@@ -98,8 +98,8 @@
     }}
     {%- if clip_once != blank or clip_loop != blank or clip_once_m != blank or clip_loop_m != blank -%}
       {%- liquid
-        # Je Clip die Fassungen als JSON (h = Höhe, w = Breite, u = Adresse), groß und mobil, dazu die
-        # HLS-Adresse für den Gerätetest (?clip_hls=1). Das Skript wählt nach Bildschirmbreite.
+        # Je Clip die Fassungen als JSON (h = Höhe, w = Breite, u = Adresse), groß und mobil. Das Skript
+        # wählt nach Bildschirmbreite (HLS-Gerätetest seit Teil K ausgebaut).
         # Schlüssel aus den Datei-IDs: beim Variantenwechsel übernimmt heipard-variant.js das laufende
         # Element, statt neu zu starten.
         assign clip_key = clip_once.id | append: '-' | append: clip_loop.id | append: '-' | append: clip_once_m.id | append: '-' | append: clip_loop_m.id
@@ -115,18 +115,10 @@
         capture loop_m_json
           render 'heipard-clip-json', f: clip_loop_m
         endcapture
-        capture once_hls
-          render 'heipard-clip-json', f: clip_once, mode: 'hls'
-        endcapture
-        capture loop_hls
-          render 'heipard-clip-json', f: clip_loop, mode: 'hls'
-        endcapture
         assign once_json = once_json | strip
         assign loop_json = loop_json | strip
         assign once_m_json = once_m_json | strip
         assign loop_m_json = loop_m_json | strip
-        assign once_hls = once_hls | strip
-        assign loop_hls = loop_hls | strip
       -%}
       {%- if once_json != blank or loop_json != blank or once_m_json != blank or loop_m_json != blank -%}
         <video
@@ -136,8 +128,6 @@
           {% if loop_json != blank %}data-clip-loop="[{{ loop_json | escape }}]"{% endif %}
           {% if once_m_json != blank %}data-clip-once-m="[{{ once_m_json | escape }}]"{% endif %}
           {% if loop_m_json != blank %}data-clip-loop-m="[{{ loop_m_json | escape }}]"{% endif %}
-          {% if once_hls != blank %}data-clip-once-hls="[{{ once_hls | escape }}]"{% endif %}
-          {% if loop_hls != blank %}data-clip-loop-hls="[{{ loop_hls | escape }}]"{% endif %}
           {% if clip_ersatz %}data-clip-ersatz="true"{% endif %}
           muted
           playsinline

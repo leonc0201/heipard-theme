@@ -207,7 +207,7 @@
   // bereit, wenn der Block schon halb sichtbar ist, entfällt „einmal“ für diesen Aufruf: das Bild bleibt, die
   // Schleife übernimmt. Stockt „einmal“ (waiting), blendet der Clip weich auf das Bild zurück, die Schleife folgt.
   // Fassungen: breit die große, schmal (bis 749 px) nur die Mobil-Fassung (data-clip-*-m), ohne sie kein Clip,
-  // außer data-clip-ersatz. Gerätetest: ?clip_hls=1 nutzt die HLS-Adressen, wenn der Browser HLS abspielt.
+  // außer data-clip-ersatz. Der HLS-Gerätetest (?clip_hls=1) ist seit Teil K wieder ausgebaut.
   // Höchstens ein Clip spielt zugleich, der sichtbarste gewinnt. Kein Clip bei reduzierter Bewegung,
   // Datensparmodus, 3G und schlechter oder abgelehntem Autoplay.
   // Teil J (WCAG 2.2.2): Knopf „Animation anhalten/fortsetzen“ je Block (data-heipard-clip-knopf), angehalten bleibt
@@ -215,7 +215,6 @@
   var clips = [];
   var reduceData = window.matchMedia('(prefers-reduced-data: reduce)');
   var narrowQuery = window.matchMedia('(max-width: 749px)');
-  var hlsTest = /(?:^|[?&])clip_hls=1(?:&|$)/.test(window.location.search);
   var nearObserver = null;
   var seenObserver = null;
   var START = 0.5;
@@ -252,9 +251,6 @@
 
   function sourcesFor(video) {
     var d = video.dataset;
-    if (hlsTest && (d.clipOnceHls || d.clipLoopHls) && video.canPlayType('application/vnd.apple.mpegurl')) {
-      return { once: parseSources(d.clipOnceHls), loop: parseSources(d.clipLoopHls), quelle: 'hls' };
-    }
     if (narrowQuery.matches) {
       var om = parseSources(d.clipOnceM);
       var lm = parseSources(d.clipLoopM);
@@ -443,7 +439,7 @@
     } catch (e) {
       show();
     }
-    // Kein Bild gemeldet (z. B. HLS ohne seeked, Teil I): nicht abdecken, aber neu entscheiden, damit „einmal“ bei
+    // Kein Bild gemeldet (kein seeked, so im HLS-Test von Teil I): nicht abdecken, aber neu entscheiden, damit „einmal“ bei
     // halber Sichtbarkeit entfällt und die Schleife übernimmt.
     setTimeout(function () {
       if (done) return;
@@ -518,6 +514,16 @@
       this.phase = 'loop';
       video.classList.remove('is-on');
       this.load(this.loop);
+      schedule();
+      return;
+    }
+    // Schleife endet vor der dritten Runde: Der Browser hat das Attribut loop nicht beachtet (so im HLS-Test,
+    // Teil K 1.4). Dann selbst von vorn, die Runde zählt hier statt in timeupdate.
+    if (this.phase === 'loop' && this.runden < 2) {
+      this.runden++;
+      if (this.runden >= 2) video.loop = false;
+      this.lastT = 0;
+      try { video.currentTime = 0; } catch (e) {}
       schedule();
       return;
     }

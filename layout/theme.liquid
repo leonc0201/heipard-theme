@@ -16,10 +16,15 @@
       (function () {
         try {
           var stored = localStorage.getItem('heipard-theme');
+          // Abendstimmung nach dem Hero-Intro gilt für die Sitzung (Teil K 1.2), gespeichert wird erst ein Klick.
+          var sitzung = null;
+          try { sitzung = sessionStorage.getItem('heipard-theme-sitzung'); } catch (e) {}
           var theme =
             stored === 'dark' || stored === 'light'
               ? stored
-              : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+              : sitzung === 'dark'
+                ? 'dark'
+                : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
                 ? 'dark'
                 : 'light';
           document.documentElement.setAttribute('data-theme', theme);

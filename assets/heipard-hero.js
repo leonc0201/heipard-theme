@@ -25,6 +25,15 @@
       intro     auch im Tag-Modus läuft „Licht an“ einmal je Sitzung (data-intro="tag"); danach blendet die
                 ganze Seite in die Abendstimmung, ohne die Wahl zu speichern. Am Schalter steht dann
                 „Licht aus“. Läuft der Clip nach 2,5 s nicht, bleibt die Seite im Tag-Modus.
+
+  Teil K, Abschnitt 1.2 (23.11.2026), Tag-Modus intro:
+    Sitzung     Nach dem Intro gilt die Abendstimmung für die Sitzung (sessionStorage heipard-theme-sitzung,
+                layout/theme.liquid liest es vor dem ersten Bild). Dauerhaft speichert nur ein Klick.
+    Ansage      Nach dem Wechsel meldet [data-hero-ansage] (aria-live polite) „Abendstimmung eingeschaltet“.
+    Lesen       Wird vor dem Ende des Clips gescrollt (Hero weniger als halb sichtbar), getippt oder eine Taste
+                gedrückt, wechselt die Seite nicht: Der Hero bleibt auf dem Abendbild, die Seite im Tag-Modus.
+    Ohne Intro  Reduzierte Bewegung, Datensparmodus, kein Clip oder Clip startet nicht in 2,5 s: im Tag-Modus
+                der Hinweis „Licht an?“ (einmal je Sitzung).
 */
 (function () {
   var hero = document.querySelector('[data-heipard-hero]');
@@ -40,11 +49,16 @@
   var video = hero.querySelector('.heipard-hero__clip');
   var INTRO_KEY = 'heipard-hero-intro';
   var HINT_KEY = 'heipard-hero-hinweis';
+  var SESSION_KEY = 'heipard-theme-sitzung';
+  // Lief das Intro schon in dieser Sitzung (vor diesem Aufruf)?
+  var introGesehen = false;
+  try { introGesehen = !!sessionStorage.getItem(INTRO_KEY); } catch (e) {}
 
   // Datensparmodus oder langsame Verbindung (2G/3G, soweit der Browser sie meldet): kein Clip.
   function saveData() {
     var c = navigator.connection;
-    return !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || '')));
+    return !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || ''))) ||
+      window.matchMedia('(prefers-reduced-data: reduce)').matches;
   }
   function blocked() {
     return reduce.matches || saveData() || !video;
@@ -217,6 +231,29 @@
     hint = null;
   }
 
+  // Hinweis „Licht an?“ einmal je Sitzung, nur im Tag-Modus.
+  function hinweisZeigen(delay) {
+    if (root.getAttribute('data-theme') === 'dark') return;
+    var seen = null;
+    try { seen = sessionStorage.getItem(HINT_KEY); } catch (e) {}
+    if (seen) return;
+    onLoad(function () {
+      setTimeout(function () {
+        if (root.getAttribute('data-theme') === 'dark') return;
+        try { sessionStorage.setItem(HINT_KEY, '1'); } catch (e) {}
+        showHint(hero.dataset.textAn, !reduce.matches);
+      }, delay);
+    });
+  }
+
+  // Unsichtbare Ansage (Teil K 1.2): erst leeren, dann setzen, damit Vorleseprogramme sie sicher melden.
+  function ansagen(text) {
+    var box = hero.querySelector('[data-hero-ansage]');
+    if (!box || !text) return;
+    box.textContent = '';
+    setTimeout(function () { box.textContent = text; }, 100);
+  }
+
   // --- Intro auch am Tag (7.3 b): Seite ohne Speichern in die Abendstimmung ---------------------
   var selfSwitch = false;
   var introTag = false;
@@ -227,7 +264,10 @@
       root.setAttribute('data-theme', 'dark');
       var all = document.querySelectorAll('[data-heipard-theme-toggle]');
       for (var i = 0; i < all.length; i++) all[i].setAttribute('aria-pressed', 'true');
+      // Gilt für die Sitzung, nicht dauerhaft (Teil K 1.2).
+      try { sessionStorage.setItem(SESSION_KEY, 'dark'); } catch (e) {}
       showHint(hero.dataset.textAus, false);
+      ansagen(hero.dataset.textAnsage);
     }, 120);
     setTimeout(function () { root.classList.remove('theme-transitioning'); }, 750);
   }
@@ -249,6 +289,8 @@
       return;
     }
     introTag = false;
+    // Hero zeigt schon das Abendbild (Intro beim Lesen, Teil K 1.2): kein Clip „Licht an“ von hell aus.
+    if (t === 'dark' && !running && hero.getAttribute('data-bild') === 'abend') return;
     play(t === 'dark' ? 'on' : 'off', bildFuer(t));
   }).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
 
@@ -266,19 +308,45 @@
       play('on', 'abend');
     });
   } else if (intro === 'tag') {
+    // Lesen erkennen bis zum Ende des Clips (Teil K 1.2): Hero weniger als halb sichtbar, Tippen, Taste.
+    var gelesen = false;
+    var lesen = function () { gelesen = true; };
+    var io = null;
+    document.addEventListener('pointerdown', lesen, true);
+    document.addEventListener('keydown', lesen, true);
+    if ('IntersectionObserver' in window) {
+      io = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) if (entries[i].intersectionRatio < 0.5) lesen();
+      }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+      io.observe(hero);
+    }
+    var aufraeumen = function () {
+      document.removeEventListener('pointerdown', lesen, true);
+      document.removeEventListener('keydown', lesen, true);
+      if (io) io.disconnect();
+    };
     onLoad(function () {
       try { sessionStorage.setItem(INTRO_KEY, '1'); } catch (e) {}
-      if (root.getAttribute('data-theme') === 'dark') return;
+      if (root.getAttribute('data-theme') === 'dark') {
+        aufraeumen();
+        return;
+      }
       introTag = true;
       play('on', 'abend', {
         onEnd: function () {
+          aufraeumen();
           if (!introTag) return;
           introTag = false;
+          // Beim Lesen bleibt die Seite hell, der Hero auf dem Abendbild.
+          if (gelesen) return;
           if (root.getAttribute('data-theme') !== 'dark') pageToDark();
         },
         onFail: function () {
+          aufraeumen();
           introTag = false;
           setBild('tag');
+          // Clip startet nicht in 2,5 s: kein Intro, dafür der Hinweis.
+          hinweisZeigen(0);
         }
       });
     });
@@ -287,17 +355,10 @@
     setBild(bildFuer(last));
   }
 
-  if (tagModus === 'hinweis' && root.getAttribute('data-theme') !== 'dark') {
-    var seenHint = null;
-    try { seenHint = sessionStorage.getItem(HINT_KEY); } catch (e) {}
-    if (!seenHint) {
-      onLoad(function () {
-        setTimeout(function () {
-          if (root.getAttribute('data-theme') === 'dark') return;
-          try { sessionStorage.setItem(HINT_KEY, '1'); } catch (e) {}
-          showHint(hero.dataset.textAn, !reduce.matches);
-        }, 2000);
-      });
-    }
+  if (tagModus === 'hinweis') {
+    hinweisZeigen(2000);
+  } else if (tagModus === 'intro' && !intro && !introGesehen) {
+    // Kein Intro, obwohl es noch nicht lief (reduzierte Bewegung, Datensparmodus, kein Clip): Hinweis.
+    hinweisZeigen(2000);
   }
 })();

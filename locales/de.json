@@ -22,7 +22,8 @@
     },
     "hero": {
       "hinweis_an": "Licht an?",
-      "hinweis_aus": "Licht aus"
+      "hinweis_aus": "Licht aus",
+      "ansage_abend": "Abendstimmung eingeschaltet"
     },
     "clip": {
       "anhalten": "Animation anhalten",

@@ -20,6 +20,10 @@
   Teil I (22.11.2026, Vorschau): Mobil-Fassungen unter 750 px, Tempo normal oder schnell (Einstellung
   tempo, Vorschau ?hero_tempo=), Tag-Modus aus, hinweis oder intro (Einstellung tag_modus, Vorschau
   ?hero_tag=). Ablauf siehe assets/heipard-hero.js.
+
+  Teil K (23.11.2026): Tag-Modus „Intro auch am Tag“ mit Sitzung (sessionStorage heipard-theme-sitzung,
+  gelesen in layout/theme.liquid), Ansage (aria-live), kein Wechsel beim Lesen und Hinweis, wenn kein
+  Intro läuft.
 {% endcomment %}
 
 {%- liquid
@@ -89,6 +93,7 @@
   data-tag="{{ section.settings.tag_modus | default: 'aus' }}"
   data-text-an="{{ 'heipard.hero.hinweis_an' | t | escape }}"
   data-text-aus="{{ 'heipard.hero.hinweis_aus' | t | escape }}"
+  data-text-ansage="{{ 'heipard.hero.ansage_abend' | t | escape }}"
   data-bild="abend"
 >
   {%- if hero_mode != 'aus' -%}
@@ -115,7 +120,8 @@
           var c = navigator.connection;
           var seen = null;
           try { seen = sessionStorage.getItem('heipard-hero-intro'); } catch (e) {}
-          var slow = !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || '')));
+          var slow = !!(c && (c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || ''))) ||
+            window.matchMedia('(prefers-reduced-data: reduce)').matches;
           var ok = !seen && !slow && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
           // Abendstimmung: Intro „Licht an“ (Fassung 3). Tag-Modus nur mit Option intro (7.3 b).
           if (ok && dark) intro = 'abend';
@@ -186,6 +192,8 @@
   <div class="heipard-hero__overlay" aria-hidden="true"></div>
   {%- if hero_mode != 'aus' -%}
     <div class="heipard-hero__overlay heipard-hero__overlay--tag" aria-hidden="true"></div>
+    {%- comment -%} Ansage nach dem Intro am Tag (Teil K 1.2): höflich, unsichtbar. {%- endcomment -%}
+    <p class="visually-hidden" aria-live="polite" data-hero-ansage></p>
   {%- endif -%}
 
   <div class="heipard-hero__inner">
@@ -570,7 +578,7 @@
       "type": "select",
       "id": "tag_modus",
       "label": "Tag-Modus",
-      "info": "Hinweis: im Tag-Modus leuchtet der Schalter einmal je Sitzung mit „Licht an?“. Intro (nur mit „Clip beim ersten Aufruf am Abend“): auch am Tag läuft „Licht an“ einmal, danach wechselt die Seite in die Abendstimmung, ohne die Wahl zu speichern.",
+      "info": "Hinweis: im Tag-Modus leuchtet der Schalter einmal je Sitzung mit „Licht an?“. Intro (nur mit „Clip beim ersten Aufruf am Abend“): auch am Tag läuft „Licht an“ einmal, danach gilt die Abendstimmung für die Sitzung, ohne die Wahl zu speichern. Wird vorher gescrollt, getippt oder eine Taste gedrückt, bleibt die Seite hell. Läuft kein Intro (reduzierte Bewegung, Datensparmodus, Clip startet nicht), erscheint der Hinweis.",
       "options": [
         { "value": "aus", "label": "Aus" },
         { "value": "hinweis", "label": "Hinweis am Schalter" },

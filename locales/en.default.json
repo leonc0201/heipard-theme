@@ -22,7 +22,8 @@
     },
     "hero": {
       "hinweis_an": "Lights on?",
-      "hinweis_aus": "Lights off"
+      "hinweis_aus": "Lights off",
+      "ansage_abend": "Evening mode on"
     },
     "clip": {
       "anhalten": "Pause animation",
