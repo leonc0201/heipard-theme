@@ -128,10 +128,7 @@
 .heipard-clip-knopf__play { display: none; }
 .heipard-clip-knopf.is-paused .heipard-clip-knopf__pause { display: none; }
 .heipard-clip-knopf.is-paused .heipard-clip-knopf__play { display: block; }
-/* Mobil reicht der Banner-Text bis an den rechten Rand: Platz für den Knopf lassen. */
-@media screen and (max-width: 749px) {
-  .heipard-feature__full:has(.heipard-clip-knopf:not([hidden])) .heipard-feature__full-content { padding-right: 6.4rem; }
-}
+/* Teil N 2: Mobil steht der Banner-Text unter dem Bild, der Knopf braucht dort keinen Platz mehr im Text. */
 @media (prefers-reduced-motion: reduce) {
   .heipard-clip-knopf { display: none; }
 }
@@ -169,20 +166,23 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.18) 42%, transparent 72%);
 }
 
-/* Heller Modus (dunkles Bild): heller Overlay-Text (Default) */
-.heipard-feature__full--light .heipard-feature__full-content .heipard-feature__eyebrow { color: var(--heipard-accent-bright); }
-.heipard-feature__full--light .heipard-feature__full-content .heipard-feature__title { color: oklch(0.98 0.01 80); }
-.heipard-feature__full--light .heipard-feature__full-content .heipard-feature__body {
-  color: color-mix(in oklch, oklch(0.98 0.01 80) 82%, transparent);
-}
+/* Overlay-Farben gelten nur, solange der Text auf dem Bild steht (ab 750 px, Teil N 2). */
+@media screen and (min-width: 750px) {
+  /* Heller Modus (dunkles Bild): heller Overlay-Text (Default) */
+  .heipard-feature__full--light .heipard-feature__full-content .heipard-feature__eyebrow { color: var(--heipard-accent-bright); }
+  .heipard-feature__full--light .heipard-feature__full-content .heipard-feature__title { color: oklch(0.98 0.01 80); }
+  .heipard-feature__full--light .heipard-feature__full-content .heipard-feature__body {
+    color: color-mix(in oklch, oklch(0.98 0.01 80) 82%, transparent);
+  }
 
-/* Dunkler Modus (helles Bild): Scrim von oben-hell, dunkler Text */
-.heipard-feature__full--dark .heipard-feature__full-scrim {
-  background: linear-gradient(to top, color-mix(in oklch, var(--background) 82%, transparent) 0%, transparent 60%);
-}
-.heipard-feature__full--dark .heipard-feature__full-content .heipard-feature__title { color: rgb(var(--color-foreground)); }
-.heipard-feature__full--dark .heipard-feature__full-content .heipard-feature__body {
-  color: color-mix(in oklch, rgb(var(--color-foreground)) 72%, transparent);
+  /* Dunkler Modus (helles Bild): Scrim von oben-hell, dunkler Text */
+  .heipard-feature__full--dark .heipard-feature__full-scrim {
+    background: linear-gradient(to top, color-mix(in oklch, var(--background) 82%, transparent) 0%, transparent 60%);
+  }
+  .heipard-feature__full--dark .heipard-feature__full-content .heipard-feature__title { color: rgb(var(--color-foreground)); }
+  .heipard-feature__full--dark .heipard-feature__full-content .heipard-feature__body {
+    color: color-mix(in oklch, rgb(var(--color-foreground)) 72%, transparent);
+  }
 }
 
 .heipard-feature__full-content {
@@ -196,6 +196,35 @@
   max-width: 60rem;
 }
 .heipard-feature__full-content .heipard-feature__body { max-width: 52ch; }
+
+/* Teil N 2 (24.11.2026), B1 mobil: Text unter dem Bild wie bei B2, für alle B1-Blöcke.
+   Gemessen an den zehn hellsten B1-Bildern und ISLW_B1: Ein Verlauf in Token-Farbe hätte hinter dem Kicker
+   über 70 % Deckkraft gebraucht, um 4,5:1 gegen den hellsten Bildpunkt zu erreichen (Bericht Teil N, Abschnitt 2).
+   Desktop bleibt unverändert. Bild, Rundung und Schatten wie die Medien der Bild-Text-Zeilen. */
+@media screen and (max-width: 749px) {
+  .heipard-feature__full {
+    display: grid;
+    gap: clamp(2rem, 4vw, 4rem);
+    border-radius: 0;
+    overflow: visible;
+    isolation: auto;
+    box-shadow: none;
+  }
+  .heipard-feature__full-media {
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow:
+      0 1px 2px color-mix(in oklch, rgb(var(--color-foreground)) 8%, transparent),
+      0 8px 24px -8px color-mix(in oklch, var(--glow) 25%, transparent);
+  }
+  .heipard-feature__full-scrim { display: none; }
+  .heipard-feature__full-content {
+    position: static;
+    padding: 0;
+    max-width: none;
+  }
+}
 
 /* --- Text-Spalte ------------------------------------------------------- */
 .heipard-feature__eyebrow {
