@@ -36,6 +36,14 @@
   R1 mit Bild und Szene geben vor dem Markup <!--fb-split--> aus: die Sektion behandelt den
   Block dann wie eine Bild-Text-Zeile (kein schmales Paar, zählt für den Seitenwechsel).
 
+  Bilder je Variante (Teil M, ISL-Test, 24.11.2026): Trägt die gewählte Variante
+  (product.selected_or_first_available_variant) die Varianten-Metafelder heipard.feature_b1, _b2
+  oder _r1, zeigen B1, B2 und R1 dieses Bild statt des Familienbilds (Vorrang auch vor dem Bild am
+  Block), mit Alt aus feature_b1_alt / _b2_alt / _r1_alt (übersetzbar), sonst Alt der Datei. B1 spielt
+  dann keinen Clip. Hat die Variante mindestens eines der drei Bilder, fallen die Szenen R2/R3 weg
+  (warmweiße Familienszenen). Leere Felder: alles wie bisher. Beim Variantenwechsel holt
+  assets/heipard-variant.js die Sektion mit ?variant= neu, der Tausch läuft also serverseitig.
+
   Parameter: blk, product, index, allow_loud, uid, split_side ('left' | 'right', für R1 mit Bild und Szene),
              slot ('b1' | 'b2' | leer): B1/B2 ohne Bild am Block nehmen das Bild aus feature_b1/_b2
 {%- endcomment -%}
@@ -49,6 +57,11 @@
   endif
   assign types = types | split: ','
   assign notes = ''
+  assign cur_v = product.selected_or_first_available_variant
+  assign v_eigen = false
+  if cur_v.metafields.heipard.feature_b1.value != blank or cur_v.metafields.heipard.feature_b2.value != blank or cur_v.metafields.heipard.feature_r1.value != blank
+    assign v_eigen = true
+  endif
 -%}
 {%- for cur in types -%}
   {%- capture out -%}
@@ -57,6 +70,21 @@
         {%- liquid
           assign img = blk.image.value
           assign vid = blk.video.value
+          assign blk_alt = blk.alt.value
+          # Bild der gewählten Variante (Teil M): hat Vorrang vor Bild und Video am Block.
+          assign v_img = nil
+          if slot == 'b1' and cur == 'fullwidth'
+            assign v_img = cur_v.metafields.heipard.feature_b1.value
+            assign v_alt = cur_v.metafields.heipard.feature_b1_alt.value
+          elsif slot == 'b2' and cur == 'media_text'
+            assign v_img = cur_v.metafields.heipard.feature_b2.value
+            assign v_alt = cur_v.metafields.heipard.feature_b2_alt.value
+          endif
+          if v_img != blank
+            assign img = v_img
+            assign vid = nil
+            assign blk_alt = v_alt | default: v_img.alt
+          endif
           # B1/B2 ohne Bild und Video am Block: Bild aus dem Produkt-Metafeld feature_b1 bzw.
           # feature_b2 (slot kommt aus der Sektion). Auftrag Teil B, 19.11.2026.
           if img == blank and vid == blank
@@ -74,6 +102,9 @@
             assign has_content = true
           endif
           assign m_type = blk.media_type.value | default: 'image'
+          if v_img != blank
+            assign m_type = 'image'
+          endif
           # Clips (Auftrag Teil H, 22.11.2026): video_einmal und video_schleife enden auf dem Bild am
           # Block. Sie gelten deshalb nur, wenn das gezeigte Bild ihr Standbild ist (Bild am Block oder
           # Paar in clip_produktbild, siehe unten), und nur nach dem Theme-Schalter clip_mode (aus, nur
@@ -90,7 +121,7 @@
           assign clip_loop_m = nil
           assign clip_ersatz = false
           assign clip_bild_ok = false
-          if m_type != 'video' and img != blank
+          if m_type != 'video' and img != blank and v_img == blank
             if blk.image.value != blank
               assign clip_bild_ok = true
             else
@@ -140,7 +171,7 @@
                 endif
               endif
             endif
-            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk.alt.value, clip_once: clip_once, clip_loop: clip_loop, clip_once_m: clip_once_m, clip_loop_m: clip_loop_m, clip_ersatz: clip_ersatz
+            render 'heipard-feature-block', layout: cur, media_type: m_type, image: img, video: vid, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: blk.media_side.value, overlay_theme: blk.overlay_theme.value, variant: blk.variant.value, alt: blk_alt, clip_once: clip_once, clip_loop: clip_loop, clip_once_m: clip_once_m, clip_loop_m: clip_loop_m, clip_ersatz: clip_ersatz
           endif
         -%}
       {%- when 'text' -%}
@@ -148,12 +179,18 @@
           # R1 mit Bild (Block-Bild, sonst Produkt-Metafeld feature_r1): Bild-Text-Zeile wie B2,
           # Seite kommt aus der Sektion (split_side). Ohne Bild schmaler Text wie bisher.
           assign r1_img = blk.image.value
+          assign r1_alt = blk.alt.value
+          assign r1_v = cur_v.metafields.heipard.feature_r1.value
+          if r1_v != blank
+            assign r1_img = r1_v
+            assign r1_alt = cur_v.metafields.heipard.feature_r1_alt.value | default: r1_v.alt
+          endif
           if r1_img == blank
             assign r1_img = product.metafields.heipard.feature_r1.value
           endif
           if r1_img != blank
             echo '<!--fb-split-->'
-            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: r1_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'r1', alt: blk.alt.value
+            render 'heipard-feature-block', layout: 'media_text', media_type: 'image', image: r1_img, kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value, index: index, media_side: split_side, variant: 'r1', alt: r1_alt
           else
             render 'heipard-fb-text', kicker: blk.kicker.value, title: blk.title.value, body: blk.body.value
           endif
@@ -168,11 +205,16 @@
           # am Block, Bild-Text-Zeile wie B2 (Klasse heipard-feature__row--zusatz). Ohne Bild kein Markup.
           assign sz_img = ''
           assign sz_variant = 'szene'
+          # Teil M: Varianten mit eigenen Bildern (v_eigen) zeigen keine Familienszenen R2/R3.
           case blk.variant.value
             when 'r2'
-              assign sz_img = product.metafields.heipard.feature_r2.value
+              unless v_eigen
+                assign sz_img = product.metafields.heipard.feature_r2.value
+              endunless
             when 'r3'
-              assign sz_img = product.metafields.heipard.feature_r3.value
+              unless v_eigen
+                assign sz_img = product.metafields.heipard.feature_r3.value
+              endunless
             else
               assign sz_img = blk.image.value
               assign sz_variant = 'zusatz'
