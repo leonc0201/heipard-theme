@@ -19,7 +19,7 @@ genauen Werte DE und EN stehen in den genannten Listen im Repo.
 | DPT-Texte ohne Lichtfarbe | Metaobjekt `feature_block` dpt-b1 (Kicker, Text), Metaobjekt `feature_set` dpt (Überschrift) | 3 Felder DE geändert, EN neu | `teiln-5-dpt-scwl-texte.csv` |
 | EN neu an DPT und SCWL | dpt-b1 Titel, dpt-b2 Kicker/Titel/Text, scwl-b1 Kicker/Titel/Text, Sets dpt und scwl Kicker und Überschrift | 11 Felder | `teiln-5-dpt-scwl-texte.csv` |
 | EN für Feature-Blöcke und Set-Überschriften (Abschnitt 4) | Metaobjekte `feature_block` (Kicker, Überschrift, Text) und `feature_set` (Kicker, Überschrift) | 522 Felder an 203 Metaobjekten | `teiln-en-bloecke.csv` |
-<!-- WBF -->
+| WBF-Blöcke (Abschnitt 6) | Metaobjekte `feature_block` wbf-b1 und wbf-b2 (Alt), wbf-r1 (Überschrift, Text, Alt), neu wbf-r2 und wbf-r3 (Überschrift, Text, Alt) | 11 Felder DE neu oder geändert, EN neu | `teiln-6-wbf.csv` |
 
 ## Hinweise
 

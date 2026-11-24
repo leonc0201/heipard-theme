@@ -24,9 +24,16 @@ oder Tyler.
   - 522 EN-Felder an Blöcken und Set-Überschriften sind geschrieben und auf allen 116 EN-Seiten geprüft.
   - Sechs deutsche Texte sind falsch oder nicht belegt und deshalb nicht übersetzt.
   - Fragen: 169 ohne EN, rund 2.200 Wörter, deine Entscheidung.
-- **5 DPT und SCWL:** „vorher“ ist erledigt (dpt-b1 und Set dpt neutral, EN ergänzt), die Asset-Instanz hat Bescheid.
-  „Nachher“ wartet auf die C6-Bilder.
-- **6 WBF:** wartet auf die C6-Bilder (laut Asset-Instanz noch nicht abgelegt und nicht freigegeben).
+- **5 DPT und SCWL:**
+  - „Vorher“: dpt-b1 und Set dpt nennen keine Lichtfarbe mehr, EN ergänzt.
+  - „Nachher“ nach den C6-Bildern der Asset-Instanz (20:39): 88 Prüfungen ohne Fehler. Bunt zeigt die neuen Bilder,
+    Warmweiß die Familienbilder. Der Wechsel hin und zurück und der Längenwechsel in Bunt stimmen, DE und EN, Desktop
+    und mobil.
+- **6 WBF:** fertig seit 20:45.
+  - Die Blöcke trugen selbst noch die Bilder der weißen Birke, die Vorrang vor den Produktfeldern haben. Diese
+    Blockbilder habe ich geleert.
+  - Alts aus Notion, wbf-r1 neu getextet, wbf-r2 und wbf-r3 neu und im Set.
+  - Auf hp-wbf-180 und -210 nirgends mehr weiße Birke, jedes Bild einmal.
 - **7 Filter:** wartet auf deinen Bescheid.
 
 ## Zeitleiste
@@ -50,6 +57,12 @@ oder Tyler.
 | 19:07 | `3c4f2ef` Vollzählung EN und Liste der 522 EN-Felder (vor dem Schreiben) |
 | 19:08 bis 19:19 | 522 EN-Übersetzungen geschrieben, bis 19:23 zurückgelesen (alle gleich) |
 | ca. 19:23 bis 19:26 | Storefront-Gegenprobe, 116 EN-Seiten |
+| 20:38 bis 20:40 | Asset-Instanz setzt C6: WBF-Produktfelder, Variantenfelder DPT/SCWL (ihre Meldung) |
+| ca. 20:42 | Gegenprobe hp-wbf-180: B1, B2 und R1 zeigen noch WWF, weil das Bild am Block Vorrang hat (Befund 6) |
+| 20:44 | `4bc943c` WBF-Liste vorher und nachher (vor dem Schreiben) |
+| 20:44:31 bis 20:45 | WBF-Blöcke, Set wbf, 13 EN-Übersetzungen |
+| ca. 20:45 bis 20:47 | Storefront-Prüfung WBF (8 Ansichten), Kontaktbogen, Bescheid an die Asset-Instanz |
+| ca. 20:48 bis 20:55 | Storefront-Prüfung DPT und SCWL, 88 Prüfungen, Kontaktbögen |
 
 ## 1 ISL live
 
@@ -318,14 +331,71 @@ Fortgeführt: `docs/data/teiln-liste-daniel-es-fr-it.md` (alle Stellen aus Teil 
 
 ## 5 DPT und SCWL: nachher
 
-Wartet auf die C6-Bilder. Sobald die Asset-Instanz die Werte an HP-DPT-200M, HP-DPT-400M, HP-SCWL-10M2P-MC und
-HP-SCWL-15M2P-MC meldet, prüfe ich wie bei ISL (hp-dpt-300 und beide SCWL-Produkte, je Lichtfarbe, DE und EN, Desktop und
-mobil, Wechsel hin und zurück, bei DPT ein Längenwechsel in Bunt) und ergänze diesen Abschnitt mit Kontaktbogen.
+Die Asset-Instanz hat um 20:39 die Variantenfelder `feature_b1`, `_b2` und `_r1` mit Alts DE und EN an HP-DPT-200M,
+HP-DPT-400M, HP-SCWL-10M2P-MC und HP-SCWL-15M2P-MC gesetzt. Ich habe ca. 20:48 bis 20:55 an der echten Storefront
+geprüft und dafür nichts geschrieben.
+
+- **Jede Variante direkt** (`?variant=`): hp-dpt-300 mit allen 6 Varianten, hp-scwl-10m2p-mc und hp-scwl-15m2p-mc mit
+  je 2, DE und EN, Desktop und mobil (40 Seiten).
+  - Bunt (DPT 20 m und 40 m, SCWL Multicolor): B1, B2 und R1 zeigen DPTM_B1_01, _B2_01 und _R1_01 bzw. SCWLM_B1_01,
+    _B2_01 und _R1_01, mit den Alts der Variante (DE „bunt“, EN „multicolor“). R2 und R3 fallen weg, wie bei ISL.
+  - Warmweiß: die Familienbilder DPT_ bzw. SCWL_ B1, B2, R1, R2 und R3 wie bisher, kein buntes Bild.
+- **Wechsel auf der Seite** (Klick, die Sektion lädt neu), DE und EN, Desktop und mobil:
+  - DPT: 30 m Warmweiß, dann 20 m Warmweiß, 20 m Bunt, 40 m Bunt (Längenwechsel in Bunt), 20 m Bunt und zurück auf
+    20 m Warmweiß. Jeder Schritt zeigt die passenden Bilder, und die Adresse trägt die richtige Variante.
+  - SCWL (beide): Bunt (Startvariante), Warmweiß und zurück auf Bunt.
+- **Ergebnis:** 88 Prüfungen ohne Fehler.
+  - Richtige Bilder, kein Bild doppelt, kein Überlauf, keine Gedankenstriche.
+  - Titel und Alts sind auf EN englisch. Deutsch steht auf EN nur in den Fragen (z. B. „Welche Längen gibt es?“), das
+    ist der Stand aus 4.3.
+- **Kontaktbögen:** `docs/data/teiln-dpt-scwl-desktop.jpg` (DE, Desktop) und `docs/data/teiln-dpt-scwl-mobil.jpg` (EN,
+  mobil), je Schritt der Klickfolge B1, B2 und R1.
+- **Zur Kenntnis, nicht geändert:**
+  - dpt-b2 sagt nach der Längenregel „Es gibt sie mit 30 m oder 60 m“. Das steht auch bei 20 m und 40 m in Bunt.
+  - In DPTM_R1_01 (Dachterrasse) sind die bunten Lichter nur schwach zu sehen. Der Text beschreibt die Kette am
+    Geländer und an der Pergola.
+- **Rückweg:** liegt bei der Asset-Instanz (Variantenfelder per `metafieldsDelete`). Für „nachher“ habe ich am Theme und
+  an den Blöcken nichts geändert.
 
 ## 6 WBF
 
-Wartet auf die C6-Bilder. Danach in einem Zug: Alts wbf-b1 und wbf-b2 aus Notion, wbf-r1 neu getextet, neue Blöcke wbf-r2
-und wbf-r3 (Aufbau wie wwf-r2/-r3), im Set wbf wwf-r2/-r3 durch wbf-r2/-r3 ersetzt, Prüfung an hp-wbf-180 und -210.
+Die Asset-Instanz hat die C6-Bilder um 20:38 bis 20:40 in die Produktfelder `feature_b1` bis `feature_r3` von hp-wbf-180
+und -210 gesetzt. Meine Liste: `docs/data/teiln-6-wbf.csv` (Commit `4bc943c`, vor dem Schreiben). Geschrieben 20:44 bis
+20:45.
+
+- **Befund vor dem Schreiben:**
+  - wbf-b1, wbf-b2 und wbf-r1 trugen am Block selbst ein Bild: WWF_B1_01, WWF_B2_04 und das WWF-R1-Bild, alle mit
+    weißer Birke.
+  - Das Bild am Block hat im Theme Vorrang vor den Produktfeldern. Um 20:43 zeigte hp-wbf-180 deshalb bei B1, B2 und R1
+    noch die weiße Birke, obwohl die Produktfelder schon auf WBF standen.
+  - Ich habe das Feld `image` an den drei Blöcken geleert. Damit kommt das Bild nur noch aus den Produktfeldern der
+    Asset-Instanz. Ich habe kein Bild ausgewählt, nur den Verweis entfernt, die Dateien bleiben in Files. Ohne diesen
+    Schritt war das Ziel aus 6 (nirgends weiße Birke) nicht erreichbar. Die Asset-Instanz weiß Bescheid.
+- **Alts:**
+  - wbf-b1 und wbf-b2 aus Notion (WBF-B1, WBF-B2, beide „Freigegeben“), DE und EN.
+  - wbf-r1, wbf-r2 und wbf-r3 ebenso aus Notion (WBF-R1 bis R3). Der alte R1-Alt beschrieb den Flur mit Haustür und
+    Holzbank und hätte nicht mehr zum Bild gepasst.
+- **wbf-r1:** Überschrift und Text nach dem Auftrag, DE und EN.
+- **Neu wbf-r2 und wbf-r3:**
+  - Aufbau wie wwf-r2/-r3: Layout szene, Variante r2 bzw. r3, Label „WBF · R2 Szene (Szenentext, kein Fakt)“ bzw. R3.
+  - Texte nach dem Auftrag, DE und EN.
+  - IDs `gid://shopify/Metaobject/506587218253` (r2) und `…506587251021` (r3).
+- **Set wbf:** Stelle 4 und 5 sind jetzt wbf-r2 und wbf-r3, sonst gleiche Reihenfolge (20:44:42). WWF behält wwf-r2 und
+  wwf-r3.
+- **Prüfung an der echten Storefront:** hp-wbf-180 und -210, DE und EN, Desktop und mobil, 8 Ansichten.
+  - B1 WBF_B1_01, B2 WBF_B2_01, R1 WBF_R1_01, R2 WBF_R2_01, R3 WBF_R3_01, jedes Bild einmal, Alts wie in Notion.
+  - Auf der ganzen Seite kein WWF-Bild. Die Galerie (GAL_04 bis _06) überschneidet sich nicht mit den Feature-Bildern.
+  - EN ohne deutschen Text, kein Überlauf, keine Gedankenstriche.
+  - Kontaktbogen `docs/data/teiln-wbf.jpg`.
+- **Nebenbei gesehen, nicht geändert:**
+  - Die Serienleiste heißt auf WBF „Dieselbe Lichterkette in anderer Länge“ (EN „The same string lights in another
+    length“), obwohl es ein Lichterbaum in zwei Höhen ist.
+  - Die Pflegehinweise beginnen mit „Lichtfiguren mit Erdspieß“.
+  - Beides war schon vorher so.
+- **Rückweg:**
+  - Feld `image` an wbf-b1, -b2 und -r1 zurück auf 66490098712909, 66490098745677 und 66775730553165.
+  - Alts und Texte von wbf-r1 auf die Spalte „vorher“.
+  - Set wbf an Stelle 4 und 5 zurück auf wwf-r2/-r3. wbf-r2/-r3 können dann ungenutzt stehen bleiben.
 
 ## 7 Lichtfarben-Filter
 
@@ -349,6 +419,7 @@ wie die Grundlinie.
 | `570eba2` | 18:49 | Doku Messung B1, Kontaktbögen |
 | `3c4f2ef` | 19:07 | Doku EN-Zählung und EN-Liste (vor dem Schreiben) |
 | `5fe0a74` | 19:26 | Bericht Zwischenstand, Liste für Daniel |
+| `4bc943c` | 20:44 | Doku WBF-Blöcke vorher und nachher (vor dem Schreiben) |
 
 ## Rückweg im Überblick
 
@@ -358,6 +429,11 @@ wie die Grundlinie.
 - Werte 3.1, 3.3, 3.4: Spalte „vorher“ in `docs/data/teiln-werte-3.csv`; Text hp-isl-486: `teiln-texte-isl486.csv`.
 - DPT-Texte: Spalte „vorher“ in `teiln-5-dpt-scwl-texte.csv`.
 - EN an Blöcken und Sets: die 522 Übersetzungen aus `teiln-en-bloecke.csv` mit `translationsRemove` löschen.
+- WBF:
+  - Feld `image` an wbf-b1, -b2 und -r1 zurück auf die IDs in `teiln-6-wbf.csv`.
+  - Alts und Texte von wbf-r1 auf die Spalte „vorher“.
+  - Set wbf an Stelle 4 und 5 zurück auf wwf-r2/-r3.
+- Bilder DPT, SCWL und WBF: Asset-Instanz (Auftrag 34).
 
 ## Offen bei dir
 
@@ -372,4 +448,8 @@ wie die Grundlinie.
 5. **Set-Überschriften EN:** 120 Übersetzungen mitgeschrieben (Begründung in 4.2). Bleiben sie?
 6. **hp-isl-486, Zuleitung Warmweiß:** Die Gesamtlängen rechnen mit 3 m. Bleibt die Frage nach 3 oder 5 m in Tylers Mail
    (Asset-Instanz)?
-7. **C6-Bilder:** Für 5 „nachher“ und 6 brauche ich die freigegebenen C6-Bilder in `00_inbox/hermes/c6/`.
+7. **Serienleiste bei Lichterbäumen (aus 6):** Die Überschrift ist ein fester Theme-Text für alle Serien: „Dieselbe
+   Lichterkette in anderer Länge“, EN „The same string lights in another length“. Auf WBF steht das über einem
+   Lichterbaum in zwei Höhen. Soll ich die Überschrift je Produktart anpassen, oder bleibt sie?
+8. **DPTM_R1_01 (aus 5):** Die bunten Lichter sind auf der Dachterrasse nur schwach zu sehen. Reicht dir das, oder soll
+   die Asset-Instanz ein neues Bild machen?
