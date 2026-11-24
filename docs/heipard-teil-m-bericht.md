@@ -22,8 +22,8 @@ Alle Zeiten deutsche Zeit. Vor jedem Schreibzugriff `get-shop-info` = HeiPard. N
 - **1.12 Familienleiste:** Modelle mit Längen nur an den Varianten zeigen die Spanne „30 bis 100 m“ und stehen nach der
   kürzesten Länge. Live seit 13:29 (`5e1b693`).
 - **Abschnitt 2 ISL:**
-  - Datenmodell steht, Code im Vorschau-Theme (`a27bbfb`), Technik mit Testwerten geprüft.
-  - Es fehlen die Bilder aus Lauf C5. Die Asset-Instanz hatte sie bis 13:33 nicht.
+  - Mit den C5-Bildern im Vorschau-Theme geprüft: 36 Seiten und 9 Wechselläufe, alles bestanden. Kontaktbögen liegen bei.
+  - Live erst nach deinem Blick (Branch `teilm/isl-varianten`, `a27bbfb`).
   - Das fehlende EN der ISL-Blöcke B1, B2 und R1 ist ergänzt.
 - **1.10:** Liste für Daniel fortgeführt (`docs/data/teilm-liste-daniel-es-fr-it.md`).
 - **Abschnitt 4:** wartet auf deine Umstellung des Filters.
@@ -44,6 +44,9 @@ Alle Zeiten deutsche Zeit. Vor jedem Schreibzugriff `get-shop-info` = HeiPard. N
 | 13:32 | `a27bbfb` ISL-Code auf Branch `teilm/isl-varianten`, nur im Vorschau-Theme |
 | ca. 13:33 bis 13:35 | Technik-Test an HP-ISL-360W mit Testwerten, danach gelöscht |
 | 13:36 | `99f7a53`, dann EN der ISL-Blöcke B1, B2, R1 |
+| 13:37 bis 13:40 | 82 Seiten nachgeladen (live) |
+| 14:09 bis 14:10 | Asset-Instanz setzt die C5-Werte an den 14 ISL-Varianten, mit EN |
+| 14:12 bis 14:29 | ISL-Prüfung im Vorschau-Theme, Kontaktbögen |
 
 ## 3 Alt-Text CSL300C-G1 (Block B1)
 
@@ -212,13 +215,39 @@ war informiert.
 - **Befund:** An isl-b1, isl-b2 und isl-r1 fehlte EN für Kicker, Überschrift und Text. Die englische Seite zeigte dort
   Deutsch. Ergänzt um 13:36, Liste `docs/data/teilm-isl-blocktexte-en.csv`.
 
-### Was noch fehlt
+### Prüfung mit den Bildern aus Lauf C5
 
-Die Bilder aus Lauf C5. Sobald die Asset-Instanz die Werte und das EN gesetzt hat, folgen:
-- Prüfung im Vorschau-Theme: hp-isl-264, hp-isl-360-eu und hp-isl-486, je Lichtfarbe, DE und EN, Desktop und mobil,
-  Wechsel hin und zurück.
-- Der Kontaktbogen.
-- Danach dein Blick, erst dann geht es live (Merge von `teilm/isl-varianten` auf `main`).
+**Werte der Asset-Instanz:**
+- 14:09 bis 14:10: 84 Werte an den 14 Varianten, ISLW_* und ISLM_*, B1 2800 × 1200, B2 und R1 2048 × 1152.
+- Alt DE aus Notion, EN als Übersetzung am Metafeld (42).
+- Die Dateien stehen in keiner Galerie.
+
+**Geprüft im Vorschau-Theme, 14:12 bis 14:29:**
+- 36 Aufrufe: hp-isl-264, hp-isl-360-eu, hp-isl-486, je Lichtfarbe, DE und EN, Desktop und mobil.
+- 9 Wechselläufe Warmweiß → Kaltweiß → Bunt → Warmweiß: 6 in DE mobil, 3 in EN Desktop. Die Läufe auf DE habe ich
+  wiederholt, weil im ersten Lauf das Testskript „Kaltweiß“ falsch kodiert hatte (Fehler im Skript, nicht auf der Seite).
+- Ergebnis, alle Prüfungen bestanden:
+  - B1, B2 und R1 zeigen je Lichtfarbe das richtige Bild.
+  - Der Alt nennt die Lichtfarbe, auf EN englisch („cool white“, „multicolor“).
+  - Der Clip läuft nur bei Warmweiß. R2 und R3 erscheinen nur bei Warmweiß.
+  - Kein Bild steht doppelt auf der Seite. Kein Überlauf, kein Gedankenstrich.
+  - Die Blockhöhen sind bei allen drei Lichtfarben gleich: Desktop 557 / 354 / 354 px, mobil 270 / 427 / 402 px. Beim
+    Wechsel springt nichts.
+- Kontaktbögen (B1, B2, R1 je Produkt und Lichtfarbe):
+  - `docs/data/teilm-isl-desktop.jpg`
+  - `docs/data/teilm-isl-mobil.jpg`
+  - `docs/data/teilm-isl-mobil-en.jpg`
+- Aufnahmen ohne Cookie-Hinweis und Vorschauleiste.
+
+**Befund Lesbarkeit B1 mobil:** Auf dem Handy liegen Kicker und Überschrift von B1 im oberen Bilddrittel. Beim kaltweißen
+Bild (ISLW_B1_01) sitzen dort die hellen Eiszapfen. „AM HAUS“ und die erste Zeile der Überschrift sind darauf schlecht
+lesbar, siehe `teilm-isl-mobil.jpg`. Warm und bunt sind lesbar, Desktop ist überall sauber. Zwei Wege (Frage 5):
+- (a) Für B1 auf dem Handy einen stärkeren Verlauf hinter dem Text. Das gilt dann für alle B1-Blöcke im Shop.
+- (b) Ein eigener Bildausschnitt für mobil aus dem 16:9-Master (ISLW_B1_MASTER liegt in Files), mit dunklerem oberen Rand.
+
+**Live geht der Test erst nach deinem Blick** (Merge von `teilm/isl-varianten` auf `main`). Bis dahin zeigt die Storefront
+weiter die warmweißen Familienbilder, das Live-Theme liest die Variantenfelder noch nicht. Für DPT und SCWL braucht es
+danach nur Bilder und Werte, der Code gilt für alle Produkte.
 
 **Rückweg:** Variantenfelder leeren, dann gilt wieder das Familienbild. Code: `git revert a27bbfb` (ist noch nicht auf
 `main`).
@@ -302,4 +331,12 @@ und prüfe die Kollektionsfilter DE und EN.
    - Und `led_anzahl` der W-Variante von 200 auf 210, wie die Tafel?
 4. **EN an Blöcken und Fragen:** Soll ich eine Vollzählung machen und die fehlenden EN-Texte ergänzen? Dann als eigener
    Auftrag, mit Liste vorher.
-5. **ISL-Test:** Ansehen, sobald die C5-Bilder gesetzt sind und der Kontaktbogen da ist (ich melde mich).
+5. **ISL-Test:** Bitte die Kontaktbögen ansehen (oder das Vorschau-Theme #199733903693, zum Beispiel hp-isl-360-eu mit
+   Kaltweiß). Mit deinem Ja gehe ich live, danach DPT und SCWL nach deiner Entscheidung. Dazu die Lesbarkeit von B1 mobil
+   bei Kaltweiß: Weg (a) stärkerer Verlauf für alle B1 oder (b) eigener Mobil-Ausschnitt?
+6. **WBF (Befund der Asset-Instanz, Auftrag 33 Abschnitt 5):**
+   - Die Galerien von hp-wbf-180 und -210 zeigen jetzt die schwarze Birke.
+   - Die Feature-Bilder B1, B2, R1, R2 und R3 sind aber Bilder der weißen Birke (WWF, Alt „mit weißem Stamm“).
+   - Die Seite zeigt damit oben schwarze und unten weiße Birken.
+   - Sollen WBF eigene Feature-Bilder bekommen? Die 16:9-Originale der drei neuen Szenen liegen bei der Asset-Instanz
+     (c4b). Bis dahin ändere ich nichts.
