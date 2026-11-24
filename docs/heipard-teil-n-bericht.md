@@ -47,7 +47,7 @@ oder Tyler.
 | 18:37 | `cb59920` B1 mobil auf Branch `teiln/b1-mobil`, ins Vorschau-Theme |
 | ca. 18:46 bis 18:48 | Kontaktbögen vorher und nachher, Desktop-Vergleich, Clip-Block |
 | 18:49 | `main` vorgespult, live seit 18:49:38, Gegenprobe an der Storefront |
-| 19:03 | `3c4f2ef` Vollzählung EN und Liste der 522 EN-Felder (vor dem Schreiben) |
+| 19:07 | `3c4f2ef` Vollzählung EN und Liste der 522 EN-Felder (vor dem Schreiben) |
 | 19:08 bis 19:19 | 522 EN-Übersetzungen geschrieben, bis 19:23 zurückgelesen (alle gleich) |
 | ca. 19:23 bis 19:26 | Storefront-Gegenprobe, 116 EN-Seiten |
 
@@ -347,7 +347,7 @@ wie die Grundlinie.
 | `c90f461` | 18:31 | Doku DPT/SCWL-Texte (vor dem Schreiben) |
 | `cb59920` | 18:37 | B1 mobil: Text unter dem Bild |
 | `570eba2` | 18:49 | Doku Messung B1, Kontaktbögen |
-| `3c4f2ef` | 19:03 | Doku EN-Zählung und EN-Liste (vor dem Schreiben) |
+| `3c4f2ef` | 19:07 | Doku EN-Zählung und EN-Liste (vor dem Schreiben) |
 | `5fe0a74` | 19:26 | Bericht Zwischenstand, Liste für Daniel |
 
 ## Rückweg im Überblick
