@@ -1,0 +1,129 @@
+﻿Produkt;SKU;Ebene;Ressource;Feld;vorher;nachher;Sicherheit;Regel
+hp-ol-st38-15;HP-OL-ST38-15;Produkt;gid://shopify/Product/10812088418637;beleuchtete_laenge_m;(leer);7.35;gerechnet;1.1 Regel 1
+hp-ol-st38-25;HP-OL-ST38-25;Produkt;gid://shopify/Product/10812088451405;beleuchtete_laenge_m;(leer);12.0;gerechnet;1.1 Regel 1
+hp-ol-st38-30;HP-OL-ST38-30;Produkt;gid://shopify/Product/10812088484173;beleuchtete_laenge_m;(leer);16.8;gerechnet;1.1 Regel 1
+hp-ola-s14-30-eu;HP-OLA-S14-30-EU;Produkt;gid://shopify/Product/10812088648013;beleuchtete_laenge_m;(leer);16.8;gerechnet;1.1 Regel 1
+hp-ola-s14-50-eu;HP-OLA-S14-50-EU;Produkt;gid://shopify/Product/10812089008461;beleuchtete_laenge_m;(leer);27.0;gerechnet;1.1 Regel 1
+hp-ol-st38-15;HP-OL-ST38-15;Produkt;gid://shopify/Product/10812088418637;zuleitung_m;(leer);2.5;Tafel;1.1 Regel 3
+hp-ol-st38-25;HP-OL-ST38-25;Produkt;gid://shopify/Product/10812088451405;zuleitung_m;2.5;3.0;Tafel;1.1 Regel 3
+hp-ol-st38-30;HP-OL-ST38-30;Produkt;gid://shopify/Product/10812088484173;zuleitung_m;2.5;3.0;Tafel;1.1 Regel 3
+hp-ol-s11-15;HP-OL-S11-15;Produkt;gid://shopify/Product/10812087238989;beleuchtete_laenge_m;10.0;7.0;Tafel;1.1 Regel 3
+hp-ol-s11-15;HP-OL-S11-15;Produkt;gid://shopify/Product/10812087238989;zuleitung_m;2.5;3.0;Tafel;1.1 Regel 3
+hp-ol-s11-15;HP-OL-S11-15;Produkt;gid://shopify/Product/10812087238989;gesamtlaenge_m;12.5;10.0;Tafel;1.1 Regel 3
+hp-bsl-100-1p;HP-BSL-100-1P;Produkt;gid://shopify/Product/10812085535053;beleuchtete_laenge_m;(leer);10.0;Tafel;1.1 Regel 3
+hp-bsl-100-2p;HP-BSL-100-2P;Produkt;gid://shopify/Product/10812085567821;beleuchtete_laenge_m;(leer);10.0;Tafel;1.1 Regel 3
+hp-bsl-100-1p;HP-BSL-100-1P;Produkt;gid://shopify/Product/10812085535053;gesamtlaenge_m;10.0;10.2;Summe;1.1 Regel 2
+hp-bsl-100-2p;HP-BSL-100-2P;Produkt;gid://shopify/Product/10812085567821;gesamtlaenge_m;10.0;10.2;Summe;1.1 Regel 2
+hp-isl-486;HP-ISL-486;Variante;gid://shopify/ProductVariant/54933441806669;beleuchtete_laenge_m;(leer);12.15;Tafel;1.1 Regel 3
+hp-isl-486;HP-ISL-486W;Variante;gid://shopify/ProductVariant/54933441839437;beleuchtete_laenge_m;(leer);12.15;Bildtext;1.1 Regel 3
+hp-isl-486;HP-ISL-648W;Variante;gid://shopify/ProductVariant/54933441937741;beleuchtete_laenge_m;(leer);16.2;Bildtext;1.1 Regel 3
+hp-isl-486;HP-ISL-486;Variante;gid://shopify/ProductVariant/54933441806669;zuleitung_m;(leer);3.0;Tafel (Tyler);1.1 Regel 3
+hp-isl-486;HP-ISL-648;Variante;gid://shopify/ProductVariant/54933441904973;zuleitung_m;(leer);3.0;Tafel (Tyler);1.1 Regel 3
+hp-isl-486;HP-ISL-486W;Variante;gid://shopify/ProductVariant/54933441839437;zuleitung_m;(leer);5.0;Tafel (Tyler);1.1 Regel 3
+hp-isl-486;HP-ISL-486M;Variante;gid://shopify/ProductVariant/54933441872205;zuleitung_m;(leer);5.0;Tafel (Tyler);1.1 Regel 3
+hp-isl-486;HP-ISL-648W;Variante;gid://shopify/ProductVariant/54933441937741;zuleitung_m;(leer);5.0;Tafel (Tyler);1.1 Regel 3
+hp-isl-486;HP-ISL-648M;Variante;gid://shopify/ProductVariant/54933441970509;zuleitung_m;(leer);5.0;Tafel (Tyler);1.1 Regel 3
+hp-isl-486;HP-ISL-486;Variante;gid://shopify/ProductVariant/54933441806669;gesamtlaenge_m;12.15;(geleert);geleert, nachweislich falsch;1.1 Regel 5
+hp-isl-486;HP-ISL-486W;Variante;gid://shopify/ProductVariant/54933441839437;gesamtlaenge_m;12.15;(geleert);geleert, nachweislich falsch;1.1 Regel 5
+hp-isl-486;HP-ISL-486M;Variante;gid://shopify/ProductVariant/54933441872205;gesamtlaenge_m;12.15;(geleert);geleert, nachweislich falsch;1.1 Regel 5
+hp-isl-486;HP-ISL-648;Variante;gid://shopify/ProductVariant/54933441904973;gesamtlaenge_m;16.2;(geleert);geleert, nachweislich falsch;1.1 Regel 5
+hp-isl-486;HP-ISL-648W;Variante;gid://shopify/ProductVariant/54933441937741;gesamtlaenge_m;16.2;(geleert);geleert, nachweislich falsch;1.1 Regel 5
+hp-isl-486;HP-ISL-648M;Variante;gid://shopify/ProductVariant/54933441970509;gesamtlaenge_m;16.2;(geleert);geleert, nachweislich falsch;1.1 Regel 5
+hp-olt-150;HP-OLT-150;Produkt;gid://shopify/Product/10812089860429;beleuchtete_laenge_m;(leer);15.0;Bild;1.1 Regel 3
+hp-olt-800;HP-OLT-800;Produkt;gid://shopify/Product/10812090188109;beleuchtete_laenge_m;(leer);80.0;Bild;1.1 Regel 3
+hp-olt-150;HP-OLT-150;Produkt;gid://shopify/Product/10812089860429;gesamtlaenge_m;15.0;18.0;Summe;1.1 Regel 2
+hp-olt-400;HP-OLT-400;Produkt;gid://shopify/Product/10812089925965;gesamtlaenge_m;40.0;43.0;Summe;1.1 Regel 2
+hp-olt-800;HP-OLT-800;Produkt;gid://shopify/Product/10812090188109;gesamtlaenge_m;80.0;83.0;Summe;1.1 Regel 2
+hp-olg-200;HP-OLG-200;Produkt;gid://shopify/Product/10812089041229;gesamtlaenge_m;(leer);23.0;Summe;1.1 Regel 2
+hp-rgb-500a;HP-RGB-500A;Produkt;gid://shopify/Product/10929059561805;beleuchtete_laenge_m;(leer);50.0;Tafel;1.3 / Regel 3
+hp-vit-586l-eu-1;HP-VIT-586L-EU-1;Produkt;gid://shopify/Product/10812092776781;beleuchtete_laenge_m;(leer);15.0;Bildtext;1.1 Regel 3
+hp-vit-864l-eu-1;HP-VIT-864L-EU-1;Produkt;gid://shopify/Product/10812092809549;gesamtlaenge_m;(leer);26.6;Summe;1.1 Regel 2
+hp-tpm-400-eu-1;HP-TPM-400;Variante;gid://shopify/ProductVariant/54529999929677;gesamtlaenge_m;(leer);7.0;Summe;1.1 Regel 2
+hp-ctl-180;HP-CTL-180;Produkt;gid://shopify/Product/10812085764429;gesamtlaenge_m;(leer);4.5;Summe;1.1 Regel 2
+hp-ctl-180m;HP-CTL-180M;Produkt;gid://shopify/Product/10929058218317;gesamtlaenge_m;(leer);4.5;Summe;1.1 Regel 2
+hp-ctl-210-eu-1;HP-CTL-210-EU-1;Produkt;gid://shopify/Product/10812085797197;gesamtlaenge_m;(leer);4.5;Summe;1.1 Regel 2
+hp-ctl-210-eu-1;HP-CTL-210M-EU-1;Produkt;gid://shopify/Product/10812085797197;gesamtlaenge_m;(leer);4.5;Summe;1.1 Regel 2
+hp-ctl-240;HP-CTL-240;Produkt;gid://shopify/Product/10812086157645;gesamtlaenge_m;(leer);5.0;Summe;1.1 Regel 2
+hp-ctl-240m;HP-CTL-240M;Produkt;gid://shopify/Product/10929058316621;gesamtlaenge_m;(leer);5.0;Summe;1.1 Regel 2
+hp-ctl-300-eu;HP-CTL-300-EU;Produkt;gid://shopify/Product/10812086190413;gesamtlaenge_m;(leer);5.5;Summe;1.1 Regel 2
+hp-ctl-360-eu;HP-CTL-360-EU;Produkt;gid://shopify/Product/10812086223181;gesamtlaenge_m;(leer);6.0;Summe;1.1 Regel 2
+hp-ctl-400-eu-1;HP-CTL-400-EU-1;Variante;gid://shopify/ProductVariant/54529953759565;gesamtlaenge_m;(leer);5.5;Summe;1.1 Regel 2
+hp-ctl-400-eu-1;HP-CTL-400M-EU-1;Variante;gid://shopify/ProductVariant/54529953792333;gesamtlaenge_m;(leer);5.5;Summe;1.1 Regel 2
+hp-dpm-300;HP-DPM-300;Variante;gid://shopify/ProductVariant/54933439709517;beleuchtete_laenge_m;(leer);30.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-300;Variante;gid://shopify/ProductVariant/54933439709517;zuleitung_m;(leer);3.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-300;Variante;gid://shopify/ProductVariant/54933439709517;gesamtlaenge_m;30.0;33.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-600;Variante;gid://shopify/ProductVariant/54933439742285;beleuchtete_laenge_m;(leer);60.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-600;Variante;gid://shopify/ProductVariant/54933439742285;zuleitung_m;(leer);3.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-600;Variante;gid://shopify/ProductVariant/54933439742285;gesamtlaenge_m;60.0;63.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-300M;Variante;gid://shopify/ProductVariant/54933439775053;beleuchtete_laenge_m;(leer);30.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-300M;Variante;gid://shopify/ProductVariant/54933439775053;zuleitung_m;(leer);3.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-300M;Variante;gid://shopify/ProductVariant/54933439775053;gesamtlaenge_m;30.0;33.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-600M;Variante;gid://shopify/ProductVariant/54933439807821;beleuchtete_laenge_m;(leer);60.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-600M;Variante;gid://shopify/ProductVariant/54933439807821;zuleitung_m;(leer);3.0;abgeleitet;1.1 Regel 4
+hp-dpm-300;HP-DPM-600M;Variante;gid://shopify/ProductVariant/54933439807821;gesamtlaenge_m;60.0;63.0;abgeleitet;1.1 Regel 4
+hp-ol-s11-50;HP-OL-S11-50;Produkt;gid://shopify/Product/10929062183245;beleuchtete_laenge_m;30.0;(geleert);geleert;1.2
+hp-ol-s11-50;HP-OL-S11-50;Produkt;gid://shopify/Product/10929062183245;gesamtlaenge_m;30.0;(geleert);geleert;1.2
+hp-blt-050;HP-BLT-050;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-blt-050;HP-BLT-050;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-blt-050;HP-BLT-050;;;gesamtlaenge_m;5.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-blt-050;HP-BLT-200;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-blt-050;HP-BLT-200;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-blt-050;HP-BLT-200;;;gesamtlaenge_m;20.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-cl-1-eu;HP-CL-1-EU;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-cl-2-eu;HP-CL-2-EU;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-cl-2-eu;HP-CL-2-EU;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-dfm-600;HP-DFM-600;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-dfm-600;HP-DFM-600M;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-dfm-600;HP-DFM-012;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-dfm-600;HP-DFM-012M;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-isl-486;HP-ISL-486;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-isl-486;HP-ISL-486W;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-isl-486;HP-ISL-486M;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-isl-486;HP-ISL-648;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-isl-486;HP-ISL-648W;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-isl-486;HP-ISL-648M;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-ol-100;HP-OL-100;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-ol-100;HP-OL-100;;;gesamtlaenge_m;60.0;unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ol-15;HP-OL-15;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-ol-15;HP-OL-15;;;gesamtlaenge_m;10.0;unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ol-75;HP-OL-75;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-ol-75;HP-OL-75;;;gesamtlaenge_m;45.0;unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ol-s11-25;HP-OL-S11-25;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ol-s11-25;HP-OL-S11-25;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-ol-s11-25;HP-OL-S11-25;;;gesamtlaenge_m;15.0;unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ol-st38-50;HP-OL-ST38-50;;;beleuchtete_laenge_m;30.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-ol-st38-50;HP-OL-ST38-50;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-ol-st38-50;HP-OL-ST38-50;;;gesamtlaenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-olh-g40-15;HP-OLH-G40-15;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-olh-g40-25;HP-OLH-G40-25;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ols-g40-25;HP-OLS-G40-25;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-ols-g40-35;HP-OLS-G40-35;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-ols-g40-35;HP-OLS-G40-35;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ols-s17-16-eu;HP-OLS-S17-16-EU;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-ols-s17-16-eu;HP-OLS-S17-16-EU;;;gesamtlaenge_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-rgb-300a;HP-RGB-300A;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-rpm-200;HP-RPM-200;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-rpm-200;HP-RPM-200;;;gesamtlaenge_m;20.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-rpm-200;HP-RPM-400;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-rpm-200;HP-RPM-400;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-rpm-200;HP-RPM-400;;;gesamtlaenge_m;40.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-10m2p-mc;HP-SCWL-10M2P-MC;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-scwl-10m2p-mc;HP-SCWL-10M2P-MC;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-10m2p-mc;HP-SCWL-10M2P-MC;;;gesamtlaenge_m;10.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-10m2p-mc;HP-SCWL-10M2P-WW;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-scwl-10m2p-mc;HP-SCWL-10M2P-WW;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-10m2p-mc;HP-SCWL-10M2P-WW;;;gesamtlaenge_m;10.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-15m2p-mc;HP-SCWL-15M2P-MC;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-scwl-15m2p-mc;HP-SCWL-15M2P-MC;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-15m2p-mc;HP-SCWL-15M2P-MC;;;gesamtlaenge_m;15.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-15m2p-mc;HP-SCWL-15M2P-WW;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-scwl-15m2p-mc;HP-SCWL-15M2P-WW;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-scwl-15m2p-mc;HP-SCWL-15M2P-WW;;;gesamtlaenge_m;15.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-tpm-400-eu-1;HP-TPM-300;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);Widerspruch;1.1 Regel 5/6
+hp-tpm-400-eu-1;HP-TPM-300;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-tpm-400-eu-1;HP-TPM-300;;;gesamtlaenge_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-vam-400l-eu-1;HP-VAM-400L-EU-1;;;beleuchtete_laenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-vam-400l-eu-1;HP-VAM-400L-EU-1;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-vam-400l-eu-1;HP-VAM-400L-EU-1;;;gesamtlaenge_m;40.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
+hp-vit-586l-eu-1;HP-VIT-586L-EU-1;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-vit-586l-eu-1;HP-VIT-586L-EU-1;;;gesamtlaenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
