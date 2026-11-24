@@ -127,3 +127,7 @@ hp-vam-400l-eu-1;HP-VAM-400L-EU-1;;;zuleitung_m;(leer);unverändert, offen (Tyle
 hp-vam-400l-eu-1;HP-VAM-400L-EU-1;;;gesamtlaenge_m;40.0;unverändert, offen (Tyler-Tabelle);keine Quelle;1.1 Regel 5/6
 hp-vit-586l-eu-1;HP-VIT-586L-EU-1;;;zuleitung_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
 hp-vit-586l-eu-1;HP-VIT-586L-EU-1;;;gesamtlaenge_m;(leer);unverändert, offen (Tyler-Tabelle);unsicher;1.1 Regel 5/6
+hp-ol-25;HP-OL-25;Produkt;gid://shopify/Product/10812086944077;birnenabstand_cm;55.0;50.0;Tafel;1.1 Regel 3 (Abstand)
+hp-ol-30;HP-OL-30;Produkt;gid://shopify/Product/10812086976845;birnenabstand_cm;55.0;58.0;Tafel;1.1 Regel 3 (Abstand)
+hp-ol-s11-15;HP-OL-S11-15;Produkt;gid://shopify/Product/10812087238989;birnenabstand_cm;52.5;50.0;Tafel;1.1 Regel 3 (Abstand)
+hp-ol-st38-15;HP-OL-ST38-15;Produkt;gid://shopify/Product/10812088418637;birnenabstand_cm;50.0;52.5;Tafel;1.1 Regel 3 (Abstand)
