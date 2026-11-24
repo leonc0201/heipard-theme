@@ -107,7 +107,8 @@
         "kicker": "The series",
         "title": "The same string lights in another length",
         "current": "This model",
-        "length": "{{ value }} m"
+        "length": "{{ value }} m",
+        "range": "{{ min }} to {{ max }} m"
       },
       "steuerung": {
         "kicker": "Controls",

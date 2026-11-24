@@ -107,7 +107,8 @@
         "kicker": "Die Serie",
         "title": "Dieselbe Lichterkette in anderer Länge",
         "current": "Dieses Modell",
-        "length": "{{ value }} m"
+        "length": "{{ value }} m",
+        "range": "{{ min }} bis {{ max }} m"
       },
       "steuerung": {
         "kicker": "Steuerung",

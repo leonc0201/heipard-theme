@@ -11,6 +11,9 @@
     Familie    Sonst alle aktiven Produkte der Familie (Produkt-Metafeld heipard.familie,
                Smart Collection "familie-<code>"), sortiert nach beleuchteter Länge, sonst
                Gesamtlänge. Das aktuelle Modell ist markiert.
+               Teil M 1.12: Hat ein Nachbarmodell keine Länge am Produkt, aber Längen an
+               seinen Varianten, zeigt die Karte die Spanne („30 bis 100 m“) und steht
+               nach der kürzesten Länge in der Reihe.
                Nur gleiche Bauart (Auftrag Feature-Sektion dichter, 10.11.2026): Ein
                Nachbarmodell zählt nur, wenn sein Metafeld familie genau gleich ist und
                seine Stromquelle nicht abweicht (Netz, Batterie und Solar sind eigene
@@ -69,6 +72,14 @@
       endif
       assign member_ids = member_ids | append: p.id | append: ','
       assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value | default: p.metafields.heipard.gesamtlaenge_m.value
+      if p_len == blank
+        for pv in p.variants
+          assign pv_len = pv.metafields.heipard.beleuchtete_laenge_m.value | default: pv.metafields.heipard.gesamtlaenge_m.value
+          if pv_len != blank and pv_len > max_len
+            assign max_len = pv_len
+          endif
+        endfor
+      endif
       if p_len != blank and p_len > max_len
         assign max_len = p_len
       endif
@@ -117,13 +128,30 @@
             continue
           endunless
           assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value | default: p.metafields.heipard.gesamtlaenge_m.value
+          assign p_len_max = nil
+          if p_len == blank
+            # Teil M 1.12: Längen nur an den Varianten, Karte zeigt die Spanne.
+            for pv in p.variants
+              assign pv_len = pv.metafields.heipard.beleuchtete_laenge_m.value | default: pv.metafields.heipard.gesamtlaenge_m.value
+              if pv_len != blank
+                if p_len == blank
+                  assign p_len = pv_len
+                  assign p_len_max = pv_len
+                elsif pv_len < p_len
+                  assign p_len = pv_len
+                elsif pv_len > p_len_max
+                  assign p_len_max = pv_len
+                endif
+              endif
+            endfor
+          endif
           assign p_points = p.metafields.heipard.led_anzahl.value
           assign is_current = false
           if p.id == product.id
             assign is_current = true
           endif
         -%}
-        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, is_current: is_current, max_len: max_len -%}
+        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, is_current: is_current, max_len: max_len -%}
         {%- unless forloop.last -%}@@item@@{%- endunless -%}
       {%- endfor -%}
     {%- endif -%}
