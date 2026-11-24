@@ -1,0 +1,15 @@
+abschnitt;handle;sku;ressource;feld;vorher;nachher;quelle
+3.1;hp-isl-486;HP-ISL-486;gid://shopify/ProductVariant/54933441806669;gesamtlaenge_m;(leer);15.15;Summe: zuleitung_m 3.0 + beleuchtete_laenge_m 12.15 (Teil N 3.1)
+3.1;hp-isl-486;HP-ISL-486W;gid://shopify/ProductVariant/54933441839437;gesamtlaenge_m;(leer);17.15;Summe: zuleitung_m 5.0 + beleuchtete_laenge_m 12.15 (Teil N 3.1)
+3.1;hp-isl-486;HP-ISL-486M;gid://shopify/ProductVariant/54933441872205;gesamtlaenge_m;(leer);17.15;Summe: zuleitung_m 5.0 + beleuchtete_laenge_m 12.15 (Teil N 3.1)
+3.1;hp-isl-486;HP-ISL-648;gid://shopify/ProductVariant/54933441904973;gesamtlaenge_m;(leer);19.2;Summe: zuleitung_m 3.0 + beleuchtete_laenge_m 16.2 (Teil N 3.1)
+3.1;hp-isl-486;HP-ISL-648W;gid://shopify/ProductVariant/54933441937741;gesamtlaenge_m;(leer);21.2;Summe: zuleitung_m 5.0 + beleuchtete_laenge_m 16.2 (Teil N 3.1)
+3.1;hp-isl-486;HP-ISL-648M;gid://shopify/ProductVariant/54933441970509;gesamtlaenge_m;(leer);21.2;Summe: zuleitung_m 5.0 + beleuchtete_laenge_m 16.2 (Teil N 3.1)
+3.3;hp-npt-210;;gid://shopify/Metafield/66597296210253;lichtfarben (DE);"[""Warmweiß"",""Multicolor""]";"[""Warmweiß"",""Kaltweiß"",""Multicolor""]";Teil N 3.3: weiße Variante gilt als Kaltweiß (Tafel „weißes Licht“, Variantenbild kaltweiße LEDs)
+3.3;hp-npt-210;;gid://shopify/Metafield/66597296210253;lichtfarben (EN);"[""Warm white"",""Multicolor""]";"[""Warm white"",""Cool white"",""Multicolor""]";Teil N 3.3, Glossar Teil L: cool white
+3.3;hp-npt-210;HP-NPT-210W;gid://shopify/ProductVariant/54933442167117;lichtfarbe (Variantenwert);(kein Feld);(kein Feld);Es gibt kein Varianten-Metafeld zur Lichtfarbe (Definitionen PRODUCTVARIANT heipard geprüft); Optionswert „Weiß“ bleibt
+3.3;hp-npt-210;HP-NPT-210W;gid://shopify/ProductVariant/54933442167117;led_anzahl;200;210;Tafel (Teil N 3.3, Regel 3)
+3.4;hp-dpm-300;HP-DPM-400;gid://shopify/ProductVariant/55469558858061;led_anzahl;(leer);400;Tafel 01_source/HP-DPM-300/…暖/PT01-400.jpg „HeiPard 400 LED 131 FT“, Excel Z43 „400皮线M暖“
+3.4;hp-dpm-300;HP-DPM-800;gid://shopify/ProductVariant/55469558923597;led_anzahl;(leer);800;Tafel 01_source/HP-DPM-300/…暖/PT01-800.jpg „HeiPard 800 LED 262 FT“, Excel Z47 „800皮线M暖“
+3.4;hp-dpm-300;HP-DPM-400M;gid://shopify/ProductVariant/55469558890829;led_anzahl;(leer);400;Bild der Lieferung 01_source/HP-DPM-300/…彩/images/A+2_01-400.jpg „40 m (131 ft) • 400 LEDs“, Excel Z44 „400皮线M彩“ (Bild aus der Lieferung, keine Maßtafel)
+3.4;hp-dpm-300;HP-DPM-800M;gid://shopify/ProductVariant/55469558956365;led_anzahl;(leer);800;Bild der Lieferung 01_source/HP-DPM-300/…彩/images/A+2_01-800.jpg „80 m (262 ft) • 800 LEDs“, Excel Z48 „800皮线M彩“ (Bild aus der Lieferung, keine Maßtafel)
