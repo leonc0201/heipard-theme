@@ -48,7 +48,8 @@
     if with_len > 1
       assign mode = 'varianten'
       assign opt_index = -1
-      assign size_options = 'Länge,Höhe,Größe' | split: ','
+      # Teil N 3.2: auch die englischen Optionsnamen, sonst zeigt EN den ganzen Variantentitel.
+      assign size_options = 'Länge,Höhe,Größe,Length,Height,Size' | split: ','
       for opt in product.options_with_values
         if opt_index < 0 and size_options contains opt.name
           assign opt_index = forloop.index0
