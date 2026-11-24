@@ -4,7 +4,30 @@ Auftrag: `heipard-theme-auftrag-teil-n.md` (Stand 24.11.2026, abends). Schließt
 (bis `84953a6`). Alle Zeiten deutsche Zeit. Vor jedem Schreibzugriff `get-shop-info` = HeiPard. Nichts ging an Shenzhen
 oder Tyler.
 
-<!-- KURZFASSUNG -->
+## Kurzfassung
+
+- **1 ISL live:** Seit 18:05 (`acccea5`). An der echten Storefront geprüft, 40 Prüfungen ohne Fehler, Kontaktbogen
+  `docs/data/teiln-isl-live.jpg`.
+- **3 Längen und Werte:**
+  - hp-isl-486 hat Gesamtlängen 15,15 / 17,15 / 19,2 / 21,2 m und einen Satz dazu im Text, DE und EN.
+  - hp-npt-210 hat Kaltweiß im Listenfeld und 210 LEDs an der weißen Variante.
+  - hp-dpm-300 hat 400 bzw. 800 LEDs an den 40-m- und 80-m-Varianten.
+  - Serienwähler und Familienleiste schreiben „gesamt“/„total“ hinter Gesamtlängen. Spannen entstehen nur aus Werten
+    derselben Art. Live seit 18:30.
+- **2 B1 mobil:**
+  - Gemessen an 55 B1-Bildern auf 122 Seiten: Ein Verlauf in Token-Farbe hätte bis 76 % Deckkraft gebraucht.
+  - Deshalb steht der Text auf dem Handy jetzt bei allen B1 unter dem Bild wie bei B2 (live seit 18:49). Desktop ist
+    pixelgleich.
+  - Kontaktbögen vorher und nachher mit 12 Blöcken liegen bei.
+- **4 Englisch:**
+  - Vollzählung liegt im Repo.
+  - 522 EN-Felder an Blöcken und Set-Überschriften sind geschrieben und auf allen 116 EN-Seiten geprüft.
+  - Sechs deutsche Texte sind falsch oder nicht belegt und deshalb nicht übersetzt.
+  - Fragen: 169 ohne EN, rund 2.200 Wörter, deine Entscheidung.
+- **5 DPT und SCWL:** „vorher“ ist erledigt (dpt-b1 und Set dpt neutral, EN ergänzt), die Asset-Instanz hat Bescheid.
+  „Nachher“ wartet auf die C6-Bilder.
+- **6 WBF:** wartet auf die C6-Bilder (laut Asset-Instanz noch nicht abgelegt und nicht freigegeben).
+- **7 Filter:** wartet auf deinen Bescheid.
 
 ## Zeitleiste
 
@@ -24,7 +47,9 @@ oder Tyler.
 | 18:37 | `cb59920` B1 mobil auf Branch `teiln/b1-mobil`, ins Vorschau-Theme |
 | ca. 18:46 bis 18:48 | Kontaktbögen vorher und nachher, Desktop-Vergleich, Clip-Block |
 | 18:49 | `main` vorgespult, live seit 18:49:38, Gegenprobe an der Storefront |
-<!-- ZEITLEISTE WEITER -->
+| 19:03 | `3c4f2ef` Vollzählung EN und Liste der 522 EN-Felder (vor dem Schreiben) |
+| 19:08 bis 19:19 | 522 EN-Übersetzungen geschrieben, bis 19:23 zurückgelesen (alle gleich) |
+| ca. 19:23 bis 19:26 | Storefront-Gegenprobe, 116 EN-Seiten |
 
 ## 1 ISL live
 
@@ -251,7 +276,7 @@ nicht enthalten.
 - **Geschrieben** 19:08 bis 19:19 (Hilfsagent, 11 Pakete `translationsRegister`, vor jedem Paket `get-shop-info`):
   522 Übersetzungen an 203 Metaobjekten, keine userErrors. Digest jeweils sha256 des deutschen Werts. Danach alle 522
   Werte aus dem Shop zurückgelesen: 522 gleich, 0 Abweichungen (19:23). Die vorhandenen EN-Alts sind nicht berührt.
-- **Storefront-Gegenprobe** (ca. 19:25 bis 19:35): alle 116 EN-Produktseiten, 3.215 Texte der Feature-Sektion (Kicker,
+- **Storefront-Gegenprobe** (ca. 19:23 bis 19:26): alle 116 EN-Produktseiten, 3.215 Texte der Feature-Sektion (Kicker,
   Überschriften, Texte). Deutsch steht nur noch in den sechs bewusst nicht übersetzten Texten (Tabelle unten).
 - **Rückweg:** Die 522 Übersetzungen mit `translationsRemove` (locale en, Schlüssel aus `teiln-en-bloecke.csv`) löschen.
   Achtung, Translate & Adapt füllt fehlende EN danach wieder maschinell.
@@ -290,3 +315,61 @@ nicht enthalten.
 ### 4.4 Liste für Daniel
 
 Fortgeführt: `docs/data/teiln-liste-daniel-es-fr-it.md` (alle Stellen aus Teil N, die es nur DE und EN gibt).
+
+## 5 DPT und SCWL: nachher
+
+Wartet auf die C6-Bilder. Sobald die Asset-Instanz die Werte an HP-DPT-200M, HP-DPT-400M, HP-SCWL-10M2P-MC und
+HP-SCWL-15M2P-MC meldet, prüfe ich wie bei ISL (hp-dpt-300 und beide SCWL-Produkte, je Lichtfarbe, DE und EN, Desktop und
+mobil, Wechsel hin und zurück, bei DPT ein Längenwechsel in Bunt) und ergänze diesen Abschnitt mit Kontaktbogen.
+
+## 6 WBF
+
+Wartet auf die C6-Bilder. Danach in einem Zug: Alts wbf-b1 und wbf-b2 aus Notion, wbf-r1 neu getextet, neue Blöcke wbf-r2
+und wbf-r3 (Aufbau wie wwf-r2/-r3), im Set wbf wwf-r2/-r3 durch wbf-r2/-r3 ersetzt, Prüfung an hp-wbf-180 und -210.
+
+## 7 Lichtfarben-Filter
+
+Unverändert: wartet auf deinen Bescheid, dass der Filter in Search & Discovery umgestellt ist.
+
+## Theme Check und Commits
+
+Vor jedem Theme-Commit `shopify theme check`: jedes Mal 1 Fehler (heipard-wordmark, ImgWidthAndHeight) und 14 Warnungen,
+wie die Grundlinie.
+
+| Commit | Zeit | Was |
+|---|---|---|
+| `acccea5` | 18:04 | Merge `teilm/isl-varianten` (ISL live) |
+| `5ceb002` | 18:14 | Doku 3.1, 3.3, 3.4, Text isl-486, Kontaktbogen ISL |
+| `1a119dc` | 18:19 | Serienleiter „gesamt“/„total“ |
+| `25fe5cf` | 18:23 | Serienleiter: Vergleich ohne geschützte Leerzeichen |
+| `ac5970e` | 18:25 | Serienleiter: englische Optionsnamen |
+| `a12b4b8` | 18:30 | Doku Kontaktbogen Serienleiter |
+| `c90f461` | 18:31 | Doku DPT/SCWL-Texte (vor dem Schreiben) |
+| `cb59920` | 18:37 | B1 mobil: Text unter dem Bild |
+| `570eba2` | 18:49 | Doku Messung B1, Kontaktbögen |
+| `3c4f2ef` | 19:03 | Doku EN-Zählung und EN-Liste (vor dem Schreiben) |
+| `5fe0a74` | 19:26 | Bericht Zwischenstand, Liste für Daniel |
+
+## Rückweg im Überblick
+
+- ISL: `git revert -m 1 acccea5`.
+- Serienleiter: `git revert ac5970e 25fe5cf 1a119dc`.
+- B1 mobil: `git revert cb59920`.
+- Werte 3.1, 3.3, 3.4: Spalte „vorher“ in `docs/data/teiln-werte-3.csv`; Text hp-isl-486: `teiln-texte-isl486.csv`.
+- DPT-Texte: Spalte „vorher“ in `teiln-5-dpt-scwl-texte.csv`.
+- EN an Blöcken und Sets: die 522 Übersetzungen aus `teiln-en-bloecke.csv` mit `translationsRemove` löschen.
+
+## Offen bei dir
+
+1. **Fragen EN (4.3):** 169 Fragen, 338 Felder, rund 2.200 Wörter. Soll ich sie wie die Blöcke übersetzen (Entwurf,
+   Durchsicht, Liste im Repo, dann schreiben)? Zwei davon (dpm-frage-1, olh-g40-frage-1) brauchen erst ein korrigiertes
+   Deutsch.
+2. **B1 mobil (2):** Der Text steht jetzt unter dem Bild. Die Alternative wäre ein Verlauf in reinem Schwarz mit 65 %
+   hinter dem Text. Das hält die 70-%-Grenze ein, aber Schwarz ist kein Token. Nur wenn du das lieber willst.
+3. **Sechs deutsche Texte** (Tabelle in 4.2: ol-b2, olh-g40-b2, olas14-sticky, dpm-b2, dgm-w1-r1, u20-b2): Sollen
+   sie nach der Längenregel bzw. ohne IP68 neu gefasst werden? Dann übersetze ich sie danach.
+4. **Weitere Befunde** aus 4.2 (dgm-w1-048-r1, ctl-m-b1, ucp-r1, sblb-r1): nur zur Kenntnis oder anpassen?
+5. **Set-Überschriften EN:** 120 Übersetzungen mitgeschrieben (Begründung in 4.2). Bleiben sie?
+6. **hp-isl-486, Zuleitung Warmweiß:** Die Gesamtlängen rechnen mit 3 m. Bleibt die Frage nach 3 oder 5 m in Tylers Mail
+   (Asset-Instanz)?
+7. **C6-Bilder:** Für 5 „nachher“ und 6 brauche ich die freigegebenen C6-Bilder in `00_inbox/hermes/c6/`.
