@@ -3,6 +3,8 @@
   <li> aus; die Serienleiter sortiert die Einträge über den Schlüssel.
   Parameter: p_len (Nennlänge in m oder blank), p_len_max (optional, Teil M 1.12: obere Grenze
              der Spanne bei Längen nur an den Varianten; sortiert wird nach p_len),
+             p_total (optional, Teil N 3.2: true, wenn p_len und p_len_max Gesamtlängen sind;
+             dann steht „gesamt“ bzw. „total“ hinter der Zahl oder Spanne),
              p_points, p_url, p_price (Cent),
              p_title, p_label (optional: Beschriftung statt der Länge, z. B. Optionswert),
              is_current, max_len
@@ -28,10 +30,18 @@
       {%- elsif p_len != blank and p_len_max != blank and p_len_max != p_len -%}
         {%- capture p_min_txt -%}{%- render 'heipard-num', value: p_len -%}{%- endcapture -%}
         {%- capture p_max_txt -%}{%- render 'heipard-num', value: p_len_max -%}{%- endcapture -%}
-        {{- 'heipard.blocks.serienleiter.range' | t: min: p_min_txt, max: p_max_txt -}}
+        {%- if p_total -%}
+          {{- 'heipard.blocks.serienleiter.range_total' | t: min: p_min_txt, max: p_max_txt -}}
+        {%- else -%}
+          {{- 'heipard.blocks.serienleiter.range' | t: min: p_min_txt, max: p_max_txt -}}
+        {%- endif -%}
       {%- elsif p_len != blank -%}
         {%- capture p_len_txt -%}{%- render 'heipard-num', value: p_len -%}{%- endcapture -%}
-        {{- 'heipard.blocks.serienleiter.length' | t: value: p_len_txt -}}
+        {%- if p_total -%}
+          {{- 'heipard.blocks.serienleiter.length_total' | t: value: p_len_txt -}}
+        {%- else -%}
+          {{- 'heipard.blocks.serienleiter.length' | t: value: p_len_txt -}}
+        {%- endif -%}
       {%- else -%}
         {{- p_title | escape -}}
       {%- endif -%}

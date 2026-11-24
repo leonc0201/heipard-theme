@@ -19,6 +19,12 @@
                seine Stromquelle nicht abweicht (Netz, Batterie und Solar sind eigene
                Bauarten; fehlt die Stromquelle an einer Seite, entscheidet die Familie).
                So steht z. B. hp-dgm-048 (Batterie) nicht bei DGM-001/-002 (Netz).
+    Teil N 3.2: Ist die angezeigte Zahl eine Gesamtlänge (keine beleuchtete Länge da), steht
+               „gesamt“ dahinter (EN „total“), etwa „33 m gesamt“. Eine Spanne entsteht nur aus
+               Werten derselben Art: Haben Varianten beleuchtete Längen, zählen nur diese;
+               sonst die Gesamtlängen, dann mit Zusatz. Im Variantenmodus bekommt der
+               Optionswert den Zusatz, wenn die Variante nur eine Gesamtlänge hat und der
+               Optionswert genau diese Länge nennt. Die Sortierung bleibt.
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -111,6 +117,17 @@
           assign p_label = v.title
           if opt_index >= 0
             assign p_label = v.options[opt_index]
+            # Teil N 3.2: Optionswert nennt die Gesamtlänge, beleuchtete Länge fehlt.
+            assign v_gl = v.metafields.heipard.gesamtlaenge_m.value
+            if v.metafields.heipard.beleuchtete_laenge_m.value == blank and v_gl != blank
+              capture v_gl_txt
+                render 'heipard-num', value: v_gl
+              endcapture
+              assign v_gl_label = 'heipard.blocks.serienleiter.length' | t: value: v_gl_txt
+              if p_label == v_gl_label
+                assign p_label = 'heipard.blocks.serienleiter.length_total' | t: value: v_gl_txt
+              endif
+            endif
           endif
           assign is_current = false
           if v.id == current.id
@@ -127,23 +144,53 @@
           unless member_ids contains p_key
             continue
           endunless
-          assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value | default: p.metafields.heipard.gesamtlaenge_m.value
+          assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value
+          assign p_total = false
+          if p_len == blank
+            assign p_len = p.metafields.heipard.gesamtlaenge_m.value
+            if p_len != blank
+              assign p_total = true
+            endif
+          endif
           assign p_len_max = nil
           if p_len == blank
             # Teil M 1.12: Längen nur an den Varianten, Karte zeigt die Spanne.
+            # Teil N 3.2: Spanne nur aus Werten derselben Art, beleuchtete Länge zuerst.
+            assign l_min = nil
+            assign l_max = nil
+            assign g_min = nil
+            assign g_max = nil
             for pv in p.variants
-              assign pv_len = pv.metafields.heipard.beleuchtete_laenge_m.value | default: pv.metafields.heipard.gesamtlaenge_m.value
-              if pv_len != blank
-                if p_len == blank
-                  assign p_len = pv_len
-                  assign p_len_max = pv_len
-                elsif pv_len < p_len
-                  assign p_len = pv_len
-                elsif pv_len > p_len_max
-                  assign p_len_max = pv_len
+              assign pv_l = pv.metafields.heipard.beleuchtete_laenge_m.value
+              assign pv_g = pv.metafields.heipard.gesamtlaenge_m.value
+              if pv_l != blank
+                if l_min == blank
+                  assign l_min = pv_l
+                  assign l_max = pv_l
+                elsif pv_l < l_min
+                  assign l_min = pv_l
+                elsif pv_l > l_max
+                  assign l_max = pv_l
+                endif
+              elsif pv_g != blank
+                if g_min == blank
+                  assign g_min = pv_g
+                  assign g_max = pv_g
+                elsif pv_g < g_min
+                  assign g_min = pv_g
+                elsif pv_g > g_max
+                  assign g_max = pv_g
                 endif
               endif
             endfor
+            if l_min != blank
+              assign p_len = l_min
+              assign p_len_max = l_max
+            elsif g_min != blank
+              assign p_len = g_min
+              assign p_len_max = g_max
+              assign p_total = true
+            endif
           endif
           assign p_points = p.metafields.heipard.led_anzahl.value
           assign is_current = false
@@ -151,7 +198,7 @@
             assign is_current = true
           endif
         -%}
-        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, is_current: is_current, max_len: max_len -%}
+        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, is_current: is_current, max_len: max_len -%}
         {%- unless forloop.last -%}@@item@@{%- endunless -%}
       {%- endfor -%}
     {%- endif -%}

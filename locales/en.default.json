@@ -108,7 +108,9 @@
         "title": "The same string lights in another length",
         "current": "This model",
         "length": "{{ value }} m",
-        "range": "{{ min }} to {{ max }} m"
+        "range": "{{ min }} to {{ max }} m",
+        "length_total": "{{ value }} m total",
+        "range_total": "{{ min }} to {{ max }} m total"
       },
       "steuerung": {
         "kicker": "Controls",

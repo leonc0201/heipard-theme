@@ -108,7 +108,9 @@
         "title": "Dieselbe Lichterkette in anderer Länge",
         "current": "Dieses Modell",
         "length": "{{ value }} m",
-        "range": "{{ min }} bis {{ max }} m"
+        "range": "{{ min }} bis {{ max }} m",
+        "length_total": "{{ value }} m gesamt",
+        "range_total": "{{ min }} bis {{ max }} m gesamt"
       },
       "steuerung": {
         "kicker": "Steuerung",
