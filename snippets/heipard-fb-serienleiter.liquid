@@ -123,8 +123,10 @@
               capture v_gl_txt
                 render 'heipard-num', value: v_gl
               endcapture
-              assign v_gl_label = 'heipard.blocks.serienleiter.length' | t: value: v_gl_txt
-              if p_label == v_gl_label
+              assign v_gl_label = 'heipard.blocks.serienleiter.length' | t: value: v_gl_txt | replace: ' ', ''
+              # Vergleich ohne Leerzeichen und geschützte Leerzeichen (EN-Optionswerte).
+              assign p_cmp = p_label | replace: ' ', '' | replace: ' ', ''
+              if p_cmp == v_gl_label
                 assign p_label = 'heipard.blocks.serienleiter.length_total' | t: value: v_gl_txt
               endif
             endif
