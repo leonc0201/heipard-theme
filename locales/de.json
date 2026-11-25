@@ -106,6 +106,8 @@
       "serienleiter": {
         "kicker": "Die Serie",
         "title": "Dieselbe Lichterkette in anderer Länge",
+        "title_hoehe": "Dasselbe Modell in anderer Höhe",
+        "title_groesse": "Dasselbe Modell in anderer Größe",
         "current": "Dieses Modell",
         "length": "{{ value }} m",
         "range": "{{ min }} bis {{ max }} m",
