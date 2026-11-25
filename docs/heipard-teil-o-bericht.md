@@ -46,7 +46,7 @@
 | 16:00 bis 16:08 | Abschnitt 4: Vorschau gegen live (116 Produkte), Prüfauswahl DE/EN, Desktop/mobil, Kontaktbogen |
 | 16:02 | Abschnitt 6: Stichprobe an der Storefront (OLAS14, VIT, NPT) |
 | 16:10:00 | Abschnitt 4: `main` vorgespult (`1d0dc03`, `970f2ed`), live seit spätestens 16:10:37 |
-| 16:11 bis 16:20 | Abschnitt 4: Gegenprobe live, 116 Produkte und Prüfauswahl, Kontaktbogen |
+| 16:11 bis 16:15 | Abschnitt 4: Gegenprobe live, 116 Produkte und Prüfauswahl, Kontaktbogen |
 
 ## 2 Deutsche Texte korrigiert, dann übersetzt
 
@@ -226,7 +226,7 @@ Drosselung neu geladen):
 - **Commits:** `1d0dc03`, `970f2ed` (Theme Check vor jedem Commit: 1 Fehler, 14 Warnungen wie die Grundlinie). Auf dem
   Branch `teilo/serie-mass` standen sie vor dem Rebase als `a783751` und `ab4297e`.
 - **Live:** `main` vorgespult und gepusht um 16:10:00, live seit spätestens 16:10:37.
-- **Gegenprobe an der echten Storefront** (16:11 bis 16:20): alle 116 Produkte DE, dazu die Prüfauswahl DE und EN,
+- **Gegenprobe an der echten Storefront** (16:11 bis 16:15): alle 116 Produkte DE, dazu die Prüfauswahl DE und EN,
   Desktop und mobil. Das Ergebnis gleicht der Vorschau in allen 116 Produkten (Überschrift, Maß, Stufen, ausgeblendet),
   0 Abweichungen, kein Überlauf. Kontaktbogen vorher gegen live nachher: `docs/data/teilo-serienleiste-live.jpg`.
 - **Rückweg:** `git revert 970f2ed 1d0dc03` auf `main`.
