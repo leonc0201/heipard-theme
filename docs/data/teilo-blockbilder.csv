@@ -1,0 +1,357 @@
+﻿block;layout_slot;bild_am_block;produkt_oder_variante;feld;datei_im_feld;storefront_zeigt;bewertung
+blm-schieber;schieber;BLM_B2_01.webp;hp-blm-100-eu (Erstaufruf, Variante HP-BLM-100);keins;;BLM_B2_01.webp;kein_feld
+blm-hotspot;hotspot;BLM_P1_01.webp;hp-blm-100-eu (Erstaufruf, Variante HP-BLM-100);keins;;BLM_P1_01.webp;kein_feld
+blt-schieber;schieber;BLT_B2_01.webp;hp-blt-100-eu-1 (Erstaufruf, Variante HP-BLT-100);keins;;BLT_B2_01.webp;kein_feld
+blt-hotspot;hotspot;BLT_P1_03.webp;hp-blt-100-eu-1 (Erstaufruf, Variante HP-BLT-100);keins;;BLT_P1_03.webp;kein_feld
+bsl-b1;fullwidth/B1;BSL_B1_01.webp;hp-bsl-100-1p;feature_b1;BSL_B1_01.webp;BSL_B1_01.webp;gleich
+bsl-b2;media_text/B2;BSL_B2_01.webp;hp-bsl-100-1p;feature_b2;BSL_B2_01.webp;BSL_B2_01.webp;gleich
+bsl-r1;text/R1;BSL_R1_01.webp;hp-bsl-100-1p;feature_r1;BSL_R1_01.webp;BSL_R1_01.webp;gleich
+bsl-b1;fullwidth/B1;BSL_B1_01.webp;hp-bsl-100-2p;feature_b1;BSL_B1_01.webp;BSL_B1_01.webp;gleich
+bsl-b2;media_text/B2;BSL_B2_01.webp;hp-bsl-100-2p;feature_b2;BSL_B2_01.webp;BSL_B2_01.webp;gleich
+bsl-r1;text/R1;BSL_R1_01.webp;hp-bsl-100-2p;feature_r1;BSL_R1_01.webp;BSL_R1_01.webp;gleich
+bsl-b1;fullwidth/B1;BSL_B1_01.webp;hp-bsl-50-2p;feature_b1;BSL_B1_01.webp;BSL_B1_01.webp;gleich
+bsl-b2;media_text/B2;BSL_B2_01.webp;hp-bsl-50-2p;feature_b2;BSL_B2_01.webp;BSL_B2_01.webp;gleich
+bsl-r1;text/R1;BSL_R1_01.webp;hp-bsl-50-2p;feature_r1;BSL_R1_01.webp;BSL_R1_01.webp;gleich
+cl-b1;fullwidth/B1;CL_B1_01.webp;hp-cl-1-eu;feature_b1;CL_B1_01.webp;CL_B1_01.webp;gleich
+cl-b2;media_text/B2;CL_B2_01.webp;hp-cl-1-eu;feature_b2;CL_B2_01.webp;CL_B2_01.webp;gleich
+cl-r1;text/R1;CL_R1_01.webp;hp-cl-1-eu;feature_r1;CL_R1_01.webp;CL_R1_01.webp;gleich
+cl-b1;fullwidth/B1;CL_B1_01.webp;hp-cl-2-eu;feature_b1;CL_B1_01.webp;CL_B1_01.webp;gleich
+cl-b2;media_text/B2;CL_B2_01.webp;hp-cl-2-eu;feature_b2;CL_B2_01.webp;CL_B2_01.webp;gleich
+cl-r1;text/R1;CL_R1_01.webp;hp-cl-2-eu;feature_r1;CL_R1_01.webp;CL_R1_01.webp;gleich
+csl-b1;fullwidth/B1;CSL_B1_01.webp;hp-csl-300-w;feature_b1;CSL_B1_01.webp;CSL_B1_01.webp;gleich
+csl-b2;media_text/B2;CSL_B2_01.webp;hp-csl-300-w;feature_b2;CSL_B2_01.webp;CSL_B2_01.webp;gleich
+csl-r1;text/R1;CSL_R1_01.webp;hp-csl-300-w;feature_r1;CSL_R1_01.webp;CSL_R1_01.webp;gleich
+ctl-w1-b1;fullwidth/B1;CTL_B1_01.webp;hp-ctl-180;feature_b1;CTL_B1_01.webp;CTL_B1_01.webp;gleich
+ctl-w1-b2;media_text/B2;CTL_B2_03.webp;hp-ctl-180;feature_b2;CTL_B2_03.webp;CTL_B2_03.webp;gleich
+ctl-w1-r1;text/R1;CTL_R1_01.webp;hp-ctl-180;feature_r1;CTL_R1_01.webp;CTL_R1_01.webp;gleich
+ctl-farbwechsel;farbwechsel;CTL_I4_01_ww.webp;hp-ctl-210-eu-1 (Erstaufruf, Variante HP-CTL-210-EU-1);keins;;CTL_I4_01_ww.webp;kein_feld
+ctl-w1-b1;fullwidth/B1;CTL_B1_01.webp;hp-ctl-240;feature_b1;CTL_B1_01.webp;CTL_B1_01.webp;gleich
+ctl-w1-b2;media_text/B2;CTL_B2_03.webp;hp-ctl-240;feature_b2;CTL_B2_03.webp;CTL_B2_03.webp;gleich
+ctl-w1-r1;text/R1;CTL_R1_01.webp;hp-ctl-240;feature_r1;CTL_R1_01.webp;CTL_R1_01.webp;gleich
+ctl-w1-b1;fullwidth/B1;CTL_B1_01.webp;hp-ctl-300-eu;feature_b1;CTL_B1_01.webp;CTL_B1_01.webp;gleich
+ctl-w1-b2;media_text/B2;CTL_B2_03.webp;hp-ctl-300-eu;feature_b2;CTL_B2_03.webp;CTL_B2_03.webp;gleich
+ctl-w1-r1;text/R1;CTL_R1_01.webp;hp-ctl-300-eu;feature_r1;CTL_R1_01.webp;CTL_R1_01.webp;gleich
+ctl-w1-b1;fullwidth/B1;CTL_B1_01.webp;hp-ctl-360-eu;feature_b1;CTL_B1_01.webp;CTL_B1_01.webp;gleich
+ctl-w1-b2;media_text/B2;CTL_B2_03.webp;hp-ctl-360-eu;feature_b2;CTL_B2_03.webp;CTL_B2_03.webp;gleich
+ctl-w1-r1;text/R1;CTL_R1_01.webp;hp-ctl-360-eu;feature_r1;CTL_R1_01.webp;CTL_R1_01.webp;gleich
+ctl-farbwechsel;farbwechsel;CTL_I4_01_ww.webp;hp-ctl-400-eu-1 (Erstaufruf, Variante HP-CTL-400-EU-1);keins;;CTL_I4_01_ww.webp;kein_feld
+dct-schieber;schieber;DCT_I1_01_an.webp;hp-dct-200 (Erstaufruf, Variante HP-DCT-200);keins;;DCT_I1_01_an.webp;kein_feld
+dct-sticky;media_text/sticky;DCT_B2_08.webp;hp-dct-200 (Erstaufruf, Variante HP-DCT-200);keins;;DCT_B2_08.webp (+ Clip am Block);kein_feld
+dct-hotspot;hotspot;DCT_P1_04.webp;hp-dct-200 (Erstaufruf, Variante HP-DCT-200);keins;;DCT_P1_04.webp;kein_feld
+dfm-hotspot;hotspot;DFM_P1_01.webp;hp-dfm-600 (Erstaufruf, Variante HP-DFM-600);keins;;DFM_P1_01.webp;kein_feld
+dlm-b1;fullwidth/B1;DLM_B1_01.webp;hp-dlm-100h (Erstaufruf, Variante HP-DLM-100H);feature_b1;DLM_B1_01.webp;DLM_B1_01.webp;gleich
+dlm-b2;media_text/B2;DLM_B2_01.webp;hp-dlm-100h (Erstaufruf, Variante HP-DLM-100H);feature_b2;DLM_B2_01.webp;DLM_B2_01.webp;gleich
+dlm-r1;text/R1;DLM_R1_01.webp;hp-dlm-100h (Erstaufruf, Variante HP-DLM-100H);feature_r1;DLM_R1_01.webp;DLM_R1_01.webp;gleich
+dnm-b1;fullwidth/B1;DNM_B1_01.webp;hp-dnm-208 (Erstaufruf, Variante HP-DNM-208);feature_b1;DNM_B1_01.webp;DNM_B1_01.webp;gleich
+dnm-b2;media_text/B2;DNM_B2_01.webp;hp-dnm-208 (Erstaufruf, Variante HP-DNM-208);feature_b2;DNM_B2_01.webp;DNM_B2_01.webp;gleich
+dnm-r1;text/R1;DNM_R1_01.webp;hp-dnm-208 (Erstaufruf, Variante HP-DNM-208);feature_r1;DNM_R1_01.webp;DNM_R1_01.webp;gleich
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-264 (Erstaufruf, Variante HP-ISL-264);feature_b1;ISL_B1_01.webp;ISL_B1_01.webp (+ Clip am Block);gleich
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-264 (Erstaufruf, Variante HP-ISL-264);feature_b2;ISL_B2_01.webp;ISL_B2_01.webp;gleich
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-264 (Erstaufruf, Variante HP-ISL-264);feature_r1;ISL_R1_01.webp;ISL_R1_01.webp;gleich
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-264 / Variante HP-ISL-108W (3,38 m / Kaltweiß);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-264 / Variante HP-ISL-108W (3,38 m / Kaltweiß);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-264 / Variante HP-ISL-108W (3,38 m / Kaltweiß);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-264 / Variante HP-ISL-108M (3,38 m / Multicolor);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-264 / Variante HP-ISL-108M (3,38 m / Multicolor);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-264 / Variante HP-ISL-108M (3,38 m / Multicolor);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-264 / Variante HP-ISL-264W (8,25 m / Kaltweiß);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-264 / Variante HP-ISL-264W (8,25 m / Kaltweiß);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-264 / Variante HP-ISL-264W (8,25 m / Kaltweiß);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-264 / Variante HP-ISL-264M (8,25 m / Multicolor);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-264 / Variante HP-ISL-264M (8,25 m / Multicolor);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-264 / Variante HP-ISL-264M (8,25 m / Multicolor);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu (Erstaufruf, Variante HP-ISL-360);feature_b1;ISL_B1_01.webp;ISL_B1_01.webp (+ Clip am Block);gleich
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu (Erstaufruf, Variante HP-ISL-360);feature_b2;ISL_B2_01.webp;ISL_B2_01.webp;gleich
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu (Erstaufruf, Variante HP-ISL-360);feature_r1;ISL_R1_01.webp;ISL_R1_01.webp;gleich
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu / Variante HP-ISL-360W (Kaltweiß / 9 m);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu / Variante HP-ISL-360W (Kaltweiß / 9 m);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu / Variante HP-ISL-360W (Kaltweiß / 9 m);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu / Variante HP-ISL-586W (Kaltweiß / 15 m);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu / Variante HP-ISL-586W (Kaltweiß / 15 m);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu / Variante HP-ISL-586W (Kaltweiß / 15 m);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu / Variante HP-ISL-008W (Kaltweiß / 25 m);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu / Variante HP-ISL-008W (Kaltweiß / 25 m);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu / Variante HP-ISL-008W (Kaltweiß / 25 m);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu / Variante HP-ISL-360M (Multicolor / 9 m);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu / Variante HP-ISL-360M (Multicolor / 9 m);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu / Variante HP-ISL-360M (Multicolor / 9 m);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu / Variante HP-ISL-586M (Multicolor / 15 m);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu / Variante HP-ISL-586M (Multicolor / 15 m);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu / Variante HP-ISL-586M (Multicolor / 15 m);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-360-eu / Variante HP-ISL-008M (Multicolor / 25 m);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-360-eu / Variante HP-ISL-008M (Multicolor / 25 m);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-360-eu / Variante HP-ISL-008M (Multicolor / 25 m);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+ol-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ol-100;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ol-b2;media_text/B2;OLG40_B2_01.webp;hp-ol-100;feature_b2;OLG40_B2_01.webp;OLG40_B2_01.webp;gleich
+ol-r1;text/R1;OLAG40_R1_01.webp;hp-ol-100;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ol-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ol-15;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ol-b2;media_text/B2;OLG40_B2_01.webp;hp-ol-15;feature_b2;OLG40_B2_01.webp;OLG40_B2_01.webp;gleich
+ol-r1;text/R1;OLAG40_R1_01.webp;hp-ol-15;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ol-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ol-25;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ol-b2;media_text/B2;OLG40_B2_01.webp;hp-ol-25;feature_b2;OLG40_B2_01.webp;OLG40_B2_01.webp;gleich
+ol-r1;text/R1;OLAG40_R1_01.webp;hp-ol-25;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ol-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ol-30;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ol-g40-b2;media_text/B2;OLG40_B2_01.webp;hp-ol-30;feature_b2;OLG40_B2_01.webp;OLG40_B2_01.webp;gleich
+ol-g40-r1;text/R1;OLAG40_R1_01.webp;hp-ol-30;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ol-g40-steuerung;steuerung;OLG40_B2_03.webp;hp-ol-30;keins;;OLG40_B2_03.webp;kein_feld
+ol-g40-hotspot;hotspot;OLG40_P1_01.webp;hp-ol-30;keins;;OLG40_P1_01.webp;kein_feld
+ol-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ol-50;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ol-g40-b2;media_text/B2;OLG40_B2_01.webp;hp-ol-50;feature_b2;OLG40_B2_01.webp;OLG40_B2_01.webp;gleich
+ol-g40-r1;text/R1;OLAG40_R1_01.webp;hp-ol-50;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ol-g40-steuerung;steuerung;OLG40_B2_03.webp;hp-ol-50;keins;;OLG40_B2_03.webp;kein_feld
+ol-g40-hotspot;hotspot;OLG40_P1_01.webp;hp-ol-50;keins;;OLG40_P1_01.webp;kein_feld
+ol-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ol-75;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ol-b2;media_text/B2;OLG40_B2_01.webp;hp-ol-75;feature_b2;OLG40_B2_01.webp;OLG40_B2_01.webp;gleich
+ol-r1;text/R1;OLAG40_R1_01.webp;hp-ol-75;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ol-s11-b1;fullwidth/B1;OLS11_B1_01.webp;hp-ol-s11-15;feature_b1;OLS11_B1_01.webp;OLS11_B1_01.webp;gleich
+ol-s11-r1;text/R1;OLS11_R1_01.webp;hp-ol-s11-15;feature_r1;OLS11_R1_01.webp;OLS11_R1_01.webp;gleich
+ol-s11-b1;fullwidth/B1;OLS11_B1_01.webp;hp-ol-s11-25;feature_b1;OLS11_B1_01.webp;OLS11_B1_01.webp;gleich
+ol-s11-r1;text/R1;OLS11_R1_01.webp;hp-ol-s11-25;feature_r1;OLS11_R1_01.webp;OLS11_R1_01.webp;gleich
+ol-s11-b1;fullwidth/B1;OLS11_B1_01.webp;hp-ol-s11-30;feature_b1;OLS11_B1_01.webp;OLS11_B1_01.webp;gleich
+ol-s11-r1;text/R1;OLS11_R1_01.webp;hp-ol-s11-30;feature_r1;OLS11_R1_01.webp;OLS11_R1_01.webp;gleich
+ol-st38-b1;fullwidth/B1;OLST38_B1_01.webp;hp-ol-st38-15;feature_b1;OLST38_B1_01.webp;OLST38_B1_01.webp;gleich
+ol-st38-b2;media_text/B2;OLST38_B2_04.webp;hp-ol-st38-15;feature_b2;OLST38_B2_04.webp;OLST38_B2_04.webp;gleich
+ol-st38-r1;text/R1;OLST38_R1_01.webp;hp-ol-st38-15;feature_r1;OLST38_R1_01.webp;OLST38_R1_01.webp;gleich
+ol-st38-b1;fullwidth/B1;OLST38_B1_01.webp;hp-ol-st38-25;feature_b1;OLST38_B1_01.webp;OLST38_B1_01.webp;gleich
+ol-st38-b2;media_text/B2;OLST38_B2_04.webp;hp-ol-st38-25;feature_b2;OLST38_B2_04.webp;OLST38_B2_04.webp;gleich
+ol-st38-r1;text/R1;OLST38_R1_01.webp;hp-ol-st38-25;feature_r1;OLST38_R1_01.webp;OLST38_R1_01.webp;gleich
+ol-st38-b1;fullwidth/B1;OLST38_B1_01.webp;hp-ol-st38-30;feature_b1;OLST38_B1_01.webp;OLST38_B1_01.webp;gleich
+ol-st38-b2;media_text/B2;OLST38_B2_04.webp;hp-ol-st38-30;feature_b2;OLST38_B2_04.webp;OLST38_B2_04.webp;gleich
+ol-st38-r1;text/R1;OLST38_R1_01.webp;hp-ol-st38-30;feature_r1;OLST38_R1_01.webp;OLST38_R1_01.webp;gleich
+ola-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ola-g40-15-eu;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ola-g40-b2;media_text/B2;OLAG40_B2_01.webp;hp-ola-g40-15-eu;feature_b2;OLAG40_B2_01.webp;OLAG40_B2_01.webp;gleich
+ola-g40-r1;text/R1;OLAG40_R1_01.webp;hp-ola-g40-15-eu;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ola-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ola-g40-27-eu;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ola-g40-b2;media_text/B2;OLAG40_B2_01.webp;hp-ola-g40-27-eu;feature_b2;OLAG40_B2_01.webp;OLAG40_B2_01.webp;gleich
+ola-g40-r1;text/R1;OLAG40_R1_01.webp;hp-ola-g40-27-eu;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ola-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-ola-g40-42-eu;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+ola-g40-b2;media_text/B2;OLAG40_B2_01.webp;hp-ola-g40-42-eu;feature_b2;OLAG40_B2_01.webp;OLAG40_B2_01.webp;gleich
+ola-g40-r1;text/R1;OLAG40_R1_01.webp;hp-ola-g40-42-eu;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+olas14-b2;media_text/B2;OLAS14_B2_04.webp;hp-ola-s14-15-eu;feature_b2;OLAS14_B2_02.webp;OLAS14_B2_04.webp;block_verdeckt_feld
+olas14-steuerung;steuerung;OLAS14_B2_01.webp;hp-ola-s14-15-eu;keins;;OLAS14_B2_01.webp;kein_feld
+olas14-sticky;media_text/sticky;OLAS14_B2_02.webp;hp-ola-s14-15-eu;keins;;OLAS14_B2_02.webp;kein_feld
+olas14-hotspot;hotspot;OLAS14_P1_01.webp;hp-ola-s14-15-eu;keins;;OLAS14_P1_01.webp;kein_feld
+olas14-b2;media_text/B2;OLAS14_B2_04.webp;hp-ola-s14-30-eu;feature_b2;OLAS14_B2_02.webp;OLAS14_B2_04.webp;block_verdeckt_feld
+olas14-steuerung;steuerung;OLAS14_B2_01.webp;hp-ola-s14-30-eu;keins;;OLAS14_B2_01.webp;kein_feld
+olas14-sticky;media_text/sticky;OLAS14_B2_02.webp;hp-ola-s14-30-eu;keins;;OLAS14_B2_02.webp;kein_feld
+olas14-hotspot;hotspot;OLAS14_P1_01.webp;hp-ola-s14-30-eu;keins;;OLAS14_P1_01.webp;kein_feld
+olas14-b2;media_text/B2;OLAS14_B2_04.webp;hp-ola-s14-50-eu;feature_b2;OLAS14_B2_02.webp;OLAS14_B2_04.webp;block_verdeckt_feld
+olas14-steuerung;steuerung;OLAS14_B2_01.webp;hp-ola-s14-50-eu;keins;;OLAS14_B2_01.webp;kein_feld
+olas14-sticky;media_text/sticky;OLAS14_B2_02.webp;hp-ola-s14-50-eu;keins;;OLAS14_B2_02.webp;kein_feld
+olas14-hotspot;hotspot;OLAS14_P1_01.webp;hp-ola-s14-50-eu;keins;;OLAS14_P1_01.webp;kein_feld
+olg-b1;fullwidth/B1;OLG_B1_01.webp;hp-olg-200;feature_b1;OLG_B1_01.webp;OLG_B1_01.webp (+ Clip am Block);gleich
+olg-b2;media_text/B2;OLG_B2_01.webp;hp-olg-200;feature_b2;OLG_B2_01.webp;OLG_B2_01.webp;gleich
+olg-r1;text/R1;OLG_R1_01.webp;hp-olg-200;feature_r1;OLG_R1_01.webp;OLG_R1_01.webp;gleich
+olg-b1;fullwidth/B1;OLG_B1_01.webp;hp-olg-400;feature_b1;OLG_B1_01.webp;OLG_B1_01.webp (+ Clip am Block);gleich
+olg-b2;media_text/B2;OLG_B2_01.webp;hp-olg-400;feature_b2;OLG_B2_01.webp;OLG_B2_01.webp;gleich
+olg-r1;text/R1;OLG_R1_01.webp;hp-olg-400;feature_r1;OLG_R1_01.webp;OLG_R1_01.webp;gleich
+olg-b1;fullwidth/B1;OLG_B1_01.webp;hp-olg-300-eu (Erstaufruf, Variante HP-OLG-300);feature_b1;OLG_B1_01.webp;OLG_B1_01.webp (+ Clip am Block);gleich
+olg-b2;media_text/B2;OLG_B2_01.webp;hp-olg-300-eu (Erstaufruf, Variante HP-OLG-300);feature_b2;OLG_B2_01.webp;OLG_B2_01.webp;gleich
+olg-r1;text/R1;OLG_R1_01.webp;hp-olg-300-eu (Erstaufruf, Variante HP-OLG-300);feature_r1;OLG_R1_01.webp;OLG_R1_01.webp;gleich
+olh-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-olh-g40-15;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+olh-g40-b2;media_text/B2;OLHG40_B2_01.webp;hp-olh-g40-15;feature_b2;OLHG40_B2_01.webp;OLHG40_B2_01.webp;gleich
+olh-g40-r1;text/R1;OLAG40_R1_01.webp;hp-olh-g40-15;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+olh-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-olh-g40-20;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+olh-g40-b2;media_text/B2;OLHG40_B2_01.webp;hp-olh-g40-20;feature_b2;OLHG40_B2_01.webp;OLHG40_B2_01.webp;gleich
+olh-g40-r1;text/R1;OLAG40_R1_01.webp;hp-olh-g40-20;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+olh-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-olh-g40-25;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+olh-g40-b2;media_text/B2;OLHG40_B2_01.webp;hp-olh-g40-25;feature_b2;OLHG40_B2_01.webp;OLHG40_B2_01.webp;gleich
+olh-g40-r1;text/R1;OLAG40_R1_01.webp;hp-olh-g40-25;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+olh-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-olh-g40-35;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+olh-g40-b2;media_text/B2;OLHG40_B2_01.webp;hp-olh-g40-35;feature_b2;OLHG40_B2_01.webp;OLHG40_B2_01.webp;gleich
+olh-g40-r1;text/R1;OLAG40_R1_01.webp;hp-olh-g40-35;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+olh-g40-b1;fullwidth/B1;OLG40_B1_01.webp;hp-olh-g40-50;feature_b1;OLG40_B1_01.webp;OLG40_B1_01.webp;gleich
+olh-g40-b2;media_text/B2;OLHG40_B2_01.webp;hp-olh-g40-50;feature_b2;OLHG40_B2_01.webp;OLHG40_B2_01.webp;gleich
+olh-g40-r1;text/R1;OLAG40_R1_01.webp;hp-olh-g40-50;feature_r1;OLAG40_R1_01.webp;OLAG40_R1_01.webp;gleich
+ols-a60-b1;fullwidth/B1;OLSA60_B1_01.webp;hp-ols-a60-16-eu;feature_b1;OLSA60_B1_01.webp;OLSA60_B1_01.webp;gleich
+ols-a60-b2;media_text/B2;OLSA60_B2_01.webp;hp-ols-a60-16-eu;feature_b2;OLSA60_B2_01.webp;OLSA60_B2_01.webp;gleich
+ols-a60-r1;text/R1;OLSA60_R1_01.webp;hp-ols-a60-16-eu;feature_r1;OLSA60_R1_01.webp;OLSA60_R1_01.webp;gleich
+ols-g40-b1;fullwidth/B1;OLSG40_B1_01.webp;hp-ols-g40-16;feature_b1;OLSG40_B1_01.webp;OLSG40_B1_01.webp;gleich
+ols-g40-b2;media_text/B2;OLSG40_B2_01.webp;hp-ols-g40-16;feature_b2;OLSG40_B2_01.webp;OLSG40_B2_01.webp;gleich
+ols-g40-r1;text/R1;OLSG40_R1_01.webp;hp-ols-g40-16;feature_r1;OLSG40_R1_01.webp;OLSG40_R1_01.webp;gleich
+ols-g40-b1;fullwidth/B1;OLSG40_B1_01.webp;hp-ols-g40-25;feature_b1;OLSG40_B1_01.webp;OLSG40_B1_01.webp;gleich
+ols-g40-b2;media_text/B2;OLSG40_B2_01.webp;hp-ols-g40-25;feature_b2;OLSG40_B2_01.webp;OLSG40_B2_01.webp;gleich
+ols-g40-r1;text/R1;OLSG40_R1_01.webp;hp-ols-g40-25;feature_r1;OLSG40_R1_01.webp;OLSG40_R1_01.webp;gleich
+ols-g40-b1;fullwidth/B1;OLSG40_B1_01.webp;hp-ols-g40-35;feature_b1;OLSG40_B1_01.webp;OLSG40_B1_01.webp;gleich
+ols-g40-b2;media_text/B2;OLSG40_B2_01.webp;hp-ols-g40-35;feature_b2;OLSG40_B2_01.webp;OLSG40_B2_01.webp;gleich
+ols-g40-r1;text/R1;OLSG40_R1_01.webp;hp-ols-g40-35;feature_r1;OLSG40_R1_01.webp;OLSG40_R1_01.webp;gleich
+ols-s17-b1;fullwidth/B1;OLSS17_B1_01.webp;hp-ols-s17-16-eu;feature_b1;OLSS17_B1_01.webp;OLSS17_B1_01.webp;gleich
+ols-s17-b2;media_text/B2;OLSS17_B2_01.webp;hp-ols-s17-16-eu;feature_b2;OLSS17_B2_01.webp;OLSS17_B2_01.webp;gleich
+ols-s17-r1;text/R1;OLSS17_R1_01.webp;hp-ols-s17-16-eu;feature_r1;OLSS17_R1_01.webp;OLSS17_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-100;feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-100;feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-100;feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-150;feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-150;feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-150;feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-200;feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-200;feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-200;feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-400;feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-400;feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-400;feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-600;feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-600;feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-600;feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-800;feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-800;feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-800;feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+olt-b1;fullwidth/B1;OLT_B1_01.webp;hp-olt-300-eu (Erstaufruf, Variante HP-OLT-300);feature_b1;OLT_B1_01.webp;OLT_B1_01.webp;gleich
+olt-b2;media_text/B2;OLT_B2_01.webp;hp-olt-300-eu (Erstaufruf, Variante HP-OLT-300);feature_b2;OLT_B2_01.webp;OLT_B2_01.webp;gleich
+olt-r1;text/R1;OLT_R1_01.webp;hp-olt-300-eu (Erstaufruf, Variante HP-OLT-300);feature_r1;OLT_R1_01.webp;OLT_R1_01.webp;gleich
+rct-b1;fullwidth/B1;RCT_B1_01.webp;hp-rct-400;feature_b1;RCT_B1_01.webp;RCT_B1_01.webp;gleich
+rct-b2;media_text/B2;RCT_B2_01.webp;hp-rct-400;feature_b2;RCT_B2_01.webp;RCT_B2_01.webp;gleich
+rct-r1;text/R1;RCT_R1_01.webp;hp-rct-400;feature_r1;RCT_R1_01.webp;RCT_R1_01.webp;gleich
+rfm-b1;fullwidth/B1;RFM_B1_01.webp;hp-rfm-600;feature_b1;RFM_B1_01.webp;RFM_B1_01.webp;gleich
+rfm-b2;media_text/B2;RFM_B2_03.webp;hp-rfm-600;feature_b2;RFM_B2_03.webp;RFM_B2_03.webp;gleich
+rfm-r1;text/R1;RFM_R1_01.webp;hp-rfm-600;feature_r1;RFM_R1_01.webp;RFM_R1_01.webp;gleich
+rgb-b1;fullwidth/B1;RGB_B1_01.webp;hp-rgb-200a;feature_b1;RGB_B1_01.webp;RGB_B1_01.webp;gleich
+rgb-b2;media_text/B2;RGB_B2_01.webp;hp-rgb-200a;feature_b2;RGB_B2_01.webp;RGB_B2_01.webp;gleich
+rgb-r1;text/R1;RGB_R1_01.webp;hp-rgb-200a;feature_r1;RGB_R1_01.webp;RGB_R1_01.webp;gleich
+rgb-b1;fullwidth/B1;RGB_B1_01.webp;hp-rgb-300a;feature_b1;RGB_B1_01.webp;RGB_B1_01.webp;gleich
+rgb-b2;media_text/B2;RGB_B2_01.webp;hp-rgb-300a;feature_b2;RGB_B2_01.webp;RGB_B2_01.webp;gleich
+rgb-r1;text/R1;RGB_R1_01.webp;hp-rgb-300a;feature_r1;RGB_R1_01.webp;RGB_R1_01.webp;gleich
+rit-b1;fullwidth/B1;RIT_B1_01.webp;hp-rit-280;feature_b1;RIT_B1_01.webp;RIT_B1_01.webp;gleich
+rit-b2;media_text/B2;RIT_B2_01.webp;hp-rit-280;feature_b2;RIT_B2_01.webp;RIT_B2_01.webp;gleich
+rit-r1;text/R1;RIT_R1_01.webp;hp-rit-280;feature_r1;RIT_R1_01.webp;RIT_R1_01.webp;gleich
+rnm-b1;fullwidth/B1;RNM_B1_01.webp;hp-rnm-200;feature_b1;RNM_B1_01.webp;RNM_B1_01.webp;gleich
+rnm-b2;media_text/B2;RNM_B2_01.webp;hp-rnm-200;feature_b2;RNM_B2_01.webp;RNM_B2_01.webp;gleich
+rnm-r1;text/R1;RNM_R1_01.webp;hp-rnm-200;feature_r1;RNM_R1_01.webp;RNM_R1_01.webp;gleich
+rsp-b1;fullwidth/B1;RSP_B1_01.webp;hp-rsp-180 (Erstaufruf, Variante HP-RSP-180);feature_b1;RSP_B1_01.webp;RSP_B1_01.webp;gleich
+rsp-b2;media_text/B2;RSP_B2_04.webp;hp-rsp-180 (Erstaufruf, Variante HP-RSP-180);feature_b2;RSP_B2_04.webp;RSP_B2_04.webp;gleich
+rsp-r1;text/R1;RSP_R1_01.webp;hp-rsp-180 (Erstaufruf, Variante HP-RSP-180);feature_r1;RSP_R1_01.webp;RSP_R1_01.webp;gleich
+rtm-b1;fullwidth/B1;RTM_B1_01.webp;hp-rtm-400;feature_b1;RTM_B1_01.webp;RTM_B1_01.webp;gleich
+rtm-b2;media_text/B2;RTM_B2_01.webp;hp-rtm-400;feature_b2;RTM_B2_01.webp;RTM_B2_01.webp;gleich
+rtm-r1;text/R1;RTM_R1_01.webp;hp-rtm-400;feature_r1;RTM_R1_01.webp;RTM_R1_01.webp;gleich
+sblb-schieber;schieber;SBLB_I1_01_an.webp;hp-sblb-100l-ww-new;keins;;SBLB_I1_01_an.webp;kein_feld
+sblb-hotspot;hotspot;SBLB_P1_01.webp;hp-sblb-100l-ww-new;keins;;SBLB_P1_01.webp;kein_feld
+sblb-schieber;schieber;SBLB_I1_01_an.webp;hp-sblb-60l-ww-new;keins;;SBLB_I1_01_an.webp;kein_feld
+sblb-hotspot;hotspot;SBLB_P1_01.webp;hp-sblb-60l-ww-new;keins;;SBLB_P1_01.webp;kein_feld
+scwl-b1;fullwidth/B1;SCWL_B1_01.webp;hp-scwl-10m2p-mc (Erstaufruf = Variante HP-SCWL-10M2P-MC, Multicolor);feature_b1;SCWLM_B1_01.webp (Variantenfeld);SCWLM_B1_01.webp;feld_gewinnt
+scwl-b2;media_text/B2;SCWL_B2_01.webp;hp-scwl-10m2p-mc (Erstaufruf = Variante HP-SCWL-10M2P-MC, Multicolor);feature_b2;SCWLM_B2_01.webp (Variantenfeld);SCWLM_B2_01.webp;feld_gewinnt
+scwl-r1;text/R1;SCWL_R1_01.webp;hp-scwl-10m2p-mc (Erstaufruf = Variante HP-SCWL-10M2P-MC, Multicolor);feature_r1;SCWLM_R1_01.webp (Variantenfeld);SCWLM_R1_01.webp;feld_gewinnt
+scwl-b1;fullwidth/B1;SCWL_B1_01.webp;hp-scwl-10m2p-mc / Varianten ohne eigene Felder (HP-SCWL-10M2P-WW);feature_b1;SCWL_B1_01.webp;SCWL_B1_01.webp;gleich
+scwl-b2;media_text/B2;SCWL_B2_01.webp;hp-scwl-10m2p-mc / Varianten ohne eigene Felder (HP-SCWL-10M2P-WW);feature_b2;SCWL_B2_01.webp;SCWL_B2_01.webp;gleich
+scwl-r1;text/R1;SCWL_R1_01.webp;hp-scwl-10m2p-mc / Varianten ohne eigene Felder (HP-SCWL-10M2P-WW);feature_r1;SCWL_R1_01.webp;SCWL_R1_01.webp;gleich
+scwl-b1;fullwidth/B1;SCWL_B1_01.webp;hp-scwl-15m2p-mc (Erstaufruf = Variante HP-SCWL-15M2P-MC, Multicolor);feature_b1;SCWLM_B1_01.webp (Variantenfeld);SCWLM_B1_01.webp;feld_gewinnt
+scwl-b2;media_text/B2;SCWL_B2_01.webp;hp-scwl-15m2p-mc (Erstaufruf = Variante HP-SCWL-15M2P-MC, Multicolor);feature_b2;SCWLM_B2_01.webp (Variantenfeld);SCWLM_B2_01.webp;feld_gewinnt
+scwl-r1;text/R1;SCWL_R1_01.webp;hp-scwl-15m2p-mc (Erstaufruf = Variante HP-SCWL-15M2P-MC, Multicolor);feature_r1;SCWLM_R1_01.webp (Variantenfeld);SCWLM_R1_01.webp;feld_gewinnt
+scwl-b1;fullwidth/B1;SCWL_B1_01.webp;hp-scwl-15m2p-mc / Varianten ohne eigene Felder (HP-SCWL-15M2P-WW);feature_b1;SCWL_B1_01.webp;SCWL_B1_01.webp;gleich
+scwl-b2;media_text/B2;SCWL_B2_01.webp;hp-scwl-15m2p-mc / Varianten ohne eigene Felder (HP-SCWL-15M2P-WW);feature_b2;SCWL_B2_01.webp;SCWL_B2_01.webp;gleich
+scwl-r1;text/R1;SCWL_R1_01.webp;hp-scwl-15m2p-mc / Varianten ohne eigene Felder (HP-SCWL-15M2P-WW);feature_r1;SCWL_R1_01.webp;SCWL_R1_01.webp;gleich
+tpm-b1;fullwidth/B1;CTL_B1_01.webp;hp-tpm-400-eu-1 (Erstaufruf, Variante HP-TPM-400);feature_b1;CTL_B1_01.webp;CTL_B1_01.webp;gleich
+tpm-b2;media_text/B2;CTL_B2_03.webp;hp-tpm-400-eu-1 (Erstaufruf, Variante HP-TPM-400);feature_b2;CTL_B2_03.webp;CTL_B2_03.webp;gleich
+tpm-r1;text/R1;CTL_R1_01.webp;hp-tpm-400-eu-1 (Erstaufruf, Variante HP-TPM-400);feature_r1;CTL_R1_01.webp;CTL_R1_01.webp;gleich
+ucp-b1;fullwidth/B1;UCT_B1_01.webp;hp-ucp-200 (Erstaufruf, Variante HP-UCP-200);feature_b1;UCT_B1_01.webp;UCT_B1_01.webp;gleich
+ucp-b2;media_text/B2;UCT_B2_01.webp;hp-ucp-200 (Erstaufruf, Variante HP-UCP-200);feature_b2;UCT_B2_01.webp;UCT_B2_01.webp;gleich
+ucp-r1;text/R1;UCT_R1_01.webp;hp-ucp-200 (Erstaufruf, Variante HP-UCP-200);feature_r1;UCT_R1_01.webp;UCT_R1_01.webp;gleich
+uct-b1;fullwidth/B1;UCT_B1_01.webp;hp-uct-200-eu (Erstaufruf, Variante HP-UCT-200);feature_b1;UCT_B1_01.webp;UCT_B1_01.webp;gleich
+uct-b2;media_text/B2;UCT_B2_01.webp;hp-uct-200-eu (Erstaufruf, Variante HP-UCT-200);feature_b2;UCT_B2_01.webp;UCT_B2_01.webp;gleich
+uct-r1;text/R1;UCT_R1_01.webp;hp-uct-200-eu (Erstaufruf, Variante HP-UCT-200);feature_r1;UCT_R1_01.webp;UCT_R1_01.webp;gleich
+vam-b1;fullwidth/B1;VLM_B1_01.webp;hp-vam-400l-eu-1;feature_b1;VLM_B1_01.webp;VLM_B1_01.webp;gleich
+vam-b2;media_text/B2;VLM_B2_01.webp;hp-vam-400l-eu-1;feature_b2;VLM_B2_01.webp;VLM_B2_01.webp;gleich
+vam-r1;text/R1;VLM_R1_01.webp;hp-vam-400l-eu-1;feature_r1;VLM_R1_01.webp;VLM_R1_01.webp;gleich
+vit-b2;media_text/B2;VIT_B2_08.webp;hp-vit-586l-eu-1;feature_b2;VIT_B2_06.webp;VIT_B2_08.webp;block_verdeckt_feld
+vit-schieber-586l;schieber;VIT_I1_02_an.webp;hp-vit-586l-eu-1;keins;;VIT_I1_02_an.webp;kein_feld
+vit-sticky;media_text/sticky;VIT_B2_06.webp;hp-vit-586l-eu-1;keins;;VIT_B2_06.webp;kein_feld
+vit-hotspot;hotspot;VIT_P1_01.webp;hp-vit-586l-eu-1;keins;;VIT_P1_01.webp;kein_feld
+vit-b2;media_text/B2;VIT_B2_08.webp;hp-vit-864l-eu-1;feature_b2;VIT_B2_06.webp;VIT_B2_08.webp;block_verdeckt_feld
+vit-schieber-864l;schieber;VIT_I1_01_an.webp;hp-vit-864l-eu-1;keins;;VIT_I1_01_an.webp;kein_feld
+vit-sticky;media_text/sticky;VIT_B2_06.webp;hp-vit-864l-eu-1;keins;;VIT_B2_06.webp;kein_feld
+vit-hotspot;hotspot;VIT_P1_01.webp;hp-vit-864l-eu-1;keins;;VIT_P1_01.webp;kein_feld
+vlm-b1;fullwidth/B1;VLM_B1_01.webp;hp-vlm-100l (Erstaufruf, Variante HP-VLM-100L);feature_b1;VLM_B1_01.webp;VLM_B1_01.webp;gleich
+vlm-b2;media_text/B2;VLM_B2_01.webp;hp-vlm-100l (Erstaufruf, Variante HP-VLM-100L);feature_b2;VLM_B2_01.webp;VLM_B2_01.webp;gleich
+vlm-r1;text/R1;VLM_R1_01.webp;hp-vlm-100l (Erstaufruf, Variante HP-VLM-100L);feature_r1;VLM_R1_01.webp;VLM_R1_01.webp;gleich
+blt-schieber;schieber;BLT_B2_01.webp;hp-blt-050 (Erstaufruf, Variante HP-BLT-050);keins;;BLT_B2_01.webp;kein_feld
+blt-hotspot;hotspot;BLT_P1_03.webp;hp-blt-050 (Erstaufruf, Variante HP-BLT-050);keins;;BLT_P1_03.webp;kein_feld
+bsl-b1;fullwidth/B1;BSL_B1_01.webp;hp-bsl-50-1p;feature_b1;BSL_B1_01.webp;BSL_B1_01.webp;gleich
+bsl-b2;media_text/B2;BSL_B2_01.webp;hp-bsl-50-1p;feature_b2;BSL_B2_01.webp;BSL_B2_01.webp;gleich
+bsl-r1;text/R1;BSL_R1_01.webp;hp-bsl-50-1p;feature_r1;BSL_R1_01.webp;BSL_R1_01.webp;gleich
+ctl-m-steuerung;steuerung;CTL_I4_01_mc.webp;hp-ctl-180m;keins;;CTL_I4_01_mc.webp;kein_feld
+ctl-hotspot;hotspot;CTL_P1_05.webp;hp-ctl-180m;keins;;CTL_P1_05.webp;kein_feld
+ctl-m-steuerung;steuerung;CTL_I4_01_mc.webp;hp-ctl-240m;keins;;CTL_I4_01_mc.webp;kein_feld
+ctl-hotspot;hotspot;CTL_P1_05.webp;hp-ctl-240m;keins;;CTL_P1_05.webp;kein_feld
+dpm-b1;fullwidth/B1;DPM_B1_01.webp;hp-dpm-300 (Erstaufruf, Variante HP-DPM-300);feature_b1;DPM_B1_01.webp;DPM_B1_01.webp (+ Clip am Block);gleich
+dpm-b2;media_text/B2;DPM_B2_01.webp;hp-dpm-300 (Erstaufruf, Variante HP-DPM-300);feature_b2;DPM_B2_01.webp;DPM_B2_01.webp;gleich
+dpm-r1;text/R1;DPM_R1_01.webp;hp-dpm-300 (Erstaufruf, Variante HP-DPM-300);feature_r1;DPM_R1_01.webp;DPM_R1_01.webp;gleich
+dpt-b1;fullwidth/B1;DPT_B1_01.webp;hp-dpt-300 (Erstaufruf, Variante HP-DPT-300);feature_b1;DPT_B1_01.webp;DPT_B1_01.webp;gleich
+dpt-b2;media_text/B2;DPT_B2_01.webp;hp-dpt-300 (Erstaufruf, Variante HP-DPT-300);feature_b2;DPT_B2_01.webp;DPT_B2_01.webp;gleich
+dpt-r1;text/R1;DPT_R1_01.webp;hp-dpt-300 (Erstaufruf, Variante HP-DPT-300);feature_r1;DPT_R1_01.webp;DPT_R1_01.webp;gleich
+dpt-b1;fullwidth/B1;DPT_B1_01.webp;hp-dpt-300 / Variante HP-DPT-200M (20 m / Multicolor);feature_b1;DPTM_B1_01.webp (Variantenfeld);DPTM_B1_01.webp;feld_gewinnt
+dpt-b2;media_text/B2;DPT_B2_01.webp;hp-dpt-300 / Variante HP-DPT-200M (20 m / Multicolor);feature_b2;DPTM_B2_01.webp (Variantenfeld);DPTM_B2_01.webp;feld_gewinnt
+dpt-r1;text/R1;DPT_R1_01.webp;hp-dpt-300 / Variante HP-DPT-200M (20 m / Multicolor);feature_r1;DPTM_R1_02.webp (Variantenfeld);DPTM_R1_02.webp;feld_gewinnt
+dpt-b1;fullwidth/B1;DPT_B1_01.webp;hp-dpt-300 / Variante HP-DPT-400M (40 m / Multicolor);feature_b1;DPTM_B1_01.webp (Variantenfeld);DPTM_B1_01.webp;feld_gewinnt
+dpt-b2;media_text/B2;DPT_B2_01.webp;hp-dpt-300 / Variante HP-DPT-400M (40 m / Multicolor);feature_b2;DPTM_B2_01.webp (Variantenfeld);DPTM_B2_01.webp;feld_gewinnt
+dpt-r1;text/R1;DPT_R1_01.webp;hp-dpt-300 / Variante HP-DPT-400M (40 m / Multicolor);feature_r1;DPTM_R1_02.webp (Variantenfeld);DPTM_R1_02.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-486 (Erstaufruf, Variante HP-ISL-486);feature_b1;ISL_B1_01.webp;ISL_B1_01.webp (+ Clip am Block);gleich
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-486 (Erstaufruf, Variante HP-ISL-486);feature_b2;ISL_B2_01.webp;ISL_B2_01.webp;gleich
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-486 (Erstaufruf, Variante HP-ISL-486);feature_r1;ISL_R1_01.webp;ISL_R1_01.webp;gleich
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-486 / Variante HP-ISL-486W (12,15 m / Kaltweiß);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-486 / Variante HP-ISL-486W (12,15 m / Kaltweiß);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-486 / Variante HP-ISL-486W (12,15 m / Kaltweiß);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-486 / Variante HP-ISL-486M (12,15 m / Multicolor);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-486 / Variante HP-ISL-486M (12,15 m / Multicolor);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-486 / Variante HP-ISL-486M (12,15 m / Multicolor);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-486 / Variante HP-ISL-648W (16,2 m / Kaltweiß);feature_b1;ISLW_B1_01.webp (Variantenfeld);ISLW_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-486 / Variante HP-ISL-648W (16,2 m / Kaltweiß);feature_b2;ISLW_B2_01.webp (Variantenfeld);ISLW_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-486 / Variante HP-ISL-648W (16,2 m / Kaltweiß);feature_r1;ISLW_R1_01.webp (Variantenfeld);ISLW_R1_01.webp;feld_gewinnt
+isl-b1;fullwidth/B1;ISL_B1_01.webp;hp-isl-486 / Variante HP-ISL-648M (16,2 m / Multicolor);feature_b1;ISLM_B1_01.webp (Variantenfeld);ISLM_B1_01.webp;feld_gewinnt
+isl-b2;media_text/B2;ISL_B2_01.webp;hp-isl-486 / Variante HP-ISL-648M (16,2 m / Multicolor);feature_b2;ISLM_B2_01.webp (Variantenfeld);ISLM_B2_01.webp;feld_gewinnt
+isl-r1;text/R1;ISL_R1_01.webp;hp-isl-486 / Variante HP-ISL-648M (16,2 m / Multicolor);feature_r1;ISLM_R1_01.webp (Variantenfeld);ISLM_R1_01.webp;feld_gewinnt
+npt-b2;media_text/B2;NPT_B2_01.webp;hp-npt-210 (Erstaufruf, Variante HP-NPT-210);feature_b2;NPT_B2_08.webp;NPT_B2_01.webp;block_verdeckt_feld
+npt-b2-zusatz;szene/zusatz;NPT_B2_08.webp;hp-npt-210 (Erstaufruf, Variante HP-NPT-210);keins;;NPT_B2_08.webp;kein_feld
+npt-schieber;schieber;NPT_I1_01_an.webp;hp-npt-210 (Erstaufruf, Variante HP-NPT-210);keins;;NPT_I1_01_an.webp;kein_feld
+npt-sticky;media_text/sticky;NPT_B2_06.webp;hp-npt-210 (Erstaufruf, Variante HP-NPT-210);keins;;NPT_B2_06.webp;kein_feld
+npt-hotspot;hotspot;NPT_P1_06.webp;hp-npt-210 (Erstaufruf, Variante HP-NPT-210);keins;;NPT_P1_06.webp;kein_feld
+olg-b1;fullwidth/B1;OLG_B1_01.webp;hp-olg-100;feature_b1;OLG_B1_01.webp;OLG_B1_01.webp (+ Clip am Block);gleich
+olg-b2;media_text/B2;OLG_B2_01.webp;hp-olg-100;feature_b2;OLG_B2_01.webp;OLG_B2_01.webp;gleich
+olg-r1;text/R1;OLG_R1_01.webp;hp-olg-100;feature_r1;OLG_R1_01.webp;OLG_R1_01.webp;gleich
+olg-b1;fullwidth/B1;OLG_B1_01.webp;hp-olg-600;feature_b1;OLG_B1_01.webp;OLG_B1_01.webp (+ Clip am Block);gleich
+olg-b2;media_text/B2;OLG_B2_01.webp;hp-olg-600;feature_b2;OLG_B2_01.webp;OLG_B2_01.webp;gleich
+olg-r1;text/R1;OLG_R1_01.webp;hp-olg-600;feature_r1;OLG_R1_01.webp;OLG_R1_01.webp;gleich
+olg-b1;fullwidth/B1;OLG_B1_01.webp;hp-olg-800;feature_b1;OLG_B1_01.webp;OLG_B1_01.webp (+ Clip am Block);gleich
+olg-b2;media_text/B2;OLG_B2_01.webp;hp-olg-800;feature_b2;OLG_B2_01.webp;OLG_B2_01.webp;gleich
+olg-r1;text/R1;OLG_R1_01.webp;hp-olg-800;feature_r1;OLG_R1_01.webp;OLG_R1_01.webp;gleich
+ol-s11-b1;fullwidth/B1;OLS11_B1_01.webp;hp-ols-s11-16 (Erstaufruf, Variante HP-OLS-S11-16);feature_b1;OLS11_B1_01.webp;OLS11_B1_01.webp;gleich
+ols-s11-b2;media_text/B2;OLSS11_B2_01.webp;hp-ols-s11-16 (Erstaufruf, Variante HP-OLS-S11-16);feature_b2;OLSS11_B2_01.webp;OLSS11_B2_01.webp;gleich
+ols-s11-r1;text/R1;OLSS11_R1_01.webp;hp-ols-s11-16 (Erstaufruf, Variante HP-OLS-S11-16);feature_r1;OLSS11_R1_01.webp;OLSS11_R1_01.webp;gleich
+ols-st38-b1;fullwidth/B1;OLST38_B1_01.webp;hp-ols-st38-16 (Erstaufruf, Variante HP-OLS-ST38-16);feature_b1;OLST38_B1_01.webp;OLST38_B1_01.webp;gleich
+ols-st38-b2;media_text/B2;OLSST38_B2_01.webp;hp-ols-st38-16 (Erstaufruf, Variante HP-OLS-ST38-16);feature_b2;OLSST38_B2_01.webp;OLSST38_B2_01.webp;gleich
+ols-st38-r1;text/R1;OLSST38_R1_01.webp;hp-ols-st38-16 (Erstaufruf, Variante HP-OLS-ST38-16);feature_r1;OLSST38_R1_01.webp;OLSST38_R1_01.webp;gleich
+rgb-b1;fullwidth/B1;RGB_B1_01.webp;hp-rgb-500a;feature_b1;RGB_B1_01.webp;RGB_B1_01.webp;gleich
+rgb-b2;media_text/B2;RGB_B2_01.webp;hp-rgb-500a;feature_b2;RGB_B2_01.webp;RGB_B2_01.webp;gleich
+rgb-r1;text/R1;RGB_R1_01.webp;hp-rgb-500a;feature_r1;RGB_R1_01.webp;RGB_R1_01.webp;gleich
+rmp-b1;fullwidth/B1;RMP_B1_01.webp;hp-rmp-180 (Erstaufruf, Variante HP-RMP-180);feature_b1;RMP_B1_01.webp;RMP_B1_01.webp;gleich
+rmp-r1;text/R1;RMP_R1_01.webp;hp-rmp-180 (Erstaufruf, Variante HP-RMP-180);feature_r1;RMP_R1_01.webp;RMP_R1_01.webp;gleich
+rpm-b1;fullwidth/B1;RPM_B1_01.webp;hp-rpm-200 (Erstaufruf, Variante HP-RPM-200);feature_b1;RPM_B1_01.webp;RPM_B1_01.webp;gleich
+rpm-b2;media_text/B2;RPM_B2_01.webp;hp-rpm-200 (Erstaufruf, Variante HP-RPM-200);feature_b2;RPM_B2_01.webp;RPM_B2_01.webp;gleich
+rpm-r1;text/R1;RPM_R1_01.webp;hp-rpm-200 (Erstaufruf, Variante HP-RPM-200);feature_r1;RPM_R1_01.webp;RPM_R1_01.webp;gleich
+u20-b1;fullwidth/B1;U20_B1_01.webp;hp-u20-200 (Erstaufruf, Variante HP-U20-200);feature_b1;U20_B1_01.webp;U20_B1_01.webp;gleich
+u20-b2;media_text/B2;U20_B2_01.webp;hp-u20-200 (Erstaufruf, Variante HP-U20-200);feature_b2;U20_B2_01.webp;U20_B2_01.webp;gleich
+u20-r1;text/R1;U20_R1_01.webp;hp-u20-200 (Erstaufruf, Variante HP-U20-200);feature_r1;U20_R1_01.webp;U20_R1_01.webp;gleich
+wwf-b1;fullwidth/B1;WWF_B1_01.webp;hp-wwf-180 (Erstaufruf, Variante HP-WWF-180);feature_b1;WWF_B1_01.webp;WWF_B1_01.webp;gleich
+wwf-b2;media_text/B2;WWF_B2_04.webp;hp-wwf-180 (Erstaufruf, Variante HP-WWF-180);feature_b2;WWF_B2_04.webp;WWF_B2_04.webp;gleich
+wwf-r1;text/R1;WWF_R1_01.webp;hp-wwf-180 (Erstaufruf, Variante HP-WWF-180);feature_r1;WWF_R1_01.webp;WWF_R1_01.webp;gleich
+baum-pec-b1;fullwidth/B1;BAUMPEC_B1_01.webp;pec-150g (Erstaufruf, Variante PEC-150G);feature_b1;BAUMPEC_B1_01.webp;BAUMPEC_B1_01.webp;gleich
+baum-pec-r1;text/R1;BAUMPEC_R1_01.webp;pec-150g (Erstaufruf, Variante PEC-150G);feature_r1;BAUMPEC_R1_01.webp;BAUMPEC_R1_01.webp;gleich
+baum-pvc-b1;fullwidth/B1;BAUMPVC_B1_01.webp;pvc-150g (Erstaufruf, Variante PVC-150G);feature_b1;BAUMPVC_B1_01.webp;BAUMPVC_B1_01.webp;gleich
+baum-pvc-r1;text/R1;BAUMPVC_R1_01.webp;pvc-150g (Erstaufruf, Variante PVC-150G);feature_r1;BAUMPVC_R1_01.webp;BAUMPVC_R1_01.webp;gleich
+bsm-b1;fullwidth/B1;BSM_B1_01.webp;hp-bsm-002;feature_b1;BSM_B1_01.webp;BSM_B1_01.webp;gleich
+bsm-r1;text/R1;BSM_R1_01.webp;hp-bsm-002;feature_r1;BSM_R1_01.webp;BSM_R1_01.webp;gleich
+bsx-b1;fullwidth/B1;BSX_B1_01.webp;hp-bsx-002;feature_b1;BSX_B1_01.webp;BSX_B1_01.webp;gleich
+bsx-r1;text/R1;BSX_R1_01.webp;hp-bsx-002;feature_r1;BSX_R1_01.webp;BSX_R1_01.webp;gleich
+csl-b1;fullwidth/B1;CSL_B1_01.webp;hp-csl-200-w;feature_b1;CSL_B1_01.webp;CSL_B1_01.webp;gleich
+csl-b2;media_text/B2;CSL_B2_01.webp;hp-csl-200-w;feature_b2;CSL_B2_01.webp;CSL_B2_01.webp;gleich
+csl-r1;text/R1;CSL_R1_01.webp;hp-csl-200-w;feature_r1;CSL_R1_01.webp;CSL_R1_01.webp;gleich
+dgm-b1;fullwidth/B1;DGM_B1_01.webp;hp-dgm-001;feature_b1;DGM_B1_01.webp;DGM_B1_01.webp;gleich
+dgm-w1-b1;fullwidth/B1;DGM002_B1_01.webp;hp-dgm-002;feature_b1;DGM002_B1_01.webp;DGM002_B1_01.webp;gleich
+dgm-w1-b2;media_text/B2;DGM002_B2_01.webp;hp-dgm-002;feature_b2;DGM002_B2_01.webp;DGM002_B2_01.webp;gleich
+fsf-b1;fullwidth/B1;FSF_B1_01.webp;hp-fsf-120;feature_b1;FSF_B1_01.webp;FSF_B1_01.webp;gleich
+fsf-r1;text/R1;FSF_R1_01.webp;hp-fsf-120;feature_r1;FSF_R1_01.webp;FSF_R1_01.webp;gleich
+fxf-b1;fullwidth/B1;FXF_B1_01.webp;hp-fxf-001;feature_b1;FXF_B1_01.webp;FXF_B1_01.webp;gleich
+fxf-r1;text/R1;FXF_R1_01.webp;hp-fxf-001;feature_r1;FXF_R1_01.webp;FXF_R1_01.webp;gleich
+ol-s11-b1;fullwidth/B1;OLS11_B1_01.webp;hp-ol-s11-50;feature_b1;OLS11_B1_01.webp;OLS11_B1_01.webp;gleich
+ol-s11-r1;text/R1;OLS11_R1_01.webp;hp-ol-s11-50;feature_r1;OLS11_R1_01.webp;OLS11_R1_01.webp;gleich
+ol-st38-b1;fullwidth/B1;OLST38_B1_01.webp;hp-ol-st38-50;feature_b1;OLST38_B1_01.webp;OLST38_B1_01.webp;gleich
+ol-st38-b2;media_text/B2;OLST38_B2_04.webp;hp-ol-st38-50;feature_b2;OLST38_B2_04.webp;OLST38_B2_04.webp;gleich
+ol-st38-r1;text/R1;OLST38_R1_01.webp;hp-ol-st38-50;feature_r1;OLST38_R1_01.webp;OLST38_R1_01.webp;gleich
