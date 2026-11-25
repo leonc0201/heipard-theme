@@ -1,0 +1,337 @@
+﻿handle;id;feld;verwendet_an;de;en;hinweis
+baum-pec-frage-1;gid://shopify/Metaobject/481767784781;frage;pec-150g;Welche Höhen gibt es?;What heights are available?;
+baum-pec-frage-1;gid://shopify/Metaobject/481767784781;antwort;pec-150g;Es gibt ihn in 1,5 m, 1,8 m und 2,1 m.;It comes in 1.5 m, 1.8 m and 2.1 m.;
+blm-frage-1;gid://shopify/Metaobject/439947821389;frage;hp-blm-100-eu;Welche Längen gibt es?;What lengths are available?;
+blm-frage-1;gid://shopify/Metaobject/439947821389;antwort;hp-blm-100-eu;10 m mit 100 LEDs und 15 m mit 150 LEDs.;10 m with 100 LEDs and 15 m with 150 LEDs.;
+blm-frage-2;gid://shopify/Metaobject/439947854157;frage;hp-blm-100-eu;Hat die Lichterkette einen Timer?;Do the string lights have a timer?;
+blm-frage-2;gid://shopify/Metaobject/439947854157;antwort;hp-blm-100-eu;Ja: 6 Stunden an, dann 18 Stunden aus.;Yes: 6 hours on, then 18 hours off.;
+blm-frage-3;gid://shopify/Metaobject/439947886925;frage;hp-blm-100-eu;Kann ich sie drinnen und draußen nutzen?;Can I use them indoors and outdoors?;
+blm-frage-3;gid://shopify/Metaobject/439947886925;antwort;hp-blm-100-eu;Ja, sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;Yes, they are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;
+blm-frage-4;gid://shopify/Metaobject/439947919693;frage;hp-blm-100-eu;Womit wird die 15-m-Kette betrieben?;What powers the 15 m string lights?;
+blm-frage-4;gid://shopify/Metaobject/439947919693;antwort;hp-blm-100-eu;Mit Batterien.;Batteries.;
+blt-frage-1;gid://shopify/Metaobject/439947952461;frage;hp-blt-050;Hat die Lichterkette einen Timer?;Do the string lights have a timer?;
+blt-frage-1;gid://shopify/Metaobject/439947952461;antwort;hp-blt-050;Ja: 6 Stunden an, dann 18 Stunden aus.;Yes: 6 hours on, then 18 hours off.;
+blt-frage-2;gid://shopify/Metaobject/439947985229;frage;hp-blt-100-eu-1, hp-blt-050;Welche Lichtfarbe hat sie?;;nicht übersetzt: „5-m-Kette“ ist an hp-blt-050 nur gesamtlaenge_m 5, beleuchtete Länge leer (wie „20-m-Kette“ bei olas14-sticky)
+blt-frage-2;gid://shopify/Metaobject/439947985229;antwort;hp-blt-100-eu-1, hp-blt-050;Warmweiß, bei der 5-m-Kette mit 2700 Kelvin.;;nicht übersetzt: „5-m-Kette“ ist an hp-blt-050 nur gesamtlaenge_m 5, beleuchtete Länge leer (wie „20-m-Kette“ bei olas14-sticky)
+blt-frage-3;gid://shopify/Metaobject/439948017997;frage;hp-blt-100-eu-1, hp-blt-050;Kann ich sie draußen verwenden?;Can I use them outdoors?;
+blt-frage-3;gid://shopify/Metaobject/439948017997;antwort;hp-blt-100-eu-1, hp-blt-050;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+blt-frage-4;gid://shopify/Metaobject/439948050765;frage;hp-blt-100-eu-1, hp-blt-050;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+blt-frage-4;gid://shopify/Metaobject/439948050765;antwort;hp-blt-100-eu-1, hp-blt-050;8 Leuchtmodi.;8 lighting modes.;
+bsl-frage-1;gid://shopify/Metaobject/481765851469;frage;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;Welche Längen gibt es?;What lengths are available?;
+bsl-frage-1;gid://shopify/Metaobject/481765851469;antwort;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;5 m mit 50 LEDs und 10 m mit 100 LEDs.;5 m with 50 LEDs and 10 m with 100 LEDs.;
+bsl-frage-2;gid://shopify/Metaobject/481765884237;frage;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+bsl-frage-2;gid://shopify/Metaobject/481765884237;antwort;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;2 Leuchtmodi.;2 lighting modes.;
+bsl-frage-3;gid://shopify/Metaobject/481765917005;frage;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+bsl-frage-3;gid://shopify/Metaobject/481765917005;antwort;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+bsl-frage-4;gid://shopify/Metaobject/481765949773;frage;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;Welche Farbtemperatur hat das Licht?;What is the color temperature of the light?;
+bsl-frage-4;gid://shopify/Metaobject/481765949773;antwort;hp-bsl-100-1p, hp-bsl-100-2p, hp-bsl-50-2p, hp-bsl-50-1p;3000 Kelvin.;3000 Kelvin.;
+cl-frage-1;gid://shopify/Metaobject/481766965581;frage;hp-cl-1-eu, hp-cl-2-eu;Wie lang ist die Campinglaterne?;;nicht übersetzt: „10 m lang“ an hp-cl-2-eu nicht als beleuchtete Länge belegt (nur gesamtlaenge_m 10), an hp-cl-1-eu beleuchtet 10
+cl-frage-1;gid://shopify/Metaobject/481766965581;antwort;hp-cl-1-eu, hp-cl-2-eu;Sie ist 10 m lang.;;nicht übersetzt: „10 m lang“ an hp-cl-2-eu nicht als beleuchtete Länge belegt (nur gesamtlaenge_m 10), an hp-cl-1-eu beleuchtet 10
+cl-frage-2;gid://shopify/Metaobject/481766998349;frage;hp-cl-1-eu, hp-cl-2-eu;Wie ist die Campinglaterne gegen Wasser geschützt?;How is the camping lantern protected against water?;
+cl-frage-2;gid://shopify/Metaobject/481766998349;antwort;hp-cl-1-eu, hp-cl-2-eu;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, it is protected against splashing water.;Pronomen/Begriff an das Produkt angepasst
+cl-frage-4;gid://shopify/Metaobject/481767063885;frage;hp-cl-1-eu, hp-cl-2-eu;Welche Farbtemperatur hat das Licht?;What is the color temperature of the light?;
+cl-frage-4;gid://shopify/Metaobject/481767063885;antwort;hp-cl-1-eu, hp-cl-2-eu;3000 Kelvin.;3000 Kelvin.;
+csl-frage-1;gid://shopify/Metaobject/481765982541;frage;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;In welchen Größen gibt es den Lichtervorhang?;What sizes does the light curtain come in?;
+csl-frage-1;gid://shopify/Metaobject/481765982541;antwort;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;Es gibt 3 x 2 m mit 200 LEDs und 3 x 3 m mit 300 LEDs.;It comes in 3 x 2 m with 200 LEDs and 3 x 3 m with 300 LEDs.;
+csl-frage-2;gid://shopify/Metaobject/481766015309;frage;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+csl-frage-2;gid://shopify/Metaobject/481766015309;antwort;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;8 Leuchtmodi.;8 lighting modes.;
+csl-frage-3;gid://shopify/Metaobject/481766048077;frage;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;Hat der Lichtervorhang einen Timer?;Does the light curtain have a timer?;
+csl-frage-3;gid://shopify/Metaobject/481766048077;antwort;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;Ja, mit einem Timer von 6 Stunden.;Yes, with a 6-hour timer.;
+csl-frage-4;gid://shopify/Metaobject/481766080845;frage;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;Wie ist der Lichtervorhang gegen Wasser geschützt?;How is the light curtain protected against water?;
+csl-frage-4;gid://shopify/Metaobject/481766080845;antwort;hp-csl-300-c, hp-csl-300-w, hp-csl-200-c, hp-csl-200-w;Er ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, it is protected against splashing water.;
+ctl-frage-1;gid://shopify/Metaobject/439948083533;frage;hp-ctl-210-eu-1, hp-ctl-400-eu-1, hp-ctl-180m, hp-ctl-240m;Wie viele Leuchtmodi hat die Baum-Lichterkette?;How many lighting modes do the tree string lights have?;
+ctl-frage-1;gid://shopify/Metaobject/439948083533;antwort;hp-ctl-210-eu-1, hp-ctl-400-eu-1, hp-ctl-180m, hp-ctl-240m;8 Leuchtmodi.;8 lighting modes.;
+ctl-frage-2;gid://shopify/Metaobject/439948116301;frage;hp-ctl-210-eu-1, hp-ctl-400-eu-1, hp-ctl-180m, hp-ctl-240m;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+ctl-frage-2;gid://shopify/Metaobject/439948116301;antwort;hp-ctl-210-eu-1, hp-ctl-400-eu-1, hp-ctl-180m, hp-ctl-240m;Ja, in vier Stufen.;Yes, in four stages.;
+ctl-frage-3;gid://shopify/Metaobject/439948149069;frage;hp-ctl-210-eu-1, hp-ctl-400-eu-1, hp-ctl-180m, hp-ctl-240m;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+ctl-frage-3;gid://shopify/Metaobject/439948149069;antwort;hp-ctl-210-eu-1, hp-ctl-400-eu-1, hp-ctl-180m, hp-ctl-240m;Über ein Netzteil.;With a power adapter.;
+ctl-frage-4;gid://shopify/Metaobject/439948181837;frage;hp-ctl-180m, hp-ctl-240m;Wie weit liegen die LEDs auseinander, und wie lang ist die Zuleitung?;How far apart are the LEDs, and how long is the power cord?;
+ctl-frage-4;gid://shopify/Metaobject/439948181837;antwort;hp-ctl-180m, hp-ctl-240m;Die LEDs sitzen im Abstand von 10 cm. Die Zuleitung ist 3 m lang.;The LEDs are spaced 10 cm apart. The power cord is 3 m long.;
+ctl-w1-frage-1;gid://shopify/Metaobject/481766113613;frage;hp-ctl-180, hp-ctl-240, hp-ctl-300-eu, hp-ctl-360-eu;Wie viele LEDs hat der Baum?;How many LEDs does the tree have?;
+ctl-w1-frage-1;gid://shopify/Metaobject/481766113613;antwort;hp-ctl-180, hp-ctl-240, hp-ctl-300-eu, hp-ctl-360-eu;Je nach Produkt 180, 240, 300 oder 360 LEDs.;Depending on the product, 180, 240, 300 or 360 LEDs.;
+ctl-w1-frage-2;gid://shopify/Metaobject/481766146381;frage;hp-ctl-180, hp-ctl-240, hp-ctl-300-eu, hp-ctl-360-eu;Kann ich den Baum auch draußen nutzen?;Can I use the tree outdoors too?;
+ctl-w1-frage-2;gid://shopify/Metaobject/481766146381;antwort;hp-ctl-180, hp-ctl-240, hp-ctl-300-eu, hp-ctl-360-eu;Er ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;It is designed for indoor and outdoor use, and with an IP44 rating, it is protected against splashing water.;
+ctl-w1-frage-3;gid://shopify/Metaobject/481766179149;frage;hp-ctl-180, hp-ctl-240, hp-ctl-300-eu, hp-ctl-360-eu;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+ctl-w1-frage-3;gid://shopify/Metaobject/481766179149;antwort;hp-ctl-180, hp-ctl-240, hp-ctl-300-eu, hp-ctl-360-eu;Ja, in vier Stufen: 25, 50, 75 und 100 Prozent.;Yes, in four stages: 25, 50, 75 and 100 percent.;
+dct-frage-1;gid://shopify/Metaobject/439948247373;frage;hp-dct-200;In welchen Größen gibt es den Lichtervorhang?;What sizes does the light curtain come in?;
+dct-frage-1;gid://shopify/Metaobject/439948247373;antwort;hp-dct-200;Es gibt ihn in 3 x 2 m mit 200 LEDs und in 3 x 3 m mit 300 LEDs.;It comes in 3 x 2 m with 200 LEDs and in 3 x 3 m with 300 LEDs.;
+dct-frage-2;gid://shopify/Metaobject/439948280141;frage;hp-dct-200;Welche Lichtfarben kann ich wählen?;Which light colors can I choose?;
+dct-frage-2;gid://shopify/Metaobject/439948280141;antwort;hp-dct-200;Warmweiß, Kaltweiß oder Multicolor, jeweils in beiden Größen.;Warm white, cool white or multicolor, each in both sizes.;
+dct-frage-3;gid://shopify/Metaobject/439948312909;frage;hp-dct-200;Kann ich den Vorhang auch draußen aufhängen?;Can I hang the curtain outdoors too?;
+dct-frage-3;gid://shopify/Metaobject/439948312909;antwort;hp-dct-200;Er ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, it is protected against splashing water.;
+dct-frage-4;gid://shopify/Metaobject/439948345677;frage;hp-dct-200;Wie viele Leuchtmodi hat der Vorhang, und wie lang ist die Zuleitung?;How many lighting modes does the curtain have, and how long is the power cord?;
+dct-frage-4;gid://shopify/Metaobject/439948345677;antwort;hp-dct-200;Du hast 8 Leuchtmodi zur Auswahl. Die Zuleitung ist 3 m lang.;You can choose from 8 lighting modes. The power cord is 3 m long.;
+dfm-frage-1;gid://shopify/Metaobject/439948378445;frage;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Kann ich die Cluster-Lichterkette drinnen und draußen nutzen?;Can I use the cluster string lights indoors and outdoors?;
+dfm-frage-1;gid://shopify/Metaobject/439948378445;antwort;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Ja, sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;Yes, they are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;
+dfm-frage-2;gid://shopify/Metaobject/439948411213;frage;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+dfm-frage-2;gid://shopify/Metaobject/439948411213;antwort;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Ja, in vier Stufen: 25, 50, 75 und 100 Prozent.;Yes, in four stages: 25, 50, 75 and 100 percent.;
+dfm-frage-3;gid://shopify/Metaobject/439948443981;frage;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Wie viele Leuchtmodi hat sie?;How many lighting modes do they have?;
+dfm-frage-3;gid://shopify/Metaobject/439948443981;antwort;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;8 Leuchtmodi.;8 lighting modes.;
+dfm-frage-4;gid://shopify/Metaobject/439948476749;frage;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Wie wird sie mit Strom versorgt?;How are they powered?;
+dfm-frage-4;gid://shopify/Metaobject/439948476749;antwort;hp-dfm-400-eu-2, hp-dfm-600, hp-dfm-750-eu;Über ein Netzteil.;With a power adapter.;
+dgm-frage-1;gid://shopify/Metaobject/439948509517;frage;hp-dgm-001;Wie viele LEDs hat der Gartenstecker?;How many LEDs does the garden stake light have?;
+dgm-frage-1;gid://shopify/Metaobject/439948509517;antwort;hp-dgm-001;120 LEDs.;120 LEDs.;
+dgm-frage-2;gid://shopify/Metaobject/439948542285;frage;hp-dgm-001;Ist der Stern für draußen gedacht?;Is the star designed for outdoor use?;
+dgm-frage-2;gid://shopify/Metaobject/439948542285;antwort;hp-dgm-001;Ja, für den Außenbereich, nach IP44 gegen Spritzwasser geschützt.;Yes, for outdoor use, and with an IP44 rating, it is protected against splashing water.;
+dgm-w1-frage-1;gid://shopify/Metaobject/481767358797;frage;hp-dgm-048, hp-dgm-002;Wie viele LEDs hat der Gartenstecker?;;"nicht übersetzt: Frage nennt „Gartenstecker“, hängt auch an hp-dgm-048 (Geschenkboxen, innen); Zahlen 48/70 stimmen"
+dgm-w1-frage-1;gid://shopify/Metaobject/481767358797;antwort;hp-dgm-048, hp-dgm-002;Je nach Produkt 48 oder 70 LEDs.;;"nicht übersetzt: Frage nennt „Gartenstecker“, hängt auch an hp-dgm-048 (Geschenkboxen, innen); Zahlen 48/70 stimmen"
+dgm-w1-frage-2;gid://shopify/Metaobject/481767391565;frage;hp-dgm-048, hp-dgm-002;Hat der Gartenstecker einen Timer?;;"nicht übersetzt: „Gartenstecker“ wie dgm-w1-frage-1; „18 Stunden aus“ nicht belegt (nur timer_dauer_h 6, keine Beschreibung)"
+dgm-w1-frage-2;gid://shopify/Metaobject/481767391565;antwort;hp-dgm-048, hp-dgm-002;Ja: 6 Stunden an, dann 18 Stunden aus.;;"nicht übersetzt: „Gartenstecker“ wie dgm-w1-frage-1; „18 Stunden aus“ nicht belegt (nur timer_dauer_h 6, keine Beschreibung)"
+dgm-w1-frage-3;gid://shopify/Metaobject/481767424333;frage;hp-dgm-048;Wie wird der Gartenstecker mit Strom versorgt?;;"nicht übersetzt: hängt nur an hp-dgm-048 (Geschenkboxen, innen), Frage nennt „Gartenstecker“; Batterie stimmt"
+dgm-w1-frage-3;gid://shopify/Metaobject/481767424333;antwort;hp-dgm-048;Mit Batterien.;;"nicht übersetzt: hängt nur an hp-dgm-048 (Geschenkboxen, innen), Frage nennt „Gartenstecker“; Batterie stimmt"
+dlm-frage-1;gid://shopify/Metaobject/481767817549;frage;hp-dlm-100h;Welche Längen gibt es?;What lengths are available?;
+dlm-frage-1;gid://shopify/Metaobject/481767817549;antwort;hp-dlm-100h;10 m mit 100 LEDs und 20 m mit 200 LEDs.;10 m with 100 LEDs and 20 m with 200 LEDs.;
+dlm-frage-2;gid://shopify/Metaobject/481767850317;frage;hp-dlm-100h;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+dlm-frage-2;gid://shopify/Metaobject/481767850317;antwort;hp-dlm-100h;8 Leuchtmodi.;8 lighting modes.;
+dlm-frage-3;gid://shopify/Metaobject/481767883085;frage;hp-dlm-100h;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+dlm-frage-3;gid://shopify/Metaobject/481767883085;antwort;hp-dlm-100h;Über ein Netzteil.;With a power adapter.;
+dlm-frage-4;gid://shopify/Metaobject/481767915853;frage;hp-dlm-100h;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+dlm-frage-4;gid://shopify/Metaobject/481767915853;antwort;hp-dlm-100h;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+dnm-frage-2;gid://shopify/Metaobject/481767981389;frage;hp-dnm-208;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+dnm-frage-2;gid://shopify/Metaobject/481767981389;antwort;hp-dnm-208;8 Leuchtmodi.;8 lighting modes.;
+dnm-frage-3;gid://shopify/Metaobject/481768014157;frage;hp-dnm-208;Wie wird das Lichternetz mit Strom versorgt?;How is the net light powered?;
+dnm-frage-3;gid://shopify/Metaobject/481768014157;antwort;hp-dnm-208;Über ein Netzteil.;With a power adapter.;
+dnm-frage-4;gid://shopify/Metaobject/481768046925;frage;hp-dnm-208;Kann ich das Lichternetz auch draußen nutzen?;Can I use the net light outdoors too?;
+dnm-frage-4;gid://shopify/Metaobject/481768046925;antwort;hp-dnm-208;Es ist nach IP67 staubdicht und gegen zeitweiliges Untertauchen geschützt.;With an IP67 rating, it is dust-tight and protected against temporary immersion.;
+dpm-frage-1;gid://shopify/Metaobject/481768079693;frage;hp-dpm-300;Welche Längen gibt es?;What lengths are available?;
+dpm-frage-1;gid://shopify/Metaobject/481768079693;antwort;hp-dpm-300;30 m mit 300 LEDs und 60 m mit 600 LEDs.;30 m with 300 LEDs and 60 m with 600 LEDs.;
+dpm-frage-2;gid://shopify/Metaobject/481768112461;frage;hp-dpm-300;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+dpm-frage-2;gid://shopify/Metaobject/481768112461;antwort;hp-dpm-300;8 Leuchtmodi.;8 lighting modes.;
+dpm-frage-3;gid://shopify/Metaobject/481768145229;frage;hp-dpm-300;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+dpm-frage-3;gid://shopify/Metaobject/481768145229;antwort;hp-dpm-300;Über ein Netzteil.;With a power adapter.;
+dpm-frage-4;gid://shopify/Metaobject/481768177997;frage;hp-dpm-300;Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+dpm-frage-4;gid://shopify/Metaobject/481768177997;antwort;hp-dpm-300;Sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;They are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;
+dpt-frage-1;gid://shopify/Metaobject/481768210765;frage;hp-dpt-300;Welche Längen gibt es?;What lengths are available?;
+dpt-frage-1;gid://shopify/Metaobject/481768210765;antwort;hp-dpt-300;30 m und 60 m.;30 m and 60 m.;
+isl-frage-1;gid://shopify/Metaobject/481766474061;frage;hp-isl-264, hp-isl-360-eu, hp-isl-486;Welche Längen gibt es?;What lengths are available?;
+isl-frage-1;gid://shopify/Metaobject/481766474061;antwort;hp-isl-264, hp-isl-360-eu, hp-isl-486;3,38 m mit 108 LEDs, 8,25 m mit 264 LEDs, 9 m mit 360 LEDs, 12,15 m mit 486 LEDs, 15 m mit 586 LEDs, 16,2 m mit 648 LEDs und 25 m mit 1008 LEDs.;3.38 m with 108 LEDs, 8.25 m with 264 LEDs, 9 m with 360 LEDs, 12.15 m with 486 LEDs, 15 m with 586 LEDs, 16.2 m with 648 LEDs and 25 m with 1,008 LEDs.;
+isl-frage-2;gid://shopify/Metaobject/481766506829;frage;hp-isl-264, hp-isl-360-eu, hp-isl-486;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+isl-frage-2;gid://shopify/Metaobject/481766506829;antwort;hp-isl-264, hp-isl-360-eu, hp-isl-486;8 Leuchtmodi.;8 lighting modes.;
+isl-frage-3;gid://shopify/Metaobject/481766539597;frage;hp-isl-264, hp-isl-360-eu, hp-isl-486;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+isl-frage-3;gid://shopify/Metaobject/481766539597;antwort;hp-isl-264, hp-isl-360-eu, hp-isl-486;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+npt-frage-1;gid://shopify/Metaobject/439948575053;frage;hp-npt-210;Wie groß ist das Lichternetz?;How big is the net light?;
+npt-frage-1;gid://shopify/Metaobject/439948575053;antwort;hp-npt-210;Das Netz misst 3 x 2 m.;The net light measures 3 x 2 m.;
+npt-frage-2;gid://shopify/Metaobject/439948607821;frage;hp-npt-210;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+npt-frage-2;gid://shopify/Metaobject/439948607821;antwort;hp-npt-210;Ja, in vier Stufen.;Yes, in four stages.;
+npt-frage-3;gid://shopify/Metaobject/439948640589;frage;hp-npt-210;Wie viele Leuchtmodi hat das Netz?;How many lighting modes does the net light have?;
+npt-frage-3;gid://shopify/Metaobject/439948640589;antwort;hp-npt-210;8 Leuchtmodi.;8 lighting modes.;
+npt-frage-4;gid://shopify/Metaobject/439948673357;frage;hp-npt-210;Kann ich mehrere Netze miteinander verbinden?;Can I connect several net lights together?;
+npt-frage-4;gid://shopify/Metaobject/439948673357;antwort;hp-npt-210;Ja, das Lichternetz ist koppelbar.;Yes, the net light is connectable.;
+ol-frage-1;gid://shopify/Metaobject/481765654861;frage;hp-ol-100, hp-ol-15, hp-ol-25, hp-ol-75;Welche Längen gibt es?;;nicht übersetzt: 10, 15, 45, 60 m sind gesamtlaenge_m (hp-ol-25 beleuchtet 12, sonst beleuchtet leer), wie ol-b2 in Abschnitt 2
+ol-frage-1;gid://shopify/Metaobject/481765654861;antwort;hp-ol-100, hp-ol-15, hp-ol-25, hp-ol-75;10 m mit 15 LEDs, 15 m mit 25 LEDs, 45 m mit 75 LEDs und 60 m mit 100 LEDs.;;nicht übersetzt: 10, 15, 45, 60 m sind gesamtlaenge_m (hp-ol-25 beleuchtet 12, sonst beleuchtet leer), wie ol-b2 in Abschnitt 2
+ol-frage-2;gid://shopify/Metaobject/481765687629;frage;hp-ol-100, hp-ol-15, hp-ol-25, hp-ol-75;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+ol-frage-2;gid://shopify/Metaobject/481765687629;antwort;hp-ol-100, hp-ol-15, hp-ol-25, hp-ol-75;Über ein Netzteil.;With a power adapter.;
+ol-frage-3;gid://shopify/Metaobject/481765720397;frage;hp-ol-100, hp-ol-15, hp-ol-25, hp-ol-75;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ol-frage-3;gid://shopify/Metaobject/481765720397;antwort;hp-ol-100, hp-ol-15, hp-ol-25, hp-ol-75;3 Leuchtmodi.;3 lighting modes.;
+ol-g40-frage-1;gid://shopify/Metaobject/412293464397;frage;hp-ol-30, hp-ol-50;Kann die Kette bei Regen draußen bleiben?;Can the string lights stay outdoors in the rain?;
+ol-g40-frage-1;gid://shopify/Metaobject/412293464397;antwort;hp-ol-30, hp-ol-50;Ja, die Kette ist nach IP45 gegen Strahlwasser geschützt, Regen macht ihr nichts aus. Der Transformator gehört an einen überdachten oder geschützten Platz.;Yes, with an IP45 rating, the string lights are protected against water jets, so rain does not bother them. The transformer belongs in a covered or sheltered spot.;
+ol-g40-frage-2;gid://shopify/Metaobject/412293497165;frage;hp-ol-30, hp-ol-50;Lassen sich mehrere Ketten verbinden?;;nicht übersetzt: koppelbar_bis 4 stimmt, „gemeinsam über eine Fernbedienung steuern“ nirgends belegt
+ol-g40-frage-2;gid://shopify/Metaobject/412293497165;antwort;hp-ol-30, hp-ol-50;Ja, bis zu vier Ketten lassen sich hintereinander schalten und gemeinsam über eine Fernbedienung steuern.;;nicht übersetzt: koppelbar_bis 4 stimmt, „gemeinsam über eine Fernbedienung steuern“ nirgends belegt
+ol-g40-frage-3;gid://shopify/Metaobject/412293529933;frage;hp-ol-30, hp-ol-50;Merkt sich die Kette meine Einstellung?;Do the string lights remember my setting?;
+ol-g40-frage-3;gid://shopify/Metaobject/412293529933;antwort;hp-ol-30, hp-ol-50;Ja, die Speicherfunktion stellt nach dem Ausschalten den zuletzt gewählten Modus und die Helligkeit wieder her.;Yes, after switching off, the memory function restores the last selected mode and brightness.;
+ol-g40-frage-4;gid://shopify/Metaobject/412293562701;frage;hp-ol-30, hp-ol-50;Was passiert, wenn eine Birne kaputtgeht?;What happens if a bulb breaks?;
+ol-g40-frage-4;gid://shopify/Metaobject/412293562701;antwort;hp-ol-30, hp-ol-50;Die Birnen bestehen aus bruchfestem Kunststoff, und drei Ersatzbirnen liegen bei. Eine defekte Birne wird einfach herausgedreht und ersetzt.;The bulbs are made of shatterproof plastic, and three spare bulbs are included. You simply unscrew a broken bulb and replace it.;
+ol-s11-frage-1;gid://shopify/Metaobject/481766244685;frage;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;Welche Längen gibt es?;;nicht übersetzt: 10/20 m gesamt (beleuchtet 7 / 16,8), 15 m nicht belegt (hp-ol-s11-25 beleuchtet leer), 30 m nirgends belegt (hp-ol-s11-50)
+ol-s11-frage-1;gid://shopify/Metaobject/481766244685;antwort;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;10 m mit 15 LEDs, 15 m mit 25 LEDs, 20 m mit 30 LEDs und 30 m mit 50 LEDs.;;nicht übersetzt: 10/20 m gesamt (beleuchtet 7 / 16,8), 15 m nicht belegt (hp-ol-s11-25 beleuchtet leer), 30 m nirgends belegt (hp-ol-s11-50)
+ol-s11-frage-2;gid://shopify/Metaobject/481766277453;frage;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ol-s11-frage-2;gid://shopify/Metaobject/481766277453;antwort;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;3 Leuchtmodi.;3 lighting modes.;
+ol-s11-frage-3;gid://shopify/Metaobject/481766310221;frage;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+ol-s11-frage-3;gid://shopify/Metaobject/481766310221;antwort;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;Über ein Netzteil.;With a power adapter.;
+ol-s11-frage-4;gid://shopify/Metaobject/481766342989;frage;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+ol-s11-frage-4;gid://shopify/Metaobject/481766342989;antwort;hp-ol-s11-15, hp-ol-s11-25, hp-ol-s11-30, hp-ol-s11-50;Sie ist nach IP45 gegen Strahlwasser geschützt.;With an IP45 rating, they are protected against water jets.;
+ol-st38-frage-1;gid://shopify/Metaobject/481766375757;frage;hp-ol-st38-15, hp-ol-st38-25, hp-ol-st38-30, hp-ol-st38-50;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ol-st38-frage-1;gid://shopify/Metaobject/481766375757;antwort;hp-ol-st38-15, hp-ol-st38-25, hp-ol-st38-30, hp-ol-st38-50;3 Leuchtmodi.;3 lighting modes.;
+ol-st38-frage-2;gid://shopify/Metaobject/481766408525;frage;hp-ol-st38-15, hp-ol-st38-25, hp-ol-st38-30, hp-ol-st38-50;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+ol-st38-frage-2;gid://shopify/Metaobject/481766408525;antwort;hp-ol-st38-15, hp-ol-st38-25, hp-ol-st38-30, hp-ol-st38-50;Über ein Netzteil.;With a power adapter.;
+ol-st38-frage-3;gid://shopify/Metaobject/481766441293;frage;hp-ol-st38-15, hp-ol-st38-25, hp-ol-st38-30, hp-ol-st38-50;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+ol-st38-frage-3;gid://shopify/Metaobject/481766441293;antwort;hp-ol-st38-15, hp-ol-st38-25, hp-ol-st38-30, hp-ol-st38-50;Sie ist nach IP45 gegen Strahlwasser geschützt.;With an IP45 rating, they are protected against water jets.;
+ola-g40-frage-2;gid://shopify/Metaobject/481766605133;frage;hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ola-g40-frage-2;gid://shopify/Metaobject/481766605133;antwort;hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu;3 Leuchtmodi.;3 lighting modes.;
+ola-g40-frage-3;gid://shopify/Metaobject/481766637901;frage;hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+ola-g40-frage-3;gid://shopify/Metaobject/481766637901;antwort;hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu;Über ein Netzteil.;With a power adapter.;
+ola-g40-frage-4;gid://shopify/Metaobject/481766670669;frage;hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu;Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+ola-g40-frage-4;gid://shopify/Metaobject/481766670669;antwort;hp-ola-g40-15-eu, hp-ola-g40-27-eu, hp-ola-g40-42-eu;Sie ist für den Außenbereich gedacht und nach IP44 gegen Spritzwasser geschützt.;They are designed for outdoor use, and with an IP44 rating, they are protected against splashing water.;
+olas14-frage-1;gid://shopify/Metaobject/439948738893;frage;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Welche Lichtfarbe haben die Birnen?;What light color do the bulbs have?;
+olas14-frage-1;gid://shopify/Metaobject/439948738893;antwort;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Warmweiß mit 2700 Kelvin.;Warm white at 2700 Kelvin.;
+olas14-frage-2;gid://shopify/Metaobject/439948771661;frage;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Wie weit reicht die Fernbedienung?;What is the range of the remote control?;
+olas14-frage-2;gid://shopify/Metaobject/439948771661;antwort;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Bis zu 25 m.;Up to 25 m.;
+olas14-frage-3;gid://shopify/Metaobject/439948804429;frage;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Kann ich die Helligkeit anpassen?;Can I adjust the brightness?;
+olas14-frage-3;gid://shopify/Metaobject/439948804429;antwort;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Ja, in vier Stufen: 25, 50, 75 und 100 Prozent.;Yes, in four stages: 25, 50, 75 and 100 percent.;
+olas14-frage-4;gid://shopify/Metaobject/439948837197;frage;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Mit welcher Spannung läuft die Kette, und wie lang ist die Zuleitung?;What voltage do the string lights run on, and how long is the power cord?;
+olas14-frage-4;gid://shopify/Metaobject/439948837197;antwort;hp-ola-s14-15-eu, hp-ola-s14-30-eu, hp-ola-s14-50-eu;Die Kette arbeitet mit 24 V. Die Zuleitung ist 3 m lang.;The string lights run on 24 V. The power cord is 3 m long.;
+olg-frage-1;gid://shopify/Metaobject/481765458253;frage;hp-olg-200, hp-olg-400, hp-olg-300-eu, hp-olg-100, hp-olg-200m, hp-olg-200w (+2);Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+olg-frage-1;gid://shopify/Metaobject/481765458253;antwort;hp-olg-200, hp-olg-400, hp-olg-300-eu, hp-olg-100, hp-olg-200m, hp-olg-200w (+2);8 Leuchtmodi.;8 lighting modes.;
+olg-frage-2;gid://shopify/Metaobject/481765491021;frage;hp-olg-200, hp-olg-400, hp-olg-300-eu, hp-olg-100, hp-olg-200m, hp-olg-200w (+2);Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+olg-frage-2;gid://shopify/Metaobject/481765491021;antwort;hp-olg-200, hp-olg-400, hp-olg-300-eu, hp-olg-100, hp-olg-200m, hp-olg-200w (+2);Über ein Netzteil.;With a power adapter.;
+olg-frage-3;gid://shopify/Metaobject/481765523789;frage;hp-olg-200, hp-olg-400, hp-olg-300-eu, hp-olg-100, hp-olg-200m, hp-olg-200w (+2);Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+olg-frage-3;gid://shopify/Metaobject/481765523789;antwort;hp-olg-200, hp-olg-400, hp-olg-300-eu, hp-olg-100, hp-olg-200m, hp-olg-200w (+2);Sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;They are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;"übersetzt; Lücke: hp-olg-600 ohne einsatzbereich (die 7 übrigen OLG „Innen & Außen“, IP44 an allen 8)"
+olh-g40-frage-2;gid://shopify/Metaobject/481765785933;frage;hp-olh-g40-15, hp-olh-g40-20, hp-olh-g40-25, hp-olh-g40-35, hp-olh-g40-50;Wie wird die Lichterkette mit Strom versorgt?;;nicht übersetzt: „Netzteil“ an keinem OLH-G40-Produkt belegt (nur stromquelle Netz, kein Netzteil im Lieferumfang, keine Beschreibung)
+olh-g40-frage-2;gid://shopify/Metaobject/481765785933;antwort;hp-olh-g40-15, hp-olh-g40-20, hp-olh-g40-25, hp-olh-g40-35, hp-olh-g40-50;Über ein Netzteil.;;nicht übersetzt: „Netzteil“ an keinem OLH-G40-Produkt belegt (nur stromquelle Netz, kein Netzteil im Lieferumfang, keine Beschreibung)
+olh-g40-frage-3;gid://shopify/Metaobject/481765818701;frage;hp-olh-g40-15, hp-olh-g40-20, hp-olh-g40-25, hp-olh-g40-35, hp-olh-g40-50;Welche Farbtemperatur hat das Licht?;What is the color temperature of the light?;
+olh-g40-frage-3;gid://shopify/Metaobject/481765818701;antwort;hp-olh-g40-15, hp-olh-g40-20, hp-olh-g40-25, hp-olh-g40-35, hp-olh-g40-50;2200 Kelvin.;2200 Kelvin.;
+ols-a60-frage-1;gid://shopify/Metaobject/481768276301;frage;hp-ols-a60-16-eu;Wie lang ist die Lichterkette, und wie viele LEDs hat sie?;How long are the string lights, and how many LEDs do they have?;
+ols-a60-frage-1;gid://shopify/Metaobject/481768276301;antwort;hp-ols-a60-16-eu;Sie ist 6,5 m lang und hat 16 LEDs.;They are 6.5 m long and have 16 LEDs.;
+ols-a60-frage-2;gid://shopify/Metaobject/481768309069;frage;hp-ols-a60-16-eu;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ols-a60-frage-2;gid://shopify/Metaobject/481768309069;antwort;hp-ols-a60-16-eu;8 Leuchtmodi.;8 lighting modes.;
+ols-a60-frage-3;gid://shopify/Metaobject/481768341837;frage;hp-ols-a60-16-eu;Hat die Lichterkette einen Timer?;Do the string lights have a timer?;
+ols-a60-frage-3;gid://shopify/Metaobject/481768341837;antwort;hp-ols-a60-16-eu;Ja, mit einem Timer von 8 Stunden.;Yes, with an 8-hour timer.;
+ols-a60-frage-4;gid://shopify/Metaobject/481768374605;frage;hp-ols-a60-16-eu;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+ols-a60-frage-4;gid://shopify/Metaobject/481768374605;antwort;hp-ols-a60-16-eu;Bis zu 10 Stunden.;Up to 10 hours.;
+ols-g40-frage-1;gid://shopify/Metaobject/481766703437;frage;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;Welche Längen gibt es?;;nicht übersetzt: 10 m gesamt (beleuchtet 7,5), 15 und 20 m gesamt, beleuchtet leer
+ols-g40-frage-1;gid://shopify/Metaobject/481766703437;antwort;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;10 m mit 16 LEDs, 15 m mit 25 LEDs und 20 m mit 35 LEDs.;;nicht übersetzt: 10 m gesamt (beleuchtet 7,5), 15 und 20 m gesamt, beleuchtet leer
+ols-g40-frage-2;gid://shopify/Metaobject/481766736205;frage;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ols-g40-frage-2;gid://shopify/Metaobject/481766736205;antwort;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;3 Leuchtmodi.;3 lighting modes.;
+ols-g40-frage-3;gid://shopify/Metaobject/481766768973;frage;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+ols-g40-frage-3;gid://shopify/Metaobject/481766768973;antwort;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;Bis zu 10 Stunden.;Up to 10 hours.;
+ols-g40-frage-4;gid://shopify/Metaobject/481766801741;frage;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+ols-g40-frage-4;gid://shopify/Metaobject/481766801741;antwort;hp-ols-g40-16, hp-ols-g40-25, hp-ols-g40-35;Ja, in vier Stufen.;Yes, in four stages.;
+ols-s11-frage-1;gid://shopify/Metaobject/481768407373;frage;hp-ols-s11-16;Welche Längen gibt es?;;nicht übersetzt: 10 und 15 m sind gesamt, beleuchtet 7,5 und 12,5 m
+ols-s11-frage-1;gid://shopify/Metaobject/481768407373;antwort;hp-ols-s11-16;10 m mit 16 LEDs und 15 m mit 25 LEDs.;;nicht übersetzt: 10 und 15 m sind gesamt, beleuchtet 7,5 und 12,5 m
+ols-s11-frage-2;gid://shopify/Metaobject/481768440141;frage;hp-ols-s11-16;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ols-s11-frage-2;gid://shopify/Metaobject/481768440141;antwort;hp-ols-s11-16;3 Leuchtmodi.;3 lighting modes.;
+ols-s11-frage-3;gid://shopify/Metaobject/481768472909;frage;hp-ols-s11-16;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+ols-s11-frage-3;gid://shopify/Metaobject/481768472909;antwort;hp-ols-s11-16;Bis zu 10 Stunden.;Up to 10 hours.;
+ols-s11-frage-4;gid://shopify/Metaobject/481768505677;frage;hp-ols-s11-16;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+ols-s11-frage-4;gid://shopify/Metaobject/481768505677;antwort;hp-ols-s11-16;Ja, in vier Stufen.;Yes, in four stages.;
+ols-s17-frage-1;gid://shopify/Metaobject/481767457101;frage;hp-ols-s17-16-eu;Wie viele LEDs hat die Lichterkette?;How many LEDs do the string lights have?;
+ols-s17-frage-1;gid://shopify/Metaobject/481767457101;antwort;hp-ols-s17-16-eu;16 LEDs.;16 LEDs.;
+ols-s17-frage-2;gid://shopify/Metaobject/481767489869;frage;hp-ols-s17-16-eu;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ols-s17-frage-2;gid://shopify/Metaobject/481767489869;antwort;hp-ols-s17-16-eu;8 Leuchtmodi.;8 lighting modes.;
+ols-s17-frage-3;gid://shopify/Metaobject/481767522637;frage;hp-ols-s17-16-eu;Hat die Lichterkette einen Timer?;Do the string lights have a timer?;
+ols-s17-frage-3;gid://shopify/Metaobject/481767522637;antwort;hp-ols-s17-16-eu;Ja, mit einem Timer von 8 Stunden.;Yes, with an 8-hour timer.;
+ols-s17-frage-4;gid://shopify/Metaobject/481767555405;frage;hp-ols-s17-16-eu;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+ols-s17-frage-4;gid://shopify/Metaobject/481767555405;antwort;hp-ols-s17-16-eu;Bis zu 10 Stunden.;Up to 10 hours.;
+ols-st38-frage-1;gid://shopify/Metaobject/481768538445;frage;hp-ols-st38-16;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ols-st38-frage-1;gid://shopify/Metaobject/481768538445;antwort;hp-ols-st38-16;3 Leuchtmodi.;3 lighting modes.;
+ols-st38-frage-2;gid://shopify/Metaobject/481768571213;frage;hp-ols-st38-16;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+ols-st38-frage-2;gid://shopify/Metaobject/481768571213;antwort;hp-ols-st38-16;Bis zu 10 Stunden.;Up to 10 hours.;
+ols-st38-frage-3;gid://shopify/Metaobject/481768603981;frage;hp-ols-st38-16;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+ols-st38-frage-3;gid://shopify/Metaobject/481768603981;antwort;hp-ols-st38-16;Ja, in vier Stufen.;Yes, in four stages.;
+olt-frage-1;gid://shopify/Metaobject/481765556557;frage;hp-olt-100, hp-olt-150, hp-olt-200, hp-olt-400, hp-olt-600, hp-olt-800 (+1);Welche Längen gibt es?;What lengths are available?;
+olt-frage-1;gid://shopify/Metaobject/481765556557;antwort;hp-olt-100, hp-olt-150, hp-olt-200, hp-olt-400, hp-olt-600, hp-olt-800 (+1);10 m mit 100 LEDs, 15 m mit 150 LEDs, 20 m mit 200 LEDs, 30 m mit 300 LEDs, 40 m mit 400 LEDs, 50 m mit 500 LEDs, 60 m mit 600 LEDs, 80 m mit 800 LEDs und 100 m mit 1000 LEDs.;10 m with 100 LEDs, 15 m with 150 LEDs, 20 m with 200 LEDs, 30 m with 300 LEDs, 40 m with 400 LEDs, 50 m with 500 LEDs, 60 m with 600 LEDs, 80 m with 800 LEDs and 100 m with 1,000 LEDs.;
+olt-frage-2;gid://shopify/Metaobject/481765589325;frage;hp-olt-100, hp-olt-150, hp-olt-200, hp-olt-400, hp-olt-600, hp-olt-800 (+1);Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+olt-frage-2;gid://shopify/Metaobject/481765589325;antwort;hp-olt-100, hp-olt-150, hp-olt-200, hp-olt-400, hp-olt-600, hp-olt-800 (+1);Über ein Netzteil.;With a power adapter.;
+olt-frage-3;gid://shopify/Metaobject/481765622093;frage;hp-olt-100, hp-olt-150, hp-olt-200, hp-olt-400, hp-olt-600, hp-olt-800 (+1);Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+olt-frage-3;gid://shopify/Metaobject/481765622093;antwort;hp-olt-100, hp-olt-150, hp-olt-200, hp-olt-400, hp-olt-600, hp-olt-800 (+1);Sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;They are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;
+rct-frage-1;gid://shopify/Metaobject/481768669517;frage;hp-rct-400;Wie groß ist der Lichtervorhang?;How big is the light curtain?;
+rct-frage-1;gid://shopify/Metaobject/481768669517;antwort;hp-rct-400;Er misst 2 x 2 m.;It measures 2 x 2 m.;
+rct-frage-2;gid://shopify/Metaobject/481768702285;frage;hp-rct-400;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+rct-frage-2;gid://shopify/Metaobject/481768702285;antwort;hp-rct-400;100 Leuchtmodi.;100 lighting modes.;
+rct-frage-3;gid://shopify/Metaobject/481768735053;frage;hp-rct-400;Wie ist der Lichtervorhang gegen Wasser geschützt?;How is the light curtain protected against water?;
+rct-frage-3;gid://shopify/Metaobject/481768735053;antwort;hp-rct-400;Er ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, it is protected against splashing water.;
+rfm-frage-1;gid://shopify/Metaobject/481768800589;frage;hp-rfm-600;Wie lang ist die Lichterkette, und wie viele LEDs hat sie?;How long are the string lights, and how many LEDs do they have?;
+rfm-frage-1;gid://shopify/Metaobject/481768800589;antwort;hp-rfm-600;Sie ist 9 m lang und hat 600 LEDs.;They are 9 m long and have 600 LEDs.;
+rfm-frage-2;gid://shopify/Metaobject/481768833357;frage;hp-rfm-600;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+rfm-frage-2;gid://shopify/Metaobject/481768833357;antwort;hp-rfm-600;Über ein Netzteil.;With a power adapter.;
+rfm-frage-3;gid://shopify/Metaobject/481768866125;frage;hp-rfm-600;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+rfm-frage-3;gid://shopify/Metaobject/481768866125;antwort;hp-rfm-600;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+rgb-frage-1;gid://shopify/Metaobject/481766834509;frage;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;Welche Längen gibt es?;What lengths are available?;
+rgb-frage-1;gid://shopify/Metaobject/481766834509;antwort;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;20 m mit 200 LEDs, 30 m mit 300 LEDs und 50 m mit 500 LEDs.;20 m with 200 LEDs, 30 m with 300 LEDs and 50 m with 500 LEDs.;
+rgb-frage-2;gid://shopify/Metaobject/481766867277;frage;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+rgb-frage-2;gid://shopify/Metaobject/481766867277;antwort;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;16 Leuchtmodi.;16 lighting modes.;
+rgb-frage-3;gid://shopify/Metaobject/481766900045;frage;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+rgb-frage-3;gid://shopify/Metaobject/481766900045;antwort;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;Sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;They are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;
+rgb-frage-4;gid://shopify/Metaobject/481766932813;frage;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;Wie weit liegen die Lichtpunkte auseinander?;How far apart are the points of light?;
+rgb-frage-4;gid://shopify/Metaobject/481766932813;antwort;hp-rgb-200a, hp-rgb-300a, hp-rgb-500a;10 cm.;10 cm.;
+rit-frage-1;gid://shopify/Metaobject/481768931661;frage;hp-rit-280;Wie lang ist die Lichterkette, und wie viele LEDs hat sie?;How long are the string lights, and how many LEDs do they have?;
+rit-frage-1;gid://shopify/Metaobject/481768931661;antwort;hp-rit-280;Sie ist 8,25 m lang und hat 280 LEDs.;They are 8.25 m long and have 280 LEDs.;
+rit-frage-2;gid://shopify/Metaobject/481768964429;frage;hp-rit-280;Hat die Lichterkette einen Timer?;Do the string lights have a timer?;
+rit-frage-2;gid://shopify/Metaobject/481768964429;antwort;hp-rit-280;Ja, mit einem Timer von 8 Stunden.;Yes, with an 8-hour timer.;
+rit-frage-3;gid://shopify/Metaobject/481769292109;frage;hp-rit-280;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+rit-frage-3;gid://shopify/Metaobject/481769292109;antwort;hp-rit-280;Über ein Netzteil.;With a power adapter.;
+rit-frage-4;gid://shopify/Metaobject/481769324877;frage;hp-rit-280;Wie ist die Lichterkette gegen Wasser geschützt?;How are the string lights protected against water?;
+rit-frage-4;gid://shopify/Metaobject/481769324877;antwort;hp-rit-280;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+rmp-frage-1;gid://shopify/Metaobject/481769357645;frage;hp-rmp-180;Welche Farbtemperatur hat das Licht?;What is the color temperature of the light?;
+rmp-frage-1;gid://shopify/Metaobject/481769357645;antwort;hp-rmp-180;2700 Kelvin.;2700 Kelvin.;
+rnm-frage-1;gid://shopify/Metaobject/481769423181;frage;hp-rnm-200;Wie groß ist das Lichternetz?;How big is the net light?;
+rnm-frage-1;gid://shopify/Metaobject/481769423181;antwort;hp-rnm-200;Es misst 3 x 2 m mit 200 LEDs.;It measures 3 x 2 m with 200 LEDs.;
+rnm-frage-2;gid://shopify/Metaobject/481769455949;frage;hp-rnm-200;Wie wird das Lichternetz mit Strom versorgt?;How is the net light powered?;
+rnm-frage-2;gid://shopify/Metaobject/481769455949;antwort;hp-rnm-200;Über ein Netzteil.;With a power adapter.;
+rnm-frage-3;gid://shopify/Metaobject/481769488717;frage;hp-rnm-200;Wie ist das Lichternetz gegen Wasser geschützt?;How is the net light protected against water?;
+rnm-frage-3;gid://shopify/Metaobject/481769488717;antwort;hp-rnm-200;Es ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, it is protected against splashing water.;
+rpm-frage-1;gid://shopify/Metaobject/481769554253;frage;hp-rpm-200;Wie lang ist die Lichterkette, und wie viele LEDs hat sie?;How long are the string lights, and how many LEDs do they have?;
+rpm-frage-1;gid://shopify/Metaobject/481769554253;antwort;hp-rpm-200;Die 20-m-Kette hat 200 LEDs.;The 20 m string lights have 200 LEDs.;"übersetzt, Aussage gilt für die 20-m-Variante (beleuchtet 20, 200 LEDs); 40-m-Variante ohne led_anzahl"
+rpm-frage-2;gid://shopify/Metaobject/481769587021;frage;hp-rpm-200;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+rpm-frage-2;gid://shopify/Metaobject/481769587021;antwort;hp-rpm-200;Die 20-m-Kette hat 9 Leuchtmodi.;The 20 m string lights have 9 lighting modes.;"übersetzt, gilt für die 20-m-Variante; 40-m-Variante ohne anzahl_leuchtmodi"
+rpm-frage-3;gid://shopify/Metaobject/481769619789;frage;hp-rpm-200;Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+rpm-frage-3;gid://shopify/Metaobject/481769619789;antwort;hp-rpm-200;Die 20-m-Kette ist nach IP67 staubdicht und gegen zeitweiliges Untertauchen geschützt.;With an IP67 rating, the 20 m string lights are dust-tight and protected against temporary immersion.;"übersetzt, gilt für die 20-m-Variante (IP67); 40-m-Variante ohne ip_schutzart"
+rsp-frage-1;gid://shopify/Metaobject/481769652557;frage;hp-rsp-180;Wie viele LEDs hat der Lichterkegel?;How many LEDs does the light cone have?;
+rsp-frage-1;gid://shopify/Metaobject/481769652557;antwort;hp-rsp-180;Je nach Größe 170 oder 270 LEDs.;Depending on the size, 170 or 270 LEDs.;
+rsp-frage-2;gid://shopify/Metaobject/481769685325;frage;hp-rsp-180;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+rsp-frage-2;gid://shopify/Metaobject/481769685325;antwort;hp-rsp-180;82 Leuchtmodi.;82 lighting modes.;
+rsp-frage-3;gid://shopify/Metaobject/481769718093;frage;hp-rsp-180;Wie wird der Lichterkegel mit Strom versorgt?;How is the light cone powered?;
+rsp-frage-3;gid://shopify/Metaobject/481769718093;antwort;hp-rsp-180;Über ein Netzteil.;With a power adapter.;
+rtm-frage-1;gid://shopify/Metaobject/481769783629;frage;hp-rtm-400;Wie viele LEDs hat der Baum?;How many LEDs does the tree have?;
+rtm-frage-1;gid://shopify/Metaobject/481769783629;antwort;hp-rtm-400;400 LEDs.;400 LEDs.;
+rtm-frage-2;gid://shopify/Metaobject/481769816397;frage;hp-rtm-400;Wie wird der Baum mit Strom versorgt?;How is the tree powered?;
+rtm-frage-2;gid://shopify/Metaobject/481769816397;antwort;hp-rtm-400;Über ein Netzteil.;With a power adapter.;
+rtm-frage-3;gid://shopify/Metaobject/481769849165;frage;hp-rtm-400;Kann ich den Baum auch draußen nutzen?;Can I use the tree outdoors too?;
+rtm-frage-3;gid://shopify/Metaobject/481769849165;antwort;hp-rtm-400;Er ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;It is designed for indoor and outdoor use, and with an IP44 rating, it is protected against splashing water.;
+sblb-frage-1;gid://shopify/Metaobject/439948869965;frage;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+sblb-frage-1;gid://shopify/Metaobject/439948869965;antwort;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;Bis zu 12 Stunden.;Up to 12 hours.;
+sblb-frage-2;gid://shopify/Metaobject/439948902733;frage;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;Welche Längen gibt es?;;nicht übersetzt: 11 und 17 m sind gesamt, beleuchtet 9 und 15 m
+sblb-frage-2;gid://shopify/Metaobject/439948902733;antwort;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;11 m mit 60 LEDs und 17 m mit 100 LEDs.;;nicht übersetzt: 11 und 17 m sind gesamt, beleuchtet 9 und 15 m
+sblb-frage-3;gid://shopify/Metaobject/439948935501;frage;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;Wie lang ist die Zuleitung?;How long is the cable?;Pronomen/Begriff an das Produkt angepasst
+sblb-frage-3;gid://shopify/Metaobject/439948935501;antwort;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;2 m.;2 m.;
+sblb-frage-4;gid://shopify/Metaobject/439948968269;frage;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+sblb-frage-4;gid://shopify/Metaobject/439948968269;antwort;hp-sblb-100l-ww-new, hp-sblb-60l-ww-new;8 Leuchtmodi.;8 lighting modes.;
+scwl-frage-1;gid://shopify/Metaobject/481767588173;frage;hp-scwl-10m2p-mc, hp-scwl-15m2p-mc;Welche Längen gibt es?;;"nicht übersetzt: 10 und 15 m nicht als beleuchtete Länge belegt (nur gesamtlaenge_m); LED-Zahlen stimmen"
+scwl-frage-1;gid://shopify/Metaobject/481767588173;antwort;hp-scwl-10m2p-mc, hp-scwl-15m2p-mc;10 m mit 100 LEDs und 15 m mit 150 LEDs.;;"nicht übersetzt: 10 und 15 m nicht als beleuchtete Länge belegt (nur gesamtlaenge_m); LED-Zahlen stimmen"
+scwl-frage-2;gid://shopify/Metaobject/481767620941;frage;hp-scwl-10m2p-mc, hp-scwl-15m2p-mc;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+scwl-frage-2;gid://shopify/Metaobject/481767620941;antwort;hp-scwl-10m2p-mc, hp-scwl-15m2p-mc;Bis zu 10 Stunden.;Up to 10 hours.;
+scwl-frage-3;gid://shopify/Metaobject/481767653709;frage;hp-scwl-10m2p-mc, hp-scwl-15m2p-mc;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+scwl-frage-3;gid://shopify/Metaobject/481767653709;antwort;hp-scwl-10m2p-mc, hp-scwl-15m2p-mc;Über ein Solarpanel.;With a solar panel.;
+solm-frage-1;gid://shopify/Metaobject/481769914701;frage;hp-solm-12m-ww;Wie lang ist die Lichterkette, und wie viele LEDs hat sie?;How long are the string lights, and how many LEDs do they have?;
+solm-frage-1;gid://shopify/Metaobject/481769914701;antwort;hp-solm-12m-ww;Sie ist 12 m lang und hat 120 LEDs.;They are 12 m long and have 120 LEDs.;
+solm-frage-2;gid://shopify/Metaobject/481769947469;frage;hp-solm-12m-ww;Wie lange leuchtet die Lichterkette?;How long do the string lights stay lit?;
+solm-frage-2;gid://shopify/Metaobject/481769947469;antwort;hp-solm-12m-ww;Bis zu 10 Stunden.;Up to 10 hours.;
+solm-frage-3;gid://shopify/Metaobject/481769980237;frage;hp-solm-12m-ww;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+solm-frage-3;gid://shopify/Metaobject/481769980237;antwort;hp-solm-12m-ww;Über ein Solarpanel.;With a solar panel.;
+tpm-frage-2;gid://shopify/Metaobject/481770209613;frage;hp-tpm-400-eu-1;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+tpm-frage-2;gid://shopify/Metaobject/481770209613;antwort;hp-tpm-400-eu-1;In der Variante mit 400 LEDs sind es 8 Leuchtmodi.;The version with 400 LEDs has 8 lighting modes.;"übersetzt, gilt für die Variante 400 LEDs; Variante 300 LEDs ohne Metafelder"
+u20-frage-1;gid://shopify/Metaobject/481770242381;frage;hp-u20-200;Wie wird der Lichterschlauch mit Strom versorgt?;How is the rope light powered?;
+u20-frage-1;gid://shopify/Metaobject/481770242381;antwort;hp-u20-200;Über ein Netzteil.;With a power adapter.;
+u20-frage-2;gid://shopify/Metaobject/481770275149;frage;hp-u20-200;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+u20-frage-2;gid://shopify/Metaobject/481770275149;antwort;hp-u20-200;Ja, in vier Stufen.;Yes, in four stages.;
+u20-frage-4;gid://shopify/Metaobject/481770340685;frage;hp-u20-200;Wie lang ist die Zuleitung?;How long is the power cord?;
+u20-frage-4;gid://shopify/Metaobject/481770340685;antwort;hp-u20-200;3 m.;3 m.;
+ucp-frage-1;gid://shopify/Metaobject/481770373453;frage;hp-ucp-200;Wie groß ist der Lichtervorhang?;;nicht übersetzt: „misst 3 x 2 m mit 200 LEDs“, hp-ucp-200 gibt es auch in 3 x 3 m (wie ucp-r1 in Abschnitt 2)
+ucp-frage-1;gid://shopify/Metaobject/481770373453;antwort;hp-ucp-200;Er misst 3 x 2 m mit 200 LEDs.;;nicht übersetzt: „misst 3 x 2 m mit 200 LEDs“, hp-ucp-200 gibt es auch in 3 x 3 m (wie ucp-r1 in Abschnitt 2)
+ucp-frage-2;gid://shopify/Metaobject/481770406221;frage;hp-ucp-200;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+ucp-frage-2;gid://shopify/Metaobject/481770406221;antwort;hp-ucp-200;8 Leuchtmodi.;8 lighting modes.;
+ucp-frage-3;gid://shopify/Metaobject/481770438989;frage;hp-ucp-200;Wie ist der Lichtervorhang gegen Wasser geschützt?;How is the light curtain protected against water?;
+ucp-frage-3;gid://shopify/Metaobject/481770438989;antwort;hp-ucp-200;Er ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, it is protected against splashing water.;
+ucp-frage-4;gid://shopify/Metaobject/481770471757;frage;hp-ucp-200;Kann ich die Helligkeit einstellen?;Can I adjust the brightness?;
+ucp-frage-4;gid://shopify/Metaobject/481770471757;antwort;hp-ucp-200;Ja, in vier Stufen: 25, 50, 75 und 100 Prozent.;Yes, in four stages: 25, 50, 75 and 100 percent.;
+uct-frage-1;gid://shopify/Metaobject/481770504525;frage;hp-uct-200-eu;Wie groß ist der Lichtervorhang?;;nicht übersetzt: „misst 3 x 2 m mit 200 LEDs“, hp-uct-200-eu gibt es auch in 3 x 3 m (LED-Zahl dort nicht belegt)
+uct-frage-1;gid://shopify/Metaobject/481770504525;antwort;hp-uct-200-eu;Er misst 3 x 2 m mit 200 LEDs.;;nicht übersetzt: „misst 3 x 2 m mit 200 LEDs“, hp-uct-200-eu gibt es auch in 3 x 3 m (LED-Zahl dort nicht belegt)
+uct-frage-2;gid://shopify/Metaobject/481770537293;frage;hp-uct-200-eu;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+uct-frage-2;gid://shopify/Metaobject/481770537293;antwort;hp-uct-200-eu;8 Leuchtmodi.;8 lighting modes.;
+uct-frage-3;gid://shopify/Metaobject/481770570061;frage;hp-uct-200-eu;Kann ich den Lichtervorhang auch draußen nutzen?;Can I use the light curtain outdoors too?;
+uct-frage-3;gid://shopify/Metaobject/481770570061;antwort;hp-uct-200-eu;Er ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;It is designed for indoor and outdoor use, and with an IP44 rating, it is protected against splashing water.;
+vam-frage-1;gid://shopify/Metaobject/481770602829;frage;hp-vam-400l-eu-1;Wie lang ist die Lichterkette?;;nicht übersetzt: „40 m lang“ nicht als beleuchtete Länge belegt (nur gesamtlaenge_m 40, keine Beschreibung)
+vam-frage-1;gid://shopify/Metaobject/481770602829;antwort;hp-vam-400l-eu-1;Sie ist 40 m lang.;;nicht übersetzt: „40 m lang“ nicht als beleuchtete Länge belegt (nur gesamtlaenge_m 40, keine Beschreibung)
+vit-frage-1;gid://shopify/Metaobject/439949001037;frage;hp-vit-586l-eu-1, hp-vit-864l-eu-1;Ist die Eisregen-Lichterkette für draußen geeignet?;Are the icicle lights suitable for outdoor use?;
+vit-frage-1;gid://shopify/Metaobject/439949001037;antwort;hp-vit-586l-eu-1, hp-vit-864l-eu-1;Sie ist nach IP44 gegen Spritzwasser geschützt.;With an IP44 rating, they are protected against splashing water.;
+vit-frage-2;gid://shopify/Metaobject/439949033805;frage;hp-vit-586l-eu-1, hp-vit-864l-eu-1;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+vit-frage-2;gid://shopify/Metaobject/439949033805;antwort;hp-vit-586l-eu-1, hp-vit-864l-eu-1;Über ein Netzteil.;With a power adapter.;
+vit-frage-3;gid://shopify/Metaobject/439949066573;frage;hp-vit-586l-eu-1;Wie viele Leuchtmodi hat sie, und ist sie dimmbar?;How many lighting modes do they have, and are they dimmable?;
+vit-frage-3;gid://shopify/Metaobject/439949066573;antwort;hp-vit-586l-eu-1;Du hast 11 Leuchtmodi, die Helligkeit stellst du in vier Stufen ein.;You can choose from 11 lighting modes and adjust the brightness in four stages.;
+vit-frage-4;gid://shopify/Metaobject/439949099341;frage;hp-vit-864l-eu-1;Wie weit liegen die Lichtpunkte auseinander?;How far apart are the points of light?;
+vit-frage-4;gid://shopify/Metaobject/439949099341;antwort;hp-vit-864l-eu-1;15 cm.;15 cm.;
+vlm-frage-1;gid://shopify/Metaobject/481770668365;frage;hp-vlm-100l;Welche Längen gibt es?;What lengths are available?;
+vlm-frage-1;gid://shopify/Metaobject/481770668365;antwort;hp-vlm-100l;10 m mit 100 LEDs, 20 m mit 200 LEDs und 30 m mit 300 LEDs.;10 m with 100 LEDs, 20 m with 200 LEDs and 30 m with 300 LEDs.;
+vlm-frage-2;gid://shopify/Metaobject/481770701133;frage;hp-vlm-100l;Wie viele Leuchtmodi gibt es?;How many lighting modes are there?;
+vlm-frage-2;gid://shopify/Metaobject/481770701133;antwort;hp-vlm-100l;11 Leuchtmodi.;11 lighting modes.;
+vlm-frage-3;gid://shopify/Metaobject/481770733901;frage;hp-vlm-100l;Wie wird die Lichterkette mit Strom versorgt?;How are the string lights powered?;
+vlm-frage-3;gid://shopify/Metaobject/481770733901;antwort;hp-vlm-100l;Über ein Netzteil.;With a power adapter.;
+vlm-frage-4;gid://shopify/Metaobject/481770766669;frage;hp-vlm-100l;Kann ich die Lichterkette auch draußen nutzen?;Can I use the string lights outdoors too?;
+vlm-frage-4;gid://shopify/Metaobject/481770766669;antwort;hp-vlm-100l;Sie ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;They are designed for indoor and outdoor use, and with an IP44 rating, they are protected against splashing water.;
+wbf-frage-2;gid://shopify/Metaobject/481767752013;frage;hp-wbf-180;Wie viele LEDs hat der Lichterbaum?;How many LEDs does the light tree have?;
+wbf-frage-2;gid://shopify/Metaobject/481767752013;antwort;hp-wbf-180;128 LEDs.;128 LEDs.;
+wwf-frage-1;gid://shopify/Metaobject/481770799437;frage;hp-wwf-180;Wie viele LEDs hat der Lichterbaum?;How many LEDs does the light tree have?;
+wwf-frage-1;gid://shopify/Metaobject/481770799437;antwort;hp-wwf-180;Je nach Größe 144 oder 176 LEDs.;Depending on the size, 144 or 176 LEDs.;
+wwf-frage-2;gid://shopify/Metaobject/481770832205;frage;hp-wwf-180;Wie wird der Lichterbaum mit Strom versorgt?;How is the light tree powered?;
+wwf-frage-2;gid://shopify/Metaobject/481770832205;antwort;hp-wwf-180;Über ein Netzteil.;With a power adapter.;
+wwf-frage-3;gid://shopify/Metaobject/481770897741;frage;hp-wwf-180;Kann ich den Lichterbaum auch draußen nutzen?;Can I use the light tree outdoors too?;
+wwf-frage-3;gid://shopify/Metaobject/481770897741;antwort;hp-wwf-180;Er ist für innen und außen gedacht und nach IP44 gegen Spritzwasser geschützt.;It is designed for indoor and outdoor use, and with an IP44 rating, it is protected against splashing water.;
