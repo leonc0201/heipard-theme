@@ -27,8 +27,10 @@
                Optionswert genau diese Länge nennt. Die Sortierung bleibt.
     Teil O 4: Die Überschrift richtet sich nach dem Maß der Stufen, und zwar nach der Quelle
                des Werts: beleuchtete Länge oder Gesamtlänge ergibt „Länge“ (title), hoehe_m
-               ergibt „Höhe“ (title_hoehe), beide Arten gemischt ergeben „Größe“ (title_groesse).
-               Der Familienmodus liest dafür wie der Variantenmodus zuletzt hoehe_m (z. B. WBF).
+               ergibt „Höhe“ (title_hoehe), hoehe_m mit breite_m (Fläche, Vorhang) ergibt „Größe“
+               (title_groesse), Länge und Höhe gemischt ebenfalls „Größe“.
+               Der Familienmodus liest dafür wie der Variantenmodus zuletzt hoehe_m (z. B. WBF);
+               bei Flächen bleibt dort der Produkttitel die Beschriftung (CSL: Lichtfarben).
                Haben alle Stufen einen Wert und ist er überall gleich, ist die Leiste keine Serie
                und entfällt (z. B. hp-npt-210: drei Lichtfarben, je 2 m). Eine eigene Überschrift
                im Block geht weiter vor. data-heipard-mass und data-heipard-werte dienen der Prüfung.
@@ -43,6 +45,7 @@
   # Teil O 4: Art der Werte (L = Länge, H = Höhe) und Werte je Stufe, für Überschrift und Gleichheit.
   assign mass_l = false
   assign mass_h = false
+  assign mass_g = false
   assign werte = ''
   assign stufen = 0
   assign stufen_ohne = 0
@@ -135,6 +138,9 @@
             assign werte = werte | append: p_len | append: '|'
             if v.metafields.heipard.beleuchtete_laenge_m.value != blank or v.metafields.heipard.gesamtlaenge_m.value != blank
               assign mass_l = true
+            elsif v.metafields.heipard.breite_m.value != blank or product.metafields.heipard.breite_m.value != blank
+              # Höhe mit Breite = Fläche (Vorhang): Größe.
+              assign mass_g = true
             else
               assign mass_h = true
             endif
@@ -224,11 +230,20 @@
             endif
           endif
           # Teil O 4: ohne jede Länge die Höhe am Produkt; Art und Wert der Stufe merken.
+          # Höhe mit Breite (Fläche, z. B. Vorhang): Größe; die Beschriftung bleibt der Titel wie
+          # bisher, damit gleich große Modelle (Lichtfarben) unterscheidbar bleiben.
           assign p_ist_hoehe = false
+          assign p_ist_flaeche = false
+          assign p_label = nil
           if p_len == blank
             assign p_len = p.metafields.heipard.hoehe_m.value
             if p_len != blank
-              assign p_ist_hoehe = true
+              if p.metafields.heipard.breite_m.value != blank
+                assign p_ist_flaeche = true
+                assign p_label = p.title
+              else
+                assign p_ist_hoehe = true
+              endif
             endif
           endif
           if p_len == blank
@@ -240,7 +255,9 @@
               assign werte = werte | append: '-' | append: p_len_max
             endif
             assign werte = werte | append: '|'
-            if p_ist_hoehe
+            if p_ist_flaeche
+              assign mass_g = true
+            elsif p_ist_hoehe
               assign mass_h = true
             else
               assign mass_l = true
@@ -252,7 +269,7 @@
             assign is_current = true
           endif
         -%}
-        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, is_current: is_current, max_len: max_len -%}
+        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, p_label: p_label, is_current: is_current, max_len: max_len -%}
         {%- unless forloop.last -%}@@item@@{%- endunless -%}
       {%- endfor -%}
     {%- endif -%}
@@ -261,7 +278,7 @@
     # Teil O 4: Maß der Stufen bestimmt die Überschrift; gleiche Werte überall = keine Serie.
     assign mass = 'keine'
     assign title_key = 'heipard.blocks.serienleiter.title'
-    if mass_l and mass_h
+    if mass_g or mass_l and mass_h
       assign mass = 'groesse'
       assign title_key = 'heipard.blocks.serienleiter.title_groesse'
     elsif mass_h
