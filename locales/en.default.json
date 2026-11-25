@@ -105,7 +105,9 @@
       },
       "serienleiter": {
         "kicker": "The series",
-        "title": "The same string lights in another length",
+        "title": "The same string lights in a different length",
+        "title_hoehe": "The same model in a different height",
+        "title_groesse": "The same model in a different size",
         "current": "This model",
         "length": "{{ value }} m",
         "range": "{{ min }} to {{ max }} m",

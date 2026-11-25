@@ -25,6 +25,13 @@
                sonst die Gesamtlängen, dann mit Zusatz. Im Variantenmodus bekommt der
                Optionswert den Zusatz, wenn die Variante nur eine Gesamtlänge hat und der
                Optionswert genau diese Länge nennt. Die Sortierung bleibt.
+    Teil O 4: Die Überschrift richtet sich nach dem Maß der Stufen, und zwar nach der Quelle
+               des Werts: beleuchtete Länge oder Gesamtlänge ergibt „Länge“ (title), hoehe_m
+               ergibt „Höhe“ (title_hoehe), beide Arten gemischt ergeben „Größe“ (title_groesse).
+               Der Familienmodus liest dafür wie der Variantenmodus zuletzt hoehe_m (z. B. WBF).
+               Haben alle Stufen einen Wert und ist er überall gleich, ist die Leiste keine Serie
+               und entfällt (z. B. hp-npt-210: drei Lichtfarben, je 2 m). Eine eigene Überschrift
+               im Block geht weiter vor. data-heipard-mass und data-heipard-werte dienen der Prüfung.
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -33,6 +40,12 @@
   assign current = product.selected_or_first_available_variant
   assign mode = ''
   assign max_len = 0
+  # Teil O 4: Art der Werte (L = Länge, H = Höhe) und Werte je Stufe, für Überschrift und Gleichheit.
+  assign mass_l = false
+  assign mass_h = false
+  assign werte = ''
+  assign stufen = 0
+  assign stufen_ohne = 0
 
   if product.has_only_default_variant == false
     assign with_len = 0
@@ -80,12 +93,20 @@
       assign member_ids = member_ids | append: p.id | append: ','
       assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value | default: p.metafields.heipard.gesamtlaenge_m.value
       if p_len == blank
+        assign pv_found = false
         for pv in p.variants
           assign pv_len = pv.metafields.heipard.beleuchtete_laenge_m.value | default: pv.metafields.heipard.gesamtlaenge_m.value
-          if pv_len != blank and pv_len > max_len
-            assign max_len = pv_len
+          if pv_len != blank
+            assign pv_found = true
+            if pv_len > max_len
+              assign max_len = pv_len
+            endif
           endif
         endfor
+        # Teil O 4: ohne jede Länge zählt die Höhe am Produkt (wie im Variantenmodus).
+        unless pv_found
+          assign p_len = p.metafields.heipard.hoehe_m.value
+        endunless
       endif
       if p_len != blank and p_len > max_len
         assign max_len = p_len
@@ -95,11 +116,6 @@
       assign mode = 'familie'
     endif
   endif
-
-  assign default_kicker = 'heipard.blocks.serienleiter.kicker' | t
-  assign default_title = 'heipard.blocks.serienleiter.title' | t
-  assign head_kicker = kicker | default: default_kicker
-  assign head_title = title | default: default_title
 -%}
 {%- if mode == blank -%}
   {%- if request.design_mode and familie == blank -%}
@@ -111,6 +127,18 @@
       {%- for v in product.variants -%}
         {%- liquid
           assign p_len = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
+          # Teil O 4: Art und Wert der Stufe merken.
+          if p_len == blank
+            assign stufen_ohne = stufen_ohne | plus: 1
+          else
+            assign stufen = stufen | plus: 1
+            assign werte = werte | append: p_len | append: '|'
+            if v.metafields.heipard.beleuchtete_laenge_m.value != blank or v.metafields.heipard.gesamtlaenge_m.value != blank
+              assign mass_l = true
+            else
+              assign mass_h = true
+            endif
+          endif
           assign p_points = v.metafields.heipard.led_anzahl.value | default: product.metafields.heipard.led_anzahl.value
           assign p_url = product.url | append: '?variant=' | append: v.id
           assign p_price = v.price
@@ -195,6 +223,29 @@
               assign p_total = true
             endif
           endif
+          # Teil O 4: ohne jede Länge die Höhe am Produkt; Art und Wert der Stufe merken.
+          assign p_ist_hoehe = false
+          if p_len == blank
+            assign p_len = p.metafields.heipard.hoehe_m.value
+            if p_len != blank
+              assign p_ist_hoehe = true
+            endif
+          endif
+          if p_len == blank
+            assign stufen_ohne = stufen_ohne | plus: 1
+          else
+            assign stufen = stufen | plus: 1
+            assign werte = werte | append: p_len
+            if p_len_max != blank and p_len_max != p_len
+              assign werte = werte | append: '-' | append: p_len_max
+            endif
+            assign werte = werte | append: '|'
+            if p_ist_hoehe
+              assign mass_h = true
+            else
+              assign mass_l = true
+            endif
+          endif
           assign p_points = p.metafields.heipard.led_anzahl.value
           assign is_current = false
           if p.id == product.id
@@ -206,7 +257,37 @@
       {%- endfor -%}
     {%- endif -%}
   {%- endcapture -%}
-  <div class="heipard-fb heipard-fb--serienleiter" data-heipard-serie="{{ mode }}">
+  {%- liquid
+    # Teil O 4: Maß der Stufen bestimmt die Überschrift; gleiche Werte überall = keine Serie.
+    assign mass = 'keine'
+    assign title_key = 'heipard.blocks.serienleiter.title'
+    if mass_l and mass_h
+      assign mass = 'groesse'
+      assign title_key = 'heipard.blocks.serienleiter.title_groesse'
+    elsif mass_h
+      assign mass = 'hoehe'
+      assign title_key = 'heipard.blocks.serienleiter.title_hoehe'
+    elsif mass_l
+      assign mass = 'laenge'
+    endif
+    assign gleich = false
+    if stufen > 1 and stufen_ohne == 0
+      assign werte_uniq = werte | split: '|' | uniq
+      if werte_uniq.size == 1
+        assign gleich = true
+      endif
+    endif
+    assign default_kicker = 'heipard.blocks.serienleiter.kicker' | t
+    assign default_title = title_key | t
+    assign head_kicker = kicker | default: default_kicker
+    assign head_title = title | default: default_title
+  -%}
+  {%- if gleich -%}
+    {%- if request.design_mode -%}
+      <!--fb-note-->{{ label }}: Serienleiter ausgeblendet, alle Stufen haben denselben Wert ({{ werte | split: '|' | first }} m).<!--fb-note-->
+    {%- endif -%}
+  {%- else -%}
+  <div class="heipard-fb heipard-fb--serienleiter" data-heipard-serie="{{ mode }}" data-heipard-mass="{{ mass }}" data-heipard-werte="{{ werte | escape }}">
     {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
     <ol class="heipard-serie">
       {%- assign sorted = entries | split: '@@item@@' | sort -%}
@@ -215,4 +296,5 @@
       {%- endfor -%}
     </ol>
   </div>
+  {%- endif -%}
 {%- endif -%}
