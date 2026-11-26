@@ -112,7 +112,8 @@
         "length": "{{ value }} m",
         "range": "{{ min }} bis {{ max }} m",
         "length_total": "{{ value }} m gesamt",
-        "range_total": "{{ min }} bis {{ max }} m gesamt"
+        "range_total": "{{ min }} bis {{ max }} m gesamt",
+        "size": "{{ width }} x {{ height }} m"
       },
       "steuerung": {
         "kicker": "Steuerung",

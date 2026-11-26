@@ -34,6 +34,24 @@
                Haben alle Stufen einen Wert und ist er überall gleich, ist die Leiste keine Serie
                und entfällt (z. B. hp-npt-210: drei Lichtfarben, je 2 m). Eine eigene Überschrift
                im Block geht weiter vor. data-heipard-mass und data-heipard-werte dienen der Prüfung.
+    Teil P 5: Eine Karte je Maßwert. Stufen mit demselben Maß (im Variantenmodus derselbe
+               Optionswert der Option Länge/Höhe/Größe, sonst derselbe Wert; im Familienmodus
+               derselbe Wert bzw. dieselbe Fläche Breite x Höhe) werden zu einer Karte, etwa die
+               Lichtfarben von hp-dct-200 oder hp-csl-200-c/-200-w. Der Klick führt zur Stufe dieses
+               Maßes in der geltenden Lichtfarbe:
+                 Varianten  die Variante, die in den übrigen Optionen am meisten mit der gewählten
+                            übereinstimmt (Lichtfarbe zählt vor allen anderen); ohne Übereinstimmung
+                            die erste verfügbare, sonst die erste Variante dieses Maßes.
+                 Familie    das aktuelle Produkt, sonst das mit denselben heipard.lichtfarben,
+                            sonst eines mit der ersten Lichtfarbe des aktuellen, sonst das erste
+                            verfügbare, sonst das erste.
+               Beschriftung ist das Maß, bei Flächen im Familienmodus „Breite x Höhe m“ (size).
+               Lichtpunkte nennt die Karte nach dem Klickziel. „Dieses Modell“ steht an der Karte
+               mit dem Maß der gewählten Variante bzw. des aktuellen Produkts. Bleibt nur eine
+               Karte, oder hat keine Stufe ein Maß (z. B. DGM), entfällt die Leiste.
+               Im Variantenmodus zählt für eine Variante ohne eigene Länge oder Höhe der Wert am
+               Produkt (Grundwert, wie in der Technik-Tabelle), z. B. die 3-x-2-m-Varianten von
+               hp-ucp-200; ob der Variantenmodus gilt, entscheiden weiter nur eigene Werte.
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -50,27 +68,37 @@
   assign stufen = 0
   assign stufen_ohne = 0
 
+  # Teil P 5: Grundwert am Produkt für Varianten ohne eigene Länge oder Höhe.
+  assign prod_len = product.metafields.heipard.beleuchtete_laenge_m.value | default: product.metafields.heipard.gesamtlaenge_m.value | default: product.metafields.heipard.hoehe_m.value
   if product.has_only_default_variant == false
     assign with_len = 0
     for v in product.variants
-      assign v_len = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
-      if v_len != blank
+      assign v_own = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
+      if v_own != blank
         assign with_len = with_len | plus: 1
-        if v_len > max_len
-          assign max_len = v_len
-        endif
+      endif
+      assign v_len = v_own | default: prod_len
+      if v_len != blank and v_len > max_len
+        assign max_len = v_len
       endif
     endfor
     if with_len > 1
       assign mode = 'varianten'
       assign opt_index = -1
+      assign lf_index = -1
       # Teil N 3.2: auch die englischen Optionsnamen, sonst zeigt EN den ganzen Variantentitel.
       assign size_options = 'Länge,Höhe,Größe,Length,Height,Size' | split: ','
+      # Teil P 5: Lichtfarbe zählt beim Klickziel vor den übrigen Optionen.
+      assign lf_options = 'Lichtfarbe,Light color,Light colour,Color de luz,Couleur de lumière,Colore della luce,Colore luce' | split: ','
       for opt in product.options_with_values
         if opt_index < 0 and size_options contains opt.name
           assign opt_index = forloop.index0
         endif
+        if lf_index < 0 and lf_options contains opt.name
+          assign lf_index = forloop.index0
+        endif
       endfor
+      assign opt_last = product.options.size | minus: 1
     endif
   endif
 
@@ -125,157 +153,340 @@
     <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.familie' }}<!--fb-note-->
   {%- endif -%}
 {%- else -%}
-  {%- capture entries -%}
-    {%- if mode == 'varianten' -%}
-      {%- for v in product.variants -%}
-        {%- liquid
-          assign p_len = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
-          # Teil O 4: Art und Wert der Stufe merken.
-          if p_len == blank
-            assign stufen_ohne = stufen_ohne | plus: 1
+  {%- liquid
+    # Teil P 5, Schritt 1: je Stufe Maß, Wert und Schlüssel bestimmen (Reihenfolge der Stufen).
+    # Schlüssel: gleiche Schlüssel = eine Karte. Listen mit „¦“ getrennt, je Stufe ein Eintrag.
+    assign s_keys = ''
+    assign s_lens = ''
+    assign s_maxs = ''
+    assign s_totals = ''
+    assign s_labels = ''
+    assign u_keys = ''
+    if mode == 'varianten'
+      for v in product.variants
+        assign v_own = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
+        assign p_len = v_own | default: prod_len
+        assign p_total = false
+        if p_len == blank
+          assign stufen_ohne = stufen_ohne | plus: 1
+        else
+          assign stufen = stufen | plus: 1
+          assign werte = werte | append: p_len | append: '|'
+          # Teil O 4: Art der Stufe; ohne eigenen Wert zählen die Felder am Produkt.
+          if v_own != blank
+            assign src_bl = v.metafields.heipard.beleuchtete_laenge_m.value
+            assign src_gl = v.metafields.heipard.gesamtlaenge_m.value
           else
-            assign stufen = stufen | plus: 1
-            assign werte = werte | append: p_len | append: '|'
-            if v.metafields.heipard.beleuchtete_laenge_m.value != blank or v.metafields.heipard.gesamtlaenge_m.value != blank
-              assign mass_l = true
-            elsif v.metafields.heipard.breite_m.value != blank or product.metafields.heipard.breite_m.value != blank
-              # Höhe mit Breite = Fläche (Vorhang): Größe.
-              assign mass_g = true
-            else
-              assign mass_h = true
+            assign src_bl = product.metafields.heipard.beleuchtete_laenge_m.value
+            assign src_gl = product.metafields.heipard.gesamtlaenge_m.value
+          endif
+          if src_bl != blank or src_gl != blank
+            assign mass_l = true
+            if src_bl == blank
+              assign p_total = true
+            endif
+          elsif v.metafields.heipard.breite_m.value != blank or product.metafields.heipard.breite_m.value != blank
+            # Höhe mit Breite = Fläche (Vorhang): Größe.
+            assign mass_g = true
+          else
+            assign mass_h = true
+          endif
+        endif
+        if opt_index >= 0
+          assign s_key = 'O' | append: v.options[opt_index]
+        elsif p_len != blank
+          assign s_key = 'V' | append: p_len
+        else
+          assign s_key = 'X' | append: v.id
+        endif
+        assign s_keys = s_keys | append: s_key | append: '¦'
+        assign s_lens = s_lens | append: p_len | append: '¦'
+        assign s_totals = s_totals | append: p_total | append: '¦'
+        assign u_probe = '¦' | append: s_key | append: '¦'
+        assign u_hay = '¦' | append: u_keys
+        unless u_hay contains u_probe
+          assign u_keys = u_keys | append: s_key | append: '¦'
+        endunless
+      endfor
+    else
+      for p in fam.products limit: 24
+        assign p_key = ',' | append: p.id | append: ','
+        unless member_ids contains p_key
+          continue
+        endunless
+        assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value
+        assign p_total = false
+        if p_len == blank
+          assign p_len = p.metafields.heipard.gesamtlaenge_m.value
+          if p_len != blank
+            assign p_total = true
+          endif
+        endif
+        assign p_len_max = ''
+        if p_len == blank
+          # Teil M 1.12: Längen nur an den Varianten, Karte zeigt die Spanne.
+          # Teil N 3.2: Spanne nur aus Werten derselben Art, beleuchtete Länge zuerst.
+          assign l_min = nil
+          assign l_max = nil
+          assign g_min = nil
+          assign g_max = nil
+          for pv in p.variants
+            assign pv_l = pv.metafields.heipard.beleuchtete_laenge_m.value
+            assign pv_g = pv.metafields.heipard.gesamtlaenge_m.value
+            if pv_l != blank
+              if l_min == blank
+                assign l_min = pv_l
+                assign l_max = pv_l
+              elsif pv_l < l_min
+                assign l_min = pv_l
+              elsif pv_l > l_max
+                assign l_max = pv_l
+              endif
+            elsif pv_g != blank
+              if g_min == blank
+                assign g_min = pv_g
+                assign g_max = pv_g
+              elsif pv_g < g_min
+                assign g_min = pv_g
+              elsif pv_g > g_max
+                assign g_max = pv_g
+              endif
+            endif
+          endfor
+          if l_min != blank
+            assign p_len = l_min
+            assign p_len_max = l_max
+          elsif g_min != blank
+            assign p_len = g_min
+            assign p_len_max = g_max
+            assign p_total = true
+          endif
+        endif
+        # Teil O 4: ohne jede Länge die Höhe am Produkt. Teil P 5: Fläche als „Breite x Höhe m“.
+        assign p_art = 'L'
+        assign p_label = ''
+        if p_len == blank
+          assign p_len = p.metafields.heipard.hoehe_m.value
+          assign p_art = 'H'
+          if p_len != blank and p.metafields.heipard.breite_m.value != blank
+            assign p_art = 'G'
+            capture b_txt
+              render 'heipard-num', value: p.metafields.heipard.breite_m.value
+            endcapture
+            capture h_txt
+              render 'heipard-num', value: p_len
+            endcapture
+            assign p_label = 'heipard.blocks.serienleiter.size' | t: width: b_txt, height: h_txt
+          endif
+        endif
+        if p_len == blank
+          assign stufen_ohne = stufen_ohne | plus: 1
+          assign s_key = 'P' | append: p.id
+        else
+          assign stufen = stufen | plus: 1
+          assign werte = werte | append: p_len
+          if p_len_max != blank and p_len_max != p_len
+            assign werte = werte | append: '-' | append: p_len_max
+          endif
+          assign werte = werte | append: '|'
+          if p_art == 'G'
+            assign mass_g = true
+            assign s_key = 'G' | append: p.metafields.heipard.breite_m.value | append: 'x' | append: p_len
+          elsif p_art == 'H'
+            assign mass_h = true
+            assign s_key = 'H' | append: p_len
+          else
+            assign mass_l = true
+            # Gleicher Wert = gleiches Maß, auch wenn eine Seite nur die Gesamtlänge kennt.
+            assign s_key = 'L' | append: p_len
+            if p_len_max != blank and p_len_max != p_len
+              assign s_key = s_key | append: '-' | append: p_len_max
             endif
           endif
-          assign p_points = v.metafields.heipard.led_anzahl.value | default: product.metafields.heipard.led_anzahl.value
-          assign p_url = product.url | append: '?variant=' | append: v.id
-          assign p_price = v.price
-          assign p_title = v.title
-          assign p_label = v.title
+        endif
+        assign s_keys = s_keys | append: s_key | append: '¦'
+        assign s_lens = s_lens | append: p_len | append: '¦'
+        assign s_maxs = s_maxs | append: p_len_max | append: '¦'
+        assign s_totals = s_totals | append: p_total | append: '¦'
+        assign s_labels = s_labels | append: p_label | append: '¦'
+        assign u_probe = '¦' | append: s_key | append: '¦'
+        assign u_hay = '¦' | append: u_keys
+        unless u_hay contains u_probe
+          assign u_keys = u_keys | append: s_key | append: '¦'
+        endunless
+      endfor
+    endif
+    assign k_list = u_keys | split: '¦'
+    assign karten = k_list.size
+    assign a_keys = s_keys | split: '¦'
+    assign a_lens = s_lens | split: '¦'
+    assign a_maxs = s_maxs | split: '¦'
+    assign a_totals = s_totals | split: '¦'
+    assign a_labels = s_labels | split: '¦'
+    assign cur_lf = product.metafields.heipard.lichtfarben.value | join: '|'
+    assign cur_lf_first = product.metafields.heipard.lichtfarben.value | first
+  -%}
+  {%- capture entries -%}
+    {%- for k in k_list -%}
+      {%- liquid
+        # Teil P 5, Schritt 2: je Maß das Klickziel wählen.
+        assign ziel = nil
+        assign ziel_i = -1
+        assign grp_current = false
+        if mode == 'varianten'
+          assign best_score = -1
+          assign first_v = nil
+          assign first_i = -1
+          assign avail_v = nil
+          assign avail_i = -1
+          for v in product.variants
+            assign i = forloop.index0
+            if a_keys[i] != k
+              continue
+            endif
+            if first_v == blank
+              assign first_v = v
+              assign first_i = i
+            endif
+            if avail_v == blank and v.available
+              assign avail_v = v
+              assign avail_i = i
+            endif
+            assign score = 0
+            for o in (0..opt_last)
+              if o == opt_index
+                continue
+              endif
+              if v.options[o] == current.options[o]
+                if o == lf_index
+                  assign score = score | plus: 10
+                else
+                  assign score = score | plus: 1
+                endif
+              endif
+            endfor
+            if v.id == current.id
+              assign grp_current = true
+              assign score = score | plus: 100
+            endif
+            if score > best_score
+              assign best_score = score
+              assign ziel = v
+              assign ziel_i = i
+            endif
+          endfor
+          if best_score <= 0
+            if avail_v != blank
+              assign ziel = avail_v
+              assign ziel_i = avail_i
+            else
+              assign ziel = first_v
+              assign ziel_i = first_i
+            endif
+          endif
+          assign p_len = a_lens[ziel_i]
+          # Teil P 5: „true“ als Text, der Eintrag liest beides.
+          assign p_total = a_totals[ziel_i]
+          assign p_points = ziel.metafields.heipard.led_anzahl.value | default: product.metafields.heipard.led_anzahl.value
+          assign p_url = product.url | append: '?variant=' | append: ziel.id
+          assign p_price = ziel.price
+          assign p_title = ziel.title
+          assign p_label = ''
           if opt_index >= 0
-            assign p_label = v.options[opt_index]
+            assign p_label = ziel.options[opt_index]
             # Teil N 3.2: Optionswert nennt die Gesamtlänge, beleuchtete Länge fehlt.
-            assign v_gl = v.metafields.heipard.gesamtlaenge_m.value
-            if v.metafields.heipard.beleuchtete_laenge_m.value == blank and v_gl != blank
+            assign v_gl = ziel.metafields.heipard.gesamtlaenge_m.value
+            if ziel.metafields.heipard.beleuchtete_laenge_m.value == blank and v_gl != blank
               capture v_gl_txt
                 render 'heipard-num', value: v_gl
               endcapture
               assign v_gl_label = 'heipard.blocks.serienleiter.length' | t: value: v_gl_txt | replace: ' ', ''
               # Vergleich ohne Leerzeichen und geschützte Leerzeichen (EN-Optionswerte).
-              assign p_cmp = p_label | replace: ' ', '' | replace: ' ', ''
+              assign p_cmp = p_label | replace: ' ', '' | replace: ' ', ''
               if p_cmp == v_gl_label
                 assign p_label = 'heipard.blocks.serienleiter.length_total' | t: value: v_gl_txt
               endif
             endif
+          elsif p_len == blank
+            assign p_label = ziel.title
           endif
-          assign is_current = false
-          if v.id == current.id
-            assign is_current = true
-          endif
-        -%}
-        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, p_label: p_label, is_current: is_current, max_len: max_len -%}
-        {%- unless forloop.last -%}@@item@@{%- endunless -%}
-      {%- endfor -%}
-    {%- else -%}
-      {%- for p in fam.products limit: 24 -%}
-        {%- liquid
-          assign p_key = ',' | append: p.id | append: ','
-          unless member_ids contains p_key
-            continue
-          endunless
-          assign p_len = p.metafields.heipard.beleuchtete_laenge_m.value
-          assign p_total = false
-          if p_len == blank
-            assign p_len = p.metafields.heipard.gesamtlaenge_m.value
-            if p_len != blank
-              assign p_total = true
+          assign p_len_max = ''
+        else
+          assign t_self = nil
+          assign t_lf = nil
+          assign t_lf_first = nil
+          assign t_avail = nil
+          assign t_first = nil
+          assign i_self = -1
+          assign i_lf = -1
+          assign i_lf_first = -1
+          assign i_avail = -1
+          assign i_first = -1
+          assign i = -1
+          for p in fam.products limit: 24
+            assign p_key = ',' | append: p.id | append: ','
+            unless member_ids contains p_key
+              continue
+            endunless
+            assign i = i | plus: 1
+            if a_keys[i] != k
+              continue
             endif
-          endif
-          assign p_len_max = nil
-          if p_len == blank
-            # Teil M 1.12: Längen nur an den Varianten, Karte zeigt die Spanne.
-            # Teil N 3.2: Spanne nur aus Werten derselben Art, beleuchtete Länge zuerst.
-            assign l_min = nil
-            assign l_max = nil
-            assign g_min = nil
-            assign g_max = nil
-            for pv in p.variants
-              assign pv_l = pv.metafields.heipard.beleuchtete_laenge_m.value
-              assign pv_g = pv.metafields.heipard.gesamtlaenge_m.value
-              if pv_l != blank
-                if l_min == blank
-                  assign l_min = pv_l
-                  assign l_max = pv_l
-                elsif pv_l < l_min
-                  assign l_min = pv_l
-                elsif pv_l > l_max
-                  assign l_max = pv_l
-                endif
-              elsif pv_g != blank
-                if g_min == blank
-                  assign g_min = pv_g
-                  assign g_max = pv_g
-                elsif pv_g < g_min
-                  assign g_min = pv_g
-                elsif pv_g > g_max
-                  assign g_max = pv_g
-                endif
-              endif
-            endfor
-            if l_min != blank
-              assign p_len = l_min
-              assign p_len_max = l_max
-            elsif g_min != blank
-              assign p_len = g_min
-              assign p_len_max = g_max
-              assign p_total = true
+            assign p_lf = p.metafields.heipard.lichtfarben.value | join: '|'
+            if p.id == product.id
+              assign t_self = p
+              assign i_self = i
+              assign grp_current = true
             endif
-          endif
-          # Teil O 4: ohne jede Länge die Höhe am Produkt; Art und Wert der Stufe merken.
-          # Höhe mit Breite (Fläche, z. B. Vorhang): Größe; die Beschriftung bleibt der Titel wie
-          # bisher, damit gleich große Modelle (Lichtfarben) unterscheidbar bleiben.
-          assign p_ist_hoehe = false
-          assign p_ist_flaeche = false
-          assign p_label = nil
-          if p_len == blank
-            assign p_len = p.metafields.heipard.hoehe_m.value
-            if p_len != blank
-              if p.metafields.heipard.breite_m.value != blank
-                assign p_ist_flaeche = true
-                assign p_label = p.title
-              else
-                assign p_ist_hoehe = true
-              endif
+            if t_lf == blank and cur_lf != blank and p_lf == cur_lf
+              assign t_lf = p
+              assign i_lf = i
             endif
-          endif
-          if p_len == blank
-            assign stufen_ohne = stufen_ohne | plus: 1
+            if t_lf_first == blank and cur_lf_first != blank and p.metafields.heipard.lichtfarben.value contains cur_lf_first
+              assign t_lf_first = p
+              assign i_lf_first = i
+            endif
+            if t_avail == blank and p.available
+              assign t_avail = p
+              assign i_avail = i
+            endif
+            if t_first == blank
+              assign t_first = p
+              assign i_first = i
+            endif
+          endfor
+          if t_self != blank
+            assign ziel = t_self
+            assign ziel_i = i_self
+          elsif t_lf != blank
+            assign ziel = t_lf
+            assign ziel_i = i_lf
+          elsif t_lf_first != blank
+            assign ziel = t_lf_first
+            assign ziel_i = i_lf_first
+          elsif t_avail != blank
+            assign ziel = t_avail
+            assign ziel_i = i_avail
           else
-            assign stufen = stufen | plus: 1
-            assign werte = werte | append: p_len
-            if p_len_max != blank and p_len_max != p_len
-              assign werte = werte | append: '-' | append: p_len_max
-            endif
-            assign werte = werte | append: '|'
-            if p_ist_flaeche
-              assign mass_g = true
-            elsif p_ist_hoehe
-              assign mass_h = true
-            else
-              assign mass_l = true
-            endif
+            assign ziel = t_first
+            assign ziel_i = i_first
           endif
-          assign p_points = p.metafields.heipard.led_anzahl.value
-          assign is_current = false
-          if p.id == product.id
-            assign is_current = true
-          endif
-        -%}
-        {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p.url, p_price: p.price, p_title: p.title, p_label: p_label, is_current: is_current, max_len: max_len -%}
-        {%- unless forloop.last -%}@@item@@{%- endunless -%}
-      {%- endfor -%}
-    {%- endif -%}
+          assign p_len = a_lens[ziel_i]
+          assign p_len_max = a_maxs[ziel_i]
+          assign p_total = a_totals[ziel_i]
+          assign p_label = a_labels[ziel_i]
+          assign p_points = ziel.metafields.heipard.led_anzahl.value
+          assign p_url = ziel.url
+          assign p_price = ziel.price
+          assign p_title = ziel.title
+        endif
+      -%}
+      {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, p_label: p_label, is_current: grp_current, max_len: max_len -%}
+      {%- unless forloop.last -%}@@item@@{%- endunless -%}
+    {%- endfor -%}
   {%- endcapture -%}
   {%- liquid
-    # Teil O 4: Maß der Stufen bestimmt die Überschrift; gleiche Werte überall = keine Serie.
+    # Teil O 4: Maß der Stufen bestimmt die Überschrift.
     assign mass = 'keine'
     assign title_key = 'heipard.blocks.serienleiter.title'
     if mass_g or mass_l and mass_h
@@ -287,24 +498,24 @@
     elsif mass_l
       assign mass = 'laenge'
     endif
-    assign gleich = false
-    if stufen > 1 and stufen_ohne == 0
-      assign werte_uniq = werte | split: '|' | uniq
-      if werte_uniq.size == 1
-        assign gleich = true
-      endif
+    # Teil P 5: eine Karte je Maß; bleibt nur eine Karte oder hat keine Stufe ein Maß, entfällt die Leiste.
+    assign aus = ''
+    if stufen == 0
+      assign aus = 'kein Maß'
+    elsif karten < 2
+      assign aus = 'eine Karte'
     endif
     assign default_kicker = 'heipard.blocks.serienleiter.kicker' | t
     assign default_title = title_key | t
     assign head_kicker = kicker | default: default_kicker
     assign head_title = title | default: default_title
   -%}
-  {%- if gleich -%}
+  {%- if aus != blank -%}
     {%- if request.design_mode -%}
-      <!--fb-note-->{{ label }}: Serienleiter ausgeblendet, alle Stufen haben denselben Wert ({{ werte | split: '|' | first }} m).<!--fb-note-->
+      <!--fb-note-->{{ label }}: Serienleiter ausgeblendet ({{ aus }}).<!--fb-note-->
     {%- endif -%}
   {%- else -%}
-  <div class="heipard-fb heipard-fb--serienleiter" data-heipard-serie="{{ mode }}" data-heipard-mass="{{ mass }}" data-heipard-werte="{{ werte | escape }}">
+  <div class="heipard-fb heipard-fb--serienleiter" data-heipard-serie="{{ mode }}" data-heipard-mass="{{ mass }}" data-heipard-werte="{{ werte | escape }}" data-heipard-karten="{{ karten }}">
     {%- render 'heipard-fb-head', kicker: head_kicker, title: head_title, body: body -%}
     <ol class="heipard-serie">
       {%- assign sorted = entries | split: '@@item@@' | sort -%}

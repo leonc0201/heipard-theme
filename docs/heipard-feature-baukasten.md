@@ -104,6 +104,16 @@ Sortiert und beschriftet wird nach der Nennlänge: *Gesamtlänge inkl. Zuleitung
 sonst *Beleuchtete Länge*. Bitte je Familie einheitlich pflegen. Der Block steht immer am Ende in
 der Daten-Zone, egal wo er im Set liegt.
 
+**Eine Karte je Maß (Teil P, 26.11.2026):** Stufen mit demselben Maß werden zu einer Karte, etwa die
+drei Lichtfarben von hp-dct-200 oder die kalt- und warmweißen CSL-Produkte. Im Variantenmodus zählt der
+Optionswert der Option Länge, Höhe oder Größe, im Familienmodus der Wert bzw. die Fläche Breite x Höhe
+(Beschriftung „3 x 2 m“). Der Klick führt zum selben Maß in der Lichtfarbe, die gerade gilt: im
+Variantenmodus zur Variante, die in den übrigen Optionen am besten zur gewählten passt (Lichtfarbe zuerst),
+im Familienmodus zum aktuellen Produkt, sonst zu dem mit denselben `lichtfarben`, sonst zum ersten
+verfügbaren. Lichtpunkte nennt die Karte nach diesem Ziel. Bleibt nur eine Karte oder hat keine Stufe ein
+Maß (DGM), entfällt die Leiste. Achtung: Auch Modelle, die sich nicht nur in der Lichtfarbe unterscheiden
+(BSL 1er- und 2er-Set, CTL mit und ohne Ring), teilen sich die Karte ihres Maßes.
+
 Damit das funktioniert, braucht jede Familie **einmalig** eine Smart Collection:
 
 - Handle: `familie-<code>` in Kleinbuchstaben, z. B. `familie-ol-g40`
