@@ -331,6 +331,12 @@ mit `?variant=`). Bei Produkten mit nur einer Variante bleibt alles am Produkt.
 - Bilder sind textfrei, Overlays rendert das Theme.
 - Video: MP4 (H.264) oder WebM, kurzer Loop. Spielt automatisch, stumm, ohne Bedienelemente.
   Immer ein Bild als Poster setzen.
+- **Quelle der Bilder für B1, B2 und R1 (Teil P, 26.11.2026):** die Felder, nicht der Block. Reihenfolge
+  im Theme: Variantenfeld `feature_b1`/`_b2`/`_r1`, dann Bild am Block, dann Produktfeld. Seit dem
+  26.11. haben die B1-, B2- und R1-Blöcke kein eigenes Bild mehr, damit ein geändertes Feld auch sichtbar
+  wird. Ein Bild am Block bleibt nur bei Clips (isl-b1, olg-b1, dpm-b1, dct-sticky, die Clips enden auf
+  diesem Bild) und bei Blöcken, die kein Feld lesen (Hotspot, Schieber, Steuerung, Farbwechsel, Sticky,
+  Zusatzzeile). Liste je Block: `docs/data/teilp-blockbilder.csv`.
 
 ## Übersetzung
 

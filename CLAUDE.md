@@ -56,6 +56,12 @@ Headlines: charaktervolle Serif (Auswahl via Impeccable `/typeset`, Richtung Fra
 
 stromquelle · laenge_m · led_anzahl · lichtfarbe · ip_schutzart · einsatzbereich · leuchtmodi · connectable · smart · feature_blocks (für PDP-Feature-Sektion)
 
+## Bilder der Feature-Sektion (seit Teil P, 26.11.2026)
+
+- B1, B2 und R1 bekommen ihr Bild aus den Feldern: Variantenfeld `feature_b1`/`_b2`/`_r1`, sonst Produktfeld. Die Blöcke dieser Plätze haben kein eigenes Bild mehr (129 Blöcke am 26.11. geleert, Liste `docs/data/teilp-blockbilder.csv`).
+- Ein Bild am Block nur noch, wo ein Clip hängt (isl-b1, olg-b1, dpm-b1, dct-sticky) oder wo der Block kein Feld liest (Hotspot, Schieber, Steuerung, Farbwechsel, Sticky, Zusatzzeile). Ein Bild am Block hätte Vorrang vor dem Produktfeld und verdeckt Änderungen am Feld (Fall WBF, Teil N).
+- Neues Motiv für B1/B2/R1: Feld ändern, nicht den Block. Ein Block-B1 braucht einen Titel oder ein Video, sonst rückt ohne Bild ein anderer Block auf B1.
+
 ## Workflow-Regeln
 
 - Kleine, fokussierte Commits mit deutschen Messages
