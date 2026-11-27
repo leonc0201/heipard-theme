@@ -657,7 +657,13 @@
         "kicker": "La serie",
         "title": "Stessa catena di luci in una lunghezza diversa",
         "current": "Questo modello",
-        "length": "{{ value }} m"
+        "length": "{{ value }} m",
+        "title_hoehe": "Lo stesso modello a un'altezza diversa",
+        "title_groesse": "Lo stesso modello in una taglia diversa",
+        "range": "{{ min }} fino a {{ max }} m",
+        "length_total": "{{ value }} m in totale",
+        "range_total": "{{ min }} fino a {{ max }} m in totale",
+        "size": "{{ width }} x {{ height }} m"
       },
       "steuerung": {
         "kicker": "Controllo",
@@ -879,6 +885,15 @@
       "button": "Scrivete in caso di domande",
       "cart_title": "Il negozio aprirà presto",
       "cart_products": "Ai prodotti"
+    },
+    "hero": {
+      "hinweis_an": "Luce accesa?",
+      "hinweis_aus": "Luce spenta",
+      "ansage_abend": "Atmosfera serale attivata"
+    },
+    "clip": {
+      "anhalten": "Sospendi animazione",
+      "fortsetzen": "Continua l'animazione"
     }
   }
 }

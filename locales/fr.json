@@ -657,7 +657,13 @@
         "kicker": "La série",
         "title": "Même guirlande lumineuse dans une autre longueur",
         "current": "Ce modèle",
-        "length": "{{ value }} m"
+        "length": "{{ value }} m",
+        "title_hoehe": "Le même modèle à une hauteur différente",
+        "title_groesse": "Le même modèle dans une autre taille",
+        "range": "{{ min }} à {{ max }} m",
+        "length_total": "{{ value }} m au total",
+        "range_total": "{{ min }} à {{ max }} m au total",
+        "size": "{{ width }} x {{ height }} m"
       },
       "steuerung": {
         "kicker": "Contrôle",
@@ -879,6 +885,15 @@
       "button": "Écrivez en cas de questions",
       "cart_title": "La boutique ouvre bientôt",
       "cart_products": "Vers les produits"
+    },
+    "hero": {
+      "hinweis_an": "Lumière allumée ?",
+      "hinweis_aus": "Lumière éteinte",
+      "ansage_abend": "Ambiance du soir activée"
+    },
+    "clip": {
+      "anhalten": "Arrêter l’animation",
+      "fortsetzen": "Reprendre l’animation"
     }
   }
 }

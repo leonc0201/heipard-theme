@@ -657,7 +657,13 @@
         "kicker": "La serie",
         "title": "La misma guirnalda de luces en otra longitud",
         "current": "Este modelo",
-        "length": "{{ value }} m"
+        "length": "{{ value }} m",
+        "title_hoehe": "El mismo modelo en otra altura",
+        "title_groesse": "El mismo modelo en otra talla",
+        "range": "{{ min }} a {{ max }} m",
+        "length_total": "{{ value }} m en total",
+        "range_total": "{{ min }} a {{ max }} m en total",
+        "size": "{{ width }} x {{ height }} m"
       },
       "steuerung": {
         "kicker": "Control",
@@ -879,6 +885,15 @@
       "button": "Escribe si tienes preguntas",
       "cart_title": "La tienda abrirá pronto",
       "cart_products": "A los productos"
+    },
+    "hero": {
+      "hinweis_an": "¿Luz encendida?",
+      "hinweis_aus": "Luz apagada",
+      "ansage_abend": "Ambiente nocturno activado"
+    },
+    "clip": {
+      "anhalten": "Detener animación",
+      "fortsetzen": "Continuar animación"
     }
   }
 }
