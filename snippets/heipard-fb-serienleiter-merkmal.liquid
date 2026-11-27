@@ -1,0 +1,9 @@
+{%- comment -%}
+  Serienleiter, Teil Q 5: Merkmal einer Variante = die Werte aller Optionen außer der Maß-Option (opt_index) und der
+  Lichtfarbe (lf_index), mit „|“ verbunden. Varianten mit gleichem Merkmal gehören zu derselben Ausführung (z. B.
+  hp-uct-200-eu: Lichterkette oder Kupferdraht). Gibt nur den Text aus, ohne Leerraum.
+  Parameter: v (Variante), opt_index, lf_index, opt_last
+{%- endcomment -%}
+{%- for o in (0..opt_last) -%}
+  {%- unless o == opt_index or o == lf_index -%}{{ v.options[o] }}|{%- endunless -%}
+{%- endfor -%}

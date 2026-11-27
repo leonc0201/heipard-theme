@@ -8,7 +8,9 @@
              Teil P 5: auch der Text 'true'),
              p_points, p_url, p_price (Cent),
              p_title, p_label (optional: Beschriftung statt der Länge, z. B. Optionswert),
-             is_current, max_len
+             is_current, max_len,
+             p_rang (Teil Q 5: Position in Familie bzw. Variantenliste; bei gleichem Maß bleibt die
+             Reihenfolge so auf jeder Seite gleich, statt dass die aktuelle Karte nach vorn rutscht)
 {%- endcomment -%}
 {%- liquid
   assign sort_key = '99999999'
@@ -20,6 +22,8 @@
       assign share = bar_len | times: 100.0 | divided_by: max_len | round
     endif
   endif
+  assign rang = p_rang | default: 0 | prepend: '000' | slice: -3, 3
+  assign sort_key = sort_key | append: rang
 -%}
 {{- sort_key -}}@@key@@
 <li class="heipard-serie__item{% if is_current %} is-current{% endif %}">

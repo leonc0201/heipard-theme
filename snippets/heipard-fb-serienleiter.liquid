@@ -52,6 +52,14 @@
                Im Variantenmodus zählt für eine Variante ohne eigene Länge oder Höhe der Wert am
                Produkt (Grundwert, wie in der Technik-Tabelle), z. B. die 3-x-2-m-Varianten von
                hp-ucp-200; ob der Variantenmodus gilt, entscheiden weiter nur eigene Werte.
+    Teil Q 5: Zu einer Karte werden nur Stufen, die sich allein in der Lichtfarbe unterscheiden.
+               Varianten  Optionen außer Maß und Lichtfarbe sind das Merkmal (z. B. Ausführung bei hp-uct-200-eu);
+                          die Leiste zeigt nur Stufen mit dem Merkmal der gewählten Variante
+                          (snippets/heipard-fb-serienleiter-merkmal.liquid). Optionsnamen auch ES/FR/IT.
+               Familie    Gleich große Produkte nur zusammen, wenn lichtfarben sich nicht überschneiden und
+                          led_anzahl gleich ist (snippets/heipard-fb-serienleiter-farbgleich.liquid). Sonst trägt
+                          kein Feld das Merkmal (BSL Set, CTL Ring): die Familie zeigt eine Karte je Stufe wie vor
+                          Teil P, bei überall gleichem Wert keine Leiste (CL-1/CL-2, wie Teil O).
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -87,9 +95,10 @@
       assign opt_index = -1
       assign lf_index = -1
       # Teil N 3.2: auch die englischen Optionsnamen, sonst zeigt EN den ganzen Variantentitel.
-      assign size_options = 'Länge,Höhe,Größe,Length,Height,Size' | split: ','
+      # Teil Q 5: dazu die Namen aus ES, FR und IT (Translate & Adapt, Stand 27.11.2026).
+      assign size_options = 'Länge,Höhe,Größe,Length,Height,Size,Longitud,Altura,Tamaño,Longueur,Hauteur,Taille,Lunghezza,Altezza,Dimensioni' | split: ','
       # Teil P 5: Lichtfarbe zählt beim Klickziel vor den übrigen Optionen.
-      assign lf_options = 'Lichtfarbe,Light color,Light colour,Color de luz,Couleur de lumière,Colore della luce,Colore luce' | split: ','
+      assign lf_options = 'Lichtfarbe,Light color,Color de la luz,Température de couleur,Colore della luce' | split: ','
       for opt in product.options_with_values
         if opt_index < 0 and size_options contains opt.name
           assign opt_index = forloop.index0
@@ -99,6 +108,10 @@
         endif
       endfor
       assign opt_last = product.options.size | minus: 1
+      # Teil Q 5: Merkmal (Optionen außer Maß und Lichtfarbe) der gewählten Variante.
+      capture cur_mk
+        render 'heipard-fb-serienleiter-merkmal', v: current, opt_index: opt_index, lf_index: lf_index, opt_last: opt_last
+      endcapture
     endif
   endif
 
@@ -161,9 +174,23 @@
     assign s_maxs = ''
     assign s_totals = ''
     assign s_labels = ''
+    assign s_pkeys = ''
+    assign s_lfs = ''
+    assign s_leds = ''
+    assign farb_rest = ''
     assign u_keys = ''
     if mode == 'varianten'
       for v in product.variants
+        # Teil Q 5: nur Stufen derselben Ausführung wie die gewählte Variante (leerer Eintrag hält die Liste in Reihe).
+        capture v_mk
+          render 'heipard-fb-serienleiter-merkmal', v: v, opt_index: opt_index, lf_index: lf_index, opt_last: opt_last
+        endcapture
+        if v_mk != cur_mk
+          assign s_keys = s_keys | append: '¦'
+          assign s_lens = s_lens | append: '¦'
+          assign s_totals = s_totals | append: '¦'
+          continue
+        endif
         assign v_own = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
         assign p_len = v_own | default: prod_len
         assign p_total = false
@@ -309,12 +336,26 @@
         assign s_maxs = s_maxs | append: p_len_max | append: '¦'
         assign s_totals = s_totals | append: p_total | append: '¦'
         assign s_labels = s_labels | append: p_label | append: '¦'
+        # Teil Q 5: Daten für die Prüfung „nur Lichtfarbe verschieden“ und Schlüssel je Stufe für den Rückfall.
+        assign s_pkeys = s_pkeys | append: 'P' | append: p.id | append: '¦'
+        assign p_lfj = p.metafields.heipard.lichtfarben.value | join: '|'
+        assign s_lfs = s_lfs | append: p_lfj | append: '¦'
+        assign s_leds = s_leds | append: p.metafields.heipard.led_anzahl.value | append: '¦'
         assign u_probe = '¦' | append: s_key | append: '¦'
         assign u_hay = '¦' | append: u_keys
         unless u_hay contains u_probe
           assign u_keys = u_keys | append: s_key | append: '¦'
         endunless
       endfor
+      # Teil Q 5, Regel 4: Unterscheiden sich gleich große Produkte nicht nur in der Lichtfarbe und trägt kein Feld das
+      # Merkmal (BSL Set, CTL Ring), zeigt die Familie eine Karte je Stufe wie vor Teil P.
+      capture farb_rest
+        render 'heipard-fb-serienleiter-farbgleich', keys: s_keys, lfs: s_lfs, leds: s_leds, werte: werte, stufen_ohne: stufen_ohne
+      endcapture
+      if farb_rest contains 'rueckfall'
+        assign s_keys = s_pkeys
+        assign u_keys = s_pkeys
+      endif
     endif
     assign k_list = u_keys | split: '¦'
     assign karten = k_list.size
@@ -338,7 +379,7 @@
           assign first_v = nil
           assign first_i = -1
           assign avail_v = nil
-          assign avail_i = -1
+          assign avail_i = nil
           for v in product.variants
             assign i = forloop.index0
             if a_keys[i] != k
@@ -376,13 +417,8 @@
             endif
           endfor
           if best_score <= 0
-            if avail_v != blank
-              assign ziel = avail_v
-              assign ziel_i = avail_i
-            else
-              assign ziel = first_v
-              assign ziel_i = first_i
-            endif
+            assign ziel = avail_v | default: first_v
+            assign ziel_i = avail_i | default: first_i
           endif
           assign p_len = a_lens[ziel_i]
           # Teil P 5: „true“ als Text, der Eintrag liest beides.
@@ -481,7 +517,7 @@
           assign p_title = ziel.title
         endif
       -%}
-      {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, p_label: p_label, is_current: grp_current, max_len: max_len -%}
+      {%- render 'heipard-fb-serienleiter-eintrag', p_len: p_len, p_len_max: p_len_max, p_total: p_total, p_points: p_points, p_url: p_url, p_price: p_price, p_title: p_title, p_label: p_label, is_current: grp_current, max_len: max_len, p_rang: forloop.index0 -%}
       {%- unless forloop.last -%}@@item@@{%- endunless -%}
     {%- endfor -%}
   {%- endcapture -%}
@@ -504,6 +540,9 @@
       assign aus = 'kein Maß'
     elsif karten < 2
       assign aus = 'eine Karte'
+    elsif farb_rest contains 'gleich'
+      # Teil Q 5: Rückfall wie vor Teil P, alle Stufen gleich lang (z. B. CL-1/CL-2): wie Teil O ohne Leiste.
+      assign aus = 'gleiche Werte'
     endif
     assign default_kicker = 'heipard.blocks.serienleiter.kicker' | t
     assign default_title = title_key | t

@@ -111,8 +111,24 @@ Optionswert der Option Länge, Höhe oder Größe, im Familienmodus der Wert bzw
 Variantenmodus zur Variante, die in den übrigen Optionen am besten zur gewählten passt (Lichtfarbe zuerst),
 im Familienmodus zum aktuellen Produkt, sonst zu dem mit denselben `lichtfarben`, sonst zum ersten
 verfügbaren. Lichtpunkte nennt die Karte nach diesem Ziel. Bleibt nur eine Karte oder hat keine Stufe ein
-Maß (DGM), entfällt die Leiste. Achtung: Auch Modelle, die sich nicht nur in der Lichtfarbe unterscheiden
-(BSL 1er- und 2er-Set, CTL mit und ohne Ring), teilen sich die Karte ihres Maßes.
+Maß (DGM), entfällt die Leiste.
+
+**Nur die Lichtfarbe wird zusammengefasst (Teil Q, 27.11.2026):** Zu einer Karte werden nur Stufen, die sich
+allein in der Lichtfarbe unterscheiden (DCT, UCP, UCT, ISL, DFM, DPM, DPT, CSL, OLG). Unterscheiden sie sich
+in einem weiteren Merkmal, zeigt die Leiste nur die Stufen mit demselben Merkmal wie die gewählte Variante.
+Das Merkmal kommt aus einer Option oder einem Metafeld, nie aus Titel, Handle oder Produkttyp:
+- *Variantenmodus:* Merkmal sind die Werte aller Optionen außer Maß und Lichtfarbe
+  (`snippets/heipard-fb-serienleiter-merkmal.liquid`). Beispiel hp-uct-200-eu, Option Ausführung: Die
+  Lichterkette gibt es nur in 3 x 2 m (Leiste entfällt), der Kupferdraht zeigt 3 x 2 m und 3 x 3 m.
+- *Familienmodus:* Gleich große Produkte werden nur zusammengefasst, wenn beide `heipard.lichtfarben`
+  haben, die Listen sich nicht überschneiden und `led_anzahl` gleich ist
+  (`snippets/heipard-fb-serienleiter-farbgleich.liquid`). Sonst trägt kein Feld das Merkmal, und die
+  Leiste zeigt für die ganze Familie wieder **eine Karte je Produkt** wie vor Teil P (heute BSL mit 1er-
+  und 2er-Set, CTL mit und ohne Ring). Haben dabei alle Produkte denselben Wert (CL-1 und CL-2), entfällt
+  die Leiste wie in Teil O. Sobald die Asset-Instanz ein Feld für die Ausführung füllt, kann das Theme
+  danach filtern (Vorschlag im Bericht Teil Q).
+- Karten mit gleichem Maß stehen in der Reihenfolge der Familien-Kollektion bzw. der Varianten, auf jeder
+  Seite gleich (die aktuelle Karte rutscht nicht nach vorn).
 
 Damit das funktioniert, braucht jede Familie **einmalig** eine Smart Collection:
 

@@ -1,0 +1,51 @@
+{%- comment -%}
+  Serienleiter, Teil Q 5, Familienmodus: Dürfen gleich große Produkte zu einer Karte werden?
+  Nur wenn sie sich allein in der Lichtfarbe unterscheiden: beide haben heipard.lichtfarben, die Listen überschneiden
+  sich nicht, und led_anzahl ist gleich (z. B. hp-csl-200-c/-200-w, hp-olg-200/-200m/-200w). Sonst, etwa bei BSL (1er-
+  und 2er-Set gleicher Länge und Lichtfarbe) oder CTL (mit Ring, andere LED-Zahl), gibt es kein Feld, das das Merkmal
+  trägt, und die Leiste zeigt für die ganze Familie eine Karte je Stufe wie vor Teil P (Regel 4).
+  Ausgabe: leer (zusammenfassen erlaubt), „rueckfall“ oder „rueckfall-gleich“ (Rückfall, und alle Stufen haben denselben
+  Wert: Leiste entfällt wie in Teil O).
+  Parameter: keys, lfs, leds (je Stufe ein Eintrag, mit „¦“ getrennt; lfs je Eintrag mit „|“ verbunden),
+             werte (mit „|“ getrennt), stufen_ohne
+{%- endcomment -%}
+{%- liquid
+  assign a_k = keys | split: '¦'
+  assign a_l = lfs | split: '¦'
+  assign a_d = leds | split: '¦'
+  assign last = a_k.size | minus: 1
+  assign rest = false
+  for i in (0..last)
+    assign ki = a_k[i]
+    assign k0 = ki | slice: 0
+    if k0 == 'P'
+      continue
+    endif
+    assign j0 = i | plus: 1
+    for j in (j0..last)
+      if a_k[j] != ki
+        continue
+      endif
+      if a_l[i] == blank or a_l[j] == blank or a_d[i] != a_d[j]
+        assign rest = true
+      else
+        assign li = a_l[i] | split: '|'
+        assign lj = a_l[j] | split: '|'
+        for c in li
+          if lj contains c
+            assign rest = true
+          endif
+        endfor
+      endif
+    endfor
+  endfor
+  if rest
+    echo 'rueckfall'
+    if stufen_ohne == 0
+      assign w_uniq = werte | split: '|' | uniq
+      if w_uniq.size == 1
+        echo '-gleich'
+      endif
+    endif
+  endif
+-%}
