@@ -126,9 +126,21 @@ Das Merkmal kommt aus einer Option oder einem Metafeld, nie aus Titel, Handle od
   Leiste zeigt für die ganze Familie wieder **eine Karte je Produkt** wie vor Teil P (heute BSL mit 1er-
   und 2er-Set, CTL mit und ohne Ring). Haben dabei alle Produkte denselben Wert (CL-1 und CL-2), entfällt
   die Leiste wie in Teil O. Sobald die Asset-Instanz ein Feld für die Ausführung füllt, kann das Theme
-  danach filtern (Vorschlag im Bericht Teil Q).
+  danach filtern (seit Teil R, siehe unten).
 - Karten mit gleichem Maß stehen in der Reihenfolge der Familien-Kollektion bzw. der Varianten, auf jeder
   Seite gleich (die aktuelle Karte rutscht nicht nach vorn).
+
+**Teil R (27.11.2026):**
+- *Variantenmodus nur bei verschiedenen Maßen.* Haben alle Varianten dasselbe Maß (eigener Wert, sonst Grundwert am
+  Produkt), gilt der Familienmodus. Beispiel hp-ctl-400-eu-1: Warmweiß und Multicolor, je 2,5 m, zeigt jetzt die
+  CTL-Familie.
+- *Feld `heipard.ausfuehrung`* (Produkt, Auswahl „1er-Set“, „2er-Set“, „mit Ring“, „ohne Ring“, füllt die
+  Asset-Instanz). Hat das aktuelle Produkt einen Wert, zeigt die Leiste im Familienmodus nur Produkte derselben Familie
+  mit demselben Wert, danach gilt die Lichtfarben-Regel oben. Ohne Wert bleibt es bei der Regel aus Teil Q. Das Feld
+  erscheint nicht auf der Seite. Heute: BSL 1er- und 2er-Sets getrennt. Alle acht CTL sind belegt „mit Ring“, das Feld
+  trennt sie nicht.
+- *Bauart:* Nachbarn mit anderer `stromquelle` zählen nicht (Regel vom 10.11.). Seit CSL-300 „USB“ trägt und CSL-200
+  „Netz“, hat CSL keine Leiste mehr (Stand 27.11., Entscheidung bei Leon).
 
 Damit das funktioniert, braucht jede Familie **einmalig** eine Smart Collection:
 
