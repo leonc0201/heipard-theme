@@ -60,6 +60,9 @@
                           led_anzahl gleich ist (snippets/heipard-fb-serienleiter-farbgleich.liquid). Sonst trägt
                           kein Feld das Merkmal (BSL Set, CTL Ring): die Familie zeigt eine Karte je Stufe wie vor
                           Teil P, bei überall gleichem Wert keine Leiste (CL-1/CL-2, wie Teil O).
+    Teil R 2 A: Der Variantenmodus gilt nur, wenn sich die Varianten im Maß unterscheiden (eigener Wert,
+               sonst Grundwert am Produkt). Haben alle Varianten dasselbe Maß (hp-ctl-400-eu-1: Warmweiß und
+               Multicolor, je 2,5 m), gilt der Familienmodus.
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -80,16 +83,23 @@
   assign prod_len = product.metafields.heipard.beleuchtete_laenge_m.value | default: product.metafields.heipard.gesamtlaenge_m.value | default: product.metafields.heipard.hoehe_m.value
   if product.has_only_default_variant == false
     assign with_len = 0
+    # Teil R 2 A: Variantenmodus nur, wenn sich die Varianten im Maß unterscheiden (sonst Familie, z. B. hp-ctl-400-eu-1).
+    assign v_lens = ''
     for v in product.variants
       assign v_own = v.metafields.heipard.beleuchtete_laenge_m.value | default: v.metafields.heipard.gesamtlaenge_m.value | default: v.metafields.heipard.hoehe_m.value
       if v_own != blank
         assign with_len = with_len | plus: 1
       endif
       assign v_len = v_own | default: prod_len
+      assign v_lens = v_lens | append: v_len | append: '|'
       if v_len != blank and v_len > max_len
         assign max_len = v_len
       endif
     endfor
+    # Nur ein Maß: with_len wird 0 (ohne weitere Verzweigung, LiquidComplexity).
+    assign v_masse = v_lens | split: '|' | uniq
+    assign v_mehr = v_masse.size | minus: 1 | at_most: 1
+    assign with_len = with_len | times: v_mehr
     if with_len > 1
       assign mode = 'varianten'
       assign opt_index = -1
