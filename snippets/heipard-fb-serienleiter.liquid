@@ -63,6 +63,10 @@
     Teil R 2 A: Der Variantenmodus gilt nur, wenn sich die Varianten im Maß unterscheiden (eigener Wert,
                sonst Grundwert am Produkt). Haben alle Varianten dasselbe Maß (hp-ctl-400-eu-1: Warmweiß und
                Multicolor, je 2,5 m), gilt der Familienmodus.
+    Teil R 2 C: Familienmodus mit heipard.ausfuehrung („1er-Set“, „2er-Set“, „mit Ring“, „ohne Ring“): Hat das
+               aktuelle Produkt einen Wert, zeigt die Leiste nur Produkte derselben Familie mit demselben Wert
+               (BSL: 1er-Sets unter sich, 2er-Sets unter sich). Danach gilt Teil Q 5 wie bisher. Ohne Wert am aktuellen
+               Produkt bleibt alles wie in Teil Q.
 
   Rendert nichts, wenn es weder Variantenstufen noch Nachbarmodelle gibt.
   Parameter: product, kicker, title, body, label
@@ -127,6 +131,11 @@
 
   assign familie = product.metafields.heipard.familie.value
   assign own_strom = product.metafields.heipard.stromquelle.value
+  # Teil R 2 C: Hat das aktuelle Produkt heipard.ausfuehrung, zählen nur Nachbarn mit demselben Wert (Familie und
+  # Ausführung als ein Schlüssel). Ohne Wert ist ausf_n 0, der Vergleich schneidet die Ausführung weg (Regel aus Teil Q).
+  assign own_ausf = product.metafields.heipard.ausfuehrung.value | default: ''
+  assign ausf_n = own_ausf.size | at_most: 1 | times: 99
+  assign own_fkey = familie | append: '¦' | append: own_ausf
   assign member_ids = ','
   if mode == blank and familie != blank
     assign fam_handle = familie | handleize | prepend: 'familie-'
@@ -135,7 +144,9 @@
     assign max_len = 0
     for p in fam.products limit: 24
       if p.id != product.id
-        if p.metafields.heipard.familie.value != familie
+        assign p_ausf = p.metafields.heipard.ausfuehrung.value | default: '' | slice: 0, ausf_n
+        assign p_fkey = p.metafields.heipard.familie.value | append: '¦' | append: p_ausf
+        if p_fkey != own_fkey
           continue
         endif
         assign p_strom = p.metafields.heipard.stromquelle.value
