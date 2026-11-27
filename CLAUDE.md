@@ -44,6 +44,36 @@ Headlines: charaktervolle Serif (Auswahl via Impeccable `/typeset`, Richtung Fra
 - Copyright: "© 2026 HeiPard, eine Marke der C&L Handels GmbH"
 - Keine Gedankenstriche (– oder —) in sichtbaren Texten, auch nicht in Schema-Beschriftungen; Bindestriche in Wörtern bleiben
 
+## Textregeln gelten für jeden sichtbaren Text (Teil R, 27.11.2026)
+
+- **Geltungsbereich:** jeder Text, der auf einer Seite sichtbar ist oder von ihr ausgeliefert wird:
+  - Beschreibung, SEO-Titel und SEO-Beschreibung,
+  - Feature-Blöcke (`feature_block`, auch Sticky-Liste und Zusatzzeile),
+  - Fragen (`product_question`),
+  - Pflege-Texte (`heipard_pflege`, Block „Installation & Pflege“),
+  - Lieferumfang-Block,
+  - strukturierte Daten und Meta-Tags (JSON-LD, `description`, `og:`/`twitter:`).
+- **Regeln:**
+  - **Längen** nach dem Titelmuster in `docs/projektstand.md`: Titel = beleuchtete Länge, der Text nennt Zuleitung und
+    Gesamtlänge, wenn belegt.
+  - **Werte nur mit Beleg:** Metafeld oder Tafel, sonst nicht schreiben und nachfragen.
+  - **Netzteil, Adapter, Trafo** nur, wenn der Lieferumfang **jedes** Produkts, an dem der Text hängt, es nennt. Sonst
+    neutral: „wird an eine Steckdose angeschlossen“ (EN „plugs into an outlet“). Die Steckdose nur bei `stromquelle` Netz,
+    ohne belegte Stromquelle den Satzteil weglassen.
+  - **Keine Gedankenstriche.**
+- **Gemeinsame Texte** gelten für alle Produkte, an denen sie hängen:
+  - Blöcke über `feature_set`,
+  - Fragen über `heipard.fragen`,
+  - Pflege-Texte über den ersten kat-Tag (`snippets/heipard-fb-pflege.liquid`, Rückfall `kat-stringlights`; kat-led
+    hängt am 27.11. an 46 Produkten).
+  - Geprüft wird gegen jedes dieser Produkte.
+- **Suche nach einer Textstelle:** immer zweifach.
+  - Einmal über die Daten (Admin API, alle Texttypen oben).
+  - Zusätzlich über die fertigen Seiten aller aktiven Produkte in DE und EN: Textknoten außerhalb der Technik-Tabelle,
+    dazu Meta-Description und JSON-LD.
+  - Erst wenn beide nichts mehr finden, ist eine Textregel umgesetzt.
+- Übersetzte Felder immer mit EN schreiben (`translationsRegister` mit Digest des neuen DE-Werts), EN in US-Schreibweise.
+
 ## Komponenten-Patterns (validiert im Mockup)
 
 - Header: Kategorien direkt in der Navigation (kein generisches "Produkte"-Dropdown), Lichtschalter, Suche, Account, Warenkorb
