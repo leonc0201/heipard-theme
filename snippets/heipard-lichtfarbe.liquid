@@ -1,0 +1,23 @@
+{%- comment -%}
+  Lichtfarbe für Spec-Kacheln, Technik-Tabelle und Icon-Grid (Teil S 4, 27.11.2026).
+  1. Wert der Variantenoption „Lichtfarbe“ an der übergebenen Variante. Der Optionsname zählt in allen
+     Shop-Sprachen (dieselbe Liste wie lf_options in heipard-fb-serienleiter).
+  2. Sonst die Liste heipard.lichtfarben des Produkts, mit Komma verbunden (z. B. „Warmweiß, Multicolor“).
+     Dasselbe Feld liest der Filter „Lichtfarbe“ seit 27.11.2026. Das alte Einzelfeld heipard.lichtfarbe
+     liest das Theme nicht mehr, Feld und Daten bleiben bestehen.
+  Ausgabe: der Text, leer ohne Wert. Aufruf per capture. Parameter: product, variant
+{%- endcomment -%}
+{%- liquid
+  assign lf_namen = 'Lichtfarbe,Light color,Light Color,Color de la luz,Température de couleur,Colore della luce' | split: ','
+  assign lf_variante = variant | default: product.selected_or_first_available_variant
+  assign lf_text = ''
+  for opt in product.options_with_values
+    if lf_namen contains opt.name
+      assign lf_text = lf_variante.options[forloop.index0]
+    endif
+  endfor
+  if lf_text == blank
+    assign lf_text = product.metafields.heipard.lichtfarben.value | join: ', '
+  endif
+  echo lf_text
+-%}

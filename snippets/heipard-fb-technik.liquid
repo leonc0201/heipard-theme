@@ -2,7 +2,8 @@
   Technische Details (Daten-Zone): Tabelle aus den heipard-Metafeldern, keine Freitexte.
   Jedes Feld zuerst an der gewählten Variante, sonst am Produkt (wie Spec-Kacheln und
   Daten-Blöcke); beim Variantenwechsel rendert heipard-variant.js die Sektion neu.
-  Lichtfarbe aus der Variantenoption „Lichtfarbe“, sonst aus dem Metafeld.
+  Lichtfarbe aus heipard-lichtfarbe: Variantenoption „Lichtfarbe“, sonst die Liste
+  heipard.lichtfarben (Teil S 4, wie der Filter).
   Nur gepflegte Felder erscheinen. Ohne ein einziges Feld rendert der Block nichts.
   leistung_w steht bewusst nicht in der Tabelle, bis die Werte bestätigt sind (Leon 2026-10-21).
   Beschriftungen und Einheiten: locales, heipard.blocks.technik.
@@ -13,15 +14,10 @@
   assign vmf = current.metafields.heipard
   assign mf = product.metafields.heipard
 
-  assign color = ''
-  for opt in product.options_with_values
-    if opt.name == 'Lichtfarbe' or opt.name == 'Light color' or opt.name == 'Light Color'
-      assign color = opt.selected_value
-    endif
-  endfor
-  if color == blank
-    assign color = mf.lichtfarbe.value
-  endif
+  capture color
+    render 'heipard-lichtfarbe', product: product, variant: current
+  endcapture
+  assign color = color | strip
 
   assign keys = 'gesamtlaenge_m,beleuchtete_laenge_m,zuleitung_m,breite_m,hoehe_m,led_anzahl,birnenabstand_cm,farbtemperatur_kelvin,anzahl_leuchtmodi,dimmstufen,timer_dauer_h,fernbedienung,koppelbar_bis,stromquelle,spannung_v,akkulaufzeit_h,ip_schutzart,einsatzbereich,material' | split: ','
   assign text_keys = 'stromquelle,ip_schutzart,einsatzbereich,material' | split: ','

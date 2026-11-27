@@ -12,8 +12,9 @@
   Über das JSON-Feld des Blocks lässt sich die Auswahl festlegen (heute nirgends genutzt):
     { "kacheln": ["timer", "dimmbar", "koppelbar"] }
 
-  Jedes Feld zuerst an der gewählten Variante, sonst am Produkt. Lichtfarbe zuerst aus
-  der Variantenoption „Lichtfarbe“ (wie Spec-Kacheln und Technik).
+  Jedes Feld zuerst an der gewählten Variante, sonst am Produkt. Lichtfarbe aus
+  heipard-lichtfarbe: Variantenoption „Lichtfarbe“, sonst die Liste heipard.lichtfarben
+  (Teil S 4, wie Spec-Kacheln, Technik und der Filter).
   Parameter: product, data, label
 {%- endcomment -%}
 {%- liquid
@@ -40,13 +41,9 @@
       assign conn_flag = false
       case key
         when 'lichtfarbe'
-          assign color = ''
-          for opt in product.options_with_values
-            if opt.name == 'Lichtfarbe' or opt.name == 'Light color' or opt.name == 'Light Color'
-              assign color = current.options[forloop.index0]
-            endif
-          endfor
-          assign color = color | default: vmf.lichtfarbe.value | default: mf.lichtfarbe.value
+          capture color
+            render 'heipard-lichtfarbe', product: product, variant: current
+          endcapture
           assign color_txt = color | append: '' | strip
           if color_txt != blank
             unless color_txt contains '[TBD'
@@ -154,5 +151,5 @@
     {{- tiles -}}
   </ul>
 {%- elsif request.design_mode -%}
-  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.lichtfarbe, heipard.led_anzahl, heipard.timer_dauer_h, heipard.ip_schutzart, heipard.stromquelle' }}<!--fb-note-->
+  <!--fb-note-->{{ 'heipard.blocks.editor.missing' | t: block: label, fields: 'heipard.lichtfarben, heipard.led_anzahl, heipard.timer_dauer_h, heipard.ip_schutzart, heipard.stromquelle' }}<!--fb-note-->
 {%- endif -%}

@@ -6,8 +6,9 @@
   nicht im Shop (Auftrag Feature-Sektion dichter, 10.11.2026).
   Jedes Feld zuerst an der gewaehlten Variante (Varianten-Metafeld), sonst am Produkt.
   Laenge: beleuchtete Laenge vor Gesamtlaenge; gibt es nur hoehe_m (Baeume, Kegel,
-  Birken), heisst die Kachel "Hoehe". Lichtfarbe: zuerst die Variantenoption
-  "Lichtfarbe", sonst das Metafeld. data-heipard-vswap: heipard-variant.js tauscht
+  Birken), heisst die Kachel "Hoehe". Lichtfarbe aus heipard-lichtfarbe: zuerst die
+  Variantenoption "Lichtfarbe", sonst die Liste heipard.lichtfarben (Teil S 4,
+  wie der Filter). data-heipard-vswap: heipard-variant.js tauscht
   die Kacheln beim Variantenwechsel aus; die Liste steht deshalb immer im Markup,
   ohne Kachel mit dem Attribut hidden.
   Parameter: product
@@ -24,13 +25,9 @@
     assign laenge_key = 'heipard.product.specs.height'
   endif
   assign strom = vm.stromquelle.value | default: m.stromquelle.value
-  assign farbe = ''
-  for opt in product.options_with_values
-    if opt.name == 'Lichtfarbe' or opt.name == 'Light color' or opt.name == 'Light Color'
-      assign farbe = v.options[forloop.index0]
-    endif
-  endfor
-  assign farbe = farbe | default: vm.lichtfarbe.value | default: m.lichtfarbe.value
+  capture farbe
+    render 'heipard-lichtfarbe', product: product, variant: v
+  endcapture
   assign ip = vm.ip_schutzart.value | default: m.ip_schutzart.value
 
   assign laenge_txt = laenge | append: '' | strip
