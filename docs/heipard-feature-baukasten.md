@@ -142,6 +142,20 @@ Das Merkmal kommt aus einer Option oder einem Metafeld, nie aus Titel, Handle od
 - *Bauart:* Nachbarn mit anderer `stromquelle` zählen nicht (Regel vom 10.11.). Seit CSL-300 „USB“ trägt und CSL-200
   „Netz“, hat CSL keine Leiste mehr (Stand 27.11., Entscheidung bei Leon).
 
+**Teil S (27.11.2026, abends):**
+- *Auswahl von `heipard.ausfuehrung`:* „1er-Set“, „2er-Set“, „mit Ring“, „12 Stränge“, „14 bis 16 Stränge“
+  („ohne Ring“ entfernt). Belegt nach den Tafeln: CTL-210 und -400 „14 bis 16 Stränge“, die Baummäntel 180, 240, 300
+  und 360 „12 Stränge“, 180m und 240m weiter „mit Ring“ (keine Tafel mit Strangzahl). Die CTL-Leiste hat damit drei
+  Gruppen.
+- *Übersetzungen:* Die Leiste vergleicht die Werte in der Sprache der Seite. `ausfuehrung` trägt deshalb in EN, ES, FR
+  und IT denselben Wert wie DE (`docs/data/teils-ausfuehrung-uebersetzung.csv`). Dasselbe gilt für `stromquelle`
+  (Bauart): Ändert sich ein Wert, müssen ES/FR/IT im selben Zug mit, sonst fehlt dort die Leiste (27.11. 18:46 bis
+  19:17 an CSL und CTL-360). Veraltete Übersetzungen zeigt Shopify weiter an.
+- *CSL:* CSL-200 trägt seit 18:46 „USB“ wie CSL-300, die Leiste ist zurück.
+- *Lichtfarbe in Kachel, Technik und Icon-Grid:* über `snippets/heipard-lichtfarbe.liquid`, zuerst die Option
+  „Lichtfarbe“ (Name in allen fünf Sprachen), sonst `heipard.lichtfarben` mit Komma. Das alte Feld
+  `heipard.lichtfarbe` liest das Theme nicht mehr.
+
 Damit das funktioniert, braucht jede Familie **einmalig** eine Smart Collection:
 
 - Handle: `familie-<code>` in Kleinbuchstaben, z. B. `familie-ol-g40`
